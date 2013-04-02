@@ -1,0 +1,36 @@
+%h1=t '.title', :default => 'Bill'
+%table.table.table-striped
+  %thead
+    %tr
+      %th= 'Bulletin'
+      %th= 'Title'
+      %th= 'Stage'
+      %th= 'Creation date'
+      %th= 'Publish date'
+      %th= 'Chamber'
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - @bills.each do |bill|
+      %tr
+        %td= bill.uid
+        %td= link_to bill.title, "/bill"
+        %td= 'Oli'
+        %td= bill.creation_date.gsub('T00:00:00+00:00', '')
+        %td= 'Otro oli'
+        %td= bill.origin_chamber
+        %td
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_bill_path(bill), :class => 'btn btn-mini'
+= form_tag("/search", :method => "get") do
+  = label_tag(:uid, "Bulletin:")
+  = text_field_tag(:uid)
+  = label_tag(:title, "Title:")
+  = text_field_tag(:title)
+  = label_tag(:creation_date, "Creation date:")
+  = text_field_tag(:creation_date)
+  = label_tag(:origin_chamber, "Origin chamber:")
+  = text_field_tag(:origin_chamber)
+  = submit_tag("Search", :name => nil)
+
+/           = link_to t('.destroy', :default => t("helpers.links.destroy")), fruit_path(fruit), :method => :delete, :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-mini btn-danger'
+
+/ = link_to t('.new', :default => t("helpers.links.new")), new_fruit_path, :class => 'btn btn-primary'

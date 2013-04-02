@@ -1,0 +1,9 @@
+*.gem
+*.swp
+*.swo
+bin
+.bundle
+Gemfile.lock
+pkg/*
+test/dummy/log/*
+.rvmrc

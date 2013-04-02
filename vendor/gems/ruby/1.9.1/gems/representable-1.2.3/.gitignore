@@ -1,0 +1,7 @@
+spec/**/*.xml
+rdoc
+build
+doc
+Rake.config
+pkg
+.project

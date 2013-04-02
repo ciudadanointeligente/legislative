@@ -1,0 +1,5 @@
+require 'test_xml/matcher_methods'
+require 'test_xml/spec/matchers/contain_xml'
+require 'test_xml/spec/matchers/contain_xml_structure'
+require 'test_xml/spec/matchers/equal_xml_structure'
+require 'test_xml/spec/matchers/equal_xml'

@@ -1,0 +1,116 @@
+= TestXml
+
+
+== DESCRIPTION:
+
+TestXml is a small extension for testing XML/HTML. Extending RSpec and TestUnit it makes asserting and comparing XML snippets easy, and is especially helpful for testing RESTful web services and their XML representations.
+
+
+== FEATURES:
+
+* runs with RSpec2, Test::Unit, MiniTest and Cucumber
+* Ruby 1.8 and 1.9
+* test XML structure and content
+
+
+== INSTALL
+
+  gem install test_xml
+
+
+== EXAMPLES:
+
+=== Test::Unit and MiniTest
+
+  def test_item_representation
+    assert_xml_equal "<item><id>1</id></item>", @item.to_xml
+  end
+
+=== RSpec
+
+  it "should contain the id" do
+    @item.to_xml.should equal_xml(<<-XML)
+      <item>
+        <id>1</id>
+      </item>
+    XML
+  end
+
+=== Cucumber
+
+  Scenario:
+    When I post some data
+    Then the response should match the following xml
+    """
+      <transaction>
+        <status>success</status>
+        <id/>
+        <order_id/>
+      </transaction>
+    """
+
+== USAGE:
+
+=== RSpec
+
+In your spec_helper.rb
+
+  require 'test_xml/spec'
+
+And in the actual spec, use these matchers:
+
+* equal_xml
+* contain_xml
+* equal_xml_structure
+* contain_xml_structure
+
+=== Test::Unit
+
+In the test_helper.rb
+
+  require 'test_xml/test_unit'
+
+In your test file, use these matchers:
+
+* assert_xml_equal
+* assert_xml_contain
+* assert_xml_structure_equal
+* assert_xml_structure_contain
+
+Negative assertions are available as <tt>assert_not_*</tt>.
+
+=== MiniTest
+
+In the test_helper.rb
+
+  require 'test_xml/mini_test'
+
+Check the Test::Unit section for available assertions.
+
+=== Cucumber
+
+In the features/env.rb
+
+  require 'test_xml'
+  require 'test_xml/spec'
+  World(TestXml::Spec)
+
+In your steps file e.g. features/step_definitions/xml_steps.rb add this step:
+  
+  Then /^the response should match the following xml$/ do |xml|
+    response.body.should equal_xml(xml)
+  end
+
+== REQUIREMENTS
+
+* nokogiri
+
+== Many Thanks
+
+{Nick Sutterer}[http://github.com/apotonick] thank you for bringing RSpec 2, Ruby 1.9.2 and MiniTest! You revived the gem! :)
+
+== LICENSE
+
+Copyright © 2010-2011, Pavel Gabriel
+
+Released under the MIT License. 
