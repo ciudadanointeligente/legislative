@@ -24,6 +24,11 @@ group :development do
   gem 'haml-rails'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
+
 gem 'jquery-rails'
 gem 'haml'
 gem 'roar', '0.11.2'
