@@ -1,3 +1,0 @@
-module Roar
-  # Your code goes here...
-end
