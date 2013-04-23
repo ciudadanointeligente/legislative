@@ -25,7 +25,9 @@
           %a.brand(href="/") Cabildo Abierto
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Home", "/"
+              %li= link_to 'Home', '/'
+              %li= link_to 'Advanced Search', '/advanced_search/'
+              %li= link_to 'About us', 'http://www.ciudadanointeligente.org/quienes-somos/'
 
     .container
 
@@ -35,11 +37,6 @@
             = render 'layouts/messages'
             = yield
           .span3
-            .well.sidebar-nav
-              %h3 Sidebar
-              %ul.nav.nav-list
-                %li.nav-header Sidebar
-                %li= link_to "Home", "/"
     
       %footer
         %p +562 24192770 | Holanda 895, Providencia, Santiago | &copy; Fundación Ciudadano Inteligente 2013
