@@ -1,3 +1,4 @@
+#encoding: utf-8
 require "billit_representers/representers/bill_representer"
 require "billit_representers/representers/bills_representer"
 
@@ -19,7 +20,7 @@ class BillsController < ApplicationController
          keywords << param[0] + '=' + param[1] + '&'
         end
       end
-      @bills = Bills.get("http://billit.ciudadanointeligente.org/bills/search/?#{keywords}", 'application/json').bills || []
+      @bills = Bills.get("http://billit.ciudadanointeligente.org/bills/search/?#{URI.encode(keywords)}", 'application/json').bills || []
     else
       # @bills = nil
     end
@@ -27,7 +28,7 @@ class BillsController < ApplicationController
 
   def search
     if !params.nil? && params.length > 2  # default have 2 keys {"action"=>"search", "controller"=>"bills"}
-      @bills = Bills.get("http://billit.ciudadanointeligente.org/bills/search?q=#{params[:q]}", 'application/json').bills || []
+      @bills = Bills.get("http://billit.ciudadanointeligente.org/bills/search?q=#{URI.encode(params[:q])}", 'application/json').bills || []
     else
       # @bills = nil
     end
