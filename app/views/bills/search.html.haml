@@ -1,8 +1,8 @@
 %h1 Basic Search
-= form_tag("/search", :method => "get") do
-  = label_tag(:q, "Search for:")
-  = text_field_tag(:q)
-  = submit_tag("Search")
+= form_tag('/search', :method => 'get') do
+  = label_tag :q, 'Search for:'
+  = text_field_tag :q, params[:q]
+  = submit_tag 'Search'
 
 %h1=t '.title', :default => 'Bill'
 %table.table.table-striped
@@ -18,8 +18,8 @@
     - @bills.each do |bill|
       %tr
         %td= bill.uid
-        %td= link_to bill.title, "/bill"
-        %td= 'Oli'
+        %td= link_to bill.title, '/bill'
+        %td= bill.stage
         %td= bill.creation_date.gsub('T00:00:00+00:00', '')
         %td= 'Otro oli'
         %td= bill.origin_chamber
