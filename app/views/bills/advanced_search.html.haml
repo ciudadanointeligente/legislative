@@ -29,9 +29,9 @@
     - @bills.each do |bill|
       %tr
         %td= bill.uid
-        %td= link_to bill.title, '/bill'
+        %td= link_to bill.title, '/bill/' + bill.uid
         %td= bill.stage
-        %td= bill.creation_date.gsub('T00:00:00+00:00', '')
+        %td= DateTime.parse(bill.creation_date).to_date.to_s
         %td= 'Otro oli'
         %td= bill.origin_chamber
 

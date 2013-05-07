@@ -53,6 +53,7 @@ CabildoAbierto::Application.routes.draw do
   root :to => 'bills#index'
   match 'search' => 'bills#search'
   match 'advanced_search' => 'bills#advanced_search'
+  match 'bill/:id' => 'bills#view'
 
   # See how all your routes lay out with "rake routes"
 

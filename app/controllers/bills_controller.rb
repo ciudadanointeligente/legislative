@@ -12,6 +12,10 @@ class BillsController < ApplicationController
     @bill = Bill.get(params[:id], 'application/json')
   end
 
+  def view
+    @bill = Bill.get("http://billit.ciudadanointeligente.org/bills/#{params[:id]}", 'application/json')
+  end
+
   def advanced_search
     if !params.nil? && params.length > 2 # default have 2 keys {'action'=>'advanced_search', 'controller'=>'bills'}
       keywords = String.new
@@ -20,7 +24,7 @@ class BillsController < ApplicationController
          keywords << param[0] + '=' + param[1] + '&'
         end
       end
-      @bills = Bills.get('http://billit.ciudadanointeligente.org/bills/search/?#{URI.encode(keywords)}', 'application/json').bills || []
+      @bills = Bills.get("http://billit.ciudadanointeligente.org/bills/search/?#{URI.encode(keywords)}", 'application/json').bills || []
     else
       # @bills = nil
     end
@@ -28,7 +32,7 @@ class BillsController < ApplicationController
 
   def search
     if !params.nil? && params.length > 2  # default have 2 keys {'action'=>'search', 'controller'=>'bills'}
-      @bills = Bills.get('http://billit.ciudadanointeligente.org/bills/search?q=#{URI.encode(params[:q])}', 'application/json').bills || []
+      @bills = Bills.get("http://billit.ciudadanointeligente.org/bills/search?q=#{URI.encode(params[:q])}", 'application/json').bills || []
     else
       # @bills = nil
     end
