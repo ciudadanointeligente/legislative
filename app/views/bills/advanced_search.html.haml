@@ -6,10 +6,10 @@
   = text_field_tag :uid, params[:uid]
   = label_tag :stage, 'Stage:'
   = text_field_tag :stage, params[:stage]
-  = label_tag :creation_date, 'Creation date:'
-  = text_field_tag :creation_date, params[:creation_date]
-  = label_tag :end_date, 'End date:'
-  = text_field_tag :end_date, params[:end_date]
+  = label_tag :creation_date_min, 'Creation date (min):'
+  = text_field_tag :creation_date_min, params[:creation_date_min]
+  = label_tag :creation_date_max, 'Creation date (max):'
+  = text_field_tag :creation_date_max, params[:creation_date_max]
   = label_tag :origin_chamber, 'Origin chamber:'
   = text_field_tag :origin_chamber, params[:origin_chamber]
   = submit_tag 'Search'
