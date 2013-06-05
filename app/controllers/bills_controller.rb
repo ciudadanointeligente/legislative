@@ -35,7 +35,7 @@ class BillsController < ApplicationController
     # respond_to do |format|
       # format.html # new.html.erb
       # format.json { render json: @bill }
-    end
+    # end
   end
 
   # GET /bills/1/edit
