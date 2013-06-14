@@ -1,4 +1,5 @@
 require 'roar/representer/feature/client'
+require 'billit_representers/representers/bill_representer'
 
 class Bill
   include Roar::Representer::Feature::HttpVerbs

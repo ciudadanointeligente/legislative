@@ -1,4 +1,5 @@
 require 'roar/representer/feature/client'
+require 'billit_representers/representers/bills_representer'
 
 class Bills < OpenStruct
   include Roar::Representer::Feature::HttpVerbs

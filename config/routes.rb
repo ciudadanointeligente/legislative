@@ -51,9 +51,9 @@ CabildoAbierto::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
   root :to => 'bills#index'
+  match 'bill/:id' => 'bills#show'
   match 'search' => 'bills#search'
   match 'advanced_search' => 'bills#advanced_search'
-  match 'bill/:id' => 'bills#view'
 
   # See how all your routes lay out with "rake routes"
 

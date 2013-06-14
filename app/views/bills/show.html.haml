@@ -1,0 +1,78 @@
+/ %h1 Show
+
+%h1=t '.title', :default => 'Bill ' + @bill.uid
+%table.table.table-striped
+  %thead
+  %tbody
+    %tr
+      %th Bulletin
+      %td.numeric= @bill.uid
+    %tr
+      %th Title
+      %td= @bill.title
+    %tr
+      %th Creation date
+      %td= DateTime.parse(@bill.creation_date).to_date.to_s
+    %tr
+      %th Initiative
+      %td= @bill.initiative
+    %tr
+      %th Origin chamber
+      %td= @bill.origin_chamber
+    %tr
+      %th Current urgency
+      %td= @bill.current_urgency
+    %tr
+      %th Stage
+      %td= @bill.stage
+    %tr
+      %th Sub stage
+      %td= @bill.sub_stage
+    %tr
+      %th State
+      %td= @bill.state
+    %tr
+      %th Law
+      %td= @bill.law
+    %tr
+      %th Link law
+      %td= @bill.link_law
+    %tr
+      %th Merged
+      %td= @bill.merged
+    %tr
+      %th Matters
+      - @matters = @bill.matters
+      %td= render partial: "matter", collection: @matters
+    %tr
+      %th Authors
+      - @authors = @bill.authors
+      %td= render partial: "author", collection: @authors
+    %tr
+      %th Events
+      - @events = @bill.events
+      %td= render partial: "event", collection: @events
+    %tr
+      %th Urgencies
+      %td= @bill.urgencies
+    %tr
+      %th Reports
+      - @reports = @bill.reports
+      %td= render partial: "report", collection: @reports
+    %tr
+      %th Modifications
+      %td= @bill.modifications
+    %tr
+      %th Documents
+      - @documents = @bill.documents
+      %td= render partial: "document", collection: @documents
+    %tr
+      %th Instructions
+      %td= @bill.instructions
+    %tr
+      %th Observations
+      %td= @bill.observations
+
+/           = link_to t('.destroy', :default => t("helpers.links.destroy")), fruit_path(fruit), :method => :delete, :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-mini btn-danger'
+
+/ = link_to t('.new', :default => t("helpers.links.new")), new_fruit_path, :class => 'btn btn-primary'
