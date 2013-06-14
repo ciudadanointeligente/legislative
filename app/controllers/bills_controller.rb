@@ -20,6 +20,7 @@ class BillsController < ApplicationController
   # GET /bills/1.json
   def show
     @bill = Bill.get("http://billit.ciudadanointeligente.org/bills/#{params[:id]}", 'application/json')
+    @popit_url = 'http://billit-demo.popit.mysociety.org/person/'
 
     # respond_to do |format|
       # format.html # show.html.erb

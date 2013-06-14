@@ -1,0 +1,19 @@
+/ %strong Created at
+/ = report['created_at']
+/ %br/
+/ %strong Created at:
+/ = DateTime.parse(report['created_at']).to_date.to_s
+/ %br/
+%strong Date:
+= DateTime.parse(report['date']).to_date.to_s
+%br/
+%strong Stage:
+= report['stage']
+%br/
+%strong Step:
+= report['step']
+%br/
+/ %strong Updated at:
+/ = report['updated_at']
+/ %br/
+%br/
