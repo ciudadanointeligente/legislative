@@ -19,8 +19,9 @@ class BillsController < ApplicationController
   # GET /bills/1
   # GET /bills/1.json
   def show
-    @bill = Bill.get("http://billit.ciudadanointeligente.org/bills/#{params[:id]}", 'application/json')
-    @popit_url = 'http://billit-demo.popit.mysociety.org/person/'
+    @APP_CONFIG = HashWithIndifferentAccess.new(YAML.load(File.read(File.expand_path('../../../properties.yaml', __FILE__))))
+    @bill = Bill.get(@APP_CONFIG[:poplus][:billit] + "#{params[:id]}", 'application/json')
+    @popit_url = @APP_CONFIG[:poplus][:popit]
 
     # respond_to do |format|
       # format.html # show.html.erb
@@ -89,6 +90,8 @@ class BillsController < ApplicationController
   end
 
   def advanced_search
+    @APP_CONFIG = HashWithIndifferentAccess.new(YAML.load(File.read(File.expand_path('../../../properties.yaml', __FILE__))))
+
     if !params.nil? && params.length > 2 # default have 2 keys {'action'=>'advanced_search', 'controller'=>'bills'}
       keywords = String.new
       params.each do |param|
@@ -96,13 +99,15 @@ class BillsController < ApplicationController
          keywords << param[0] + '=' + param[1] + '&'
         end
       end
-      @bills = Bills.get("http://billit.ciudadanointeligente.org/bills/search/?#{URI.encode(keywords)}", 'application/json').bills || []
+      @bills = Bills.get(@APP_CONFIG[:poplus][:billit] + "search/?#{URI.encode(keywords)}", 'application/json').bills || []
     end
   end
 
   def search
+    @APP_CONFIG = HashWithIndifferentAccess.new(YAML.load(File.read(File.expand_path('../../../properties.yaml', __FILE__))))
+
     if !params.nil? && params.length > 2  # default have 2 keys {'action'=>'search', 'controller'=>'bills'}
-      @bills = Bills.get("http://billit.ciudadanointeligente.org/bills/search?q=#{URI.encode(params[:q])}", 'application/json').bills || []
+      @bills = Bills.get(@APP_CONFIG[:poplus][:billit] + "search?q=#{URI.encode(params[:q])}", 'application/json').bills || []
     end
   end
 
