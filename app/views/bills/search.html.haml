@@ -15,6 +15,7 @@
       %th= 'Publish date'
       %th= 'Chamber'
   %tbody
+    - @bills = @query.bills
     - @bills.each do |bill|
       %tr
         %td= bill.uid
@@ -23,6 +24,11 @@
         %td= DateTime.parse(bill.creation_date).to_date.to_s
         %td= 'Otro oli'
         %td= bill.origin_chamber
+    = "Page " + @query.current_page.to_s + " of " + @query.total_pages.to_s + " with " + @query.total_entries.to_s + " results"
+    %p
+    = link_to("Previous", url_for(action:'search') + '?' + get_params(@query.previous)) if @query.previous
+    = '|'
+    = link_to("Next", url_for(action:'search') + '?' + get_params(@query.next)) if @query.next
 
 /           = link_to t('.destroy', :default => t("helpers.links.destroy")), fruit_path(fruit), :method => :delete, :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-mini btn-danger'
 

@@ -1,6 +1,6 @@
 #encoding: utf-8
 require 'billit_representers/representers/bill_representer'
-require 'billit_representers/representers/bills_representer'
+require 'billit_representers/representers/bill_collection_representer'
 
 class BillsController < ApplicationController
   include Roar::Rails::ControllerAdditions
@@ -89,7 +89,7 @@ class BillsController < ApplicationController
     # end
   end
 
-  def advanced_search
+  def search
     @APP_CONFIG = HashWithIndifferentAccess.new(YAML.load(File.read(File.expand_path('../../../properties.yaml', __FILE__))))
 
     if !params.nil? && params.length > 2 # default have 2 keys {'action'=>'advanced_search', 'controller'=>'bills'}
@@ -99,16 +99,13 @@ class BillsController < ApplicationController
          keywords << param[0] + '=' + param[1] + '&'
         end
       end
-      @bills = Bills.get(@APP_CONFIG[:poplus][:billit] + "search/?#{URI.encode(keywords)}", 'application/json').bills || []
+      @query = BillCollectionPage.get(@APP_CONFIG[:poplus][:billit] + "search/?#{URI.encode(keywords)}", 'application/json')
+      # @bills = query.bills || []
     end
   end
 
-  def search
-    @APP_CONFIG = HashWithIndifferentAccess.new(YAML.load(File.read(File.expand_path('../../../properties.yaml', __FILE__))))
-
-    if !params.nil? && params.length > 2  # default have 2 keys {'action'=>'search', 'controller'=>'bills'}
-      @bills = Bills.get(@APP_CONFIG[:poplus][:billit] + "search?q=#{URI.encode(params[:q])}", 'application/json').bills || []
-    end
+  def advanced_search
+    @query = search
+    render template: "bills/advanced_search"
   end
-
 end
