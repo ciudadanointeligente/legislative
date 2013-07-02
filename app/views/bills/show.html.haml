@@ -54,21 +54,24 @@
       %td= render partial: "event", collection: @events
     %tr
       %th Urgencies
-      %td= @bill.urgencies
+      - @urgencies = @bill.urgencies
+      %td= render partial: "urgencie", collection: @urgencies
     %tr
       %th Reports
       - @reports = @bill.reports
       %td= render partial: "report", collection: @reports
     %tr
       %th Modifications
-      %td= @bill.modifications
+      - @modifications = @bill.modifications
+      %td= render partial: "modification", collection: @modifications
     %tr
       %th Documents
       - @documents = @bill.documents
       %td= render partial: "document", collection: @documents
     %tr
       %th Instructions
-      %td= @bill.instructions
+      - @instructions = @bill.instructions
+      %td= render partial: "instruction", collection: @instructions
     %tr
       %th Observations
       %td= @bill.observations

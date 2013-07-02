@@ -25,9 +25,9 @@
           %a.brand(href="/") Cabildo Abierto
           .container.nav-collapse
             %ul.nav
-              %li= link_to 'Home', '/'
-              %li= link_to 'Advanced Search', '/advanced_search/'
-              %li= link_to 'About us', 'http://www.ciudadanointeligente.org/quienes-somos/'
+              %li= link_to t('layout.home'), '/'
+              %li= link_to t('layout.advanced_search'), '/advanced_search/'
+              %li= link_to t('layout.about_us'), 'http://www.ciudadanointeligente.org/quienes-somos/'
 
     .container
 
@@ -39,7 +39,11 @@
           .span3
     
       %footer
-        %p +562 24192770 | Holanda 895, Providencia, Santiago | &copy; Fundación Ciudadano Inteligente 2013
+        %a{:href => "http://creativecommons.org/licenses/by/3.0/deed.es", :rel => "license"}
+          %img{:alt => "Licencia Creative Commons", :src => "http://i.creativecommons.org/l/by/3.0/80x15.png", :style => "border-width:0"}
+        = "Esta obra está bajo una"
+        %a{:href => "http://creativecommons.org/licenses/by/3.0/deed.es", :rel => "license"} Licencia Creative Commons Atribución 3.0 Unported
+        %p +562 24192770 | Holanda 895, Providencia, Santiago | (cc) Fundación Ciudadano Inteligente 2013
     /
       Javascripts
       \==================================================

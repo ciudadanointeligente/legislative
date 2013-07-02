@@ -2,4 +2,34 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  layout:
+    home: "Home"
+    advanced_search: "Advanced search"
+    about_us: "About us"
+  search:
+    basic_search: "Basic search"
+    search_for: "Search for:"
+    search: "Search"
+    bills: "Bills"
+  advanced_search:
+    advanced_search: "Advanced search"
+    search_for: "Search for:"
+    bulletin: "Bulletin:"
+    stage: "Stage:"
+    creation_date_min: "Creation date (min):"
+    creation_date_max: "Creation date (max):"
+    origin_chamber: "Origin chamber:"
+  bill:
+    bulletin: "Bulletin"
+    title: "Title"
+    stage: "Stage"
+    creation_date: "Creation date"
+    publish_date: "Publish date"
+    chamber: "Chamber"
+  pagination:
+    page: "Page "
+    of: " of "
+    with: " with "
+    results: " results"
+    previous: "Previous"
+    next: "Next"

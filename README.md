@@ -21,3 +21,11 @@ A continuación instalar las gemas requeridas por el proyecto.
 ## Ejecución
 
     bundle exec rails s
+
+## Licencia
+
+Este proyecto se encuentra licenciado bajo la GNU Affero General Public License (AGPL). Para mayor información puedes acceder a una [edición digital de la licencia aquí](http://www.gnu.org/licenses/agpl-3.0.html).
+
+
+Para mayor información nuestra, nuestro sitio [Fundación Ciudadano Inteligente](http://www.ciudadanointeligente.org/).
+Y si quieres ayudarnos con parches, notificar bugs o replicar nuestros proyecto revisa [nuestros repositorios](https://github.com/ciudadanointeligente/).

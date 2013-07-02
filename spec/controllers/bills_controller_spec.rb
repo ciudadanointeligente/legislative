@@ -87,6 +87,35 @@ describe BillsController do
     end
   end
 
+  describe "GET search" do
+    it "returns an array" do
+      get :search, q: "salud"
+      assigns(:query).bills.should be_an Array
+    end
+
+    it "has a self reference" do
+      get :search, q: "salud"
+      assigns(:query).self.should eq("http://billit.ciudadanointeligente.org/bills/search?&page=1&q=salud")
+    end
+
+    it "has a next page" do
+      get :search, q: "salud"
+      assigns(:query).next.should eq("http://billit.ciudadanointeligente.org/bills/search?&page=2&q=salud")
+    end
+
+    it "has a previous page" do
+      get :search, q: "salud", page: 2
+      assigns(:query).previous.should eq("http://billit.ciudadanointeligente.org/bills/search?&page=1&q=salud")
+    end
+
+    it "has all matadata" do
+      get :search, q: "salud"
+      assigns(:query).total_entries.should_not be_nil
+      assigns(:query).current_page.should_not be_nil
+      assigns(:query).total_pages.should_not be_nil
+    end
+  end
+
   describe "POST create" do
     describe "with valid params" do
       xit "creates a new Bill" do

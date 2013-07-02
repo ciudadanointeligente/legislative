@@ -1,0 +1,35 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es:
+  layout:
+    home: "Principal"
+    advanced_search: "Búsqueda avanzada"
+    about_us: "Acerca de nosotros"
+  search:
+    basic_search: "Búsqueda"
+    search_for: "Buscar por:"
+    search: "Buscar"
+    bills: "Proyectos de ley"
+  advanced_search:
+    advanced_search: "Búsqueda avanzada"
+    search_for: "Buscar por:"
+    bulletin: "Boletín:"
+    stage: "Etapa:"
+    creation_date_min: "Fecha de creación (min):"
+    creation_date_max: "Fecha de creación (max):"
+    origin_chamber: "Cámara de origen:"
+  bill:
+    bulletin: "Boletín"
+    title: "Título"
+    stage: "Etapa"
+    creation_date: "Fecha de creación"
+    publish_date: "Fecha de publicación"
+    chamber: "Cámara"
+  pagination:
+    page: "Página "
+    of: " de "
+    with: " con "
+    results: " resultados"
+    previous: "Anterior"
+    next: "Siguiente"
