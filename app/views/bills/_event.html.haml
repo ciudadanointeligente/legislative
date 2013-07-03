@@ -1,22 +1,22 @@
-%strong Chamber:
+%strong= t 'event.chamber'
 = event['chamber']
 %br/
-/ %strong Created at:
+/ %strong= t 'event.created_at'
 / = DateTime.parse(event['created_at']).to_date.to_s
 / %br/
-%strong Date:
+%strong= t 'event.date'
 = DateTime.parse(event['date']).to_date.to_s
 %br/
-%strong Description:
+%strong= t 'event.description'
 = event['description']
 %br/
-%strong Session:
+%strong= t 'event.session'
 = event['session']
 %br/
-%strong Stage:
+%strong= t 'event.stage'
 = event['stage']
 %br/
-/ %strong Updated at:
+/ %strong= t 'event.updated_at'
 / = event['updated_at']
 / %br/
 %br/

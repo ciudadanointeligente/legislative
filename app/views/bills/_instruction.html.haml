@@ -1,19 +1,19 @@
-/ %strong Created at:
+/ %strong= t 'instruction.created_at'
 / = DateTime.parse(instruction['created_at']).to_date.to_s
 / %br/
-%strong Date:
+%strong= t 'instruction.date'
 = DateTime.parse(instruction['date']).to_date.to_s
 %br/
-/ %strong Event:
+/ %strong= t 'instruction.event'
 / = instruction['event']
 / %br/
-%strong Stage:
+%strong= t 'instruction.stage'
 = instruction['stage']
 %br/
-%strong Step:
+%strong= t 'instruction.step'
 = instruction['step']
 %br/
-/ %strong Updated at:
+/ %strong= t 'instruction.updated_at'
 / = instruction['updated_at']
 / %br/
 %br/
