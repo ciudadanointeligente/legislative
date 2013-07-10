@@ -29,6 +29,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'coveralls', require: false
 end
 
 gem 'jquery-rails'
