@@ -1,6 +1,7 @@
 # Cabildo Abierto
 
 [![Build Status](https://travis-ci.org/ciudadanointeligente/cabildo-abierto.png?branch=master)](https://travis-ci.org/ciudadanointeligente/cabildo-abierto)
+[![Coverage Status](https://coveralls.io/repos/ciudadanointeligente/cabildo-abierto/badge.png)](https://coveralls.io/r/ciudadanointeligente/cabildo-abierto)
 
 ## Descripción
 
