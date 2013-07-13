@@ -155,14 +155,12 @@ describe BillsController do
 
   describe "PUT update" do
     describe "with valid params" do
-      xit "updates the requested bill" do
-        bill = Bill.create! valid_attributes
-        # Assuming there are no other bills in the database, this
-        # specifies that the Bill created on the previous line
-        # receives the :update_attributes message with whatever params are
-        # submitted in the request.
-        Bill.any_instance.should_receive(:update_attributes).with({ "these" => "params" })
-        put :update, {:id => bill.to_param, :bill => { "these" => "params" }}, valid_session
+      it "updates the requested bill" do
+        #bill = Bill.create! valid_attributes
+        bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
+        #Bill.any_instance.should_receive(:update_attributes).with({ "these" => "params" })
+        put :update, {id: bill.uid, tags: bill.tags}, valid_session
+        assigns(:bill).tags.should eq(bill.tags)
       end
 
       xit "assigns the requested bill as @bill" do

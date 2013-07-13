@@ -63,7 +63,7 @@ class BillsController < ApplicationController
 
   # PUT /bills/1
   # PUT /bills/1.json
-  def update
+  #def update
     # @bill = Bill.find(params[:id])
 
     # respond_to do |format|
@@ -75,7 +75,7 @@ class BillsController < ApplicationController
     #     format.json { render json: @bill.errors, status: :unprocessable_entity }
     #   end
     # end
-  end
+  #end
 
   # DELETE /bills/1
   # DELETE /bills/1.json
@@ -107,5 +107,14 @@ class BillsController < ApplicationController
   def advanced_search
     @query = search
     render template: "bills/advanced_search"
+  end
+
+  def update
+    @APP_CONFIG = HashWithIndifferentAccess.new(YAML.load(File.read(File.expand_path('../../../properties.yaml', __FILE__))))
+    @bill = Bill.get(@APP_CONFIG[:poplus][:billit] + "#{params[:id]}", 'application/json')
+
+    !params[:tags].nil? ? @bill.tags = params[:tags] : @bill.tags = []
+    @bill.put(@APP_CONFIG[:poplus][:billit] + "#{params[:id]}", 'application/json')
+    render text: params.to_s, status: 201
   end
 end

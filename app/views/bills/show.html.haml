@@ -1,6 +1,44 @@
 / %h1 Show
+:javascript
+  $(document).ready(function() {
+    var tagsUpdate = function(event, ui) {
+      // do something special
+      //console.log($("#myTags").tagit("assignedTags"));
+      if (ui.duringInitialization) {return}
+      var preexistingtags = [1,2,3]
+      var tags_array = $("#myTags").tagit("assignedTags");
+      var data = {tags: tags_array};
+      //console.log(data);
+      $.ajax({
+          url: '/bill/6967-06/update',
+          type: 'PUT',
+          data: data,
+          success: function(result) {
+            console.log(result);
+              // Do something with the result
+          }
+      });
+    }
+
+    var config = {
+      afterTagAdded: tagsUpdate,
+      afterTagRemoved: tagsUpdate
+    }
+    $("#myTags").tagit(config);
+  });
 
 %h1=t '.title', :default => t('search.bill') + @bill.uid
+
+/= form_tag('/tags', :method => 'get') do
+/  = label_tag :q, "Tags"
+/  = text_field_tag :q, params[:q]
+/  = submit_tag "Agregar"
+
+%ul#myTags
+  / Existing list items will be pre-added to the tags
+  - @bill.tags.each do |tag|
+    %li#preexisting= tag
+
 %table.table.table-striped
   %thead
   %tbody
@@ -10,6 +48,9 @@
     %tr
       %th= t 'bill.title'
       %td= @bill.title
+    %tr
+      %th= t 'bill.summary'
+      %td= @bill.summary
     %tr
       %th= t 'bill.creation_date'
       %td= DateTime.parse(@bill.creation_date).to_date.to_s

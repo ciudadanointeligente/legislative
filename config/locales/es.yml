@@ -23,6 +23,8 @@ es:
   bill:
     bulletin: "Boletín"
     title: "Título"
+    summary: "Resumen"
+    tags: "Etiquetas"
     stage: "Etapa"
     creation_date: "Fecha de creación"
     publish_date: "Fecha de publicación"

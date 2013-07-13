@@ -23,6 +23,8 @@ en:
   bill:
     bulletin: "Bulletin"
     title: "Title"
+    summary: "Summary"
+    tags: "Tags"
     stage: "Stage"
     creation_date: "Creation date"
     publish_date: "Publish date"
