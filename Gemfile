@@ -29,9 +29,11 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'coveralls', require: false
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'haml'
 gem 'roar', '0.11.2'
 gem 'roar-rails', '0.0.7'

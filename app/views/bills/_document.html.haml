@@ -1,28 +1,28 @@
-/ %strong Chamber:
+/ %strong= t 'document.chamber'
 / = document['chamber']
 / %br/
-/ %strong Created at:
+/ %strong= t 'document.created_at'
 / = DateTime.parse(document['created_at']).to_date.to_s
 / %br/
-%strong Date:
+%strong= t 'document.date'
 = DateTime.parse(document['date']).to_date.to_s
 %br/
-/ %strong Event:
+/ %strong= t 'document.event'
 / = document['event']
 / %br/
-%strong Number:
+%strong= t 'document.number'
 = document['number']
 %br/
-%strong Stage:
+%strong= t 'document.stage'
 = document['stage']
 %br/
-%strong Step:
+%strong= t 'document.step'
 = document['step']
 %br/
-%strong Type:
+%strong= t 'document.type'
 = document['type']
 %br/
-/ %strong Updated at:
+/ %strong= t 'document.updated_at'
 / = document['updated_at']
 / %br/
 %br/

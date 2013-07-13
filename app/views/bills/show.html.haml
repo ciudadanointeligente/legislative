@@ -1,79 +1,120 @@
 / %h1 Show
+:javascript
+  $(document).ready(function() {
+    var tagsUpdate = function(event, ui) {
+      // do something special
+      //console.log($("#myTags").tagit("assignedTags"));
+      if (ui.duringInitialization) {return}
+      var preexistingtags = [1,2,3]
+      var tags_array = $("#myTags").tagit("assignedTags");
+      var data = {tags: tags_array};
+      //console.log(data);
+      $.ajax({
+          url: '/bill/6967-06/update',
+          type: 'PUT',
+          data: data,
+          success: function(result) {
+            console.log(result);
+              // Do something with the result
+          }
+      });
+    }
 
-%h1=t '.title', :default => 'Bill ' + @bill.uid
+    var config = {
+      afterTagAdded: tagsUpdate,
+      afterTagRemoved: tagsUpdate
+    }
+    $("#myTags").tagit(config);
+  });
+
+%h1=t '.title', :default => t('search.bill') + @bill.uid
+
+/= form_tag('/tags', :method => 'get') do
+/  = label_tag :q, "Tags"
+/  = text_field_tag :q, params[:q]
+/  = submit_tag "Agregar"
+
+%ul#myTags
+  / Existing list items will be pre-added to the tags
+  - @bill.tags.each do |tag|
+    %li#preexisting= tag
+
 %table.table.table-striped
   %thead
   %tbody
     %tr
-      %th Bulletin
+      %th= t 'bill.bulletin'
       %td.numeric= @bill.uid
     %tr
-      %th Title
+      %th= t 'bill.title'
       %td= @bill.title
     %tr
-      %th Creation date
+      %th= t 'bill.summary'
+      %td= @bill.summary
+    %tr
+      %th= t 'bill.creation_date'
       %td= DateTime.parse(@bill.creation_date).to_date.to_s
     %tr
-      %th Initiative
+      %th= t 'bill.initiative'
       %td= @bill.initiative
     %tr
-      %th Origin chamber
+      %th= t 'bill.origin_chamber'
       %td= @bill.origin_chamber
     %tr
-      %th Current urgency
+      %th= t 'bill.current_urgency'
       %td= @bill.current_urgency
     %tr
-      %th Stage
+      %th= t 'bill.stage'
       %td= @bill.stage
     %tr
-      %th Sub stage
+      %th= t 'bill.sub_stage'
       %td= @bill.sub_stage
     %tr
-      %th State
+      %th= t 'bill.state'
       %td= @bill.state
     %tr
-      %th Law
+      %th= t 'bill.law'
       %td= @bill.law
     %tr
-      %th Link law
+      %th= t 'bill.link_law'
       %td= @bill.link_law
     %tr
-      %th Merged
+      %th= t 'bill.merged'
       %td= @bill.merged
     %tr
-      %th Matters
+      %th= t 'bill.matters'
       - @matters = @bill.matters
       %td= render partial: "matter", collection: @matters
     %tr
-      %th Authors
+      %th= t 'bill.authors'
       - @authors = @bill.authors
       %td= render partial: "author", collection: @authors
     %tr
-      %th Events
+      %th= t 'bill.events'
       - @events = @bill.events
       %td= render partial: "event", collection: @events
     %tr
-      %th Urgencies
+      %th= t 'bill.urgencies'
       - @urgencies = @bill.urgencies
       %td= render partial: "urgencie", collection: @urgencies
     %tr
-      %th Reports
+      %th= t 'bill.reports'
       - @reports = @bill.reports
       %td= render partial: "report", collection: @reports
     %tr
-      %th Modifications
+      %th= t 'bill.modifications'
       - @modifications = @bill.modifications
       %td= render partial: "modification", collection: @modifications
     %tr
-      %th Documents
+      %th= t 'bill.documents'
       - @documents = @bill.documents
       %td= render partial: "document", collection: @documents
     %tr
-      %th Instructions
+      %th= t 'bill.instructions'
       - @instructions = @bill.instructions
       %td= render partial: "instruction", collection: @instructions
     %tr
-      %th Observations
+      %th= t 'bill.observations'
       %td= @bill.observations
 
 /           = link_to t('.destroy', :default => t("helpers.links.destroy")), fruit_path(fruit), :method => :delete, :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-mini btn-danger'

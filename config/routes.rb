@@ -52,6 +52,7 @@ CabildoAbierto::Application.routes.draw do
   # root :to => 'welcome#index'
   root :to => 'bills#index'
   match 'bill/:id' => 'bills#show'
+  match 'bill/:id/update' => 'bills#update', method: :put
   match 'search' => 'bills#search'
   match 'advanced_search' => 'bills#advanced_search'
 

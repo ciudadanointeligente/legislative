@@ -1,5 +1,8 @@
 # Cabildo Abierto
 
+[![Build Status](https://travis-ci.org/ciudadanointeligente/cabildo-abierto.png?branch=master)](https://travis-ci.org/ciudadanointeligente/cabildo-abierto)
+[![Coverage Status](https://coveralls.io/repos/ciudadanointeligente/cabildo-abierto/badge.png)](https://coveralls.io/r/ciudadanointeligente/cabildo-abierto)
+
 ## Descripción
 
 Canal de participación y de información que busca acercar al ciudadano lo que sucede en nuestro Congreso Nacional. Construido haciendo uso del ambiente POPLUS.

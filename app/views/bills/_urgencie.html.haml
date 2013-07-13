@@ -1,28 +1,28 @@
-/ %strong Created at:
+/ %strong= t 'urgencie.created_at'
 / = DateTime.parse(urgencie['created_at']).to_date.to_s
 / %br/
-/ %strong Entry chamber:
+/ %strong= t 'urgencie.entry_chamber'
 / = urgencie['entry_chamber']
 / %br/
-%strong Entry date:
+%strong= t 'urgencie.entry_date'
 = DateTime.parse(urgencie['entry_date']).to_date.to_s
 %br/
-/ %strong Entry message:
+/ %strong= t 'urgencie.entry_message'
 / = urgencie['entry_message']
 / %br/
-%strong Type:
+%strong= t 'urgencie.type'
 = urgencie['type']
 %br/
-/ %strong Updated at:
+/ %strong= t 'urgencie.updated_at'
 / = urgencie['updated_at']
 / %br/
-/ %strong Withdrawal chamber:
+/ %strong= t 'urgencie.withdrawal_chamber'
 / = urgencie['withdrawal_chamber']
 / %br/
-/ %strong Withdrawal date:
+/ %strong= t 'urgencie.withdrawal_date'
 / = urgencie['withdrawal_date']
 / %br/
-/ %strong Withdrawal message:
+/ %strong= t 'urgencie.withdrawal_message'
 / = urgencie['withdrawal_message']
 / %br/
 %br/

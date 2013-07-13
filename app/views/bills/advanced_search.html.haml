@@ -15,6 +15,12 @@
   = submit_tag t 'search.search'
 
 %h1=t '.title', :default => 'Bill'
+
+- if @query != nil
+  %p= t('pagination.page') + @query.current_page.to_s + t('pagination.of') + @query.total_pages.to_s + ',' + t('pagination.with') + @query.total_entries.to_s + t('pagination.results')
+  = link_to(t('pagination.previous'), url_for(action:'advanced_search') + '?' + get_params(@query.previous)) + ' | ' if @query.previous
+  = link_to(t('pagination.next'), url_for(action:'advanced_search') + '?' + get_params(@query.next)) if @query.next
+
 %table.table.table-striped
   %thead
     %tr
@@ -35,11 +41,10 @@
         %td= DateTime.parse(bill.creation_date).to_date.to_s
         %td= 'Pendiente'
         %td= bill.origin_chamber
-    = t('pagination.page') + @query.current_page.to_s + t('pagination.of') + @query.total_pages.to_s + t('pagination.with') + @query.total_entries.to_s + t('pagination.results')
-    %p
-    = link_to(t('pagination.previous'), url_for(action:'advanced_search') + '?' + get_params(@query.previous)) if @query.previous
-    = '|'
-    = link_to(t('pagination.next'), url_for(action:'advanced_search') + '?' + get_params(@query.next)) if @query.next
+- if @query != nil
+  %p
+    =link_to(t('pagination.previous'), url_for(action:'advanced_search') + '?' + get_params(@query.previous)) + ' | ' if @query.previous
+    =link_to(t('pagination.next'), url_for(action:'advanced_search') + '?' + get_params(@query.next)) if @query.next
 
 /           = link_to t('.destroy', :default => t("helpers.links.destroy")), fruit_path(fruit), :method => :delete, :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-mini btn-danger'
 
