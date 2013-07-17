@@ -26,9 +26,8 @@
     %tr
       %th= t 'bill.bulletin'
       %th= t 'bill.title'
-      %th= t 'bill.stage'
       %th= t 'bill.creation_date'
-      %th= t 'bill.publish_date'
+      %th= t 'bill.state'
       %th= t 'bill.chamber'
   %tbody
   - if @query != nil
@@ -37,9 +36,8 @@
       %tr
         %td= bill.uid
         %td= link_to bill.title, '/bill/' + bill.uid
-        %td= bill.stage
         %td= DateTime.parse(bill.creation_date).to_date.to_s
-        %td= 'Pendiente'
+        %td= bill.state
         %td= bill.origin_chamber
 - if @query != nil
   %p
