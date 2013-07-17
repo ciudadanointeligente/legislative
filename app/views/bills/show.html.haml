@@ -36,8 +36,9 @@
 
 %ul#myTags
   / Existing list items will be pre-added to the tags
-  - @bill.tags.each do |tag|
-    %li#preexisting= tag
+  - if @bill.tags != nil
+    - @bill.tags.each do |tag|
+      %li#preexisting= tag
 
 %table.table.table-striped
   %thead
