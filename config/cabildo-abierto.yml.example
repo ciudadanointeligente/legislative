@@ -1,0 +1,20 @@
+production:
+  billit:		"http://billit.production.example.org/bills/"
+  popit:		"http://popit.production.example.org/person/"
+  writeit:		"none"
+  scout:		"none"
+  analytics:	"none"
+
+development:
+  billit:		"http://billit.dev.example.org/bills/"
+  popit:		"http://popit.dev.example.org/person/"
+  writeit:		"none"
+  scout:		"none"
+  analytics:	"none"
+
+test:
+  billit:		"http://billit.test.example.org/bills/"
+  popit:		"http://popit.test.example.org/person/"
+  writeit:		"none"
+  scout:		"none"
+  analytics:	"none"

@@ -15,6 +15,9 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+# Load application ENV vars and merge with existing ENV vars. Loaded here so can use values in initializers.
+ENV.update YAML.load_file('config/cabildo-abierto.yml')[Rails.env] rescue {}
+
 module CabildoAbierto
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
