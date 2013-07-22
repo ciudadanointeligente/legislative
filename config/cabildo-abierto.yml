@@ -1,0 +1,20 @@
+production:
+  billit:		"http://billit.ciudadanointeligente.org/bills/"
+  popit:		"http://billit-demo.popit.mysociety.org/person/"
+  writeit:		"none"
+  scout:		"none"
+  analytics:	"none"
+
+development:
+  billit:		"http://billit.ciudadanointeligente.org/bills/"
+  popit:		"http://billit-demo.popit.mysociety.org/person/"
+  writeit:		"none"
+  scout:		"none"
+  analytics:	"none"
+
+test:
+  billit:		"http://billit.ciudadanointeligente.org/bills/"
+  popit:		"http://billit-demo.popit.mysociety.org/person/"
+  writeit:		"none"
+  scout:		"none"
+  analytics:	"none"
