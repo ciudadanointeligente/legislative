@@ -32,6 +32,10 @@ group :development, :test do
   gem 'coveralls', require: false
 end
 
+group :test do
+  gem "webmock"
+end
+
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'haml'
