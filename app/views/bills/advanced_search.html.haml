@@ -2,8 +2,8 @@
 = form_tag('/advanced_search', :method => 'get') do
   = label_tag :q, t('advanced_search.search_for')
   = text_field_tag :q, params[:q]
-  = label_tag :uid, t('advanced_search.bulletin')
-  = text_field_tag :uid, params[:uid]
+  = label_tag :bill_id, t('advanced_search.bulletin')
+  = text_field_tag :bill_id, params[:bill_id]
   = label_tag :stage, t('advanced_search.stage')
   = text_field_tag :stage, params[:stage]
   = label_tag :creation_date_min, t('advanced_search.creation_date_min')
