@@ -5,8 +5,8 @@ require File.expand_path('../boot', __FILE__)
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
-require "sprockets/railtie"
 require "rails/test_unit/railtie"
+require "sprockets/railtie" # Only required if you're using asset pipeline
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -69,6 +69,7 @@ module CabildoAbierto
     config.assets.version = '1.0'
 
     config.generators do |g|
+      g.orm :mongo_mapper
       g.template_engine :haml
       g.test_framework  :rspec,
         :fixtures => true,
