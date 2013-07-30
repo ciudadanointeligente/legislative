@@ -10,7 +10,7 @@
       var data = {tags: tags_array};
       //console.log(data);
       $.ajax({
-          url: '/bill/' + '#{@bill.uid}' + '/update',
+          url: '/bills/' + '#{@bill.uid}' + '/update',
           type: 'PUT',
           data: data,
           success: function(result) {

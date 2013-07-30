@@ -3,3 +3,5 @@ rvm:
   - 2.0.0
 env:
   - RAILS_VERSION=3.2.13
+services:
+  - mongodb

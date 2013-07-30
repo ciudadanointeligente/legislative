@@ -32,6 +32,9 @@ GEM
     arel (3.0.2)
     billit_representers (0.3.1)
       roar
+    bson (1.9.1)
+    bson_ext (1.9.1)
+      bson (~> 1.9.1)
     builder (3.0.4)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -90,10 +93,18 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.22)
     mini_portile (0.5.0)
+    mongo (1.9.1)
+      bson (~> 1.9.1)
+    mongo_mapper (0.12.0)
+      activemodel (~> 3.0)
+      activesupport (~> 3.0)
+      plucky (~> 0.5.2)
     multi_json (1.7.7)
     multipart-post (1.2.0)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    plucky (0.5.2)
+      mongo (~> 1.5)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -186,6 +197,7 @@ PLATFORMS
 
 DEPENDENCIES
   billit_representers
+  bson_ext
   coffee-rails (~> 3.2.1)
   coveralls
   factory_girl_rails
@@ -195,6 +207,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   less-rails
+  mongo_mapper
   rails (= 3.2.13)
   roar (= 0.11.2)
   roar-rails (= 0.0.7)

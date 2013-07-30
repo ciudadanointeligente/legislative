@@ -23,7 +23,7 @@
     - @bills.each do |bill|
       %tr
         %td= bill.uid
-        %td= link_to bill.title, '/bill/' + bill.uid
+        %td= link_to bill.title, '/bills/' + bill.uid
         %td= DateTime.parse(bill.creation_date).to_date.to_s
         %td= bill.state
         %td= bill.origin_chamber

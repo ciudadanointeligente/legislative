@@ -51,8 +51,8 @@ CabildoAbierto::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
   root :to => 'bills#index'
-  match 'bill/:id' => 'bills#show'
-  match 'bill/:id/update' => 'bills#update', method: :put
+  match 'bills/:id' => 'bills#show'
+  match 'bills/:id/update' => 'bills#update', method: :put
   match 'search' => 'bills#search'
   match 'advanced_search' => 'bills#advanced_search'
 
