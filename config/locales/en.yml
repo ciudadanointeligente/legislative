@@ -12,6 +12,8 @@ en:
     search: "Search"
     bill: "Bill"
     bills: "Bills"
+    current_urgency: "Current urgency:"
+    bill_type: "Bill type:"
   advanced_search:
     advanced_search: "Advanced search"
     search_for: "Search for:"
