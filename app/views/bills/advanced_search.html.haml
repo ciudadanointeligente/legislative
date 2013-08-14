@@ -5,13 +5,34 @@
   = label_tag :bill_id, t('advanced_search.bulletin')
   = text_field_tag :bill_id, params[:bill_id]
   = label_tag :stage, t('advanced_search.stage')
-  = text_field_tag :stage, params[:stage]
+  %select{:name => "stage"}
+    %option{:value => "", selected: params[:stage] == ""}= 'Todas las etapas'
+    %option{:value => "Primer trámite constitucional", selected: params[:stage] == "Primer trámite constitucional"}= 'Primer trámite constitucional'
+    %option{:value => "Segundo trámite constitucional", selected: params[:stage] == "Segundo trámite constitucional"}= 'Segundo trámite constitucional'
+    %option{:value => "Tercer trámite constitucional", selected: params[:stage] == "Tercer trámite constitucional"}= 'Tercer trámite constitucional'
+    %option{:value => "Archivado", selected: params[:stage] == "Archivado"}= 'Archivado'
+    %option{:value => "Tramitación terminada", selected: params[:stage] == "Tramitación terminada"}= 'Tramitación terminada'
+  = label_tag :origin_chamber, t('search.bill_type')
+  %select{:name => "state"}
+    %option{:value => "", selected: params[:origin_chamber] == ""}= 'Todos los tipos'
+    %option{:value => "Publicado", selected: params[:origin_chamber] == "Publicado"}= 'Ley'
+    %option{:value => "En tramitación", selected: params[:origin_chamber] == "En tramitación"}= 'Proyecto de ley'
   = label_tag :creation_date_min, t('advanced_search.creation_date_min')
   = text_field_tag :creation_date_min, params[:creation_date_min]
   = label_tag :creation_date_max, t('advanced_search.creation_date_max')
   = text_field_tag :creation_date_max, params[:creation_date_max]
   = label_tag :origin_chamber, t('advanced_search.origin_chamber')
-  = text_field_tag :origin_chamber, params[:origin_chamber]
+  %select{:name => "origin_chamber"}
+    %option{:value => "", selected: params[:origin_chamber] == ""}= 'Ambas cámaras'
+    %option{:value => "Senado", selected: params[:origin_chamber] == "Senado"}= 'Senado'
+    %option{:value => "C.Diputados", selected: params[:origin_chamber] == "C.Diputados"}= 'C.Diputados'
+  = label_tag :origin_chamber, t('search.current_urgency')
+  %select{:name => "current_urgency"}
+    %option{:value => "", selected: params[:current_urgency] == ""}= 'Todas las urgencias'
+    %option{:value => "Sin urgencia", selected: params[:current_urgency] == "Sin urgencia"}= 'Sin urgencia'
+    %option{:value => "Simple", selected: params[:current_urgency] == "Simple"}= 'Simple'
+    %option{:value => "Suma urgencia", selected: params[:current_urgency] == "Suma urgencia"}= 'Suma urgencia'
+    %option{:value => "Discusion inmediata", selected: params[:current_urgency] == "Discusion inmediata"}= 'Discusion inmediata'
   = submit_tag t 'search.search'
 
 %h1=t '.title', :default => 'Bill'
