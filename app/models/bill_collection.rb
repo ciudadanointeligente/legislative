@@ -1,5 +1,4 @@
 require 'roar/representer/feature/client'
-require 'billit_representers/representers/bill_representer'
 require 'billit_representers/representers/bill_collection_representer'
 
 class BillCollection < OpenStruct
