@@ -25,7 +25,7 @@ en:
   bill:
     bulletin: "Bulletin"
     title: "Title"
-    summary: "Summary"
+    abstract: "Abstract"
     tags: "Tags"
     stage: "Stage"
     creation_date: "Creation date"

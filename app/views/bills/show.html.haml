@@ -50,8 +50,8 @@
       %th= t 'bill.title'
       %td= @bill.title
     %tr
-      %th= t 'bill.summary'
-      %td= @bill.summary
+      %th= t 'bill.abstract'
+      %td= @bill.abstract
     %tr
       %th= t 'bill.creation_date'
       %td= DateTime.parse(@bill.creation_date).to_date.to_s

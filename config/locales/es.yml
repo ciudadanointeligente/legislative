@@ -25,7 +25,7 @@ es:
   bill:
     bulletin: "Boletín"
     title: "Título"
-    summary: "Resumen"
+    abstract: "Resumen"
     tags: "Etiquetas"
     stage: "Etapa"
     creation_date: "Fecha de ingreso"
