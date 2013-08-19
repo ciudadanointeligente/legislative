@@ -63,7 +63,7 @@ es:
     entry_message: "Mensaje de entrada:"
     type: "Tipo:"
     updated_at: "Última actualización:"
-    withdrawal_chamber: "Cámara'de retiro:"
+    withdrawal_chamber: "Cámara de retiro:"
     withdrawal_date: "Fecha de retiro:"
     withdrawal_message: "Mensaje de retiro:"
   report:

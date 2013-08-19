@@ -1,8 +1,8 @@
-/ %strong= t 'report.created_at'
-/ = DateTime.parse(report['created_at']).to_date.to_s
-/ %br/
+%strong= t 'report.created_at'
+= DateTime.parse(report['created_at']).to_date.to_s if !report['created_at'].nil?
+%br/
 %strong= t 'report.date'
-= DateTime.parse(report['date']).to_date.to_s
+= DateTime.parse(report['date']).to_date.to_s if !report['date'].nil?
 %br/
 %strong= t 'report.stage'
 = report['stage']
@@ -10,7 +10,7 @@
 %strong= t 'report.step'
 = report['step']
 %br/
-/ %strong= t 'report.updated_at'
-/ = report['updated_at']
-/ %br/
+%strong= t 'report.updated_at'
+= DateTime.parse(report['updated_at']).to_date.to_s if !report['updated_at'].nil?
+%br/
 %br/

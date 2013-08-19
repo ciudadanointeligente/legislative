@@ -1,15 +1,15 @@
-/ %strong= t 'document.chamber'
-/ = document['chamber']
-/ %br/
-/ %strong= t 'document.created_at'
-/ = DateTime.parse(document['created_at']).to_date.to_s
-/ %br/
-%strong= t 'document.date'
-= DateTime.parse(document['date']).to_date.to_s
+%strong= t 'document.chamber'
+= document['chamber'] if !document['chamber'].nil?
 %br/
-/ %strong= t 'document.event'
-/ = document['event']
-/ %br/
+%strong= t 'document.created_at'
+= DateTime.parse(document['created_at']).to_date.to_s if !document['created_at'].nil?
+%br/
+%strong= t 'document.date'
+= DateTime.parse(document['date']).to_date.to_s if !document['date'].nil?
+%br/
+%strong= t 'document.event'
+= document['event'] if !document['event'].nil?
+%br/
 %strong= t 'document.number'
 = document['number']
 %br/
@@ -22,7 +22,7 @@
 %strong= t 'document.type'
 = document['type']
 %br/
-/ %strong= t 'document.updated_at'
-/ = document['updated_at']
-/ %br/
+%strong= t 'document.updated_at'
+= DateTime.parse(document['updated_at']).to_date.to_s if !document['updated_at'].nil?
+%br/
 %br/
