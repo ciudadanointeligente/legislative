@@ -1,11 +1,11 @@
 %strong= t 'event.chamber'
 = event['chamber']
 %br/
-/ %strong= t 'event.created_at'
-/ = DateTime.parse(event['created_at']).to_date.to_s
-/ %br/
+%strong= t 'event.created_at'
+= DateTime.parse(event['created_at']).to_date.to_s if !event['created_at'].nil?
+%br/
 %strong= t 'event.date'
-= DateTime.parse(event['date']).to_date.to_s
+= DateTime.parse(event['date']).to_date.to_s if !event['date'].nil?
 %br/
 %strong= t 'event.description'
 = event['description']
@@ -16,7 +16,7 @@
 %strong= t 'event.stage'
 = event['stage']
 %br/
-/ %strong= t 'event.updated_at'
-/ = event['updated_at']
-/ %br/
+%strong= t 'event.updated_at'
+= event['updated_at'] if !event['updated_at'].nil?
+%br/
 %br/

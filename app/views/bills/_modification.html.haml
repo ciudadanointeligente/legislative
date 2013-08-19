@@ -1,6 +1,6 @@
-/ %strong= t 'modification.description'
-/ = instruction['description']
-/ %br/
+%strong= t 'modification.description'
+= modification['description'] if !modification['description'].nil?
+%br/
 %strong= t 'modification.modification'
 = modification['modification']
 %br/

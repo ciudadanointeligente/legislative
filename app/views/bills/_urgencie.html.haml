@@ -1,28 +1,28 @@
-/ %strong= t 'urgencie.created_at'
-/ = DateTime.parse(urgencie['created_at']).to_date.to_s
-/ %br/
-/ %strong= t 'urgencie.entry_chamber'
-/ = urgencie['entry_chamber']
-/ %br/
+%strong= t 'urgencie.created_at'
+= DateTime.parse(urgencie['created_at']).to_date.to_s if !urgencie['created_at'].nil?
+%br/
+%strong= t 'urgencie.entry_chamber'
+= urgencie['entry_chamber'] if !urgencie['entry_chamber'].nil?
+%br/
 %strong= t 'urgencie.entry_date'
 = DateTime.parse(urgencie['entry_date']).to_date.to_s
 %br/
-/ %strong= t 'urgencie.entry_message'
-/ = urgencie['entry_message']
-/ %br/
+%strong= t 'urgencie.entry_message'
+= urgencie['entry_message'] if !urgencie['entry_message'].nil?
+%br/
 %strong= t 'urgencie.type'
 = urgencie['type']
 %br/
-/ %strong= t 'urgencie.updated_at'
-/ = urgencie['updated_at']
-/ %br/
-/ %strong= t 'urgencie.withdrawal_chamber'
-/ = urgencie['withdrawal_chamber']
-/ %br/
-/ %strong= t 'urgencie.withdrawal_date'
-/ = urgencie['withdrawal_date']
-/ %br/
-/ %strong= t 'urgencie.withdrawal_message'
-/ = urgencie['withdrawal_message']
-/ %br/
+%strong= t 'urgencie.updated_at'
+= DateTime.parse(urgencie['updated_at']).to_date.to_s if !urgencie['updated_at'].nil?
+%br/
+%strong= t 'urgencie.withdrawal_chamber'
+= urgencie['withdrawal_chamber'] if !urgencie['withdrawal_chamber'].nil?
+%br/
+%strong= t 'urgencie.withdrawal_date'
+= DateTime.parse(urgencie['withdrawal_date']).to_date.to_s if !urgencie['withdrawal_date'].nil?
+%br/
+%strong= t 'urgencie.withdrawal_message'
+= urgencie['withdrawal_message'] if !urgencie['withdrawal_message'].nil?
+%br/
 %br/
