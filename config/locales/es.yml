@@ -14,6 +14,7 @@ es:
     bills: "Proyectos de ley"
     current_urgency: "Urgencia actual:"
     bill_type: "Tipo de proyecto:"
+    download_as_excel: "Descargar como Excel"
   advanced_search:
     advanced_search: "Búsqueda avanzada"
     search_for: "Buscar por:"
