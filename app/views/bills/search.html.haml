@@ -5,6 +5,7 @@
   = submit_tag t 'search.search'
 
 %h1=t '.title', default: t('search.bills')
+= link_to t('search.download_as_excel'), params.merge(:format => :xls)
 
 %p= t('pagination.page') + @query.current_page.to_s + t('pagination.of') + @query.total_pages.to_s + ',' + t('pagination.with') + @query.total_entries.to_s + t('pagination.results')
 = link_to(t('pagination.previous'), url_for(action:'search') + '?' + get_params(@query.previous)) + ' | ' if @query.previous

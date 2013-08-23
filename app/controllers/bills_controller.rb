@@ -4,6 +4,7 @@
 
 class BillsController < ApplicationController
   include Roar::Rails::ControllerAdditions
+  respond_to :html, :xls
 
   # GET /bills
   # GET /bills.json
@@ -88,22 +89,26 @@ class BillsController < ApplicationController
     # end
   end
 
-  def search
-    if !params.nil? && params.length > 2 # default have 2 keys {'action'=>'advanced_search', 'controller'=>'bills'}
+  def search_function
+    if !params.nil? && params.length > 2 # default have 2 keys {'action'=>'search', 'controller'=>'bills'}
       keywords = String.new
       params.each do |param|
-        if param[0] != 'utf8' && param[0] != 'commit'
+        if param[0] != 'utf8' && param[0] != 'commit' && param[0] != 'format'
          keywords << param[0] + '=' + param[1] + '&'
         end
       end
       @query = BillCollectionPage.get(ENV['billit'] + "search/?#{URI.encode(keywords)}", 'application/json')
-      # @bills = query.bills || []
     end
   end
 
+  def search
+    @query = search_function
+    respond_with @query
+  end
+
   def advanced_search
-    @query = search
-    render template: "bills/advanced_search"
+    @query = search_function
+    respond_with @query
   end
 
   def update

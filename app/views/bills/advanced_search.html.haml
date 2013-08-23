@@ -36,6 +36,7 @@
   = submit_tag t 'search.search'
 
 %h1=t '.title', :default => 'Bill'
+= link_to t('search.download_as_excel'), params.merge(:format => :xls)
 
 - if @query != nil
   %p= t('pagination.page') + @query.current_page.to_s + t('pagination.of') + @query.total_pages.to_s + ',' + t('pagination.with') + @query.total_entries.to_s + t('pagination.results')

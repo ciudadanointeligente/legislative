@@ -39,6 +39,7 @@ end
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'haml'
+gem 'ekuseru'
 gem 'mongo_mapper'
 gem 'bson_ext'
 gem 'roar', '0.11.2'

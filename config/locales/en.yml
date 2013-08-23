@@ -14,6 +14,7 @@ en:
     bills: "Bills"
     current_urgency: "Current urgency:"
     bill_type: "Bill type:"
+    download_as_excel: "Download as Excel"
   advanced_search:
     advanced_search: "Advanced search"
     search_for: "Search for:"

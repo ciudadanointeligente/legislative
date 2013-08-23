@@ -1,0 +1,44 @@
+# set the filename sent to the user with __filename variable
+# this is optional, if you don't set it, the name will be like products.xls
+
+__filename = "Bills - Advanced Search - Cabildo Abierto.xls"
+
+# we get 'xls' variable which is a Workbook object
+# then we can create some worksheet to work with, with create_worksheet method
+
+sheet1 = xls.create_worksheet
+
+# fill the [0, 0] cell
+
+sheet1[0, 0] = t('search.bills')
+
+# Worksheet#row will return a Row object. We can modify it just like an Array.
+# this code will return the second row and fill the cells.
+
+sheet1.row(1).concat [t('bill.bulletin'), t('bill.title'), t('bill.abstract'), t('bill.creation_date'), t('bill.stage'), t('bill.state'), t('bill.chamber')]
+
+# we can access the instance variable we set in the controller, just like
+# in erb template
+
+@bills = @query.bills
+@bills.each_with_index do |bill, i|
+  sheet1.update_row i+2, bill.uid, bill.title, bill.abstract, DateTime.parse(bill.creation_date).to_date.to_s, bill.stage, bill.state, bill.origin_chamber
+end
+
+# we can add some formatting using Spreadsheet::Format object
+
+title_format = Spreadsheet::Format.new(:color => :blue, :weight => :bold, :size => 14)
+sheet1.row(0).set_format(0, title_format)
+sheet1.row(0).height = 20
+
+bold = Spreadsheet::Format.new(:pattern_fg_color => :red, :weight => :bold)
+sheet1.row(1).default_format = bold
+
+# formatting width of the columns
+
+sheet1.column(1).width = 60 # title
+sheet1.column(2).width = 20 # abstract
+sheet1.column(3).width = 16 # creation_date
+sheet1.column(4).width = 36 # state
+sheet1.column(5).width = 14 # state
+sheet1.column(6).width = 12 # origin_chamber
