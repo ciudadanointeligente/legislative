@@ -1,6 +1,7 @@
-%strong= t 'modification.description'
-= modification['description'] if !modification['description'].nil?
-%br/
+- if !modification['description'].blank?
+  %strong= t 'modification.description'
+  = modification['description'] if !modification['description'].blank?
+  %br/
 %strong= t 'modification.modification'
 = modification['modification']
 %br/
