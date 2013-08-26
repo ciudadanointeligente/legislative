@@ -14,6 +14,7 @@ es:
     bills: "Proyectos de ley"
     current_urgency: "Urgencia actual:"
     bill_type: "Tipo de proyecto:"
+    download_as_excel: "Descargar como Excel"
   advanced_search:
     advanced_search: "Búsqueda avanzada"
     search_for: "Buscar por:"
@@ -44,9 +45,9 @@ es:
     events: "Eventos"
     urgencies: "Urgencias"
     reports: "Reportes"
-    modifications: "Modificaciones"
+    modifications: "Comparados"
     documents: "Documentos"
-    instructions: "Instrucciones"
+    instructions: "Indicaciones"
     observations: "Observaciones"
   event:
     chamber: "Cámara:"
@@ -58,9 +59,9 @@ es:
     updated_at: "Última actualización:"
   urgencie:
     created_at: "Fecha de creación:"
-    entry_chamber: "Cámara de entrada:"
-    entry_date: "Fecha de entrada:"
-    entry_message: "Mensaje de entrada:"
+    entry_chamber: "Cámara de ingreso:"
+    entry_date: "Fecha de ingreso:"
+    entry_message: "Mensaje de ingreso:"
     type: "Tipo:"
     updated_at: "Última actualización:"
     withdrawal_chamber: "Cámara de retiro:"
@@ -70,11 +71,11 @@ es:
     created_at: "Fecha de creación:"
     date: "Fecha:"
     stage: "Etapa:"
-    step: "Paso:"
+    step: "Trámite:"
     updated_at: "Última actualización:"
   modification:
     description: "Descripción:"
-    modification: "Modificación:"
+    modification: "Comparado:"
   document:
     chamber: "Cámara:"
     created_at: "Fecha de creación:"
@@ -82,7 +83,7 @@ es:
     event: "Evento:"
     number: "Número:"
     stage: "Etapa:"
-    step: "Paso:"
+    step: "Trámite:"
     type: "Tipo:"
     updated_at: "Última actualización:"
   instruction:
@@ -90,7 +91,7 @@ es:
     date: "Fecha:"
     event: "Evento:"
     stage: "Etapa:"
-    step: "Paso:"
+    step: "Trámite:"
     updated_at: "Última actualización:"
   pagination:
     page: "Página "

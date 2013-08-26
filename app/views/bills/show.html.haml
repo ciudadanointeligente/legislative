@@ -37,7 +37,7 @@
 
 %ul#myTags
   / Existing list items will be pre-added to the tags
-  - if @bill.tags != nil
+  - if !@bill.tags.blank?
     - @bill.tags.each do |tag|
       %li#preexisting= tag
 
@@ -50,9 +50,10 @@
     %tr
       %th= t 'bill.title'
       %td= @bill.title
-    %tr
-      %th= t 'bill.abstract'
-      %td= @bill.abstract
+    - if !@bill.abstract.blank?
+      %tr
+        %th= t 'bill.abstract'
+        %td= @bill.abstract
     %tr
       %th= t 'bill.creation_date'
       %td= DateTime.parse(@bill.creation_date).to_date.to_s
@@ -68,56 +69,68 @@
     %tr
       %th= t 'bill.stage'
       %td= @bill.stage
-    %tr
-      %th= t 'bill.sub_stage'
-      %td= @bill.sub_stage
+    - if @bill.sub_stage.match(/[a-z\d]+/)
+      %tr
+        %th= t 'bill.sub_stage'
+        %td= @bill.sub_stage
     %tr
       %th= t 'bill.state'
       %td= @bill.state
-    %tr
-      %th= t 'bill.law'
-      %td= @bill.law
-    %tr
-      %th= t 'bill.link_law'
-      %td= @bill.link_law
-    %tr
-      %th= t 'bill.merged'
-      %td= @bill.merged
+    - if !@bill.law.blank?
+      %tr
+        %th= t 'bill.law'
+        %td= @bill.law
+    - if !@bill.link_law.blank?
+      %tr
+        %th= t 'bill.link_law'
+        %td= link_to @bill.link_law, @bill.link_law
+    - if @bill.merged != '[]'
+      %tr
+        %th= t 'bill.merged'
+        %td= @bill.merged
     %tr
       %th= t 'bill.matters'
       - @matters = @bill.matters
       %td= render partial: "matter", collection: @matters
-    %tr
-      %th= t 'bill.authors'
-      - @authors = @bill.authors
-      %td= render partial: "author", collection: @authors
-    %tr
-      %th= t 'bill.events'
-      - @events = @bill.events
-      %td= render partial: "event", collection: @events
-    %tr
-      %th= t 'bill.urgencies'
-      - @urgencies = @bill.urgencies
-      %td= render partial: "urgencie", collection: @urgencies
-    %tr
-      %th= t 'bill.reports'
-      - @reports = @bill.reports
-      %td= render partial: "report", collection: @reports
-    %tr
-      %th= t 'bill.modifications'
-      - @modifications = @bill.modifications
-      %td= render partial: "modification", collection: @modifications
-    %tr
-      %th= t 'bill.documents'
-      - @documents = @bill.documents
-      %td= render partial: "document", collection: @documents
-    %tr
-      %th= t 'bill.instructions'
-      - @instructions = @bill.instructions
-      %td= render partial: "instruction", collection: @instructions
-    %tr
-      %th= t 'bill.observations'
-      %td= @bill.observations
+    - if !@bill.authors.blank?
+      %tr
+        %th= t 'bill.authors'
+        - @authors = @bill.authors
+        %td= render partial: "author", collection: @authors
+    - if !@bill.events.blank?
+      %tr
+        %th= t 'bill.events'
+        - @events = @bill.events
+        %td= render partial: "event", collection: @events
+    - if !@bill.urgencies.blank?
+      %tr
+        %th= t 'bill.urgencies'
+        - @urgencies = @bill.urgencies
+        %td= render partial: "urgencie", collection: @urgencies
+    - if !@bill.reports.blank?
+      %tr
+        %th= t 'bill.reports'
+        - @reports = @bill.reports
+        %td= render partial: "report", collection: @reports
+    - if !@bill.modifications.blank?
+      %tr
+        %th= t 'bill.modifications'
+        - @modifications = @bill.modifications
+        %td= render partial: "modification", collection: @modifications
+    - if !@bill.documents.blank?
+      %tr
+        %th= t 'bill.documents'
+        - @documents = @bill.documents
+        %td= render partial: "document", collection: @documents
+    - if !@bill.instructions.blank?
+      %tr
+        %th= t 'bill.instructions'
+        - @instructions = @bill.instructions
+        %td= render partial: "instruction", collection: @instructions
+    - if !@bill.observations.blank?
+      %tr
+        %th= t 'bill.observations'
+        %td= @bill.observations
 
 /           = link_to t('.destroy', :default => t("helpers.links.destroy")), fruit_path(fruit), :method => :delete, :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-mini btn-danger'
 

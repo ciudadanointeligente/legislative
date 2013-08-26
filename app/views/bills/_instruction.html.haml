@@ -1,19 +1,20 @@
-%strong= t 'instruction.created_at'
-= DateTime.parse(instruction['created_at']).to_date.to_s if !instruction['created_at'].nil?
-%br/
+/ %strong= t 'instruction.created_at'
+/ = DateTime.parse(instruction['created_at']).to_date.to_s if !instruction['created_at'].blank?
+/ %br/
 %strong= t 'instruction.date'
-= DateTime.parse(instruction['date']).to_date.to_s if !instruction['date'].nil?
+= DateTime.parse(instruction['date']).to_date.to_s if !instruction['date'].blank?
 %br/
-%strong= t 'instruction.event'
-= instruction['event'] if !instruction['event'].nil?
-%br/
+- if !instruction['event'].blank?
+  %strong= t 'instruction.event'
+  = instruction['event'] if !instruction['event'].blank?
+  %br/
 %strong= t 'instruction.stage'
 = instruction['stage']
 %br/
 %strong= t 'instruction.step'
 = instruction['step']
 %br/
-%strong= t 'instruction.updated_at'
-= DateTime.parse(instruction['updated_at']).to_date.to_s if !instruction['updated_at'].nil?
-%br/
+/ %strong= t 'instruction.updated_at'
+/ = DateTime.parse(instruction['updated_at']).to_date.to_s if !instruction['updated_at'].blank?
+/ %br/
 %br/
