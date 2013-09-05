@@ -1,16 +1,21 @@
-/ %strong= t 'report.created_at'
-/ = DateTime.parse(report['created_at']).to_date.to_s if !report['created_at'].blank?
-/ %br/
-%strong= t 'report.date'
-= DateTime.parse(report['date']).to_date.to_s if !report['date'].blank?
-%br/
-%strong= t 'report.stage'
-= report['stage']
-%br/
-%strong= t 'report.step'
-= report['step']
-%br/
-/ %strong= t 'report.updated_at'
-/ = DateTime.parse(report['updated_at']).to_date.to_s if !report['updated_at'].blank?
-/ %br/
+/ - if !report['created_at'].blank?
+/   %strong= t 'report.created_at'
+/   = DateTime.parse(report['created_at']).to_date.to_s
+/   %br/
+- if !report['date'].blank?
+  %strong= t 'report.date'
+  = DateTime.parse(report['date']).to_date.to_s
+  %br/
+- if !report['stage'].blank?
+  %strong= t 'report.stage'
+  = report['stage']
+  %br/
+- if !report['step'].blank?
+  %strong= t 'report.step'
+  = report['step']
+  %br/
+/ - if !report['updated_at'].blank?
+/   %strong= t 'report.updated_at'
+/   = DateTime.parse(report['updated_at']).to_date.to_s
+/   %br/
 %br/

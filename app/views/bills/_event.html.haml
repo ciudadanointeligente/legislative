@@ -1,23 +1,29 @@
-%strong= t 'event.chamber'
-= event['chamber']
-%br/
-/ %strong= t 'event.created_at'
-/ = DateTime.parse(event['created_at']).to_date.to_s if !event['created_at'].blank?
-/ %br/
-%strong= t 'event.date'
-= DateTime.parse(event['date']).to_date.to_s if !event['date'].blank?
-%br/
-%strong= t 'event.description'
-= event['description']
-%br/
+- if !event['chamber'].blank?
+  %strong= t 'event.chamber'
+  = event['chamber']
+  %br/
+/ - if !event['created_at'].blank?
+/   %strong= t 'event.created_at'
+/   = DateTime.parse(event['created_at']).to_date.to_s
+/   %br/
+- if !event['date'].blank?
+  %strong= t 'event.date'
+  = DateTime.parse(event['date']).to_date.to_s
+  %br/
+- if !event['description'].blank?
+  %strong= t 'event.description'
+  = event['description']
+  %br/
 - if event['session'].match(/[a-z\d]+/)
   %strong= t 'event.session'
   = event['session']
   %br/
-%strong= t 'event.stage'
-= event['stage']
-%br/
-/ %strong= t 'event.updated_at'
-/ = event['updated_at'] if !event['updated_at'].blank?
-/ %br/
+- if !event['stage'].blank?
+  %strong= t 'event.stage'
+  = event['stage']
+  %br/
+/ - if !event['updated_at'].blank?
+/   %strong= t 'event.updated_at'
+/   = event['updated_at']
+/   %br/
 %br/
