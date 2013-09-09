@@ -15,14 +15,17 @@ sheet1[0, 0] = t('search.bills')
 # Worksheet#row will return a Row object. We can modify it just like an Array.
 # this code will return the second row and fill the cells.
 
-sheet1.row(1).concat [t('bill.bulletin'), t('bill.title'), t('bill.abstract'), t('bill.creation_date'), t('bill.stage'), t('bill.state'), t('bill.chamber')]
+sheet1.row(1).concat [t('bill.bulletin'), t('bill.title'), t('bill.abstract'), t('bill.creation_date'), t('bill.stage'), t('bill.state'), t('bill.chamber'), t('export.link_to_bill')]
 
 # we can access the instance variable we set in the controller, just like
 # in erb template
 
 @bills = @query.bills
 @bills.each_with_index do |bill, i|
-  sheet1.update_row i+2, bill.uid, bill.title, bill.abstract, DateTime.parse(bill.creation_date).to_date.to_s, bill.stage, bill.state, bill.origin_chamber
+# Create hyperlink to access to the bill web view
+  link_to_bill = Spreadsheet::Link.new bill.web_url, bill.web_url
+
+  sheet1.update_row i+2, bill.uid, bill.title, bill.abstract, DateTime.parse(bill.creation_date).to_date.to_s, bill.stage, bill.state, bill.origin_chamber, link_to_bill
 end
 
 # we can add some formatting using Spreadsheet::Format object
@@ -39,6 +42,7 @@ sheet1.row(1).default_format = bold
 sheet1.column(1).width = 60 # title
 sheet1.column(2).width = 20 # abstract
 sheet1.column(3).width = 16 # creation_date
-sheet1.column(4).width = 36 # state
+sheet1.column(4).width = 36 # stage
 sheet1.column(5).width = 14 # state
 sheet1.column(6).width = 12 # origin_chamber
+sheet1.column(7).width = 36 # link to bill

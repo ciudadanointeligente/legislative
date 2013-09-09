@@ -1,31 +1,37 @@
-%strong= t 'document.chamber'
-= document['chamber'] if !document['chamber'].blank?
-%br/
-/ %strong= t 'document.created_at'
-/ = DateTime.parse(document['created_at']).to_date.to_s if !document['created_at'].blank?
-/ %br/
-%strong= t 'document.date'
-= DateTime.parse(document['date']).to_date.to_s if !document['date'].blank?
-%br/
+- if !document['chamber'].blank?
+  %strong= t 'document.chamber'
+  = document['chamber']
+  %br/
+/ - if !document['created_at'].blank?
+/   %strong= t 'document.created_at'
+/   = DateTime.parse(document['created_at']).to_date.to_s
+/   %br/
+- if !document['date'].blank?
+  %strong= t 'document.date'
+  = DateTime.parse(document['date']).to_date.to_s 
+  %br/
 - if !document['event'].blank?
   %strong= t 'document.event'
-  = document['event'] if !document['event'].blank?
+  = document['event']
   %br/
 - if !document['number'].blank?
   %strong= t 'document.number'
   = document['number']
   %br/
-%strong= t 'document.stage'
-= document['stage']
-%br/
+- if !document['stage'].blank?
+  %strong= t 'document.stage'
+  = document['stage']
+  %br/
 - if document['step'].match(/[a-z\d]+/)
   %strong= t 'document.step'
   = document['step']
   %br/
-%strong= t 'document.type'
-= document['type']
-%br/
-/ %strong= t 'document.updated_at'
-/ = DateTime.parse(document['updated_at']).to_date.to_s if !document['updated_at'].blank?
-/ %br/
+- if !document['type'].blank?
+  %strong= t 'document.type'
+  = document['type']
+  %br/
+/ - if !document['updated_at'].blank?
+/   %strong= t 'document.updated_at'
+/   = DateTime.parse(document['updated_at']).to_date.to_s
+/   %br/
 %br/

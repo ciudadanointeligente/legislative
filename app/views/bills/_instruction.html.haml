@@ -1,20 +1,25 @@
-/ %strong= t 'instruction.created_at'
-/ = DateTime.parse(instruction['created_at']).to_date.to_s if !instruction['created_at'].blank?
-/ %br/
-%strong= t 'instruction.date'
-= DateTime.parse(instruction['date']).to_date.to_s if !instruction['date'].blank?
-%br/
+/ - if !instruction['created_at'].blank?
+/   %strong= t 'instruction.created_at'
+/   = DateTime.parse(instruction['created_at']).to_date.to_s
+/   %br/
+- if !instruction['date'].blank?
+  %strong= t 'instruction.date'
+  = DateTime.parse(instruction['date']).to_date.to_s
+  %br/
 - if !instruction['event'].blank?
   %strong= t 'instruction.event'
-  = instruction['event'] if !instruction['event'].blank?
+  = instruction['event']
   %br/
-%strong= t 'instruction.stage'
-= instruction['stage']
-%br/
-%strong= t 'instruction.step'
-= instruction['step']
-%br/
-/ %strong= t 'instruction.updated_at'
-/ = DateTime.parse(instruction['updated_at']).to_date.to_s if !instruction['updated_at'].blank?
-/ %br/
+- if !instruction['stage'].blank?
+  %strong= t 'instruction.stage'
+  = instruction['stage']
+  %br/
+- if !instruction['step'].blank?
+  %strong= t 'instruction.step'
+  = instruction['step']
+  %br/
+/ - if !instruction['updated_at'].blank?
+/   %strong= t 'instruction.updated_at'
+/   = DateTime.parse(instruction['updated_at']).to_date.to_s
+/   %br/
 %br/

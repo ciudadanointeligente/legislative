@@ -38,4 +38,8 @@ class Bill
   def errors
     []
   end
+
+  def web_url
+    ENV['root_url'] + 'bills/' + self.uid
+  end
 end

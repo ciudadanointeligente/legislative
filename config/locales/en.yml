@@ -100,3 +100,5 @@ en:
     results: " results"
     previous: "Previous"
     next: "Next"
+  export:
+    link_to_bill: "Link to bill"
