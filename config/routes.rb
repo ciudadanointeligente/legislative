@@ -55,6 +55,7 @@ CabildoAbierto::Application.routes.draw do
   match 'bills/:id/update' => 'bills#update', method: :put
   match 'search' => 'bills#search'
   match 'advanced_search' => 'bills#advanced_search'
+  match 'glossary' => 'bills#glossary'
 
   # See how all your routes lay out with "rake routes"
 

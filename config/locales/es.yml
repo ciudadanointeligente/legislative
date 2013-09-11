@@ -6,6 +6,7 @@ es:
     home: "Principal"
     advanced_search: "Búsqueda avanzada"
     about_us: "Acerca de nosotros"
+    glossary: "Glosario"
   search:
     basic_search: "Búsqueda"
     search_for: "Buscar por:"
