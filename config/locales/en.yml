@@ -6,6 +6,7 @@ en:
     home: "Home"
     advanced_search: "Advanced search"
     about_us: "About us"
+    glossary: "Glossary"
   search:
     basic_search: "Basic search"
     search_for: "Search for:"
@@ -15,6 +16,10 @@ en:
     current_urgency: "Current urgency:"
     bill_type: "Bill type:"
     download_as_excel: "Download as Excel"
+    all_the_types: "All the types"
+    all_the_stages: "All the Stages"
+    all_the_chambers: "All the Chambers"
+    all_the_urgencies: "All the Urgencies"
   advanced_search:
     advanced_search: "Advanced search"
     search_for: "Search for:"

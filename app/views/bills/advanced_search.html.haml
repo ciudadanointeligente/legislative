@@ -6,15 +6,14 @@
   = text_field_tag :bill_id, params[:bill_id]
   = label_tag :stage, t('advanced_search.stage')
   %select{:name => "stage"}
-    %option{:value => "", selected: params[:stage] == ""}= 'Todas las etapas'
-    %option{:value => "Primer trámite constitucional", selected: params[:stage] == "Primer trámite constitucional"}= 'Primer trámite constitucional'
-    %option{:value => "Segundo trámite constitucional", selected: params[:stage] == "Segundo trámite constitucional"}= 'Segundo trámite constitucional'
-    %option{:value => "Tercer trámite constitucional", selected: params[:stage] == "Tercer trámite constitucional"}= 'Tercer trámite constitucional'
-    %option{:value => "Archivado", selected: params[:stage] == "Archivado"}= 'Archivado'
-    %option{:value => "Tramitación terminada", selected: params[:stage] == "Tramitación terminada"}= 'Tramitación terminada'
+    %option{:value => "", selected: params[:stage] == ""}= t 'search.all_the_stages'
+    - @stages = Bill.class_variable_get(:@@stage_valid_values)
+    - if @stages != nil
+      - @stages.each do |stage|
+        %option{:value => stage, selected: params[:stage] == stage}= stage
   = label_tag :origin_chamber, t('search.bill_type')
   %select{:name => "state"}
-    %option{:value => "", selected: params[:origin_chamber] == ""}= 'Todos los tipos'
+    %option{:value => "", selected: params[:origin_chamber] == ""}= t 'search.all_the_types'
     %option{:value => "Publicado", selected: params[:origin_chamber] == "Publicado"}= 'Ley'
     %option{:value => "En tramitación", selected: params[:origin_chamber] == "En tramitación"}= 'Proyecto de ley'
   = label_tag :creation_date_min, t('advanced_search.creation_date_min')
@@ -23,16 +22,18 @@
   = text_field_tag :creation_date_max, params[:creation_date_max]
   = label_tag :origin_chamber, t('advanced_search.origin_chamber')
   %select{:name => "origin_chamber"}
-    %option{:value => "", selected: params[:origin_chamber] == ""}= 'Ambas cámaras'
-    %option{:value => "Senado", selected: params[:origin_chamber] == "Senado"}= 'Senado'
-    %option{:value => "C.Diputados", selected: params[:origin_chamber] == "C.Diputados"}= 'C.Diputados'
+    %option{:value => "", selected: params[:origin_chamber] == ""}= t 'search.all_the_chambers'
+    - @chambers = Bill.class_variable_get(:@@origin_chamber_valid_values)
+    - if @chambers != nil
+      - @chambers.each do |chamber|
+        %option{:value => chamber, selected: params[:origin_chamber] == chamber}= chamber
   = label_tag :origin_chamber, t('search.current_urgency')
   %select{:name => "current_urgency"}
-    %option{:value => "", selected: params[:current_urgency] == ""}= 'Todas las urgencias'
-    %option{:value => "Sin urgencia", selected: params[:current_urgency] == "Sin urgencia"}= 'Sin urgencia'
-    %option{:value => "Simple", selected: params[:current_urgency] == "Simple"}= 'Simple'
-    %option{:value => "Suma urgencia", selected: params[:current_urgency] == "Suma urgencia"}= 'Suma urgencia'
-    %option{:value => "Discusion inmediata", selected: params[:current_urgency] == "Discusion inmediata"}= 'Discusion inmediata'
+    %option{:value => "", selected: params[:current_urgency] == ""}= t 'search.all_the_urgencies'
+    - @urgencies = Bill.class_variable_get(:@@current_urgency_valid_values)
+    - if @urgencies != nil
+      - @urgencies.each do |urgency|
+        %option{:value => urgency, selected: params[:current_urgency] == urgency}= urgency
   = submit_tag t 'search.search'
 
 %h1=t '.title', :default => 'Bill'
@@ -65,7 +66,3 @@
   %p
     =link_to(t('pagination.previous'), url_for(action:'advanced_search') + '?' + get_params(@query.previous)) + ' | ' if @query.previous
     =link_to(t('pagination.next'), url_for(action:'advanced_search') + '?' + get_params(@query.next)) if @query.next
-
-/           = link_to t('.destroy', :default => t("helpers.links.destroy")), fruit_path(fruit), :method => :delete, :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-mini btn-danger'
-
-/ = link_to t('.new', :default => t("helpers.links.new")), new_fruit_path, :class => 'btn btn-primary'

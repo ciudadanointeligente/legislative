@@ -118,4 +118,7 @@ class BillsController < ApplicationController
     @bill.put(ENV['billit'] + "#{params[:id]}", 'application/json')
     render text: params.to_s, status: 201
   end
+
+  def glossary
+  end
 end

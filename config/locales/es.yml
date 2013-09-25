@@ -6,6 +6,7 @@ es:
     home: "Principal"
     advanced_search: "Búsqueda avanzada"
     about_us: "Acerca de nosotros"
+    glossary: "Glosario"
   search:
     basic_search: "Búsqueda"
     search_for: "Buscar por:"
@@ -15,6 +16,10 @@ es:
     current_urgency: "Urgencia actual:"
     bill_type: "Tipo de proyecto:"
     download_as_excel: "Descargar como Excel"
+    all_the_types: "Todos los tipos"
+    all_the_stages: "Todas las etapas"
+    all_the_chambers: "Todas las cámaras"
+    all_the_urgencies: "Todas las urgencias"
   advanced_search:
     advanced_search: "Búsqueda avanzada"
     search_for: "Buscar por:"
