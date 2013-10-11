@@ -1,62 +1,52 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+ruby "2.0.0"
+gem 'rails', '4.0.0'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'journey', :git => 'git://github.com/rails/journey.git'
+gem 'arel'
+gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerecord-deprecated_finders.git'
 
+
+# ORM
+gem "pg", :group => :production
+
+group :development, :test do
+  gem "sqlite3"
+end
+
+gem 'json'
+
+# For using protected attributes
+gem 'protected_attributes'
+
+# Server
+gem 'thin'
+
+# Template Engine
+gem 'haml-rails'
+
+gem "bcrypt-ruby", :require => "bcrypt"
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sprockets-rails'
+  gem 'sass-rails', :git => 'git://github.com/rails/sass-rails.git'
+  gem 'coffee-rails', :git => 'git://github.com/rails/coffee-rails.git'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  # gem 'therubyracer', platforms: :ruby
 
-  gem 'uglifier', '>= 1.0.3'
-  gem 'therubyracer'
-  gem 'less-rails'
-  gem 'twitter-bootstrap-rails'
+  gem 'uglifier', '1.0.3'
 end
 
-group :development do
-  gem 'haml-rails'
-end
-
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'coveralls', require: false
-end
-
-group :test do
-  gem "webmock"
-end
-
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
-gem 'haml'
-gem 'ekuseru'
-gem 'mongo_mapper'
-gem 'bson_ext'
+# POPLUS integration
 gem 'roar', '0.12.0'
 gem 'roar-rails', '0.1.4'
 gem 'faraday', '0.8.1'
 gem 'billit_representers'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# Support to XLS export
+gem 'ekuseru'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+gem 'jquery-rails'
