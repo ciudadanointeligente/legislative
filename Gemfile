@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.0.0"
+ruby '2.0.0'
 gem 'rails', '4.0.0'
 
 gem 'journey', :git => 'git://github.com/rails/journey.git'
@@ -9,10 +9,12 @@ gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerec
 
 
 # ORM
-gem "pg", :group => :production
+gem 'pg', :group => :production
 
 group :development, :test do
-  gem "sqlite3"
+  gem 'sqlite3'
+  gem 'factory_girl_rails'
+  gem 'coveralls', require: false
 end
 
 gem 'json'
@@ -26,7 +28,7 @@ gem 'thin'
 # Template Engine
 gem 'haml-rails'
 
-gem "bcrypt-ruby", :require => "bcrypt"
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,6 +1,6 @@
 # Votainteligente Legislativo
-[![Build Status](https://travis-ci.org/ciudadanointeligente/cabildo-abierto.png?branch=master)](https://travis-ci.org/ciudadanointeligente/cabildo-abierto)
-[![Coverage Status](https://coveralls.io/repos/ciudadanointeligente/cabildo-abierto/badge.png)](https://coveralls.io/r/ciudadanointeligente/cabildo-abierto)
+[![Build Status](https://travis-ci.org/ciudadanointeligente/votainteligente-legislativo.png?branch=master)](https://travis-ci.org/ciudadanointeligente/votainteligente-legislativo)
+[![Coverage Status](https://coveralls.io/repos/ciudadanointeligente/votainteligente-legislativo/badge.png)](https://coveralls.io/r/ciudadanointeligente/votainteligente-legislativo)
 
 [Beta](http://beta.votainteligente.cl)
 

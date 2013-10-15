@@ -1,4 +1,6 @@
 language: ruby
 rvm:
   - 2.0.0
+env:
+  - RAILS_VERSION=4.0.0
 install: sh install.sh
