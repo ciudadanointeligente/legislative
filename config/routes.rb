@@ -1,7 +1,7 @@
 CabildoAbierto::Application.routes.draw do
 
-  #root :to => "users#home"
-  root :to => "bills#index"
+  root :to => "users#home"
+  #root :to => "bills#index"
   
   get "bills/:id" => "bills#show"
   post "bills/:id/update" => "bills#update", method: :put

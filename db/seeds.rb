@@ -9,4 +9,4 @@
 User.create(:username => 'administrator',
 						:password => '09301982',
 						:password_confirmation => '09301982',
-						:email	=> 'administrator@ciudadanointeligente.org')
+						:email	=> 'admin@ciudadanointeligente.org')

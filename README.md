@@ -22,7 +22,7 @@ rails s
 
 Check at [http://localhost:3000](http://localhost:3000)
 
-You can try loggin in with `administrator@ciudadanointeligente.org / 09301982`
+You can try loggin in with `admin@ciudadanointeligente.org / 09301982`
 
 ## Features
 
