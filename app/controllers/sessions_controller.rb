@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     elsif !logged_in? && cookies.signed[:user_id]
       user = User.auth_with_cookie(cookies.signed[:user_id])
       session[:user_id] = cookies.signed[:user_id]
-      redirect_to root_url, :notice => "Welcome back!"
+      redirect_to root_url, :notice => t('users.welcome_back')
     elsif request.post?
       user = User.authenticate(
         params.has_key?(:email) ? params[:email] : nil,
@@ -20,9 +20,9 @@ class SessionsController < ApplicationController
           cookies.permanent.signed[:user_id] = user.id
         end
         session[:user_id] = user.id
-        redirect_to root_url, :notice => "Logged in!"
+        redirect_to root_url, :notice => t('users.logged_in')
       else
-        redirect_to root_url, :notice => "Invalid email or password"
+        redirect_to root_url, :notice => t('users.invalid_email_or_password')
       end
     else
       render "home"
@@ -32,6 +32,6 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     cookies.delete :user_id
-    redirect_to root_url, :notice => "Logged out!"
+    redirect_to root_url, :notice => t('users.logged_out')
   end
 end

@@ -5,9 +5,9 @@
     .tabbable
       %ul.nav.nav-tabs
         %li.active
-          %a{"data-toggle" => "tab", :href => "#tab1"} Log in
+          %a{"data-toggle" => "tab", :href => "#tab1"}= t('users.log_in')
         %li
-          %a{"data-toggle" => "tab", :href => "#tab2"} Sign up
+          %a{"data-toggle" => "tab", :href => "#tab2"}= t('users.sign_up')
       .tab-content
         #tab1.tab-pane.active
           .panel
