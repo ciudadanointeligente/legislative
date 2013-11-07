@@ -23,7 +23,7 @@ gem 'json'
 gem 'protected_attributes'
 
 # Server
-gem 'thin'
+gem 'unicorn'
 
 # Template Engine
 gem 'haml-rails'
