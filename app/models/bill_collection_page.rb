@@ -7,7 +7,7 @@ class BillCollectionPage < OpenStruct
   def initialize
     extend Billit::BillCollectionPageRepresenter
     extend Roar::Representer::Feature::Client
-    transport_engine = Roar::Representer::Transport::Faraday
+    # transport_engine = Roar::Representer::Transport::Faraday
   end
 
   def self

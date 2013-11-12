@@ -1,0 +1,18 @@
+%h2= t('users.users')
+%hr
+  %table.table.table-bordered
+    %thead
+      %tr
+        %th #
+        %th Email
+        %th #
+        %th #
+        %th #
+    %tbody
+      - @users.each do |user|
+        %tr
+          %td= user.id
+          %td= user.email
+          %td= link_to t('users.show'), user
+          %td= link_to t('users.edit'), edit_user_path(user)
+          %td= link_to t('users.delete'), user, :confirm => "Are you sure?", :method => :delete
