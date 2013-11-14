@@ -13,8 +13,13 @@ gem 'pg', :group => :production
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
+end
+
+group :test do
+  gem 'webmock'
 end
 
 gem 'json'
