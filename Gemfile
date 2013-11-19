@@ -9,7 +9,7 @@ gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerec
 
 
 # ORM
-gem 'pg', :group => :production
+#gem 'pg', :group => :production
 
 group :development, :test do
   gem 'sqlite3'
