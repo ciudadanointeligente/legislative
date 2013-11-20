@@ -9,12 +9,17 @@ gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerec
 
 
 # ORM
-gem 'pg', :group => :production
+#gem 'pg', :group => :production
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
+end
+
+group :test do
+  gem 'webmock'
 end
 
 gem 'json'
