@@ -18,20 +18,16 @@
     %option{:value => "En tramitación", selected: params[:origin_chamber] == "En tramitación"}= 'Proyecto de ley'
   = label_tag :creation_date_min, t('advanced_search.creation_date_min')
   - if params[:creation_date_min] == nil
-    - params[:creation_date_min] = Date.today.to_s
+    - params[:creation_date_min] = ENV['parliaments-initial-date']
   %div{"ng-controller" => "DatepickerCtrl"}
     .form-horizontal
-      %input{"type" => "text", "datepicker-popup" => "yyyy-MM-dd", "ng-model" => "dt_min", "is-open" => "opened_min", "min" => "'1990-03-01'", "datepicker-options" => "dateOptions", "ng-required" => "true", "name" => "creation_date_min", "ng-init" => "dt_min='"+params[:creation_date_min]+" GMT-0300'"}
-      %button.btn{"ng-click" => "open()"}
-        %i.icon-calendar
+      %input{"type" => "text", "datepicker-popup" => "yyyy-MM-dd", "ng-model" => "date", "is-open" => "opened_min", "min" => "'1990-03-01'", "datepicker-options" => "dateOptions", "ng-required" => "true", "name" => "creation_date_min", "ng-init" => "date='"+params[:creation_date_min]+"'"}
   = label_tag :creation_date_max, t('advanced_search.creation_date_max')
   - if params[:creation_date_max] == nil
     - params[:creation_date_max] = Date.today.to_s
   %div{"ng-controller" => "DatepickerCtrl"}
     .form-horizontal
-      %input{"type" => "text", "datepicker-popup" => "yyyy-MM-dd", "ng-model" => "dt_max", "is-open" => "opened_max", "min" => "'1990-03-01'", "datepicker-options" => "dateOptions", "ng-required" => "true", "name" => "creation_date_max", "ng-init" => "dt_max='"+params[:creation_date_max]+" GMT-0300'"}
-      %button.btn{"ng-click" => "open()"}
-        %i.icon-calendar
+      %input{"type" => "text", "datepicker-popup" => "yyyy-MM-dd", "ng-model" => "date", "is-open" => "opened_max", "min" => "'1990-03-01'", "datepicker-options" => "dateOptions", "ng-required" => "true", "name" => "creation_date_max", "ng-init" => "date='"+params[:creation_date_max]+"'"}
   = label_tag :origin_chamber, t('advanced_search.origin_chamber')
   %select{:name => "origin_chamber"}
     %option{:value => "", selected: params[:origin_chamber] == ""}= t 'search.all_the_chambers'
