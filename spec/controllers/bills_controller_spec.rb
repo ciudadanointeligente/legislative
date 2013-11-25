@@ -46,7 +46,7 @@ describe BillsController do
     it "assigns the requested bill as @bill" do
       raw_response_file = File.open("./spec/webmock/bills-6967-06.json")
       stub_request(:get, "http://billit.ciudadanointeligente.org/bills/6967-06").
-         with(:headers => {'Accept'=>'*/*', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
+         with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
          to_return(:status => 200, :body => raw_response_file, :headers => {})
 
       bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
@@ -96,7 +96,7 @@ describe BillsController do
     it "returns an array" do
       raw_response_file = File.open("./spec/webmock/bills-salud-page1.json")
       stub_request(:get, "http://billit.ciudadanointeligente.org/bills/search/?action=search&controller=bills&q=salud").
-         with(:headers => {'Accept'=>'*/*', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
+         with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
          to_return(:status => 200, :body => raw_response_file, :headers => {})
 
       get :search, q: "salud"
@@ -106,7 +106,7 @@ describe BillsController do
     it "has a self reference" do
       raw_response_file = File.open("./spec/webmock/bills-salud-page1.json")
       stub_request(:get, "http://billit.ciudadanointeligente.org/bills/search/?action=search&controller=bills&q=salud").
-         with(:headers => {'Accept'=>'*/*', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
+         with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
          to_return(:status => 200, :body => raw_response_file, :headers => {})
 
       get :search, q: "salud"
@@ -116,7 +116,7 @@ describe BillsController do
     it "has a next page" do
       raw_response_file = File.open("./spec/webmock/bills-salud-page1.json")
       stub_request(:get, "http://billit.ciudadanointeligente.org/bills/search/?action=search&controller=bills&q=salud").
-         with(:headers => {'Accept'=>'*/*', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
+         with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
          to_return(:status => 200, :body => raw_response_file, :headers => {})
 
       get :search, q: "salud"
@@ -126,17 +126,17 @@ describe BillsController do
     it "has a previous page" do
       raw_response_file = File.open("./spec/webmock/bills-salud-page2.json")
       stub_request(:get, "http://billit.ciudadanointeligente.org/bills/search/?action=search&controller=bills&page=2&q=salud").
-         with(:headers => {'Accept'=>'*/*', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
+         with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
          to_return(:status => 200, :body => raw_response_file, :headers => {})
 
       get :search, q: "salud", page: 2
       assigns(:query).previous.should eq("http://billit.ciudadanointeligente.org/bills/search?page=1&q=salud")
     end
 
-    it "has all matadata" do
+    it "has all metadata" do
       raw_response_file = File.open("./spec/webmock/bills-salud-page1.json")
       stub_request(:get, "http://billit.ciudadanointeligente.org/bills/search/?action=search&controller=bills&q=salud").
-         with(:headers => {'Accept'=>'*/*', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
+      with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
          to_return(:status => 200, :body => raw_response_file, :headers => {})
 
       get :search, q: "salud"
@@ -188,11 +188,11 @@ describe BillsController do
       it "updates the requested bill" do
         raw_response_file = File.open("./spec/webmock/bills-6967-06.json")
         stub_request(:get, "http://billit.ciudadanointeligente.org/bills/6967-06").
-           with(:headers => {'Accept'=>'*/*', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
+           with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
            to_return(:status => 200, :body => raw_response_file, :headers => {})
 
         stub_request(:put, "http://billit.ciudadanointeligente.org/bills/6967-06").
-           with(:headers => {'Accept'=>'*/*', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
+           with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
            to_return(:status => 200, :body => "", :headers => {})
 
         bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
