@@ -24,13 +24,13 @@
     - if params[:creation_date_min] == nil
       - params[:creation_date_min] = ENV['parliaments-initial-date']
     %div{"ng-controller" => "DatepickerCtrl"}
-      %input{"type" => "text", "datepicker-popup" => "yyyy-MM-dd", "ng-model" => "date", "is-open" => "opened_min", "min" => "'1990-03-01'", "datepicker-options" => "dateOptions", "ng-required" => "true", "name" => "creation_date_min", "class" => "form-control", "ng-init" => "date='"+params[:creation_date_min]+"'"}
+      %input{"type" => "text", "datepicker-popup" => "yyyy-MM-dd", "ng-model" => "date", "is-open" => "opened_min", "min" => '"'+ENV['parliaments-initial-date']+'"', "datepicker-options" => "dateOptions", "ng-required" => "true", "name" => "creation_date_min", "class" => "form-control", "ng-init" => "date='"+params[:creation_date_min]+"'"}
   %div.form-group
     = label_tag :creation_date_max, t('advanced_search.creation_date_max')
     - if params[:creation_date_max] == nil
       - params[:creation_date_max] = Date.today.to_s
     %div{"ng-controller" => "DatepickerCtrl"}
-      %input{"type" => "text", "datepicker-popup" => "yyyy-MM-dd", "ng-model" => "date", "is-open" => "opened_max", "min" => "'1990-03-01'", "datepicker-options" => "dateOptions", "ng-required" => "true", "name" => "creation_date_max", "class" => "form-control", "ng-init" => "date='"+params[:creation_date_max]+"'"}
+      %input{"type" => "text", "datepicker-popup" => "yyyy-MM-dd", "ng-model" => "date", "is-open" => "opened_max", "min" => '"'+ENV['parliaments-initial-date']+'"', "datepicker-options" => "dateOptions", "ng-required" => "true", "name" => "creation_date_max", "class" => "form-control", "ng-init" => "date='"+params[:creation_date_max]+"'"}
   %div.form-group
     = label_tag :origin_chamber, t('advanced_search.origin_chamber')
     %select{:name => "origin_chamber", :class => "form-control"}
