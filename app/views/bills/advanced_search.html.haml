@@ -1,24 +1,24 @@
 %h1= t 'advanced_search.advanced_search'
 = render :partial => "search_form"
 
-%h1=t '.title', :default => 'Bill'
-= link_to t('search.download_as_excel'), params.merge(:format => :xls)
-
 - if @query != nil
+  %h1=t '.title', :default => 'Bill'
+  = link_to t('search.download_as_excel'), params.merge(:format => :xls)
+
   %p= t('pagination.page') + @query.current_page.to_s + t('pagination.of') + @query.total_pages.to_s + ',' + t('pagination.with') + @query.total_entries.to_s + t('pagination.results')
   = link_to(t('pagination.previous'), url_for(action:'advanced_search') + '?' + get_params(@query.previous)) + ' | ' if @query.previous
   = link_to(t('pagination.next'), url_for(action:'advanced_search') + '?' + get_params(@query.next)) if @query.next
 
-%table.table.table-striped
-  %thead
-    %tr
-      %th= t 'bill.bulletin'
-      %th= t 'bill.title'
-      %th= t 'bill.creation_date'
-      %th= t 'bill.state'
-      %th= t 'bill.chamber'
-  %tbody
-  - if @query != nil
+  %table.table.table-striped
+    %thead
+      %tr
+        %th= t 'bill.bulletin'
+        %th= t 'bill.title'
+        %th= t 'bill.creation_date'
+        %th= t 'bill.state'
+        %th= t 'bill.chamber'
+
+    %tbody
     - @bills = @query.bills
     - @bills.each do |bill|
       %tr
@@ -27,7 +27,7 @@
         %td= DateTime.parse(bill.creation_date).to_date.to_s
         %td= bill.state
         %td= bill.origin_chamber
-- if @query != nil
+
   %p
     =link_to(t('pagination.previous'), url_for(action:'advanced_search') + '?' + get_params(@query.previous)) + ' | ' if @query.previous
     =link_to(t('pagination.next'), url_for(action:'advanced_search') + '?' + get_params(@query.next)) if @query.next
