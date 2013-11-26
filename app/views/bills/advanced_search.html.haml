@@ -1,54 +1,5 @@
 %h1= t 'advanced_search.advanced_search'
-= form_tag('/advanced_search', :method => 'get') do
-  %div.form-group
-    = label_tag :q, t('advanced_search.search_for')
-    = text_field_tag :q, params[:q], :class => 'form-control'
-  %div.form-group
-    = label_tag :bill_id, t('advanced_search.bulletin')
-    = text_field_tag :bill_id, params[:bill_id], :class => 'form-control'
-  %div.form-group
-    = label_tag :stage, t('advanced_search.stage')
-    %select{:name => "stage", :class => "form-control"}
-      %option{:value => "", selected: params[:stage] == ""}= t 'search.all_the_stages'
-      - @stages = Bill.class_variable_get(:@@stage_valid_values)
-      - if @stages != nil
-        - @stages.each do |stage|
-          %option{:value => stage, selected: params[:stage] == stage}= stage
-  %div.form-group
-    = label_tag :origin_chamber, t('search.bill_type')
-    %select{:name => "state", :class => "form-control"}
-      %option{:value => "", selected: params[:origin_chamber] == ""}= t 'search.all_the_types'
-      %option{:value => "Publicado", selected: params[:origin_chamber] == "Publicado"}= 'Ley'
-      %option{:value => "En tramitación", selected: params[:origin_chamber] == "En tramitación"}= 'Proyecto de ley'
-  %div.form-group
-    = label_tag :creation_date_min, t('advanced_search.creation_date_min')
-    - if params[:creation_date_min] == nil
-      - params[:creation_date_min] = ENV['parliaments-initial-date']
-    %div{"ng-controller" => "DatepickerCtrl"}
-      %input{"type" => "text", "datepicker-popup" => "yyyy-MM-dd", "ng-model" => "date", "is-open" => "opened_min", "min" => "'1990-03-01'", "datepicker-options" => "dateOptions", "ng-required" => "true", "name" => "creation_date_min", "class" => "form-control", "ng-init" => "date='"+params[:creation_date_min]+"'"}
-  %div.form-group
-    = label_tag :creation_date_max, t('advanced_search.creation_date_max')
-    - if params[:creation_date_max] == nil
-      - params[:creation_date_max] = Date.today.to_s
-    %div{"ng-controller" => "DatepickerCtrl"}
-      %input{"type" => "text", "datepicker-popup" => "yyyy-MM-dd", "ng-model" => "date", "is-open" => "opened_max", "min" => "'1990-03-01'", "datepicker-options" => "dateOptions", "ng-required" => "true", "name" => "creation_date_max", "class" => "form-control", "ng-init" => "date='"+params[:creation_date_max]+"'"}
-  %div.form-group
-    = label_tag :origin_chamber, t('advanced_search.origin_chamber')
-    %select{:name => "origin_chamber", :class => "form-control"}
-      %option{:value => "", selected: params[:origin_chamber] == ""}= t 'search.all_the_chambers'
-      - @chambers = Bill.class_variable_get(:@@origin_chamber_valid_values)
-      - if @chambers != nil
-        - @chambers.each do |chamber|
-          %option{:value => chamber, selected: params[:origin_chamber] == chamber}= chamber
-  %div.form-group
-    = label_tag :origin_chamber, t('search.current_urgency')
-    %select{:name => "current_urgency", :class => "form-control"}
-      %option{:value => "", selected: params[:current_urgency] == ""}= t 'search.all_the_urgencies'
-      - @urgencies = Bill.class_variable_get(:@@current_urgency_valid_values)
-      - if @urgencies != nil
-        - @urgencies.each do |urgency|
-          %option{:value => urgency, selected: params[:current_urgency] == urgency}= urgency
-  %button{type: "submit", :class => 'btn btn-default'}= t 'search.search'
+= render :partial => "search_form"
 
 %h1=t '.title', :default => 'Bill'
 = link_to t('search.download_as_excel'), params.merge(:format => :xls)

@@ -57,6 +57,11 @@ Change the cookie secret token at
 CabildoAbierto::Application.config.secret_token = 'YOUR-NEW-TOKEN-HERE'
 </pre>
 
+To run the RSpec tests
+<pre>
+rspec
+</pre>
+
 
 #### Todo
 ---
