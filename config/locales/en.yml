@@ -23,7 +23,9 @@ en:
   advanced_search:
     advanced_search: "Advanced search"
     search_for: "Search for:"
+    placeholder_search_for: "Input a keyword"
     bulletin: "Bulletin:"
+    placeholder_bulletin: "Input a bulletin number"
     stage: "Stage:"
     creation_date_min: "Creation date (min):"
     creation_date_max: "Creation date (max):"

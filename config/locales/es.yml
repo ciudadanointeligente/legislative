@@ -23,7 +23,9 @@ es:
   advanced_search:
     advanced_search: "Búsqueda avanzada"
     search_for: "Buscar por:"
+    placeholder_search_for: "Ingresa una palabra clave"
     bulletin: "Boletín:"
+    placeholder_bulletin: "Ingresa nro de boletín"
     stage: "Etapa:"
     creation_date_min: "Fecha de ingreso (min):"
     creation_date_max: "Fecha de ingreso (max):"
