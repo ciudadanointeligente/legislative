@@ -1,6 +1,17 @@
-%h1= t('layout.glossary')
+%div.page-header
+	%h2= t('layout.glossary')
 
-%h2{:style => "text-align: center;"} - A -
+%nav
+	%ul.pagination
+		- ("A".."Z").each do |letter|
+			%li 
+				%a{:href => "#"+letter}
+					= letter
+
+%h3.text-center
+	%a{:name => "a"}
+		A
+	
 %p
 	%strong= 'Accountability:'
 	en castellano no tiene traducción literal, sin embargo por un lado se refiere al deber o responsabilidad que tienen los órganos de la administración pública o agentes públicos de rendir cuentas de sus acciones a los demás órganos del Estado y a los ciudadanos, y por otro al derecho de estos últimos de fiscalizar e informarse de las acciones de quienes los gobiernan.
@@ -33,7 +44,9 @@
 	%strong='Autos en relación:'
 	forma solemne por la cual la Corte de Apelaciones conoce y resuelve de la acciones que le encomienda la ley. Se lleva a cabo mediante un relator que comunica a la Corte de forma clara, completa y resumida los antecedentes que requiere para poder resolver, sin perjuicio de los alegatos que las partes involucradas hagan con posterioridad.
 
-%h2{:style => "text-align: center;"} - B -
+%h3.text-center
+	%a{:name => "B"}
+		B
 
 %p
 	%strong='Bancada parlamentaria:'
@@ -43,7 +56,9 @@
 	%strong='Boletín (número):'
 	es el número único que se le asigna a cada proyecto cuando ingresa a tramitación en el Congreso Nacional.
 
-%h2{:style => "text-align: center;"} - C -
+%h3.text-center
+	%a{:name => "C"}
+		C
 
 %p
 	%strong='Cámaras:'
@@ -157,7 +172,9 @@
 	%strong='Cuenta:'
 	documento, preparado por cada Cámara, que incluye un listado de todas las comunicaciones recibidas por ellas. Una vez presentada la cuenta en la Sala, estas comunicaciones se entenderán oficialmente recibidas y producirán sus efectos.
 
-%h2{:style => "text-align: center;"} - D -
+%h3.text-center
+	%a{:name => "D"}
+		D
 
 %p
 	%strong='Datos sensibles:'
@@ -231,7 +248,9 @@
 	%strong='Documentos:'
 	todo escrito, correspondencia, memorándum, plano, mapa, dibujo, diagrama, documento gráfico, fotografía, microforma, grabación sonora, video, dispositivo susceptible de ser leído mediante la utilización de sistemas mecánicos, electrónicos o computacionales y, en general, todo soporte material que contenga información, cualquiera sea su forma física o características, así como las copias de aquéllos. (Artículo 3º reglamento ley de transparencia).
 
-%h2{:style => "text-align: center;"} - E -
+%h3.text-center
+	%a{:name => "E"}
+		E
 
 %p
 	%strong='Estado de Asamblea:'
@@ -253,8 +272,9 @@
 	%strong='Estado de Sitio:'
 	es un estado de excepción constitucional que se da en caso de guerra interna o grave conmoción interior. Lo declara el Presidente de la República, con acuerdo del Congreso Nacional.
 
-%h2{:style => "text-align: center;"} - F -
-
+%h3.text-center
+	%a{:name => "F"}
+		F
 %p
 	%strong='Fideicomiso ciego:'
 	es un mecanismo que tiene por objeto evitar conflictos de intereses en las decisiones que adopten altas autoridades públicas en el ejercicio de su cargo, por lo que a través de esta figura les permite ceder la administración de su patrimonio a un tercero independiente, sin tener opción a saber del manejo posterior de sus bienes por parte de éste.
@@ -291,7 +311,9 @@
 	%strong='Fundamentos de los actos administrativos:'
 	son las circunstancias y el raciocinio que justifican las decisiones que toman los órganos de la administración.
 
-%h2{:style => "text-align: center;"} - G -
+%h3.text-center
+	%a{:name => "G"}
+		G
 
 %p
 	%strong='Gasto Electoral:'
@@ -301,13 +323,17 @@
 	%strong='Grupos de interés:'
 	conjunto de personas que se organizan con el objeto de perseguir intereses específicos en el escenario político, económico y social, entre otros, y que funcionan ejerciendo presión sobre otros grupos.
 
-%h2{:style => "text-align: center;"} - H -
+%h3.text-center
+	%a{:name => "H"}
+		H
 
 %p
 	%strong='Hora de incidentes:'
 	es la última parte de una sesión ordinaria, donde los diputados y senadores pueden hacer presente (en sus respectivas Cámaras) temas de interés público y general.
 
-%h2{:style => "text-align: center;"} - I -
+%h3.text-center
+	%a{:name => "I"}
+		I
 
 %p
 	%strong='Indicación:'
@@ -349,15 +375,21 @@
 	%strong='Inviolabilidad Parlamentaria:'
 	es un privilegio que la Constitución concede a los parlamentarios que impide que sean acusados por lo que dicen en sala y en comisiones.
 
-%h2{:style => "text-align: center;"} - J -
+%h3.text-center
+	%a{:name => "J"}
+		J
 
 %p
 	%strong='Jefe de bancada o comité parlamentario:'
 	es el diputado o senador que representa a una Bancada o Comité Parlamentario, o al conjunto de ellos, si existieren varios comités de un mismo partido.
 
-%h2{:style => "text-align: center;"} - K -
+%h3.text-center
+	%a{:name => "K"}
+		K
 
-%h2{:style => "text-align: center;"} - L -
+%h3.text-center
+	%a{:name => "L"}
+		L
 
 %p
 	%strong='Legislatura:'
@@ -387,7 +419,9 @@
 	%strong='Lobby:'
 	es la actividad en que una persona o un grupo de personas unidas por intereses similares (económicos, políticos, religiosos, etc.) realiza acciones para influir en aquellos procesos de discusión y toma de decisiones de las autoridades públicas, sin retribución económica a diferencia del tráfico de influencias.
 
-%h2{:style => "text-align: center;"} - M -
+%h3.text-center
+	%a{:name => "M"}
+		M
 
 %p
 	%strong='Mensaje:'
@@ -405,7 +439,9 @@
 	%strong='Muerte presunta:'
 	es la declarada por el juez, en conformidad a las reglas legales, respecto de un individuo que ha desaparecido y de quien se ignora si vive o no. El juez presume la muerte de una persona, por eso se la trata bajo el título de “presunción de muerte por desaparecimiento”.
 
-%h2{:style => "text-align: center;"} - N -
+%h3.text-center
+	%a{:name => "N"}
+		N
 
 %p
 	%strong='Negociación Incompatible:'
@@ -419,13 +455,17 @@
 	%strong='Notificación por cédula:'
 	es aquella que consiste en entregar en el domicilio del notificado copia íntegra de la resolución y los datos necesarios para su acertado entendimiento.
 
-%h2{:style => "text-align: center;"} - O -
+%h3.text-center
+	%a{:name => "O"}
+		O
 
 %p
 	%strong='Órganos o servicios de la Administración del Estado:'
 	la Administración del Estado está formada por los Ministerios, las Intendencias, las Gobernaciones y los órganos y servicios públicos creados para el cumplimiento de la función administrativa, incluidos la Contraloría General de la República, el Banco Central, las Fuerzas Armadas y las Fuerzas de Orden y Seguridad  pública, los Gobiernos Regionales, las Municipalidades y las empresas públicas creadas por ley (artículo 1º inciso 2º de la Ley Orgánica Constitucional de Bases Generales de la Administración del Estado).
 
-%h2{:style => "text-align: center;"} - P -
+%h3.text-center
+	%a{:name => "P"}
+		P
 
 %p
 	%strong='Pareo:'
@@ -507,13 +547,17 @@
 	%strong='Publicación del proyecto:'
 	consiste en el acto mediante el cual se comunica o informa el contenido de la ley. En Chile debe hacerse en el Diario Oficial y desde ese momento es obligatoria y se presume conocida por todos.
 
-%h2{:style => "text-align: center;"} - Q -
+%h3.text-center
+	%a{:name => "Q"}
+		Q
 
 %p
 	%strong='Quórum:'
 	determinada mayoría exigida, para sesionar y adoptar acuerdos. No se consideraran en el cómputo los senadores y diputados que se encuentren suspendidos o ausentes del país con permiso constitucional.
 
-%h2{:style => "text-align: center;"} - R -
+%h3.text-center
+	%a{:name => "R"}
+		R
 
 %p
 	%strong='Ratificación, aceptación, aprobación, y adhesión:'
@@ -527,7 +571,9 @@
 	%strong='Resolución:'
 	es una norma dictada por cualquier autoridad inferior de la administración central sobre asuntos o negocios de su competencia, en virtud de una delegación de atribuciones del Presidente de la República.
 
-%h2{:style => "text-align: center;"} - S -
+%h3.text-center
+	%a{:name => "S"}
+		S
 
 %p
 	%strong='Sanción:'
@@ -574,7 +620,9 @@
 	%strong='Sustento o complemento esencial:'
 	los documentos indispensables para la elaboración y dictación del acto administrativo en que concurren, de modo que sean inseparables del mismo. (Artículo 3º reglamento ley de transparencia).
 
-%h2{:style => "text-align: center;"} - T -
+%h3.text-center
+	%a{:name => "T"}
+		T
 
 %p
 	%strong='Tabla:'
@@ -608,7 +656,9 @@
 	%strong='Tribunal Constitucional:'
 	es un órgano del Estado, autónomo e independiente .Este resuelve conflictos que se originan si un proyecto de ley o un decreto infringe la Constitución, o cuando la aplicación de una ley vigente puede resultar contraria a la Constitución, o bien, si una ley es completamente inconstitucional.
 
-%h2{:style => "text-align: center;"} - U -
+%h3.text-center
+	%a{:name => "U"}
+		U
 
 %p
 	%strong='Urgencias:'
@@ -630,16 +680,26 @@
 	%strong='Uso de Información Privilegiada:'
 	es un beneficio propio o que se otorga a terceros,  a través de la utilización de información reservada o privilegiada a la que se tiene acceso en razón de la función que se desempeña.
 
-%h2{:style => "text-align: center;"} - V -
+%h3.text-center
+	%a{:name => "V"}
+		V
 
 %p
 	%strong='Veto:'
 	es la acción por la cual, el Presidente de la República realiza observaciones o rechaza en forma parcial o total un proyecto de ley, que ha sido aprobado previamente por ambas cámaras.
 
-%h2{:style => "text-align: center;"} - W -
+%h3.text-center
+	%a{:name => "W"}
+		W
 
-%h2{:style => "text-align: center;"} - X -
+%h3.text-center
+	%a{:name => "X"}
+		X
 
-%h2{:style => "text-align: center;"} - Y -
+%h3.text-center
+	%a{:name => "Y"}
+		Y
 
-%h2{:style => "text-align: center;"} - Z -
+%h3.text-center
+	%a{:name => "Z"}
+		Z

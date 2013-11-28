@@ -1,0 +1,47 @@
+%table.table.table-striped
+  %thead
+  %tbody
+    %tr
+      %th= t 'bill.bulletin'
+      %td.numeric= @bill.uid
+    %tr
+      %th= t 'bill.title'
+      %td= @bill.title
+    - if !@bill.abstract.blank?
+      %tr
+        %th= t 'bill.abstract'
+        %td= @bill.abstract
+    %tr
+      %th= t 'bill.creation_date'
+      %td= DateTime.parse(@bill.creation_date).to_date.to_s
+    %tr
+      %th= t 'bill.initiative'
+      %td= @bill.initiative
+    %tr
+      %th= t 'bill.origin_chamber'
+      %td= @bill.origin_chamber
+    %tr
+      %th= t 'bill.current_urgency'
+      %td= @bill.current_urgency
+    %tr
+      %th= t 'bill.stage'
+      %td= @bill.stage
+    - if @bill.sub_stage.match(/[a-z\d]+/)
+      %tr
+        %th= t 'bill.sub_stage'
+        %td= @bill.sub_stage
+    %tr
+      %th= t 'bill.state'
+      %td= @bill.state
+    - if !@bill.law.blank?
+      %tr
+        %th= t 'bill.law'
+        %td= @bill.law
+    - if !@bill.link_law.blank?
+      %tr
+        %th= t 'bill.link_law'
+        %td= link_to @bill.link_law, @bill.link_law
+    - if @bill.merged != '[]'
+      %tr
+        %th= t 'bill.merged'
+        %td= @bill.merged
