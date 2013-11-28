@@ -20,6 +20,7 @@ en:
     all_the_stages: "All the Stages"
     all_the_chambers: "All the Chambers"
     all_the_urgencies: "All the Urgencies"
+    quick: 'Quick view'
   advanced_search:
     advanced_search: "Advanced search"
     search_for: "Search for:"

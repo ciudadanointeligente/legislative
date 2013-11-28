@@ -20,10 +20,10 @@
         %div.col-md-6
           %button.btn.btn-default
             %i.fa.fa-chevron-left
-            = link_to(t('pagination.previous'), url_for(action:'advanced_search') + '?' + get_params(@query.previous) + '#result')  if @query.previous
+            = link_to(t('pagination.previous'), url_for(action:'advanced_search') + '?' + get_params(@query.previous))  if @query.previous
         %div.col-md-6
           %button.btn.btn-default
-            = link_to(t('pagination.next'), url_for(action:'advanced_search') + '?' + get_params(@query.next) + '#result')  if @query.next
+            = link_to(t('pagination.next'), url_for(action:'advanced_search') + '?' + get_params(@query.next))  if @query.next
             %i.fa.fa-chevron-right
 
   %div.table-responsive
@@ -41,7 +41,21 @@
       - @bills.each do |bill|
         %tr
           %td= bill.uid
-          %td= link_to bill.title, '/bills/' + bill.uid
+          %td
+            = link_to bill.title, '/bills/' + bill.uid
+            %a{"href" => "#", "data-toggle" => "modal", "data-target" => "#quickview-"+ bill.uid}
+              %i.fa.fa-eye{title: t('search.quick')}
+            %div.modal.fade{"id" => "quickview-"+ bill.uid, "tabindex" => "-1", "role" => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
+              %div.modal-dialog
+                %div.modal-content
+                  %div.modal-header
+                    %button.close{"type" => "button", "data-dismiss" => "modal", "aria-hidden" => "true"}
+                      ×
+                    %h4.modal-title
+                      =bill.title
+                  %div.modal-body
+                    - @bill = bill
+                    = render :partial => "show"
           %td= DateTime.parse(bill.creation_date).to_date.to_s
           %td= bill.state
           %td= bill.origin_chamber

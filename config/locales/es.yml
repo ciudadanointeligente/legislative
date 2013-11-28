@@ -20,6 +20,7 @@ es:
     all_the_stages: "Todas las etapas"
     all_the_chambers: "Todas las cámaras"
     all_the_urgencies: "Todas las urgencias"
+    quick: 'Vista rápida'
   advanced_search:
     advanced_search: "Búsqueda avanzada"
     search_for: "Buscar por:"
