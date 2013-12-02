@@ -57,3 +57,4 @@ gem 'billit_representers'
 gem 'ekuseru'
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'

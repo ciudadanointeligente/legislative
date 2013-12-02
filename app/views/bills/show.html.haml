@@ -1,32 +1,6 @@
 / %h1 Show
 :javascript
-  $(document).ready(function() {
-    var tagsUpdate = function(event, ui) {
-      // do something special
-      //console.log($("#myTags").tagit("assignedTags"));
-      if (ui.duringInitialization) {return}
-      var preexistingtags = [1,2,3]
-      var tags_array = $("#myTags").tagit("assignedTags");
-      var data = {tags: tags_array};
-      //console.log(data);
-      $.ajax({
-          url: '/bills/' + '#{@bill.uid}' + '/update',
-          type: 'PUT',
-          data: data,
-          success: function(result) {
-            console.log(result);
-              // Do something with the result
-          }
-      });
-    }
-
-    var config = {
-      allowSpaces: true,
-      afterTagAdded: tagsUpdate,
-      afterTagRemoved: tagsUpdate
-    }
-    $("#myTags").tagit(config);
-  });
+  var billuid = '#{@bill.uid}';
 
 %div.page-header
   %h1=t '.title', :default => t('search.bill') + @bill.uid

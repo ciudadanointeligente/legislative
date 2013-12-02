@@ -9,6 +9,9 @@
 //= require_tree ./controllers/main
 //= require_tree ./directives/global
 //= require_tree ./directives/main
+//= require jquery.ui.all
+//= require tag-it.min
+//= require tag-it_updates
 //= require_self
 
 angular.module('pmoApp', ['ui.bootstrap']);
