@@ -57,6 +57,7 @@ es:
     documents: "Documentos"
     instructions: "Indicaciones"
     observations: "Observaciones"
+    comments: "Comentarios"
   event:
     chamber: "Cámara:"
     created_at: "Fecha de creación:"
