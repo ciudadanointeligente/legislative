@@ -4,7 +4,8 @@ production:
   popit:		  "popit.production-site.org"
   writeit:    "none"
   scout:      "none"
-  analytics:  "none"
+  analytics:  "UA-XXXXX-X"
+  disqus_shortname:     "none"
   parliaments-initial-date: "1990-03-01"
 
 development:
@@ -14,6 +15,7 @@ development:
   writeit:    "none"
   scout:      "none"
   analytics:  "none"
+  disqus_shortname:   "none"
   parliaments-initial-date: "1990-03-01"
 
 test:
@@ -23,4 +25,5 @@ test:
   writeit:    "none"
   scout:      "none"
   analytics:  "none"
+  disqus_shortname:     "none"
   parliaments-initial-date: "1990-03-01"
