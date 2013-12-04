@@ -31,6 +31,8 @@ es:
     creation_date_min: "Fecha de ingreso (min):"
     creation_date_max: "Fecha de ingreso (max):"
     origin_chamber: "Cámara de origen:"
+    author: "Autor"
+    placeholder_author: "Ingresa el nombre de un autor"
   bill:
     bulletin: "Boletín"
     title: "Título"

@@ -31,6 +31,8 @@ en:
     creation_date_min: "Creation date (min):"
     creation_date_max: "Creation date (max):"
     origin_chamber: "Origin chamber:"
+    author: "Author"
+    placeholder_author: "Type an author's name"
   bill:
     bulletin: "Bulletin"
     title: "Title"

@@ -21,7 +21,7 @@ class BillsController < ApplicationController
   # GET /bills/1.json
   def show
     @bill = Bill.get(ENV['billit'] + "#{params[:id]}", 'application/json')
-    @popit_url = ENV['popit']
+    @popit_url = 'http://' + ENV['popit'] + '/persons/'
 
     # respond_to do |format|
       # format.html # show.html.erb
@@ -107,8 +107,18 @@ class BillsController < ApplicationController
   end
 
   def advanced_search
+    response = Net::HTTP.get_response(ENV['popit'], '/api/v0.1/persons/')
+    json_response = JSON.parse(response.body)
+    authors_detail_list = json_response['result']
+
+    @authors_list = []
+    authors_detail_list.map do |author|
+      @authors_list.push(author['name'])
+    end
+
+    # @authors_list = @authors_list
     @query = search_function
-    respond_with @query
+    respond_with @query, @authors_list
   end
 
   def update

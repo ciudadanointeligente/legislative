@@ -43,3 +43,9 @@ var DatepickerCtrl = function ($scope, $timeout) {
     });
   };
 };
+
+
+var TypeaheadCtrl = function ($scope) {
+  $scope.selected_author = undefined;
+  $scope.authors = authors_list;
+};
