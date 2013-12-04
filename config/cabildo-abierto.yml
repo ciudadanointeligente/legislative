@@ -2,6 +2,7 @@ production:
   root_url:   "cabildo.production-site.org"
   billit:     "billit.production-site.org"
   popit:		  "popit.production-site.org"
+  tables:     "http://pmo.apidone.com/tables"
   writeit:    ~
   scout:      ~
   analytics:  "UA-XXXXX-X"
@@ -12,6 +13,7 @@ development:
   root_url:   "http://beta.votainteligente.cl/"
   billit:     "http://billit.ciudadanointeligente.org/bills/"
   popit:      "billit-demo.popit.mysociety.org"
+  tables:     "http://pmo.apidone.com/tables"
   writeit:    ~
   scout:      ~
   analytics:  ~
@@ -22,6 +24,7 @@ test:
   root_url:   "cabildo.test-site.org"
   billit:     "http://billit.ciudadanointeligente.org/bills/"
   popit:      "popit.test-site.org"
+  tables:     "http://table.com"
   writeit:    ~
   scout:      ~
   analytics:  ~

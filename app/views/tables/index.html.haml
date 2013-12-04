@@ -1,0 +1,16 @@
+%h1.page-header Listing tables
+
+%table.table.table-striped
+  %tr
+    %th='camara'
+    %th='fecha'
+    %th=''
+  
+  - @tables.tables.each do |table|
+    %tr
+      %td= table.origin_chamber
+      %td= table.creation_date
+      %td
+        - table.bills.each do |bill|
+          = link_to bill, bill_path(bill)
+  

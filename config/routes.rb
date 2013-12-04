@@ -1,5 +1,7 @@
 CabildoAbierto::Application.routes.draw do
 
+  resources :tables
+
   root :to => "users#home"
   #root :to => "bills#index"
   
