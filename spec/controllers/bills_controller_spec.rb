@@ -144,6 +144,17 @@ describe BillsController do
       assigns(:query).current_page.should_not be_nil
       assigns(:query).total_pages.should_not be_nil
     end
+
+    it "it obtains authors list" do
+      raw_response_file = File.open("./spec/webmock/bill-authors-list.json")
+      stub_request(:get, 'http://' + ENV['popit']  + '/api/v0.1/persons/').
+        with(:headers => {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Ruby'}).
+         to_return(:status => 200, :body => raw_response_file, :headers => {})
+
+      get :search
+      assigns(:authors_list).should_not be_nil
+      assigns(:authors_list).should_not be_empty
+    end
   end
 
   describe "POST create" do
