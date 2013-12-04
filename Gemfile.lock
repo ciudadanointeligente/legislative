@@ -57,7 +57,7 @@ GEM
     arel (4.0.0)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
-    billit_representers (0.5.5)
+    billit_representers (0.5.6)
       activemodel
       roar
     builder (3.1.4)
@@ -95,7 +95,7 @@ GEM
       railties (>= 3.1, < 4.1)
     hike (1.2.3)
     hooks (0.3.1)
-    i18n (0.6.5)
+    i18n (0.6.9)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)

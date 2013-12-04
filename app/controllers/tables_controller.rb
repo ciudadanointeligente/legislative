@@ -7,13 +7,9 @@ class TablesController < ApplicationController
   # GET /tables
   def index
     # @tables = Table.all
-    # table = Table.new
-    @tables = Table.get('http://pmo.apidone.com/tables/','application/json')
-    # puts "<---------"
-    # p @tables.origin_chamber
-    # p @tables.bills
-    # puts "--------->"
-    # [table]
+    @tables = TableCollection.new
+    @tables.get('http://pmo.apidone.com/tables','application/json')
+    # @tables
   end
 
   # GET /tables/1
