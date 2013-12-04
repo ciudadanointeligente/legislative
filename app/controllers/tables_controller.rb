@@ -8,7 +8,7 @@ class TablesController < ApplicationController
   def index
     # @tables = Table.all
     @tables = TableCollection.new
-    @tables.get('http://pmo.apidone.com/tables','application/json')
+    @tables.get(ENV['tables'],'application/json')
     # @tables
   end
 
