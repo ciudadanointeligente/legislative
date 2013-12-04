@@ -3,16 +3,16 @@
     %div.col-md-6
       %div.form-group
         = label_tag :q, t('advanced_search.search_for')
-        = text_field_tag :q, params[:q], :class => 'form-control', :placeholder => t('advanced_search.placeholder_search_for')
+        = text_field_tag :q, params[:q], :class => 'form-control', :placeholder => t('advanced_search.placeholder_search_for'), :onfocus => "ga('send','event','focus_search')"
       %div.form-group
         = label_tag :bill_id, t('advanced_search.bulletin')
-        = text_field_tag :bill_id, params[:bill_id], :class => 'form-control', :placeholder => t('advanced_search.placeholder_bulletin')
+        = text_field_tag :bill_id, params[:bill_id], :class => 'form-control', :placeholder => t('advanced_search.placeholder_bulletin'), :onfocus => "ga('send','event','focus_bulletin')"
       %div.form-group
         = label_tag :creation_date_min, t('advanced_search.creation_date_min')
         - if params[:creation_date_min] == nil
           - params[:creation_date_min] = ENV['parliaments-initial-date']
         %div.input-group
-          %input{"type" => "date", "value" => params[:creation_date_min], "min" => params[:creation_date_min], "name" => "creation_date_min", "class" => "form-control"}
+          %input{"type" => "date", "value" => params[:creation_date_min], "min" => params[:creation_date_min], "name" => "creation_date_min", "class" => "form-control", "onfocus" => "ga('send','event','focus_min_date')"}
           %span.input-group-addon
             %i.fa.fa-calendar
       %div.form-group
@@ -20,14 +20,14 @@
         - if params[:creation_date_max] == nil
           - params[:creation_date_max] = Date.today.to_s
         %div.input-group
-          %input{"type" => "date", "value" => params[:creation_date_max], "min" => ENV['parliaments-initial-date'], "name" => "creation_date_max", "class" => "form-control"}
+          %input{"type" => "date", "value" => params[:creation_date_max], "min" => ENV['parliaments-initial-date'], "name" => "creation_date_max", "class" => "form-control", "onfocus" => "ga('send','event','focus_max_date')"}
           %span.input-group-addon
             %i.fa.fa-calendar
 
     %div.col-md-6.search_separator
       %div.form-group
         = label_tag :stage, t('advanced_search.stage')
-        %select{:name => "stage", :class => "form-control"}
+        %select{:name => "stage", :class => "form-control", :onfocus => "ga('send','event','focus_stage')"}
           %option{:value => "", selected: params[:stage] == ""}= t 'search.all_the_stages'
           - @stages = Bill.class_variable_get(:@@stage_valid_values)
           - if @stages != nil
@@ -35,13 +35,13 @@
               %option{:value => stage, selected: params[:stage] == stage}= stage
       %div.form-group
         = label_tag :origin_chamber, t('search.bill_type')
-        %select{:name => "state", :class => "form-control"}
+        %select{:name => "state", :class => "form-control", :onfocus => "ga('send','event','focus_type')"}
           %option{:value => "", selected: params[:origin_chamber] == ""}= t 'search.all_the_types'
           %option{:value => "Publicado", selected: params[:origin_chamber] == "Publicado"}= 'Ley'
           %option{:value => "En tramitación", selected: params[:origin_chamber] == "En tramitación"}= 'Proyecto de ley'
       %div.form-group
         = label_tag :origin_chamber, t('advanced_search.origin_chamber')
-        %select{:name => "origin_chamber", :class => "form-control"}
+        %select{:name => "origin_chamber", :class => "form-control", :onfocus => "ga('send','event','focus_chamber')"}
           %option{:value => "", selected: params[:origin_chamber] == ""}= t 'search.all_the_chambers'
           - @chambers = Bill.class_variable_get(:@@origin_chamber_valid_values)
           - if @chambers != nil
@@ -49,7 +49,7 @@
               %option{:value => chamber, selected: params[:origin_chamber] == chamber}= chamber
       %div.form-group
         = label_tag :origin_chamber, t('search.current_urgency')
-        %select{:name => "current_urgency", :class => "form-control"}
+        %select{:name => "current_urgency", :class => "form-control", :onfocus => "ga('send','event','focus_urgency')"}
           %option{:value => "", selected: params[:current_urgency] == ""}= t 'search.all_the_urgencies'
           - @urgencies = Bill.class_variable_get(:@@current_urgency_valid_values)
           - if @urgencies != nil
@@ -57,4 +57,4 @@
               %option{:value => urgency, selected: params[:current_urgency] == urgency}= urgency
       
       %div.text-right
-        %button.btn.btn-primary{type: "submit"}=t('search.search')
+        %button.btn.btn-primary{type: "submit", onclick: "ga('send','event','button_search_bills')"}=t('search.search')
