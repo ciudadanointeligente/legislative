@@ -2,28 +2,28 @@ production:
   root_url:   "cabildo.production-site.org"
   billit:     "billit.production-site.org"
   popit:		  "popit.production-site.org"
-  writeit:    "none"
-  scout:      "none"
+  writeit:    ~
+  scout:      ~
   analytics:  "UA-XXXXX-X"
-  disqus_shortname:     "none"
+  disqus_shortname:     ~
   parliaments-initial-date: "1990-03-01"
 
 development:
   root_url:   "http://beta.votainteligente.cl/"
   billit:     "http://billit.ciudadanointeligente.org/bills/"
-  popit:      "http://billit-demo.popit.mysociety.org/persons/"
-  writeit:    "none"
-  scout:      "none"
-  analytics:  "none"
-  disqus_shortname:   "none"
+  popit:      "billit-demo.popit.mysociety.org"
+  writeit:    ~
+  scout:      ~
+  analytics:  ~
+  disqus_shortname:   ~
   parliaments-initial-date: "1990-03-01"
 
 test:
   root_url:   "cabildo.test-site.org"
   billit:     "http://billit.ciudadanointeligente.org/bills/"
   popit:      "popit.test-site.org"
-  writeit:    "none"
-  scout:      "none"
-  analytics:  "none"
-  disqus_shortname:     "none"
+  writeit:    ~
+  scout:      ~
+  analytics:  ~
+  disqus_shortname:     ~
   parliaments-initial-date: "1990-03-01"
