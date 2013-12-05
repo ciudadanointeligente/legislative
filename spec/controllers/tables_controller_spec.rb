@@ -45,6 +45,7 @@ describe TablesController do
   end
 
   describe "GET show" do
+    # [todo] - improve tests
     xit "assigns the requested table as @table" do
       table = Table.create! valid_attributes
       get :show, {:id => table.to_param}, valid_session
