@@ -1,6 +1,7 @@
 #encoding: utf-8
 # require 'billit_representers/representers/bill_representer'
 # require 'billit_representers/representers/bill_collection_representer'
+require 'net/http'
 
 class BillsController < ApplicationController
   include Roar::Rails::ControllerAdditions
