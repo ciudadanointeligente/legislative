@@ -1,8 +1,9 @@
 CabildoAbierto::Application.routes.draw do
 
+  get "main/index"
   resources :tables
 
-  root :to => "users#home"
+  root :to => "main#index"
   #root :to => "bills#index"
   
   get "bills/:id" => "bills#show"

@@ -12,6 +12,7 @@
 //= require jquery.ui.all
 //= require tag-it.min
 //= require tag-it_updates
+//= require mainmain
 //= require_self
 
 angular.module('pmoApp', ['ui.bootstrap']);
