@@ -1,10 +1,10 @@
 %style
 
 %div.jumbotron{:style => "font-size: 14px;"}
-  %form.form-inline
+  = form_tag('/advanced_search', :method => 'get', :class => "form-inline") do
     %div.row
       %div.col-xs-10
-        %input.form-control{:type => "text", :placeholder => t("main.search_placeholder")}
+        %input.form-control{:type => "text", :name => 'q', :placeholder => t("main.search_placeholder")}
       %button{:type => "submit", :class => "btn btn-primary"}
         =t("search.search")
     %div.checkbox{:style => "padding-top: 7px;"}
@@ -108,16 +108,16 @@
                 %h3
                   =t('main.latest-tables')
               %div.row
-                %div.col-md-6
-                  %h4
-                    ="Lorem ipsum dolor sit amet"
-                  %p
-                    ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, dolores, assumenda, ad unde dignissimos tempora cumque perferendis at mollitia obcaecati atque eum nisi necessitatibus. Ducimus, a ut nemo tempora perspiciatis!"
-                %div.col-md-6
-                  %h4
-                    ="Lorem ipsum dolor sit amet"
-                  %p
-                    ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, dolores, assumenda, ad unde dignissimos tempora cumque perferendis at mollitia obcaecati atque eum nisi necessitatibus. Ducimus, a ut nemo tempora perspiciatis!"
+                - @tables.tables.each do |table|
+                  %div.col-md-6
+                    %h4= table.origin_chamber
+                    - creation_date = DateTime.parse(table.creation_date).to_date
+                    %p= creation_date.strftime("%A %d de %B, %Y")
+                    %p= "Legislatura: " + table.legislature
+                    %p= "Sesión nro: " + table.session
+                    %p= "Proyecto(s) de ley: "
+                    - table.bills.each do |bill|
+                      = link_to bill, ENV['billit'] + bill
               %div
                 %p.text-right
                   %a=t('main.view-more')
@@ -181,21 +181,36 @@
           =t('main.latest-bills')
         
       %div.row
-        %div.col-md-4
-          %h4
-            ="Lorem ipsum dolor sit amet"
-          %p
-            ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, dolores, assumenda, ad unde dignissimos tempora cumque perferendis at mollitia obcaecati atque eum nisi necessitatibus. Ducimus, a ut nemo tempora perspiciatis!"
-        %div.col-md-4
-          %h4
-            ="Lorem ipsum dolor sit amet"
-          %p
-            ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, dolores, assumenda, ad unde dignissimos tempora cumque perferendis at mollitia obcaecati atque eum nisi necessitatibus. Ducimus, a ut nemo tempora perspiciatis!"
-        %div.col-md-4
-          %h4
-            ="Lorem ipsum dolor sit amet"
-          %p
-            ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, dolores, assumenda, ad unde dignissimos tempora cumque perferendis at mollitia obcaecati atque eum nisi necessitatibus. Ducimus, a ut nemo tempora perspiciatis!"
+        - @bills.bills.each_with_index do |bill, cnt|
+          / - if cnt == 3
+          /   %div.row
+          %div.col-md-4
+            %h4
+              = bill.title
+            %p
+              %strong= "Cámara: "
+              = bill.origin_chamber
+            %p
+              %strong= "Urgencia: " 
+              = bill.current_urgency
+            %p
+              %strong= "Etapa: " 
+              =bill.stage
+            %p
+              %strong="Fecha creación"
+              - creation_date = DateTime.parse(bill.creation_date).to_date
+              = creation_date.strftime("%A %d de %B, %Y")
+
+        / %div.col-md-4
+        /   %h4
+        /     ="Lorem ipsum dolor sit amet"
+        /   %p
+        /     ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, dolores, assumenda, ad unde dignissimos tempora cumque perferendis at mollitia obcaecati atque eum nisi necessitatibus. Ducimus, a ut nemo tempora perspiciatis!"
+        / %div.col-md-4
+        /   %h4
+        /     ="Lorem ipsum dolor sit amet"
+        /   %p
+        /     ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, dolores, assumenda, ad unde dignissimos tempora cumque perferendis at mollitia obcaecati atque eum nisi necessitatibus. Ducimus, a ut nemo tempora perspiciatis!"
       %div
         %p.text-right
           %a=t('main.view-more')
