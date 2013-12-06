@@ -1,4 +1,4 @@
-%h1= t 'search.basic_search'
+%h1= t 'search.search_title'
 = form_tag('/search', :method => 'get') do
   = label_tag :q, t('search.search_for')
   = text_field_tag :q, params[:q]

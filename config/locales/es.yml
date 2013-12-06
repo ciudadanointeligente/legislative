@@ -4,11 +4,11 @@
 es:
   layout:
     home: "Principal"
-    advanced_search: "Búsqueda avanzada"
+    search: "Búsqueda"
     about_us: "Acerca de nosotros"
     glossary: "Glosario"
   search:
-    basic_search: "Búsqueda"
+    search_title: "Búsqueda"
     search_for: "Buscar por:"
     search: "Buscar"
     bill: "Proyecto de ley "
@@ -20,10 +20,7 @@ es:
     all_the_stages: "Todas las etapas"
     all_the_chambers: "Todas las cámaras"
     all_the_urgencies: "Todas las urgencias"
-    quick: 'Vista rápida'
-  advanced_search:
-    advanced_search: "Búsqueda avanzada"
-    search_for: "Buscar por:"
+    quick: "Vista rápida"
     placeholder_search_for: "Ingresa una palabra clave"
     bulletin: "Boletín:"
     placeholder_bulletin: "Ingresa nro de boletín"

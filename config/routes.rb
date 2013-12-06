@@ -8,7 +8,6 @@ CabildoAbierto::Application.routes.draw do
   get "bills/:id" => "bills#show"
   post "bills/:id/update" => "bills#update", method: :put
   get "search" => "bills#search"
-  get "advanced_search" => "bills#advanced_search"
   get "glossary" => "bills#glossary"
 
   get "log_out" => "sessions#destroy", :as => "log_out"

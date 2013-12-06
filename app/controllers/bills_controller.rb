@@ -1,4 +1,5 @@
 #encoding: utf-8
+  require 'net/http'
 # require 'billit_representers/representers/bill_representer'
 # require 'billit_representers/representers/bill_collection_representer'
 
@@ -89,24 +90,7 @@ class BillsController < ApplicationController
     # end
   end
 
-  def search_function
-    if !params.nil? && params.length > 2 # default have 2 keys {'action'=>'search', 'controller'=>'bills'}
-      @keywords = String.new
-      params.each do |param|
-        if param[0] != 'utf8' && param[0] != 'commit' && param[0] != 'format'
-         @keywords << param[0] + '=' + param[1] + '&'
-        end
-      end
-      @query = BillCollectionPage.get(ENV['billit'] + "search/?#{URI.encode(@keywords)}", 'application/json')
-    end
-  end
-
   def search
-    @query = search_function
-    respond_with @query
-  end
-
-  def advanced_search
     response = Net::HTTP.get_response(ENV['popit'], '/api/v0.1/persons/')
     json_response = JSON.parse(response.body)
     authors_detail_list = json_response['result']
@@ -116,9 +100,15 @@ class BillsController < ApplicationController
       @authors_list.push(author['name'])
     end
 
-    # @authors_list = @authors_list
-    @query = search_function
-    respond_with @query, @authors_list
+    if !params.nil? && params.length > 2 # default have 2 keys {'action'=>'search', 'controller'=>'bills'}
+      @keywords = String.new
+      params.each do |param|
+        if param[0] != 'utf8' && param[0] != 'commit' && param[0] != 'format'
+         @keywords << param[0] + '=' + param[1] + '&'
+        end
+      end
+      @query = BillCollectionPage.get(ENV['billit'] + "search/?#{URI.encode(@keywords)}", 'application/json')
+    end
   end
 
   def update
