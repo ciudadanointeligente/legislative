@@ -91,13 +91,13 @@ class BillsController < ApplicationController
 
   def search_function
     if !params.nil? && params.length > 2 # default have 2 keys {'action'=>'search', 'controller'=>'bills'}
-      keywords = String.new
+      @keywords = String.new
       params.each do |param|
         if param[0] != 'utf8' && param[0] != 'commit' && param[0] != 'format'
-         keywords << param[0] + '=' + param[1] + '&'
+         @keywords << param[0] + '=' + param[1] + '&'
         end
       end
-      @query = BillCollectionPage.get(ENV['billit'] + "search/?#{URI.encode(keywords)}", 'application/json')
+      @query = BillCollectionPage.get(ENV['billit'] + "search/?#{URI.encode(@keywords)}", 'application/json')
     end
   end
 

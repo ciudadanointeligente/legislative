@@ -20,8 +20,12 @@ sheet1.row(1).concat [t('bill.bulletin'), t('bill.title'), t('bill.abstract'), t
 # we can access the instance variable we set in the controller, just like
 # in erb template
 
-@bills = @query.bills
-@bills.each_with_index do |bill, i|
+# obtains all the results
+xls_params = URI.encode(@keywords) + "per_page=" + @query.total_entries.to_s
+xls_query = BillCollectionPage.get(ENV['billit'] + "search/?#{xls_params}", 'application/json')
+
+bills = xls_query.bills
+bills.each_with_index do |bill, i|
 # Create hyperlink to access to the bill web view
   link_to_bill = Spreadsheet::Link.new bill.web_url, bill.web_url
 
