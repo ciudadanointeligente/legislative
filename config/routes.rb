@@ -1,5 +1,6 @@
 CabildoAbierto::Application.routes.draw do
 
+  get "disclosure/index"
   get "main/index"
   resources :tables
 
@@ -17,6 +18,8 @@ CabildoAbierto::Application.routes.draw do
   post "auth" => "sessions#login"
 
   get "sign_up" => "users#new", :as => "sign_up"
+
+  get "disclosure" => "disclosure#index"
 
   resources :bills
   resources :users
