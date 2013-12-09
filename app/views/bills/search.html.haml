@@ -6,62 +6,63 @@
 
 = render :partial => "search_form"
 
-- if @query != nil
-  %div.page-header
-    %h1{name: "result"}=t '.title', :default => 'Bill'
+- if !@bills_query.nil?
+  - if !@bills_query.bills.empty?
+    %div.page-header
+      %h1{name: "result"}=t 'search.bills', :default => 'Bill'
 
-  %div.row
-    %div.col-md-4
-      %i.fa.fa-download
-      = link_to t('search.download_as_excel'), params.merge(:format => :xls), :onclick => "ga('send','event','download_bills_xls_up')"
+    %div.row
+      %div.col-md-4
+        %i.fa.fa-download
+        = link_to t('search.download_as_excel'), params.merge(:format => :xls), :onclick => "ga('send','event','download_bills_xls_up')"
 
-    %div.col-md-4
-      %p= t('pagination.page') + @query.current_page.to_s + t('pagination.of') + @query.total_pages.to_s + ',' + t('pagination.with') + @query.total_entries.to_s + t('pagination.results')
+      %div.col-md-4
+        %p= t('pagination.page') + @bills_query.current_page.to_s + t('pagination.of') + @bills_query.total_pages.to_s + ',' + t('pagination.with') + @bills_query.total_entries.to_s + t('pagination.results')
 
-    %div.col-md-4
-      %div.row
-        %div.col-md-6
-          %button.btn.btn-default
-            %i.fa.fa-chevron-left
-            = link_to(t('pagination.previous'), url_for(action:'search') + '?' + get_params(@query.previous))  if @query.previous
-        %div.col-md-6
-          %button.btn.btn-default
-            = link_to(t('pagination.next'), url_for(action:'search') + '?' + get_params(@query.next))  if @query.next
-            %i.fa.fa-chevron-right
+      %div.col-md-4
+        %div.row
+          %div.col-md-6
+            %button.btn.btn-default
+              %i.fa.fa-chevron-left
+              = link_to(t('pagination.previous'), url_for(action:'search') + '?' + get_params(@bills_query.previous))  if @bills_query.previous
+          %div.col-md-6
+            %button.btn.btn-default
+              = link_to(t('pagination.next'), url_for(action:'search') + '?' + get_params(@bills_query.next))  if @bills_query.next
+              %i.fa.fa-chevron-right
 
-  %div.table-responsive
-    %table.table.table-striped
-      %thead
-        %tr
-          %th= t 'bill.bulletin'
-          %th= t 'bill.title'
-          %th= t 'bill.creation_date'
-          %th= t 'bill.state'
-          %th= t 'bill.chamber'
+    %div.table-responsive
+      %table.table.table-striped
+        %thead
+          %tr
+            %th= t 'bill.bulletin'
+            %th= t 'bill.title'
+            %th= t 'bill.creation_date'
+            %th= t 'bill.state'
+            %th= t 'bill.chamber'
 
-      %tbody
-      - @bills = @query.bills
-      - @bills.each do |bill|
-        %tr
-          %td= bill.uid
-          %td
-            = link_to bill.title, '/bills/' + bill.uid, :onclick => "ga('send','event','bill', '"+bill.uid+"')"
-            %a{"href" => "#", "data-toggle" => "modal", "data-target" => "#quickview-"+ bill.uid}
-              %i.fa.fa-eye{title: t('search.quick')}
-            %div.modal.fade{"id" => "quickview-"+ bill.uid, "tabindex" => "-1", "role" => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
-              %div.modal-dialog
-                %div.modal-content
-                  %div.modal-header
-                    %button.close{"type" => "button", "data-dismiss" => "modal", "aria-hidden" => "true"}
-                      ×
-                    %h4.modal-title
-                      =bill.title
-                  %div.modal-body
-                    - @bill = bill
-                    = render :partial => "show"
-          %td= DateTime.parse(bill.creation_date).to_date.to_s
-          %td= bill.state
-          %td= bill.origin_chamber
+        %tbody
+        - @bills = @bills_query.bills
+        - @bills.each do |bill|
+          %tr
+            %td= bill.uid
+            %td
+              = link_to bill.title, '/bills/' + bill.uid, :onclick => "ga('send','event','bill', '"+bill.uid+"')"
+              %a{"href" => "#", "data-toggle" => "modal", "data-target" => "#quickview-"+ bill.uid}
+                %i.fa.fa-eye{title: t('search.quick')}
+              %div.modal.fade{"id" => "quickview-"+ bill.uid, "tabindex" => "-1", "role" => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
+                %div.modal-dialog
+                  %div.modal-content
+                    %div.modal-header
+                      %button.close{"type" => "button", "data-dismiss" => "modal", "aria-hidden" => "true"}
+                        ×
+                      %h4.modal-title
+                        =bill.title
+                    %div.modal-body
+                      - @bill = bill
+                      = render :partial => "show"
+            %td= DateTime.parse(bill.creation_date).to_date.to_s
+            %td= bill.state
+            %td= bill.origin_chamber
 
   %div.row
     %div.col-md-4
@@ -69,15 +70,43 @@
       = link_to t('search.download_as_excel'), params.merge(:format => :xls), :onclick => "ga('send','event','download_bills_xls_down')"
 
     %div.col-md-4
-      %p= t('pagination.page') + @query.current_page.to_s + t('pagination.of') + @query.total_pages.to_s + ',' + t('pagination.with') + @query.total_entries.to_s + t('pagination.results')
+      %p= t('pagination.page') + @bills_query.current_page.to_s + t('pagination.of') + @bills_query.total_pages.to_s + ',' + t('pagination.with') + @bills_query.total_entries.to_s + t('pagination.results')
 
     %div.col-md-4
       %div.row
         %div.col-md-6
           %button.btn.btn-default
             %i.fa.fa-chevron-left
-            = link_to(t('pagination.previous'), url_for(action:'search') + '?' + get_params(@query.previous) + '#result')  if @query.previous
+            = link_to(t('pagination.previous'), url_for(action:'search') + '?' + get_params(@bills_query.previous) + '#result')  if @bills_query.previous
         %div.col-md-6
           %button.btn.btn-default
-            = link_to(t('pagination.next'), url_for(action:'search') + '?' + get_params(@query.next) + '#result')  if @query.next
+            = link_to(t('pagination.next'), url_for(action:'search') + '?' + get_params(@bills_query.next) + '#result')  if @bills_query.next
             %i.fa.fa-chevron-right
+
+- if !@persons_query.empty?
+  %div.page-header
+    %h1{name: "result"}=t 'search.persons', :default => 'Authors'
+
+  %div.table-responsive
+    %table.table.table-striped
+      %thead
+        %tr
+          %th= 'Imagen'
+          %th= 'Nombre'
+          %th= 'Referencias'
+          %th= 'Referencias'
+
+      %tbody
+      - @persons = @persons_query
+      - @persons.each do |person|
+        %tr
+          %td
+            %img{src: person['images'][0]['url'], width: "90"}
+          %td
+            = link_to person['name'], ('http://' + ENV['popit'] + '/persons/' + person['slug'])
+          - if person['links'][1] != nil
+            %td
+              = link_to person['links'][1]['note'], person['links'][1]['url']
+          - if person['links'][2] != nil
+            %td
+              = link_to person['links'][2]['note'], person['links'][2]['url']

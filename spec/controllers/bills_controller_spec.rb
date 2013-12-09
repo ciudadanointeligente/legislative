@@ -105,7 +105,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
       get :search, q: "salud"
-      assigns(:query).bills.should be_an Array
+      assigns(:bills_query).bills.should be_an Array
     end
 
     it "has a self reference" do
@@ -120,7 +120,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
       get :search, q: "salud"
-      assigns(:query).self.should eq("http://billit.ciudadanointeligente.org/bills/search?page=1&q=salud")
+      assigns(:bills_query).self.should eq("http://billit.ciudadanointeligente.org/bills/search?page=1&q=salud")
     end
 
     it "has a next page" do
@@ -135,7 +135,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
       get :search, q: "salud"
-      assigns(:query).next.should eq("http://billit.ciudadanointeligente.org/bills/search?page=2&q=salud")
+      assigns(:bills_query).next.should eq("http://billit.ciudadanointeligente.org/bills/search?page=2&q=salud")
     end
 
     it "has a previous page" do
@@ -150,7 +150,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
       get :search, q: "salud", page: 2
-      assigns(:query).previous.should eq("http://billit.ciudadanointeligente.org/bills/search?page=1&q=salud")
+      assigns(:bills_query).previous.should eq("http://billit.ciudadanointeligente.org/bills/search?page=1&q=salud")
     end
 
     it "has all metadata" do
@@ -165,9 +165,9 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
       get :search, q: "salud"
-      assigns(:query).total_entries.should_not be_nil
-      assigns(:query).current_page.should_not be_nil
-      assigns(:query).total_pages.should_not be_nil
+      assigns(:bills_query).total_entries.should_not be_nil
+      assigns(:bills_query).current_page.should_not be_nil
+      assigns(:bills_query).total_pages.should_not be_nil
     end
 
     it "it obtains authors list" do

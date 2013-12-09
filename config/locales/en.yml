@@ -13,6 +13,7 @@ en:
     search: "Search"
     bill: "Bill"
     bills: "Bills"
+    persons: "Authors"
     current_urgency: "Current urgency:"
     bill_type: "Bill type:"
     download_as_excel: "Download as Excel"

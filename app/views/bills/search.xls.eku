@@ -21,7 +21,7 @@ sheet1.row(1).concat [t('bill.bulletin'), t('bill.title'), t('bill.abstract'), t
 # in erb template
 
 # obtains all the results
-xls_params = URI.encode(@keywords) + "per_page=" + @query.total_entries.to_s
+xls_params = URI.encode(@keywords) + "per_page=" + @bills_query.total_entries.to_s
 xls_query = BillCollectionPage.get(ENV['billit'] + "search/?#{xls_params}", 'application/json')
 
 bills = xls_query.bills
