@@ -151,7 +151,7 @@
                         %td=9
       
 
-    %section{:id => 'tags', :style => 'border: 1px solid #ccc; border-radius: 6px; padding: 0px 10px 10px 10px; margin-top: 15px;'}
+    %section{:id => 'tags', :style => 'border: 1px solid #ccc; border-radius: 6px; padding: 0px 10px 10px 10px; margin-top: 50px;'}
       %div.page-header{:style => "margin: 20px 0 20px;"}
         %h3
           ="Etiquetas destacadas"
@@ -179,38 +179,27 @@
       %div.page-header
         %h3
           =t('main.latest-bills')
-        
-      %div.row
-        - @bills.bills.each_with_index do |bill, cnt|
-          / - if cnt == 3
-          /   %div.row
-          %div.col-md-4
-            %h4
-              = bill.title
-            %p
-              %strong= "Cámara: "
-              = bill.origin_chamber
-            %p
-              %strong= "Urgencia: " 
-              = bill.current_urgency
-            %p
-              %strong= "Etapa: " 
-              =bill.stage
-            %p
-              %strong="Fecha creación"
-              - creation_date = DateTime.parse(bill.creation_date).to_date
-              = creation_date.strftime("%A %d de %B, %Y")
-
-        / %div.col-md-4
-        /   %h4
-        /     ="Lorem ipsum dolor sit amet"
-        /   %p
-        /     ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, dolores, assumenda, ad unde dignissimos tempora cumque perferendis at mollitia obcaecati atque eum nisi necessitatibus. Ducimus, a ut nemo tempora perspiciatis!"
-        / %div.col-md-4
-        /   %h4
-        /     ="Lorem ipsum dolor sit amet"
-        /   %p
-        /     ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, dolores, assumenda, ad unde dignissimos tempora cumque perferendis at mollitia obcaecati atque eum nisi necessitatibus. Ducimus, a ut nemo tempora perspiciatis!"
+        %div.row
+          - @bills.bills.each_with_index do |bill, cnt|
+            - cnt = cnt+1
+            %div.col-md-4
+              %h4
+                = bill.title
+              %p
+                %strong= "Cámara: "
+                = bill.origin_chamber
+              %p
+                %strong= "Urgencia: " 
+                = bill.current_urgency
+              %p
+                %strong= "Etapa: " 
+                =bill.stage
+              %p
+                %strong="Fecha creación"
+                - creation_date = DateTime.parse(bill.creation_date).to_date
+                = creation_date.strftime("%A %d de %B, %Y")
+            - if cnt % 3 == 0
+              = raw '</div><div class="row">'
       %div
         %p.text-right
           %a=t('main.view-more')
