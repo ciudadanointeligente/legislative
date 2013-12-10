@@ -18,23 +18,51 @@
 %div.row
   %div.col-md-3
     %div
-      %h3=t('main.login')
-      %form
-        %div.form-group
-          %label{:for => 'username'}=t('main.username')
-          %input.form-control{:id => 'username', :autocomplete => 'off'}
-        %div.form-group
-          %label{:for => 'password'}=t('main.password')
-          %input.form-control{:id => 'password', :type => 'password'}
-        %div.checkbox
-          %label
-            %input{:type => 'checkbox'}=t('main.stay-signed')
-        %ul.list-inline{:style => 'font-size:12px'}
-          %li
-            %a{:href => "#register", :"data-toggle" => "modal", :"data-target" => "#register"}=t('main.registry')
-          %li
-            %a=t('main.forgot')
-        %button.btn.btn-primary=t('main.login')
+      -if ! current_user
+        %div.page-header
+          %h3=t('main.login')
+        = form_tag auth_path, :class => '' do
+          %div.form-group
+            %label{:for => 'email'}=t('main.email')
+            %input.form-control{:id => 'email', :autocomplete => 'off', :name=>"email"}
+          %div.form-group
+            %label{:for => 'password'}=t('main.password')
+            %input.form-control{:id => 'password', :type => 'password', :name=>"password"}
+          %div.checkbox
+            %label
+              %input{:type => 'checkbox', :checked=>'checked', :value=>'yes'}=t('main.stay-signed')
+          %ul.list-inline{:style => 'font-size:12px'}
+            %li
+              %a{:href => "#register", :"data-toggle" => "modal", :"data-target" => "#register"}=t('main.registry')
+            %li
+              %a=t('main.forgot')
+          %button.btn.btn-primary=t('main.login')
+      -else
+        %div.page-header
+          %h3
+            Bienvenido
+        %div
+          %p
+            %strong
+              =current_user.username
+            tus últimas actividades son:
+          %table.table.table-condensed
+            %tr
+              %td
+                Ayer
+              %td
+                Consectetur adipisicing elit.
+            %tr
+              %td
+                27/08/2013
+              %td
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            %tr
+              %td
+                24/08/2013
+              %td
+                Consectetur adipisicing elit.
+      
     / modal register
     %div.modal.fade{:id=>"register", :tabindex=>"-1", :role=>"dialog", :"aria-labelledby"=>"registerLabel", :"aria-hidden"=>"true"}
       %div.modal-dialog
