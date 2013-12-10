@@ -90,16 +90,19 @@
                       %i.fa.fa-google-plus-square
                       ="Google Plus"
               %div.col-md-6
-                %form{:role => "form"}
+                %form{:role => "form", :'accept-charset'=>'UTF-8', :action=>'/users', :method=>'post'}
                   %div.form-group
                     %label{:for => "email"}="Email Address"
-                    %input.form-control{:id => "email", :placeholder => "name@domain.com"}
+                    %input.form-control{:id => "email", :placeholder => "name@domain.com", :name=>"user[email]"}
+                  %div.form-group
+                    %label{:for => "username"}="Username"
+                    %input.form-control{:id => "username", :name=>'user[username]'}
                   %div.form-group
                     %label{:for => "password_one"}="Password"
-                    %input.form-control{:id => "password_one", :type => "password"}
+                    %input.form-control{:id => "password_one", :type => "password", :name=>'user[password]'}
                   %div.form-group
                     %label{:for => "password_two"}="Repeat password"
-                    %input.form-control{:id => "password_two", :type => "password"}
+                    %input.form-control{:id => "password_two", :type => "password", :name=>'user[password_confirmation]'}
                   %button.btn.btn-primary="Register"
 
     / end modal register
