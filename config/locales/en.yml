@@ -5,8 +5,10 @@ en:
   layout:
     home: "Home"
     search: "Search"
-    about_us: "About us"
     glossary: "Glossary"
+    communication: "Communication"
+    disclosure: "Disclosure"
+    about_us: "About us"
   main:
     search_placeholder: "Search"
     username: "Username"

@@ -5,8 +5,10 @@ es:
   layout:
     home: "Principal"
     search: "Búsqueda"
-    about_us: "Acerca de nosotros"
     glossary: "Glosario"
+    communication: "Comunicación"
+    disclosure: "Declaraciones"
+    about_us: "Acerca de nosotros"
   main:
     search_placeholder: "Ingresa tu búsqueda"
     username: "Nombre de usuario"
