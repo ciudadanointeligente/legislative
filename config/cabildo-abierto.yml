@@ -12,7 +12,7 @@ production:
 development:
   root_url:   "http://beta.votainteligente.cl/"
   billit:     "http://billit.ciudadanointeligente.org/bills/"
-  popit:      "billit-demo.popit.mysociety.org"
+  popit:      "http://billit-demo.popit.mysociety.org/"
   tables:     "http://pmo.apidone.com/tables"
   writeit:    ~
   scout:      ~
