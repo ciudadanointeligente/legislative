@@ -1,5 +1,6 @@
 CabildoAbierto::Application.routes.draw do
 
+  get "parliamentary/index"
   get "communication/index"
   get "disclosure/index"
   get "main/index"
@@ -21,6 +22,7 @@ CabildoAbierto::Application.routes.draw do
 
   get "disclosure" => "disclosure#index"
   get "communication" => "communication#index"
+  get "parliamentary" => "parliamentary#show"
 
   resources :bills
   resources :users
