@@ -9,7 +9,42 @@
 - if !@bills_query.nil?
   - if !@bills_query.bills.empty?
     %div.page-header
-      %h1{name: "result"}=t 'search.bills', :default => 'Bill'
+      %h3{name: "result"}
+        =t 'search.bills', :default => 'Bill'
+        %small.btn.btn-default{:'data-toggle'=>"modal", :'data-target'=>"#suscripcion"}
+          %i.fa.fa-bell
+          ='Subscribirse a este resultado de búsqueda'
+
+    / modal suscription
+    %div.modal.fade{:id => 'suscripcion', :tabindex => "-1", :role=>"dialog", :'aria-labelledby'=>"mySuscriptionLabel", :'aria-hidden'=>"true"}
+      %div.modal-dialog
+        %div.modal-content
+          %div.modal-header
+            %button.close{:type=>"button", :'data-dismiss'=>"modal", :'aria-hidden'=>"true"}
+              x
+            %h4.modal-title{:id=>"mySuscriptionLabel"}
+              Suscripción
+          %div.modal-body
+            %div.row
+              %div.col-md-6
+                %p
+                  Deseas subscribirte a la búsqueda: 
+                %p
+                  %strong
+                    = params[:q]
+                %button.btn.btn-success
+                  Suscribir
+              %div.col-md-6
+                %p
+                  Te encuentras suscrito a las siguientes búsquedas:
+                %ul
+                  %li
+                    Educación
+                  %li
+                    Salud
+                  %li
+                    economia
+    / end modal suscription
 
     %div.row
       %div.col-md-4
@@ -22,13 +57,15 @@
       %div.col-md-4
         %div.row
           %div.col-md-6
-            %button.btn.btn-default
-              %i.fa.fa-chevron-left
-              = link_to(t('pagination.previous'), url_for(action:'search') + '?' + get_params(@bills_query.previous))  if @bills_query.previous
+            -if @bills_query.previous
+              %button.btn.btn-default
+                %i.fa.fa-chevron-left
+                = link_to(t('pagination.previous'), url_for(action:'search') + '?' + get_params(@bills_query.previous))
           %div.col-md-6
-            %button.btn.btn-default
-              = link_to(t('pagination.next'), url_for(action:'search') + '?' + get_params(@bills_query.next))  if @bills_query.next
-              %i.fa.fa-chevron-right
+            -if @bills_query.next
+              %button.btn.btn-default
+                = link_to(t('pagination.next'), url_for(action:'search') + '?' + get_params(@bills_query.next))
+                %i.fa.fa-chevron-right
 
     %div.table-responsive
       %table.table.table-striped

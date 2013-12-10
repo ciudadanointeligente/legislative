@@ -1,0 +1,207 @@
+%style
+
+%div.jumbotron{:style => "font-size: 14px;"}
+  = form_tag('/search', :method => 'get', :class => "form-inline") do
+    %div.row
+      %div.col-xs-10
+        %input.form-control{:type => "text", :name => 'q', :placeholder => t("main.search_placeholder")}
+      %button{:type => "submit", :class => "btn btn-primary"}
+        =t("search.search")
+    %div.checkbox{:style => "padding-top: 7px;"}
+      %label{:style => "padding-right: 7px;"}
+        %input{:type => 'checkbox'}
+          Buscar Proyectos de ley
+      %label
+        %input{:type => 'checkbox'}
+          Buscar Tablas
+
+%div.row
+  %div.col-md-3
+    %div
+      %h3=t('main.login')
+      %form
+        %div.form-group
+          %label{:for => 'username'}=t('main.username')
+          %input.form-control{:id => 'username', :autocomplete => 'off'}
+        %div.form-group
+          %label{:for => 'password'}=t('main.password')
+          %input.form-control{:id => 'password', :type => 'password'}
+        %div.checkbox
+          %label
+            %input{:type => 'checkbox'}=t('main.stay-signed')
+        %ul.list-inline{:style => 'font-size:12px'}
+          %li
+            %a{:href => "#register", :"data-toggle" => "modal", :"data-target" => "#register"}=t('main.registry')
+          %li
+            %a=t('main.forgot')
+        %button.btn.btn-primary=t('main.login')
+    / modal register
+    %div.modal.fade{:id=>"register", :tabindex=>"-1", :role=>"dialog", :"aria-labelledby"=>"registerLabel", :"aria-hidden"=>"true"}
+      %div.modal-dialog
+        %div.modal-content
+          %div.modal-header
+            %button.close{:type => "button", :"data-dismiss" => "modal", :"aria-hidden" => "true"}
+              \x
+            %h4.modal-title{:id => "registerLabel"}
+              ="New user"
+          %div.modal-body
+            %div.row
+              %div.col-md-6
+                %h5="Register with:"
+                %ul
+                  %li
+                    %a
+                      %i.fa.fa-twitter-square
+                      ="Twitter"
+                  %li
+                    %a
+                      %i.fa.fa-facebook-square
+                      ="Facebook"
+                  %li
+                    %a
+                      %i.fa.fa-google-plus-square
+                      ="Google Plus"
+              %div.col-md-6
+                %form{:role => "form"}
+                  %div.form-group
+                    %label{:for => "email"}="Email Address"
+                    %input.form-control{:id => "email", :placeholder => "Email"}
+                  %div.form-group
+                    %label{:for => "password_one"}="Password"
+                    %input.form-control{:id => "password_one", :type => "password"}
+                  %div.form-group
+                    %label{:for => "password_two"}="Repeat password"
+                    %input.form-control{:id => "password_two", :type => "password"}
+                  %button.btn.btn-primary="Register"
+
+    / end modal register
+    %hr
+    %div
+      %table.table.table-stripped.table-condensed
+        %thead
+          %tr
+            %th="Últimas Urgencias"
+        %tbody
+          %tr
+            %td
+              %strong Hoy
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente culpa quo rem hic eum! ...
+          %tr
+            %td
+              %strong Hoy
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente culpa quo rem hic eum! ...
+          %tr
+            %td
+              %strong Ayer
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente culpa quo rem hic eum! ...
+          %tr
+            %td
+              %strong Hace 2 días
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente culpa quo rem hic eum! ...
+  %div.col-md-9
+    %section{:id => 'tables'}
+      %div.row
+        %div.col-md-12
+          %div.row
+            %div.col-md-8
+              %div.page-header
+                %h3
+                  =t('main.latest-tables')
+              %div.row
+                - @tables.tables.each do |table|
+                  %div.col-md-6
+                    %h4= table.origin_chamber
+                    - creation_date = DateTime.parse(table.creation_date).to_date
+                    %p= creation_date.strftime("%A %d de %B, %Y")
+                    %p= "Legislatura: " + table.legislature
+                    %p= "Sesión nro: " + table.session
+                    %p= "Proyecto(s) de ley: "
+                    - table.bills.each do |bill|
+                      = link_to bill, ENV['billit'] + bill
+              %div
+                %p.text-right
+                  %a=t('main.view-more')
+            %div.col-md-4
+              %div.page-header
+                %h3
+                  =t('main.senator-highlights')
+              %div.hover.panel-senator
+                %div.front
+                  %img.img-responsive{:src => 'http://placehold.it/100/100'}
+                    %h4
+                      ="García Huidobro Sanfuentes, Alejandro"
+                    %p="Región: Región de la Araucanía | Circunscripción: 14"
+                    %p="Teléfono: (56-32) 2504679 | Email:jquintana@senado.cl"
+                %div.back
+                  %p= "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+                  %table.table.table-striped.table-condensed
+                    %thead
+                      %tr
+                        %th=t('main.option-votes')
+                        %th=t('main.nro-votes')
+                    %tbody
+                      %tr
+                        %td=t('main.yes')
+                        %td=90
+                      %tr
+                        %td=t('main.no')
+                        %td=50
+                      %tr
+                        %td=t('main.abstentions')
+                        %td=9
+      
+
+    %section{:id => 'tags', :style => 'border: 1px solid #ccc; border-radius: 6px; padding: 0px 10px 10px 10px; margin-top: 50px;'}
+      %div.page-header{:style => "margin: 20px 0 20px;"}
+        %h3
+          ="Etiquetas destacadas"
+      %div.row.tags-tooltip
+        %div.col-md-2
+          %h4.text-center{:title => "99 Proyectos / 20 Urgencias", :"data-toggle" => "tooltip", :"data-placement" => "top"}
+            Salud
+        %div.col-md-2
+          %h4.text-center{:title => "80 Proyectos / 13 Urgencias", :"data-toggle" => "tooltip", :"data-placement" => "top"}
+            Educación
+        %div.col-md-2
+          %h4.text-center{:title => "55 Proyectos / 5 Urgencias", :"data-toggle" => "tooltip", :"data-placement" => "top"}
+            Transporte
+        %div.col-md-2
+          %h4.text-center
+            Pueblos Originarios
+        %div.col-md-2
+          %h4.text-center
+            Medio Ambiente
+        %div.col-md-2
+          %h4.text-center
+            Agricultura
+    
+    %section{:id => 'bills'}
+      %div.page-header
+        %h3
+          =t('main.latest-bills')
+        %div.row
+          - @bills.bills.each_with_index do |bill, cnt|
+            - cnt = cnt+1
+            %div.col-md-4
+              %h4
+                = bill.title
+              %p
+                %strong= "Cámara: "
+                = bill.origin_chamber
+              %p
+                %strong= "Urgencia: " 
+                = bill.current_urgency
+              %p
+                %strong= "Etapa: " 
+                =bill.stage
+              %p
+                %strong="Fecha creación"
+                - creation_date = DateTime.parse(bill.creation_date).to_date
+                = creation_date.strftime("%A %d de %B, %Y")
+            - if cnt % 3 == 0
+              = raw '</div><div class="row">'
+      %div
+        %p.text-right
+          %a=t('main.view-more')
+
+    

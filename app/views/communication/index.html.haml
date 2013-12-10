@@ -1,0 +1,120 @@
+%div.page-header
+  %h2
+    Comunicación
+
+%section#communication
+  %div.panel.panel-default
+    %div.panel-body
+      %form
+        %div.row
+          %div.col-md-6
+            %div.form-group
+              %label{:for=>'name'}
+              %input.form-control#name{:type=>"text", :placeholder=>"Ingresar nombre"}
+            %div.form-group
+              %label{:for=>'email'}
+              %input.form-control#email{:type=>"email", :placeholder=>"Ingresar un email"}
+            %div.form-group
+              %label{:for=>'asunto'}
+              %input.form-control#asunto{:type=>"text", :placeholder=>"Ingresar asunto"}
+            %div.form-group
+              %textarea.form-control{:placeholder=>"Ingresar mensaje"}
+          %div.col-md-6
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            
+            %ul.nav.nav-tabs
+              %li.active
+                %a{:'data-toggle'=>'tab', :href=>'#senadores'}
+                  Senadores
+              %li
+                %a{:'data-toggle'=>'tab', :href=>'#diputados'}
+                  Diputados
+            %div.tab-content
+              %div.tab-pane.active#senadores
+                %ul
+                  %li
+                    %input{:type=>'checkbox'}
+                    =@persons.name
+                  %li
+                    %input{:type=>'checkbox'}
+                    Alvear Valenzuela, Soledad
+                  %li
+                    %input{:type=>'checkbox'}
+                    Bianchi Chelech, Carlos
+                  %li
+                    %input{:type=>'checkbox'}
+                    Cantero Ojeda, Carlos
+                  %li
+                    %input{:type=>'checkbox'}
+                    Chahuán Chahuán, Francisco
+                  %li
+                    %input{:type=>'checkbox'}
+                    Coloma Correa, Juan Antonio
+              %div.tab-pane#diputados
+                %ul
+                  %li
+                    %input{:type=>'checkbox'}
+                    SR. ENRIQUE ACCORSI
+                  %li
+                    %input{:type=>'checkbox'}
+                    SR. OSVALDO ANDRADE
+                  %li
+                    %input{:type=>'checkbox'}
+                    SR. PEPE AUTH
+                  %li
+                    %input{:type=>'checkbox'}
+                    SR. GERMÁN BECKER
+                  %li
+                    %input{:type=>'checkbox'}
+                    SR. JORGE BURGOS
+                  %li
+                    %input{:type=>'checkbox'}
+                    SR. LAUTARO CARMONA
+
+        %div.text-right
+          %button.btn.btn-success
+            Enviar
+
+%section#responses
+  %div.page-header
+    %h3
+      Mensajes enviados
+  %div.panel.panel-default
+    %div.panel-heading
+      %h4
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, neque, facilis qui quo quia labore tenetur nemo dolorum animi temporibus laborum quam vitae iure molestiae perferendis sed quasi repellat id!
+    %div.panel-body
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aspernatur, aperiam, beatae dolorum nam quasi fugit ab tempore reiciendis suscipit cupiditate ipsa deleniti odio illo dolor delectus nobis molestias ducimus.
+
+  %div.panel.panel-default
+    %div.panel-heading
+      %h4
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, neque, facilis qui quo quia labore tenetur nemo dolorum animi temporibus laborum quam vitae iure molestiae perferendis sed quasi repellat id!
+    %div.panel-body
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aspernatur, aperiam, beatae dolorum nam quasi fugit ab tempore reiciendis suscipit cupiditate ipsa deleniti odio illo dolor delectus nobis molestias ducimus.
+  %div.text-center
+    %ul.pagination
+      %li
+        %a{:href=>'#'}
+          &laquo;
+      %li.active
+        %a{:href=>'#'}
+          1
+      %li
+        %a{:href=>'#'}
+          2
+      %li
+        %a{:href=>'#'}
+          3
+      %li
+        %a{:href=>'#'}
+          4
+      %li
+        %a{:href=>'#'}
+          5
+      %li.disabled
+        %a{:href=>'#'}
+          &raquo;

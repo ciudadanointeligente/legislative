@@ -1,8 +1,11 @@
 CabildoAbierto::Application.routes.draw do
 
+  get "communication/index"
+  get "disclosure/index"
+  get "main/index"
   resources :tables
 
-  root :to => "users#home"
+  root :to => "main#index"
   #root :to => "bills#index"
   
   get "bills/:id" => "bills#show"
@@ -15,6 +18,9 @@ CabildoAbierto::Application.routes.draw do
   post "auth" => "sessions#login"
 
   get "sign_up" => "users#new", :as => "sign_up"
+
+  get "disclosure" => "disclosure#index"
+  get "communication" => "communication#index"
 
   resources :bills
   resources :users
