@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ParliamentaryController do
+describe parliamentarianController do
 
   describe "GET 'index'" do
     it "returns http success" do
