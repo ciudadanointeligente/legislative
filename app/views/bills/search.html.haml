@@ -101,24 +101,24 @@
             %td= bill.state
             %td= bill.origin_chamber
 
-  %div.row
-    %div.col-md-4
-      %i.fa.fa-download
-      = link_to t('search.download_as_excel'), params.merge(:format => :xls), :onclick => "ga('send','event','download_bills_xls_down')"
+    %div.row
+      %div.col-md-4
+        %i.fa.fa-download
+        = link_to t('search.download_as_excel'), params.merge(:format => :xls), :onclick => "ga('send','event','download_bills_xls_down')"
 
-    %div.col-md-4
-      %p= t('pagination.page') + @bills_query.current_page.to_s + t('pagination.of') + @bills_query.total_pages.to_s + ',' + t('pagination.with') + @bills_query.total_entries.to_s + t('pagination.results')
+      %div.col-md-4
+        %p= t('pagination.page') + @bills_query.current_page.to_s + t('pagination.of') + @bills_query.total_pages.to_s + ',' + t('pagination.with') + @bills_query.total_entries.to_s + t('pagination.results')
 
-    %div.col-md-4
-      %div.row
-        %div.col-md-6
-          %button.btn.btn-default
-            %i.fa.fa-chevron-left
-            = link_to(t('pagination.previous'), url_for(action:'search') + '?' + get_params(@bills_query.previous) + '#result')  if @bills_query.previous
-        %div.col-md-6
-          %button.btn.btn-default
-            = link_to(t('pagination.next'), url_for(action:'search') + '?' + get_params(@bills_query.next) + '#result')  if @bills_query.next
-            %i.fa.fa-chevron-right
+      %div.col-md-4
+        %div.row
+          %div.col-md-6
+            %button.btn.btn-default
+              %i.fa.fa-chevron-left
+              = link_to(t('pagination.previous'), url_for(action:'search') + '?' + get_params(@bills_query.previous) + '#result')  if @bills_query.previous
+          %div.col-md-6
+            %button.btn.btn-default
+              = link_to(t('pagination.next'), url_for(action:'search') + '?' + get_params(@bills_query.next) + '#result')  if @bills_query.next
+              %i.fa.fa-chevron-right
 
 - if !@persons_query.empty?
   %div.page-header
