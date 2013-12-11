@@ -22,7 +22,8 @@ CabildoAbierto::Application.routes.draw do
 
   get "disclosure" => "disclosure#index"
   get "communication" => "communication#index"
-  get "parliamentary" => "parliamentary#show"
+  get "parliamentary" => "parliamentary#index"
+  get "parliamentary/view" => "parliamentary#show"
 
   resources :bills
   resources :users
