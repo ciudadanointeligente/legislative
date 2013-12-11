@@ -1,6 +1,6 @@
 CabildoAbierto::Application.routes.draw do
 
-  get "parliamentarian/index"
+  get "parliamentarians/index"
   get "communication/index"
   get "disclosure/index"
   get "main/index"
@@ -22,7 +22,7 @@ CabildoAbierto::Application.routes.draw do
 
   get "disclosure" => "disclosure#index"
   get "communication" => "communication#index"
-  get "parliamentarian" => "parliamentarian#index"
+  get "parliamentarians" => "parliamentarian#index"
   get "parliamentarian/view" => "parliamentarian#show"
 
   resources :bills

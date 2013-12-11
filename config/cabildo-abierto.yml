@@ -13,6 +13,8 @@ development:
   root_url:   "http://beta.votainteligente.cl/"
   billit:     "http://billit.ciudadanointeligente.org/bills/"
   popit:      "billit-demo.popit.mysociety.org"
+  popit_persons:  "http://billit-demo.popit.mysociety.org/api/v0.1/persons/"
+  popit_url: "billit-demo.popit.mysociety.org"
   tables:     "http://pmo.apidone.com/tables"
   writeit:    ~
   scout:      ~
@@ -23,7 +25,8 @@ development:
 test:
   root_url:   "cabildo.test-site.org"
   billit:     "http://billit.ciudadanointeligente.org/bills/"
-  popit:      "popit.test-site.org"
+  popit_url: "billit-demo.popit.mysociety.org"
+  popit_persons:  "http://billit-demo.popit.mysociety.org/api/v0.1/persons/"
   tables:     "http://table.com"
   writeit:    ~
   scout:      ~
