@@ -13,91 +13,16 @@
           %th
             Datos
       %tbody
+        - @parliamentarians.persons.each do |parliamentarian|
+          %tr
+            %td
+              %img.img-responsive{:src=>parliamentarian.images[0]['url']}
+            %td
+              %p
+                %a{:href=>parliamentarian.popit_web_url}
+                  =parliamentarian.name
+            %td
+              
         %tr
-          %td
-            %img.img-responsive{:src=>'http://placehold.it/100x100'}
-          %td
-            %p
-              %a{:href=>'parliamentarian/view'}
-                Allende Bussi, Isabel
-          %td
-            %p
-              %strong
-                Región: 
-              Región de Atacama - 
-              %strong
-                Circunscripción: 
-              3
-            %p
-              %strong
-                Teléfono: 
-              (56-32) 2504671 -
-              %strong
-                Email:
-              iallende@senado.cl
-        %tr
-          %td
-            %img.img-responsive{:src=>'http://placehold.it/100x100'}
-          %td
-            %p
-              Alvear Valenzuela, Soledad
-          %td
-            %p
-              %strong
-                Región: 
-              Región Metropolitana - 
-              %strong
-                Circunscripción: 
-              8
-            %p
-              %strong
-                Teléfono: 
-              (56-32) 2504561 -
-              %strong
-                Email:
-              salvear@senado.cl
-        %tr
-          %td
-            %img.img-responsive{:src=>'http://placehold.it/100x100'}
-          %td
-            %p
-              Bianchi Chelech, Carlos
-          %td
-            %p
-              %strong
-                Región: 
-              Región de Magallanes y la Antártica Chilena - 
-              %strong
-                Circunscripción: 
-              19
-            %p
-              %strong
-                Teléfono: 
-              (56-32) 2504566 -
-              %strong
-                Email:
-              cbianchi@senado.cl
 
-  %div.text-center
-    %ul.pagination
-      %li
-        %a{:href=>'#'}
-          &laquo;
-      %li.active
-        %a{:href=>'#'}
-          1
-      %li
-        %a{:href=>'#'}
-          2
-      %li
-        %a{:href=>'#'}
-          3
-      %li
-        %a{:href=>'#'}
-          4
-      %li
-        %a{:href=>'#'}
-          5
-      %li.disabled
-        %a{:href=>'#'}
-          &raquo;
+  
