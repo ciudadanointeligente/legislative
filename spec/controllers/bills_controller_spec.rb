@@ -100,7 +100,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file, :headers => {})
 
       raw_response_file_authors = File.open("./spec/webmock/bill-authors-list.json")
-      stub_request(:get, 'http://' + ENV['popit']  + '/api/v0.1/persons/').
+      stub_request(:get, 'http://' + ENV['popit_url']  + '/api/v0.1/persons/').
         with(:headers => {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Ruby'}).
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
@@ -115,7 +115,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file, :headers => {})
 
       raw_response_file_authors = File.open("./spec/webmock/bill-authors-list.json")
-      stub_request(:get, 'http://' + ENV['popit']  + '/api/v0.1/persons/').
+      stub_request(:get, 'http://' + ENV['popit_url']  + '/api/v0.1/persons/').
         with(:headers => {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Ruby'}).
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
@@ -130,7 +130,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file, :headers => {})
 
       raw_response_file_authors = File.open("./spec/webmock/bill-authors-list.json")
-      stub_request(:get, 'http://' + ENV['popit']  + '/api/v0.1/persons/').
+      stub_request(:get, 'http://' + ENV['popit_url']  + '/api/v0.1/persons/').
         with(:headers => {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Ruby'}).
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
@@ -145,7 +145,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file, :headers => {})
 
       raw_response_file_authors = File.open("./spec/webmock/bill-authors-list.json")
-      stub_request(:get, 'http://' + ENV['popit']  + '/api/v0.1/persons/').
+      stub_request(:get, 'http://' + ENV['popit_url']  + '/api/v0.1/persons/').
         with(:headers => {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Ruby'}).
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
@@ -160,7 +160,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file, :headers => {})
 
       raw_response_file_authors = File.open("./spec/webmock/bill-authors-list.json")
-      stub_request(:get, 'http://' + ENV['popit']  + '/api/v0.1/persons/').
+      stub_request(:get, 'http://' + ENV['popit_url']  + '/api/v0.1/persons/').
         with(:headers => {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Ruby'}).
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
@@ -172,7 +172,7 @@ describe BillsController do
 
     it "it obtains authors list" do
       raw_response_file = File.open("./spec/webmock/bill-authors-list.json")
-      stub_request(:get, 'http://' + ENV['popit']  + '/api/v0.1/persons/').
+      stub_request(:get, 'http://' + ENV['popit_url']  + '/api/v0.1/persons/').
         with(:headers => {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Ruby'}).
         to_return(:status => 200, :body => raw_response_file, :headers => {})
 

@@ -2,15 +2,16 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+# Load application ENV vars and merge with existing ENV vars. Loaded here so can use values in initializers.
+ENV.update YAML.load_file('config/legislativo.yml')[Rails.env] rescue {}
+ENV.update YAML.load_file('config/private-legislativo.yml')[Rails.env] rescue {}
+
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
   Bundler.require(*Rails.groups(:assets => %w(development test)))
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
-
-# Load application ENV vars and merge with existing ENV vars. Loaded here so can use values in initializers.
-ENV.update YAML.load_file('config/cabildo-abierto.yml')[Rails.env] rescue {}
 
 module CabildoAbierto
   class Application < Rails::Application

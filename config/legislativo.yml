@@ -1,0 +1,35 @@
+production:
+  root_url:   ~
+  billit:     ~
+  popit_persons:  "my-popit-instance.popit.org/api/v0.1/persons/"
+  popit_url: ~
+  tables:     ~
+  writeit:    ~
+  scout:      ~
+  analytics:  "UA-XXXXX-X"
+  disqus_shortname:         ~
+  parliaments-initial-date: "1990-03-01"
+
+development:
+  root_url:   ~
+  billit:     ~
+  popit_persons:  "my-popit-instance.popit.org/api/v0.1/persons/"
+  popit_url: ~
+  tables:     ~
+  writeit:    ~
+  scout:      ~
+  analytics:  "UA-XXXXX-X"
+  disqus_shortname:         ~
+  parliaments-initial-date: "1990-03-01"
+
+test:
+  root_url:   ~
+  billit:     ~
+  popit_persons:  "my-popit-instance.popit.org/api/v0.1/persons/"
+  popit_url: ~
+  tables:     ~
+  writeit:    ~
+  scout:      ~
+  analytics:  "UA-XXXXX-X"
+  disqus_shortname:     ~
+  parliaments-initial-date: "1990-03-01"

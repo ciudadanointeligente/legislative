@@ -140,7 +140,7 @@
           %td
             %img{src: person['images'][0]['url'], width: "90"}
           %td
-            = link_to person['name'], ('http://' + ENV['popit'] + '/persons/' + person['slug'])
+            = link_to person['name'], ('http://' + ENV['popit_url'] + '/persons/' + person['slug'])
           - if person['links'][1] != nil
             %td
               = link_to person['links'][1]['note'], person['links'][1]['url']
