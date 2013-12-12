@@ -20,56 +20,13 @@
               %textarea.form-control{:placeholder=>"Ingresar mensaje"}
           %div.col-md-6
             %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Ingresa con qué candidatos quieres comunicarte:
             
-            %ul.nav.nav-tabs
-              %li.active
-                %a{:'data-toggle'=>'tab', :href=>'#senadores'}
-                  Senadores
-              %li
-                %a{:'data-toggle'=>'tab', :href=>'#diputados'}
-                  Diputados
             %div.tab-content
-              %div.tab-pane.active#senadores
-                %ul
-                  %li
-                    %input{:type=>'checkbox'}
-                    =@persons.name
-                  %li
-                    %input{:type=>'checkbox'}
-                    Alvear Valenzuela, Soledad
-                  %li
-                    %input{:type=>'checkbox'}
-                    Bianchi Chelech, Carlos
-                  %li
-                    %input{:type=>'checkbox'}
-                    Cantero Ojeda, Carlos
-                  %li
-                    %input{:type=>'checkbox'}
-                    Chahuán Chahuán, Francisco
-                  %li
-                    %input{:type=>'checkbox'}
-                    Coloma Correa, Juan Antonio
-              %div.tab-pane#diputados
-                %ul
-                  %li
-                    %input{:type=>'checkbox'}
-                    SR. ENRIQUE ACCORSI
-                  %li
-                    %input{:type=>'checkbox'}
-                    SR. OSVALDO ANDRADE
-                  %li
-                    %input{:type=>'checkbox'}
-                    SR. PEPE AUTH
-                  %li
-                    %input{:type=>'checkbox'}
-                    SR. GERMÁN BECKER
-                  %li
-                    %input{:type=>'checkbox'}
-                    SR. JORGE BURGOS
-                  %li
-                    %input{:type=>'checkbox'}
-                    SR. LAUTARO CARMONA
+              %select.form-control.chosen{:multiple => "multiple"}
+                - @parliamentarians.persons.each do |parliamentarians|
+                  %option{:value => parliamentarians.name}
+                    =parliamentarians.name
 
         %div.text-right
           %button.btn.btn-success
@@ -117,3 +74,9 @@
       %li.disabled
         %a{:href=>'#'}
           &raquo;
+
+%script{src: "http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.jquery.min.js"}
+:javascript
+  $(document).ready(function(){
+    $(".chosen").chosen();
+  })
