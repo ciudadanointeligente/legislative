@@ -12,7 +12,7 @@ set -e
 
 # just checkout the mysociety-deploy branch
 # http://stackoverflow.com/a/7349740/5349
-export DIR=popit-api-for-testing
+export DIR=popit_api_for_testing
 export BRANCH=mysociety-deploy
 export REMOTE_REPO=https://github.com/mysociety/popit-api.git
 export PORT=3002
@@ -34,15 +34,15 @@ if [ ! -e done.txt ]; then
   npm install mongodb-fixtures --quiet
   npm install --quiet
 
-  cp ../popit-for-testing/popit-api-initial-load.js .
-  cp -R ../popit-for-testing/fixtures .
+  cp ../popit_for_testing/popit_api_initial_load.js .
+  cp -R ../popit_for_testing/fixtures .
 
   touch done.txt;
 fi
 
 
 # Run the server in the background. Send access logging to file.
-node popit-api-initial-load.js # initial data for popit
+node popit_api_initial_load.js # initial data for popit
 node server.js > access.log &
 
 # give it a chance to start and then print out the url to it
