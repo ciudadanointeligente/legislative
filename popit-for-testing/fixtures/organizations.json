@@ -1,0 +1,14 @@
+{
+  "union-democrata-independiente": {
+    "name": "Unión Democráta Independiente",
+    "slug": "union-democrata-independiente",
+    "_id": "500804a07a317e1264000e0f",
+    "images": []
+  },
+  "partido-comunista": {
+    "name": "Partido Comunista",
+    "slug": "partido-comunista",
+    "_id": "500804a17a317e1264000e12",
+    "images": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "gonzalo-arenas-hodar": {
+    "name": "Gonzalo Arenas Hodar",
+    "slug": "gonzalo-arenas-hodar",
+    "_id": "5008048c7a317e126400046d",
+    "images": [{"url": "http://legislativo.votainteligente.cl/images/parlamentarios/134.png"}]
+  },
+  "orlando-vargas-pizarro": {
+    "name": "Orlando Vargas Pizarro",
+    "slug": "orlando-vargas-pizarro",
+    "_id": "500804717a317e126400005e",
+    "images": [{"url": "http://legislativo.votainteligente.cl/images/parlamentarios/39.png"}]
+  }
+}

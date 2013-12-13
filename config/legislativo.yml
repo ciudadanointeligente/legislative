@@ -25,8 +25,8 @@ development:
 test:
   root_url:   ~
   billit:     ~
-  popit_persons:  "my-popit-instance.popit.org/api/v0.1/persons/"
-  popit_url: ~
+  popit_persons:  "http://localhost:3002/api/persons/"
+  popit_url: "billit-demo.popit.mysociety.org"
   tables:     ~
   writeit:    ~
   scout:      ~
