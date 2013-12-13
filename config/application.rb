@@ -4,7 +4,7 @@ require 'rails/all'
 
 # Load application ENV vars and merge with existing ENV vars. Loaded here so can use values in initializers.
 ENV.update YAML.load_file('config/legislativo.yml')[Rails.env] rescue {}
-ENV.update YAML.load_file('config/private-legislativo.yml')[Rails.env] rescue {}
+ENV.update YAML.load_file('config/private_legislativo.yml')[Rails.env] rescue {}
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
