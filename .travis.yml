@@ -3,4 +3,13 @@ rvm:
   - 2.0.0
 env:
   - RAILS_VERSION=4.0.0
-install: sh install.sh
+before_script:
+  # updating bundle environment
+  - bundle install --without production
+  # creating database
+  - rake db:create
+  - rake db:migrate
+  # creating default admin user
+  - rake db:seed
+#script:
+#  -
