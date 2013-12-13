@@ -14,7 +14,8 @@
 /db/*.sqlite3
 
 # Ignore for local testing
-popit_api_for_testing
+popit_local_for_testing
+writeit_local_for_testing
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
