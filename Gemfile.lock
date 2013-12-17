@@ -57,7 +57,7 @@ GEM
     arel (4.0.0)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
-    billit_representers (0.5.6)
+    billit_representers (0.6.0)
       activemodel
       roar
     builder (3.1.4)
@@ -111,7 +111,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.2)
     multipart-post (1.2.0)
-    nokogiri (1.6.0)
+    nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     polyglot (0.3.3)
     popit_representers (0.0.7)
@@ -211,7 +211,7 @@ DEPENDENCIES
   activerecord-deprecated_finders!
   arel
   bcrypt-ruby
-  billit_representers
+  billit_representers (~> 0.6.0)
   coffee-rails!
   coveralls
   ekuseru
