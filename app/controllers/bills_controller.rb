@@ -64,19 +64,13 @@ class BillsController < ApplicationController
 
   # PUT /bills/1
   # PUT /bills/1.json
-  #def update
-    # @bill = Bill.find(params[:id])
-
-    # respond_to do |format|
-    #   if @bill.update_attributes(params[:bill])
-    #     format.html { redirect_to @bill, notice: 'Bill was successfully updated.' }
-    #     format.json { head :no_content }
-    #   else
-    #     format.html { render action: "edit" }
-    #     format.json { render json: @bill.errors, status: :unprocessable_entity }
-    #   end
-    # end
-  #end
+  def update
+    @bill = Bill.get(ENV['billit'] + "#{params[:id]}", 'application/json')
+    
+    !params[:tags].nil? ? @bill.tags = params[:tags] : @bill.tags = []
+    @bill.put(ENV['billit'] + "#{params[:id]}", 'application/json')
+    render text: params.to_s, status: 201
+  end
 
   # DELETE /bills/1
   # DELETE /bills/1.json
@@ -88,46 +82,5 @@ class BillsController < ApplicationController
     #   format.html { redirect_to bills_url }
     #   format.json { head :no_content }
     # end
-  end
-
-  def search
-    response = Net::HTTP.get_response(ENV['popit_url'], '/api/v0.1/persons/')
-    json_response = JSON.parse(response.body)
-    authors_detail_list = json_response['result']
-
-    @authors_list = []
-    @persons_query = []
-    authors_detail_list.map do |author|
-      @authors_list.push(author['name'])
-    end
-
-    if !params.nil? && params.length > 2 # default have 2 keys {'action'=>'search', 'controller'=>'bills'}
-      @keywords = String.new
-      params.each do |param|
-        if param[0] != 'utf8' && param[0] != 'commit' && param[0] != 'format'
-         @keywords << param[0] + '=' + param[1] + '&'
-        end
-      end
-      if params['authors'] != nil
-        @authors_list = []
-        authors_detail_list.map do |author|
-          if params['authors'] == author['name']
-            @persons_query.push(author)
-          end
-        end
-      end
-      @bills_query = BillCollectionPage.get(ENV['billit'] + "search/?#{URI.encode(@keywords)}", 'application/json')
-    end
-  end
-
-  def update
-    @bill = Bill.get(ENV['billit'] + "#{params[:id]}", 'application/json')
-    
-    !params[:tags].nil? ? @bill.tags = params[:tags] : @bill.tags = []
-    @bill.put(ENV['billit'] + "#{params[:id]}", 'application/json')
-    render text: params.to_s, status: 201
-  end
-
-  def glossary
   end
 end

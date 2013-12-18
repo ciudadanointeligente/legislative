@@ -1,32 +1,26 @@
 CabildoAbierto::Application.routes.draw do
 
-  get "parliamentarians/index"
-  get "communication/index"
-  get "disclosure/index"
-  get "main/index"
-  resources :tables
-
-  root :to => "main#index"
-  #root :to => "bills#index"
+  root :to => "mains#index"
   
-  get "bills/:id" => "bills#show"
   post "bills/:id/update" => "bills#update", method: :put
-  get "search" => "bills#search"
-  get "glossary" => "bills#glossary"
+  # get "search" => "bills#search" # TODO
 
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#login", :as => "log_in"
   post "auth" => "sessions#login"
-
   get "sign_up" => "users#new", :as => "sign_up"
 
-  get "disclosure" => "disclosure#index"
-  get "communication" => "communication#index"
-  get "parliamentarians" => "parliamentarian#index"
-  get "parliamentarian/view" => "parliamentarian#show"
-
-  resources :bills
-  resources :users
+  localized do
+    resources :bills
+    resources :communications
+    resources :disclosures
+    resources :glossaries
+    resources :mains
+    resources :parliamentarians
+    resources :tables
+    resources :users
+    resources :searchs
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

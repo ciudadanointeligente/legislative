@@ -2,81 +2,94 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 es:
+  routes:
+    bills: proyectos
+    communications: comunicaciones
+    disclosures: declaraciones
+    parliamentarians: parlamentarios
+    tables: tablas
+    users: usuarios
+    glossaries: glosarios
+    searchs: busquedas
+    new: nuevo
+    edit: editar
   layout:
-    home: "Principal"
-    search: "Búsqueda"
-    glossary: "Glosario"
-    communication: "Comunicación"
-    disclosure: "Declaraciones"
-    about_us: "Acerca de nosotros"
+    home: Principal
+    search: Búsqueda
+    glossary: Glosario
+    communication: Comunicación
+    disclosure: Declaraciones
+    parliamentarians: Parlamentarios
+    tables: Tablas
+    about_us: Acerca de nosotros
   main:
-    search_placeholder: "Ingresa tu búsqueda"
-    username: "Nombre de usuario"
-    password: "Contraseña"
-    stay-signed: "Mantenerme conectado"
-    login: "Ingresar"
-    registry: "Crear una cuenta"
-    forgot: "Olvidaste tu clave?"
-    latest-tables: "Últimas Tablas"
-    latest-bills: "Últimos Proyectos de ley"
-    view-more: "Ver más"
-    senator-highlights: "Senador destacado"
-    option-votes: "Opciones"
-    nro-votes: "Nro. votos"
-    yes: "Si"
-    no: "No"
-    abstentions: "Abstenciones"
+    search_placeholder: Ingresa tu búsqueda
+    username: Nombre de usuario
+    password: Contraseña
+    stay_signed: Mantenerme conectado
+    login: Ingresar
+    registry: Crear una cuenta
+    forgot: Olvidaste tu clave?
+    latest_tables: Últimas Tablas
+    latest_bills: Últimos Proyectos de ley
+    view_more: Ver más
+    senator_highlights: Senador destacado
+    option_votes: Opciones
+    nro_votes: Nro. votos
+    yes: Sí
+    no: No
+    abstentions: Abstenciones
   search:
-    search_title: "Búsqueda"
+    search_title: Búsqueda
     search_for: "Buscar por:"
-    search: "Buscar"
-    bill: "Proyecto de ley "
-    bills: "Proyectos de ley"
-    persons: "Autores"
+    search: Buscar
+    bill: Proyecto de ley 
+    bills: Proyectos de ley
+    persons: Autores
     current_urgency: "Urgencia actual:"
     bill_type: "Tipo de proyecto:"
-    download_as_excel: "Descargar como Excel"
-    all_the_types: "Todos los tipos"
-    all_the_stages: "Todas las etapas"
-    all_the_chambers: "Todas las cámaras"
-    all_the_urgencies: "Todas las urgencias"
-    quick: "Vista rápida"
-    placeholder_search_for: "Ingresa una palabra clave"
+    download_as_excel: Descargar como Excel
+    all_the_types: Todos los tipos
+    all_the_stages: Todas las etapas
+    all_the_chambers: Todas las cámaras
+    all_the_urgencies: Todas las urgencias
+    quick: Vista rápida
+    placeholder_search_for: Ingresa una palabra clave
     bulletin: "Boletín:"
-    placeholder_bulletin: "Ingresa nro de boletín"
+    placeholder_bulletin: Ingresa nro de boletín
     stage: "Etapa:"
     creation_date_min: "Fecha de ingreso (min):"
     creation_date_max: "Fecha de ingreso (max):"
     origin_chamber: "Cámara de origen:"
-    author: "Autor"
-    placeholder_author: "Ingresa el nombre de un autor"
+    author: Autor
+    placeholder_author: Ingresa el nombre de un autor
   bill:
-    bulletin: "Boletín"
-    title: "Título"
-    abstract: "Resumen"
-    tags: "Etiquetas"
-    stage: "Etapa"
-    creation_date: "Fecha de ingreso"
-    publish_date: "Fecha de publicación"
-    chamber: "Cámara"
-    initiative: "Iniciativa"
-    origin_chamber: "Cámara de origen"
-    current_urgency: "Urgencia actual"
-    sub_stage: "Sub etapa"
-    state: "Estado"
-    law: "Ley"
-    link_law: "Enlace a la ley"
-    merged: "Refundido"
-    matters: "Materias"
-    authors: "Autores"
-    events: "Eventos"
-    urgencies: "Urgencias"
-    reports: "Reportes"
-    modifications: "Comparados"
-    documents: "Documentos"
-    instructions: "Indicaciones"
-    observations: "Observaciones"
-    comments: "Comentarios"
+    bulletin: Boletín
+    title: Título
+    abstract: Resumen
+    tags: Etiquetas
+    stage: Etapa
+    creation_date: Fecha de ingreso
+    publish_date: Fecha de publicación
+    chamber: Cámara
+    initiative: Iniciativa
+    origin_chamber: Cámara de origen
+    current_urgency: Urgencia actual
+    sub_stage: Sub etapa
+    state: Estado
+    law: Ley
+    link_law: Enlace a la ley
+    merged: Refundido
+    matters: Materias
+    authors: Autores
+    events: Eventos
+    urgencies: Urgencias
+    reports: Reportes
+    modifications: Comparados
+    documents: Documentos
+    instructions: Indicaciones
+    observations: Observaciones
+    comments: Comentarios
   event:
     chamber: "Cámara:"
     created_at: "Fecha de creación:"
@@ -126,29 +139,29 @@ es:
     of: " de "
     with: " con "
     results: " resultados"
-    previous: "Anterior"
-    next: "Siguiente"
+    previous: Anterior
+    next: Siguiente
   export:
-    link_to_bill: "Enlace a boletín"
+    link_to_bill: Enlace a boletín
   users:
-    you_must_be_logged: "Debes estar registrado para acceder a esta sección"
-    welcome_back: "¡Bienvenido!"
-    logged_in: "¡Conectado!"
-    logged_out: "¡Sesión cerrada!"
-    invalid_email_or_password: "Correo electrónico o contraseña no válidos"
-    user_not_found: "Usuario no encontrado"
-    signed_up: "¡Registrado!"
-    you_cant_delete_yourself: "¡Usted no puede eliminar a si mismo!"
-    user_deleted: "Usuario eliminado"
-    user_updated: "Usuario actualizado"
-    log_in: "Iniciar sesión"
-    sign_up: "Registrarse"
-    log_out: "Cerrar sesión"
-    logged_as: "Autentificado como"
-    hello: "Bienvenido"
-    manage_users: "Gestión de usuarios"
-    show: "Mostrar"
-    edit: "Editar"
-    delete: "Eliminar"
-    user: "Usuario"
-    users: "Usuarios"
+    you_must_be_logged: Debes estar registrado para acceder a esta sección
+    welcome_back: ¡Bienvenido!
+    logged_in: ¡Conectado!
+    logged_out: ¡Sesión cerrada!
+    invalid_email_or_password: Correo electrónico o contraseña no válidos
+    user_not_found: Usuario no encontrado
+    signed_up: ¡Registrado!
+    you_cant_delete_yourself: ¡Usted no puede eliminar a si mismo!
+    user_deleted: Usuario eliminado
+    user_updated: Usuario actualizado
+    log_in: Iniciar sesión
+    sign_up: Registrarse
+    log_out: Cerrar sesión
+    logged_as: Autentificado como
+    hello: Bienvenido
+    manage_users: Gestión de usuarios
+    show: Mostrar
+    edit: Editar
+    delete: Eliminar
+    user: Usuario
+    users: Usuarios

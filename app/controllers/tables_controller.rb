@@ -3,7 +3,7 @@ require 'rest_client'
 
 class TablesController < ApplicationController
   before_action :set_table, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /tables
   def index
     # @tables = Table.all
@@ -14,7 +14,6 @@ class TablesController < ApplicationController
 
   # GET /tables/1
   def show
-
   end
 
   # GET /tables/new

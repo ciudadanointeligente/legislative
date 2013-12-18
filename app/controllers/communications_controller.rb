@@ -1,4 +1,5 @@
-class CommunicationController < ApplicationController
+class CommunicationsController < ApplicationController
+  # GET /communications
   def index
     @parliamentarians = PopitPersonCollection.new
     @parliamentarians.get ENV['popit_persons'], 'application/json'
