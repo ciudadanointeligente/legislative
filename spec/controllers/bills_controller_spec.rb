@@ -66,7 +66,6 @@ describe BillsController do
       assigns(:bill).merged.should eq(bill.merged)
       assigns(:bill).matters.should eq(bill.matters)
       assigns(:bill).authors.should eq(bill.authors)
-      assigns(:bill).events.should eq(bill.events)
       assigns(:bill).urgencies.should eq(bill.urgencies)
       assigns(:bill).reports.should eq(bill.reports)
       assigns(:bill).modifications.should eq(bill.modifications)
@@ -74,6 +73,44 @@ describe BillsController do
       assigns(:bill).instructions.should eq(bill.instructions)
       assigns(:bill).observations.should eq(bill.observations)
       assigns(:bill).links.should eq(bill.links)
+
+      controller_sessions = assigns(:bill).events.map {|event| event.session}
+      bill.events.each do |event| 
+        controller_sessions.include?(event.session).should be_true
+      end
+
+    end
+
+    it "returns @date_freq as an array of integers" do
+      raw_response_file = File.open("./spec/webmock/bills_6967_06.json")
+      stub_request(:get, "http://billit.ciudadanointeligente.org/bills/6967-06").
+        with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
+        to_return(:status => 200, :body => raw_response_file, :headers => {})
+
+      bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
+      # bill = Bill.create! valid_attributes
+      get :show, {:id => bill.uid}, valid_session
+      assigns(:date_freq).should be_an_instance_of Array
+      assigns(:date_freq).length.should be ENV['bill_graph_data_length'].to_i
+      assigns(:date_freq).each do |freq|
+        freq.should be_an Integer
+      end
+    end
+
+    it "assigns @date_freq values according to defined time intervals" do
+      raw_response_file = File.open("./spec/webmock/bills_6967_06.json")
+      stub_request(:get, "http://billit.ciudadanointeligente.org/bills/6967-06").
+        with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
+        to_return(:status => 200, :body => raw_response_file, :headers => {})
+
+      bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
+      Date.stub(:today) {Date.new(2013, 4)}
+      get :show, {:id => bill.uid}, valid_session
+      
+      assigns(:date_freq).should eq [0,0,0,0,0,5,0,0,1,1,0,4]
+    end
+
+    xit "define time lapse (weeks, months, years) in ENV" do
     end
   end
 
@@ -138,7 +175,7 @@ describe BillsController do
 
       get :search, q: "salud"
       assigns(:bills_query).self.should_not be_nil
-      assigns(:bills_query).self.should eq("http://billit.ciudadanointeligente.org/bills/search?&page=1&q=salud")
+      assigns(:bills_query).self.should eq("http://billit.ciudadanointeligente.org/bills/search.json?page=1&q=salud")
     end
 
     it "has a next page" do
@@ -153,7 +190,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
       get :search, q: "salud"
-      assigns(:bills_query).next.should eq("http://billit.ciudadanointeligente.org/bills/search?&page=2&q=salud")
+      assigns(:bills_query).next.should eq("http://billit.ciudadanointeligente.org/bills/search.json?page=2&q=salud")
     end
 
     it "has a previous page" do
@@ -168,7 +205,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
       get :search, q: "salud", page: 2
-      assigns(:bills_query).previous.should eq("http://billit.ciudadanointeligente.org/bills/search?&page=1&q=salud")
+      assigns(:bills_query).previous.should eq("http://billit.ciudadanointeligente.org/bills/search.json?page=1&q=salud")
     end
 
     it "has all metadata" do

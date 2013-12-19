@@ -12,19 +12,11 @@ $(document).ready(function(){
     selector: "[data-toggle=tooltip]",
     container: "tags-tooltip"
   });
+});
 
-
-
+function generateGraph(freq) {
   var data = {
     labels : [
-      "", "", "", "", "",
-      "", "", "", "", "",
-      "", "", "", "", "",
-      "", "", "", "", "",
-      "", "", "", "", "",
-      "", "", "", "", "",
-      "", "", "", "", "",
-      "", "", "", "", "",
       "", "", "", "", "",
       "", "", "", "", "",
       "", ""
@@ -33,17 +25,7 @@ $(document).ready(function(){
       {
         fillColor : "rgba(220,220,220,0.5)",
         strokeColor : "rgba(220,220,220,1)",
-        data : [2,0,0,0,1,
-            0,1,0,0,0,
-            0,1,2,0,0, 
-            2,0,0,0,1,
-            10,1,0,0,0,
-            0,10,2,0,0,
-            2,0,0,0,1,
-            0,1,0,0,0,
-            0,1,2,0,0, 
-            2,0,0,0,1,
-            5,1]
+        data : freq
       }
       ]
   }
@@ -57,7 +39,8 @@ $(document).ready(function(){
       pointDot : false
   }
 
-  var ctx = document.getElementById("myChart").getContext("2d");
-  var myNewChart = new Chart(ctx).Line(data, options);
-});
- 
+  if(document.getElementById("myChartInt")) {
+    var ctx = document.getElementById("myChartInt").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(data, options);
+  }
+}

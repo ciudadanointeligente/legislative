@@ -1,29 +1,35 @@
-- if !event['chamber'].blank?
-  %strong= t 'event.chamber'
-  = event['chamber']
-  %br/
-/ - if !event['created_at'].blank?
-/   %strong= t 'event.created_at'
-/   = DateTime.parse(event['created_at']).to_date.to_s
-/   %br/
-- if !event['date'].blank?
-  %strong= t 'event.date'
-  = DateTime.parse(event['date']).to_date.to_s
-  %br/
-- if !event['description'].blank?
-  %strong= t 'event.description'
-  = event['description']
-  %br/
-- if event['session'].match(/[a-z\d]+/)
-  %strong= t 'event.session'
-  = event['session']
-  %br/
-- if !event['stage'].blank?
-  %strong= t 'event.stage'
-  = event['stage']
-  %br/
-/ - if !event['updated_at'].blank?
-/   %strong= t 'event.updated_at'
-/   = event['updated_at']
-/   %br/
-%br/
+%table.table.table-striped.table-bordered
+  - if !event.chamber.blank?
+    %tr
+      %td{'style'=>'width:10%'}
+        %strong= t 'event.chamber'
+      %td
+        = event.chamber
+
+  - if !event.date.blank?
+    %tr
+      %td
+        %strong= t 'event.date'
+      %td
+        = DateTime.parse(event.date).to_date.to_s
+
+  - if !event.description.blank?
+    %tr
+      %td
+        %strong= t 'event.description'
+      %td
+        = event.description
+
+  - if event.session.match(/[a-z\d]+/)
+    %tr
+      %td
+        %strong= t 'event.session'
+      %td
+        = event.session
+
+  - if !event.stage.blank?
+    %tr
+      %td
+        %strong= t 'event.stage'
+      %td
+        = event.stage

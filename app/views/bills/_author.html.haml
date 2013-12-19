@@ -2,5 +2,6 @@
 - author_url[0] = I18n.transliterate(author_url[0]).downcase.gsub(' ','-')
 - author_url[1] = I18n.transliterate(author_url[1]).downcase.gsub(' ','-').concat('-')
 - url = @popit_url + author_url[1] + author_url[0]
-= link_to author, url
-%br/
+%ul
+  %li
+    = link_to author, url
