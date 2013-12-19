@@ -44,12 +44,9 @@ describe BillsController do
 
   describe "GET show" do
     it "assigns the requested bill as @bill" do
-      raw_response_file = File.open("./spec/webmock/bills_6967_06.json")
-      stub_request(:get, "http://billit.ciudadanointeligente.org/bills/6967-06").
-        with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-        to_return(:status => 200, :body => raw_response_file, :headers => {})
+      WebMock.disable_net_connect! allow: [ENV['billit'] + "6967-06"]
 
-      bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
+      bill = Bill.get(ENV['billit'] + "6967-06", 'application/json')
       # bill = Bill.create! valid_attributes
       get :show, {:id => bill.uid, :locale => 'es'}, valid_session
       assigns(:bill).uid.should eq(bill.uid)
