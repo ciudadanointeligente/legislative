@@ -91,6 +91,8 @@ Yes.
 Votainteligente Legislativo is made possible by the continued contributions and insights from kind-hearted developers everywhere. Just to name a few:
 
 * [@rezzo](https://github.com/rezzo)
+* [@jdgarrido](https://github.com/jdgarrido)
+* [@pdaire](https://github.com/pdaire)
 * [@maugsbur](https://github.com/maugsbur)
 
 This project is licensed under the GNU Affero General Public License (AGPL). For more information you can access to the [digital license edition here](http://www.gnu.org/licenses/agpl-3.0.html).

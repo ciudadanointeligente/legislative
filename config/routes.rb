@@ -3,7 +3,6 @@ CabildoAbierto::Application.routes.draw do
   root :to => "mains#index"
   
   post "bills/:id/update" => "bills#update", method: :put
-  # get "search" => "bills#search" # TODO
 
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#login", :as => "log_in"

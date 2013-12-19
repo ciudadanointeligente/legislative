@@ -24,10 +24,10 @@ development:
 
 test:
   root_url:   ~
-  billit:     ~
+  billit:     "http://127.0.0.1.xip.io:3003/bills/"
   popit_persons:  "http://localhost:3002/api/persons/"
   popit_url: "billit-demo.popit.mysociety.org"
-  tables:     ~
+  tables:     "http://pmo.apidone.com/tables"
   writeit:    ~
   scout:      ~
   analytics:  "UA-XXXXX-X"
