@@ -30,7 +30,7 @@ GIT
 PATH
   remote: /home/jgarrido/dev/FCI
   specs:
-    billit_representers (0.6.1)
+    billit_representers (0.6.2)
       activemodel
       roar
       roar-rails

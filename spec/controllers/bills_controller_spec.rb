@@ -175,7 +175,7 @@ describe BillsController do
 
       get :search, q: "salud"
       assigns(:bills_query).self.should_not be_nil
-      assigns(:bills_query).self.should eq("http://billit.ciudadanointeligente.org/bills/search.json?page=1&q=salud")
+      assigns(:bills_query).self.should eq("http://development.site.org/bills/search?&page=1&q=salud")
     end
 
     it "has a next page" do
@@ -190,7 +190,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
       get :search, q: "salud"
-      assigns(:bills_query).next.should eq("http://billit.ciudadanointeligente.org/bills/search.json?page=2&q=salud")
+      assigns(:bills_query).next.should eq("http://development.site.org/bills/search?&page=2&q=salud")
     end
 
     it "has a previous page" do
@@ -205,7 +205,7 @@ describe BillsController do
         to_return(:status => 200, :body => raw_response_file_authors, :headers => {})
 
       get :search, q: "salud", page: 2
-      assigns(:bills_query).previous.should eq("http://billit.ciudadanointeligente.org/bills/search.json?page=1&q=salud")
+      assigns(:bills_query).previous.should eq("http://development.site.org/bills/search?&page=1&q=salud")
     end
 
     it "has all metadata" do

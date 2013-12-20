@@ -67,39 +67,45 @@
                 = link_to(t('pagination.next'), url_for(action:'search') + '?' + get_params(@bills_query.next))
                 %i.fa.fa-chevron-right
 
-    %div.table-responsive
-      %table.table.table-striped
-        %thead
-          %tr
-            %th= t 'bill.bulletin'
-            %th= t 'bill.title'
-            %th= t 'bill.creation_date'
-            %th= t 'bill.state'
-            %th= t 'bill.chamber'
+    %div.row
+      %div.col-md-3
+        Filtros
+        = render :partial => "filter_search_form"
 
-        %tbody
-        - @bills = @bills_query.bills
-        - @bills.each do |bill|
-          %tr
-            %td= bill.uid
-            %td
-              = link_to bill.title, '/bills/' + bill.uid, :onclick => "ga('send','event','bill', '"+bill.uid+"')"
-              %a{"href" => "#", "data-toggle" => "modal", "data-target" => "#quickview-"+ bill.uid}
-                %i.fa.fa-eye{title: t('search.quick')}
-              %div.modal.fade{"id" => "quickview-"+ bill.uid, "tabindex" => "-1", "role" => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
-                %div.modal-dialog
-                  %div.modal-content
-                    %div.modal-header
-                      %button.close{"type" => "button", "data-dismiss" => "modal", "aria-hidden" => "true"}
-                        ×
-                      %h4.modal-title
-                        =bill.title
-                    %div.modal-body
-                      - @bill = bill
-                      = render :partial => "show"
-            %td= DateTime.parse(bill.creation_date).to_date.to_s
-            %td= bill.state
-            %td= bill.origin_chamber
+      %div.col-md-9
+        %div.table-responsive
+          %table.table.table-striped
+            %thead
+              %tr
+                %th= t 'bill.bulletin'
+                %th= t 'bill.title'
+                %th= t 'bill.creation_date'
+                %th= t 'bill.state'
+                %th= t 'bill.chamber'
+
+            %tbody
+            - @bills = @bills_query.bills
+            - @bills.each do |bill|
+              %tr
+                %td= bill.uid
+                %td
+                  = link_to bill.title, '/bills/' + bill.uid, :onclick => "ga('send','event','bill', '"+bill.uid+"')"
+                  %a{"href" => "#", "data-toggle" => "modal", "data-target" => "#quickview-"+ bill.uid}
+                    %i.fa.fa-eye{title: t('search.quick')}
+                  %div.modal.fade{"id" => "quickview-"+ bill.uid, "tabindex" => "-1", "role" => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
+                    %div.modal-dialog
+                      %div.modal-content
+                        %div.modal-header
+                          %button.close{"type" => "button", "data-dismiss" => "modal", "aria-hidden" => "true"}
+                            ×
+                          %h4.modal-title
+                            =bill.title
+                        %div.modal-body
+                          - @bill = bill
+                          = render :partial => "show"
+                %td= DateTime.parse(bill.creation_date).to_date.to_s
+                %td= bill.state
+                %td= bill.origin_chamber
 
     %div.row
       %div.col-md-4
