@@ -3,7 +3,7 @@
   var billuid = '#{@bill.uid}';
 
 %div.page-header
-  %h1=t '.title', :default => t('search.bill') + @bill.uid
+  %h1=t '.title', :default => t('search.bill') + ' ' + @bill.uid
 
 /= form_tag('/tags', :method => 'get') do
 /  = label_tag :q, "Tags"

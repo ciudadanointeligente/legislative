@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe MainController do
+describe DisclosuresController do
 
   describe "GET 'index'" do
-    xit "returns http success" do
-      get 'index'
+    it "returns http success" do
+      get 'index', locale: 'es'
       response.should be_success
     end
   end

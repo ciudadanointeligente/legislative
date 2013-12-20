@@ -4,7 +4,7 @@ describe BillsController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/bills").should route_to("bills#index")
+      get("/proyectos").should route_to("bills#index", :locale => 'es')
     end
 
     xit "routes to #new" do
@@ -12,7 +12,7 @@ describe BillsController do
     end
 
     it "routes to #show" do
-      get("/bills/1-07").should route_to("bills#show", :id => "1-07")
+      get("/proyectos/9007-03").should route_to("bills#show", :id => "9007-03", :locale => 'es')
     end
 
     xit "routes to #edit" do

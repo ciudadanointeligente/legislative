@@ -2,7 +2,7 @@
 
 set -e
 
-# this script will fetch a copy of the popit-api and start it running locally.
+# this script will fetch a copy of writeit and start it running locally.
 # Assumes that nodejs is installed, and that mongodb is running locally and allows
 # databases to be created without auth.
 #
@@ -13,7 +13,7 @@ set -e
 # testing on travis-ci.
 
 
-# just checkout the mysociety-deploy branch
+# just checkout the master branch
 # http://stackoverflow.com/a/7349740/5349
 export DIR=writeit_local_for_testing
 export BRANCH=master
