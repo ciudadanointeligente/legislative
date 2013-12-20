@@ -12,6 +12,34 @@ $(document).ready(function(){
     selector: "[data-toggle=tooltip]",
     container: "tags-tooltip"
   });
+
+  $('.green-votes-bar').mouseover(function(e){
+    $('span.positive').removeAttr('style','');
+    $('span.against').attr('style','background-color:#FFF; opacity:0.8;');
+    $('span.abstention').attr('style','background-color:#FFF; opacity:0.8;');
+  }).mouseout(function(){
+    $('span.against').removeAttr('style','');
+    $('span.abstention').removeAttr('style','');
+  });
+
+  $('.red-votes-bar').mouseover(function(e){
+    $('span.against').removeAttr('style','');
+    $('span.positive').attr('style','background-color:#FFF; opacity:0.8;');
+    $('span.abstention').attr('style','background-color:#FFF; opacity:0.8;');
+  }).mouseout(function(){
+    $('span.positive').removeAttr('style','');
+    $('span.abstention').removeAttr('style','');
+  });
+
+  $('.blue-votes-bar').mouseover(function(e){
+    $('span.abstention').removeAttr('style','');
+    $('span.against').attr('style','background-color:#FFF; opacity:0.8;');
+    $('span.positive').attr('style','background-color:#FFF; opacity:0.8;');
+  }).mouseout(function(){
+    $('span.positive').removeAttr('style','');
+    $('span.against').removeAttr('style','');
+  });
+
 });
 
 function generateGraph(freq) {

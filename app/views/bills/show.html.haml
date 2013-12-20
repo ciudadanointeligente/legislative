@@ -8,10 +8,7 @@
   }
 
 %div.page-header
-  %h1=t '.title', :default => t('search.bill') + @bill.uid
-
-
-
+  %h2=t '.title', :default => t('search.bill') + @bill.uid
 
 %ul.nav.nav-tabs
   %li.active
@@ -115,36 +112,36 @@
       %div.row
         %div.col-md-1
         %div.col-md-1
-          %div
+          %div.positive-vote
             %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador5.jpg', 'class' => 'img-circle chamber'}
             %a{'href' => '#'}
               %span{'class' => 'positive'}
-          %div
+          %div.abstention-vote
             %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador4.jpg', 'class' => 'img-circle chamber'}
             %span{'class' => 'abstention'}
-          %div
+          %div.against-vote
             %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador3.jpg', 'class' => 'img-circle chamber'}
             %span{'class' => 'against'}
-          %div
+          %div.positive-vote
             %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador2.jpg', 'class' => 'img-circle chamber'}
             %span{'class' => 'positive'}
-          %div
+          %div.against-vote
             %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador1.jpg', 'class' => 'img-circle chamber'}
             %span{'class' => 'against'}
         %div.col-md-1
-          %div.success
+          %div.against-vote
             %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador10.jpg', 'class' => 'img-circle chamber'}
             %span{'class' => 'against'}
-          %div
+          %div.against-vote
             %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador9.jpg', 'class' => 'img-circle chamber'}
             %span{'class' => 'against'}
-          %div
+          %div.against-vote
             %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador8.jpg', 'class' => 'img-circle chamber'}
             %span{'class' => 'against'}
-          %div
+          %div.positive-vote
             %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador7.jpg', 'class' => 'img-circle chamber'}
             %span{'class' => 'positive'}
-          %div
+          %div.against-vote
             %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador6.jpg', 'class' => 'img-circle chamber'}
             %span{'class' => 'against'}
         %div.col-md-1  
@@ -254,15 +251,15 @@
           %h4
             Votaciones
           %div.progress
-            %div.progress-bar.progress-bar-success{'style'=>'width: 51%'}
-              / %span.sr-only
-              51% Aprobado
-            %div.progress-bar.progress-bar-danger{'style'=>'width: 39%'}
-              / %span.sr-only
-              39% Rechazado
-            %div.progress-bar.progress-bar-info{'style'=>'width: 10%'}
-              / %span.sr-only
-              10% Abstención
+            %a{'href'=>'#', 'class'=>'green-votes-bar'}
+              %div.progress-bar.progress-bar-success{'style'=>'width: 51%'}
+                51% Aprobado
+            %a{'href'=>'#', 'class'=>'red-votes-bar'}
+              %div.progress-bar.progress-bar-danger{'style'=>'width: 39%'}
+                39% Rechazado
+            %a{'href'=>'#', 'class'=>'blue-votes-bar'}
+              %div.progress-bar.progress-bar-info{'style'=>'width: 10%'}
+                10% Abstención
 
 
   / eventos
@@ -306,19 +303,19 @@
 
 
 
-
-%div#disqus_thread 
-  %p= t 'bill.comments'
-
-:javascript
-  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = '#{ ENV['disqus_shortname'] }'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
+%div
+  %h3.page-header
+    Comentarios
+  %div#disqus_thread
+  :javascript
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '#{ ENV['disqus_shortname'] }'; // required: replace example with your forum shortname
+    var disqus_developer = '#{ ENV['disqus_devmode'] }';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 
 %script{'src'=>"http://www.chartjs.org/assets/Chart.js"}
