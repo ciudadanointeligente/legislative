@@ -30,6 +30,6 @@ class Bill
   end
 
   def web_url
-    ENV['root_url'] + 'bills/' + self.uid
+    ENV['root_url'] + 'proyectos/' + self.uid
   end
 end

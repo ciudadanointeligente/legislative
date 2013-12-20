@@ -30,7 +30,7 @@
             %input.form-control{:id => 'password', :type => 'password', :name=>"password"}
           %div.checkbox
             %label
-              %input{:type => 'checkbox', :checked=>'checked', :value=>'yes'}=t('main.stay-signed')
+              %input{:type => 'checkbox', :checked=>'checked', :value=>'yes'}=t('main.stay_signed')
           %ul.list-inline{:style => 'font-size:12px'}
             %li
               %a{:href => "#register", :"data-toggle" => "modal", :"data-target" => "#register"}=t('main.registry')
@@ -137,7 +137,7 @@
             %div.col-md-8
               %div.page-header
                 %h3
-                  =t('main.latest-tables')
+                  =t('main.latest_tables')
               %div.row
                 - @tables.tables.each do |table|
                   %div.col-md-6
@@ -151,11 +151,11 @@
                       = link_to bill, ENV['billit'] + bill
               %div
                 %p.text-right
-                  %a=t('main.view-more')
+                  %a=t('main.view_more')
             %div.col-md-4
               %div.page-header
                 %h3
-                  =t('main.senator-highlights')
+                  =t('main.senator_highlights')
               %div.hover.panel-senator
                 %div.front
                   %img.img-responsive{:src => 'http://placehold.it/100/100'}
@@ -168,8 +168,8 @@
                   %table.table.table-striped.table-condensed
                     %thead
                       %tr
-                        %th=t('main.option-votes')
-                        %th=t('main.nro-votes')
+                        %th=t('main.option_votes')
+                        %th=t('main.nro_votes')
                     %tbody
                       %tr
                         %td=t('main.yes')
@@ -209,7 +209,7 @@
     %section{:id => 'bills'}
       %div.page-header
         %h3
-          =t('main.latest-bills')
+          =t('main.latest_bills')
         %div.row
           - @bills.bills.each_with_index do |bill, cnt|
             - cnt = cnt+1
@@ -233,6 +233,6 @@
               = raw '</div><div class="row">'
       %div
         %p.text-right
-          %a=t('main.view-more')
+          %a=t('main.view_more')
 
     

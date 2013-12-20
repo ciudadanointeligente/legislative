@@ -2,81 +2,94 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  routes:
+    bills: bills
+    communications: communications
+    disclosures: disclosures
+    parliamentarians: parliamentarians
+    tables: tables
+    users: users
+    glossaries: glossaries
+    searchs: searchs
+    new: new
+    edit: edit
   layout:
-    home: "Home"
-    search: "Search"
-    glossary: "Glossary"
-    communication: "Communication"
-    disclosure: "Disclosure"
-    about_us: "About us"
+    home: Home
+    search: Search
+    glossary: Glossary
+    communication: Communication
+    disclosure: Disclosure
+    parliamentarians: Parliamentarians
+    tables: Tables
+    about_us: About us
   main:
-    search_placeholder: "Search"
-    username: "Username"
-    password: "Password"
-    stay-signed: "Stay signed in"
-    login: "Login"
-    registry: "Create an account"
-    forgot: "Forgot password?"
-    latest-tables: "Latest Tables"
-    latest-bills: "Latest Bills"
-    view-more: "View more"
-    senator-highlights: "Senator highlights"
-    option-votes: "Options"
-    nro-votes: "Nro. votes"
-    yes: "Yes"
-    no: "No"
-    abstentions: "Abstentions"
+    search_placeholder: Search
+    username: Username
+    password: Password
+    stay_signed: Stay signed in
+    login: Login
+    registry: Create an account
+    forgot: Forgot password?
+    latest_tables: Latest Tables
+    latest_bills: Latest Bills
+    view_more: View more
+    senator_highlights: Senator highlights
+    option_votes: Options
+    nro_votes: Nro. votes
+    yes: Yes
+    no: No
+    abstentions: Abstentions
   search:
-    search_title: "Search"
+    search_title: Search
     search_for: "Search for:"
-    search: "Search"
-    bill: "Bill"
-    bills: "Bills"
-    persons: "Authors"
+    search: Search
+    bill: Bill
+    bills: Bills
+    persons: Authors
     current_urgency: "Current urgency:"
     bill_type: "Bill type:"
-    download_as_excel: "Download as Excel"
-    all_the_types: "All the types"
-    all_the_stages: "All the Stages"
-    all_the_chambers: "All the Chambers"
-    all_the_urgencies: "All the Urgencies"
-    quick: "Quick view"
-    placeholder_search_for: "Input a keyword"
+    download_as_excel: Download as Excel
+    all_the_types: All the types
+    all_the_stages: All the stages
+    all_the_chambers: All the chambers
+    all_the_urgencies: All the urgencies
+    quick: Quick view
+    placeholder_search_for: Input a keyword
     bulletin: "Bulletin:"
-    placeholder_bulletin: "Input a bulletin number"
+    placeholder_bulletin: Input a bulletin number
     stage: "Stage:"
     creation_date_min: "Creation date (min):"
     creation_date_max: "Creation date (max):"
     origin_chamber: "Origin chamber:"
-    author: "Author"
-    placeholder_author: "Type an author's name"
+    author: Author
+    placeholder_author: Type an author's name
   bill:
-    bulletin: "Bulletin"
-    title: "Title"
-    abstract: "Abstract"
-    tags: "Tags"
-    stage: "Stage"
-    creation_date: "Creation date"
-    publish_date: "Publish date"
-    chamber: "Chamber"
-    initiative: "Initiative"
-    origin_chamber: "Origin chamber"
-    current_urgency: "Current urgency"
-    sub_stage: "Sub stage"
-    state: "State"
-    law: "Law"
-    link_law: "Link law"
-    merged: "Merged"
-    matters: "Matters"
-    authors: "Authors"
-    events: "Events"
-    urgencies: "Urgencies"
-    reports: "Reports"
-    modifications: "Modifications"
-    documents: "Documents"
-    instructions: "Instructions"
-    observations: "Observations"
-    comments: "Comments"
+    bulletin: Bulletin
+    title: Title
+    abstract: Abstract
+    tags: Tags
+    stage: Stage
+    creation_date: Creation date
+    publish_date: Publish date
+    chamber: Chamber
+    initiative: Initiative
+    origin_chamber: Origin chamber
+    current_urgency: Current urgency
+    sub_stage: Sub stage
+    state: State
+    law: Law
+    link_law: Link law
+    merged: Merged
+    matters: Matters
+    authors: Authors
+    events: Events
+    urgencies: Urgencies
+    reports: Reports
+    modifications: Modifications
+    documents: Documents
+    instructions: Instructions
+    observations: Observations
+    comments: Comments
   events:
     chamber: "Chamber:"
     created_at: "Created at:"
@@ -126,29 +139,29 @@ en:
     of: " of "
     with: " with "
     results: " results"
-    previous: "Previous"
-    next: "Next"
+    previous: Previous
+    next: Next
   export:
-    link_to_bill: "Link to bill"
+    link_to_bill: Link to bill
   users:
-    you_must_be_logged: "You must be logged in to access this section"
-    welcome_back: "Welcome back!"
-    logged_in: "Logged in!"
-    logged_out: "Logged out!"
-    invalid_email_or_password: "Invalid email or password"
-    user_not_found: "User not found"
-    signed_up: "Signed up!"
-    you_cant_delete_yourself: "You cant delete yourself!"
-    user_deleted: "User deleted"
-    user_updated: "User updated"
-    log_in: "Log in"
-    sign_up: "Sign up"
-    log_out: "Log out"
-    logged_as: "Logged as"
-    hello: "Hello"
-    manage_users: "Manage users"
-    show: "Show"
-    edit: "Edit"
-    delete: "Delete"
-    user: "User"
-    users: "Users"
+    you_must_be_logged: You must be logged in to access this section
+    welcome_back: Welcome back!
+    logged_in: Logged in!
+    logged_out: Logged out!
+    invalid_email_or_password: Invalid email or password
+    user_not_found: User not found
+    signed_up: Signed up!
+    you_cant_delete_yourself: You cant delete yourself!
+    user_deleted: User deleted
+    user_updated: User updated
+    log_in: Log in
+    sign_up: Sign up
+    log_out: Log out
+    logged_as: Logged as
+    hello: Hello
+    manage_users: Manage users
+    show: Show
+    edit: Edit
+    delete: Delete
+    user: User
+    users: Users

@@ -53,8 +53,13 @@ gem 'roar-rails', '0.1.4'
 gem 'faraday', '0.8.1'
 gem 'billit_representers', '~>0.6.0'
 gem 'popit_representers'
+
 # Support to XLS export
 gem 'ekuseru'
 
+# Internationalization - translating routes
+gem 'route_translator'
+
+# UI
 gem 'jquery-rails'
 gem 'jquery-ui-rails'

@@ -60,11 +60,11 @@
             -if @bills_query.previous
               %button.btn.btn-default
                 %i.fa.fa-chevron-left
-                = link_to(t('pagination.previous'), url_for(action:'search') + '?' + get_params(@bills_query.previous))
+                = link_to(t('pagination.previous'), url_for(action:'index') + '?' + get_params(@bills_query.previous))
           %div.col-md-6
             -if @bills_query.next
               %button.btn.btn-default
-                = link_to(t('pagination.next'), url_for(action:'search') + '?' + get_params(@bills_query.next))
+                = link_to(t('pagination.next'), url_for(action:'index') + '?' + get_params(@bills_query.next))
                 %i.fa.fa-chevron-right
 
     %div.table-responsive
@@ -83,7 +83,7 @@
           %tr
             %td= bill.uid
             %td
-              = link_to bill.title, '/bills/' + bill.uid, :onclick => "ga('send','event','bill', '"+bill.uid+"')"
+              = link_to bill.title, '/' + t('routes.bills') + '/' + bill.uid, :onclick => "ga('send','event','bill', '"+bill.uid+"')"
               %a{"href" => "#", "data-toggle" => "modal", "data-target" => "#quickview-"+ bill.uid}
                 %i.fa.fa-eye{title: t('search.quick')}
               %div.modal.fade{"id" => "quickview-"+ bill.uid, "tabindex" => "-1", "role" => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
@@ -114,10 +114,10 @@
           %div.col-md-6
             %button.btn.btn-default
               %i.fa.fa-chevron-left
-              = link_to(t('pagination.previous'), url_for(action:'search') + '?' + get_params(@bills_query.previous) + '#result')  if @bills_query.previous
+              = link_to(t('pagination.previous'), url_for(action:'index') + '?' + get_params(@bills_query.previous) + '#result')  if @bills_query.previous
           %div.col-md-6
             %button.btn.btn-default
-              = link_to(t('pagination.next'), url_for(action:'search') + '?' + get_params(@bills_query.next) + '#result')  if @bills_query.next
+              = link_to(t('pagination.next'), url_for(action:'index') + '?' + get_params(@bills_query.next) + '#result')  if @bills_query.next
               %i.fa.fa-chevron-right
 
 - if !@persons_query.empty?

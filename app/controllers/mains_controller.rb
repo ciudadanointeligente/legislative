@@ -1,4 +1,4 @@
-class MainController < ApplicationController
+class MainsController < ApplicationController
   def index
     @tables = TableCollection.new
     @tables.get(ENV['tables'],'application/json')

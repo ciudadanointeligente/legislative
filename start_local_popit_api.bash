@@ -10,7 +10,7 @@ set -e
 # $sudo yum install mongo mongodb npm nodejs
 #
 # This is not a robust way to run the api, it is intended for local dev and for
-# testing on travis.
+# testing on travis-ci.
 
 
 # just checkout the mysociety-deploy branch
@@ -45,7 +45,7 @@ fi
 
 
 # Run the server in the background. Send access logging to file.
-node server.js > access.log &
+node server.js > popit_access.log &
 
 # give it a chance to start and then print out the url to it
 sleep 2
