@@ -1,6 +1,6 @@
 require 'net/http'
 
-class SearchsController < ApplicationController
+class SearchesController < ApplicationController
   def index
     response = Net::HTTP.get_response(ENV['popit_url'], '/api/v0.1/persons/')
     json_response = JSON.parse(response.body)

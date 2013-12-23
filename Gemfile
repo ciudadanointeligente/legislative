@@ -51,7 +51,7 @@ end
 gem 'roar', '0.12.0'
 gem 'roar-rails', '0.1.4'
 gem 'faraday', '0.8.1'
-gem 'billit_representers', '~>0.6.1', path: '/home/jgarrido/dev/FCI'
+gem 'billit_representers', '~>0.6.2'
 gem 'popit_representers'
 
 # Support to XLS export

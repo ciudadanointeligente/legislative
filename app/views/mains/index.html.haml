@@ -1,7 +1,7 @@
 %style
 
 %div.jumbotron{:style => "font-size: 14px;"}
-  = form_tag('/search', :method => 'get', :class => "form-inline") do
+  = form_tag(t('routes.searches'), :method => 'get', :class => "form-inline") do
     %div.row
       %div.col-xs-10
         %input.form-control{:type => "text", :name => 'q', :placeholder => t("main.search_placeholder")}

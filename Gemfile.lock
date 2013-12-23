@@ -65,6 +65,10 @@ GEM
     arel (4.0.0)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
+    billit_representers (0.6.2)
+      activemodel
+      roar
+      roar-rails
     builder (3.1.4)
     coffee-script (2.2.0)
       coffee-script-source
@@ -217,7 +221,11 @@ DEPENDENCIES
   activerecord-deprecated_finders!
   arel
   bcrypt-ruby
+<<<<<<< HEAD
   billit_representers (~> 0.6.1)!
+=======
+  billit_representers (~> 0.6.2)
+>>>>>>> 32ca629d33e15fa7964e11f3199bcd6c6ad0f209
   coffee-rails!
   coveralls
   ekuseru

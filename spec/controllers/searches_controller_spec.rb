@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SearchsController do
+describe SearchesController do
   describe "GET index" do
     it "returns a BillCollectionPage" do
       raw_response_file = File.open("./spec/webmock/bills_salud_page1.json")
