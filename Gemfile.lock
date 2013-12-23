@@ -57,9 +57,10 @@ GEM
     arel (4.0.0)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
-    billit_representers (0.6.0)
+    billit_representers (0.6.2)
       activemodel
       roar
+      roar-rails
     builder (3.1.4)
     coffee-script (2.2.0)
       coffee-script-source
