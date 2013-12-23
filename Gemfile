@@ -63,3 +63,5 @@ gem 'route_translator'
 # UI
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+
+gem 'rake', '0.9.6'
