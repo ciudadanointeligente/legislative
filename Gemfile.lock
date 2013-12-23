@@ -1,14 +1,14 @@
 GIT
   remote: git://github.com/rails/activerecord-deprecated_finders.git
-  revision: 86b8d3babecc30f3f3c9a2d937e3e845555b254a
+  revision: b964343ca858de219392b6b30ca4fdf3145033ea
   specs:
     activerecord-deprecated_finders (1.0.3)
 
 GIT
   remote: git://github.com/rails/coffee-rails.git
-  revision: c812f4da1f5adc226ef834b57c2498467761cb2c
+  revision: 471ae515b57d484d494eba7e0a1f1016ebcc57e4
   specs:
-    coffee-rails (4.0.0)
+    coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
 
@@ -20,20 +20,12 @@ GIT
 
 GIT
   remote: git://github.com/rails/sass-rails.git
-  revision: 4c58b432a05de820870a28cc8fb1b491a69bb01d
+  revision: 52b24bab699adf382f9a2b1faff35613aedd3e4a
   specs:
-    sass-rails (4.0.0)
+    sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
-      sass (>= 3.1.10)
+      sass (>= 3.2.0)
       sprockets-rails (~> 2.0.0)
-
-PATH
-  remote: /home/jgarrido/dev/FCI
-  specs:
-    billit_representers (0.6.2)
-      activemodel
-      roar
-      roar-rails
 
 GEM
   remote: https://rubygems.org/
@@ -62,7 +54,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     addressable (2.3.5)
-    arel (4.0.0)
+    arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
     billit_representers (0.6.2)
@@ -83,6 +75,7 @@ GEM
     crack (0.4.1)
       safe_yaml (~> 0.9.0)
     diff-lcs (1.2.5)
+    docile (1.1.1)
     ekuseru (0.3.10)
       rails (>= 3.0)
       spreadsheet (>= 0.6)
@@ -95,27 +88,27 @@ GEM
       railties (>= 3.0.0)
     faraday (0.8.1)
       multipart-post (~> 1.1)
-    haml (4.0.3)
+    haml (4.0.4)
       tilt
-    haml-rails (0.4)
-      actionpack (>= 3.1, < 4.1)
-      activesupport (>= 3.1, < 4.1)
-      haml (>= 3.1, < 4.1)
-      railties (>= 3.1, < 4.1)
+    haml-rails (0.5.1)
+      actionpack (~> 4.0.0)
+      activesupport (~> 4.0.0)
+      haml (>= 3.1, < 5.0)
+      railties (~> 4.0.0)
     hike (1.2.3)
     hooks (0.3.3)
     i18n (0.6.9)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (4.1.0)
+    jquery-ui-rails (4.1.1)
       railties (>= 3.1.0)
-    json (1.8.0)
+    json (1.8.1)
     kgio (2.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.25)
+    mime-types (1.25.1)
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
@@ -145,7 +138,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     raindrops (0.12.0)
-    rake (10.1.0)
+    rake (10.1.1)
     representable (1.6.1)
       multi_json
       nokogiri
@@ -173,19 +166,20 @@ GEM
       rspec-mocks (~> 2.14.0)
     ruby-ole (1.2.11.7)
     safe_yaml (0.9.7)
-    sass (3.2.11)
-    simplecov (0.7.1)
-      multi_json (~> 1.0)
-      simplecov-html (~> 0.7.1)
-    simplecov-html (0.7.1)
-    spreadsheet (0.9.0)
+    sass (3.2.13)
+    simplecov (0.8.2)
+      docile (~> 1.1.0)
+      multi_json
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
+    spreadsheet (0.9.6)
       ruby-ole (>= 1.0)
-    sprockets (2.10.0)
+    sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.0.0)
+    sprockets-rails (2.0.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
@@ -198,7 +192,7 @@ GEM
     thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
-    tins (0.12.0)
+    tins (0.13.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -210,7 +204,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
-    webmock (1.15.2)
+    webmock (1.16.1)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
 
@@ -221,11 +215,7 @@ DEPENDENCIES
   activerecord-deprecated_finders!
   arel
   bcrypt-ruby
-<<<<<<< HEAD
-  billit_representers (~> 0.6.1)!
-=======
   billit_representers (~> 0.6.2)
->>>>>>> 32ca629d33e15fa7964e11f3199bcd6c6ad0f209
   coffee-rails!
   coveralls
   ekuseru
