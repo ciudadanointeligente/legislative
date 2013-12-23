@@ -229,6 +229,7 @@ DEPENDENCIES
   popit_representers
   protected_attributes
   rails (= 4.0.0)
+  rake (= 10.1.1)
   roar (= 0.12.0)
   roar-rails (= 0.1.4)
   route_translator
