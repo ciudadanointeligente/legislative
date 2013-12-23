@@ -10,7 +10,7 @@ es:
     tables: tablas
     users: usuarios
     glossaries: glosarios
-    searchs: busquedas
+    searches: busquedas
     new: nuevo
     edit: editar
   layout:

@@ -213,7 +213,7 @@ DEPENDENCIES
   activerecord-deprecated_finders!
   arel
   bcrypt-ruby
-  billit_representers (~> 0.6.0)
+  billit_representers (~> 0.6.2)
   coffee-rails!
   coveralls
   ekuseru
