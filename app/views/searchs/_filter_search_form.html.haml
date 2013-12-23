@@ -1,0 +1,30 @@
+%div.form-group
+  = label_tag :stage, t('search.stage')
+  %select{:name => "stage", :class => "form-control", :onfocus => "ga('send','event','focus_stage')"}
+    %option{:value => "", selected: params[:stage] == ""}= t 'search.all_the_stages'
+    - @stages = Bill.class_variable_get(:@@stage_valid_values)
+    - if @stages != nil
+      - @stages.each do |stage|
+        %option{:value => stage, selected: params[:stage] == stage}= stage
+%div.form-group
+  = label_tag :origin_chamber, t('search.bill_type')
+  %select{:name => "state", :class => "form-control", :onfocus => "ga('send','event','focus_type')"}
+    %option{:value => "", selected: params[:origin_chamber] == ""}= t 'search.all_the_types'
+    %option{:value => "Publicado", selected: params[:origin_chamber] == "Publicado"}= 'Ley'
+    %option{:value => "En tramitación", selected: params[:origin_chamber] == "En tramitación"}= 'Proyecto de ley'
+%div.form-group
+  = label_tag :origin_chamber, t('search.origin_chamber')
+  %select{:name => "origin_chamber", :class => "form-control", :onfocus => "ga('send','event','focus_chamber')"}
+    %option{:value => "", selected: params[:origin_chamber] == ""}= t 'search.all_the_chambers'
+    - @chambers = Bill.class_variable_get(:@@origin_chamber_valid_values)
+    - if @chambers != nil
+      - @chambers.each do |chamber|
+        %option{:value => chamber, selected: params[:origin_chamber] == chamber}= chamber
+%div.form-group
+  = label_tag :origin_chamber, t('search.current_urgency')
+  %select{:name => "current_urgency", :class => "form-control", :onfocus => "ga('send','event','focus_urgency')"}
+    %option{:value => "", selected: params[:current_urgency] == ""}= t 'search.all_the_urgencies'
+    - @urgencies = Bill.class_variable_get(:@@current_urgency_valid_values)
+    - if @urgencies != nil
+      - @urgencies.each do |urgency|
+        %option{:value => urgency, selected: params[:current_urgency] == urgency}= urgency

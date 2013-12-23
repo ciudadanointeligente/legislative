@@ -89,3 +89,23 @@ span.abstention {
   opacity: 0.3;
   border-radius: 25px;
 }
+span.ausent {
+  width: 55px;
+  background-color: #f0ad4e;
+  height: 55px;
+  z-index: 3;
+  display: block;
+  position: relative;
+  opacity: 0.3;
+  border-radius: 25px;
+}
+span.paring {
+  width: 55px;
+  background-color: #428bca;
+  height: 55px;
+  z-index: 3;
+  display: block;
+  position: relative;
+  opacity: 0.3;
+  border-radius: 25px;
+}
