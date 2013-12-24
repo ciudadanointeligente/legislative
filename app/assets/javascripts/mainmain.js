@@ -83,7 +83,7 @@ $(document).ready(function(){
 
 });
 
-function generateGraph(freq) {
+function generateGraph(freq,chartId) {
   var data = {
     labels : [
       "", "", "", "", "",
@@ -108,8 +108,8 @@ function generateGraph(freq) {
       pointDot : false
   }
 
-  if(document.getElementById("myChartInt")) {
-    var ctx = document.getElementById("myChartInt").getContext("2d");
-    var myNewChart = new Chart(ctx).Bar(data, options);
+  if(document.getElementById(chartId)) {
+    var ctx = document.getElementById(chartId).getContext("2d");
+    var myNewChart = new Chart(ctx).Line(data, options);
   }
 }
