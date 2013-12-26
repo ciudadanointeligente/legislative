@@ -1,6 +1,6 @@
 %div.row
   %div.col-md-6.col-md-offset-3
-    = form_tag(t('routes.searches'), :method => 'get') do
+    = form_tag({controller: "searches", action: "index"}, :method => 'get') do
       %div.input-group
         %span.input-group-addon
           %i.fa.fa-search
