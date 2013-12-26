@@ -1,119 +1,64 @@
-%div.page-header
-  %h2
-    Parlamentario
+%div.row
+  %div.col-md-3
+    %img.img-responsive{:src=>'http://placedog.com/300/300'}
+    
+  %div.col-md-9
+    %h2
+      Perico los Palotes
+    %h3
+      Diputado
+    %table.table.table-striped
+      %thead
+      %tbody
+        %tr
+          %td{:width=>'20%'}
+            Lugar que representa:
+          %td
+            Región Metropolitana
+        %tr
+          %td
+            Periodo:
+          %td
+            1980 - 2013
+        %tr
+          %td
+            Partido:
+          %td
+            Partido por la mitad
+        %tr
+          %td
+            Comisión:
+          %td
+            Regular
+        %tr
+          %td
+            Links:
+          %td
+            %ul
+              %li
+                %i.fa.fa-globe
+                Sitio web
+              %li
+                %i.fa.fa-facebook
+                Facebook
+              %li
+                %i.fa.fa-twitter
+                Twitter
 
-%section#parliamentarian-bio
-  %div.row
-    %div.col-md-3
-      %img.img-responsive{:src=>'http://placehold.it/200x300'}
-    %div.col-md-9
-      %h3
-        Isabel Allende Bussi
-      %h4
-        Senadora
-      %div
-        %table.table
-          %thead
-            %tr
-              %th{:colspan=>'2'}
-                Datos
-          %tbody
-            %tr
-              %td
-                %strong
-                  Partido
-              %td
-                P.S.
-            %tr
-              %td
-                %strong
-                  Teléfono
-              %td
-                (56-32) 2504671
-            %tr
-              %td
-                %strong
-                  Email
-              %td
-                iallende@senado.cl
-            %tr
-              %td
-                %strong
-                  Comunas
-              %td
-                Chañaral, Copiapó, Diego de Almagro, Alto del Carmen, Caldera, Huasco, Freirina, Tierra Amarilla, Vallenar
-
-  %div
-    %ul.nav.nav-tabs
-      %li.active
-        %a{:href=>"#mociones", :'data-toggle'=>"tab"}
-          Mociones
-      %li
-        %a{:href=>"#proyectos", :'data-toggle'=>"tab"}
-          Proyectos de Acuerdo
-      %li
-        %a{:href=>"#oficios", :'data-toggle'=>"tab"}
-          Oficios incidentes
-      %li
-        %a{:href=>"#intervenciones", :'data-toggle'=>"tab"}
-          Intervenciones
-      %li
-        %a{:href=>"#comisiones", :'data-toggle'=>"tab"}
-          Comisiones
-
-  %div.tab-content
-    %div.tab-pane.active#mociones
-      %table.table.table-striped
-        %thead
-          %tr
-            %th
-              Nro Boletín
-            %th
-              Fecha
-            %th
-              Sumario
-            %th
-              Estado
-        %tbody
-          %tr
-            %td
-              9180-13
-            %td
-              04/12/2013
-            %td
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolor officia facilis numquam minima natus blanditiis saepe cum pariatur repudiandae sit dicta illum voluptatum expedita odit temporibus laudantium eaque laborum!
-            %td
-              En tramitación
-          %tr
-            %td
-              9180-13
-            %td
-              04/12/2013
-            %td
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolor officia facilis numquam minima natus blanditiis saepe cum pariatur repudiandae sit dicta illum voluptatum expedita odit temporibus laudantium eaque laborum!
-            %td
-              En tramitación
-    %div.tab-pane#proyectos
-      %table.table.table-striped
-        %thead
-          %tr
-            %th
-              Nro Boletín
-            %th
-              Fecha
-            %th
-              Sumario
-            %th
-              Estado
-        %tbody
-          %tr
-            %td
-              9180-13
-            %td
-              04/12/2013
-            %td
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolor officia facilis numquam minima natus blanditiis saepe cum pariatur repudiandae sit dicta illum voluptatum expedita odit temporibus laudantium eaque laborum!
-            %td
-              En tramitación
-
-
+%div.row
+  %div.col-md-3
+    %div{:style=>'border:1px solid #ccc; padding:10px; margin-top:20px;'}
+      %ul{:style=>'list-style:none;'}
+        %li
+          %i.fa.fa-bell
+          Suscríbete
+        %li
+          %i.fa.fa-envelope
+          Escríbele
+  %div.col-md-9  
+    %div{:style=>'border:1px solid #ccc; padding:10px; margin-top:20px;'}
+      %blockquote
+        %p
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec. 
+          %small.text-right
+            Ha respondido 6 de las 28 preguntas.        
