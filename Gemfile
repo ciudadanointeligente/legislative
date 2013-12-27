@@ -7,7 +7,6 @@ gem 'journey', :git => 'git://github.com/rails/journey.git'
 gem 'arel'
 gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerecord-deprecated_finders.git'
 
-
 # ORM
 #gem 'pg', :group => :production
 
@@ -57,11 +56,10 @@ gem 'popit_representers'
 # Support to XLS export
 gem 'ekuseru'
 
-# Internationalization - translating routes
-gem 'route_translator'
-
 # UI
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
+gem 'coveralls', require: false
 gem 'rake', '10.1.1'
+gem 'route_translator'
