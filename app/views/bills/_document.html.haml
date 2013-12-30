@@ -10,9 +10,9 @@
   %strong= t 'document.date'
   = DateTime.parse(document['date']).to_date.to_s 
   %br/
-- if !document['event'].blank?
-  %strong= t 'document.event'
-  = document['event']
+- if !document['paperwork'].blank?
+  %strong= t 'document.paperwork'
+  = document['paperwork']
   %br/
 - if !document['number'].blank?
   %strong= t 'document.number'
