@@ -15,14 +15,14 @@
       %th= t 'bill.creation_date'
       %td= DateTime.parse(@bill.creation_date).to_date.to_s
     %tr
-      %th= t 'bill.initiative'
-      %td= @bill.initiative
+      %th= t 'bill.source'
+      %td= @bill.source
     %tr
-      %th= t 'bill.origin_chamber'
-      %td= @bill.origin_chamber
+      %th= t 'bill.initial_chamber'
+      %td= @bill.initial_chamber
     %tr
-      %th= t 'bill.current_urgency'
-      %td= @bill.current_urgency
+      %th= t 'bill.current_priority'
+      %td= @bill.current_priority
     %tr
       %th= t 'bill.stage'
       %td= @bill.stage
@@ -31,17 +31,17 @@
         %th= t 'bill.sub_stage'
         %td= @bill.sub_stage
     %tr
-      %th= t 'bill.state'
-      %td= @bill.state
-    - if !@bill.law.blank?
+      %th= t 'bill.status'
+      %td= @bill.status
+    - if !@bill.resulting_document.blank?
       %tr
-        %th= t 'bill.law'
-        %td= @bill.law
-    - if !@bill.link_law.blank?
+        %th= t 'bill.resulting_document'
+        %td= @bill.resulting_document
+    - if !@bill.law_link.blank?
       %tr
-        %th= t 'bill.link_law'
-        %td= link_to @bill.link_law, @bill.link_law
-    - if @bill.merged != '[]'
+        %th= t 'bill.law_link'
+        %td= link_to @bill.law_link, @bill.law_link
+    - if @bill.merged_bills != '[]'
       %tr
-        %th= t 'bill.merged'
-        %td= @bill.merged
+        %th= t 'bill.merged_bills'
+        %td= @bill.merged_bills

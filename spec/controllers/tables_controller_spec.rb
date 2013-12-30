@@ -40,7 +40,7 @@ describe TablesController do
       get :index, locale: 'es'
       assigns(:tables).should be_an_instance_of(TableCollection)
       assigns(:tables).tables.length.should equal(2)
-      assigns(:tables).tables[0].origin_chamber.should eq('Senadores') # FIX we need to discuss about how to test the values in the response
+      assigns(:tables).tables[0].initial_chamber.should eq('Senadores') # FIX we need to discuss about how to test the values in the response
     end
   end
 

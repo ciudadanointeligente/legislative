@@ -48,10 +48,10 @@ group :assets do
 end
 
 # POPLUS integration
-gem 'roar', '0.12.0'
-gem 'roar-rails', '0.1.4'
+gem 'roar', '0.11.19'
+gem 'roar-rails', '0.1.0'
 gem 'faraday', '0.8.1'
-gem 'billit_representers', '~>0.6.2'
+gem 'billit_representers', '~>0.7.0'
 gem 'popit_representers'
 
 # Support to XLS export

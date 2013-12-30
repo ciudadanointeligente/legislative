@@ -52,28 +52,28 @@ describe BillsController do
       assigns(:bill).uid.should eq(bill.uid)
       assigns(:bill).title.should eq(bill.title)
       assigns(:bill).creation_date.should eq(bill.creation_date)
-      assigns(:bill).initiative.should eq(bill.initiative)
-      assigns(:bill).origin_chamber.should eq(bill.origin_chamber)
-      assigns(:bill).current_urgency.should eq(bill.current_urgency)
+      assigns(:bill).source.should eq(bill.source)
+      assigns(:bill).initial_chamber.should eq(bill.initial_chamber)
+      assigns(:bill).current_priority.should eq(bill.current_priority)
       assigns(:bill).stage.should eq(bill.stage)
       assigns(:bill).sub_stage.should eq(bill.sub_stage)
-      assigns(:bill).state.should eq(bill.state)
-      assigns(:bill).law.should eq(bill.law)
-      assigns(:bill).link_law.should eq(bill.link_law)
-      assigns(:bill).merged.should eq(bill.merged)
-      assigns(:bill).matters.should eq(bill.matters)
+      assigns(:bill).status.should eq(bill.status)
+      assigns(:bill).resulting_document.should eq(bill.resulting_document)
+      assigns(:bill).law_link.should eq(bill.law_link)
+      assigns(:bill).merged_bills.should eq(bill.merged_bills)
+      assigns(:bill).subject_areas.should eq(bill.subject_areas)
       assigns(:bill).authors.should eq(bill.authors)
-      assigns(:bill).urgencies.should eq(bill.urgencies)
+      assigns(:bill).priorities.should eq(bill.priorities)
       assigns(:bill).reports.should eq(bill.reports)
-      assigns(:bill).modifications.should eq(bill.modifications)
+      assigns(:bill).revisions.should eq(bill.revisions)
       assigns(:bill).documents.should eq(bill.documents)
-      assigns(:bill).instructions.should eq(bill.instructions)
-      assigns(:bill).observations.should eq(bill.observations)
+      assigns(:bill).directives.should eq(bill.directives)
+      assigns(:bill).remarks.should eq(bill.remarks)
       assigns(:bill).links.should eq(bill.links)
 
-      controller_sessions = assigns(:bill).events.map {|event| event.session}
-      bill.events.each do |event| 
-        controller_sessions.include?(event.session).should be_true
+      controller_sessions = assigns(:bill).paperworks.map {|paperwork| paperwork.session}
+      bill.paperworks.each do |paperwork| 
+        controller_sessions.include?(paperwork.session).should be_true
       end
 
     end

@@ -23,6 +23,7 @@ writeit_local_for_testing
 /log/*.log
 /tmp
 .DS_Store
+/vendor/gems
 
 /log/*
 /tmp/*

@@ -46,13 +46,13 @@ es:
     bill: Proyecto de ley 
     bills: Proyectos de ley
     persons: Autores
-    current_urgency: "Urgencia actual:"
+    current_priority: "Urgencia actual:"
     bill_type: "Tipo de proyecto:"
     download_as_excel: Descargar como Excel
     all_the_types: Todos los tipos
     all_the_stages: Todas las etapas
     all_the_chambers: Todas las cámaras
-    all_the_urgencies: Todas las urgencias
+    all_the_priorities: Todas las urgencias
     quick: Vista rápida
     placeholder_search_for: Ingresa una palabra clave
     bulletin: "Boletín:"
@@ -60,7 +60,7 @@ es:
     stage: "Etapa:"
     creation_date_min: "Fecha de ingreso (min):"
     creation_date_max: "Fecha de ingreso (max):"
-    origin_chamber: "Cámara de origen:"
+    initial_chamber: "Cámara de origen:"
     author: Autor
     placeholder_author: Ingresa el nombre de un autor
   bill:
@@ -72,25 +72,25 @@ es:
     creation_date: Fecha de ingreso
     publish_date: Fecha de publicación
     chamber: Cámara
-    initiative: Iniciativa
-    origin_chamber: Cámara de origen
-    current_urgency: Urgencia actual
+    source: Iniciativa
+    initial_chamber: Cámara de origen
+    current_priority: Urgencia actual
     sub_stage: Sub etapa
-    state: Estado
-    law: Ley
-    link_law: Enlace a la ley
-    merged: Refundido
-    matters: Materias
+    status: Estado
+    resulting_document: Ley
+    law_link: Enlace a la ley
+    merged_bills: Refundido
+    subject_areas: Materias
     authors: Autores
-    events: Eventos
-    urgencies: Urgencias
+    paperworks: Eventos
+    priorities: Urgencias
     reports: Reportes
-    modifications: Comparados
+    revisions: Comparados
     documents: Documentos
-    instructions: Indicaciones
-    observations: Observaciones
+    directives: Indicaciones
+    remarks: Observaciones
     comments: Comentarios
-  event:
+  paperwork:
     chamber: "Cámara:"
     created_at: "Fecha de creación:"
     date: "Fecha:"
@@ -98,7 +98,7 @@ es:
     session: "Sesión:"
     stage: "Etapa:"
     updated_at: "Última actualización:"
-  urgencie:
+  priority:
     created_at: "Fecha de creación:"
     entry_chamber: "Cámara de ingreso:"
     entry_date: "Fecha de ingreso:"
@@ -114,23 +114,23 @@ es:
     stage: "Etapa:"
     step: "Trámite:"
     updated_at: "Última actualización:"
-  modification:
+  revision:
     description: "Descripción:"
-    modification: "Comparado:"
+    revision: "Comparado:"
   document:
     chamber: "Cámara:"
     created_at: "Fecha de creación:"
     date: "Fecha:"
-    event: "Evento:"
+    paperwork: "Evento:"
     number: "Número:"
     stage: "Etapa:"
     step: "Trámite:"
     type: "Tipo:"
     updated_at: "Última actualización:"
-  instruction:
+  directive:
     created_at: "Fecha de creación:"
     date: "Fecha:"
-    event: "Evento:"
+    paperwork: "Evento:"
     stage: "Etapa:"
     step: "Trámite:"
     updated_at: "Última actualización:"
