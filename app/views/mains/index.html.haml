@@ -141,7 +141,7 @@
               %div.row
                 - @tables.tables.each do |table|
                   %div.col-md-6
-                    %h4= table.origin_chamber
+                    %h4= table.initial_chamber
                     - creation_date = DateTime.parse(table.creation_date).to_date
                     %p= creation_date.strftime("%A %d de %B, %Y")
                     %p= "Legislatura: " + table.legislature
@@ -218,10 +218,10 @@
                 = bill.title
               %p
                 %strong= "Cámara: "
-                = bill.origin_chamber
+                = bill.initial_chamber
               %p
                 %strong= "Urgencia: " 
-                = bill.current_urgency
+                = bill.current_priority
               %p
                 %strong= "Etapa: " 
                 =bill.stage

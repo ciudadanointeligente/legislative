@@ -46,13 +46,13 @@ en:
     bill: Bill
     bills: Bills
     persons: Authors
-    current_urgency: "Current urgency:"
+    current_priority: "Current priority:"
     bill_type: "Bill type:"
     download_as_excel: Download as Excel
     all_the_types: All the types
     all_the_stages: All the stages
     all_the_chambers: All the chambers
-    all_the_urgencies: All the urgencies
+    all_the_priorities: All the priorities
     quick: Quick view
     placeholder_search_for: Input a keyword
     bulletin: "Bulletin:"
@@ -60,7 +60,7 @@ en:
     stage: "Stage:"
     creation_date_min: "Creation date (min):"
     creation_date_max: "Creation date (max):"
-    origin_chamber: "Origin chamber:"
+    initial_chamber: "Initial chamber:"
     author: Author
     placeholder_author: Type an author's name
   bill:
@@ -72,25 +72,25 @@ en:
     creation_date: Creation date
     publish_date: Publish date
     chamber: Chamber
-    initiative: Initiative
-    origin_chamber: Origin chamber
-    current_urgency: Current urgency
+    source: Source
+    initial_chamber: Initial chamber
+    current_priority: Current priority
     sub_stage: Sub stage
-    state: State
-    law: Law
-    link_law: Link law
-    merged: Merged
-    matters: Matters
+    status: Status
+    resulting_document: Resulting document
+    law_link: Law link
+    merged_bills: Merged bills
+    subject_areas: Subject areas
     authors: Authors
-    events: Events
-    urgencies: Urgencies
+    paperworks: Paperworks
+    priorities: priorities
     reports: Reports
-    modifications: Modifications
+    revisions: Revisions
     documents: Documents
-    instructions: Instructions
-    observations: Observations
+    directives: Directives
+    remarks: Remarks
     comments: Comments
-  events:
+  paperworks:
     chamber: "Chamber:"
     created_at: "Created at:"
     date: "Date:"
@@ -98,7 +98,7 @@ en:
     session: "Session:"
     stage: "Stage:"
     updated_at: "Updated at:"
-  urgencie:
+  priority:
     created_at: "Created at:"
     entry_chamber: "Entry chamber:"
     entry_date: "Entry date:"
@@ -114,23 +114,23 @@ en:
     stage: "Stage:"
     step: "Step:"
     updated_at: "Updated at:"
-  modification:
+  revision:
     description: "Description:"
-    modification: "Modification:"
+    revision: "Revision:"
   document:
     chamber: "Chamber:"
     created_at: "Created at:"
     date: "Date:"
-    event: "Event:"
+    paperwork: "Paperwork:"
     number: "Number:"
     stage: "Stage:"
     step: "Step:"
     type: "Type:"
     updated_at: "Updated at:"
-  instruction:
+  directive:
     created_at: "Created at:"
     date: "Date:"
-    event: "Event:"
+    paperwork: "Paperwork:"
     stage: "Stage:"
     step: "Step:"
     updated_at: "Updated at:"

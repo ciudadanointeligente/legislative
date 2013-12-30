@@ -54,14 +54,14 @@
             %th= t 'bill.creation_date'
             %td= DateTime.parse(@bill.creation_date).to_date.to_s
           %tr
-            %th= t 'bill.initiative'
-            %td= @bill.initiative
+            %th= t 'bill.source'
+            %td= @bill.source
           %tr
-            %th= t 'bill.origin_chamber'
-            %td= @bill.origin_chamber
+            %th= t 'bill.initial_chamber'
+            %td= @bill.initial_chamber
           %tr
-            %th= t 'bill.current_urgency'
-            %td= @bill.current_urgency
+            %th= t 'bill.current_priority'
+            %td= @bill.current_priority
           %tr
             %th= t 'bill.stage'
             %td= @bill.stage
@@ -70,33 +70,33 @@
               %th= t 'bill.sub_stage'
               %td= @bill.sub_stage
           %tr
-            %th= t 'bill.state'
-            %td= @bill.state
-          - if !@bill.law.blank?
+            %th= t 'bill.status'
+            %td= @bill.status
+          - if !@bill.resulting_document.blank?
             %tr
-              %th= t 'bill.law'
-              %td= @bill.law
-          - if !@bill.link_law.blank?
+              %th= t 'bill.resulting_document'
+              %td= @bill.resulting_document
+          - if !@bill.law_link.blank?
             %tr
-              %th= t 'bill.link_law'
-              %td= link_to @bill.link_law, @bill.link_law
-          - if @bill.merged != '[]'
+              %th= t 'bill.law_link'
+              %td= link_to @bill.law_link, @bill.law_link
+          - if @bill.merged_bills != '[]'
             %tr
-              %th= t 'bill.merged'
-              %td= @bill.merged
+              %th= t 'bill.merged_bills'
+              %td= @bill.merged_bills
           %tr
-            %th= t 'bill.matters'
-            - @matters = @bill.matters
-            %td= render partial: "matter", collection: @matters
+            %th= t 'bill.subject_areas'
+            - @subject_areas = @bill.subject_areas
+            %td= render partial: "matter", collection: @subject_areas
           - if !@bill.authors.blank?
             %tr
               %th= t 'bill.authors'
               - @authors = @bill.authors
               %td= render partial: "author", collection: @authors
-          - if !@bill.observations.blank?
+          - if !@bill.remarks.blank?
             %tr
-              %th= t 'bill.observations'
-              %td= @bill.observations
+              %th= t 'bill.remarks'
+              %td= @bill.remarks
           - if !@bill.tags.blank?
             %tr
               %th
@@ -437,14 +437,14 @@
 
   / eventos
   %div.tab-pane#tab02
-    - if !@bill.events.blank?
-      - @events = @bill.events
-      =render partial: "event", collection: @events
+    - if !@bill.paperworks.blank?
+      - @paperworks = @bill.paperworks
+      =render partial: "paperwork", collection: @paperworks
   / urgencias
   %div.tab-pane#tab03
-    - if !@bill.urgencies.blank?
-      - @urgencies = @bill.urgencies
-      = render partial: "urgencie", collection: @urgencies
+    - if !@bill.priorities.blank?
+      - @priorities = @bill.priorities
+      = render partial: "priority", collection: @priorities
   / reportes
   %div.tab-pane#tab04
     %table.table
@@ -455,10 +455,10 @@
   / modificaciones
   %div.tab-pane#tab05
     %table.table
-      - if !@bill.modifications.blank?
+      - if !@bill.revisions.blank?
         %tr
-          - @modifications = @bill.modifications
-          %td= render partial: "modification", collection: @modifications
+          - @revisions = @bill.revisions
+          %td= render partial: "revision", collection: @revisions
   / documentos
   %div.tab-pane#tab06
     %table.table
@@ -469,10 +469,10 @@
   / indicaciones
   %div.tab-pane#tab07
     %table.table
-      - if !@bill.instructions.blank?
+      - if !@bill.directives.blank?
         %tr
-          - @instructions = @bill.instructions
-          %td= render partial: "instruction", collection: @instructions
+          - @directives = @bill.directives
+          %td= render partial: "directive", collection: @directives
 
 
 

@@ -19,9 +19,9 @@ class BillsController < ApplicationController
     @bill = Bill.get(ENV['billit'] + "#{params[:id]}", 'application/json')
     @popit_url = 'http://' + ENV['popit_url'] + '/persons/'
 
-    # eventos
+    # paperworks
     @date_freq = Array.new
-    bill_range_dates = @bill.events.map {|event| Date.strptime(event.date, "%Y-%m-%d")}
+    bill_range_dates = @bill.paperworks.map {|paperwork| Date.strptime(paperwork.date, "%Y-%m-%d")}
 
     top_date = Date.today
     bottom_date = top_date - ENV['bill_graph_day_interval'].to_i.days
