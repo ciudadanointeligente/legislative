@@ -132,6 +132,9 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.0)
       sprockets-rails (~> 2.0.0)
+    rails-i18n (4.0.1)
+      i18n (~> 0.6)
+      rails (~> 4.0)
     railties (4.0.0)
       actionpack (= 4.0.0)
       activesupport (= 4.0.0)
@@ -230,6 +233,7 @@ DEPENDENCIES
   popit_representers
   protected_attributes
   rails (= 4.0.0)
+  rails-i18n (~> 4.0.0)
   rake (= 10.1.1)
   roar (= 0.11.19)
   roar-rails (= 0.1.0)

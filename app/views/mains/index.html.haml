@@ -142,8 +142,7 @@
                 - @tables.tables.each do |table|
                   %div.col-md-6
                     %h4= table.initial_chamber
-                    - creation_date = DateTime.parse(table.creation_date).to_date
-                    %p= creation_date.strftime("%A %d de %B, %Y")
+                    %p= localize table.creation_date.to_date, :format => :long
                     %p= "Legislatura: " + table.legislature
                     %p= "Sesión nro: " + table.session
                     %p= "Proyecto(s) de ley: "
@@ -227,8 +226,7 @@
                 =bill.stage
               %p
                 %strong="Fecha creación"
-                - creation_date = DateTime.parse(bill.creation_date).to_date
-                = creation_date.strftime("%A %d de %B, %Y")
+                = localize bill.creation_date.to_date, :format => :long
             - if cnt % 3 == 0
               = raw '</div><div class="row">'
       %div

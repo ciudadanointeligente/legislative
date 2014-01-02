@@ -89,7 +89,7 @@
               %tr
                 %td= bill.uid
                 %td
-                  = link_to bill.title, '/bills/' + bill.uid, :onclick => "ga('send','paperwork','bill', '"+bill.uid+"')"
+                  = link_to bill.title, t('routes.bills') + '/' + bill.uid, :onclick => "ga('send','paperwork','bill', '"+bill.uid+"')"
                   %a{"href" => "#", "data-toggle" => "modal", "data-target" => "#quickview-"+ bill.uid}
                     %i.fa.fa-eye{title: t('search.quick')}
                   %div.modal.fade{"id" => "quickview-"+ bill.uid, "tabindex" => "-1", "role" => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
@@ -103,7 +103,7 @@
                         %div.modal-body
                           - @bill = bill
                           = render :partial => "show"
-                %td= DateTime.parse(bill.creation_date).to_date.to_s
+                %td= localize bill.creation_date.to_date, :format => :default
                 %td= bill.status
                 %td= bill.initial_chamber
 

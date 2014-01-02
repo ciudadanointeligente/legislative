@@ -62,4 +62,5 @@ gem 'jquery-ui-rails'
 
 gem 'coveralls', require: false
 gem 'rake', '10.1.1'
+gem 'rails-i18n', '~> 4.0.0'
 gem 'route_translator'
