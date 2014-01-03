@@ -7,6 +7,6 @@
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
 
 User.create(:username => 'administrator',
-						:password => '09301982',
-						:password_confirmation => '09301982',
+						:password => 'benito',
+						:password_confirmation => 'benito',
 						:email	=> 'admin@ciudadanointeligente.org')
