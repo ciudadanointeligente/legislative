@@ -57,10 +57,10 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
-    billit_representers (0.6.2)
+    billit_representers (0.7.0)
       activemodel
-      roar
-      roar-rails
+      roar (= 0.11.19)
+      roar-rails (= 0.1.0)
     builder (3.1.4)
     coffee-script (2.2.0)
       coffee-script-source
@@ -132,6 +132,9 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.0)
       sprockets-rails (~> 2.0.0)
+    rails-i18n (4.0.1)
+      i18n (~> 0.6)
+      rails (~> 4.0)
     railties (4.0.0)
       actionpack (= 4.0.0)
       activesupport (= 4.0.0)
@@ -139,18 +142,19 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.12.0)
     rake (10.1.1)
-    representable (1.6.1)
+    representable (1.5.3)
       multi_json
       nokogiri
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    roar (0.12.0)
-      representable (~> 1.6.0)
-    roar-rails (0.1.4)
+    roar (0.11.19)
+      representable (~> 1.5.3)
+    roar-rails (0.1.0)
       actionpack
       hooks
       railties (>= 3.0.0)
-      roar (>= 0.11.13)
+      representable (~> 1.4)
+      roar (~> 0.11.13)
       test_xml (>= 0.1.6)
     route_translator (3.1.0)
     rspec-core (2.14.7)
@@ -215,7 +219,7 @@ DEPENDENCIES
   activerecord-deprecated_finders!
   arel
   bcrypt-ruby
-  billit_representers (~> 0.6.2)
+  billit_representers (~> 0.7.0)
   coffee-rails!
   coveralls
   ekuseru
@@ -229,9 +233,10 @@ DEPENDENCIES
   popit_representers
   protected_attributes
   rails (= 4.0.0)
+  rails-i18n (~> 4.0.0)
   rake (= 10.1.1)
-  roar (= 0.12.0)
-  roar-rails (= 0.1.4)
+  roar (= 0.11.19)
+  roar-rails (= 0.1.0)
   route_translator
   rspec-rails
   sass-rails!

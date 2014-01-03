@@ -1,7 +1,68 @@
-# Sample localization file for English. Add more files in this directory for other locales.
+# Localization file for Spanish. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 es:
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    -
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: ! '%d/%m/%Y'
+      long: ! '%A %d de %B de %Y'
+      short: ! '%d de %b'
+    month_names:
+    -
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minutos
+      month: Mes
+      second: Segundos
+      year: Año
   routes:
     bills: proyectos
     communications: comunicaciones
@@ -41,26 +102,26 @@ es:
     abstentions: Abstenciones
   search:
     search_title: Búsqueda
-    search_for: "Buscar por:"
+    search_for: 'Buscar por:'
     search: Buscar
     bill: Proyecto de ley 
     bills: Proyectos de ley
     persons: Autores
-    current_urgency: "Urgencia actual:"
-    bill_type: "Tipo de proyecto:"
+    current_priority: 'Urgencia actual:'
+    bill_type: 'Tipo de proyecto:'
     download_as_excel: Descargar como Excel
     all_the_types: Todos los tipos
     all_the_stages: Todas las etapas
     all_the_chambers: Todas las cámaras
-    all_the_urgencies: Todas las urgencias
+    all_the_priorities: Todas las urgencias
     quick: Vista rápida
     placeholder_search_for: Ingresa una palabra clave
-    bulletin: "Boletín:"
+    bulletin: 'Boletín:'
     placeholder_bulletin: Ingresa nro de boletín
-    stage: "Etapa:"
-    creation_date_min: "Fecha de ingreso (min):"
-    creation_date_max: "Fecha de ingreso (max):"
-    origin_chamber: "Cámara de origen:"
+    stage: 'Etapa:'
+    creation_date_min: 'Fecha de ingreso (min):'
+    creation_date_max: 'Fecha de ingreso (max):'
+    initial_chamber: 'Cámara de origen:'
     author: Autor
     placeholder_author: Ingresa el nombre de un autor
   bill:
@@ -72,73 +133,73 @@ es:
     creation_date: Fecha de ingreso
     publish_date: Fecha de publicación
     chamber: Cámara
-    initiative: Iniciativa
-    origin_chamber: Cámara de origen
-    current_urgency: Urgencia actual
+    source: Iniciativa
+    initial_chamber: Cámara de origen
+    current_priority: Urgencia actual
     sub_stage: Sub etapa
-    state: Estado
-    law: Ley
-    link_law: Enlace a la ley
-    merged: Refundido
-    matters: Materias
+    status: Estado
+    resulting_document: Ley
+    law_link: Enlace a la ley
+    merged_bills: Refundido
+    subject_areas: Materias
     authors: Autores
-    events: Eventos
-    urgencies: Urgencias
+    paperworks: Eventos
+    priorities: Urgencias
     reports: Reportes
-    modifications: Comparados
+    revisions: Comparados
     documents: Documentos
-    instructions: Indicaciones
-    observations: Observaciones
+    directives: Indicaciones
+    remarks: Observaciones
     comments: Comentarios
-  event:
-    chamber: "Cámara:"
-    created_at: "Fecha de creación:"
-    date: "Fecha:"
-    description: "Descripción:"
-    session: "Sesión:"
-    stage: "Etapa:"
-    updated_at: "Última actualización:"
-  urgencie:
-    created_at: "Fecha de creación:"
-    entry_chamber: "Cámara de ingreso:"
-    entry_date: "Fecha de ingreso:"
-    entry_message: "Mensaje de ingreso:"
-    type: "Tipo:"
-    updated_at: "Última actualización:"
-    withdrawal_chamber: "Cámara de retiro:"
-    withdrawal_date: "Fecha de retiro:"
-    withdrawal_message: "Mensaje de retiro:"
+  paperwork:
+    chamber: 'Cámara:'
+    created_at: 'Fecha de creación:'
+    date: 'Fecha:'
+    description: 'Descripción:'
+    session: 'Sesión:'
+    stage: 'Etapa:'
+    updated_at: 'Última actualización:'
+  priority:
+    created_at: 'Fecha de creación:'
+    entry_chamber: 'Cámara de ingreso:'
+    entry_date: 'Fecha de ingreso:'
+    entry_message: 'Mensaje de ingreso:'
+    type: 'Tipo:'
+    updated_at: 'Última actualización:'
+    withdrawal_chamber: 'Cámara de retiro:'
+    withdrawal_date: 'Fecha de retiro:'
+    withdrawal_message: 'Mensaje de retiro:'
   report:
-    created_at: "Fecha de creación:"
-    date: "Fecha:"
-    stage: "Etapa:"
-    step: "Trámite:"
-    updated_at: "Última actualización:"
-  modification:
-    description: "Descripción:"
-    modification: "Comparado:"
+    created_at: 'Fecha de creación:'
+    date: 'Fecha:'
+    stage: 'Etapa:'
+    step: 'Trámite:'
+    updated_at: 'Última actualización:'
+  revision:
+    description: 'Descripción:'
+    revision: 'Comparado:'
   document:
-    chamber: "Cámara:"
-    created_at: "Fecha de creación:"
-    date: "Fecha:"
-    event: "Evento:"
-    number: "Número:"
-    stage: "Etapa:"
-    step: "Trámite:"
-    type: "Tipo:"
-    updated_at: "Última actualización:"
-  instruction:
-    created_at: "Fecha de creación:"
-    date: "Fecha:"
-    event: "Evento:"
-    stage: "Etapa:"
-    step: "Trámite:"
-    updated_at: "Última actualización:"
+    chamber: 'Cámara:'
+    created_at: 'Fecha de creación:'
+    date: 'Fecha:'
+    paperwork: 'Evento:'
+    number: 'Número:'
+    stage: 'Etapa:'
+    step: 'Trámite:'
+    type: 'Tipo:'
+    updated_at: 'Última actualización:'
+  directive:
+    created_at: 'Fecha de creación:'
+    date: 'Fecha:'
+    paperwork: 'Evento:'
+    stage: 'Etapa:'
+    step: 'Trámite:'
+    updated_at: 'Última actualización:'
   pagination:
-    page: "Página "
-    of: " de "
-    with: " con "
-    results: " resultados"
+    page: 'Página '
+    of: ' de '
+    with: ' con '
+    results: ' resultados'
     previous: Anterior
     next: Siguiente
   export:

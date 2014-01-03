@@ -1,4 +1,4 @@
-## Test coverage
+# Test coverage
 require 'coveralls'
 Coveralls.wear!
 

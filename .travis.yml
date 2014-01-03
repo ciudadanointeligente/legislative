@@ -1,9 +1,15 @@
-language: ruby
+language:
+  - ruby
 rvm:
   - 2.0.0
 env:
   - RAILS_VERSION=4.0.0
+gemfile:
+  - Gemfile
 before_script:
+  - bash start_local_billit.bash
+  - start_local_popit_api.bash
+  #- start_local_writeit.bash
   # updating bundle environment
   - bundle install --without production
   # creating database
@@ -11,5 +17,3 @@ before_script:
   - rake db:migrate
   # creating default admin user
   - rake db:seed
-#script:
-#  -

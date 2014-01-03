@@ -1,0 +1,25 @@
+/ - if !directive['created_at'].blank?
+/   %strong= t 'directive.created_at'
+/   = DateTime.parse(directive['created_at']).to_date.to_s
+/   %br/
+- if !directive['date'].blank?
+  %strong= t 'directive.date'
+  = DateTime.parse(directive['date']).to_date.to_s
+  %br/
+- if !directive['paperwork'].blank?
+  %strong= t 'directive.paperwork'
+  = directive['paperwork']
+  %br/
+- if !directive['stage'].blank?
+  %strong= t 'directive.stage'
+  = directive['stage']
+  %br/
+- if !directive['step'].blank?
+  %strong= t 'directive.step'
+  = directive['step']
+  %br/
+/ - if !directive['updated_at'].blank?
+/   %strong= t 'directive.updated_at'
+/   = DateTime.parse(directive['updated_at']).to_date.to_s
+/   %br/
+%br/

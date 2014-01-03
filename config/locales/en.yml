@@ -1,7 +1,68 @@
-# Sample localization file for English. Add more files in this directory for other locales.
+# Localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  date:
+    abbr_day_names:
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
+    abbr_month_names:
+    -
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+    day_names:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    formats:
+      default: ! '%m-%d-%Y'
+      long: ! '%B %d, %Y'
+      short: ! '%b %d'
+    month_names:
+    -
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    order:
+    - :month
+    - :day
+    - :year
+  datetime:
+    prompts:
+      day: Day
+      hour: Hour
+      minute: Minute
+      month: Month
+      second: Seconds
+      year: Year
   routes:
     bills: bills
     communications: communications
@@ -41,26 +102,26 @@ en:
     abstentions: Abstentions
   search:
     search_title: Search
-    search_for: "Search for:"
+    search_for: 'Search for:'
     search: Search
     bill: Bill
     bills: Bills
     persons: Authors
-    current_urgency: "Current urgency:"
-    bill_type: "Bill type:"
+    current_priority: 'Current priority:'
+    bill_type: 'Bill type:'
     download_as_excel: Download as Excel
     all_the_types: All the types
     all_the_stages: All the stages
     all_the_chambers: All the chambers
-    all_the_urgencies: All the urgencies
+    all_the_priorities: All the priorities
     quick: Quick view
     placeholder_search_for: Input a keyword
-    bulletin: "Bulletin:"
+    bulletin: 'Bulletin:'
     placeholder_bulletin: Input a bulletin number
-    stage: "Stage:"
-    creation_date_min: "Creation date (min):"
-    creation_date_max: "Creation date (max):"
-    origin_chamber: "Origin chamber:"
+    stage: 'Stage:'
+    creation_date_min: 'Creation date (min):'
+    creation_date_max: 'Creation date (max):'
+    initial_chamber: 'Initial chamber:'
     author: Author
     placeholder_author: Type an author's name
   bill:
@@ -72,73 +133,73 @@ en:
     creation_date: Creation date
     publish_date: Publish date
     chamber: Chamber
-    initiative: Initiative
-    origin_chamber: Origin chamber
-    current_urgency: Current urgency
+    source: Source
+    initial_chamber: Initial chamber
+    current_priority: Current priority
     sub_stage: Sub stage
-    state: State
-    law: Law
-    link_law: Link law
-    merged: Merged
-    matters: Matters
+    status: Status
+    resulting_document: Resulting document
+    law_link: Law link
+    merged_bills: Merged bills
+    subject_areas: Subject areas
     authors: Authors
-    events: Events
-    urgencies: Urgencies
+    paperworks: Paperworks
+    priorities: priorities
     reports: Reports
-    modifications: Modifications
+    revisions: Revisions
     documents: Documents
-    instructions: Instructions
-    observations: Observations
+    directives: Directives
+    remarks: Remarks
     comments: Comments
-  events:
-    chamber: "Chamber:"
-    created_at: "Created at:"
-    date: "Date:"
-    description: "Description:"
-    session: "Session:"
-    stage: "Stage:"
-    updated_at: "Updated at:"
-  urgencie:
-    created_at: "Created at:"
-    entry_chamber: "Entry chamber:"
-    entry_date: "Entry date:"
-    entry_message: "Entry message:"
-    type: "Type:"
-    updated_at: "Updated at:"
-    withdrawal_chamber: "Withdrawal chamber:"
-    withdrawal_date: "Withdrawal date:"
-    withdrawal_message: "Withdrawal message:"
+  paperworks:
+    chamber: 'Chamber:'
+    created_at: 'Created at:'
+    date: 'Date:'
+    description: 'Description:'
+    session: 'Session:'
+    stage: 'Stage:'
+    updated_at: 'Updated at:'
+  priority:
+    created_at: 'Created at:'
+    entry_chamber: 'Entry chamber:'
+    entry_date: 'Entry date:'
+    entry_message: 'Entry message:'
+    type: 'Type:'
+    updated_at: 'Updated at:'
+    withdrawal_chamber: 'Withdrawal chamber:'
+    withdrawal_date: 'Withdrawal date:'
+    withdrawal_message: 'Withdrawal message:'
   report:
-    created_at: "Created at:"
-    date: "Date:"
-    stage: "Stage:"
-    step: "Step:"
-    updated_at: "Updated at:"
-  modification:
-    description: "Description:"
-    modification: "Modification:"
+    created_at: 'Created at:'
+    date: 'Date:'
+    stage: 'Stage:'
+    step: 'Step:'
+    updated_at: 'Updated at:'
+  revision:
+    description: 'Description:'
+    revision: 'Revision:'
   document:
-    chamber: "Chamber:"
-    created_at: "Created at:"
-    date: "Date:"
-    event: "Event:"
-    number: "Number:"
-    stage: "Stage:"
-    step: "Step:"
-    type: "Type:"
-    updated_at: "Updated at:"
-  instruction:
-    created_at: "Created at:"
-    date: "Date:"
-    event: "Event:"
-    stage: "Stage:"
-    step: "Step:"
-    updated_at: "Updated at:"
+    chamber: 'Chamber:'
+    created_at: 'Created at:'
+    date: 'Date:'
+    paperwork: 'Paperwork:'
+    number: 'Number:'
+    stage: 'Stage:'
+    step: 'Step:'
+    type: 'Type:'
+    updated_at: 'Updated at:'
+  directive:
+    created_at: 'Created at:'
+    date: 'Date:'
+    paperwork: 'Paperwork:'
+    stage: 'Stage:'
+    step: 'Step:'
+    updated_at: 'Updated at:'
   pagination:
-    page: "Page "
-    of: " of "
-    with: " with "
-    results: " results"
+    page: 'Page '
+    of: ' of '
+    with: ' with '
+    results: ' results'
     previous: Previous
     next: Next
   export:

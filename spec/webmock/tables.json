@@ -10,7 +10,7 @@
       "creation_date": "2013-12-05",
       "id": "529e2a2939dd8d300554309e",
       "legislature": "362",
-      "origin_chamber": "Senadores",
+      "initial_chamber": "Senadores",
       "session": "98"
     },
     {
@@ -22,7 +22,7 @@
       "creation_date": "2013-12-03",
       "id": "529e296439dd8d300554309d",
       "legislature": "361",
-      "origin_chamber": "Diputados",
+      "initial_chamber": "Diputados",
       "session": "97"
     }
   ]

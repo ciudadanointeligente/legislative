@@ -9,8 +9,8 @@
   
   - @tables.tables.each do |table|
     %tr
-      %td= table.origin_chamber
-      %td= table.creation_date
+      %td= table.initial_chamber
+      %td= localize table.creation_date.to_date, :format => :default
       %td
         - table.bills.each do |bill|
           = link_to bill, bill_path(bill)
