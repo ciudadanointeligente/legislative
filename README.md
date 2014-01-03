@@ -1,18 +1,18 @@
-# Votainteligente Legislativo
-[![Build Status](https://travis-ci.org/ciudadanointeligente/votainteligente-legislativo.png?branch=master)](https://travis-ci.org/ciudadanointeligente/votainteligente-legislativo)
-[![Coverage Status](https://coveralls.io/repos/ciudadanointeligente/votainteligente-legislativo/badge.png)](https://coveralls.io/r/ciudadanointeligente/votainteligente-legislativo)
+# Legislative
+[![Build Status](https://travis-ci.org/ciudadanointeligente/legislative.png?branch=master)](https://travis-ci.org/ciudadanointeligente/legislative)
+[![Coverage Status](https://coveralls.io/repos/ciudadanointeligente/legislative/badge.png)](https://coveralls.io/r/ciudadanointeligente/legislative)
 
-[Beta](http://beta.votainteligente.cl)
+[Trunk](http://beta.congresodechile.cl)
 
-Votainteligente Legislativo is a channel of participation and seeks to bring information to the public what is happening to our Congress. Built using POPLUS environment.
+Legislative is a channel of participation and seeks to bring information to the public what is happening to our Congress. Built using POPLUS environment.
 
 ## Quick start
 
-Clone the git repo - `git clone https://github.com/ciudadanointeligente/votainteligente-legislativo.git` - or [download it](https://github.com/ciudadanointeligente/votainteligente-legislativo/zipball/master)
+Clone the git repo - `git clone https://github.com/ciudadanointeligente/legislative.git` - or [download it](https://github.com/ciudadanointeligente/legislative/zipball/master)
 
-Go to your votainteligente-legislativo folder and run install
+Go to your legislative folder and run install
 <pre>
-sh install.sh
+sh setup.sh
 </pre>
 
 Then run your server
@@ -22,7 +22,7 @@ rails s
 
 Check at [http://localhost:3000](http://localhost:3000)
 
-You can try loggin in with `admin@ciudadanointeligente.org / 09301982`
+You can try loggin in with `admin@ciudadanointeligente.org / benito`
 
 ## Features
 
@@ -54,7 +54,7 @@ Change the cookie secret token at
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-CabildoAbierto::Application.config.secret_token = 'YOUR-NEW-TOKEN-HERE'
+Legislative::Application.config.secret_token = 'YOUR-NEW-TOKEN-HERE'
 </pre>
 
 To run the RSpec tests
@@ -66,7 +66,7 @@ rspec
 #### Todo
 ---
 
-* You can found this in the [Issues page](https://github.com/ciudadanointeligente/votainteligente-legislativo/issues).
+* You can found this in the [Issues page](https://github.com/ciudadanointeligente/legislative/issues).
 
 ## License
 
@@ -79,21 +79,25 @@ rspec
 * Ruby on Rails: MIT license
 * RailStrap scripts: Public Domain
 
-## Does Votainteligente Legislativo have a mascot?
+## Does Legislative have a mascot?
 
 Yes.
 
-[![Benito](http://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash3/1098148_10151780926822943_1641758220_n.jpg "Votainteligente Legislativo's mascot: Benito")](https://www.google.com/search?site=&tbm=isch&source=hp&biw=1263&bih=630&q=perros+adorables+de+chile)
+[![Benito](http://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash3/1098148_10151780926822943_1641758220_n.jpg "Legislative's mascot: Benito")](https://www.google.com/search?site=&tbm=isch&source=hp&biw=1263&bih=630&q=perros+adorables+de+chile)
 
 
 ## Thanks you!
 
-Votainteligente Legislativo is made possible by the continued contributions and insights from kind-hearted developers everywhere. Just to name a few:
+Legislative is made possible by the continued contributions and insights from kind-hearted developers everywhere. Just to name a few:
 
 * [@rezzo](https://github.com/rezzo)
+* [@maugsbur](https://github.com/maugsbur)
 * [@jdgarrido](https://github.com/jdgarrido)
 * [@pdaire](https://github.com/pdaire)
-* [@maugsbur](https://github.com/maugsbur)
+* [@lfalvarez](https://github.com/lfalvarez)
+* [@camargozzini](https://github.com/camargozzini)
+* [@kathemalis](https://github.com/kathemalis)
+
 
 This project is licensed under the GNU Affero General Public License (AGPL). For more information you can access to the [digital license edition here](http://www.gnu.org/licenses/agpl-3.0.html).
 

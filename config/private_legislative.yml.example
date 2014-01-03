@@ -1,0 +1,4 @@
+# The private_legislative.yml file overrides the repeated values of the legislative.yml config file.
+# Eg:
+# production:
+#   root_url:   "another-site.org"

@@ -1,0 +1,30 @@
+production:
+  root_url:   "http://beta.congresodechile.cl/"
+  billit:     "billit.production-site.org"
+  popit_persons:  ~
+  popit_url: ~
+  tables:     "http://pmo.apidone.com/tables"
+  writeit:    ~
+  scout:      ~
+  analytics:  "UA-XXXXX-X"
+  disqus_shortname:     ~
+
+development:
+  root_url:   "http://beta.congresodechile.cl/"
+  billit:     "http://billit.ciudadanointeligente.org/bills/"
+  popit_persons:  "http://billit-demo.popit.mysociety.org/api/v0.1/persons/"
+  popit_url: "billit-demo.popit.mysociety.org"
+  tables:     "http://pmo.apidone.com/tables"
+  writeit:    ~
+  scout:      ~
+  analytics:  ~
+  disqus_shortname:   ~
+
+test:
+  root_url:   "http://beta.congresodechile.cl/"
+  billit:     "http://billit.ciudadanointeligente.org/bills/"
+  tables:     "http://pmo.apidone.com/tables"
+  writeit:    ~
+  scout:      ~
+  analytics:  ~
+  disqus_shortname:     ~
