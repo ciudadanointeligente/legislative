@@ -1,4 +1,4 @@
-CabildoAbierto::Application.routes.draw do
+Legislative::Application.routes.draw do
 
   root :to => "mains#index"
   

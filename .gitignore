@@ -6,7 +6,7 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 # Ignore environment variables config
-/config/private_legislativo.yml
+/config/private_legislative.yml
 
 # Ignore bundler config
 /.bundle
