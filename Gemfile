@@ -7,7 +7,6 @@ gem 'journey', :git => 'git://github.com/rails/journey.git'
 gem 'arel'
 gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerecord-deprecated_finders.git'
 
-
 # ORM
 #gem 'pg', :group => :production
 
@@ -48,18 +47,20 @@ group :assets do
 end
 
 # POPLUS integration
-gem 'roar', '0.12.0'
-gem 'roar-rails', '0.1.4'
+gem 'roar', '0.11.19'
+gem 'roar-rails', '0.1.0'
 gem 'faraday', '0.8.1'
-gem 'billit_representers', '~>0.6.0'
+gem 'billit_representers', '~>0.7.0'
 gem 'popit_representers'
 
 # Support to XLS export
 gem 'ekuseru'
 
-# Internationalization - translating routes
-gem 'route_translator'
-
 # UI
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+
+gem 'coveralls', require: false
+gem 'rake', '10.1.1'
+gem 'rails-i18n', '~> 4.0.0'
+gem 'route_translator'

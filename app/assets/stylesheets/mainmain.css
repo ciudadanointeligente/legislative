@@ -49,3 +49,63 @@
     -webkit-transform: rotateX(0deg) rotateY(0deg);
     -moz-transform: rotateX(0deg) rotateY(0deg);
 }
+
+.infograph {
+    position: relative;
+    top: -60px;
+    z-index: -1;
+}
+img.chamber {
+  z-index: 2;
+  position: absolute;
+}
+span.positive {
+  width: 55px;
+  background-color: green;
+  height: 55px;
+  z-index: 3;
+  display: block;
+  position: relative;
+  opacity: 0.3;
+  border-radius: 25px;
+}
+span.against {
+  width: 55px;
+  background-color: red;
+  height: 55px;
+  z-index: 3;
+  display: block;
+  position: relative;
+  opacity: 0.3;
+  border-radius: 25px;
+}
+span.abstention {
+  width: 55px;
+  background-color: #5bc0de;
+  height: 55px;
+  z-index: 3;
+  display: block;
+  position: relative;
+  opacity: 0.3;
+  border-radius: 25px;
+}
+span.ausent {
+  width: 55px;
+  background-color: #f0ad4e;
+  height: 55px;
+  z-index: 3;
+  display: block;
+  position: relative;
+  opacity: 0.3;
+  border-radius: 25px;
+}
+span.paring {
+  width: 55px;
+  background-color: #428bca;
+  height: 55px;
+  z-index: 3;
+  display: block;
+  position: relative;
+  opacity: 0.3;
+  border-radius: 25px;
+}

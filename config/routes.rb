@@ -1,4 +1,4 @@
-CabildoAbierto::Application.routes.draw do
+Legislative::Application.routes.draw do
 
   root :to => "mains#index"
   
@@ -18,7 +18,7 @@ CabildoAbierto::Application.routes.draw do
     resources :parliamentarians
     resources :tables
     resources :users
-    resources :searchs
+    resources :searches
   end
 
   # The priority is based upon order of creation:

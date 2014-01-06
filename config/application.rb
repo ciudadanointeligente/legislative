@@ -3,8 +3,8 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 # Load application ENV vars and merge with existing ENV vars. Loaded here so can use values in initializers.
-ENV.update YAML.load_file('config/legislativo.yml')[Rails.env] rescue {}
-ENV.update YAML.load_file('config/private_legislativo.yml')[Rails.env] rescue {}
+ENV.update YAML.load_file('config/legislative.yml')[Rails.env] rescue {}
+ENV.update YAML.load_file('config/private_legislative.yml')[Rails.env] rescue {}
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -13,7 +13,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-module CabildoAbierto
+module Legislative
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -32,6 +32,9 @@ module CabildoAbierto
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
+
+    # When is true we'll raise an I18n::InvalidLocale exception if the passed locale is unavailable.
+    config.i18n.enforce_available_locales = true
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]

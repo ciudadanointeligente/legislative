@@ -1,126 +1,494 @@
-/ %h1 Show
 :javascript
   var billuid = '#{@bill.uid}';
 
+  window.onload = function () {
+    if(typeof window.generateGraph == 'function') {
+      generateGraph(#{@date_freq});
+    }
+  }
+
 %div.page-header
-  %h1=t '.title', :default => t('search.bill') + ' ' + @bill.uid
+  %h2=t '.title', :default => t('search.bill') + ' ' + @bill.uid
 
-/= form_tag('/tags', :method => 'get') do
-/  = label_tag :q, "Tags"
-/  = text_field_tag :q, params[:q]
-/  = submit_tag "Agregar"
+%ul.nav.nav-tabs
+  %li.active
+    %a{'href'=>'#tab01', 'data-toggle'=>'tab'}
+      General
+  %li
+    %a{'href'=>'#tab02', 'data-toggle'=>'tab'}
+      Eventos
+  %li
+    %a{'href'=>'#tab03', 'data-toggle'=>'tab'}
+      Urgencias
+  %li
+    %a{'href'=>'#tab04', 'data-toggle'=>'tab'}
+      Reportes
+  %li
+    %a{'href'=>'#tab05', 'data-toggle'=>'tab'}
+      Comparados
+  %li
+    %a{'href'=>'#tab06', 'data-toggle'=>'tab'}
+      Documentos
+  %li
+    %a{'href'=>'#tab07', 'data-toggle'=>'tab'}
+      Indicaciones
 
-%ul#myTags
-  / Existing list items will be pre-added to the tags
-  - if !@bill.tags.blank?
-    - @bill.tags.each do |tag|
-      %li#preexisting= tag
 
-%div.table-responsive
-  %table.table.table-striped
-    %thead
-    %tbody
-      %tr
-        %th= t 'bill.bulletin'
-        %td.numeric= @bill.uid
-      %tr
-        %th= t 'bill.title'
-        %td= @bill.title
-      - if !@bill.abstract.blank?
-        %tr
-          %th= t 'bill.abstract'
-          %td= @bill.abstract
-      %tr
-        %th= t 'bill.creation_date'
-        %td= DateTime.parse(@bill.creation_date).to_date.to_s
-      %tr
-        %th= t 'bill.initiative'
-        %td= @bill.initiative
-      %tr
-        %th= t 'bill.origin_chamber'
-        %td= @bill.origin_chamber
-      %tr
-        %th= t 'bill.current_urgency'
-        %td= @bill.current_urgency
-      %tr
-        %th= t 'bill.stage'
-        %td= @bill.stage
-      - if @bill.sub_stage.match(/[a-z\d]+/)
-        %tr
-          %th= t 'bill.sub_stage'
-          %td= @bill.sub_stage
-      %tr
-        %th= t 'bill.state'
-        %td= @bill.state
-      - if !@bill.law.blank?
-        %tr
-          %th= t 'bill.law'
-          %td= @bill.law
-      - if !@bill.link_law.blank?
-        %tr
-          %th= t 'bill.link_law'
-          %td= link_to @bill.link_law, @bill.link_law
-      - if @bill.merged != '[]'
-        %tr
-          %th= t 'bill.merged'
-          %td= @bill.merged
-      %tr
-        %th= t 'bill.matters'
-        - @matters = @bill.matters
-        %td= render partial: "matter", collection: @matters
-      - if !@bill.authors.blank?
-        %tr
-          %th= t 'bill.authors'
-          - @authors = @bill.authors
-          %td= render partial: "author", collection: @authors
-      - if !@bill.events.blank?
-        %tr
-          %th= t 'bill.events'
-          - @events = @bill.events
-          %td= render partial: "event", collection: @events
-      - if !@bill.urgencies.blank?
-        %tr
-          %th= t 'bill.urgencies'
-          - @urgencies = @bill.urgencies
-          %td= render partial: "urgencie", collection: @urgencies
+%div.tab-content
+  %div.tab-pane.active#tab01
+    %div.table-responsive
+      %table.table.table-striped.table-bordered
+        %thead
+        %tbody
+          %tr
+            %th= t 'bill.bulletin'
+            %td.numeric= @bill.uid
+          %tr
+            %th= t 'bill.title'
+            %td= @bill.title
+          - if !@bill.abstract.blank?
+            %tr
+              %th= t 'bill.abstract'
+              %td= @bill.abstract
+          %tr
+            %th= t 'bill.creation_date'
+            %td= DateTime.parse(@bill.creation_date).to_date.to_s
+          %tr
+            %th= t 'bill.source'
+            %td= @bill.source
+          %tr
+            %th= t 'bill.initial_chamber'
+            %td= @bill.initial_chamber
+          %tr
+            %th= t 'bill.current_priority'
+            %td= @bill.current_priority
+          %tr
+            %th= t 'bill.stage'
+            %td= @bill.stage
+          - if @bill.sub_stage.match(/[a-z\d]+/)
+            %tr
+              %th= t 'bill.sub_stage'
+              %td= @bill.sub_stage
+          %tr
+            %th= t 'bill.status'
+            %td= @bill.status
+          - if !@bill.resulting_document.blank?
+            %tr
+              %th= t 'bill.resulting_document'
+              %td= @bill.resulting_document
+          - if !@bill.law_link.blank?
+            %tr
+              %th= t 'bill.law_link'
+              %td= link_to @bill.law_link, @bill.law_link
+          - if @bill.merged_bills != '[]'
+            %tr
+              %th= t 'bill.merged_bills'
+              %td= @bill.merged_bills
+          %tr
+            %th= t 'bill.subject_areas'
+            - @subject_areas = @bill.subject_areas
+            %td= render partial: "matter", collection: @subject_areas
+          - if !@bill.authors.blank?
+            %tr
+              %th= t 'bill.authors'
+              - @authors = @bill.authors
+              %td= render partial: "author", collection: @authors
+          - if !@bill.remarks.blank?
+            %tr
+              %th= t 'bill.remarks'
+              %td= @bill.remarks
+          - if !@bill.tags.blank?
+            %tr
+              %th
+                Palabras claves
+              %td
+                %ul.list-inline
+                  - if !@bill.tags.blank?
+                    - @bill.tags.each do |tag|
+                      %li= tag
+    
+
+    %section#chamber
+      %ul.nav.nav-tabs
+        %li.active
+          %a{'href'=>'#votes-01', 'data-toggle'=>'tab'}
+            Votaciones 01
+        %li
+          %a{'href'=>'#votes-02', 'data-toggle'=>'tab'}
+            Votaciones 02
+
+      %div.tab-content
+        %div.tab-pane.active#votes-01
+          %div.chamber
+            %div.row
+              %div.col-md-1
+              %div.col-md-1
+                %div.positive-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador5.jpg', 'class' => 'img-circle chamber'}
+                  %a{'href' => '#'}
+                    %span{'class' => 'positive'}
+                %div.abstention-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador4.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'abstention'}
+                %div.against-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador3.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div.positive-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador2.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div.against-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador1.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+              %div.col-md-1
+                %div.against-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador10.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div.against-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador9.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div.against-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador8.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div.positive-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador7.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div.against-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador6.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+              %div.col-md-1  
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+              
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'abstention'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'abstention'}
+              %div.col-md-1
+
+          %div.row{'style' => 'padding-top: 15px'}
+            %h3.page-header
+              Estadísticas
+            %div.col-md-6
+              %h4
+                Actividad
+              %canvas#myChartInt{'height'=>"80", 'style'=>'width:100%'}
+            %div.col-md-6
+              %div.votes
+                %h4
+                  Votaciones
+                %div.progress
+                  %a{'href'=>'#', 'class'=>'green-votes-bar'}
+                    %div.progress-bar.progress-bar-success{'style'=>'width: 51%'}
+                      51% Aprobado
+                  %a{'href'=>'#', 'class'=>'red-votes-bar'}
+                    %div.progress-bar.progress-bar-danger{'style'=>'width: 39%'}
+                      39% Rechazado
+                  %a{'href'=>'#', 'class'=>'skyblue-votes-bar'}
+                    %div.progress-bar.progress-bar-info{'style'=>'width: 10%'}
+                      10% Abstención
+
+        %div.tab-pane#votes-02
+          %div.chamber
+            %div.row
+              %div.col-md-1
+              
+              %div.col-md-1
+                %div.against-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador10.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div.against-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador9.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div.against-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador8.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div.positive-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador7.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div.against-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador6.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+
+              %div.col-md-1
+                %div.positive-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador5.jpg', 'class' => 'img-circle chamber'}
+                  %a{'href' => '#'}
+                    %span{'class' => 'positive'}
+                %div.abstention-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador4.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'abstention'}
+                %div.against-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador3.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div.positive-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador2.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div.against-vote
+                  %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador1.jpg', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+              
+              %div.col-md-1  
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'paring'}
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'paring'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+              
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'abstention'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'paring'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'paring'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'ausent'}
+              %div.col-md-1
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'ausent'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'ausent'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'against'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'positive'}
+                %div
+                  %img{'src' => 'http://placehold.it/55x55', 'class' => 'img-circle chamber'}
+                  %span{'class' => 'abstention'}
+              %div.col-md-1
+          %div.row{'style' => 'padding-top: 15px'}
+            %h3.page-header
+              Estadísticas
+            %div.col-md-6
+              %h4
+                Actividad
+              %canvas#myChartInt{'height'=>"80", 'style'=>'width:100%'}
+            %div.col-md-6
+              %div.votes
+                %h4
+                  Votaciones
+                %div.progress
+                  %a{'href'=>'#', 'class'=>'green-votes-bar'}
+                    %div.progress-bar.progress-bar-success{'style'=>'width: 35%'}
+                      35 Aprobado
+                  %a{'href'=>'#', 'class'=>'red-votes-bar'}
+                    %div.progress-bar.progress-bar-danger{'style'=>'width: 35%'}
+                      35 Rechazado
+                  %a{'href'=>'#', 'class'=>'skyblue-votes-bar'}
+                    %div.progress-bar.progress-bar-info{'style'=>'width: 10%'}
+                      10 Abstención
+                  %a{'href'=>'#', 'class'=>'yellow-votes-bar'}
+                    %div.progress-bar.progress-bar-warning{'style'=>'width: 10%'}
+                      5 Ausentes
+                  %a{'href'=>'#', 'class'=>'blue-votes-bar'}
+                    %div.progress-bar.progress-bar-default{'style'=>'width: 10%'}
+                      5 Pareos
+
+
+  / eventos
+  %div.tab-pane#tab02
+    - if !@bill.paperworks.blank?
+      - @paperworks = @bill.paperworks
+      =render partial: "paperwork", collection: @paperworks
+  / urgencias
+  %div.tab-pane#tab03
+    - if !@bill.priorities.blank?
+      - @priorities = @bill.priorities
+      = render partial: "priority", collection: @priorities
+  / reportes
+  %div.tab-pane#tab04
+    %table.table
       - if !@bill.reports.blank?
         %tr
-          %th= t 'bill.reports'
           - @reports = @bill.reports
           %td= render partial: "report", collection: @reports
-      - if !@bill.modifications.blank?
+  / modificaciones
+  %div.tab-pane#tab05
+    %table.table
+      - if !@bill.revisions.blank?
         %tr
-          %th= t 'bill.modifications'
-          - @modifications = @bill.modifications
-          %td= render partial: "modification", collection: @modifications
+          - @revisions = @bill.revisions
+          %td= render partial: "revision", collection: @revisions
+  / documentos
+  %div.tab-pane#tab06
+    %table.table
       - if !@bill.documents.blank?
         %tr
-          %th= t 'bill.documents'
           - @documents = @bill.documents
           %td= render partial: "document", collection: @documents
-      - if !@bill.instructions.blank?
+  / indicaciones
+  %div.tab-pane#tab07
+    %table.table
+      - if !@bill.directives.blank?
         %tr
-          %th= t 'bill.instructions'
-          - @instructions = @bill.instructions
-          %td= render partial: "instruction", collection: @instructions
-      - if !@bill.observations.blank?
-        %tr
-          %th= t 'bill.observations'
-          %td= @bill.observations
+          - @directives = @bill.directives
+          %td= render partial: "directive", collection: @directives
 
-/           = link_to t('.destroy', :default => t("helpers.links.destroy")), fruit_path(fruit), :method => :delete, :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-mini btn-danger'
 
-/ = link_to t('.new', :default => t("helpers.links.new")), new_fruit_path, :class => 'btn btn-primary'
-%div#disqus_thread 
-  %p= t 'bill.comments'
 
-:javascript
-  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = '#{ ENV['disqus_shortname'] }'; // required: replace example with your forum shortname
+%div
+  %h3.page-header
+    Comentarios
+  %div#disqus_thread
+  :javascript
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '#{ ENV['disqus_shortname'] }'; // required: replace example with your forum shortname
+    var disqus_developer = '#{ ENV['disqus_devmode'] }';
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
+%script{'src'=>"http://www.chartjs.org/assets/Chart.js"}

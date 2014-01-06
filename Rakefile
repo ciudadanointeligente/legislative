@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-CabildoAbierto::Application.load_tasks
+Legislative::Application.load_tasks

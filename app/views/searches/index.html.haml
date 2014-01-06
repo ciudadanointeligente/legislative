@@ -49,7 +49,7 @@
     %div.row
       %div.col-md-4
         %i.fa.fa-download
-        = link_to t('search.download_as_excel'), params.merge(:format => :xls), :onclick => "ga('send','event','download_bills_xls_up')"
+        = link_to t('search.download_as_excel'), params.merge(:format => :xls), :onclick => "ga('send','paperwork','download_bills_xls_up')"
 
       %div.col-md-4
         %p= t('pagination.page') + @bills_query.current_page.to_s + t('pagination.of') + @bills_query.total_pages.to_s + ',' + t('pagination.with') + @bills_query.total_entries.to_s + t('pagination.results')
@@ -67,44 +67,50 @@
                 = link_to(t('pagination.next'), url_for(action:'index') + '?' + get_params(@bills_query.next))
                 %i.fa.fa-chevron-right
 
-    %div.table-responsive
-      %table.table.table-striped
-        %thead
-          %tr
-            %th= t 'bill.bulletin'
-            %th= t 'bill.title'
-            %th= t 'bill.creation_date'
-            %th= t 'bill.state'
-            %th= t 'bill.chamber'
+    %div.row
+      %div.col-md-3
+        Filtros
+        = render :partial => "filter_search_form"
 
-        %tbody
-        - @bills = @bills_query.bills
-        - @bills.each do |bill|
-          %tr
-            %td= bill.uid
-            %td
-              = link_to bill.title, '/' + t('routes.bills') + '/' + bill.uid, :onclick => "ga('send','event','bill', '"+bill.uid+"')"
-              %a{"href" => "#", "data-toggle" => "modal", "data-target" => "#quickview-"+ bill.uid}
-                %i.fa.fa-eye{title: t('search.quick')}
-              %div.modal.fade{"id" => "quickview-"+ bill.uid, "tabindex" => "-1", "role" => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
-                %div.modal-dialog
-                  %div.modal-content
-                    %div.modal-header
-                      %button.close{"type" => "button", "data-dismiss" => "modal", "aria-hidden" => "true"}
-                        ×
-                      %h4.modal-title
-                        =bill.title
-                    %div.modal-body
-                      - @bill = bill
-                      = render :partial => "show"
-            %td= DateTime.parse(bill.creation_date).to_date.to_s
-            %td= bill.state
-            %td= bill.origin_chamber
+      %div.col-md-9
+        %div.table-responsive
+          %table.table.table-striped
+            %thead
+              %tr
+                %th= t 'bill.bulletin'
+                %th= t 'bill.title'
+                %th= t 'bill.creation_date'
+                %th= t 'bill.status'
+                %th= t 'bill.chamber'
+
+            %tbody
+            - @bills = @bills_query.bills
+            - @bills.each do |bill|
+              %tr
+                %td= bill.uid
+                %td
+                  = link_to bill.title, t('routes.bills') + '/' + bill.uid, :onclick => "ga('send','paperwork','bill', '"+bill.uid+"')"
+                  %a{"href" => "#", "data-toggle" => "modal", "data-target" => "#quickview-"+ bill.uid}
+                    %i.fa.fa-eye{title: t('search.quick')}
+                  %div.modal.fade{"id" => "quickview-"+ bill.uid, "tabindex" => "-1", "role" => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
+                    %div.modal-dialog
+                      %div.modal-content
+                        %div.modal-header
+                          %button.close{"type" => "button", "data-dismiss" => "modal", "aria-hidden" => "true"}
+                            ×
+                          %h4.modal-title
+                            =bill.title
+                        %div.modal-body
+                          - @bill = bill
+                          = render :partial => "show"
+                %td= localize bill.creation_date.to_date, :format => :default
+                %td= bill.status
+                %td= bill.initial_chamber
 
     %div.row
       %div.col-md-4
         %i.fa.fa-download
-        = link_to t('search.download_as_excel'), params.merge(:format => :xls), :onclick => "ga('send','event','download_bills_xls_down')"
+        = link_to t('search.download_as_excel'), params.merge(:format => :xls), :onclick => "ga('send','paperwork','download_bills_xls_down')"
 
       %div.col-md-4
         %p= t('pagination.page') + @bills_query.current_page.to_s + t('pagination.of') + @bills_query.total_pages.to_s + ',' + t('pagination.with') + @bills_query.total_entries.to_s + t('pagination.results')

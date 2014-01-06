@@ -6,20 +6,42 @@
 
 %div
   %div.row
-    %div.col-md-8
+    %div.col-md-9
       %h3 
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-    %div.col-md-4
+    %div.col-md-3.hidden-xs
       %ul.list-inline
         %li
+          %i.fa.fa-twitter
           twitter
         %li
+          %i.fa.fa-facebook
           facebook
   %div.row
     %div.col-md-12
       %p
         Nesciunt, fuga, eaque eligendi saepe repellendus minus iste cumque voluptas dolor fugiat ducimus a molestiae consectetur eum accusantium ea debitis illum nulla!
   %div.infograph
-    %canvas#myChart{'width'=>"640", 'height'=>"80"}
+    %canvas#myChart{'height'=>"80", 'width'=>'900', 'style'=>'width:100%'}
+
+%div
+  %div.row
+    %div.col-md-9
+      %h3 
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    %div.col-md-3
+      %ul.list-inline
+        %li
+          %i.fa.fa-twitter
+          twitter
+        %li
+          %i.fa.fa-facebook
+          facebook
+  %div.row
+    %div.col-md-12
+      %p
+        Nesciunt, fuga, eaque eligendi saepe repellendus minus iste cumque voluptas dolor fugiat ducimus a molestiae consectetur eum accusantium ea debitis illum nulla!
+  %div.infograph
+    %canvas#myChartInt{'height'=>"80", 'width'=>'900', 'style'=>'width:100%'}
 
 %script{'src'=>"http://www.chartjs.org/assets/Chart.js"}
