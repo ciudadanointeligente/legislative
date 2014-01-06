@@ -7,7 +7,10 @@
 = render :partial => "search_form"
 
 - if !@bills_query.nil?
-  - if !@bills_query.bills.empty?
+  - if @bills_query.bills.empty?
+    %p
+      %h3= t('search.there_are_no_results')
+  - else !@bills_query.bills.empty?
     %div.page-header
       %h3{name: "result"}
         =t 'search.bills', :default => 'Bill'
