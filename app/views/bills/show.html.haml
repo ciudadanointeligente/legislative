@@ -27,7 +27,7 @@
           Materias:
       %div.col-md-10
         %ul.list-inline
-          - @matters = @bill.matters
+          - @matters = @bill.subject_areas
           =render partial: "matter", collection: @matters
     %div.row
       %div.col-md-2

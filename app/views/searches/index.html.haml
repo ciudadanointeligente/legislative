@@ -14,7 +14,8 @@
     %div.col-md-2
       %button.btn.btn-default.btn-xs 
         Búsqueda Avanzada
-  = render :partial => "box_bills_result"
+  - @bills = @bills_query.bills
+  = render :partial => "box_bills_result" 
 /end of loop
 
 /loop for parliamentarians
