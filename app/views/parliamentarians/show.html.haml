@@ -1,5 +1,6 @@
 %div.row
   %div.col-md-3
+    %div{:style=>'margin-top:25px;'}
     %img.img-responsive{:src=>'http://placedog.com/300/300'}
     
   %div.col-md-9
@@ -34,7 +35,7 @@
           %td
             Links:
           %td
-            %ul
+            %ul{:style=>'list-style:none;padding-left:5px;'}
               %li
                 %i.fa.fa-globe
                 Sitio web
@@ -59,6 +60,52 @@
     %div{:style=>'border:1px solid #ccc; padding:10px; margin-top:20px;'}
       %blockquote
         %p
+          %i.fa.fa-quote-left
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec. 
+          %i.fa.fa-quote-right
           %small.text-right
-            Ha respondido 6 de las 28 preguntas.        
+            Ha respondido 6 de las 28 preguntas. 
+
+%div
+  %h3.page-header
+    Iniciativas más recientes
+  = render :partial=> "initiatives"
+  %div.text-right
+    %button.btn.btn-default.btn-xs
+      Ver todas las iniciativas
+
+%div
+  %h3.page-header
+    Porcentajes de Votaciones
+  %div.row
+    %div.col-md-6.jumbotron{:style=>'padding:15px;'}
+      %p{:style=>'font-size:40px;font-weight: bold;'}
+        22%
+      %p
+        Asistencia
+    %div.col-md-6.jumbotron{:style=>'background-color:grey; padding:15px;'}
+      %p{:style=>'font-size:40px;font-weight: bold;color:white;'}
+        60%
+      %p{:style=>'color:white;'}
+        Concordancia con el partido
+
+%div
+  %h3.page-header
+    Votaciones más recientes
+  = render :partial=> "votes"
+  %div.text-right{:style=>'padding-top:15px;'}
+    %button.btn.btn-default.btn-xs
+      Ver historial de votaciones
+
+%div
+  %h3.page-header
+    Últimas Intervenciones
+  
+
+  = render :partial=> "recent_interventions"
+  %div.text-right{:style=>'padding-top:15px;'}
+    %button.btn.btn-default.btn-xs
+      Ver todas
+
+
+
