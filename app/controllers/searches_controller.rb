@@ -28,6 +28,8 @@ class SearchesController < ApplicationController
         end
       end
       @bills_query = BillCollectionPage.get(ENV['billit'] + "search/?#{URI.encode(@keywords)}&per_page=3", 'application/json')
+    else
+      @bills_query = BillCollectionPage.get(ENV['billit'] + "search/?per_page=3", 'application/json')
     end
   end
 end

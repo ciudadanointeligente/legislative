@@ -14,7 +14,6 @@
   %div.col-md-9
     %p{:style=>'font-style: italic; font-size:16px;'}
       =@bill.abstract
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, laborum, iusto nostrum alias eveniet quae vitae maiores placeat ipsam ratione commodi perferendis mollitia ipsum rem aspernatur aperiam incidunt et asperiores?
     %div.row
       %div.col-md-2
         %strong
@@ -55,7 +54,8 @@
           Comparte
         %li
           %i.fa.fa-twitter
-          Twitea
+          %a{'href'=>'#', 'onclick' => "window.open('https://twitter.com/share?text="+@bill.title+"&hashtags=PMO','Twitter','width=500,height=280')"}
+            Twitea
         %li
           %i.fa.fa-thumbs-up
             23

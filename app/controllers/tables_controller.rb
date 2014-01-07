@@ -8,8 +8,8 @@ class TablesController < ApplicationController
   def index
     # @tables = Table.all
     @tables = TableCollection.new
+    #puts ENV['tables']
     @tables.get(ENV['tables'],'application/json')
-    # @tables
   end
 
   # GET /tables/1
