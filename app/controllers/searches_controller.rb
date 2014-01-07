@@ -12,7 +12,7 @@ class SearchesController < ApplicationController
       @authors_list.push(author['name'])
     end
 
-    if !params.nil? && params.length > 3 # default have 2 keys {'action'=>'index', 'controller'=>'searchs', "locale"=>"xx"}
+    if !params.nil? && params.length > 3 # default have 3 keys {'action'=>'index', 'controller'=>'searchs', "locale"=>"xx"}
       @keywords = String.new
       params.each do |param|
         if param[0] != 'utf8' && param[0] != 'commit' && param[0] != 'format' && param[0] != 'locale' && param[0] != 'action'  && param[0] != 'controller'
