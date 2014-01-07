@@ -53,7 +53,6 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    addressable (2.3.5)
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
@@ -72,8 +71,6 @@ GEM
       simplecov (>= 0.7)
       term-ansicolor
       thor
-    crack (0.4.1)
-      safe_yaml (~> 0.9.0)
     diff-lcs (1.2.5)
     docile (1.1.1)
     ekuseru (0.3.10)
@@ -169,7 +166,6 @@ GEM
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
     ruby-ole (1.2.11.7)
-    safe_yaml (0.9.7)
     sass (3.2.13)
     simplecov (0.8.2)
       docile (~> 1.1.0)
@@ -208,9 +204,6 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
-    webmock (1.16.1)
-      addressable (>= 2.2.7)
-      crack (>= 0.3.2)
 
 PLATFORMS
   ruby
@@ -244,4 +237,3 @@ DEPENDENCIES
   sqlite3
   uglifier (= 1.0.3)
   unicorn
-  webmock

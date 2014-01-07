@@ -32,11 +32,6 @@ describe TablesController do
 
   describe "GET index" do
     it "assigns all tables as @tables" do
-      raw_response_file = File.open("./spec/webmock/tables.json")
-      stub_request(:get, ENV['tables']).
-        with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-        to_return(:status => 200, :body => raw_response_file, :headers => {})
-
       get :index, locale: 'es'
       assigns(:tables).should be_an_instance_of(TableCollection)
       assigns(:tables).tables.length.should equal(2)

@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 describe CommunicationsController do
-  WebMock.disable_net_connect! allow: [ENV['popit_url']]
-
   describe "GET 'index'" do
     it "returns http success" do
       get 'index', locale: 'es'
