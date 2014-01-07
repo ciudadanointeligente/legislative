@@ -5,7 +5,7 @@
     
   %div.col-md-9
     %h2
-      Perico los Palotes
+      = @parliamentarian.name
     %h4
       Diputado
     %table.table.table-striped.table-bordered.table-condensed
@@ -36,15 +36,18 @@
             Links:
           %td
             %ul{:style=>'list-style:none;padding-left:5px;'}
+            - @parliamentarian.links.each do | data |
               %li
-                %i.fa.fa-globe
-                Sitio web
-              %li
-                %i.fa.fa-facebook
-                Facebook
-              %li
-                %i.fa.fa-twitter
-                Twitter
+                - case data['note']
+                - when 'Facebook'
+                  %i.fa.fa-facebook
+                - when 'Twitter'
+                  %i.fa.fa-twitter
+                - else
+                  %i.fa.fa-globe
+                %a{'href'=> data['url']}
+                  = data['note']
+            
 
 %div.row
   %div.col-md-3

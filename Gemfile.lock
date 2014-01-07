@@ -116,9 +116,9 @@ GEM
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     polyglot (0.3.3)
-    popit_representers (0.0.7)
+    popit_representers (0.0.9)
       activemodel
-      roar
+      roar (= 0.11.19)
     protected_attributes (1.0.3)
       activemodel (>= 4.0.0, < 5.0)
     rack (1.5.2)
@@ -230,7 +230,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   json
-  popit_representers
+  popit_representers (= 0.0.9)
   protected_attributes
   rails (= 4.0.0)
   rails-i18n (~> 4.0.0)
