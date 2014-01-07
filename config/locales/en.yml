@@ -52,6 +52,7 @@ en:
     initial_chamber: 'Initial chamber:'
     author: Author
     placeholder_author: Type an author's name
+    there_are_no_results: There are no results for this search
   bill:
     bulletin: Bulletin
     title: Title
