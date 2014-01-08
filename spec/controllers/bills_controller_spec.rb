@@ -79,7 +79,7 @@ describe BillsController do
     it "returns @date_freq as an array of integers" do
       bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
       # bill = Bill.create! valid_attributes
-      get :show, {:id => bill.uid}, valid_session
+      get :show, {:id => bill.uid, :locale => 'es'}, valid_session
       assigns(:date_freq).should be_an_instance_of Array
       assigns(:date_freq).length.should be ENV['bill_graph_data_length'].to_i
       assigns(:date_freq).each do |freq|
@@ -88,10 +88,10 @@ describe BillsController do
     end
 
     it "assigns @date_freq values according to defined time intervals" do
-      bill = Bill.get(ENV['billit'] + "8438-07", 'application/json')
+      bill = Bill.get(ENV['billit'] + "6967-06", 'application/json')
       Date.stub(:today) {Date.new(2013, 4)}
       get :show, {:id => bill.uid, :locale => 'es'}, valid_session
-      assigns(:should).date_freq eq [0,0,0,0,0,5,0,0,1,1,0,4]
+      assigns(:date_freq).should eq [1,0,0,0,0,0,0,0,0,4,0,0]
     end
 
     xit "define time lapse (weeks, months, years) in ENV" do
