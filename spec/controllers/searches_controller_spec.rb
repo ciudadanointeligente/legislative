@@ -51,7 +51,7 @@ describe SearchesController do
     end
 
     it "has a next page" do
-      WebMock.disable_net_connect! allow: [ENV['billit']]
+      WebMock.disable_net_connect!(allow_localhost: true)
 
       get :index, q: 'arica', per_page: '2', locale: 'es'
       assigns(:bills_query).next.should eq(ENV['billit'] + "/search?page=2&per_page=2&q=arica")

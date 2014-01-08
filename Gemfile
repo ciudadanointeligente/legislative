@@ -29,6 +29,9 @@ gem 'protected_attributes'
 # Server
 gem 'unicorn'
 
+#HttParty
+gem 'httparty'
+
 # Template Engine
 gem 'haml-rails'
 
@@ -60,7 +63,6 @@ gem 'ekuseru'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
-gem 'coveralls', require: false
 gem 'rake', '10.1.1'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'route_translator'
