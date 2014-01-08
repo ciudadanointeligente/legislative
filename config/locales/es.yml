@@ -52,6 +52,7 @@ es:
     initial_chamber: 'Cámara de origen:'
     author: Autor
     placeholder_author: Ingresa el nombre de un autor
+    there_are_no_results: No hay resultados para esta búsqueda
   bill:
     bulletin: Boletín
     title: Título

@@ -1,0 +1,10 @@
+- @bills.each do |bill|
+  %div.row
+    %div.col-md-1
+      %i.fa.fa-bookmark.fa-5x
+    %div.col-md-11
+      %h4
+        = link_to bill.title, t('routes.bills') + '/' + bill.uid, :onclick => "ga('send','paperwork','bill', '"+bill.uid+"')"
+        %i.fa.fa-bell
+      %p 
+        = bill.abstract

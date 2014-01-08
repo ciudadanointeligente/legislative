@@ -8,6 +8,10 @@ class ParliamentariansController < ApplicationController
 
   # GET /parliamentarians/1
   def show
+    #@parliamentarian = PopitPerson.get(ENV['popit_persons'] + "#{params[:id]}", 'application/json')
+    @parliamentarian = PopitPerson.new
+    @parliamentarian.name = 'Gonzalo Arenas Hodar'
+    @parliamentarian.links = JSON.parse ('[{"url": "www.arenasdiputado.cl/","note": "Website"},{"url": "http://www.camara.cl/pdf.aspx?prmid=507&prmtipo=TRANSPARENCIA","note": "Declaration Interes"},{"url": "http://www.camara.cl/pdf.aspx?prmid=392&prmtipo=TRANSPARENCIA","note": "Declaration Patrimonio"},{"url": "http://facebook.com/group.php?gid=103267507483","note": "Facebook"}]')
   end
 
   # GET /parliamentarians/new

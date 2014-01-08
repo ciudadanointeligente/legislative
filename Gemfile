@@ -54,7 +54,7 @@ gem 'roar', '0.11.19'
 gem 'roar-rails', '0.1.0'
 gem 'faraday', '0.8.1'
 gem 'billit_representers', '~>0.7.0'
-gem 'popit_representers'
+gem 'popit_representers', '0.0.9'
 
 # Support to XLS export
 gem 'ekuseru'

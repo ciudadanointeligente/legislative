@@ -1,155 +1,43 @@
 :javascript
   var authors_list = #{@authors_list};
 
-%div.page-header
-  %h1= t 'search.search_title'
+/ buscador cabecera
+= render :partial => "simple_search_form"
+/ fin buscador cabecera
 
-= render :partial => "search_form"
+/loop for bills
+%div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
+  %div.row
+    %div.col-md-10
+      %h3 
+        Bills
+    %div.col-md-2
+      %button.btn.btn-default.btn-xs 
+        Búsqueda Avanzada
+  - @bills = @bills_query.bills
+  = render :partial => "box_bills_result" 
+/end of loop
 
-- if !@bills_query.nil?
-  - if !@bills_query.bills.empty?
-    %div.page-header
-      %h3{name: "result"}
-        =t 'search.bills', :default => 'Bill'
-        %small.btn.btn-default{:'data-toggle'=>"modal", :'data-target'=>"#suscripcion"}
-          %i.fa.fa-bell
-          ='Subscribirse a este resultado de búsqueda'
+/loop for parliamentarians
+%div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
+  %div.row
+    %div.col-md-10
+      %h3 
+        Parlamentarios
+    %div.col-md-2
+      %button.btn.btn-default.btn-xs
+        Búsqueda Avanzada
+  = render :partial => "box_parliamentarians_result"
+/end of loop
 
-    / modal suscription
-    %div.modal.fade{:id => 'suscripcion', :tabindex => "-1", :role=>"dialog", :'aria-labelledby'=>"mySuscriptionLabel", :'aria-hidden'=>"true"}
-      %div.modal-dialog
-        %div.modal-content
-          %div.modal-header
-            %button.close{:type=>"button", :'data-dismiss'=>"modal", :'aria-hidden'=>"true"}
-              x
-            %h4.modal-title{:id=>"mySuscriptionLabel"}
-              Suscripción
-          %div.modal-body
-            %div.row
-              %div.col-md-6
-                %p
-                  Deseas subscribirte a la búsqueda: 
-                %p
-                  %strong
-                    = params[:q]
-                %button.btn.btn-success
-                  Suscribir
-              %div.col-md-6
-                %p
-                  Te encuentras suscrito a las siguientes búsquedas:
-                %ul
-                  %li
-                    Educación
-                  %li
-                    Salud
-                  %li
-                    economia
-    / end modal suscription
-
-    %div.row
-      %div.col-md-4
-        %i.fa.fa-download
-        = link_to t('search.download_as_excel'), params.merge(:format => :xls), :onclick => "ga('send','paperwork','download_bills_xls_up')"
-
-      %div.col-md-4
-        %p= t('pagination.page') + @bills_query.current_page.to_s + t('pagination.of') + @bills_query.total_pages.to_s + ',' + t('pagination.with') + @bills_query.total_entries.to_s + t('pagination.results')
-
-      %div.col-md-4
-        %div.row
-          %div.col-md-6
-            -if @bills_query.previous
-              %button.btn.btn-default
-                %i.fa.fa-chevron-left
-                = link_to(t('pagination.previous'), url_for(action:'index') + '?' + get_params(@bills_query.previous))
-          %div.col-md-6
-            -if @bills_query.next
-              %button.btn.btn-default
-                = link_to(t('pagination.next'), url_for(action:'index') + '?' + get_params(@bills_query.next))
-                %i.fa.fa-chevron-right
-
-    %div.row
-      %div.col-md-3
-        Filtros
-        = render :partial => "filter_search_form"
-
-      %div.col-md-9
-        %div.table-responsive
-          %table.table.table-striped
-            %thead
-              %tr
-                %th= t 'bill.bulletin'
-                %th= t 'bill.title'
-                %th= t 'bill.creation_date'
-                %th= t 'bill.status'
-                %th= t 'bill.chamber'
-
-            %tbody
-            - @bills = @bills_query.bills
-            - @bills.each do |bill|
-              %tr
-                %td= bill.uid
-                %td
-                  = link_to bill.title, t('routes.bills') + '/' + bill.uid, :onclick => "ga('send','paperwork','bill', '"+bill.uid+"')"
-                  %a{"href" => "#", "data-toggle" => "modal", "data-target" => "#quickview-"+ bill.uid}
-                    %i.fa.fa-eye{title: t('search.quick')}
-                  %div.modal.fade{"id" => "quickview-"+ bill.uid, "tabindex" => "-1", "role" => "dialog", "aria-labelledby" => "myModalLabel", "aria-hidden" => "true"}
-                    %div.modal-dialog
-                      %div.modal-content
-                        %div.modal-header
-                          %button.close{"type" => "button", "data-dismiss" => "modal", "aria-hidden" => "true"}
-                            ×
-                          %h4.modal-title
-                            =bill.title
-                        %div.modal-body
-                          - @bill = bill
-                          = render :partial => "show"
-                %td= localize bill.creation_date.to_date, :format => :default
-                %td= bill.status
-                %td= bill.initial_chamber
-
-    %div.row
-      %div.col-md-4
-        %i.fa.fa-download
-        = link_to t('search.download_as_excel'), params.merge(:format => :xls), :onclick => "ga('send','paperwork','download_bills_xls_down')"
-
-      %div.col-md-4
-        %p= t('pagination.page') + @bills_query.current_page.to_s + t('pagination.of') + @bills_query.total_pages.to_s + ',' + t('pagination.with') + @bills_query.total_entries.to_s + t('pagination.results')
-
-      %div.col-md-4
-        %div.row
-          %div.col-md-6
-            %button.btn.btn-default
-              %i.fa.fa-chevron-left
-              = link_to(t('pagination.previous'), url_for(action:'index') + '?' + get_params(@bills_query.previous) + '#result')  if @bills_query.previous
-          %div.col-md-6
-            %button.btn.btn-default
-              = link_to(t('pagination.next'), url_for(action:'index') + '?' + get_params(@bills_query.next) + '#result')  if @bills_query.next
-              %i.fa.fa-chevron-right
-
-- if !@persons_query.empty?
-  %div.page-header
-    %h1{name: "result"}=t 'search.persons', :default => 'Authors'
-
-  %div.table-responsive
-    %table.table.table-striped
-      %thead
-        %tr
-          %th= 'Imagen'
-          %th= 'Nombre'
-          %th= 'Referencias'
-          %th= 'Referencias'
-
-      %tbody
-      - @persons = @persons_query
-      - @persons.each do |person|
-        %tr
-          %td
-            %img{src: person['images'][0]['url'], width: "90"}
-          %td
-            = link_to person['name'], ('http://' + ENV['popit_url'] + '/persons/' + person['slug'])
-          - if person['links'][1] != nil
-            %td
-              = link_to person['links'][1]['note'], person['links'][1]['url']
-          - if person['links'][2] != nil
-            %td
-              = link_to person['links'][2]['note'], person['links'][2]['url']
+/loop for questions
+%div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
+  %div.row
+    %div.col-md-10
+      %h3
+        Preguntas
+    %div.col-md-2
+      %button.btn.btn-default.btn-xs
+        Búsqueda Avanzada
+  = render :partial => "box_questions_result"
+/end of loop
