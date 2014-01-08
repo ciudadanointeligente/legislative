@@ -53,8 +53,8 @@
         %div.col-md-1
           %div.positive-vote
             %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador5.jpg', 'class' => 'img-circle chamber'}
-            %a{'href' => '#'}
-              %span{'class' => 'positive'}
+            = link_to(t('routes.parliamentarians')) do
+              %span{'class' => 'abstention'}
           %div.abstention-vote
             %img{'src' => 'http://www.senado.cl/prontus_senado/imag/dn5/senadores/senador4.jpg', 'class' => 'img-circle chamber'}
             %span{'class' => 'abstention'}
