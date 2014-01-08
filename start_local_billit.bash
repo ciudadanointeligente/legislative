@@ -30,7 +30,10 @@ if [ ! -e done.txt ]; then
   git checkout $BRANCH;
 
   # set up the environment
-  bundle install
+  mkdir vendor/gems
+  bundle install --path vendor/gems
+  gem install activeresource -v 3.2.13
+
   cp config.ru.example config.ru
   cp config/sunspot.yml.example config/sunspot.yml
   cp config/mongoid.yml.example config/mongoid.yml
