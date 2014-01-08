@@ -17,10 +17,6 @@ group :development, :test do
   gem 'coveralls', require: false
 end
 
-group :test do
-  gem 'webmock'
-end
-
 gem 'json'
 
 # For using protected attributes

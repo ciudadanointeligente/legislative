@@ -44,8 +44,6 @@ describe BillsController do
 
   describe "GET show" do
     it "assigns the requested bill as @bill" do
-      WebMock.disable_net_connect! allow: [ENV['billit'] + "6967-06"]
-
       bill = Bill.get(ENV['billit'] + "6967-06", 'application/json')
       # bill = Bill.create! valid_attributes
       get :show, {:id => bill.uid, :locale => 'es'}, valid_session
@@ -79,11 +77,6 @@ describe BillsController do
     end
 
     it "returns @date_freq as an array of integers" do
-      raw_response_file = File.open("./spec/webmock/bills_6967_06.json")
-      stub_request(:get, "http://billit.ciudadanointeligente.org/bills/6967-06").
-        with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-        to_return(:status => 200, :body => raw_response_file, :headers => {})
-
       bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
       # bill = Bill.create! valid_attributes
       get :show, {:id => bill.uid}, valid_session
@@ -95,16 +88,10 @@ describe BillsController do
     end
 
     it "assigns @date_freq values according to defined time intervals" do
-      raw_response_file = File.open("./spec/webmock/bills_6967_06.json")
-      stub_request(:get, "http://billit.ciudadanointeligente.org/bills/6967-06").
-        with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-        to_return(:status => 200, :body => raw_response_file, :headers => {})
-
-      bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
+      bill = Bill.get(ENV['billit'] + "8438-07", 'application/json')
       Date.stub(:today) {Date.new(2013, 4)}
-      get :show, {:id => bill.uid}, valid_session
-      
-      assigns(:date_freq).should eq [0,0,0,0,0,5,0,0,1,1,0,4]
+      get :show, {:id => bill.uid, :locale => 'es'}, valid_session
+      assigns(:should).date_freq eq [0,0,0,0,0,5,0,0,1,1,0,4]
     end
 
     xit "define time lapse (weeks, months, years) in ENV" do
@@ -166,15 +153,6 @@ describe BillsController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested bill" do
-        raw_response_file = File.open("./spec/webmock/bills_6967_06.json")
-        stub_request(:get, "http://billit.ciudadanointeligente.org/bills/6967-06").
-          with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-          to_return(:status => 200, :body => raw_response_file, :headers => {})
-
-        stub_request(:put, "http://billit.ciudadanointeligente.org/bills/6967-06").
-          with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-          to_return(:status => 200, :body => "", :headers => {})
-
         bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
         put :update, {id: bill.uid, tags: bill.tags, locale: 'es'}, valid_session
         assigns(:bill).tags.should eq(bill.tags)
