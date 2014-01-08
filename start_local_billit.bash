@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+export RAILS_VERSION=3.2.0
 
 # this script will fetch a copy of billit and start it running locally.
 # Assumes that ruby 2.0 is installed, and that mongodb is running locally and allows
