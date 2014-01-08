@@ -8,6 +8,8 @@ production:
   scout:      ~
   analytics:  "UA-XXXXX-X"
   disqus_shortname:         ~
+  bill_graph_data_length: '6'
+  bill_graph_day_interval: '12'
   parliaments-initial-date: "1990-03-01"
 
 development:
@@ -20,6 +22,8 @@ development:
   scout:      ~
   analytics:  "UA-XXXXX-X"
   disqus_shortname:         ~
+  bill_graph_data_length: '6'
+  bill_graph_day_interval: '12'
   parliaments-initial-date: "1990-03-01"
 
 test:
@@ -32,4 +36,6 @@ test:
   scout:      ~
   analytics:  "UA-XXXXX-X"
   disqus_shortname:     ~
+  bill_graph_data_length: '6'
+  bill_graph_day_interval: '12'
   parliaments-initial-date: "1990-03-01"
