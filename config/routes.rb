@@ -20,6 +20,7 @@ Legislative::Application.routes.draw do
     resources :tables
     resources :users
     resources :searches
+    resources :user_subscriptions
   end
 
   # The priority is based upon order of creation:

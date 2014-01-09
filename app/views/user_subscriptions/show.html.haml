@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @user_subscription.user_email
+%p
+  %b Bill:
+  = @user_subscription.bill
+%p
+  %b Confirmed:
+  = @user_subscription.confirmed
+
+= link_to 'Edit', edit_user_subscription_path(@user_subscription)
+\|
+= link_to 'Back', user_subscriptions_path

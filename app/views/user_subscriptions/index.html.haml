@@ -1,0 +1,23 @@
+%h1 Listing user_subscriptions
+
+%table
+  %tr
+    %th User
+    %th Bill
+    %th Confirmed
+    %th
+    %th
+    %th
+
+  - @user_subscriptions.each do |user_subscription|
+    %tr
+      %td= user_subscription.user_email
+      %td= user_subscription.bill
+      %td= user_subscription.confirmed
+      %td= link_to 'Show', user_subscription
+      %td= link_to 'Edit', edit_user_subscription_path(user_subscription)
+      %td= link_to 'Destroy', user_subscription, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New User subscription', new_user_subscription_path

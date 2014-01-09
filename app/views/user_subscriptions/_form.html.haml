@@ -1,0 +1,16 @@
+= form_for @user_subscription do |f|
+  - if @user_subscription.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@user_subscription.errors.count, "error")} prohibited this user_subscription from being saved:"
+      %ul
+        - @user_subscription.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :user_email
+    = f.email_field :user_email, placeholder: "Ingrese su Email"
+  .field
+    = f.label :bill
+    = f.text_field :bill, readonly: true, value: params[:bill]
+  .actions
+    = f.submit 'Save'

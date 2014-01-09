@@ -1,0 +1,2 @@
+module UserSubscriptionsHelper
+end
