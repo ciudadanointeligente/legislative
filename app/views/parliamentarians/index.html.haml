@@ -10,20 +10,12 @@
           %th
           %th
             Nombre
-          %th
-            Datos
+          
       %tbody
         - @parliamentarians.persons.each do |parliamentarian|
           %tr
             %td
               %img.img-responsive{:src=>parliamentarian.images[0]['url']}
             %td
-              %p
-                %a{:href=>parliamentarian.popit_web_url}
-                  =parliamentarian.name
-                = link_to parliamentarian.name, parliamentarian.id
-            %td
-              
-        %tr
-
+              = link_to parliamentarian.name, parliamentarian_path(parliamentarian.slug)
   

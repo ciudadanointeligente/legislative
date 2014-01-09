@@ -1,0 +1,8 @@
+- @parliamentarians.persons.each do |parliamentarian|
+  %div.row
+    %div.col-md-1
+      %img.img-circle.img-responsive{:src=>parliamentarian.images[0]['url']}
+    %div.col-md-11
+      %h4
+        %a{:href=>parliamentarian.popit_web_url}
+          =parliamentarian.name
