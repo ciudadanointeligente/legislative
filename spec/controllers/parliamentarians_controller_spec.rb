@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe ParliamentariansController do
-  WebMock.disable_net_connect!(allow_localhost: true)
   describe "GET 'index'" do
     it "returns http success" do
       get 'index', locale: 'es'

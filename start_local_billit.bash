@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+export RAILS_VERSION=3.2.0
 
 # this script will fetch a copy of billit and start it running locally.
 # Assumes that ruby 2.0 is installed, and that mongodb is running locally and allows
@@ -30,13 +31,16 @@ if [ ! -e done.txt ]; then
   git checkout $BRANCH;
 
   # set up the environment
-  bundle install
+  mkdir vendor/gems
+  bundle install --path vendor/gems
+  gem install activeresource -v 3.2.13
+
   cp config.ru.example config.ru
   cp config/sunspot.yml.example config/sunspot.yml
   cp config/mongoid.yml.example config/mongoid.yml
   cp config/hateoas.yml.example config/hateoas.yml
   mkdir log
-  sed -i 's/development.site.org/127.0.0.1.xip.io/g' config/hateoas.yml
+  sed -i 's/development.site.org/127.0.0.1.xip.io:3003/g' config/hateoas.yml
 
   touch done.txt;
 else

@@ -5,7 +5,7 @@ class BillsController < ApplicationController
   # GET /bills
   # GET /bills.json
   def index
-    # @bills = Bill.get("http://billit.ciudadanointeligente.org/bills/", 'application/json')
+    # @bills = Bill.get(ENV['billit'], 'application/json')
 
     # respond_to do |format|
       # format.html # index.html.erb
