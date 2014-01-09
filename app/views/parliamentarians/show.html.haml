@@ -35,6 +35,8 @@
           %td
             Links:
           %td
+            
+
             %ul{:style=>'list-style:none;padding-left:5px;'}
             - @parliamentarian.links.each do | data |
               %li
@@ -45,7 +47,13 @@
                   %i.fa.fa-twitter
                 - else
                   %i.fa.fa-globe
-                %a{'href'=> data['url']}
+
+                - url = data['url']
+                - u = URI.parse(data['url'])
+                - if (!u.scheme)
+                  - url = "http://" + data['url']
+
+                %a{'href'=> url, 'target'=>'_blank'}
                   = data['note']
             
 
