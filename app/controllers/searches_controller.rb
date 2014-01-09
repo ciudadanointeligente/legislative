@@ -32,4 +32,8 @@ class SearchesController < ApplicationController
       @bills_query = BillCollectionPage.get(ENV['billit'] + "search/?per_page=3", 'application/json')
     end
   end
+
+  def show
+    @bills_query = BillCollectionPage.get(ENV['billit'] + "search/?", 'application/json')
+  end
 end

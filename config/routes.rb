@@ -8,6 +8,7 @@ Legislative::Application.routes.draw do
   get "log_in" => "sessions#login", :as => "log_in"
   post "auth" => "sessions#login"
   get "sign_up" => "users#new", :as => "sign_up"
+  get "searches/advanced" => "searches#advanced", :as => "advanced"
 
   localized do
     resources :bills

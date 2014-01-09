@@ -12,8 +12,9 @@
       %h3 
         Bills
     %div.col-md-2
-      %button.btn.btn-default.btn-xs 
+      %a.btn.btn-default.btn-xs{'href' => t('routes.advanced')}
         Búsqueda Avanzada
+      
   - @bills = @bills_query.bills
   = render :partial => "box_bills_result" 
 /end of loop
