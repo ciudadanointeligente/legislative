@@ -17,6 +17,10 @@ group :development, :test do
   gem 'coveralls', require: false
 end
 
+group :test do
+  gem 'webmock'
+end
+
 gem 'json'
 
 # For using protected attributes
@@ -30,6 +34,9 @@ gem 'httparty'
 
 # Template Engine
 gem 'haml-rails'
+
+#Writeit
+gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
 
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
