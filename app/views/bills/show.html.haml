@@ -75,6 +75,82 @@
     generateGraph(freq,'myChartInt');
   }
 
+%ul.nav.nav-tabs
+  - if !@bill.authors.blank?
+    %li.active
+      %a{'href'=>'#tab01', 'data-toggle'=>'tab'}
+        Autores
+  - if !@bill.paperworks.blank?
+    %li
+      %a{'href'=>'#tab02', 'data-toggle'=>'tab'}
+        Eventos
+  - if !@bill.priorities.blank?
+    %li
+      %a{'href'=>'#tab03', 'data-toggle'=>'tab'}
+        Urgencias
+  - if !@bill.reports.blank?
+    %li
+      %a{'href'=>'#tab04', 'data-toggle'=>'tab'}
+        Reportes
+  - if !@bill.revisions.blank?
+    %li
+      %a{'href'=>'#tab05', 'data-toggle'=>'tab'}
+        Revisiones
+  - if !@bill.documents.blank?
+    %li
+      %a{'href'=>'#tab06', 'data-toggle'=>'tab'}
+        Documentos
+  - if !@bill.directives.blank?
+    %li
+      %a{'href'=>'#tab07', 'data-toggle'=>'tab'}
+        Indicaciones
+
+%div.tab-content
+  / autores
+  %div.tab-pane.active#tab01
+    - if !@bill.authors.blank?
+      - @author = @bill.authors
+      %ul
+        =render partial: "author", collection: @author
+  / eventos
+  %div.tab-pane#tab02
+    - if !@bill.paperworks.blank?
+      - @events = @bill.paperworks
+      =render partial: "event", collection: @events
+  / urgencias
+  %div.tab-pane#tab03
+    - if !@bill.priorities.blank?
+      - @urgencies = @bill.priorities
+      = render partial: "urgencie", collection: @urgencies
+  / reportes
+  %div.tab-pane#tab04
+    - if !@bill.reports.blank?
+      %table.table
+        %tr
+          - @reports = @bill.reports
+          %td= render partial: "report", collection: @reports
+  / modificaciones
+  %div.tab-pane#tab05
+    - if !@bill.revisions.blank?
+      %table.table
+        %tr
+          - @modifications = @bill.revisions
+          %td= render partial: "modification", collection: @modifications
+  / documentos
+  %div.tab-pane#tab06
+    - if !@bill.documents.blank?
+      %table.table
+        %tr
+          - @documents = @bill.documents
+          %td= render partial: "document", collection: @documents
+  / indicaciones
+  %div.tab-pane#tab07
+    - if !@bill.directives.blank?
+      %table.table
+        %tr
+          - @instructions = @bill.directives
+          %td= render partial: "instruction", collection: @instructions
+
 %div
   %h3.page-header
     Votaciones
