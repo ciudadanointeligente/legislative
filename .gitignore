@@ -28,5 +28,6 @@ writeit_local_for_testing
 /log/*
 /tmp/*
 /coverage/
+.coveralls.yml
 db/schema.rb
 .watsonrc
