@@ -11,7 +11,7 @@
 
   - @user_subscriptions.each do |user_subscription|
     %tr
-      %td= user_subscription.user_email
+      %td= user_subscription.user
       %td= user_subscription.bill
       %td= user_subscription.confirmed
       %td= link_to 'Show', user_subscription

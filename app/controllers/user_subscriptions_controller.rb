@@ -21,8 +21,21 @@ class UserSubscriptionsController < ApplicationController
 
   # POST /user_subscriptions
   def create
-    @user_subscription = UserSubscription.new(user_subscription_params)
+    @user_subscription = UserSubscription.new
+    @user_subscription.bill = params[:user_subscription][:bill]
     @user_subscription.confirmed = false
+    
+    @user = User.find_by_email(params[:user_subscription][:user])
+    if @user.nil?
+      @user = User.new
+      @user.username = params[:user_subscription][:user] #TODO: cambiar username por uno aleatorio (?)
+      @user.email = params[:user_subscription][:user]
+      @user.password = "ciudadanointeligente2014" #TODO: generar password aleatoria
+      @user.password_confirmation = "ciudadanointeligente2014" #TODO: generar password aleatoria
+      @user.save
+    end
+
+    @user_subscription.user = @user.id 
 
     if @user_subscription.save
       redirect_to @user_subscription, notice: 'User subscription was successfully created.'
@@ -46,21 +59,6 @@ class UserSubscriptionsController < ApplicationController
     redirect_to user_subscriptions_url, notice: 'User subscription was successfully destroyed.'
   end
 
-  def subscribe
-    @user = params[:user_email]
-    @bill = Bill.get(ENV['billit'] + "#{params[:bill]}", 'application/json')
-
-    # Añadir bill to subscriptions
-    @user_subscription = UserSubscription.new
-    @user_subscription.user_email = @user
-    @user_subscription.bill = @bill.uid
-    @user_subscription.confirmed = false
-    @user_subscription.save
-
-    salida = @user_subscription.user_email + " subscribes to " + @user_subscription.bill
-    render text: salida
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user_subscription
@@ -69,6 +67,7 @@ class UserSubscriptionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_subscription_params
-      params.require(:user_subscription).permit(:user_email, :bill, :confirmed)
+      params.require(:user_subscription).permit(:user, :bill)
     end
+
 end

@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :user_subscription do
-    user_email 1
-    bill "MyString"
+    user 57
+    bill "107-65"
     confirmed false
   end
 end

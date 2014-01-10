@@ -1,16 +1,15 @@
-= form_for @user_subscription do |f|
+= form_for @user_subscription, :html => {:class => ""} do |f|
   - if @user_subscription.errors.any?
     #error_explanation
       %h2= "#{pluralize(@user_subscription.errors.count, "error")} prohibited this user_subscription from being saved:"
       %ul
         - @user_subscription.errors.full_messages.each do |msg|
           %li= msg
-
-  .field
-    = f.label :user_email
-    = f.email_field :user_email, placeholder: "Ingrese su Email"
-  .field
+  %div.form-group
+    = f.label :user
+    = f.email_field :user, placeholder: "Ingrese su Email", class: 'form-control'
+  %div.form-group
     = f.label :bill
-    = f.text_field :bill, readonly: true, value: params[:bill]
-  .actions
-    = f.submit 'Save'
+    = f.text_field :bill, readonly: true, value: params[:bill], class: 'form-control' 
+  %p.button
+    = f.submit class: 'btn btn-success', value: 'Suscribirse'

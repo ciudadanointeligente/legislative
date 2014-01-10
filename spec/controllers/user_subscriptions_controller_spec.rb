@@ -23,7 +23,7 @@ describe UserSubscriptionsController do
   # This should return the minimal set of attributes required to create a valid
   # UserSubscription. As you add validations to UserSubscription, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "user_email" => "1" } }
+  let(:valid_attributes) { { "user" => "3" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -63,7 +63,7 @@ describe UserSubscriptionsController do
 
   describe "POST create" do
     describe "with valid params" do
-      xit "creates a new UserSubscription" do
+      it "creates a new UserSubscription" do
         expect {
           post :create, {:user_subscription => valid_attributes}, valid_session
         }.to change(UserSubscription, :count).by(1)
@@ -85,14 +85,14 @@ describe UserSubscriptionsController do
       xit "assigns a newly created but unsaved user_subscription as @user_subscription" do
         # Trigger the behavior that occurs when invalid params are submitted
         UserSubscription.any_instance.stub(:save).and_return(false)
-        post :create, {:user_subscription => { "user_email" => "invalid value" }}, valid_session
+        post :create, {:user_subscription => { "user" => "invalid value" }}, valid_session
         assigns(:user_subscription).should be_a_new(UserSubscription)
       end
 
       xit "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         UserSubscription.any_instance.stub(:save).and_return(false)
-        post :create, {:user_subscription => { "user_email" => "invalid value" }}, valid_session
+        post :create, {:user_subscription => { "user" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -106,8 +106,8 @@ describe UserSubscriptionsController do
         # specifies that the UserSubscription created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        UserSubscription.any_instance.should_receive(:update).with({ "user_email" => "1" })
-        put :update, {:id => user_subscription.to_param, :user_subscription => { "user_email" => "1" }}, valid_session
+        UserSubscription.any_instance.should_receive(:update).with({ "user" => "1" })
+        put :update, {:id => user_subscription.to_param, :user_subscription => { "user" => "1" }}, valid_session
       end
 
       xit "assigns the requested user_subscription as @user_subscription" do
@@ -128,7 +128,7 @@ describe UserSubscriptionsController do
         user_subscription = UserSubscription.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         UserSubscription.any_instance.stub(:save).and_return(false)
-        put :update, {:id => user_subscription.to_param, :user_subscription => { "user_email" => "invalid value" }}, valid_session
+        put :update, {:id => user_subscription.to_param, :user_subscription => { "user" => "invalid value" }}, valid_session
         assigns(:user_subscription).should eq(user_subscription)
       end
 
@@ -136,7 +136,7 @@ describe UserSubscriptionsController do
         user_subscription = UserSubscription.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         UserSubscription.any_instance.stub(:save).and_return(false)
-        put :update, {:id => user_subscription.to_param, :user_subscription => { "user_email" => "invalid value" }}, valid_session
+        put :update, {:id => user_subscription.to_param, :user_subscription => { "user" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end
