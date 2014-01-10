@@ -48,4 +48,9 @@ class ParliamentariansController < ApplicationController
     # @parliamentarian.destroy
     # redirect_to parliamentarians_url, notice: 'Parliamentarian was successfully destroyed.'
   end
+
+  def searches
+    @parliamentarians = PopitPersonCollection.new
+    @parliamentarians.get ENV['popit_persons'], 'application/json'
+  end
 end

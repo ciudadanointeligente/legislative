@@ -1,0 +1,12 @@
+/ buscador cabecera
+= render :partial => "simple_search_form"
+/ fin buscador cabecera
+
+%h3.page-header
+  Resultado
+
+%div.row
+  %div.col-md-4
+    = render :partial => "filter_search_form"
+  %div.col-md-8
+    = render :partial => "box_parliamentarians_result" 
