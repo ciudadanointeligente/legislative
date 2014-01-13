@@ -7,6 +7,7 @@ env:
 gemfile:
   - Gemfile
 before_script:
+  - source ~/.rvm/scripts/rvm && rvm use $RVM_RUBY_VERSION
   - bash start_local_billit.bash
   - rvm gemset use default
   - bash start_local_writeit.bash
