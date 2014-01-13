@@ -33,9 +33,8 @@ class SearchesController < ApplicationController
     else
       @bills_query = BillCollectionPage.get(ENV['billit'] + "search/?per_page=3", 'application/json')
     end
-  end
-
-  def show
-    @bills_query = BillCollectionPage.get(ENV['billit'] + "search/?", 'application/json')
+    
+    @parliamentarians = PopitPersonCollection.new
+    @parliamentarians.get ENV['popit_persons'], 'application/json'
   end
 end

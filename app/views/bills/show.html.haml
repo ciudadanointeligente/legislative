@@ -62,8 +62,6 @@
           %i.fa.fa-thumbs-down
             15
 
-
-
 %div
   %h3.page-header
     Avances
@@ -73,9 +71,96 @@
 :javascript
   window.onload = function(){
     
-    var freq = [0,3,0,2,0,3,2,0,2,0,5,0,1,2,1]
+    var freq = #{@date_freq};
     generateGraph(freq,'myChartInt');
+
+    $(".showmebutton").click(function() {
+      $( ".showmecontent" ).toggle();
+    });
   }
+
+%div
+  %div.text-right
+    /.dropup
+    %a.showmebutton{'href'=>'#'}
+      ver más
+      %span.caret 
+  %div.showmecontent{'style' => 'display:none;'}
+    %ul.nav.nav-tabs
+      - if !@bill.authors.blank?
+        %li.active
+          %a{'href'=>'#tab01', 'data-toggle'=>'tab'}
+            Autores
+      - if !@bill.paperworks.blank?
+        %li
+          %a{'href'=>'#tab02', 'data-toggle'=>'tab'}
+            Eventos
+      - if !@bill.priorities.blank?
+        %li
+          %a{'href'=>'#tab03', 'data-toggle'=>'tab'}
+            Urgencias
+      - if !@bill.reports.blank?
+        %li
+          %a{'href'=>'#tab04', 'data-toggle'=>'tab'}
+            Reportes
+      - if !@bill.revisions.blank?
+        %li
+          %a{'href'=>'#tab05', 'data-toggle'=>'tab'}
+            Revisiones
+      - if !@bill.documents.blank?
+        %li
+          %a{'href'=>'#tab06', 'data-toggle'=>'tab'}
+            Documentos
+      - if !@bill.directives.blank?
+        %li
+          %a{'href'=>'#tab07', 'data-toggle'=>'tab'}
+            Indicaciones
+
+    %div.tab-content
+      / autores
+      - if !@bill.authors.blank?
+        %div.tab-pane.active#tab01
+          - @author = @bill.authors
+          %ul
+            = render partial: "author", collection: @author
+      / eventos
+      - if !@bill.paperworks.blank?
+        %div.tab-pane#tab02
+          - @events = @bill.paperworks
+          = render partial: "event", collection: @events
+      / urgencias
+      - if !@bill.priorities.blank?
+        %div.tab-pane#tab03
+          - @urgencies = @bill.priorities
+          = render partial: "urgencie", collection: @urgencies
+      / reportes
+      - if !@bill.reports.blank?
+        %div.tab-pane#tab04
+          %table.table
+            %tr
+              - @reports = @bill.reports
+              %td= render partial: "report", collection: @reports
+      / modificaciones
+      - if !@bill.revisions.blank?
+        %div.tab-pane#tab05
+          %table.table
+            %tr
+              - @modifications = @bill.revisions
+              %td= render partial: "modification", collection: @modifications
+      / documentos
+      - if !@bill.documents.blank?
+        %div.tab-pane#tab06
+          %table.table
+            %tr
+              - @documents = @bill.documents
+              %td= render partial: "document", collection: @documents
+      / indicaciones
+      - if !@bill.directives.blank?
+        %div.tab-pane#tab07
+          %table.table
+            %tr
+              - @instructions = @bill.directives
+              %td= render partial: "instruction", collection: @instructions
 
 %div
   %h3.page-header
