@@ -8,6 +8,7 @@ gemfile:
   - Gemfile
 before_script:
   - bash start_local_billit.bash
+  - bash start_local_writeit.bash
   - start_local_popit_api.bash
   #- start_local_writeit.bash
   # updating bundle environment
