@@ -32,10 +32,9 @@ if [ ! -e done.txt ]; then
 
   # set up the environment
   mkdir vendor/gems
-  
-  rvm gemdir
-  rvm gemset name
-  rvm gemset list
+
+  rvm gemset create billit
+  rvm gemset use billit
 
 
   bundle install --path vendor/gems

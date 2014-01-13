@@ -7,10 +7,8 @@ env:
 gemfile:
   - Gemfile
 before_script:
-  - rvm gemdir
-  - rvm gemset name
-  - rvm gemset list
   - bash start_local_billit.bash
+  - rvm gemset use default
   - bash start_local_writeit.bash
   - start_local_popit_api.bash
   #- start_local_writeit.bash
