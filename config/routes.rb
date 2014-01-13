@@ -10,6 +10,8 @@ Legislative::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   get "searches/advanced" => "searches#advanced", :as => "advanced"
 
+
+
   localized do
     resources :bills
     resources :communications
@@ -22,6 +24,7 @@ Legislative::Application.routes.draw do
     resources :searches
   end
 
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

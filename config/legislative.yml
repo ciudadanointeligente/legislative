@@ -30,7 +30,7 @@ test:
   root_url:   ~
   billit:     "http://localhost:80/bills/"
   popit_persons:  "http://localhost:3002/api/persons/"
-  popit_url: "localhost:3003"
+  popit_url: "localhost:3002"
   tables:     "http://pmo.apidone.com/tables"
   writeit:    ~
   scout:      ~
@@ -38,4 +38,8 @@ test:
   disqus_shortname:     ~
   bill_graph_data_length: '12'
   bill_graph_day_interval: '7'
-  parliaments-initial-date: "1990-03-01"
+  writeit_base_url: "http://localhost:3001"
+  writeit_url: "/api/v1/instance/1/"
+  writeit_username: "admin"
+  writeit_api_key: "a"
+
