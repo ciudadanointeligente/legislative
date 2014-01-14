@@ -5,3 +5,7 @@
     %div.col-md-11
       %h4
         = link_to parliamentarian.name, parliamentarian_path(parliamentarian.slug)
+
+- if @parliamentarians.persons.count == 0
+  %p.text-center
+    No se han encontrado resultados
