@@ -33,4 +33,14 @@ Legislative::Application.configure do
   config.assets.debug = true
 
   config.eager_load = false
+
+  # Send Legislative mails to Cuttlefish (see http://cuttlefish.io)
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "localhost",
+    :port => 2525,
+    :user_name => "legislative_5",
+    :password => "6DeHq31H0If9bj2rWAr0",
+    :authentication => :plain
+  }
 end

@@ -38,6 +38,7 @@ class UserSubscriptionsController < ApplicationController
     @user_subscription.user = @user.id 
 
     if @user_subscription.save
+      UserSubscriptionMailer.confirmation_email(@user_subscription).deliver
       redirect_to @user_subscription, notice: 'User subscription was successfully created.'
     else
       render action: 'new'
