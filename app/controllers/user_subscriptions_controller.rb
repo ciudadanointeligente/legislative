@@ -39,10 +39,25 @@ class UserSubscriptionsController < ApplicationController
 
     if @user_subscription.save
       UserSubscriptionMailer.confirmation_email(@user_subscription).deliver
-      redirect_to @user_subscription, notice: 'User subscription was successfully created.'
+      flash[:notice] = t('user_subscriptions.confirmation_mail_sent')
     else
-      render action: 'new'
+      confirmed_user = UserSubscription.where(:user => @user_subscription.user, :bill => @user_subscription.bill).first
+      if confirmed_user.confirmed == false
+        flash[:notice] = t('user_subscriptions.already_subscribe')
+        UserSubscriptionMailer.confirmation_email(confirmed_user).deliver
+      else
+        flash[:notice] = t('user_subscriptions.already_subscribe')
+      end
     end
+    redirect_to bill_path(@user_subscription.bill)
+  end
+
+  def confirmed
+    @user_subscription = UserSubscription.find_by_email_token(params[:email_token])
+    @user_subscription.confirmed = true
+    @user_subscription.save
+    flash[:notice] = t('user_subscriptions.verified_mail')
+    redirect_to bill_path(@user_subscription.bill)
   end
 
   # PATCH/PUT /user_subscriptions/1

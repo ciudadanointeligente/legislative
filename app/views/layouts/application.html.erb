@@ -79,15 +79,16 @@
 
     <div class="container">
 
-      <!--<div class="row">
+      <div class="row">
         <div class="col-md-12">
           <% flash.each do |name, msg| %>
             <div class="alert alert-info">
+            <button type="button" class="close" aria-hidden="true" data-dismiss="alert">&times;</button>
               <%= content_tag :div, msg, :id => "flash_#{name}" %>
             </div>
           <% end %>
         </div>
-      </div>-->
+      </div>
       <%= yield %>
 
     </div> <!-- /container -->
