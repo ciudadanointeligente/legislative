@@ -6,38 +6,41 @@
 / fin buscador cabecera
 
 /loop for bills
-%div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
-  %div.row
-    %div.col-md-10
-      %h3 
-        Bills
-    %div.col-md-2
-      = link_to 'Búsqueda Avanzada', searches_bills_path, class: 'btn btn-default btn-xs'
-      
-  - @bills = @bills_query.bills
-  = render :partial => "box_bills_result" 
+- if params[:bills] == '1'
+  %div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
+    %div.row
+      %div.col-md-10
+        %h3 
+          Bills
+      %div.col-md-2
+        = link_to 'Búsqueda Avanzada', searches_bills_path, class: 'btn btn-default btn-xs'
+        
+    - @bills = @bills_query.bills
+    = render :partial => "box_bills_result" 
 /end of loop
 
 /loop for parliamentarians
-%div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
-  %div.row
-    %div.col-md-10
-      %h3 
-        Parlamentarios
-    %div.col-md-2
-      = link_to 'Búsqueda Avanzada', searches_parliamentarians_path, class: 'btn btn-default btn-xs'
+- if params[:parliamentarians] == '2'
+  %div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
+    %div.row
+      %div.col-md-10
+        %h3 
+          Parlamentarios
+      %div.col-md-2
+        = link_to 'Búsqueda Avanzada', searches_parliamentarians_path, class: 'btn btn-default btn-xs'
 
-  = render :partial => "box_parliamentarians_result"
+    = render :partial => "box_parliamentarians_result"
 /end of loop
 
 /loop for questions
-%div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
-  %div.row
-    %div.col-md-10
-      %h3
-        Preguntas
-    %div.col-md-2
-      %button.btn.btn-default.btn-xs
-        Búsqueda Avanzada
-  = render :partial => "box_questions_result"
+- if params[:parliamentarians] == '3'
+  %div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
+    %div.row
+      %div.col-md-10
+        %h3
+          Preguntas
+      %div.col-md-2
+        %button.btn.btn-default.btn-xs
+          Búsqueda Avanzada
+    = render :partial => "box_questions_result"
 /end of loop
