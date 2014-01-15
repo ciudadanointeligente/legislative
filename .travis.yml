@@ -14,7 +14,8 @@ install:
   - rake db:migrate
   - rake db:seed
 before_script:
-  - source ~/.rvm/scripts/rvm && rvm use $RVM_RUBY_VERSION
+  - source ~/.rvm/scripts/rvm
+  - type rvm | head -n 1
   - bash start_local_billit.bash
   - rvm gemset use default
   - bash start_local_writeit.bash
