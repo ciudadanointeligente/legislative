@@ -3,8 +3,7 @@ require 'httparty'
 
 class SearchesController < ApplicationController
   def index
-    response = HTTParty.get(ENV['popit_url']+'/api/v0.1/persons/')
-    puts response.body
+    response = HTTParty.get(ENV['popit_persons'])
     json_response = JSON.parse(response.body)
     authors_detail_list = json_response['result']
 

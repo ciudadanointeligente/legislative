@@ -34,15 +34,13 @@ describe CommunicationsController do
       parliamentarians.get ENV['popit_persons'], 'application/json'
       parliamentarian1 = parliamentarians.persons[0]
       post :create, locale: 'es', 
-        data: {
                 :author_name => 'autor 1',
                 :author_email => 'test@ciudadanointeligente.org',
                 :subject => 'subject 1',
                 :content => 'Content 1',
                 :recipients => [
-                  parliamentarian1.popit_web_url,
+                  parliamentarian1.popit_api_uri,
                 ]
-            }
 
       assigns(:message).should_not be_nil
       assigns(:message).writeitinstance.base_url.should eql ENV['writeit_base_url']

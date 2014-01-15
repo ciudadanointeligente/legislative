@@ -4,5 +4,8 @@
       %img.img-circle.img-responsive{:src=>parliamentarian.images[0]['url']}
     %div.col-md-11
       %h4
-        %a{:href=>parliamentarian.popit_web_url}
-          =parliamentarian.name
+        = link_to parliamentarian.name, parliamentarian_path(parliamentarian.slug)
+
+- if @parliamentarians.persons.count == 0
+  %p.text-center
+    No se han encontrado resultados
