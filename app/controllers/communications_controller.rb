@@ -12,13 +12,13 @@ class CommunicationsController < ApplicationController
     set_current_instance
   	@message = Message.new
     @message.writeitinstance = @writeitinstance
-  	@message.subject = params[:data][:subject]
-    @message.content = params[:data][:content]
-    @message.recipients = params[:data][:recipients]
-    @message.remote_uri = params[:data][:remote_uri]
-    @message.remote_id = params[:data][:remote_id]
-    @message.author_name = params[:data][:author_name]
-    @message.author_email = params[:data][:author_email]
+  	@message.subject = params[:subject]
+    @message.content = params[:content]
+    @message.recipients = params[:recipients]
+    @message.remote_uri = params[:remote_uri]
+    @message.remote_id = params[:remote_id]
+    @message.author_name = params[:author_name]
+    @message.author_email = params[:author_email]
     @message.push_to_api
   end
 
