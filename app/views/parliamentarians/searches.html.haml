@@ -1,12 +1,16 @@
-/ buscador cabecera
-= render :partial => "simple_search_form"
-/ fin buscador cabecera
+= form_tag({controller: "parliamentarians", action: "searches"}, :method => 'get') do
+  / buscador cabecera
+  = render :partial => "simple_search_form"
+  / fin buscador cabecera
 
-%h3.page-header
-  Resultado
+  %div.row
+    %div.col-md-4
+      %h4.page-header
+        Filtros
 
-%div.row
-  %div.col-md-4
-    = render :partial => "filter_search_form"
-  %div.col-md-8
-    = render :partial => "box_parliamentarians_result" 
+      = render :partial => "filter_search_form"
+    %div.col-md-8
+      %h4.page-header
+        Resultado
+
+      = render :partial => "box_parliamentarians_result" 

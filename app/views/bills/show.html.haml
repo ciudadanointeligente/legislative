@@ -68,16 +68,249 @@
   %canvas#myChartInt{'height'=>"80",'width'=>'750', 'style'=>'width:100%'}
 
 %script{'src'=>"http://www.chartjs.org/assets/Chart.js"}
+
+= javascript_include_tag 'svg/jquery.svg.min.js'
+= javascript_include_tag 'svg/jquery.svgdom.min.js'
+= javascript_include_tag 'svg/jquery.svganim.min.js'
+
 :javascript
   window.onload = function(){
     
     var freq = #{@date_freq};
     generateGraph(freq,'myChartInt');
 
-    $(".showmebutton").click(function() {
+    $(".showmebutton").click(function(e) {
+      e.preventDefault();
       $( ".showmecontent" ).toggle();
     });
+
+    //svg animation
+    $('svg.graph .points circle.plain').each( function(index) {
+      // For each plain circle...
+      $(this).on('mouseenter', function(event) {
+        showTooltip(this);
+        // Grow shadow point when mouse enters the point
+        $(this).prev().stop(true, false ).animate( {
+          svgR: 12,
+          svgStrokeOpacity: 0,
+          svgStrokeWidth: 0,
+        }, 200 );
+      }).on('mouseleave', function(event) {
+        hideTooltip();
+        // Shrink shadow point when mouse leaves the point
+        $(this).prev().stop(true, false ).animate( {
+          svgR: 5,
+          svgStrokeOpacity: 1,
+          svgStrokeWidth: 4
+        }, 200 );
+      });
+    });
   }
+
+  function showTooltip( dataPoint )
+  {
+    tooltip = $('#tooltip');
+    dataPoint = $(dataPoint);
+
+    // Set the data-set title, using the group element
+    tooltip.find('#tooltip-title').text( dataPoint.parent().data('setname') );
+
+    // Set the value for this data point
+    tooltip.find('.value-part').text( dataPoint.data('value') );
+
+    // Determine whether to switch tooltip to the left, because of small screen
+    tooltipX = dataPoint.offset().left + 10;
+    tooltipY = dataPoint.offset().top + 40;
+
+    // Check if tooltip fits, with a extra border of 10 px
+    if( tooltipX + tooltip.outerWidth(true) + 10 > $(window).width() )
+    {
+      tooltipX = dataPoint.offset().left - tooltip.outerWidth(true);
+
+      tooltip.addClass('right');
+
+      // Adjust SVG pointer
+      $('#tooltip-triangle').attr('transform', 'scale(-1,1) translate(-11,0)' );
+    }
+    else
+    {
+      tooltip.removeClass('right');
+      $('#tooltip-triangle').attr('transform', '' );
+    }
+
+    tooltip.stop( true, true ).delay(100).animate( {
+      top: tooltipY,
+      left: tooltipX
+    }, 0 ).fadeIn('fast');
+  }
+
+  function hideTooltip()
+  {
+    // Hide popover and stop animating the bar
+    $('#tooltip').stop(true, true).delay(200).fadeOut('fast' );
+  }
+
+
+:css
+  svg.graph {
+    height: 500px;
+    width: 800px;
+  }
+
+  svg.graph .grid {
+    stroke: white;
+    stroke-dasharray: 1 2;
+    stroke-width: 1;
+  }
+
+  svg.graph .points {
+    stroke: white;
+    stroke-width: 3;
+  }
+  svg.graph .first_set {
+    fill: #00554d;
+  }
+
+  svg.graph .surfaces {
+    fill-opacity: 0.5;
+  }
+
+  svg.graph .grid.double {
+    stroke-opacity: 0.4;
+  }
+
+  svg.graph .labels {
+    font-family: Arial;
+    font-size: 14px;
+    kerning: 1;
+  }
+
+  svg.graph .labels.x-labels {
+    text-anchor: middle;
+  }
+
+  svg.graph .labels.y-labels {
+    text-anchor: end;
+  }
+  
+  #tooltip {
+    position: absolute;
+    background: black;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 9px 11px 0px 11px;
+    display: none;
+    z-index: 100 !important;
+    width: 165px;
+    min-height: 80px;
+    box-shadow: 1px 1px 1px 0px #000;
+  }
+  #tooltip.right {
+      box-shadow: -1px 1px 1px 0px #000;
+  }
+  #tooltip.right svg {
+      left: auto;
+      right: 0px;
+  }
+  #tooltip svg {
+      position: absolute;
+      display: inline;
+      float: right;
+      left: 0px;
+      right: auto;
+      top: -13px;
+      width: 11px;
+      height: 13px;
+  }
+  #tooltip #tooltip-triangle {
+      background: black;
+      fill: rgba(0, 0, 0, 0.8);
+  }
+  #tooltip .value .value-part {
+      font-size: 32px;
+      vertical-align: top;
+      position: relative;
+      top: -3px;
+  }
+
+%div
+  %svg.graph{'version'=>'1.1', 'xmlns:xlink'=>"http://www.w3.org/1999/xlink", 'xmlns'=>"http://www.w3.org/2000/svg"}
+    /radial gradient
+    %defs
+      %radialGradient#gradientShadow{'cx'=>'50%', 'cy'=>'50%', 'fx'=>'50%', 'fy'=>'50%', 'r'=>'55%'}
+        %stop{'offset'=>'0%', 'style'=>'stop-color:rgb(0,0,0); stop-opacity:1'}
+        %stop{'offset'=>'100%', 'style'=>'stop-color:#AAA; stop-opacity:0'}
+    %g.grid.x-grid#xGrid
+      %line{'x1'=>'100', 'x2'=>'100', 'y1'=>'10', 'y2'=>'380'}
+      %line{'x1'=>'230', 'x2'=>'230', 'y1'=>'10', 'y2'=>'380'}
+      %line{'x1'=>'360', 'x2'=>'360', 'y1'=>'10', 'y2'=>'380'}
+      %line{'x1'=>'490', 'x2'=>'490', 'y1'=>'10', 'y2'=>'380'}
+      %line{'x1'=>'620', 'x2'=>'620', 'y1'=>'10', 'y2'=>'380'}
+    %g.grid.y-grid#yGrid
+      %line{'x1'=>'86', 'x2'=>'620', 'y1'=>'50', 'y2'=>'50'}
+      %line{'x1'=>'86', 'x2'=>'620', 'y1'=>'100', 'y2'=>'100'}
+      %line{'x1'=>'86', 'x2'=>'620', 'y1'=>'150', 'y2'=>'150'}
+      %line{'x1'=>'86', 'x2'=>'620', 'y1'=>'200', 'y2'=>'200'}
+      %line{'x1'=>'86', 'x2'=>'620', 'y1'=>'250', 'y2'=>'250'}
+      %line{'x1'=>'86', 'x2'=>'620', 'y1'=>'300', 'y2'=>'300'}
+      %line{'x1'=>'86', 'x2'=>'620', 'y1'=>'350', 'y2'=>'350'}
+    /surface
+    %g.surfaces
+      %path.first_set{'d'=>'M100,350 L100,350 L230,300 L350,179 L490,60 L620,204 L620,350 Z'}
+    /grid lines
+    %use.grid.double{'xlink:href'=>'#xGrid','style'=>''}
+    %use.grid.double{'xlink:href'=>'#yGrid','style'=>''}
+    /points
+    %g.first_set.points{'data-setname'=>'set de datos'}
+      %circle.shadow{'cx'=>'100', 'cy'=>'350', 'r'=>'5', 'stroke'=>'#AAA', 'stroke-width'=>"4", 'stroke-opacity'=>"1", 'style'=>"fill: url(#gradientShadow);"}
+      %circle.plain{'cx'=>'100', 'cy'=>'350', 'data-value'=>'7', 'r'=>'5'}
+
+      %circle.shadow{'cx'=>'230', 'cy'=>'300', 'r'=>'5', 'stroke'=>'#AAA', 'stroke-width'=>"4", 'stroke-opacity'=>"1", 'style'=>"fill: url(#gradientShadow);"}
+      %circle.plain{'cx'=>'230', 'cy'=>'300', 'data-value'=>'5', 'r'=>'5'}
+
+      %circle.shadow{'cx'=>'350', 'cy'=>'179', 'r'=>'5', 'stroke'=>'#AAA', 'stroke-width'=>"4", 'stroke-opacity'=>"1", 'style'=>"fill: url(#gradientShadow);"}
+      %circle.plain{'cx'=>'350', 'cy'=>'179', 'data-value'=>'2', 'r'=>'5'}
+
+      %circle.shadow{'cx'=>'490', 'cy'=>'60', 'r'=>'5', 'stroke'=>'#AAA', 'stroke-width'=>"4", 'stroke-opacity'=>"1", 'style'=>"fill: url(#gradientShadow);"}
+      %circle.plain{'cx'=>'490', 'cy'=>'60', 'data-value'=>'6', 'r'=>'5'}
+
+      %circle.shadow{'cx'=>'620', 'cy'=>'204', 'r'=>'5', 'stroke'=>'#AAA', 'stroke-width'=>"4", 'stroke-opacity'=>"1", 'style'=>"fill: url(#gradientShadow);"}
+      %circle.plain{'cx'=>'620', 'cy'=>'204', 'data-value'=>'1', 'r'=>'5'}
+    /labels
+    %g.labels.x-labels
+      %text{'x'=>'100', 'y'=>'400'}
+        2010
+      %text{'x'=>'230', 'y'=>'400'}
+        2011
+      %text{'x'=>'360', 'y'=>'400'}
+        Agosto
+      %text{'x'=>'490', 'y'=>'400'}
+        Octubre
+      %text{'x'=>'620', 'y'=>'400'}
+        Diciembre
+    %g.labels.y-labels
+      %text{'x'=>'60', 'y'=>'15'}
+        eventos
+      %text{'x'=>'80', 'y'=>'15'}
+        15
+      %text{'x'=>'80', 'y'=>'131'}
+        10
+      %text{'x'=>'80', 'y'=>'248'}
+        5
+      %text{'x'=>'80', 'y'=>'365'}
+        0
+
+%div#tooltip
+  %svg
+    %polygon#tooltip-triangle{'points'=>'0,0 11,13 0,13'}
+  %p#tooltip-title
+  %div.value
+    %span.value-part
+    %span.value-total
+      eventos
 
 %div
   %div.text-right
@@ -166,4 +399,21 @@
   %h3.page-header
     Votaciones
   =render partial: "chamber_votes"
-  
+
+%div#disqus_thread
+  %p= t 'bill.comments'
+
+:javascript
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_developer = '#{ ENV['disqus_developer'] }';
+        var disqus_shortname = '#{ ENV['disqus_shortname'] }'; // required: replace example with your forum shortname
+        var disqus_config = function () {
+          this.language = '#{ ENV['disqus_language'] }';
+        };
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();

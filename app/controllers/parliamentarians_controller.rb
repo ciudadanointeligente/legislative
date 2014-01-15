@@ -51,6 +51,10 @@ class ParliamentariansController < ApplicationController
 
   def searches
     @parliamentarians = PopitPersonCollection.new
-    @parliamentarians.get ENV['popit_persons'], 'application/json'
+    if !params.nil? && params.length > 3
+      @parliamentarians.get ENV['popit_search']+"q="+params[:q], 'application/json'
+    else
+      @parliamentarians.get ENV['popit_search'], 'application/json'
+    end
   end
 end
