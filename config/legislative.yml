@@ -2,6 +2,7 @@ production:
   root_url:   ~
   billit:     ~
   popit_persons:  "my-popit-instance.popit.org/api/v0.1/persons/"
+  popit_search: ~
   popit_url: ~
   tables:     ~
   writeit:    ~
@@ -16,6 +17,7 @@ development:
   root_url:   ~
   billit:     ~
   popit_persons:  "my-popit-instance.popit.org/api/v0.1/persons/"
+  popit_search: ~
   popit_url: ~
   tables:     ~
   writeit:    ~
@@ -30,6 +32,7 @@ test:
   root_url:   ~
   billit:     "http://127.0.0.1.xip.io:3003/bills/"
   popit_persons:  "http://localhost:3002/api/persons/"
+  popit_search: ~
   popit_url: "billit-demo.popit.mysociety.org"
   tables:     "http://pmo.apidone.com/tables"
   writeit:    ~
