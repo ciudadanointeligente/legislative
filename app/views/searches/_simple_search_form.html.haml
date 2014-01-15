@@ -1,23 +1,29 @@
-%div.row
-  %div.col-md-6.col-md-offset-3
-    = form_tag({controller: "searches", action: "index"}, :method => 'get') do
+= form_tag({controller: "searches", action: "index"}, :method => 'get') do
+  %div.row
+    %div.col-md-6.col-md-offset-3
       %div.input-group
         %span.input-group-addon
           %i.fa.fa-search
-        %input.form-control{:name=>'q'}
+        %input.form-control{:name=>'q', value: params[:q], :placeholder => t('search.placeholder_search_for'), :onfocus => "ga('send','searches','focus_search')"}
         %span.input-group-btn
           %button.btn.btn-default
             Buscar
-  %div.col-md-6.col-md-offset-3.form-inline
-    %div.checkbox{:style=>'padding-right:15px'}
-      %label
-        %input{:type=>"checkbox"}
+    %div.col-md-6.col-md-offset-3.form-inline
+      %div.checkbox{:style=>'padding-right:15px'}
+        %label
+          - if params[:bills] == '1'
+            %input{type: "checkbox", name: 'bills', value: '1', checked: 'checked'}
+          - else
+            %input{type: "checkbox", name: 'bills', value: '1'}
           Proyectos de ley
-    %div.checkbox{:style=>'padding-right:15px'}
-      %label
-        %input{:type=>"checkbox"}
+      %div.checkbox{:style=>'padding-right:15px'}
+        %label
+          - if params[:parliamentarians] == '2'
+            %input{type: "checkbox", name: "parliamentarians", value: '2', checked: 'checked'}
+          - else
+            %input{type: "checkbox", name: "parliamentarians", value: '2'}
           Parlamentarios
-    %div.checkbox
-      %label
-        %input{:type=>"checkbox"}
-          Preguntas
+      %div.checkbox
+        %label
+          %input{:type=>"checkbox", :name=>"questions", :value=>'3'}
+            Preguntas
