@@ -13,6 +13,15 @@ $(document).ready(function(){
     container: "tags-tooltip"
   });
 
+  //update value in range select
+  var val = $('#range').val(), output  = $('#value-range');  
+
+  output.html(val);  
+
+  $('#range').change(function(){  
+    output.html(this.value);  
+  });
+
 });
 
 function generateGraph(freq,chartId) {

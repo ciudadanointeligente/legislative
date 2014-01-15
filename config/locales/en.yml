@@ -53,6 +53,7 @@ en:
     author: Author
     placeholder_author: Type an author's name
     there_are_no_results: There are no results for this search
+    event_range: paperworks range
   bill:
     bulletin: Bulletin
     title: Title
