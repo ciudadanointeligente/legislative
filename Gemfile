@@ -25,8 +25,14 @@ gem 'protected_attributes'
 # Server
 gem 'unicorn'
 
+#HttParty
+gem 'httparty'
+
 # Template Engine
 gem 'haml-rails'
+
+#Writeit
+gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
 
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
@@ -56,7 +62,6 @@ gem 'ekuseru'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
-gem 'coveralls', require: false
 gem 'rake', '10.1.1'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'route_translator'

@@ -9,6 +9,8 @@ Legislative::Application.routes.draw do
   post "auth" => "sessions#login"
   get "sign_up" => "users#new", :as => "sign_up"
 
+
+
   localized do
     resources :bills do
       get 'searches', on: :collection
@@ -25,6 +27,7 @@ Legislative::Application.routes.draw do
     resources :searches
   end
 
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
