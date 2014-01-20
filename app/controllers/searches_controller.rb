@@ -14,6 +14,17 @@ class SearchesController < ApplicationController
     end
 
     if !params.nil? && params.length > 3 # default have 3 keys {'action'=>'index', 'controller'=>'searchs', "locale"=>"xx"}
+      
+      # make a redirect in case of someone pick just one filter in main page
+      # redirect to bills advanced search
+      if params[:bills] == '1' || params[:parliamentarians] == ''
+        redirect_to searches_bills_path(params)
+      end
+      # redirect to parliamentarians advanced search
+      if params[:parliamentarians] == '2' || params[:bills] == ''
+        redirect_to searches_parliamentarians_path(params)
+      end
+
       @keywords = String.new
       params.each do |param|
         if param[0] != 'utf8' && param[0] != 'commit' && param[0] != 'format' && param[0] != 'locale' && param[0] != 'action'  && param[0] != 'controller'

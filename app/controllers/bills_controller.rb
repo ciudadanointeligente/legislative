@@ -118,7 +118,15 @@ class BillsController < ApplicationController
           end
         end
       end
-      @bills_query = BillCollectionPage.get(ENV['billit'] + "search/?#{URI.encode(@keywords)}&per_page=3", 'application/json')
+      
+      # defaul limit, when a user make a search for a bills or parliamentarians
+      limit = '3'
+      # if a user make a specific search the limit change to, in this case, 30
+      if params[:bills] || params[:parliamentarians]
+        limit = '30'
+      end
+
+      @bills_query = BillCollectionPage.get(ENV['billit'] + "search/?#{URI.encode(@keywords)}&per_page="+limit, 'application/json')
     else
       @bills_query = BillCollectionPage.get(ENV['billit'] + "search/?", 'application/json')
     end
