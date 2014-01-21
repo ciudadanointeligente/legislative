@@ -62,13 +62,6 @@
           %i.fa.fa-thumbs-down
             15
 
-%div
-  %h3.page-header
-    Avances
-  %canvas#myChartInt{'height'=>"80",'width'=>'750', 'style'=>'width:100%'}
-
-%script{'src'=>"http://www.chartjs.org/assets/Chart.js"}
-
 = javascript_include_tag 'svg/jquery.svg.min.js'
 = javascript_include_tag 'svg/jquery.svgdom.min.js'
 = javascript_include_tag 'svg/jquery.svganim.min.js'
@@ -76,19 +69,20 @@
 :javascript
   window.onload = function(){
     
-    var freq = [0,0,2,0,5,0,6,1,0,1,0,0];
+    var freq = #{@date_freq};
         x = 1;
-        largest = Math.max.apply(Math, freq);
+        highest = Math.max.apply(Math, freq);
+        medium = Math.ceil( highest/2 );
         nro_elements = freq.length;
         d = '';
-
+    
     freq.forEach(function(event) {
       var posX = x;
           height = 200;
           posX = 58*posX+32;
-          posY = height-(event*30);
+          posY = height-(event*20);
 
-      createPoints(posX, posY, largest, event);
+      createPoints(posX, posY, highest, event);
       if(x==1) {
         d += 'M'+posX+','+posY;
       }
@@ -102,14 +96,14 @@
 
     });
 
-    function createPoints(posX, posY, largest, event) {
+    function createPoints(posX, posY, highest, event) {
 
       var shape = document.createElementNS("http://www.w3.org/2000/svg", "circle");
           shape1 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
           
       shape.cx.baseVal.value = posX;
       shape.cy.baseVal.value = posY;
-      shape.r.baseVal.value = 5;
+      shape.r.baseVal.value = 3;
       shape.setAttributeNS(null, "class", "shadow");
       shape.setAttributeNS(null, "stroke", "#AAA");
       shape.setAttributeNS(null, "stroke-width", "4");
@@ -122,11 +116,10 @@
       shape1.cy.baseVal.value = posY;
       shape1.setAttributeNS(null, "class", "plain");
       shape1.setAttributeNS(null, "data-value", event);
-      shape1.r.baseVal.value = 5;
+      shape1.r.baseVal.value = 3;
       
       document.getElementById('points').appendChild(shape1);
 
-      //console.log(posX,posY);
     }
 
     $(".showmebutton").click(function(e) {
@@ -286,8 +279,6 @@
       top: -3px;
   }
 
-/%div
-/%svg#lala{'version'=>'1.1', 'xmlns:xlink'=>"http://www.w3.org/1999/xlink", 'xmlns'=>"http://www.w3.org/2000/svg", 'width'=>"700", 'height'=>"200"}
 %div
   %svg.graph{'version'=>'1.1', 'xmlns:xlink'=>"http://www.w3.org/1999/xlink", 'xmlns'=>"http://www.w3.org/2000/svg", 'width'=>"700", 'height'=>"200"}
     /radial gradient
@@ -297,46 +288,28 @@
         %stop{'offset'=>'100%', 'style'=>'stop-color:#AAA; stop-opacity:0'}
     /surface
     %g.surfaces
-      /%path.first_set{'d'=>'M100,350 L100,350 L230,300 L350,179 L490,60 L620,204 L620,350 Z'}
       %path#first_set.first_set
     /grid lines
     %use.grid.double{'xlink:href'=>'#xGrid','style'=>''}
     %use.grid.double{'xlink:href'=>'#yGrid','style'=>''}
     /points
     %g#points.first_set.points{'data-setname'=>'set de datos'}
-      /%circle.shadow{'cx'=>'100', 'cy'=>'350', 'r'=>'5', 'stroke'=>'#AAA', 'stroke-width'=>"4", 'stroke-opacity'=>"1", 'style'=>"fill: url(#gradientShadow);"}
-      /%circle.plain{'cx'=>'100', 'cy'=>'350', 'data-value'=>'7', 'r'=>'5'}
-
-      /%circle.shadow{'cx'=>'230', 'cy'=>'300', 'r'=>'5', 'stroke'=>'#AAA', 'stroke-width'=>"4", 'stroke-opacity'=>"1", 'style'=>"fill: url(#gradientShadow);"}
-      /%circle.plain{'cx'=>'230', 'cy'=>'300', 'data-value'=>'5', 'r'=>'5'}
-
-      /%circle.shadow{'cx'=>'350', 'cy'=>'179', 'r'=>'5', 'stroke'=>'#AAA', 'stroke-width'=>"4", 'stroke-opacity'=>"1", 'style'=>"fill: url(#gradientShadow);"}
-      /%circle.plain{'cx'=>'350', 'cy'=>'179', 'data-value'=>'2', 'r'=>'5'}
-
-      /%circle.shadow{'cx'=>'490', 'cy'=>'60', 'r'=>'5', 'stroke'=>'#AAA', 'stroke-width'=>"4", 'stroke-opacity'=>"1", 'style'=>"fill: url(#gradientShadow);"}
-      /%circle.plain{'cx'=>'490', 'cy'=>'60', 'data-value'=>'6', 'r'=>'5'}
-
-      /%circle.shadow{'cx'=>'620', 'cy'=>'204', 'r'=>'5', 'stroke'=>'#AAA', 'stroke-width'=>"4", 'stroke-opacity'=>"1", 'style'=>"fill: url(#gradientShadow);"}
-      /%circle.plain{'cx'=>'620', 'cy'=>'204', 'data-value'=>'1', 'r'=>'5'}
     /labels
     %g.labels.x-labels
-      %text{'x'=>'100', 'y'=>'250'}
-        2010
-      %text{'x'=>'230', 'y'=>'250'}
-        2011
-      %text{'x'=>'360', 'y'=>'250'}
-        Agosto
-      %text{'x'=>'490', 'y'=>'250'}
-        Octubre
-      %text{'x'=>'620', 'y'=>'250'}
-        Diciembre
+      
     %g.labels.y-labels
-      %text{'x'=>'60', 'y'=>'20'}
-        eventos
-      %text{'x'=>'80', 'y'=>'20'}
+      %text{'x'=>'90', 'y'=>'20'}
+        nro eventos
+      %text{'x'=>'80', 'y'=>'0'}
+        10
+      %text{'x'=>'80', 'y'=>'40'}
+        8
+      %text{'x'=>'80', 'y'=>'80'}
         6
-      %text{'x'=>'80', 'y'=>'110'}
-        3
+      %text{'x'=>'80', 'y'=>'120'}
+        4
+      %text{'x'=>'80', 'y'=>'160'}
+        2
       %text{'x'=>'80', 'y'=>'200'}
         0
 
