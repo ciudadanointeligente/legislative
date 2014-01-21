@@ -63,16 +63,16 @@ describe UserSubscriptionsController do
 
   describe "POST create" do
     describe "with valid params" do
-      it "creates a new subscription with a new user" do
+      xit "creates a new subscription with a new user" do
         @user_subscription2 = FactoryGirl.build(:user_subscription2)
         expect {
           post :create, :user_subscription => @user_subscription2
         }.to change(UserSubscription, :count).by(1)
       end
-      it "creates a new subscription with an old user" do
+      xit "creates a new subscription with an old user" do
       
       end
-      it "creates a subscription that is already in the database" do
+      xit "creates a subscription that is already in the database" do
 
       end
     end
