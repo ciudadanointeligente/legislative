@@ -6,7 +6,7 @@
 / fin buscador cabecera
 
 /loop for bills
-- if params[:bills] == '1'
+- if params[:bills] == '1' || @bills_query.bills.count > 0
   %div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
     %div.row
       %div.col-md-10
@@ -20,7 +20,7 @@
 /end of loop
 
 /loop for parliamentarians
-- if params[:parliamentarians] == '2'
+- if params[:parliamentarians] == '2' || @parliamentarians.persons.count > 0
   %div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
     %div.row
       %div.col-md-10
