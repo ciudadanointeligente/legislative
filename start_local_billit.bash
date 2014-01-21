@@ -32,6 +32,12 @@ if [ ! -e done.txt ]; then
 
   # set up the environment
   mkdir vendor/gems
+  
+  rvm gemdir
+  rvm gemset name
+  rvm gemset list
+
+
   bundle install --path vendor/gems
   gem install activeresource -v 3.2.13
 

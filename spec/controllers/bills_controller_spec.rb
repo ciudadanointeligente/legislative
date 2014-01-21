@@ -90,7 +90,8 @@ describe BillsController do
     it "assigns @date_freq values according to defined time intervals" do
       bill = Bill.get(ENV['billit'] + "6967-06", 'application/json')
       Date.stub(:today) {Date.new(2013, 4)}
-      get :show, {:id => bill.uid, :locale => 'es'}, valid_session
+      response = get :show, {:id => bill.uid, :locale => 'es'}, valid_session
+      p response.body
       assigns(:date_freq).should eq [1,0,0,0,0,0,0,0,0,4,0,0]
     end
 

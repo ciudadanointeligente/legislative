@@ -8,8 +8,13 @@ Legislative::Application.routes.draw do
   get "log_in" => "sessions#login", :as => "log_in"
   post "auth" => "sessions#login"
   get "sign_up" => "users#new", :as => "sign_up"
+<<<<<<< HEAD
   get "confirmed" => "user_subscriptions#confirmed"
  
+
+
+
+>>>>>>> c8c17b80d9d5ef72313209b54d4c63c661173196
   localized do
     resources :bills do
       get 'searches', on: :collection
@@ -27,6 +32,7 @@ Legislative::Application.routes.draw do
     resources :user_subscriptions
   end
 
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

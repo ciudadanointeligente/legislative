@@ -21,34 +21,55 @@ class UserSubscriptionsController < ApplicationController
 
   # POST /user_subscriptions
   def create
-    @user_subscription = UserSubscription.new
-    @user_subscription.bill = params[:user_subscription][:bill]
-    @user_subscription.confirmed = false
+    subscription_email = params[:user_subscription][:user]
+    subscription_bill = params[:user_subscription][:bill]
+
+    subscription_user = User.find_by_email(subscription_email)
+
+    if subscription_user.nil?
     
-    @user = User.find_by_email(params[:user_subscription][:user])
-    if @user.nil?
       @user = User.new
-      @user.username = params[:user_subscription][:user] #TODO: cambiar username por uno aleatorio (?)
-      @user.email = params[:user_subscription][:user]
+      @user.username = subscription_email #TODO: cambiar username por uno aleatorio (?)
+      @user.email = subscription_email
       @user.password = "ciudadanointeligente2014" #TODO: generar password aleatoria
       @user.password_confirmation = "ciudadanointeligente2014" #TODO: generar password aleatoria
       @user.save
-    end
 
-    @user_subscription.user = @user.id 
-
-    if @user_subscription.save
+      @user_subscription = UserSubscription.new
+      @user_subscription.bill = subscription_bill
+      @user_subscription.confirmed = false
+      @user_subscription.user = @user.id
+      @user_subscription.save
       UserSubscriptionMailer.confirmation_email(@user_subscription).deliver
       flash[:notice] = t('user_subscriptions.confirmation_mail_sent')
+      
     else
-      confirmed_user = UserSubscription.where(:user => @user_subscription.user, :bill => @user_subscription.bill).first
-      if confirmed_user.confirmed == false
-        flash[:notice] = t('user_subscriptions.already_subscribe')
-        UserSubscriptionMailer.confirmation_email(confirmed_user).deliver
+
+      subscription_id = subscription_user.id
+      already_subscribe = already_subscribe(subscription_id, subscription_bill)
+
+      if already_subscribe[1]
+        if already_subscribe.first.confirmed == false
+          flash[:notice] = t('user_subscriptions.already_subscribe')
+          flash[:alert] = t('user_subscriptions.confirmation_mail_sent')
+          UserSubscriptionMailer.confirmation_email(already_subscribe.first).deliver
+        else
+          flash[:notice] = t('user_subscriptions.already_subscribe')
+        end
+        redirect_to bill_path(already_subscribe.first.bill)
+        return
       else
-        flash[:notice] = t('user_subscriptions.already_subscribe')
+        @user_subscription = UserSubscription.new
+        @user_subscription.bill = subscription_bill
+        @user_subscription.confirmed = false
+        @user_subscription.user = subscription_id
+        @user_subscription.save
+        UserSubscriptionMailer.confirmation_email(@user_subscription).deliver
+        flash[:notice] = t('user_subscriptions.confirmation_mail_sent')
       end
+
     end
+  
     redirect_to bill_path(@user_subscription.bill)
   end
 
@@ -84,6 +105,22 @@ class UserSubscriptionsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def user_subscription_params
       params.require(:user_subscription).permit(:user, :bill)
+    end
+
+    def already_subscribe(user, bill)
+      if UserSubscription.where(:user => user, :bill => bill).first.nil?
+        [nil, false]
+      else
+        [UserSubscription.where(:user => user, :bill => bill).first, true]
+      end
+    end
+
+    def create_subscription(bill, id)
+      user_subscription = UserSubscription.new
+      user_subscription.bill = bill
+      user_subscription.confirmed = false
+      user_subscription.user = id
+      user_subscription
     end
 
 end

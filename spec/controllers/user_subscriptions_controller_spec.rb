@@ -63,37 +63,17 @@ describe UserSubscriptionsController do
 
   describe "POST create" do
     describe "with valid params" do
-      it "creates a new UserSubscription" do
+      it "creates a new subscription with a new user" do
+        @user_subscription2 = FactoryGirl.build(:user_subscription2)
         expect {
-          post :create, {:user_subscription => valid_attributes}, valid_session
+          post :create, :user_subscription => @user_subscription2
         }.to change(UserSubscription, :count).by(1)
       end
-
-      xit "assigns a newly created user_subscription as @user_subscription" do
-        post :create, {:user_subscription => valid_attributes}, valid_session
-        assigns(:user_subscription).should be_a(UserSubscription)
-        assigns(:user_subscription).should be_persisted
+      it "creates a new subscription with an old user" do
+      
       end
+      it "creates a subscription that is already in the database" do
 
-      xit "redirects to the created user_subscription" do
-        post :create, {:user_subscription => valid_attributes}, valid_session
-        response.should redirect_to(UserSubscription.last)
-      end
-    end
-
-    describe "with invalid params" do
-      xit "assigns a newly created but unsaved user_subscription as @user_subscription" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        UserSubscription.any_instance.stub(:save).and_return(false)
-        post :create, {:user_subscription => { "user" => "invalid value" }}, valid_session
-        assigns(:user_subscription).should be_a_new(UserSubscription)
-      end
-
-      xit "re-renders the 'new' template" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        UserSubscription.any_instance.stub(:save).and_return(false)
-        post :create, {:user_subscription => { "user" => "invalid value" }}, valid_session
-        response.should render_template("new")
       end
     end
   end

@@ -40,8 +40,5 @@ Legislative::Application.configure do
   config.action_mailer.smtp_settings = {
     :address => "localhost",
     :port => 2525,
-    :user_name => "legislative_1",
-    :password => "IeWPsbYYN9ta28L7pebg",
-    :authentication => :plain
   }
 end
