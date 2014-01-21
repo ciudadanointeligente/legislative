@@ -15,6 +15,7 @@
         - @parliamentarians.persons.each do |parliamentarian|
           %tr
             %td
+            - if parliamentarian.images.nil?
               %img.img-responsive{:src=>parliamentarian.images[0]['url']}
             %td
               = link_to parliamentarian.name, parliamentarian_path(parliamentarian.slug)

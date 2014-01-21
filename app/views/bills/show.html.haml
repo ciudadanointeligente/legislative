@@ -48,7 +48,7 @@
       %ul{:style=>'list-style:none;'}
         %li
           %i.fa.fa-bell
-          Suscríbete
+          = link_to 'Suscríbete', new_user_subscription_path(:bill => params[:id])
         %li
           %i.fa.fa-facebook
           Comparte
