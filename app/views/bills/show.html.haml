@@ -1,12 +1,6 @@
 :javascript
   var billuid = '#{@bill.uid}';
 
-  window.onload = function () {
-    if(typeof window.generateGraph == 'function') {
-      generateGraph(#{@date_freq});
-    }
-  }
-
 %div
   %h3.page-header
     =@bill.title
@@ -196,7 +190,7 @@
 
 :css
   svg.graph {
-    height: 270px;
+    height: 210px;
     width: 700px;
   }
 
