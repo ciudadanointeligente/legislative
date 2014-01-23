@@ -53,6 +53,7 @@ es:
     author: Autor
     placeholder_author: Ingresa el nombre de un autor
     there_are_no_results: No hay resultados para esta búsqueda
+    event_range: rango de eventos
   bill:
     bulletin: Boletín
     title: Título

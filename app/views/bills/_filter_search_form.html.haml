@@ -61,5 +61,11 @@
       %i.fa.fa-calendar
     %input{"type" => "date", "value" => params[:creation_date_max], "min" => ENV['parliaments-initial-date'], "name" => "creation_date_max", "class" => "form-control", "onfocus" => "ga('send','paperwork','focus_max_date')"}
 
+%div.form-group
+  = label_tag :range, t('search.event_range')
+  - max_year = Time.now.year
+  %input#range{type:'range', min:'1990', max:max_year}
+  %span#value-range
+
 %button.btn.btn-primary
   Buscar
