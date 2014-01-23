@@ -1,3 +1,68 @@
+/*General*/
+
+body {
+  background-color: #f9f9eb;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #67675a;
+}
+
+.navbar-inverse {
+  background-color: #2f172f;
+  border-color: transparent;
+}
+
+h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 21px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+/*Menu*/
+
+.navbar-nav {
+  float: right;
+  margin-top: 10px;
+}
+
+.nav a {
+  margin-left: 10px;
+  color: #b2a5b2;
+}
+
+.nav a:hover {
+  color: #c4b7c4;
+}
+
 .panel-senator {
     margin: 0 auto;
     position: relative;
