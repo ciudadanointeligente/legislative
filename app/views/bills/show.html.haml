@@ -45,11 +45,12 @@
           = link_to 'Suscríbete', new_user_subscription_path(:bill => params[:id])
         %li
           %i.fa.fa-facebook
-          Comparte
+          %a{'href' => '#', 'onclick' => "window.open('https://www.facebook.com/sharer/sharer.php?u=http://"+request.host+request.fullpath+"','Facebook','width=500,height=280')"}
+            Comparte
         %li
           %i.fa.fa-twitter
           %a{'href'=>'#', 'onclick' => "window.open('https://twitter.com/share?text="+@bill.title+"&hashtags=PMO','Twitter','width=500,height=280')"}
-            Twitea
+            Twittea
         %li
           %i.fa.fa-thumbs-up
             23
