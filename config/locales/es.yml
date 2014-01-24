@@ -160,6 +160,8 @@ es:
     confirmation_mail_sent: Se ha enviado un correo electrónico a la casilla registrada
     already_subscribe: Ya existe una suscripción a este bill con ese correo electrónico
     verified_mail: El correo electrónico fue exitosamente verificado
+    subscribe: Suscríbete
+    email: Correo Electrónico
   routes:
     bills: proyectos
     communications: comunicaciones

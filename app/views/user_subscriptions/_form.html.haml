@@ -6,10 +6,10 @@
         - @user_subscription.errors.full_messages.each do |msg|
           %li= msg
   %div.form-group
-    = f.label :user
+    = f.label t('user_subscriptions.email')
     = f.email_field :user, placeholder: "Ingrese su Email", class: 'form-control'
   %div.form-group
-    = f.label :bill
-    = f.text_field :bill, readonly: true, value: params[:bill], class: 'form-control' 
+    = f.label t('search.bill')
+    = f.text_field :bill, readonly: true, value: params[:bill], class: 'form-control', size: '10' 
   %p.button
-    = f.submit class: 'btn btn-success', value: 'Suscribirse'
+    = f.submit value: t('user_subscriptions.subscribe'), class: 'btn btn-success'
