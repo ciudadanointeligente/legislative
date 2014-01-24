@@ -13,7 +13,7 @@
         %h3 
           Bills
       %div.col-md-2
-        = link_to 'Búsqueda Avanzada', searches_bills_path, class: 'btn btn-default btn-xs'
+        = link_to 'Búsqueda Avanzada', searches_bills_path(params.merge(bills:'1')), class: 'btn btn-default btn-xs'
         
     - @bills = @bills_query.bills
     = render :partial => "box_bills_result" 
@@ -27,7 +27,7 @@
         %h3 
           Parlamentarios
       %div.col-md-2
-        = link_to 'Búsqueda Avanzada', searches_parliamentarians_path, class: 'btn btn-default btn-xs'
+        = link_to 'Búsqueda Avanzada', searches_parliamentarians_path(params.merge(parliamentarians:'1')), class: 'btn btn-default btn-xs'
 
     = render :partial => "box_parliamentarians_result"
 /end of loop
