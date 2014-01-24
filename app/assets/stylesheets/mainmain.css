@@ -1,5 +1,10 @@
 /*General*/
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   background-color: #f9f9eb;
   font-family: 'Lato', sans-serif;
@@ -24,6 +29,7 @@ h2 {
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
+  text-align: center;
 }
 
 h3 {
@@ -55,12 +61,34 @@ h5 {
 }
 
 .nav a {
-  margin-left: 10px;
+  margin-left: 20px;
   color: #b2a5b2;
+  text-decoration: none;
 }
 
 .nav a:hover {
   color: #c4b7c4;
+}
+
+/*Hero space*/
+
+.hero-space {
+  background: #462445;
+  color: #e6e6c9;
+  padding: 20px 0px;
+  margin-top: -10px;
+}
+
+.red-space {
+  background: #ea6a56;
+  color: #e6e6c9;
+}
+
+/*Tablas*/
+
+.table th {
+  background: #67675a;
+  color: #e6e6c9;
 }
 
 .panel-senator {
