@@ -10,6 +10,6 @@
     = f.email_field :user, placeholder: "Ingrese su Email", class: 'form-control'
   %div.form-group
     = f.label t('search.bill')
-    = f.text_field :bill, readonly: true, value: params[:bill], class: 'form-control', size: '10' 
+    = f.text_field :bill, readonly: true, value: params[:bill], class: 'form-control'
   %p.button
     = f.submit value: t('user_subscriptions.subscribe'), class: 'btn btn-success'
