@@ -20,12 +20,11 @@ describe LegislativeMessageCollection do
   end
   it "it gets the messages from the server" do
     collection = LegislativeMessageCollection.new
-    #collection = collection.get_all
-    # collection.get(ENV['writeit_base_url']+ENV['writeit_url'], 'application/json')
     collection.get
 
     collection.objects.length.should eql 1
     message = collection.objects[0]
+    message.should be_an_instance_of LegislativeMessageRepresenter
     message.subject.should eql 'subject 1'
     message.content.should eql 'Content 1'
 
