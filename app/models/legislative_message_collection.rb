@@ -23,7 +23,6 @@ class LegislativeMessageCollection
 			"api_key" => ENV["writeit_api_key"])
 		url.query = params
 		
-		#puts URI::HTTP.build(:host => url, :query => { :q => "test" }.to_query)
 		super(url.to_s, 'application/json')
 	end
 end
