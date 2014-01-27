@@ -1,192 +1,170 @@
-%h2
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, officiis, reiciendis, asperiores deserunt qui nulla
-
-%div.jumbotron{:style => "font-size: 14px;"}
-  = form_tag(t('routes.searches'), :method => 'get', :class => "form-inline") do
-    %div.row
-      %div.col-md-10
-        %input.form-control{:type => "text", :name => 'q', :placeholder => t("main.search_placeholder")}
-      %button{:type => "submit", :class => "btn btn-primary"}
-        =t("search.search")
-    %div.checkbox{:style => "padding-top: 7px;"}
-      %label{:style => "padding-right: 7px;"}
-        %input{:type => 'checkbox', :name => 'bills', :value => '1'}
-          Proyectos de ley
-      %label
-        %input{:type => 'checkbox', :name => 'parliamentarians', :value => '2'}
-          Parlamentarios
-
-%div{:style=>'background-color:#ccc; padding: 10px; margin-bottom:30px;'}
-  %h3
-    Temas Urgentes
-
-  %div
-    %ul.list-inline
-      %li
-        %button.btn.btn-default{'href'=>'#miModal', :'data-toggle'=>"modal", :'data-target'=>'#miModal'}
-          Educación
-      %li
-        %button.btn.btn-default
-          Salud
-      %li
-        %button.btn.btn-default
-          Pesca
-      %li
-        %button.btn.btn-default
-          Vivienda
-      %li
-        %button.btn.btn-default
-          Transporte
-    
-    %div.modal.fade#miModal{:tabindex=>'-1', :role=>'dialog', :'aria-labelledby'=>'myModalLabel', :'aria-hidden'=>'true'}
-      %div.modal-dialog
-        %div.modal-content
-          %div.modal-header
-            %button.close{:type=>"button", :'data-dismiss'=>"modal", :'aria-hidden'=>"true"}
-              &times
-            %h4.modal-title#myModalLabel
-              Proyectos urgentes en educación
-          %div.modal-body
-            %table.table.table-striped
-              %thead
-                %tr
-                  %th
-                    %span.sr-only
-                      Proyectos urgentes en educación
-                  %th
-                    %span.sr-only
-                      Urgencia
-                  %th
-                    %span.sr-only
-                      Suscripción alertas
-                    
-              %tbody
-                %tr
-                  %td
-                    %strong
-                      = link_to 'Sesión Nº 85 | Legislatura 361 | Tipo Ordinaria', tables_path
-                    %p
-                      Martes 14 de Enero de 2014
-                  %td
-                    %span.badge
-                      4 
-                    urgencias
-                  %td
-                    %i.fa.fa-bell
-                    suscríbete
-                %tr
-                  %td
-                    %strong 
-                      = link_to 'Sesión Nº 84 | Legislatura 358 | Tipo Ordinaria', tables_path
-                    %p
-                      Martes 14 de Enero de 2014
-                  %td
-                    %span.badge
-                      4 
-                    urgencias
-                  %td
-                    %i.fa.fa-bell
-                    suscríbete
-
-%div.row
-  %div.col-md-6
-    %table.table.table-striped.table-bordered
-      %thead
-        %tr
-          %th{:colspan=>"2"}
-            Tabla diputados
-      %tbody
-        %tr
-          %td
-            %strong 
-              = link_to 'Sesión 111ª ordinaria, Legislatura 361', tables_path
-            %p
-              09 de Enero de 2014
-          %td
-            %i.fa.fa-bell
-            suscríbete
-        %tr
-          %td
-            %strong 
-              = link_to 'Sesión 110ª ordinaria, Legislatura 361', tables_path
-            %p
-              08 de Enero de 2014
-          %td
-            %i.fa.fa-bell
-            suscríbete
-        %tr
-          %td
-            %strong 
-              = link_to 'Sesión 109ª pedida, Legislatura 361', tables_path
-            %p
-              07 de Enero de 2014
-          %td
-            %i.fa.fa-bell
-            suscríbete
-        %tr
-          %td
-            %strong 
-              = link_to 'Sesión 109ª pedida, Legislatura 361', tables_path
-            %p
-              06 de Enero de 2014
-          %td
-            %i.fa.fa-bell
-            suscríbete
-
-  %div.col-md-6
-    %table.table.table-striped.table-bordered
-      %thead
-        %tr
-          %th{:colspan=>"2"}
-            Tabla Senado
-      %tbody
-        %tr
-          %td
-            %strong 
-              = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
-            %p
-              Martes 14 de Enero de 2014
-          %td
-            %i.fa.fa-bell
-            suscríbete
-        %tr
-          %td
-            %strong 
-              = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
-            %p
-              Martes 14 de Enero de 2014
-          %td
-            %i.fa.fa-bell
-            suscríbete
-        %tr
-          %td
-            %strong 
-              = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
-            %p
-              Martes 14 de Enero de 2014
-          %td
-            %i.fa.fa-bell
-            suscríbete
-        %tr
-          %td
-            %strong 
-              = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
-            %p
-              Martes 14 de Enero de 2014
-          %td
-            %i.fa.fa-bell
-            suscríbete  
-
-%div.row
-  %div.col-md-2
-    %img.img-responsive{:src=>'http://placehold.it/200x200'}
-  %div.col-md-10
-    %div
-      %blockquote
-        %p
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, porro, architecto totam incidunt alias animi recusandae ipsam illum omnis sunt voluptatem exercitationem quasi quae doloribus aliquid! Dolorum, rerum quaerat dolor!
-        %small
-          Perico los Palotes
-    %div.text-right
+%div
+  %ul.list-inline
+    %li
+      %button.btn.btn-default{'href'=>'#miModal', :'data-toggle'=>"modal", :'data-target'=>'#miModal'}
+        Educación
+    %li
       %button.btn.btn-default
-        Ver más respuestas
+        Salud
+    %li
+      %button.btn.btn-default
+        Pesca
+    %li
+      %button.btn.btn-default
+        Vivienda
+    %li
+      %button.btn.btn-default
+        Transporte
+  
+  %div.modal.fade#miModal{:tabindex=>'-1', :role=>'dialog', :'aria-labelledby'=>'myModalLabel', :'aria-hidden'=>'true'}
+    %div.modal-dialog
+      %div.modal-content
+        %div.modal-header
+          %button.close{:type=>"button", :'data-dismiss'=>"modal", :'aria-hidden'=>"true"}
+            &times
+          %h4.modal-title#myModalLabel
+            Proyectos urgentes en educación
+        %div.modal-body
+          %table.table.table-striped
+            %thead
+              %tr
+                %th
+                  %span.sr-only
+                    Proyectos urgentes en educación
+                %th
+                  %span.sr-only
+                    Urgencia
+                %th
+                  %span.sr-only
+                    Suscripción alertas
+                  
+            %tbody
+              %tr
+                %td
+                  %strong
+                    = link_to 'Sesión Nº 85 | Legislatura 361 | Tipo Ordinaria', tables_path
+                  %p
+                    Martes 14 de Enero de 2014
+                %td
+                  %span.badge
+                    4 
+                  urgencias
+                %td
+                  %i.fa.fa-bell
+                  suscríbete
+              %tr
+                %td
+                  %strong 
+                    = link_to 'Sesión Nº 84 | Legislatura 358 | Tipo Ordinaria', tables_path
+                  %p
+                    Martes 14 de Enero de 2014
+                %td
+                  %span.badge
+                    4 
+                  urgencias
+                %td
+                  %i.fa.fa-bell
+                  suscríbete
+
+%div.row
+%div.col-md-6
+  %table.table.table-striped.table-bordered
+    %thead
+      %tr
+        %th{:colspan=>"2"}
+          Tabla diputados
+    %tbody
+      %tr
+        %td
+          %strong 
+            = link_to 'Sesión 111ª ordinaria, Legislatura 361', tables_path
+          %p
+            09 de Enero de 2014
+        %td
+          %i.fa.fa-bell
+          suscríbete
+      %tr
+        %td
+          %strong 
+            = link_to 'Sesión 110ª ordinaria, Legislatura 361', tables_path
+          %p
+            08 de Enero de 2014
+        %td
+          %i.fa.fa-bell
+          suscríbete
+      %tr
+        %td
+          %strong 
+            = link_to 'Sesión 109ª pedida, Legislatura 361', tables_path
+          %p
+            07 de Enero de 2014
+        %td
+          %i.fa.fa-bell
+          suscríbete
+      %tr
+        %td
+          %strong 
+            = link_to 'Sesión 109ª pedida, Legislatura 361', tables_path
+          %p
+            06 de Enero de 2014
+        %td
+          %i.fa.fa-bell
+          suscríbete
+
+%div.col-md-6
+  %table.table.table-striped.table-bordered
+    %thead
+      %tr
+        %th{:colspan=>"2"}
+          Tabla Senado
+    %tbody
+      %tr
+        %td
+          %strong 
+            = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
+          %p
+            Martes 14 de Enero de 2014
+        %td
+          %i.fa.fa-bell
+          suscríbete
+      %tr
+        %td
+          %strong 
+            = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
+          %p
+            Martes 14 de Enero de 2014
+        %td
+          %i.fa.fa-bell
+          suscríbete
+      %tr
+        %td
+          %strong 
+            = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
+          %p
+            Martes 14 de Enero de 2014
+        %td
+          %i.fa.fa-bell
+          suscríbete
+      %tr
+        %td
+          %strong 
+            = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
+          %p
+            Martes 14 de Enero de 2014
+        %td
+          %i.fa.fa-bell
+          suscríbete  
+
+%div.row
+%div.col-md-2
+  %img.img-responsive{:src=>'http://placehold.it/200x200'}
+%div.col-md-10
+  %div
+    %blockquote
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, porro, architecto totam incidunt alias animi recusandae ipsam illum omnis sunt voluptatem exercitationem quasi quae doloribus aliquid! Dolorum, rerum quaerat dolor!
+      %small
+        Perico los Palotes
+  %div.text-right
+    %button.btn.btn-default
+      Ver más respuestas

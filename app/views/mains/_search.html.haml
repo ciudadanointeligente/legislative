@@ -1,0 +1,21 @@
+%div.hero-space
+  %div.container
+    %h1
+      Lorem ipsum dolor sit amet
+    %h3
+      CONSECTETUER ADIPISCING ELIT. AENEAN COMMODO LIGULA EGET DOLOR. AENEAN MASSA.
+
+    / %div.jumbotron{:style => "font-size: 14px;"}
+    = form_tag(t('routes.searches'), :method => 'get', :class => "form-inline") do
+      %div.row
+        %div.col-md-5.col-md-offset-3
+          %input.form-control{:type => "text", :name => 'q', :placeholder => t("main.search_placeholder")}
+          %div.checkbox{:style => "padding-top: 7px;"}
+            %label{:style => "padding-right: 7px;"}
+              %input{:type => 'checkbox', :name => 'bills', :value => '1'}
+                Proyectos de ley
+            %label
+              %input{:type => 'checkbox', :name => 'parliamentarians', :value => '2'}
+                Parlamentarios
+        %button{:type => "submit", :class => "btn btn-primary"}
+          =t("search.search")
