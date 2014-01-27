@@ -22,7 +22,7 @@ describe LegislativeMessageCollection do
     collection = LegislativeMessageCollection.new
     #collection = collection.get_all
     # collection.get(ENV['writeit_base_url']+ENV['writeit_url'], 'application/json')
-    collection.get('http://localhost:3001/api/v1/message/?format=json&username=admin&api_key=a', 'application/json')
+    collection.get
 
     collection.objects.length.should eql 1
     message = collection.objects[0]

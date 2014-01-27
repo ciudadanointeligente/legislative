@@ -14,7 +14,16 @@ class LegislativeMessageCollection
 	end
 
 	collection :objects, :class => LegislativeMessageRepresenter
-	def get_all
+
+	def get
 		
+		url = URI.join(ENV['writeit_base_url'], ENV['writeit_url'], 'messages/')
+		params = URI.encode_www_form("format" => "json", 
+			"username" => ENV["writeit_username"], 
+			"api_key" => ENV["writeit_api_key"])
+		url.query = params
+		
+		#puts URI::HTTP.build(:host => url, :query => { :q => "test" }.to_query)
+		super(url.to_s, 'application/json')
 	end
 end
