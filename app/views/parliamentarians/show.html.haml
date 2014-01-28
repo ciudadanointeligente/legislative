@@ -1,122 +1,173 @@
 %div.row
-  %div.col-md-3
-    %div{:style=>'margin-top:25px;'}
-    %img.img-responsive{:src=>'http://placehold.it/300x300'}
-    
-  %div.col-md-9
+  %div.col-md-7
     %h2
       = @parliamentarian.name
     %h4
-      Diputado
-    %table.table.table-striped.table-bordered.table-condensed
-      %thead
-      %tbody
-        %tr
-          %td{:width=>'20%'}
-            Lugar que representa:
-          %td
-            Región Metropolitana
-        %tr
-          %td
-            Periodo:
-          %td
-            1980 - 2013
-        %tr
-          %td
-            Partido:
-          %td
-            Partido por la mitad
-        %tr
-          %td
-            Comisión:
-          %td
-            Regular
-        %tr
-          %td
-            Links:
-          %td
-            
-
-            %ul{:style=>'list-style:none;padding-left:5px;'}
-            - @parliamentarian.links.each do | data |
-              %li
-                - case data['note']
-                - when 'Facebook'
-                  %i.fa.fa-facebook
-                - when 'Twitter'
-                  %i.fa.fa-twitter
-                - else
-                  %i.fa.fa-globe
-
-                - url = data['url']
-                - u = URI.parse(data['url'])
-                - if (!u.scheme)
-                  - url = "http://" + data['url']
-
-                %a{'href'=> url, 'target'=>'_blank'}
-                  = data['note']
-            
-
+      Senador
+  %div.col-md-5
+    %ul.list-inline
+      %li
+        %i.fa.fa-star-o 
+        9999 Suscripciones
+      %li
+        %i.fa.fa-pencil 
+        9999 Preguntas
+      %li
+        %i.fa.fa-facebook 
+        Comparte
+      %li
+        %i.fa.fa-twitter 
+        Twittea
 %div.row
   %div.col-md-3
-    %div{:style=>'border:1px solid #ccc; padding:10px; margin-top:20px;'}
-      %ul{:style=>'list-style:none;'}
+    %img{ 'src' => 'http://placehold.it/230x230'}
+    %p
+      Lugar que representa: Región Metropolitana
+    %p
+      Periodo: 2000 - 2004 Senador, 2010 - 2014 Diputado
+    %p
+      Partido:
+      %a{ 'href' => 'http://www.google.cl' }
+        Partido Independiente Popular Latinoamericano
+        %i.fa.fa-external-link
+    %p
+      Comisión: Educación
+    %div
+      %ul
         %li
-          %i.fa.fa-bell
-          Suscríbete
+          %a{ 'href' => 'http://www.google.cl' }
+            %i.fa.fa-globe
+            Sitio Web
         %li
-          %i.fa.fa-envelope
-          Escríbele
-  %div.col-md-9  
-    %div{:style=>'border:1px solid #ccc; padding:10px; margin-top:20px;'}
-      %blockquote
-        %p
-          %i.fa.fa-quote-left
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec. 
-          %i.fa.fa-quote-right
-          %small.text-right
-            Ha respondido 6 de las 28 preguntas. 
+          %a{ 'href' => 'http://www.linkedin.com' }
+            %i.fa.fa-linkedin-square
+            CV
+        %li
+          %a{ 'href' => 'http://www.facebook.com' }
+            %i.fa.fa-facebook-square
+            Facebook
+        %li
+          %a{ 'href' => 'http://www.twitter.com' }
+            %i.fa.fa-twitter-square
+            Twitter
+      
+    %h5
+      Biografía
+    %p
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab ut aperiam quae fuga! Dolorum, ex, quos veniam culpa qui explicabo non ullam exercitationem inventore tempora adipisci doloremque facere nisi.
+    %p
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, saepe repellendus officiis nulla dicta qui quas sit placeat distinctio. Dignissimos, fuga expedita sint placeat harum vel atque at reiciendis. Consequatur!
+    %p
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, exercitationem maxime labore recusandae ut magni quisquam quae quo necessitatibus rerum tempora autem voluptatem molestiae vel rem ad quas eligendi fugit.
 
-%div
-  %h3.page-header
-    Iniciativas más recientes
-  = render :partial=> "initiatives"
-  %div.text-right
-    %button.btn.btn-default.btn-xs
-      Ver todas las iniciativas
+  %div.col-md-9
+    %h3
+      Últimas Iniciativas
+    %div.table-responsive
+      %table.table
+        %tr
+          %td
+            %img{ 'src' => 'http://placehold.it/35x58' }
+          %td
+            %h5
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, hic velit repudiandae modi ab provident quibusdam laudantium maxime deserunt asperiores debitis ducimus alias placeat accusamus sit sapiente in eos delectus.
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
+            %p
+              %a{ 'href' => '#' }
+                Ver Proyecto
+        %tr
+          %td
+            %img{ 'src' => 'http://placehold.it/35x58' }
+          %td
+            %h5
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, hic velit repudiandae modi ab provident quibusdam laudantium maxime deserunt asperiores debitis ducimus alias placeat accusamus sit sapiente in eos delectus.
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
+            %p
+              %a{ 'href' => '#' }
+                Ver Proyecto
+        %tr
+          %td
+            %img{ 'src' => 'http://placehold.it/35x58' }
+          %td
+            %h5
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, hic velit repudiandae modi ab provident quibusdam laudantium maxime deserunt asperiores debitis ducimus alias placeat accusamus sit sapiente in eos delectus.
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
+            %p
+              %a{ 'href' => '#' }
+                Ver Proyecto
+    
+    %div.special-box
+      %p.question
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, perspiciatis, consequatur non inventore adipisci placeat deleniti animi tempora accusantium ipsa incidunt doloremque ducimus quos dolores minus doloribus debitis. Necessitatibus, impedit.
+      %p.answer
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, temporibus, veniam, modi, facere laudantium aliquam facilis officiis aperiam delectus eum sapiente natus harum ut unde quisquam repellat magni expedita sunt.
+      %p.total-answers.text-right
+        Pedro Pablo Alvarez-Salamanca Ramirez ha respondido 999 de las 999 preguntas ciudadanas
 
-%div
-  %h3.page-header
-    Porcentajes de Votaciones
-  %div.row
-    %div.col-md-6.jumbotron{:style=>'padding:15px;'}
-      %p{:style=>'font-size:40px;font-weight: bold;'}
-        22%
-      %p
-        Asistencia
-    %div.col-md-6.jumbotron{:style=>'background-color:grey; padding:15px;'}
-      %p{:style=>'font-size:40px;font-weight: bold;color:white;'}
-        60%
-      %p{:style=>'color:white;'}
-        Concordancia con el partido
+    %div.votes.table-responsive
+      %h3
+        Votaciones
+      %table.table
+        %tr
+          %td
+            %img{ 'src' => 'http://placehold.it/35x58' }
+          %td
+            %p
+              %strong
+                A FAVOR
+              %span.date
+                24 de Octubre, 2013
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
+        %tr
+          %td
+            %img{ 'src' => 'http://placehold.it/35x58' }
+          %td
+            %p
+              %strong
+                A FAVOR
+              %span.date
+                24 de Octubre, 2013
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
 
-%div
-  %h3.page-header
-    Votaciones más recientes
-  = render :partial=> "votes"
-  %div.text-right{:style=>'padding-top:15px;'}
-    %button.btn.btn-default.btn-xs
-      Ver historial de votaciones
-
-%div
-  %h3.page-header
-    Últimas Intervenciones
-  
-
-  = render :partial=> "recent_interventions"
-  %div.text-right{:style=>'padding-top:15px;'}
-    %button.btn.btn-default.btn-xs
-      Ver todas
-
-
-
+    %div.intervencions.table-responsive
+      %h3
+        Últimas Intervenciones
+      %table.table
+        %tr
+          %td
+            %img{ 'src' => 'http://placehold.it/35x58' }
+          %td
+            %p
+              %strong
+                SESIÓN 84
+              %span.date
+                24 de Octubre, 2013
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
+        %tr
+          %td
+            %img{ 'src' => 'http://placehold.it/35x58' }
+          %td
+            %p
+              %strong
+                SESIÓN 84
+              %span.date
+                24 de Octubre, 2013
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
+        %tr
+          %td
+            %img{ 'src' => 'http://placehold.it/35x58' }
+          %td
+            %p
+              %strong
+                SESIÓN 84
+              %span.date
+                24 de Octubre, 2013
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
