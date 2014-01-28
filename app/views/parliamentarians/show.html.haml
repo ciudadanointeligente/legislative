@@ -1,9 +1,11 @@
 %div.row
   %div.col-md-7
-    %h2
-      = @parliamentarian.name
-    %h4
-      Senador
+    %ul.breadcrumb
+      %li
+        %a{'href'=>'#'}
+          Parlamentarios
+      %li.active
+        Pedro Pablo Alvarez-Salamanca Ramirez
   %div.col-md-5
     %ul.list-inline
       %li
@@ -18,6 +20,13 @@
       %li
         %i.fa.fa-twitter 
         Twittea
+
+%div
+  %h2
+    = @parliamentarian.name
+  %h4
+    Senador
+  
 %div.row
   %div.col-md-3
     %img{ 'src' => 'http://placehold.it/230x230'}
