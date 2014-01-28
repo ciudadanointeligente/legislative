@@ -2,6 +2,14 @@
 
 set -e
 
+export FORCE=false
+args=`getopt f`
+for i
+do
+  case "$i" in
+        -f) FORCE=true;;
+  esac
+done
 
 export DIR=writeit_local_for_testing
 export VIRTUALENV=writeit_for_testing
@@ -17,12 +25,11 @@ export YAML_FILE=${WHERE_YAMLS_ARE}${YAML_FILE_NAME}
 cd $DIR;
 source $VIRTUALENV/bin/activate;
 
-
 if [ ! -e current_data.txt ]; then touch current_data.txt; fi
 
 CURRENT_DATA=`cat current_data.txt`;
 
-if [ "$CURRENT_DATA" != "$YAML_FILE_NAME" ]
+if [[ FORCE || "$CURRENT_DATA" != "$YAML_FILE_NAME" ]]
 then
         echo "$CURRENT_DATA y $YAML_FILE_NAME no son iguales";
         echo "$YAML_FILE_NAME" > current_data.txt;

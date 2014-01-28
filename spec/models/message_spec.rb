@@ -16,7 +16,7 @@ end
 
 describe LegislativeMessageCollection do
   before(:each) do
-    value = %x( ./writeit_for_testing/writeit_install_yaml.bash )
+    value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_one_message.yaml )
   end
   it "it gets the messages from the server" do
     collection = LegislativeMessageCollection.new
