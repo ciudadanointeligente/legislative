@@ -1,33 +1,56 @@
+%div
+  %ol.breadcrumb
+    %li
+      = link_to 'Portada', root_path
+    %li.active
+      = t('layout.communication')
+
 %div.page-header
-  %h2 Comunicación
+  %h2
+    = t('layout.communication')
 
 %section#communication
   %div.panel.panel-default
-    %div.panel-body
+    %div.form-comunication.panel-body
       = form_tag  :method => 'POST' do
         = field_set_tag do
-          %div.row
-            %div.col-md-6
+          %div.row{'style'=>'background-color:#3E1F3E'}
+            %div.col-md-3.message-box-left
               %div.form-group
-                = text_field_tag :subject, nil ,:class => "form-control", :placeholder=>"Título de tu mensaje"
+                %label{:for=>"author_name"}
+                  Nombre
+                %div.input-group
+                  = text_field_tag :author_name, nil ,:class => "form-control", :placeholder=>"Nombre"
+                  %span.input-group-addon
+                    %i.fa.fa-user
               %div.form-group
-                = text_area_tag :content, nil ,:class => "form-control", :placeholder=>"Contenido del mensaje"
-              %div.form-group
-                = text_field_tag :author_name, nil ,:class => "form-control", :placeholder=>"Tu nombre"
-              %div.form-group
-                = text_field_tag :author_email, nil ,:class => "form-control",:placeholder=>"Tu email"
-            %div.col-md-6
-              %p
-                Ingresa con qué candidatos quieres comunicarte:
-              
-              %div.tab-content
-                %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]"}
+                %label{:for=>"author_name"}
+                  E-mail
+                %div.input-group
+                  = text_field_tag :author_email, nil ,:class => "form-control",:placeholder=>"E-mail"
+                  %span.input-group-addon
+                    %i.fa.fa-envelope
+
+              %div.form-group.tab-content
+                %label{:for=>"author_name"}
+                  Seleccione un senador o diputado
+                %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => 'Seleccione'}
                   - @parliamentarians.persons.each do |parliamentarians|
                     %option{:value => parliamentarians.popit_api_uri}
                       =parliamentarians.name
 
-        %div.text-right
-        = submit_tag 'Enviar', :class => "btn btn-success"
+            %div.col-md-9.message-box-right
+              %h4
+                Redacta tu mensaje
+              %p
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, suscipit architecto esse eaque labore laboriosam soluta dolores! Animi, deserunt, consequatur, quod sequi repellat omnis at nihil dolores voluptatibus facere inventore.
+              %div.form-group
+                = text_field_tag :subject, nil ,:class => "form-control", :placeholder=>"Título de tu mensaje"
+              %div.form-group
+                = text_area_tag :content, nil ,:class => "form-control", :placeholder=>"Contenido del mensaje", :rows => '6'
+              %div.text-right
+                = submit_tag 'Enviar', :class => "btn btn-success"
+
 %script{src: "http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.jquery.min.js"}
 :javascript
   $(document).ready(function(){

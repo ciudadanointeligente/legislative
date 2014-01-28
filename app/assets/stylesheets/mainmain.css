@@ -187,6 +187,7 @@ a:hover {
     color: #968495;
 }
 
+/*
 .form-control {
   color: #f9f9eb;
   background-color: #cdcdb3;
@@ -196,19 +197,20 @@ a:hover {
   height: 50px;
 }
 
-.form-control::-webkit-input-placeholder { /* WebKit browsers */
+.form-control::-webkit-input-placeholder {
     font-family: 'Lato', sans-serif;
 }
-.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+.form-control:-moz-placeholder {
     font-family: 'Lato', sans-serif;
 }
-.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+.form-control::-moz-placeholder {
     font-family: 'Lato', sans-serif;
 }
 
-.form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+.form-control:-ms-input-placeholder {
     font-family: 'Lato', sans-serif;
 }
+*/
 
 /*Home*/
 
@@ -337,3 +339,40 @@ span.paring {
   opacity: 0.3;
   border-radius: 25px;
 }
+
+/*Comunicacion*/
+.form-comunication {
+  color: #FFF;
+}
+#communication .panel .panel-body {
+  padding: 0;
+}
+.message-box-right {
+  background-color: #462445;
+  padding: 10px;
+}
+.message-box-left .input-group-addon {
+  color: #FFF;
+  background-color: #6B506A;
+  border: 1px solid #6B506A;
+}
+.message-box-left {
+  padding: 10px;
+}
+.message-box-right .form-control {
+  border: 1px solid #462445;
+  background-color: #6B506A;
+  color: #FFF;
+}
+.message-box-right .form-control::-webkit-input-placeholder {
+  color: #FFF;
+}
+.message-box-right .form-control:-moz-placeholder {
+  color: #FFF;
+}
+/*chosen*/
+.chosen-container-multi .chosen-choices {
+  background-image: none;
+  background-color: #FFF !important;
+}
+/*End Comunicacion*/
