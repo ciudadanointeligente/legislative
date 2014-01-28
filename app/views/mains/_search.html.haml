@@ -8,13 +8,16 @@
     = form_tag(t('routes.searches'), :method => 'get', :class => "form-inline") do
       %div.row
         %div.col-md-5.col-md-offset-3
-          %input.form-control{:type => "text", :name => 'q', :placeholder => t("main.search_placeholder")}
-          %div.checkbox{:style => "padding-top: 7px;"}
-            %label{:style => "padding-right: 7px;"}
+          %div.input-group
+            %input.form-control{:type => "text", :name => 'q', :placeholder => t("main.search_placeholder")}
+            %span.input-group-btn
+              %button{:type => "submit", :class => "btn btn-primary"}
+                =t("search.search")
+
+          %div.checkbox
+            %label
               %input{:type => 'checkbox', :name => 'bills', :value => '1'}
                 Proyectos de ley
             %label
               %input{:type => 'checkbox', :name => 'parliamentarians', :value => '2'}
                 Parlamentarios
-        %button{:type => "submit", :class => "btn btn-primary"}
-          =t("search.search")
