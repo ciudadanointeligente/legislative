@@ -20,6 +20,7 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
+  text-align: center;
 }
 
 h2 {
@@ -53,6 +54,10 @@ a {
 
 a:hover {
   color: #dd8740;
+}
+
+p.light {
+  color: #a6a691;
 }
 
 /*Botones*/
@@ -131,11 +136,9 @@ a:hover {
 
 .navbar-nav {
   float: right;
-  margin-top: 10px;
 }
 
 .nav a {
-  margin-left: 20px;
   color: #b2a5b2;
   text-decoration: none;
 }
@@ -165,6 +168,16 @@ a:hover {
 .table th {
   background: #67675a;
   color: #e6e6c9;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: #e6e6c9;
+}
+
+.table>tbody>tr>td {
+  background: #f5f5dd;
+  padding: 15px;
+  border-top: transparent;
 }
 
 /*Inputs*/
@@ -212,7 +225,7 @@ a:hover {
 }
 */
 
-/*Home*/
+/*HOME*/
 
 .hero-space h4 {
   margin-bottom: 50px;
@@ -224,6 +237,39 @@ a:hover {
 
 .hot-space .btn-info:hover {
   color: #ea6a56;
+}
+
+.hot-space .list-inline {
+  padding-top: 20px;
+}
+
+.table.tablas {
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+/*respuestas*/
+
+.home-answers-wraper {
+  position: relative;
+}
+
+.home-answers-wraper .home-answers {
+  background: #e6e6c9;
+  padding: 15px;
+  border-right: 50px solid #cdcdb3;
+}
+
+.home-answers img {
+  max-width: 60px;
+  border-radius: 30px;
+}
+
+.home-answers-wraper .fa-quote-right {
+  position: absolute;
+  top: 15px;
+  right: 27px;
+  color: #e6e6c9;
 }
 
 /*Otros*/
