@@ -28,6 +28,43 @@
 
         %div.text-right
         = submit_tag 'Enviar', :class => "btn btn-success"
+
+%section#responses
+  %div.page-header
+    %h3
+      Mensajes enviados
+
+  - @messages.objects.each do |message|
+    %div.panel.panel-default
+      %div.panel-heading
+        =message.subject
+        %h4
+          =message.content
+  %div.text-center
+    %ul.pagination
+      %li
+        %a{:href=>'#'}
+          &laquo;
+      %li.active
+        %a{:href=>'#'}
+          1
+      %li
+        %a{:href=>'#'}
+          2
+      %li
+        %a{:href=>'#'}
+          3
+      %li
+        %a{:href=>'#'}
+          4
+      %li
+        %a{:href=>'#'}
+          5
+      %li.disabled
+        %a{:href=>'#'}
+          &raquo;
+
+
 %script{src: "http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.jquery.min.js"}
 :javascript
   $(document).ready(function(){

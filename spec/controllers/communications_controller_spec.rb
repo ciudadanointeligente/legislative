@@ -18,6 +18,15 @@ describe CommunicationsController do
       assigns(:parliamentarians).persons.should_not be_nil
       assigns(:parliamentarians).persons[0].should be_an_instance_of PopitPerson
     end
+    it "obtains list of messages" do
+      value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_one_message.yaml )
+      get 'index', locale: 'es'
+      assigns(:messages).should_not be_nil
+      assigns(:messages).should be_an_instance_of LegislativeMessageCollection
+      assigns(:messages).objects.should_not be_nil
+      assigns(:messages).objects[0].should be_an_instance_of LegislativeMessageRepresenter
+
+    end
     it "instanciates a writeit instance based on environment" do
       controller = CommunicationsController.new
       controller.instance_eval{ set_current_instance }
