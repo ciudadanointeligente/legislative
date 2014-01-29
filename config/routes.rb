@@ -9,7 +9,11 @@ Legislative::Application.routes.draw do
   post "auth" => "sessions#login"
   get "sign_up" => "users#new", :as => "sign_up"
   get "confirmed" => "user_subscriptions#confirmed"
- 
+  
+  resources :notifiers do
+    get 'get_user_id_subscriptions', on: :member
+  end
+
   localized do
     resources :bills do
       get 'searches', on: :collection
@@ -24,7 +28,7 @@ Legislative::Application.routes.draw do
     resources :tables
     resources :users
     resources :searches
-    resources :user_subscriptions
+    resources :user_subscriptions   
   end
 
   

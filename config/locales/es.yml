@@ -162,6 +162,8 @@ es:
     verified_mail: El correo electrónico fue exitosamente verificado
     subscribe: Suscríbete
     email: Correo Electrónico
+  notifiers:
+  
   routes:
     bills: proyectos
     communications: comunicaciones
