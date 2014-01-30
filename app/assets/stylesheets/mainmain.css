@@ -422,3 +422,13 @@ span.paring {
   background-color: #FFF !important;
 }
 /*End Comunicacion*/
+
+/*bills*/
+.title-header {
+  color: #FFF;
+  background-color: #67675A;
+}
+.title-header a {
+  color: #FFF;
+}
+/*end bills*/

@@ -1,62 +1,6 @@
 :javascript
   var billuid = '#{@bill.uid}';
 
-%div
-  %h3.page-header
-    =@bill.title
-%div.row
-  %div.col-md-9
-    %p{:style=>'font-style: italic; font-size:16px;'}
-      =@bill.abstract
-    %div.row
-      %div.col-md-2
-        %strong
-          Boletín:
-      %div.col-md-10
-        =@bill.uid
-    %div.row
-      %div.col-md-2
-        %strong
-          Materias:
-      %div.col-md-10
-        %ul.list-inline
-          - @matters = @bill.subject_areas
-          =render partial: "matter", collection: @matters
-    %div.row
-      %div.col-md-2
-        %strong
-          Tags:
-      %div.col-md-10
-        %ul.list-inline
-          - if !@bill.tags.blank?
-            - @bill.tags.each do |tag|
-              %li
-                %span.label.label-info= tag
-    %p
-      %a{:href=>'#'}
-        %i.fa.fa-download
-        Descargar
-    
-  %div.col-md-3
-    %div{:style=>'border: 1px solid #ccc; border-radius: 5px;'}
-      %ul{:style=>'list-style:none;'}
-        %li
-          %i.fa.fa-bell
-          = link_to 'Suscríbete', new_user_subscription_path(:bill => params[:id])
-        %li
-          %i.fa.fa-facebook
-          %a{'href' => '#', 'onclick' => "window.open('https://www.facebook.com/sharer/sharer.php?u=http://"+request.host+request.fullpath+"','Facebook','width=500,height=280')"}
-            Comparte
-        %li
-          %i.fa.fa-twitter
-          %a{'href'=>'#', 'onclick' => "window.open('https://twitter.com/share?text="+@bill.title+"&hashtags=PMO','Twitter','width=500,height=280')"}
-            Twittea
-        %li
-          %i.fa.fa-thumbs-up
-            23
-          %i.fa.fa-thumbs-down
-            15
-
 = javascript_include_tag 'svg/jquery.svg.min.js'
 = javascript_include_tag 'svg/jquery.svgdom.min.js'
 = javascript_include_tag 'svg/jquery.svganim.min.js'
@@ -275,38 +219,48 @@
   }
 
 %div
-  %svg.graph{'version'=>'1.1', 'xmlns:xlink'=>"http://www.w3.org/1999/xlink", 'xmlns'=>"http://www.w3.org/2000/svg", 'width'=>"700", 'height'=>"200"}
-    /radial gradient
-    %defs
-      %radialGradient#gradientShadow{'cx'=>'50%', 'cy'=>'50%', 'fx'=>'50%', 'fy'=>'50%', 'r'=>'55%'}
-        %stop{'offset'=>'0%', 'style'=>'stop-color:rgb(0,0,0); stop-opacity:1'}
-        %stop{'offset'=>'100%', 'style'=>'stop-color:#AAA; stop-opacity:0'}
-    /surface
-    %g.surfaces
-      %path#first_set.first_set
-    /grid lines
-    %use.grid.double{'xlink:href'=>'#xGrid','style'=>''}
-    %use.grid.double{'xlink:href'=>'#yGrid','style'=>''}
-    /points
-    %g#points.first_set.points{'data-setname'=>'set de datos'}
-    /labels
-    %g.labels.x-labels
-      
-    %g.labels.y-labels
-      %text{'x'=>'90', 'y'=>'20'}
-        nro eventos
-      %text{'x'=>'80', 'y'=>'0'}
-        10
-      %text{'x'=>'80', 'y'=>'40'}
-        8
-      %text{'x'=>'80', 'y'=>'80'}
-        6
-      %text{'x'=>'80', 'y'=>'120'}
-        4
-      %text{'x'=>'80', 'y'=>'160'}
-        2
-      %text{'x'=>'80', 'y'=>'200'}
-        0
+  %div.row.title-header
+    %div.col-md-9
+      %h4
+        Eventos que ha tenido este proyecto
+    %div.col-md-3
+      %p.text-right
+        %a{'href'=>'#'}
+          Descargar historia del proyecto
+          %i.fa.fa-download
+  %div
+    %svg.graph{'version'=>'1.1', 'xmlns:xlink'=>"http://www.w3.org/1999/xlink", 'xmlns'=>"http://www.w3.org/2000/svg", 'width'=>"700", 'height'=>"200"}
+      /radial gradient
+      %defs
+        %radialGradient#gradientShadow{'cx'=>'50%', 'cy'=>'50%', 'fx'=>'50%', 'fy'=>'50%', 'r'=>'55%'}
+          %stop{'offset'=>'0%', 'style'=>'stop-color:rgb(0,0,0); stop-opacity:1'}
+          %stop{'offset'=>'100%', 'style'=>'stop-color:#AAA; stop-opacity:0'}
+      /surface
+      %g.surfaces
+        %path#first_set.first_set
+      /grid lines
+      %use.grid.double{'xlink:href'=>'#xGrid','style'=>''}
+      %use.grid.double{'xlink:href'=>'#yGrid','style'=>''}
+      /points
+      %g#points.first_set.points{'data-setname'=>'set de datos'}
+      /labels
+      %g.labels.x-labels
+        
+      %g.labels.y-labels
+        %text{'x'=>'90', 'y'=>'20'}
+          nro eventos
+        %text{'x'=>'80', 'y'=>'0'}
+          10
+        %text{'x'=>'80', 'y'=>'40'}
+          8
+        %text{'x'=>'80', 'y'=>'80'}
+          6
+        %text{'x'=>'80', 'y'=>'120'}
+          4
+        %text{'x'=>'80', 'y'=>'160'}
+          2
+        %text{'x'=>'80', 'y'=>'200'}
+          0
 
 %div#tooltip
   %svg
@@ -401,8 +355,9 @@
               %td= render partial: "instruction", collection: @instructions
 
 %div
-  %h3.page-header
-    Votaciones
+  %div
+    %h3.title-header
+      Votaciones
   =render partial: "chamber_votes"
 
 %div#disqus_thread

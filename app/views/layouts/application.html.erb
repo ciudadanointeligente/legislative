@@ -89,6 +89,11 @@
     <%= render :partial => "hot"%>
     <% end %>
 
+    <% if @condition_resume_bill %>
+    <!-- LLamada resumen proyectos de ley -->
+    <%= render :partial => "resume"%>
+    <% end %>
+
     <div class="container">
 
       <div class="row">
