@@ -10,6 +10,7 @@ Legislative::Application.routes.draw do
 
   resources :notifiers do
     get 'get_user_id_subscriptions', on: :member
+    get 'build', on: :collection
   end
 
   put "bills/:id/update" => "bills#update", method: :put

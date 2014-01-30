@@ -18,5 +18,11 @@ FactoryGirl.define do
       f.confirmed true
       f.email_token 473910
     end
+    factory :user_subscription4 do |f|
+      f.user 12
+      f.bill "8906-09"
+      f.confirmed true
+      f.email_token 294881
+    end
   end
 end
