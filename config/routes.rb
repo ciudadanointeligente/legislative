@@ -9,8 +9,7 @@ Legislative::Application.routes.draw do
   get "confirmed" => "user_subscriptions#confirmed"
 
   resources :notifiers do
-    get 'get_user_id_subscriptions', on: :member
-    get 'build', on: :collection
+    get 'run_tasks', on: :collection
   end
 
   put "bills/:id/update" => "bills#update", method: :put
