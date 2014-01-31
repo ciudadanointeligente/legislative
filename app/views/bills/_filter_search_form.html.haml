@@ -46,7 +46,7 @@
 %div.form-group
   = label_tag :creation_date_min, t('search.creation_date_min')
   - if params[:creation_date_min] == nil
-    - params[:creation_date_min] = ENV['parliaments-initial-date']
+    - params[:creation_date_min] = ENV['parliaments_initial_date']
   %div.input-group
     %span.input-group-addon
       %i.fa.fa-calendar
@@ -59,7 +59,7 @@
   %div.input-group
     %span.input-group-addon
       %i.fa.fa-calendar
-    %input{"type" => "date", "value" => params[:creation_date_max], "min" => ENV['parliaments-initial-date'], "name" => "creation_date_max", "class" => "form-control", "onfocus" => "ga('send','paperwork','focus_max_date')"}
+    %input{"type" => "date", "value" => params[:creation_date_max], "min" => ENV['parliaments_initial_date'], "name" => "creation_date_max", "class" => "form-control", "onfocus" => "ga('send','paperwork','focus_max_date')"}
 
 %div.form-group
   = label_tag :range, t('search.event_range')
