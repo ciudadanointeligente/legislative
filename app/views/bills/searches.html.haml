@@ -1,0 +1,36 @@
+%div
+  %ol.breadcrumb
+    %li
+      %a{'href'=>'#'}
+        Portada
+    %li
+      %a{'href'=>'#'}
+        Proyectos de Ley
+    %li.current
+      Resultado de búsqueda
+
+%div.row
+  %div.col-md-3
+    %h4
+      Proyectos de Ley
+  %div.col-md-9
+    %ul.list-inline
+      %li
+        %i.fa.fa-star
+        9999 Suscripciones
+      %li
+        %i.fa.fa-pencil
+        9999 Preguntas
+      %li
+        %i.fa.fa-facebook
+        Comparte
+      %li
+        %i.fa.fa-twitter
+        Twittea
+
+%div.row
+  %div.col-md-3
+    = render :partial => "filter_search_form"
+  %div.col-md-9
+    - @bills = @bills_query.bills
+    = render :partial => "box_bills_result"
