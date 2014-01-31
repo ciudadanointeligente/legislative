@@ -1,0 +1,11 @@
+- @parliamentarians.persons.each do |parliamentarian|
+  %div.row
+    %div.col-md-1
+      %img.img-circle.img-responsive{:src=>parliamentarian.images[0]['url']}
+    %div.col-md-11
+      %h4
+        = link_to parliamentarian.name, parliamentarian_path(parliamentarian.slug)
+
+- if @parliamentarians.persons.count == 0
+  %p.text-center
+    = t('search.there_are_no_results')

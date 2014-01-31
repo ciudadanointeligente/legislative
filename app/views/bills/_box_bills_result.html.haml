@@ -1,0 +1,13 @@
+- @bills.each do |bill|
+  %div.row
+    %div.col-md-1
+      %i.fa.fa-bookmark.fa-5x
+    %div.col-md-11
+      %h4
+        = link_to bill.title, bill_path(bill.uid), :onclick => "ga('send','paperwork','bill', '"+bill.uid+"')"
+        %i.fa.fa-bell
+      %p 
+        = bill.abstract
+- if @bills.count == 0
+  %p.text-center
+    = t('search.there_are_no_results')

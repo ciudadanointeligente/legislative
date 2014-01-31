@@ -52,6 +52,8 @@ es:
     initial_chamber: 'Cámara de origen:'
     author: Autor
     placeholder_author: Ingresa el nombre de un autor
+    there_are_no_results: No hay resultados para esta búsqueda
+    event_range: rango de eventos
   bill:
     bulletin: Boletín
     title: Título
@@ -154,6 +156,14 @@ es:
     delete: Eliminar
     user: Usuario
     users: Usuarios
+  user_subscriptions:
+    confirmation_mail_sent: Se ha enviado un correo electrónico a la casilla registrada
+    already_subscribe: Ya existe una suscripción a este bill con ese correo electrónico
+    verified_mail: El correo electrónico fue exitosamente verificado
+    subscribe: Suscríbete
+    email: Correo Electrónico
+  notifiers:
+  
   routes:
     bills: proyectos
     communications: comunicaciones

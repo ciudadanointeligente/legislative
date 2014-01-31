@@ -1,119 +1,122 @@
-%div.page-header
-  %h2
-    Parlamentario
+%div.row
+  %div.col-md-3
+    %div{:style=>'margin-top:25px;'}
+    %img.img-responsive{:src=>'http://placehold.it/300x300'}
+    
+  %div.col-md-9
+    %h2
+      = @parliamentarian.name
+    %h4
+      Diputado
+    %table.table.table-striped.table-bordered.table-condensed
+      %thead
+      %tbody
+        %tr
+          %td{:width=>'20%'}
+            Lugar que representa:
+          %td
+            Región Metropolitana
+        %tr
+          %td
+            Periodo:
+          %td
+            1980 - 2013
+        %tr
+          %td
+            Partido:
+          %td
+            Partido por la mitad
+        %tr
+          %td
+            Comisión:
+          %td
+            Regular
+        %tr
+          %td
+            Links:
+          %td
+            
 
-%section#parliamentarian-bio
+            %ul{:style=>'list-style:none;padding-left:5px;'}
+            - @parliamentarian.links.each do | data |
+              %li
+                - case data['note']
+                - when 'Facebook'
+                  %i.fa.fa-facebook
+                - when 'Twitter'
+                  %i.fa.fa-twitter
+                - else
+                  %i.fa.fa-globe
+
+                - url = data['url']
+                - u = URI.parse(data['url'])
+                - if (!u.scheme)
+                  - url = "http://" + data['url']
+
+                %a{'href'=> url, 'target'=>'_blank'}
+                  = data['note']
+            
+
+%div.row
+  %div.col-md-3
+    %div{:style=>'border:1px solid #ccc; padding:10px; margin-top:20px;'}
+      %ul{:style=>'list-style:none;'}
+        %li
+          %i.fa.fa-bell
+          Suscríbete
+        %li
+          %i.fa.fa-envelope
+          Escríbele
+  %div.col-md-9  
+    %div{:style=>'border:1px solid #ccc; padding:10px; margin-top:20px;'}
+      %blockquote
+        %p
+          %i.fa.fa-quote-left
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec. 
+          %i.fa.fa-quote-right
+          %small.text-right
+            Ha respondido 6 de las 28 preguntas. 
+
+%div
+  %h3.page-header
+    Iniciativas más recientes
+  = render :partial=> "initiatives"
+  %div.text-right
+    %button.btn.btn-default.btn-xs
+      Ver todas las iniciativas
+
+%div
+  %h3.page-header
+    Porcentajes de Votaciones
   %div.row
-    %div.col-md-3
-      %img.img-responsive{:src=>'http://placehold.it/200x300'}
-    %div.col-md-9
-      %h3
-        Isabel Allende Bussi
-      %h4
-        Senadora
-      %div
-        %table.table
-          %thead
-            %tr
-              %th{:colspan=>'2'}
-                Datos
-          %tbody
-            %tr
-              %td
-                %strong
-                  Partido
-              %td
-                P.S.
-            %tr
-              %td
-                %strong
-                  Teléfono
-              %td
-                (56-32) 2504671
-            %tr
-              %td
-                %strong
-                  Email
-              %td
-                iallende@senado.cl
-            %tr
-              %td
-                %strong
-                  Comunas
-              %td
-                Chañaral, Copiapó, Diego de Almagro, Alto del Carmen, Caldera, Huasco, Freirina, Tierra Amarilla, Vallenar
+    %div.col-md-6.jumbotron{:style=>'padding:15px;'}
+      %p{:style=>'font-size:40px;font-weight: bold;'}
+        22%
+      %p
+        Asistencia
+    %div.col-md-6.jumbotron{:style=>'background-color:grey; padding:15px;'}
+      %p{:style=>'font-size:40px;font-weight: bold;color:white;'}
+        60%
+      %p{:style=>'color:white;'}
+        Concordancia con el partido
 
-  %div
-    %ul.nav.nav-tabs
-      %li.active
-        %a{:href=>"#mociones", :'data-toggle'=>"tab"}
-          Mociones
-      %li
-        %a{:href=>"#proyectos", :'data-toggle'=>"tab"}
-          Proyectos de Acuerdo
-      %li
-        %a{:href=>"#oficios", :'data-toggle'=>"tab"}
-          Oficios incidentes
-      %li
-        %a{:href=>"#intervenciones", :'data-toggle'=>"tab"}
-          Intervenciones
-      %li
-        %a{:href=>"#comisiones", :'data-toggle'=>"tab"}
-          Comisiones
+%div
+  %h3.page-header
+    Votaciones más recientes
+  = render :partial=> "votes"
+  %div.text-right{:style=>'padding-top:15px;'}
+    %button.btn.btn-default.btn-xs
+      Ver historial de votaciones
 
-  %div.tab-content
-    %div.tab-pane.active#mociones
-      %table.table.table-striped
-        %thead
-          %tr
-            %th
-              Nro Boletín
-            %th
-              Fecha
-            %th
-              Sumario
-            %th
-              Estado
-        %tbody
-          %tr
-            %td
-              9180-13
-            %td
-              04/12/2013
-            %td
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolor officia facilis numquam minima natus blanditiis saepe cum pariatur repudiandae sit dicta illum voluptatum expedita odit temporibus laudantium eaque laborum!
-            %td
-              En tramitación
-          %tr
-            %td
-              9180-13
-            %td
-              04/12/2013
-            %td
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolor officia facilis numquam minima natus blanditiis saepe cum pariatur repudiandae sit dicta illum voluptatum expedita odit temporibus laudantium eaque laborum!
-            %td
-              En tramitación
-    %div.tab-pane#proyectos
-      %table.table.table-striped
-        %thead
-          %tr
-            %th
-              Nro Boletín
-            %th
-              Fecha
-            %th
-              Sumario
-            %th
-              Estado
-        %tbody
-          %tr
-            %td
-              9180-13
-            %td
-              04/12/2013
-            %td
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolor officia facilis numquam minima natus blanditiis saepe cum pariatur repudiandae sit dicta illum voluptatum expedita odit temporibus laudantium eaque laborum!
-            %td
-              En tramitación
+%div
+  %h3.page-header
+    Últimas Intervenciones
+  
+
+  = render :partial=> "recent_interventions"
+  %div.text-right{:style=>'padding-top:15px;'}
+    %button.btn.btn-default.btn-xs
+      Ver todas
+
 
 

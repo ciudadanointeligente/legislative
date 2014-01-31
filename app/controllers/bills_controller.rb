@@ -5,7 +5,7 @@ class BillsController < ApplicationController
   # GET /bills
   # GET /bills.json
   def index
-    # @bills = Bill.get("http://billit.ciudadanointeligente.org/bills/", 'application/json')
+    # @bills = Bill.get(ENV['billit_url'], 'application/json')
 
     # respond_to do |format|
       # format.html # index.html.erb
@@ -16,7 +16,7 @@ class BillsController < ApplicationController
   # GET /bills/1
   # GET /bills/1.json
   def show
-    @bill = Bill.get(ENV['billit'] + "#{params[:id]}", 'application/json')
+    @bill = Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
     @popit_url = 'http://' + ENV['popit_url'] + '/persons/'
 
     # paperworks
@@ -73,10 +73,10 @@ class BillsController < ApplicationController
   # PUT /bills/1
   # PUT /bills/1.json
   def update
-    @bill = Bill.get(ENV['billit'] + "#{params[:id]}", 'application/json')
+    @bill = Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
     
     !params[:tags].nil? ? @bill.tags = params[:tags] : @bill.tags = []
-    @bill.put(ENV['billit'] + "#{params[:id]}", 'application/json')
+    @bill.put(ENV['billit_url'] + "#{params[:id]}", 'application/json')
     render text: params.to_s, status: 201
   end
 
@@ -90,5 +90,45 @@ class BillsController < ApplicationController
     #   format.html { redirect_to bills_url }
     #   format.json { head :no_content }
     # end
+  end
+
+  def searches
+    response = Net::HTTP.get_response(ENV['popit_url'], '/api/v0.1/persons/')
+    json_response = JSON.parse(response.body)
+    authors_detail_list = json_response['result']
+
+    @authors_list = []
+    @persons_query = []
+    authors_detail_list.map do |author|
+      @authors_list.push(author['name'])
+    end
+
+    if !params.nil? && params.length > 3 # default have 3 keys {'action'=>'index', 'controller'=>'searchs', "locale"=>"xx"}
+      @keywords = String.new
+      params.each do |param|
+        if param[0] != 'utf8' && param[0] != 'commit' && param[0] != 'format' && param[0] != 'locale' && param[0] != 'action'  && param[0] != 'controller'
+         @keywords << param[0] + '=' + param[1] + '&'
+        end
+      end
+      if params['authors'] != nil
+        @authors_list = []
+        authors_detail_list.map do |author|
+          if params['authors'] == author['name']
+            @persons_query.push(author)
+          end
+        end
+      end
+      
+      # defaul limit, when a user make a search for a bills or parliamentarians
+      limit = '3'
+      # if a user make a specific search the limit change to, in this case, 30
+      if params[:bills] || params[:parliamentarians]
+        limit = '30'
+      end
+
+      @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search/?#{URI.encode(@keywords)}&per_page="+limit, 'application/json')
+    else
+      @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search/?", 'application/json')
+    end
   end
 end

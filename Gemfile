@@ -17,10 +17,6 @@ group :development, :test do
   gem 'coveralls', require: false
 end
 
-group :test do
-  gem 'webmock'
-end
-
 gem 'json'
 
 # For using protected attributes
@@ -28,6 +24,9 @@ gem 'protected_attributes'
 
 # Server
 gem 'unicorn'
+
+#HttParty
+gem 'httparty'
 
 # Template Engine
 gem 'haml-rails'
@@ -51,7 +50,8 @@ gem 'roar', '0.11.19'
 gem 'roar-rails', '0.1.0'
 gem 'faraday', '0.8.1'
 gem 'billit_representers', '~>0.7.0'
-gem 'popit_representers'
+gem 'popit_representers', '0.0.10'
+gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
 
 # Support to XLS export
 gem 'ekuseru'
@@ -60,7 +60,6 @@ gem 'ekuseru'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
-gem 'coveralls', require: false
 gem 'rake', '10.1.1'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'route_translator'

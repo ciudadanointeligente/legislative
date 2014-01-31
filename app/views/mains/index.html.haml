@@ -1,236 +1,192 @@
-%style
+%h2
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, officiis, reiciendis, asperiores deserunt qui nulla
 
 %div.jumbotron{:style => "font-size: 14px;"}
   = form_tag(t('routes.searches'), :method => 'get', :class => "form-inline") do
     %div.row
-      %div.col-xs-10
+      %div.col-md-10
         %input.form-control{:type => "text", :name => 'q', :placeholder => t("main.search_placeholder")}
       %button{:type => "submit", :class => "btn btn-primary"}
         =t("search.search")
     %div.checkbox{:style => "padding-top: 7px;"}
       %label{:style => "padding-right: 7px;"}
-        %input{:type => 'checkbox'}
-          Buscar Proyectos de ley
+        %input{:type => 'checkbox', :name => 'bills', :value => '1'}
+          Proyectos de ley
       %label
-        %input{:type => 'checkbox'}
-          Buscar Tablas
+        %input{:type => 'checkbox', :name => 'parliamentarians', :value => '2'}
+          Parlamentarios
 
-%div.row
-  %div.col-md-3
-    %div
-      -if ! current_user
-        %div.page-header
-          %h3=t('main.login')
-        = form_tag auth_path, :class => '' do
-          %div.form-group
-            %label{:for => 'email'}=t('main.email')
-            %input.form-control{:id => 'email', :autocomplete => 'off', :name=>"email"}
-          %div.form-group
-            %label{:for => 'password'}=t('main.password')
-            %input.form-control{:id => 'password', :type => 'password', :name=>"password"}
-          %div.checkbox
-            %label
-              %input{:type => 'checkbox', :checked=>'checked', :value=>'yes'}=t('main.stay_signed')
-          %ul.list-inline{:style => 'font-size:12px'}
-            %li
-              %a{:href => "#register", :"data-toggle" => "modal", :"data-target" => "#register"}=t('main.registry')
-            %li
-              %a=t('main.forgot')
-          %button.btn.btn-primary=t('main.login')
-      -else
-        %div.page-header
-          %h3
-            Bienvenido
-        %div
-          %p
-            %strong
-              =current_user.username
-            tus últimas actividades son:
-          %table.table.table-condensed
-            %tr
-              %td
-                Ayer
-              %td
-                Consectetur adipisicing elit.
-            %tr
-              %td
-                27/08/2013
-              %td
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            %tr
-              %td
-                24/08/2013
-              %td
-                Consectetur adipisicing elit.
-      
-    / modal register
-    %div.modal.fade{:id=>"register", :tabindex=>"-1", :role=>"dialog", :"aria-labelledby"=>"registerLabel", :"aria-hidden"=>"true"}
+%div{:style=>'background-color:#ccc; padding: 10px; margin-bottom:30px;'}
+  %h3
+    Temas Urgentes
+
+  %div
+    %ul.list-inline
+      %li
+        %button.btn.btn-default{'href'=>'#miModal', :'data-toggle'=>"modal", :'data-target'=>'#miModal'}
+          Educación
+      %li
+        %button.btn.btn-default
+          Salud
+      %li
+        %button.btn.btn-default
+          Pesca
+      %li
+        %button.btn.btn-default
+          Vivienda
+      %li
+        %button.btn.btn-default
+          Transporte
+    
+    %div.modal.fade#miModal{:tabindex=>'-1', :role=>'dialog', :'aria-labelledby'=>'myModalLabel', :'aria-hidden'=>'true'}
       %div.modal-dialog
         %div.modal-content
           %div.modal-header
-            %button.close{:type => "button", :"data-dismiss" => "modal", :"aria-hidden" => "true"}
-              \x
-            %h4.modal-title{:id => "registerLabel"}
-              ="New user"
+            %button.close{:type=>"button", :'data-dismiss'=>"modal", :'aria-hidden'=>"true"}
+              &times
+            %h4.modal-title#myModalLabel
+              Proyectos urgentes en educación
           %div.modal-body
-            %div.row
-              %div.col-md-6
-                %h5="Register with:"
-                %ul
-                  %li
-                    %a
-                      %i.fa.fa-twitter-square
-                      ="Twitter"
-                  %li
-                    %a
-                      %i.fa.fa-facebook-square
-                      ="Facebook"
-                  %li
-                    %a
-                      %i.fa.fa-google-plus-square
-                      ="Google Plus"
-              %div.col-md-6
-                %form{:role => "form", :'accept-charset'=>'UTF-8', :action=>'/users', :method=>'post'}
-                  %div.form-group
-                    %label{:for => "email"}="Email Address"
-                    %input.form-control{:id => "email", :placeholder => "name@domain.com", :name=>"user[email]"}
-                  %div.form-group
-                    %label{:for => "username"}="Username"
-                    %input.form-control{:id => "username", :name=>'user[username]'}
-                  %div.form-group
-                    %label{:for => "password_one"}="Password"
-                    %input.form-control{:id => "password_one", :type => "password", :name=>'user[password]'}
-                  %div.form-group
-                    %label{:for => "password_two"}="Repeat password"
-                    %input.form-control{:id => "password_two", :type => "password", :name=>'user[password_confirmation]'}
-                  %button.btn.btn-primary="Register"
+            %table.table.table-striped
+              %thead
+                %tr
+                  %th
+                    %span.sr-only
+                      Proyectos urgentes en educación
+                  %th
+                    %span.sr-only
+                      Urgencia
+                  %th
+                    %span.sr-only
+                      Suscripción alertas
+                    
+              %tbody
+                %tr
+                  %td
+                    %strong
+                      = link_to 'Sesión Nº 85 | Legislatura 361 | Tipo Ordinaria', tables_path
+                    %p
+                      Martes 14 de Enero de 2014
+                  %td
+                    %span.badge
+                      4 
+                    urgencias
+                  %td
+                    %i.fa.fa-bell
+                    suscríbete
+                %tr
+                  %td
+                    %strong 
+                      = link_to 'Sesión Nº 84 | Legislatura 358 | Tipo Ordinaria', tables_path
+                    %p
+                      Martes 14 de Enero de 2014
+                  %td
+                    %span.badge
+                      4 
+                    urgencias
+                  %td
+                    %i.fa.fa-bell
+                    suscríbete
 
-    / end modal register
-    %hr
+%div.row
+  %div.col-md-6
+    %table.table.table-striped.table-bordered
+      %thead
+        %tr
+          %th{:colspan=>"2"}
+            Tabla diputados
+      %tbody
+        %tr
+          %td
+            %strong 
+              = link_to 'Sesión 111ª ordinaria, Legislatura 361', tables_path
+            %p
+              09 de Enero de 2014
+          %td
+            %i.fa.fa-bell
+            suscríbete
+        %tr
+          %td
+            %strong 
+              = link_to 'Sesión 110ª ordinaria, Legislatura 361', tables_path
+            %p
+              08 de Enero de 2014
+          %td
+            %i.fa.fa-bell
+            suscríbete
+        %tr
+          %td
+            %strong 
+              = link_to 'Sesión 109ª pedida, Legislatura 361', tables_path
+            %p
+              07 de Enero de 2014
+          %td
+            %i.fa.fa-bell
+            suscríbete
+        %tr
+          %td
+            %strong 
+              = link_to 'Sesión 109ª pedida, Legislatura 361', tables_path
+            %p
+              06 de Enero de 2014
+          %td
+            %i.fa.fa-bell
+            suscríbete
+
+  %div.col-md-6
+    %table.table.table-striped.table-bordered
+      %thead
+        %tr
+          %th{:colspan=>"2"}
+            Tabla Senado
+      %tbody
+        %tr
+          %td
+            %strong 
+              = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
+            %p
+              Martes 14 de Enero de 2014
+          %td
+            %i.fa.fa-bell
+            suscríbete
+        %tr
+          %td
+            %strong 
+              = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
+            %p
+              Martes 14 de Enero de 2014
+          %td
+            %i.fa.fa-bell
+            suscríbete
+        %tr
+          %td
+            %strong 
+              = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
+            %p
+              Martes 14 de Enero de 2014
+          %td
+            %i.fa.fa-bell
+            suscríbete
+        %tr
+          %td
+            %strong 
+              = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
+            %p
+              Martes 14 de Enero de 2014
+          %td
+            %i.fa.fa-bell
+            suscríbete  
+
+%div.row
+  %div.col-md-2
+    %img.img-responsive{:src=>'http://placehold.it/200x200'}
+  %div.col-md-10
     %div
-      %table.table.table-stripped.table-condensed
-        %thead
-          %tr
-            %th="Últimas Urgencias"
-        %tbody
-          %tr
-            %td
-              %strong Hoy
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente culpa quo rem hic eum! ...
-          %tr
-            %td
-              %strong Hoy
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente culpa quo rem hic eum! ...
-          %tr
-            %td
-              %strong Ayer
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente culpa quo rem hic eum! ...
-          %tr
-            %td
-              %strong Hace 2 días
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente culpa quo rem hic eum! ...
-  %div.col-md-9
-    %section{:id => 'tables'}
-      %div.row
-        %div.col-md-12
-          %div.row
-            %div.col-md-8
-              %div.page-header
-                %h3
-                  =t('main.latest_tables')
-              %div.row
-                - @tables.tables.each do |table|
-                  %div.col-md-6
-                    %h4= table.initial_chamber
-                    %p= localize table.creation_date.to_date, :format => :long
-                    %p= "Legislatura: " + table.legislature
-                    %p= "Sesión nro: " + table.session
-                    %p= "Proyecto(s) de ley: "
-                    - table.bills.each do |bill|
-                      = link_to bill, ENV['billit'] + bill
-              %div
-                %p.text-right
-                  %a=t('main.view_more')
-            %div.col-md-4
-              %div.page-header
-                %h3
-                  =t('main.senator_highlights')
-              %div.hover.panel-senator
-                %div.front
-                  %img.img-responsive{:src => 'http://placehold.it/100/100'}
-                    %h4
-                      ="García Huidobro Sanfuentes, Alejandro"
-                    %p="Región: Región de la Araucanía | Circunscripción: 14"
-                    %p="Teléfono: (56-32) 2504679 | Email:jquintana@senado.cl"
-                %div.back
-                  %p= "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-                  %table.table.table-striped.table-condensed
-                    %thead
-                      %tr
-                        %th=t('main.option_votes')
-                        %th=t('main.nro_votes')
-                    %tbody
-                      %tr
-                        %td=t('main.yes')
-                        %td=90
-                      %tr
-                        %td=t('main.no')
-                        %td=50
-                      %tr
-                        %td=t('main.abstentions')
-                        %td=9
-      
-
-    %section{:id => 'tags', :style => 'border: 1px solid #ccc; border-radius: 6px; padding: 0px 10px 10px 10px; margin-top: 50px;'}
-      %div.page-header{:style => "margin: 20px 0 20px;"}
-        %h3
-          ="Etiquetas destacadas"
-      %div.row.tags-tooltip
-        %div.col-md-2
-          %h4.text-center{:title => "99 Proyectos / 20 Urgencias", :"data-toggle" => "tooltip", :"data-placement" => "top"}
-            Salud
-        %div.col-md-2
-          %h4.text-center{:title => "80 Proyectos / 13 Urgencias", :"data-toggle" => "tooltip", :"data-placement" => "top"}
-            Educación
-        %div.col-md-2
-          %h4.text-center{:title => "55 Proyectos / 5 Urgencias", :"data-toggle" => "tooltip", :"data-placement" => "top"}
-            Transporte
-        %div.col-md-2
-          %h4.text-center
-            Pueblos Originarios
-        %div.col-md-2
-          %h4.text-center
-            Medio Ambiente
-        %div.col-md-2
-          %h4.text-center
-            Agricultura
-    
-    %section{:id => 'bills'}
-      %div.page-header
-        %h3
-          =t('main.latest_bills')
-        %div.row
-          - @bills.bills.each_with_index do |bill, cnt|
-            - cnt = cnt+1
-            %div.col-md-4
-              %h4
-                = bill.title
-              %p
-                %strong= "Cámara: "
-                = bill.initial_chamber
-              %p
-                %strong= "Urgencia: " 
-                = bill.current_priority
-              %p
-                %strong= "Etapa: " 
-                =bill.stage
-              %p
-                %strong="Fecha creación"
-                = localize bill.creation_date.to_date, :format => :long
-            - if cnt % 3 == 0
-              = raw '</div><div class="row">'
-      %div
-        %p.text-right
-          %a=t('main.view_more')
-
-    
+      %blockquote
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, porro, architecto totam incidunt alias animi recusandae ipsam illum omnis sunt voluptatem exercitationem quasi quae doloribus aliquid! Dolorum, rerum quaerat dolor!
+        %small
+          Perico los Palotes
+    %div.text-right
+      %button.btn.btn-default
+        Ver más respuestas
