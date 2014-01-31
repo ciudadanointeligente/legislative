@@ -39,9 +39,9 @@ class SearchesController < ApplicationController
           end
         end
       end
-      @bills_query = BillCollectionPage.get(ENV['billit'] + "search.json/?#{URI.encode(@keywords)}&per_page=3", 'application/json')
+      @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}&per_page=3", 'application/json')
     else
-      @bills_query = BillCollectionPage.get(ENV['billit'] + "search.json/?per_page=3", 'application/json')
+      @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search.json/?per_page=3", 'application/json')
     end
     
     @parliamentarians = PopitPersonCollection.new
