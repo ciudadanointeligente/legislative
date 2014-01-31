@@ -5,7 +5,7 @@ class BillsController < ApplicationController
   # GET /bills
   # GET /bills.json
   def index
-    # @bills = Bill.get(ENV['billit'], 'application/json')
+    # @bills = Bill.get(ENV['billit_url'], 'application/json')
 
     # respond_to do |format|
       # format.html # index.html.erb
@@ -16,7 +16,7 @@ class BillsController < ApplicationController
   # GET /bills/1
   # GET /bills/1.json
   def show
-    @bill = Bill.get(ENV['billit'] + "#{params[:id]}", 'application/json')
+    @bill = Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
     @popit_url = 'http://' + ENV['popit_url'] + '/persons/'
 
     # paperworks
@@ -73,10 +73,10 @@ class BillsController < ApplicationController
   # PUT /bills/1
   # PUT /bills/1.json
   def update
-    @bill = Bill.get(ENV['billit'] + "#{params[:id]}", 'application/json')
+    @bill = Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
     
     !params[:tags].nil? ? @bill.tags = params[:tags] : @bill.tags = []
-    @bill.put(ENV['billit'] + "#{params[:id]}", 'application/json')
+    @bill.put(ENV['billit_url'] + "#{params[:id]}", 'application/json')
     render text: params.to_s, status: 201
   end
 
@@ -126,9 +126,9 @@ class BillsController < ApplicationController
         limit = '30'
       end
 
-      @bills_query = BillCollectionPage.get(ENV['billit'] + "search/?#{URI.encode(@keywords)}&per_page="+limit, 'application/json')
+      @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search/?#{URI.encode(@keywords)}&per_page="+limit, 'application/json')
     else
-      @bills_query = BillCollectionPage.get(ENV['billit'] + "search/?", 'application/json')
+      @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search/?", 'application/json')
     end
   end
 end
