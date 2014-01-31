@@ -132,6 +132,11 @@ p.light {
   background-color: #d65245;
 }
 
+.inline-action {
+  text-align: right;
+  display: inline-flex;
+}
+
 /*Menu*/
 
 .navbar-nav {
@@ -200,7 +205,6 @@ p.light {
     color: #968495;
 }
 
-/*
 .form-control {
   color: #f9f9eb;
   background-color: #cdcdb3;
@@ -223,13 +227,15 @@ p.light {
 .form-control:-ms-input-placeholder {
     font-family: 'Lato', sans-serif;
 }
-*/
+
 
 /*HOME*/
 
 .hero-space h4 {
   margin-bottom: 50px;
 }
+
+/*hot-space*/
 
 .hot-space .btn-info {
   color: #ea6a56;
@@ -242,6 +248,35 @@ p.light {
 .hot-space .list-inline {
   padding-top: 20px;
 }
+
+.table thead th {
+}
+
+.hot-modal .modal-header {
+  background: #ea6a56;
+  color: #f9f9eb;
+}
+
+.hot-modal .modal-body {
+  padding: 0px;
+}
+
+.big-number {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+}
+
+.hot-modal .big-number {
+  color: #ea6a56;
+}
+
+.hot-modal td:last-child {
+  text-align: center;
+}
+
+/*tablas*/
 
 .table.tablas {
   margin-top: 20px;

@@ -1,4 +1,4 @@
-%div.modal.fade#miModal{:tabindex=>'-1', :role=>'dialog', :'aria-labelledby'=>'myModalLabel', :'aria-hidden'=>'true'}
+%div.modal.fade.hot-modal#miModal{:tabindex=>'-1', :role=>'dialog', :'aria-labelledby'=>'myModalLabel', :'aria-hidden'=>'true'}
   %div.modal-dialog
     %div.modal-content
       %div.modal-header
@@ -8,7 +8,7 @@
           Proyectos urgentes en educación
       %div.modal-body
         %table.table.table-striped
-          %thead
+          %thead.sr-only
             %tr
               %th
                 %span.sr-only
@@ -23,30 +23,38 @@
           %tbody
             %tr
               %td
+                %p.light 975-25
+              %td
                 %strong
                   = link_to 'Sesión Nº 85 | Legislatura 361 | Tipo Ordinaria', tables_path
                 %p
-                  Martes 14 de Enero de 2014
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma
               %td
-                %span.badge
+                %div.inline-action
+                  26 
+                  %a{href: "/"}
+                    %i.fa.fa-bell-o
+              %td
+                %span.big-number
                   4 
                 urgencias
-              %td
-                %i.fa.fa-bell
-                suscríbete
             %tr
+              %td
+                %p.light 975-25
               %td
                 %strong 
                   = link_to 'Sesión Nº 84 | Legislatura 358 | Tipo Ordinaria', tables_path
                 %p
-                  Martes 14 de Enero de 2014
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma
               %td
-                %span.badge
+                %div.inline-action
+                  26 
+                  %a{href: "/"}
+                    %i.fa.fa-bell-o
+              %td
+                %span.big-number
                   4 
                 urgencias
-              %td
-                %i.fa.fa-bell
-                suscríbete
 %h3 Hoy en tabla
 %div.row
   %div.col-md-6
