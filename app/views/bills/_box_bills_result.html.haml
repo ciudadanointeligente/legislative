@@ -20,6 +20,14 @@
               %i.fa.fa-bell
       %p 
         = bill.abstract
+      %p
+        %ul.list-inline
+          %li
+            tag01
+          %li
+            tag02
+          %li
+            tag03
 - if @bills.count == 0
   %p.text-center
     = t('search.there_are_no_results')
