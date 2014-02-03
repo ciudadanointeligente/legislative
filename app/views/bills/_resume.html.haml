@@ -1,0 +1,60 @@
+%div.hero-space
+  %div.container
+    %div.row
+      %div.col-md-7
+        %ol.breadcrumb
+          %li
+            %a{'href'=>'#'}
+              Portada
+          %li
+            %a{'href'=>'#'}
+              Proyectos de Ley
+          %li.active
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+      %div.col-md-5
+        %ul.list-inline
+          %li
+            %i.fa.fa-star-o 
+            9999 Suscripciones
+          %li
+            %i.fa.fa-pencil 
+            9999 Preguntas
+          %li
+            %i.fa.fa-facebook 
+            Comparte
+          %li
+            %i.fa.fa-twitter 
+            Twittea
+    %div
+      %h2
+        = @bill.title
+      %p
+        = @bill.abstract
+      %p
+        Autores:
+        %ul.list-inline
+          %li
+            %a{'href'=>'#'}
+              Juan Pedro Pablo Rockefeller Astaburoaga
+          %li
+            %a{'href'=>'#'}
+              Juan Pedro Pablo Rockefeller Astaburoaga
+          %li
+            %a{'href'=>'#'}
+              Juan Pedro Pablo Rockefeller Astaburoaga
+          %li
+            %a{'href'=>'#'}
+              Juan Pedro Pablo Rockefeller Astaburoaga
+          %li
+            %a{'href'=>'#'}
+              Juan Pedro Pablo Rockefeller Astaburoaga
+      %p
+        %ul.list-inline
+          - if !@bill.tags.blank?
+            - @bill.tags.each do |tag|
+              %li
+                %span.label.label-info= tag
+      %p
+        %a{'href'=>'#'}
+          %i.fa.fa-download
+          Descargar proyecto
