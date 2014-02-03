@@ -3,8 +3,21 @@
     %div.col-md-1
       %img.img-circle.img-responsive{:src=>parliamentarian.images[0]['url']}
     %div.col-md-11
-      %h4
-        = link_to parliamentarian.name, parliamentarian_path(parliamentarian.slug)
+      %div.row
+        %div.col-md-9
+          %h4
+            = link_to parliamentarian.name, parliamentarian_path(parliamentarian.slug)
+        %div.col-md-3
+          %a{'href'=>'#'}
+            %i.fa.fa-pencil
+            99999
+      %p
+        %strong
+          Partido:
+        El Partido
+        %strong
+          Lugar que representa:
+        Región patito
 
 - if @parliamentarians.persons.count == 0
   %p.text-center
