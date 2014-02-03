@@ -31,9 +31,6 @@ gem 'httparty'
 # Template Engine
 gem 'haml-rails'
 
-#Writeit
-gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
-
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
 # Gems used only for assets and not required
@@ -54,6 +51,7 @@ gem 'roar-rails', '0.1.0'
 gem 'faraday', '0.8.1'
 gem 'billit_representers', '~>0.7.0'
 gem 'popit_representers', '0.0.10'
+gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
 
 # Support to XLS export
 gem 'ekuseru'

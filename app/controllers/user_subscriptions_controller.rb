@@ -31,8 +31,9 @@ class UserSubscriptionsController < ApplicationController
       @user = User.new
       @user.username = subscription_email #TODO: cambiar username por uno aleatorio (?)
       @user.email = subscription_email
-      @user.password = "ciudadanointeligente2014" #TODO: generar password aleatoria
-      @user.password_confirmation = "ciudadanointeligente2014" #TODO: generar password aleatoria
+      @password = SecureRandom.urlsafe_base64
+      @user.password = @password
+      @user.password_confirmation = @password
       @user.save
 
       @user_subscription = UserSubscription.new

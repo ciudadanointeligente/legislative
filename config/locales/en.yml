@@ -172,6 +172,8 @@ en:
     confirmation_mail_sent: An email was sent to you. Check your inbox
     already_subscribe: There's already a suscription of that email with this bill
     verified_mail: Your email was successfully verified
+    subscribe: Subscribe
+    email: Email
   date:
     abbr_day_names:
     - Sun
