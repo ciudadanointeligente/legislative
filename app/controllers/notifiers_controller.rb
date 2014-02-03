@@ -1,10 +1,12 @@
 class NotifiersController < ApplicationController
 
-	def bills_updated 
-		# Recoger la lista de bills actualizados
+	def index
+		render json: Notifier.all
 	end
 
 	def run_tasks
+		# last_notification = params[:date]
+		# @bills = bills_updated(last_notification)
 		@bills = params[:bills]
 		@bills.each do |bill|
 			@user_id_subscriptions = get_user_id_subscriptions(bill)
@@ -13,11 +15,16 @@ class NotifiersController < ApplicationController
 		send_notifies
 	end
 
-	def index
-		render json: Notifier.all
-	end
-
 	private
+
+
+		def bills_updated(last_notification) 
+			# Returns a list of bills updated since last_notification
+			@paperworks_updated_collection = Paperwork.get(ENV['paperworks_url'] + 'search.json?date_min=' + last_notification, 'application/json')
+			@paperworks_updated = @paperworks_updated_collection.paperworks.to_a
+			@bills_updated = @paperworks_updated.map { |paperwork| paperwork.bill_id }
+		end
+
 
 		def get_user_id_subscriptions(bill)
 			# Given a bill, returns all the user_id_subscriptions subscribed to that bill that have confirmed.
@@ -29,6 +36,7 @@ class NotifiersController < ApplicationController
 
 
 		def build(bill, users_id_subscribed)
+			# It creates or updates notifiers  
 			@bill = bill
 			@users_id_subscribed = users_id_subscribed
 
@@ -41,19 +49,18 @@ class NotifiersController < ApplicationController
 					notifier.save
 				end
 			end
-
-			# render json: Notifier.all
 		end
 
 		def send_notifies
 			@notifies = Notifier.all
+			@time_now = Time.now()
 			@notifies.each do |notify|
 				# Send email
 				NotifierMailer.notification_email(notify).deliver
 				
-				# Change last_updated field of user_subscription
+				# Change last_notification field of user_subscription
 				@user = User.find_by_id(notify.user_id)
-				@user.last_notification = Time.now() 
+				@user.last_notification = @time_now
 				@user.save
 
 				# Remove notify from database			
@@ -62,7 +69,6 @@ class NotifiersController < ApplicationController
 
 			flash[:notice] = 'Notificaciones Enviadas!'
 			redirect_to ""
-
 		end
 
 end
