@@ -1,46 +1,52 @@
-:javascript
-  var authors_list = #{@authors_list};
+%div
+  %ol.breadcrumb
+    %li
+      %a{'href'=>'#'}
+        Portada
+    %li.active
+      Búsqueda
 
-/ buscador cabecera
-= render :partial => "simple_search_form"
-/ fin buscador cabecera
+%div.row
+  %div.col-md-3
+    = render :partial => "simple_search_form"
+    
+  %div.col-md-9
+    /loop for bills
+    - if params[:bills] == '1' || @bills_query.bills.count > 0
+      %div
+        %div.row
+          %div.col-md-10
+            %h3 
+              Proyectos de Ley
+          %div.col-md-2
+            = link_to 'Búsqueda Avanzada', searches_bills_path, class: 'btn btn-default btn-xs'
+            
+        - @bills = @bills_query.bills
+        = render :partial => "box_bills_result" 
+    /end of loop
 
-/loop for bills
-- if params[:bills] == '1' || @bills_query.bills.count > 0
-  %div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
-    %div.row
-      %div.col-md-10
-        %h3 
-          Bills
-      %div.col-md-2
-        = link_to 'Búsqueda Avanzada', searches_bills_path, class: 'btn btn-default btn-xs'
-        
-    - @bills = @bills_query.bills
-    = render :partial => "box_bills_result" 
-/end of loop
+    /loop for parliamentarians
+    - if params[:parliamentarians] == '2' || @parliamentarians.persons.count > 0
+      %div
+        %div.row
+          %div.col-md-10
+            %h3 
+              Parlamentarios
+          %div.col-md-2
+            = link_to 'Búsqueda Avanzada', searches_parliamentarians_path, class: 'btn btn-default btn-xs'
 
-/loop for parliamentarians
-- if params[:parliamentarians] == '2' || @parliamentarians.persons.count > 0
-  %div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
-    %div.row
-      %div.col-md-10
-        %h3 
-          Parlamentarios
-      %div.col-md-2
-        = link_to 'Búsqueda Avanzada', searches_parliamentarians_path, class: 'btn btn-default btn-xs'
+        = render :partial => "box_parliamentarians_result"
+    /end of loop
 
-    = render :partial => "box_parliamentarians_result"
-/end of loop
-
-/loop for questions
-- if params[:parliamentarians] == '3'
-  %div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
-    %div.row
-      %div.col-md-10
-        %h3
-          Preguntas
-      %div.col-md-2
-        %button.btn.btn-default.btn-xs
-          Búsqueda Avanzada
-    = render :partial => "box_questions_result"
-/end of loop
+    /loop for questions
+    - if params[:parliamentarians] == '3'
+      %div
+        %div.row
+          %div.col-md-10
+            %h3
+              Preguntas
+          %div.col-md-2
+            %button.btn.btn-default.btn-xs
+              Búsqueda Avanzada
+        = render :partial => "box_questions_result"
+    /end of loop
