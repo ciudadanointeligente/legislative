@@ -1,429 +1,72 @@
-:javascript
-  var billuid = '#{@bill.uid}';
-
-%div
-  %h3.page-header
-    =@bill.title
-%div.row
-  %div.col-md-9
-    %p{:style=>'font-style: italic; font-size:16px;'}
-      =@bill.abstract
-    %div.row
-      %div.col-md-2
-        %strong
-          Boletín:
-      %div.col-md-10
-        =@bill.uid
-    %div.row
-      %div.col-md-2
-        %strong
-          Materias:
-      %div.col-md-10
-        %ul.list-inline
-          - @matters = @bill.subject_areas
-          =render partial: "matter", collection: @matters
-    %div.row
-      %div.col-md-2
-        %strong
-          Tags:
-      %div.col-md-10
-        / %ul.list-inline
-        /   - if !@bill.tags.blank?
-        /     - @bill.tags.each do |tag|
-        /       %li
-        /         %span.label.label-info= tag
-        %ul.list-inline#myTags
-          / Existing list items will be pre-added to the tags
-          - if @bill.tags != nil
-            - @bill.tags.each do |tag|
-              %li#preexisting= tag
-    %p
-      %a{:href=>'#'}
+%section#graph
+  %div.row
+    %div.col-md-9
+      %h3
+        Título Gráfico
+    %div.col-md-3
+      %p
+        Descargar historial
         %i.fa.fa-download
-        Descargar
-    
-  %div.col-md-3
-    %div{:style=>'border: 1px solid #ccc; border-radius: 5px;'}
-      %ul{:style=>'list-style:none;'}
-        %li
-          %i.fa.fa-bell
-          = link_to 'Suscríbete', new_user_subscription_path(:bill => params[:id])
-        %li
-          %i.fa.fa-facebook
-          %a{'href' => '#', 'onclick' => "window.open('https://www.facebook.com/sharer/sharer.php?u=http://"+request.host+request.fullpath+"','Facebook','width=500,height=280')"}
-            Comparte
-        %li
-          %i.fa.fa-twitter
-          %a{'href'=>'#', 'onclick' => "window.open('https://twitter.com/share?text="+@bill.title+"&hashtags=PMO','Twitter','width=500,height=280')"}
-            Twittea
-        %li
-          %i.fa.fa-thumbs-up
-            23
-          %i.fa.fa-thumbs-down
-            15
+  %div.graph{'style'=>'height:200px'}
+  /the graph
+  
+  %div#timeline
+    - cnt = 0
+    - while cnt < 6
+      %div.timeline-container
+        %div.status
+          %img{'src'=>'http://placehold.it/50x50'}
+        %div.resume
+          %h4
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, eum, esse in consectetur libero obcaecati
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, doloribus porro aperiam a soluta natus repellat perferendis rerum fuga neque vero delectus quae magnam. Quisquam quo velit expedita fuga nam?
+          - if cycle('odd', 'even') == 'odd'
+            - green = "width:" + rand(30...50).to_s + "%"
+            - yellow = "width:" + rand(20...35).to_s + "%"
+            - red = "width:" + rand(10...30).to_s + "%"
+            
+            %div.progress
+              %div.progress-bar.progress-bar-success{"style" => green}
+                %span.sr-only
+                  35% Complete (success)
+              %div.progress-bar.progress-bar-warning{"style" => yellow}
+                %span.sr-only
+                  20% Complete (warning)
+              %div.progress-bar.progress-bar-danger{"style" => red}
+                %span.sr-only
+                  45% Complete (danger)
+          - cnt += 1
 
-= javascript_include_tag 'svg/jquery.svg.min.js'
-= javascript_include_tag 'svg/jquery.svgdom.min.js'
-= javascript_include_tag 'svg/jquery.svganim.min.js'
-
-:javascript
-  window.onload = function(){
-    
-    var freq = #{@date_freq};
-        x = 1;
-        highest = Math.max.apply(Math, freq);
-        medium = Math.ceil( highest/2 );
-        nro_elements = freq.length;
-        d = '';
-    
-    freq.forEach(function(event) {
-      var posX = x;
-          height = 200;
-          posX = 58*posX+32;
-          posY = height-(event*20);
-
-      createPoints(posX, posY, highest, event);
-      if(x==1) {
-        d += 'M'+posX+','+posY;
-      }
-      d += ' L'+posX+','+posY;
-      if(nro_elements == x) {
-        d += ' Z';
-        document.getElementById('first_set').setAttribute('d', d);
-      }
-      
-      x +=1;
-
-    });
-
-    function createPoints(posX, posY, highest, event) {
-
-      var shape = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-          shape1 = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-          
-      shape.cx.baseVal.value = posX;
-      shape.cy.baseVal.value = posY;
-      shape.r.baseVal.value = 3;
-      shape.setAttributeNS(null, "class", "shadow");
-      shape.setAttributeNS(null, "stroke", "#AAA");
-      shape.setAttributeNS(null, "stroke-width", "4");
-      shape.setAttributeNS(null, "stroke-opacity", "1");
-      shape.setAttributeNS(null, "style", "fill: url(#gradientShadow);");
-      
-      document.getElementById('points').appendChild(shape);
-
-      shape1.cx.baseVal.value = posX;
-      shape1.cy.baseVal.value = posY;
-      shape1.setAttributeNS(null, "class", "plain");
-      shape1.setAttributeNS(null, "data-value", event);
-      shape1.r.baseVal.value = 3;
-      
-      document.getElementById('points').appendChild(shape1);
-
-    }
-
-    $(".showmebutton").click(function(e) {
-      e.preventDefault();
-      $( ".showmecontent" ).toggle();
-    });
-
-    //svg animation
-    $('svg.graph .points circle.plain').each( function(index) {
-      // For each plain circle...
-      $(this).on('mouseenter', function(event) {
-        showTooltip(this);
-        // Grow shadow point when mouse enters the point
-        $(this).prev().stop(true, false ).animate( {
-          svgR: 12,
-          svgStrokeOpacity: 0,
-          svgStrokeWidth: 0,
-        }, 200 );
-      }).on('mouseleave', function(event) {
-        hideTooltip();
-        // Shrink shadow point when mouse leaves the point
-        $(this).prev().stop(true, false ).animate( {
-          svgR: 5,
-          svgStrokeOpacity: 1,
-          svgStrokeWidth: 4
-        }, 200 );
-      });
-    });
-  }
-
-  function showTooltip( dataPoint )
-  {
-    tooltip = $('#tooltip');
-    dataPoint = $(dataPoint);
-
-    // Set the data-set title, using the group element
-    tooltip.find('#tooltip-title').text( dataPoint.parent().data('setname') );
-
-    // Set the value for this data point
-    tooltip.find('.value-part').text( dataPoint.data('value') );
-
-    // Determine whether to switch tooltip to the left, because of small screen
-    tooltipX = dataPoint.offset().left + 10;
-    tooltipY = dataPoint.offset().top + 40;
-
-    // Check if tooltip fits, with a extra border of 10 px
-    if( tooltipX + tooltip.outerWidth(true) + 10 > $(window).width() )
-    {
-      tooltipX = dataPoint.offset().left - tooltip.outerWidth(true);
-
-      tooltip.addClass('right');
-
-      // Adjust SVG pointer
-      $('#tooltip-triangle').attr('transform', 'scale(-1,1) translate(-11,0)' );
-    }
-    else
-    {
-      tooltip.removeClass('right');
-      $('#tooltip-triangle').attr('transform', '' );
-    }
-
-    tooltip.stop( true, true ).delay(100).animate( {
-      top: tooltipY,
-      left: tooltipX
-    }, 0 ).fadeIn('fast');
-  }
-
-  function hideTooltip()
-  {
-    // Hide popover and stop animating the bar
-    $('#tooltip').stop(true, true).delay(200).fadeOut('fast' );
-  }
-
+  %p.showmore.text-center
+    %i#showicon.fa.fa-chevron-down
 
 :css
-  svg.graph {
-    height: 210px;
-    width: 700px;
+  .showmore {
+    background-color: #CCC;
   }
-
-  svg.graph .grid {
-    stroke: white;
-    stroke-dasharray: 1 2;
-    stroke-width: 1;
+  .showless {
+    background-color: #CCC;
   }
-
-  svg.graph .points {
-    stroke: white;
-    stroke-width: 3;
+  #timeline {
+    height: 100px;
+    overflow: hidden;
   }
-  svg.graph .first_set {
-    fill: #00554d;
-  }
-
-  svg.graph .surfaces {
-    fill-opacity: 0.5;
-  }
-
-  svg.graph .grid.double {
-    stroke-opacity: 0.4;
-  }
-
-  svg.graph .labels {
-    font-family: Arial;
-    font-size: 14px;
-    kerning: 1;
-  }
-
-  svg.graph .labels.x-labels {
-    text-anchor: middle;
-  }
-
-  svg.graph .labels.y-labels {
-    text-anchor: end;
-  }
-  
-  #tooltip {
-    position: absolute;
-    background: black;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    font-family: Arial;
-    font-size: 14px;
-    font-weight: lighter;
-    padding: 9px 11px 0px 11px;
-    display: none;
-    z-index: 100 !important;
-    width: 165px;
-    min-height: 80px;
-    box-shadow: 1px 1px 1px 0px #000;
-  }
-  #tooltip.right {
-      box-shadow: -1px 1px 1px 0px #000;
-  }
-  #tooltip.right svg {
-      left: auto;
-      right: 0px;
-  }
-  #tooltip svg {
-      position: absolute;
-      display: inline;
-      float: right;
-      left: 0px;
-      right: auto;
-      top: -13px;
-      width: 11px;
-      height: 13px;
-  }
-  #tooltip #tooltip-triangle {
-      background: black;
-      fill: rgba(0, 0, 0, 0.8);
-  }
-  #tooltip .value .value-part {
-      font-size: 32px;
-      vertical-align: top;
-      position: relative;
-      top: -3px;
-  }
-
-%div
-  %svg.graph{'version'=>'1.1', 'xmlns:xlink'=>"http://www.w3.org/1999/xlink", 'xmlns'=>"http://www.w3.org/2000/svg", 'width'=>"700", 'height'=>"200"}
-    /radial gradient
-    %defs
-      %radialGradient#gradientShadow{'cx'=>'50%', 'cy'=>'50%', 'fx'=>'50%', 'fy'=>'50%', 'r'=>'55%'}
-        %stop{'offset'=>'0%', 'style'=>'stop-color:rgb(0,0,0); stop-opacity:1'}
-        %stop{'offset'=>'100%', 'style'=>'stop-color:#AAA; stop-opacity:0'}
-    /surface
-    %g.surfaces
-      %path#first_set.first_set
-    /grid lines
-    %use.grid.double{'xlink:href'=>'#xGrid','style'=>''}
-    %use.grid.double{'xlink:href'=>'#yGrid','style'=>''}
-    /points
-    %g#points.first_set.points{'data-setname'=>'set de datos'}
-    /labels
-    %g.labels.x-labels
-      
-    %g.labels.y-labels
-      %text{'x'=>'90', 'y'=>'20'}
-        nro eventos
-      %text{'x'=>'80', 'y'=>'0'}
-        10
-      %text{'x'=>'80', 'y'=>'40'}
-        8
-      %text{'x'=>'80', 'y'=>'80'}
-        6
-      %text{'x'=>'80', 'y'=>'120'}
-        4
-      %text{'x'=>'80', 'y'=>'160'}
-        2
-      %text{'x'=>'80', 'y'=>'200'}
-        0
-
-%div#tooltip
-  %svg
-    %polygon#tooltip-triangle{'points'=>'0,0 11,13 0,13'}
-  %p#tooltip-title
-  %div.value
-    %span.value-part
-    %span.value-total
-      eventos
-
-%div
-  %div.text-right
-    /.dropup
-    %a.showmebutton{'href'=>'#'}
-      ver más
-      %span.caret 
-  %div.showmecontent{'style' => 'display:none;'}
-    %ul.nav.nav-tabs
-      - if !@bill.authors.blank?
-        %li.active
-          %a{'href'=>'#tab01', 'data-toggle'=>'tab'}
-            Autores
-      - if !@bill.paperworks.blank?
-        %li
-          %a{'href'=>'#tab02', 'data-toggle'=>'tab'}
-            Eventos
-      - if !@bill.priorities.blank?
-        %li
-          %a{'href'=>'#tab03', 'data-toggle'=>'tab'}
-            Urgencias
-      - if !@bill.reports.blank?
-        %li
-          %a{'href'=>'#tab04', 'data-toggle'=>'tab'}
-            Reportes
-      - if !@bill.revisions.blank?
-        %li
-          %a{'href'=>'#tab05', 'data-toggle'=>'tab'}
-            Revisiones
-      - if !@bill.documents.blank?
-        %li
-          %a{'href'=>'#tab06', 'data-toggle'=>'tab'}
-            Documentos
-      - if !@bill.directives.blank?
-        %li
-          %a{'href'=>'#tab07', 'data-toggle'=>'tab'}
-            Indicaciones
-
-    %div.tab-content
-      / autores
-      - if !@bill.authors.blank?
-        %div.tab-pane.active#tab01
-          - @author = @bill.authors
-          %ul
-            = render partial: "author", collection: @author
-      / eventos
-      - if !@bill.paperworks.blank?
-        %div.tab-pane#tab02
-          - @events = @bill.paperworks
-          = render partial: "event", collection: @events
-      / urgencias
-      - if !@bill.priorities.blank?
-        %div.tab-pane#tab03
-          - @urgencies = @bill.priorities
-          = render partial: "urgencie", collection: @urgencies
-      / reportes
-      - if !@bill.reports.blank?
-        %div.tab-pane#tab04
-          %table.table
-            %tr
-              - @reports = @bill.reports
-              %td= render partial: "report", collection: @reports
-      / modificaciones
-      - if !@bill.revisions.blank?
-        %div.tab-pane#tab05
-          %table.table
-            %tr
-              - @modifications = @bill.revisions
-              %td= render partial: "modification", collection: @modifications
-      / documentos
-      - if !@bill.documents.blank?
-        %div.tab-pane#tab06
-          %table.table
-            %tr
-              - @documents = @bill.documents
-              %td= render partial: "document", collection: @documents
-      / indicaciones
-      - if !@bill.directives.blank?
-        %div.tab-pane#tab07
-          %table.table
-            %tr
-              - @instructions = @bill.directives
-              %td= render partial: "instruction", collection: @instructions
-
-%div
-  %h3.page-header
-    Votaciones
-  =render partial: "chamber_votes"
-
-%div#disqus_thread
-  %p= t 'bill.comments'
 
 :javascript
-  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-  var disqus_developer = '#{ ENV['disqus_developer'] }';
-  var disqus_shortname = '#{ ENV['disqus_shortname'] }'; // required: replace example with your forum shortname
-  var disqus_config = function () {
-    this.language = '#{ ENV['disqus_language'] }';
-  };
+  $('#graph').on('click', 'p.showmore', function(){
+    $('#timeline').css('height', 'auto');
+    $('#timeline').css('overflow', 'visible');
+    $(this).attr('class','showless');
+    $(this).addClass('text-center');
+    $('#showicon').attr('class','fa fa-chevron-up');
+  });
 
-  /* * * DON'T EDIT BELOW THIS LINE * * */
-  (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
+  $('#graph').on('click', 'p.showless', function(){
+    $('#timeline').css('height', '100px');
+    $('#timeline').css('overflow', 'hidden');
+    $(this).attr('class','showmore');
+    $(this).addClass('text-center');
+    $('#showicon').attr('class','fa fa-chevron-down');
+  })
+  
