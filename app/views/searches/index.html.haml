@@ -37,16 +37,3 @@
 
         = render :partial => "box_parliamentarians_result"
     /end of loop
-
-    /loop for questions
-    - if params[:parliamentarians] == '3'
-      %div
-        %div.row
-          %div.col-md-10
-            %h3
-              Preguntas
-          %div.col-md-2
-            %button.btn.btn-default.btn-xs
-              Búsqueda Avanzada
-        = render :partial => "box_questions_result"
-    /end of loop

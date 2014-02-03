@@ -1,15 +1,19 @@
 Legislative::Application.routes.draw do
 
   root :to => "mains#index"
-  
-  post "bills/:id/update" => "bills#update", method: :put
 
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#login", :as => "log_in"
   post "auth" => "sessions#login"
   get "sign_up" => "users#new", :as => "sign_up"
   get "confirmed" => "user_subscriptions#confirmed"
- 
+
+  resources :notifiers do
+    get 'run_tasks', on: :collection
+  end
+
+  put "bills/:id/update" => "bills#update", method: :put
+
   localized do
     resources :bills do
       get 'searches', on: :collection
@@ -24,10 +28,10 @@ Legislative::Application.routes.draw do
     resources :tables
     resources :users
     resources :searches
-    resources :user_subscriptions
+    resources :user_subscriptions   
   end
 
-  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

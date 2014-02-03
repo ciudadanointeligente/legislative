@@ -1271,3 +1271,8 @@
 - fields: {created: ! '2013-12-18 21:41:46+00:00', key: a, user: 1}
   model: tastypie.apikey
   pk: 1
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-1, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 1
