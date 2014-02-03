@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Existen actualizaciones a los proyectos de ley que estás suscrito.</h1>
+    <p>
+        Los proyectos de ley con actualizaciones son:
+        <ul>
+          <%= @bills.each do |bill|
+            link_to(bill, bill_path(bill))
+          end 
+          %>
+        </ul>
+      <br/>
+    </p>
+    <p>
+      Visítanos en <%= @url %>
+    </p>
+    <p>Gracias por suscribirte!</p>
+  </body>
+</html>

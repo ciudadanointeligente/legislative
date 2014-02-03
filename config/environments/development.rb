@@ -34,8 +34,7 @@ Legislative::Application.configure do
 
   config.eager_load = false
 
-  # Send Legislative mails to Cuttlefish (see http://cuttlefish.io)
-  # This needs to change accordingly to cuttlefish configuration
+  # Send mails to Cuttlefish (see http://cuttlefish.io)
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => "localhost",

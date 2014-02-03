@@ -1,5 +1,5 @@
 class UserSubscriptionMailer < ActionMailer::Base
-  default from: "legislative@ciudadanointeligente.org"
+  default from: "Legislativo <legislative@congresodechile.cl>"
 
   def confirmation_email(user_subscription)
   	@bill = user_subscription.bill

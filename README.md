@@ -95,8 +95,9 @@ Legislative is made possible by the continued contributions and insights from ki
 * [@jdgarrido](https://github.com/jdgarrido)
 * [@pdaire](https://github.com/pdaire)
 * [@lfalvarez](https://github.com/lfalvarez)
-* [@camargozzini](https://github.com/camargozzini)
 * [@kathemalis](https://github.com/kathemalis)
+* [@CamiloG](https://github.com/CamiloG)
+* [@camargozzini](https://github.com/camargozzini)
 
 
 This project is licensed under the GNU Affero General Public License (AGPL). For more information you can access to the [digital license edition here](http://www.gnu.org/licenses/agpl-3.0.html).
