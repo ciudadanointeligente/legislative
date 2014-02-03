@@ -4,6 +4,8 @@ require 'httparty'
 class SearchesController < ApplicationController
   def index
 
+    @parliamentarians = PopitPersonCollection.new
+
     if !params.nil? && params.length > 3 # default have 3 keys {'action'=>'index', 'controller'=>'searchs', "locale"=>"xx"}
       
       # make a redirect in case of someone pick just one filter in main page
@@ -24,12 +26,12 @@ class SearchesController < ApplicationController
       end
 
       @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}&per_page=3", 'application/json')
+      @parliamentarians.get ENV['popit_search'] + "#{URI.encode(@keywords)}per_page=3", 'application/json'
     else
       @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search.json/?per_page=3", 'application/json')
+      @parliamentarians.get ENV['popit_search'] + "per_page=3", 'application/json'
     end
     
-    @parliamentarians = PopitPersonCollection.new
-    @parliamentarians.get ENV['popit_search'] + "#{URI.encode(@keywords)}per_page=3", 'application/json'
     
   end
 end
