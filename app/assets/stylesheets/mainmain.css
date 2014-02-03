@@ -44,8 +44,8 @@ h5 {
 }
 
 h6 {
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 10px;
+  font-weight: 700;
 }
 
 a {
@@ -60,7 +60,17 @@ p.light {
   color: #a6a691;
 }
 
+strong {
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+}
+
 /*Botones*/
+
+.btn-small {
+  height: 35px;
+}
 
 .btn-default {
   color: #e6e6c9;
@@ -99,7 +109,7 @@ p.light {
   height: 50px;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+.btn-primary:hover {
   color: #e6e6c9;
   background-color: #2f9b7c;
 }
