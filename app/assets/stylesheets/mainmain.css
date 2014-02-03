@@ -494,3 +494,88 @@ span.paring {
   color: #FFF;
 }
 /*end bills*/
+
+/*SVG Graph*/
+svg.graph {
+  height: 210px;
+  width: 700px;
+}
+
+svg.graph .grid {
+  stroke: white;
+  stroke-dasharray: 1 2;
+  stroke-width: 1;
+}
+
+svg.graph .points {
+  stroke: white;
+  stroke-width: 3;
+}
+svg.graph .first_set {
+  fill: #00554d;
+}
+
+svg.graph .surfaces {
+  fill-opacity: 0.5;
+}
+
+svg.graph .grid.double {
+  stroke-opacity: 0.4;
+}
+
+svg.graph .labels {
+  font-family: Arial;
+  font-size: 14px;
+  kerning: 1;
+}
+
+svg.graph .labels.x-labels {
+  text-anchor: middle;
+}
+
+svg.graph .labels.y-labels {
+  text-anchor: end;
+}
+
+#tooltip {
+  position: absolute;
+  background: black;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 9px 11px 0px 11px;
+  display: none;
+  z-index: 100 !important;
+  width: 165px;
+  min-height: 80px;
+  box-shadow: 1px 1px 1px 0px #000;
+}
+#tooltip.right {
+    box-shadow: -1px 1px 1px 0px #000;
+}
+#tooltip.right svg {
+    left: auto;
+    right: 0px;
+}
+#tooltip svg {
+    position: absolute;
+    display: inline;
+    float: right;
+    left: 0px;
+    right: auto;
+    top: -13px;
+    width: 11px;
+    height: 13px;
+}
+#tooltip #tooltip-triangle {
+    background: black;
+    fill: rgba(0, 0, 0, 0.8);
+}
+#tooltip .value .value-part {
+    font-size: 32px;
+    vertical-align: top;
+    position: relative;
+    top: -3px;
+}
