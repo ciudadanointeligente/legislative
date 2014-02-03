@@ -20,7 +20,6 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
-  text-align: center;
 }
 
 h2 {
@@ -160,6 +159,24 @@ strong {
 
 .nav a:hover {
   color: #c4b7c4;
+}
+
+.breadcrumb {
+  padding: 0px 0px;
+  background-color: transparent;
+  margin: -40px 0 20px 0;
+}
+
+.breadcrumb a {
+  color: #a6a691;
+}
+
+.breadcrumb>.active {
+  color: #a6a691;
+}
+
+.breadcrumb>li+li:before {
+  color: #a6a691;
 }
 
 /*Hero space*/
