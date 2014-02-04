@@ -498,11 +498,11 @@ span.paring {
 /*SVG Graph*/
 svg.graph {
   height: 210px;
-  width: 700px;
+  width: 750px;
 }
 
 svg.graph .grid {
-  stroke: white;
+  stroke: #CCC;
   stroke-dasharray: 1 2;
   stroke-width: 1;
 }
