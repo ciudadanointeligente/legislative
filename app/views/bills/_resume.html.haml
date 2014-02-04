@@ -1,60 +1,66 @@
 %div.hero-space
   %div.container
-    %div.row
-      %div.col-md-7
-        %ol.breadcrumb
-          %li
-            %a{'href'=>'#'}
-              Portada
-          %li
-            %a{'href'=>'#'}
-              Proyectos de Ley
-          %li.active
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit...
-      %div.col-md-5
-        %ul.list-inline
-          %li
+    %div.clearfix
+      %ol.breadcrumb
+        %li
+          %a{'href'=>'#'}
+            Portada
+        %li
+          %a{'href'=>'#'}
+            Proyectos de Ley
+        %li.active
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+      %ul.list-inline.action-btn
+        %li
+          %a{'href'=>'#'}
             %i.fa.fa-star-o 
             9999 Suscripciones
-          %li
+        %li
+          %a{'href'=>'#'}
             %i.fa.fa-pencil 
             9999 Preguntas
-          %li
+        %li
+          %a{'href'=>'#'}
             %i.fa.fa-facebook 
             Comparte
-          %li
+        %li
+          %a{'href'=>'#'}
             %i.fa.fa-twitter 
             Twittea
-    %div
-      %h4
-        = @bill.title
-      %p
-        = @bill.abstract
-      %p
-        Autores:
-        %ul.list-inline
-          %li
+    %div.row
+      %div.col-md-1
+        %p.light
+          0000000
+        = image_tag("statusicon/introduced.svg",class:"hidden-xs")
+      %div.col-md-11
+        %h4
+          = @bill.title
+        %p
+          = @bill.abstract
+        %p
+          Autores:
+          %span
+            %a{'href'=>'#'}
+              Juan Pedro Pablo Rockefeller Astaburoaga,
+          %span
+            %a{'href'=>'#'}
+              Juan Pedro Pablo Rockefeller Astaburoaga,
+          %span
+            %a{'href'=>'#'}
+              Juan Pedro Pablo Rockefeller Astaburoaga,
+          %span
+            %a{'href'=>'#'}
+              Juan Pedro Pablo Rockefeller Astaburoaga,
+          %span
             %a{'href'=>'#'}
               Juan Pedro Pablo Rockefeller Astaburoaga
-          %li
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga
-          %li
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga
-          %li
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga
-          %li
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga
-      %p
-        %ul.list-inline
-          - if !@bill.tags.blank?
-            - @bill.tags.each do |tag|
-              %li
-                %span.label.label-info= tag
-      %p
-        %a{'href'=>'#'}
-          %i.fa.fa-download
-          Descargar proyecto
+        %p
+          %ul.list-inline
+            - if !@bill.tags.blank?
+              - @bill.tags.each do |tag|
+                %li
+                  %span.label.label-default= tag
+        %p
+          %a{'href'=>'#'}
+            %i.fa.fa-download
+            Descargar proyecto
