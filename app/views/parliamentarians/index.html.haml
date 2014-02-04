@@ -1,3 +1,50 @@
+%div.row
+  %div.col-md-7
+    %ol.breadcrumb
+      %li
+        = link_to "Portada", root_path
+      %li.active
+        = link_to "Parlamentarios", parliamentarians_path
+  %div.col-md-5
+    %ul.list-inline
+      %li
+        %a{'href'=>'#'}
+          %i.fa.fa-star
+          999999 Suscripciones
+      %li
+        %a{'href'=>'#'}
+          %i.fa.fa-pencil
+          999999 Preguntas
+      %li
+        %a{'href'=>'#'}
+          %i.fa.fa-facebook
+          Comparte
+      %li
+        %a{'href'=>'#'}
+          %i.fa.fa-twitter
+          Twittea
+
+%div
+  %h4
+    Parlamentarios
+
+%div.row
+  %div.col-md-3
+    = render :partial => "filter_search_form"
+  %div.col-md-9
+    - @parliamentarians.persons.each do | parliamentarian |
+      %div.row
+        %div.col-md-1
+          - if parliamentarian.images.nil?
+            %img.img-circle.img-responsive{:src=>parliamentarian.images[0]['url']}
+          - else
+            %img.img-circle.img-responsive{:src=>'http://placehold.it/200x200'}
+        %div.col-md-11
+          = link_to parliamentarian.name, parliamentarian_path(parliamentarian.slug)
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, officiis, eveniet, rem consequatur omnis voluptatum molestiae adipisci odio perferendis tempore ducimus tempora eaque saepe sed aut ipsa asperiores similique doloribus.
+
+
 %div.page-header
   %h2
     Parlamentarios
