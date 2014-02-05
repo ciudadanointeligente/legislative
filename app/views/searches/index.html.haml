@@ -23,6 +23,10 @@
             
         - @bills = @bills_query.bills
         = render :partial => "box_bills_result" 
+    - else
+      %div
+        %p
+          No se encontraron Proyectos de Ley relacionados a tu búsqueda
     /end of loop
 
     /loop for parliamentarians
@@ -36,4 +40,8 @@
             = link_to 'Búsqueda Avanzada', searches_parliamentarians_path, class: 'btn btn-default btn-xs'
 
         = render :partial => "box_parliamentarians_result"
+    - else
+      %div
+        %p
+          No se encontraron Parlamentarios relacionados a tu búsqueda
     /end of loop
