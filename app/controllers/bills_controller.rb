@@ -127,9 +127,9 @@ class BillsController < ApplicationController
         limit = '30'
       end
 
-      @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search/?#{URI.encode(@keywords)}&per_page="+limit, 'application/json')
+      @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}per_page="+limit, 'application/json')
     else
-      @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search/?", 'application/json')
+      @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search.json/?", 'application/json')
     end
   end
 end
