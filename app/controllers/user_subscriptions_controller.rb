@@ -21,6 +21,7 @@ class UserSubscriptionsController < ApplicationController
 
   # POST /user_subscriptions
   def create
+    # It creates a user_subscription and a user (if necessary) with bill and user params 
     subscription_email = params[:user_subscription][:user]
     subscription_bill = params[:user_subscription][:bill]
 
@@ -29,7 +30,7 @@ class UserSubscriptionsController < ApplicationController
     if subscription_user.nil?
     
       @user = User.new
-      @user.username = subscription_email #TODO: cambiar username por uno aleatorio (?)
+      @user.username = subscription_email #TODO: change username (not use the email?)
       @user.email = subscription_email
       @password = SecureRandom.urlsafe_base64
       @user.password = @password
@@ -75,6 +76,7 @@ class UserSubscriptionsController < ApplicationController
   end
 
   def confirmed
+    # This is the controller of the link that is send to each user_subscription to confirm their mail
     @user_subscription = UserSubscription.find_by_email_token(params[:email_token])
     @user_subscription.confirmed = true
     @user_subscription.save
@@ -109,19 +111,12 @@ class UserSubscriptionsController < ApplicationController
     end
 
     def already_subscribe(user, bill)
+      # Check if user is already subscribed to bill
       if UserSubscription.where(:user => user, :bill => bill).first.nil?
         [nil, false]
       else
         [UserSubscription.where(:user => user, :bill => bill).first, true]
       end
-    end
-
-    def create_subscription(bill, id)
-      user_subscription = UserSubscription.new
-      user_subscription.bill = bill
-      user_subscription.confirmed = false
-      user_subscription.user = id
-      user_subscription
     end
 
 end

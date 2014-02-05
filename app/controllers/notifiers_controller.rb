@@ -7,6 +7,7 @@ class NotifiersController < ApplicationController
   end
 
   def run_tasks
+    # It runs all the tasks according to notify users with updates on bills
     last_notification = params[:date]
     @bills = bills_updated(last_notification)
     # @bills = params[:bills]
@@ -53,6 +54,7 @@ class NotifiersController < ApplicationController
   end
 
   def send_notifies
+    # Sends an email with all the updates of bills subscribed to all notifiers. Updates last_notification
     @notifies = Notifier.all
     @time_now = Time.now()
     @notifies.each do |notify|
