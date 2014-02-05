@@ -9,14 +9,6 @@
     %ul.list-inline
       %li
         %a{'href'=>'#'}
-          %i.fa.fa-star
-          999999 Suscripciones
-      %li
-        %a{'href'=>'#'}
-          %i.fa.fa-pencil
-          999999 Preguntas
-      %li
-        %a{'href'=>'#'}
           %i.fa.fa-facebook
           Comparte
       %li
@@ -43,27 +35,10 @@
           = link_to parliamentarian.name, parliamentarian_path(parliamentarian.slug)
           %p
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, officiis, eveniet, rem consequatur omnis voluptatum molestiae adipisci odio perferendis tempore ducimus tempora eaque saepe sed aut ipsa asperiores similique doloribus.
-
-
-%div.page-header
-  %h2
-    Parlamentarios
-
-%section#parliamentarian-list
-  %div.table-responsive
-    %table.table.table-striped
-      %thead
-        %tr
-          %th
-          %th
-            Nombre
-          
-      %tbody
-        - @parliamentarians.persons.each do |parliamentarian|
-          %tr
-            %td
-            - if parliamentarian.images.nil?
-              %img.img-responsive{:src=>parliamentarian.images[0]['url']}
-            %td
-              = link_to parliamentarian.name, parliamentarian_path(parliamentarian.slug)
-  
+          %p
+            %strong
+              Partido:
+            Partido Diferente
+            %strong
+              Lugar que representa:
+            Alguna región

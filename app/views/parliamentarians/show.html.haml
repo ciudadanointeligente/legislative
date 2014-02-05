@@ -2,10 +2,9 @@
   %div.col-md-7
     %ul.breadcrumb
       %li
-        %a{'href'=>'#'}
-          Parlamentarios
+        = link_to 'Portada', root_url
       %li.active
-        Pedro Pablo Alvarez-Salamanca Ramirez
+        = @parliamentarian.name
   %div.col-md-5
     %ul.list-inline
       %li
