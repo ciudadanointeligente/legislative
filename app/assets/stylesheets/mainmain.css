@@ -153,9 +153,8 @@ strong {
 }
 
 .action-btn>li a {
-  background: #f4a458;
   padding: 2px 5px;
-  color: #f9f9eb;
+  text-decoration: none;
 }
 
 .action-btn.list-inline>li {
@@ -181,7 +180,7 @@ strong {
   color: #a6a691;
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
-  padding: .3em .6em;
+  padding: .3em .6em .2em;
 }
 
 .label-default:before {
