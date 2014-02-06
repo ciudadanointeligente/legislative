@@ -22,8 +22,6 @@ class LegislativeMessageCollection
 			"username" => ENV["writeit_username"], 
 			"api_key" => ENV["writeit_api_key"])
 		url.query = params
-		puts url.to_s
-		
 		super(url.to_s, 'application/json')
 	end
 end

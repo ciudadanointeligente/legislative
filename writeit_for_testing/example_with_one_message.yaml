@@ -1276,3 +1276,6 @@
       1, writeitinstance: 1}
   model: nuntium.message
   pk: 1
+- fields: {contact: 1, message: 1, status: new}
+  model: nuntium.outboundmessage
+  pk: 1
