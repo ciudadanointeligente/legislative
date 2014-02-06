@@ -35,7 +35,6 @@ h3 {
 h4 {
   font-size: 21px;
   font-weight: 700;
-  margin-top: 0;
 }
 
 h5 {
@@ -56,7 +55,7 @@ a:hover {
   color: #dd8740;
 }
 
-p.light {
+.light {
   color: #a6a691;
 }
 
@@ -64,6 +63,22 @@ strong {
   font-weight: 700;
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
+}
+
+.small {
+  font-size: 80%;
+}
+
+.txt-red {
+  color: #ea6a56;
+}
+
+.txt-green {
+  color: #3db091;
+}
+
+.col-md-1.side {
+  margin-top: 10px;
 }
 
 /*Botones*/
@@ -263,8 +278,15 @@ strong {
   margin-bottom: 20px;
 }
 
-.breadcrumb {
-  margin: -40px 0 20px 0;
+.hero-space .breadcrumb {
+  margin: -49px 0 20px 0;
+}
+
+#graph > h4 > a {
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: initial;
+  font-family: 'Lato';
 }
 
 /*Tablas*/
@@ -564,12 +586,61 @@ span.paring {
 .title-header a {
   color: #FFF;
 }
+
+#graph {
+  padding: 40px 0;
+}
+
+#timeline div.resume.col-md-11 {
+  margin-bottom: 20px;
+}
+
+.progress {
+  background-color: #fff;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 10px 0 5px;
+}
+
+.progress-bar {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/*a favor*/
+.progress-bar-success {
+  background-color: #3db091;
+}
+
+/*en contra*/
+.progress-bar-danger {
+  background-color: #ea6a56;
+}
+
+/*se abstienen*/
+.progress-bar-warning {
+  background-color: #e6e6c9;
+}
+
+/*ausentes*/
+.progress-bar-info {
+  background-color: #cdcdb3;
+}
+
+/*pareos*/
+.progress-bar-default {
+  background-color: #a6a691;
+}
+
+
 /*end bills*/
 
 /*SVG Graph*/
 svg.graph {
   height: 210px;
   width: 750px;
+  margin: 2em 0 5em;
 }
 
 svg.graph .grid {
@@ -583,7 +654,7 @@ svg.graph .points {
   stroke-width: 3;
 }
 svg.graph .first_set {
-  fill: #00554d;
+  fill: #a6a691;
 }
 
 svg.graph .surfaces {
@@ -595,9 +666,9 @@ svg.graph .grid.double {
 }
 
 svg.graph .labels {
-  font-family: Arial;
-  font-size: 14px;
-  kerning: 1;
+font-family: 'Lato', sans-serif;
+font-size: 12px;
+letter-spacing: -1px;
 }
 
 svg.graph .labels.x-labels {

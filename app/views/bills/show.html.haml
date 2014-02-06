@@ -7,14 +7,9 @@
   = javascript_include_tag 'svg/jquery.svganim.min.js'
   = javascript_include_tag 'svg/graph-bill.js'
 
-  %div.row
-    %div.col-md-9
-      %h3
-        EVENTOS QUE HA TENIDO ESTE PROYECTO
-    %div.col-md-3
-      %p
-        Descargar historial
-        %i.fa.fa-download
+  %h4
+    EVENTOS QUE HA TENIDO ESTE PROYECTO
+
   %div
     %svg.graph{'version'=>'1.1', 'xmlns:xlink'=>"http://www.w3.org/1999/xlink", 'xmlns'=>"http://www.w3.org/2000/svg", 'width'=>"800", 'height'=>"200"}
       %g.grid.y-grid#yGrid
@@ -42,8 +37,8 @@
       %g.labels.x-labels
         
       %g.labels.y-labels
-        %text{'x'=>'90', 'y'=>'20'}
-          nro eventos
+        %text{'x'=>'100', 'y'=>'20'}
+          Nro tramitaciones
         %text{'x'=>'80', 'y'=>'0'}
           10
         %text{'x'=>'80', 'y'=>'40'}
@@ -66,22 +61,45 @@
         %span.value-total
           eventos
   /the graph
+
+  %div.pull-right
+    Invertir orden temporal
+    %a{'href'=>'#'}
+      %i.fa.fa-chevron-circle-down
+    %a{'href'=>'#'}
+      %i.fa.fa-chevron-circle-up
   
-  %div#timeline
+  %h4
+    HISTORIA DEL PROYECTO
+    %a{'href'=>'#'}
+      Descargar historial
+      %i.fa.fa-download
+  
+  
+  %div#timeline.row
     - cnt = 0
     - while cnt < 6
       %div.timeline-container
-        %div.status
+        %div.status.col-md-1.side
           %img{'src'=>'http://placehold.it/50x50'}
-        %div.resume
-          %h4
+        %div.resume.col-md-11
+          %h5
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, eum, esse in consectetur libero obcaecati
+            %span.light
+              \- 20/02/2013
           %p
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, doloribus porro aperiam a soluta natus repellat perferendis rerum fuga neque vero delectus quae magnam. Quisquam quo velit expedita fuga nam?
           - if cycle('odd', 'even') == 'odd'
             - green = "width:" + rand(30...50).to_s + "%"
             - yellow = "width:" + rand(20...35).to_s + "%"
             - red = "width:" + rand(10...30).to_s + "%"
+            %p
+              Quorum: 
+              %strong
+                %span
+                  6/7 -
+                %span.txt-red
+                  Aprobado
             
             %div.progress
               %div.progress-bar.progress-bar-success{"style" => green}
@@ -93,37 +111,8 @@
               %div.progress-bar.progress-bar-danger{"style" => red}
                 %span.sr-only
                   45% Complete (danger)
+            %p.small.light
+              %strong
+                30% A FAVOR 45% EN CONTRA,  5% ABSTENCIÓN,  5% AUSENTES 15% PAREOS
           - cnt += 1
-
-  %p.showmore.text-center
-    %i#showicon.fa.fa-chevron-down
-
-:css
-  .showmore {
-    background-color: #CCC;
-  }
-  .showless {
-    background-color: #CCC;
-  }
-  #timeline {
-    height: 100px;
-    overflow: hidden;
-  }
-
-:javascript
-  $('#graph').on('click', 'p.showmore', function(){
-    $('#timeline').css('height', 'auto');
-    $('#timeline').css('overflow', 'visible');
-    $(this).attr('class','showless');
-    $(this).addClass('text-center');
-    $('#showicon').attr('class','fa fa-chevron-up');
-  });
-
-  $('#graph').on('click', 'p.showless', function(){
-    $('#timeline').css('height', '100px');
-    $('#timeline').css('overflow', 'hidden');
-    $(this).attr('class','showmore');
-    $(this).addClass('text-center');
-    $('#showicon').attr('class','fa fa-chevron-down');
-  })
   
