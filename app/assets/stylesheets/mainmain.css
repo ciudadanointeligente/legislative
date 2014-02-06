@@ -231,10 +231,8 @@ strong {
 }
 
 .breadcrumb {
-  /*padding: 0px 0px;*/
+  padding: 0px 0px;
   background-color: transparent;
-  /*margin: -40px 0 20px 0;*/
-  /*font-size: 48px;*/
 }
 
 .breadcrumb a {
@@ -263,6 +261,10 @@ strong {
   color: #e6e6c9;
   padding: 10px 0px 35px;
   margin-bottom: 20px;
+}
+
+.breadcrumb {
+  margin: -40px 0 20px 0;
 }
 
 /*Tablas*/
