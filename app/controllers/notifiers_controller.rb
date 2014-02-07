@@ -1,4 +1,5 @@
 require 'billit_representers/models/paperwork_collection'
+require 'billit_representers/models/bill'
 
 class NotifiersController < ApplicationController
 
