@@ -26,6 +26,7 @@ class NotifiersController < ApplicationController
     @paperworks_updated = @paperworks_updated_collection.paperworks
     @bills_updated = @paperworks_updated.map { |paperwork| paperwork.bill_uid }
     @bills_updated.uniq!
+    @bills_updated
   end
 
 
