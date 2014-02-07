@@ -24,6 +24,7 @@ class NotifiersController < ApplicationController
     @paperworks_updated_collection = Billit::PaperworkCollection.get(ENV['paperworks_url'] + 'search.json?date_min=' + last_notification, 'application/json')
     @paperworks_updated = @paperworks_updated_collection.paperworks
     @bills_updated = @paperworks_updated.map { |paperwork| paperwork.bill_uid }
+    @bills_updated.uniq!
   end
 
 
