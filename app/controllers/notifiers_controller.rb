@@ -10,7 +10,6 @@ class NotifiersController < ApplicationController
     # It runs all the tasks according to notify users with updates on bills
     last_notification = params[:date]
     @bills = bills_updated(last_notification)
-    # @bills = params[:bills]
     @bills.each do |bill|
       @user_id_subscriptions = get_user_id_subscriptions(bill)
       build(bill, @user_id_subscriptions)

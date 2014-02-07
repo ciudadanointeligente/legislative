@@ -94,10 +94,19 @@ class UserSubscriptionsController < ApplicationController
   end
 
   # DELETE /user_subscriptions/1
-  def destroy
-    @user_subscription.destroy
-    redirect_to user_subscriptions_url, notice: 'User subscription was successfully destroyed.'
-  end
+  # def destroy
+  #   @user_subscription.destroy
+  #   redirect_to user_subscriptions_url, notice: 'User subscription was successfully destroyed.'
+  # end
+
+  # # DELETE /user_subscription?user_id=1
+  # def unsubscribe_all
+  #   @user_id = params[:user_id]
+  #   @subscriptions = UserSubscription.where(user: @user_id)
+  #   @subscriptions.each do |subscription|
+  #     subscription.destroy
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

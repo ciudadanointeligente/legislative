@@ -28,7 +28,9 @@ Legislative::Application.routes.draw do
     resources :tables
     resources :users
     resources :searches
-    resources :user_subscriptions   
+    resources :user_subscriptions # do
+      # delete 'unsubscribe_all', on: :collection
+    # end  
   end
 
 
