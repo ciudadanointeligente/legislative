@@ -51,6 +51,27 @@
               %div.text-right
                 = submit_tag 'Enviar', :class => "btn btn-success"
 
+
+%section#responses
+  %div.page-header
+    %h3
+      Mensajes enviados
+  %div.panel.panel-default
+
+    - @messages.objects.each do |message|
+      %div.panel-heading
+        %h4
+          = message.subject
+      %div.panel-body
+        %p
+          = message.content
+
+        %ul.list-inline
+          - message.people.each do |person|
+            %li
+              %span.badge
+                = person.name
+
 %script{src: "http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.jquery.min.js"}
 :javascript
   $(document).ready(function(){
