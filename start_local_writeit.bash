@@ -34,6 +34,7 @@ if [ ! -e done.txt ]; then
   virtualenv $VIRTUALENV
   source $VIRTUALENV/bin/activate
   pip install -r requirements.txt
+  pip install -r requirements_testing.txt
   python manage.py syncdb --noinput
   python manage.py migrate --noinput
   python manage.py loaddata ../writeit_for_testing/writeit_example_data.yaml
