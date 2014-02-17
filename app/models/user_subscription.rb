@@ -6,7 +6,7 @@ class UserSubscription < ActiveRecord::Base
 	
 	def generate_token(column)
 		begin
-    		self[column] = SecureRandom.urlsafe_base64
+    		self[column] = SecureRandom.urlsafe_base64(64)
   		end while UserSubscription.exists?(column => self[column])
 	end
 end

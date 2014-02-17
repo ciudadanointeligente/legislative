@@ -1,5 +1,5 @@
 class NotifierMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "Legislativo <legislative@congresodechile.cl>"
 
   def notification_email(notifier)
   	@bills = notifier.bills
