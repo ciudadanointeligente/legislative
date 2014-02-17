@@ -19,12 +19,12 @@ class SearchesController < ApplicationController
       
       # make a redirect in case of someone pick just one filter in main page
       # redirect to bills advanced search
-      if params[:bills] == '1' || params[:parliamentarians] == ''
+      if params[:bills] == '1' || params[:congressmen] == ''
         redirect_to searches_bills_path(params)
       end
-      # redirect to parliamentarians advanced search
-      if params[:parliamentarians] == '2' || params[:bills] == ''
-        redirect_to searches_parliamentarians_path(params)
+      # redirect to congressmen advanced search
+      if params[:congressmen] == '2' || params[:bills] == ''
+        redirect_to searches_congressmen_path(params)
       end
 
       @keywords = String.new
@@ -46,7 +46,7 @@ class SearchesController < ApplicationController
       @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?per_page=3", 'application/json')
     end
     
-    @parliamentarians = PopitPersonCollection.new
-    @parliamentarians.get ENV['popit_persons'], 'application/json'
+    @congressmen = PopitPersonCollection.new
+    @congressmen.get ENV['popit_persons'], 'application/json'
   end
 end

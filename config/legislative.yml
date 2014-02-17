@@ -24,7 +24,7 @@ production:
   writeit_api_key:  ~
 
 development:
-  root_url:   ~           #example: 'http://www.congresodechile.cl/'; used for links in the exported XLS files
+  root_url:   ~           #example: 'http://www.congresoabierto.cl/'; used for links in the exported XLS files
   analytics:  ~           #example: 'UA-XXXXX-X'; Google Analytics code
   disqus_shortname: ~     #example: 'qwerty'; Disqus identifier, to manage comments in Disqus you will need a account. https://disqus.com/admin/signup/
   disqus_language:  ~     #example: 'ru'; For a full list of supported languages https://www.transifex.com/projects/p/disqus/

@@ -22,7 +22,7 @@ Legislative::Application.routes.draw do
     resources :disclosures
     resources :glossaries
     resources :mains
-    resources :parliamentarians do
+    resources :congressmen do
       get 'searches', on: :collection
     end
     resources :tables

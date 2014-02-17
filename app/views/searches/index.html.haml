@@ -1,46 +1,46 @@
-:javascript
-  var authors_list = #{@authors_list};
+%div
+  %ol.breadcrumb
+    %li
+      = link_to "Portada", root_path
+    %li.active
+      Búsqueda
 
-/ buscador cabecera
-= render :partial => "simple_search_form"
-/ fin buscador cabecera
+%div.row
+  %div.col-md-3
+    = render :partial => "simple_search_form"
+    
+  %div.col-md-9
+    /loop for bills
+    - if params[:bills] == '1' || @bills_query.bills.count > 0
+      %div
+        %div.row
+          %div.col-md-10
+            %h3 
+              Proyectos de ley
+          %div.col-md-2
+            = link_to 'Búsqueda Avanzada', searches_bills_path, class: 'btn btn-default btn-xs'
+            
+        - @bills = @bills_query.bills
+        = render :partial => "box_bills_result" 
+    - else
+      %div
+        %p
+          No se encontraron proyectos de ley relacionados a tu búsqueda
+    /end of loop
 
-/loop for bills
-- if params[:bills] == '1' || @bills_query.bills.count > 0
-  %div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
-    %div.row
-      %div.col-md-10
-        %h3 
-          Bills
-      %div.col-md-2
-        = link_to 'Búsqueda Avanzada', searches_bills_path(params.merge(bills:'1')), class: 'btn btn-default btn-xs'
-        
-    - @bills = @bills_query.bills
-    = render :partial => "box_bills_result" 
-/end of loop
+    /loop for congressmen
+    - if params[:congressmen] == '2' || @congressmen.persons.count > 0
+      %div
+        %div.row
+          %div.col-md-10
+            %h3 
+              Congresistas
+          %div.col-md-2
+            = link_to 'Búsqueda Avanzada', searches_congressmen_path, class: 'btn btn-default btn-xs'
 
-/loop for parliamentarians
-- if params[:parliamentarians] == '2' || @parliamentarians.persons.count > 0
-  %div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
-    %div.row
-      %div.col-md-10
-        %h3 
-          Parlamentarios
-      %div.col-md-2
-        = link_to 'Búsqueda Avanzada', searches_parliamentarians_path(params.merge(parliamentarians:'1')), class: 'btn btn-default btn-xs'
-
-    = render :partial => "box_parliamentarians_result"
-/end of loop
-
-/loop for questions
-- if params[:parliamentarians] == '3'
-  %div{:style =>'border:1px solid #ccc; padding: 14px; margin-top: 30px; border-radius: 5px;'}
-    %div.row
-      %div.col-md-10
-        %h3
-          Preguntas
-      %div.col-md-2
-        %button.btn.btn-default.btn-xs
-          Búsqueda Avanzada
-    = render :partial => "box_questions_result"
-/end of loop
+        = render :partial => "box_congressmen_result"
+    - else
+      %div
+        %p
+          No se encontraron congresistas relacionados a tu búsqueda
+    /end of loop
