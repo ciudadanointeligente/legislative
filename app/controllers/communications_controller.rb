@@ -1,15 +1,16 @@
 require 'writeit-rails'
 
-
 class CommunicationsController < ApplicationController
+
   # GET /communications
   def index
-    @parliamentarians = PopitPersonCollection.new
-    @parliamentarians.get ENV['popit_persons'], 'application/json'
+    @congressmen = PopitPersonCollection.new
+    @congressmen.get ENV['popit_persons'], 'application/json'
     @messages = LegislativeMessageCollection.new
     @messages.get
     # [fix] - improbe the ENV url for popit, actually works without http in some instances
   end
+
   def create
     set_current_instance
   	@message = Message.new

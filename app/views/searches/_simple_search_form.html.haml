@@ -15,10 +15,10 @@
           Proyectos de ley
       %div.checkbox{:style=>'padding-right:15px'}
         %label
-          - if params[:parliamentarians] == '2'
-            %input{type: "checkbox", name: "parliamentarians", value: '2', checked: 'checked'}
+          - if params[:congressmen] == '2'
+            %input{type: "checkbox", name: "congressmen", value: '2', checked: 'checked'}
           - else
-            %input{type: "checkbox", name: "parliamentarians", value: '2'}
-          Parlamentarios
+            %input{type: "checkbox", name: "congressmen", value: '2'}
+          Congresistas
     %button.btn.btn-default
       Buscar

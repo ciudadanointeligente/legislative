@@ -4,7 +4,7 @@
       %li
         = link_to "Portada", root_path
       %li.active
-        = link_to "Parlamentarios", parliamentarians_path
+        = link_to "Congresistas", congressmen_path
   %div.col-md-5
     %ul.list-inline
       %li
@@ -18,27 +18,27 @@
 
 %div
   %h4
-    Parlamentarios
+    Congresistas
 
 %div.row
   %div.col-md-3
     = render :partial => "filter_search_form"
   %div.col-md-9
-    - @parliamentarians.persons.each do | parliamentarian |
+    - @congressmen.persons.each do | congressman |
       %div.row
         %div.col-md-1
-          - if parliamentarian.images.nil?
-            %img.img-circle.img-responsive{:src=>parliamentarian.images[0]['url']}
+          - if congressman.images.nil?
+            %img.img-circle.img-responsive{:src=>congressman.images[0]['url']}
           - else
             %img.img-circle.img-responsive{:src=>'http://placehold.it/200x200'}
         %div.col-md-11
-          = link_to parliamentarian.name, parliamentarian_path(parliamentarian.slug)
+          = link_to congressman.name, congressman_path(congressman.slug)
           %p
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, officiis, eveniet, rem consequatur omnis voluptatum molestiae adipisci odio perferendis tempore ducimus tempora eaque saepe sed aut ipsa asperiores similique doloribus.
           %p
             %strong
               Partido:
-            Partido Diferente
+            Partido diferente
             %strong
               Lugar que representa:
             Alguna región
