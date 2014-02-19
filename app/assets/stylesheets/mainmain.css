@@ -573,8 +573,8 @@ svg.graph {
 
 svg.graph .grid {
   stroke: #CCC;
-  stroke-dasharray: 1 2;
-  stroke-width: 1;
+  /*stroke-dasharray: 1 2;*/
+  stroke-width: 0.5;
 }
 
 svg.graph .points {
@@ -582,7 +582,8 @@ svg.graph .points {
   stroke-width: 3;
 }
 svg.graph .first_set {
-  fill: #00554d;
+  fill: none;
+  stroke: #000;
 }
 
 svg.graph .surfaces {
