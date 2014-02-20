@@ -72,6 +72,23 @@
               %span.badge
                 = person.name
 
+
+  %div.text-center
+    %ul.pagination
+      %li
+        %a{:href=>'#'}
+          &laquo;
+
+
+      - (1..@pagination['total_pages']).each do |page|
+        %li.active
+          %a{:href=>'#'}
+            = page
+      
+      %li.disabled
+        %a{:href=>'#'}
+          &raquo;
+
 %script{src: "http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.jquery.min.js"}
 :javascript
   $(document).ready(function(){

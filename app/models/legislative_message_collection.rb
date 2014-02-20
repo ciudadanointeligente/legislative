@@ -3,6 +3,17 @@ require 'roar/representer/feature/client'
 require 'roar/representer/feature/http_verbs'
 require 'roar/representer/json/hal'
 
+# class Meta
+# 	include Roar::Representer
+# 	include Roar::Representer::JSON::HAL
+
+# 	property :limit
+# 	property :next
+# 	property :offset
+# 	property :previous
+# 	property :total_count
+# end
+
 class LegislativeMessageCollection
 	include Roar::Representer
 	include Roar::Representer::JSON::HAL
@@ -14,6 +25,8 @@ class LegislativeMessageCollection
 	end
 
 	collection :objects, :class => LegislativeMessageRepresenter
+
+	property :meta
 
 	def get
 		

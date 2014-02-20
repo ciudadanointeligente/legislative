@@ -8,6 +8,8 @@ class CommunicationsController < ApplicationController
     @parliamentarians.get ENV['popit_persons'], 'application/json'
     @messages = LegislativeMessageCollection.new
     @messages.get
+    
+    set_pagination @messages.meta
     # [fix] - improbe the ENV url for popit, actually works without http in some instances
   end
   def create
@@ -31,5 +33,13 @@ class CommunicationsController < ApplicationController
     @writeitinstance.base_url = ENV['writeit_base_url']
     @writeitinstance.username = ENV['writeit_username']
     @writeitinstance.api_key = ENV['writeit_api_key']
+    puts ENV['writeit_url']
+    @writeitinstance.per_page = ENV['writeit_messages_per_page']
+  end
+  def set_pagination meta
+    @pagination = Hash.new
+    @pagination['current_page'] = (meta['offset']/meta['limit']) + 1
+    @pagination['total_pages'] = (meta['total_count']/meta['limit']) + 1
+
   end
 end
