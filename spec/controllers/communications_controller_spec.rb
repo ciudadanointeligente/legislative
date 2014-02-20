@@ -28,11 +28,21 @@ describe CommunicationsController do
 
     end
     it "obtains the pagination things" do
+      value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_one_message.yaml )
       get 'index', locale: 'es'
       assigns(:pagination).should_not be_nil
       assigns(:pagination)['current_page'].should eql 1
       assigns(:pagination)['total_pages'].should eql 1
 
+    end
+    it "it paginates the result" do
+      value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_21_messages.yaml )
+      get 'index', locale: 'es'
+      assigns(:messages).objects.length.should eql ENV['writeit_messages_per_page'].to_i
+      assigns(:pagination)['current_page'].should eql 1
+      #This is coupled to the settings definition of writeit_messages_per_page
+      # It should be calculated instead of just a plain
+      assigns(:pagination)['total_pages'].should eql 5
     end
     it "instanciates a writeit instance based on environment" do
       controller = CommunicationsController.new

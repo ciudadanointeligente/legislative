@@ -64,4 +64,4 @@ test:
   writeit_url:      '/api/v1/instance/1/'
   writeit_username: 'admin'
   writeit_api_key:  'a'
-  writeit_messages_per_page: '20'
+  writeit_messages_per_page: '5'

@@ -34,7 +34,6 @@ class CommunicationsController < ApplicationController
     @writeitinstance.base_url = ENV['writeit_base_url']
     @writeitinstance.username = ENV['writeit_username']
     @writeitinstance.api_key = ENV['writeit_api_key']
-    puts ENV['writeit_url']
     @writeitinstance.per_page = ENV['writeit_messages_per_page']
   end
   def set_pagination meta

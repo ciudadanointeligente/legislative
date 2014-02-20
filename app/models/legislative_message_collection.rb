@@ -33,7 +33,8 @@ class LegislativeMessageCollection
 		url = URI.join(ENV['writeit_base_url'], ENV['writeit_url'], 'messages/')
 		params = URI.encode_www_form("format" => "json", 
 			"username" => ENV["writeit_username"], 
-			"api_key" => ENV["writeit_api_key"])
+			"api_key" => ENV["writeit_api_key"], 
+			"limit" => ENV["writeit_messages_per_page"])
 		url.query = params
 		super(url.to_s, 'application/json')
 	end
