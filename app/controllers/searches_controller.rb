@@ -1,10 +1,14 @@
 require 'net/http'
 require 'httparty'
+require 'popit_representers/models/organization_collection'
 
 class SearchesController < ApplicationController
   def index
 
     @parliamentarians = PopitPersonCollection.new
+
+    @organizations = Popit::OrganizationCollection.new
+    @organizations.get ENV['popit_organizations'], 'application/json'
 
     if !params.nil? && params.length > 3 # default have 3 keys {'action'=>'index', 'controller'=>'searchs', "locale"=>"xx"}
       

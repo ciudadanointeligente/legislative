@@ -9,12 +9,10 @@
       %h4
         = link_to parliamentarian.name, parliamentarian_path(parliamentarian.id)
       %p
-        %strong
-          Partido:
-        Partido Diferente
-        %strong
-          Lugar que representa:
-        Alguna región
+        - if ! parliamentarian.represent[0].region.blank?
+          %strong
+            Lugar que representa:
+          = parliamentarian.represent[0].region
   
 %div.text-right
   %a.btn.btn-default{'href'=>'#'}
