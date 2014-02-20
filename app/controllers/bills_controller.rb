@@ -1,5 +1,6 @@
 require 'billit_representers/models/bill'
 require 'billit_representers/models/bill_page'
+
 class BillsController < ApplicationController
   include Roar::Rails::ControllerAdditions
   respond_to :html, :xls
@@ -122,10 +123,10 @@ class BillsController < ApplicationController
         end
       end
       
-      # defaul limit, when a user make a search for a bills or parliamentarians
+      # defaul limit, when a user make a search for a bills or congressmen
       limit = '3'
       # if a user make a specific search the limit change to, in this case, 30
-      if params[:bills] || params[:parliamentarians]
+      if params[:bills] || params[:congressmen]
         limit = '30'
       end
 

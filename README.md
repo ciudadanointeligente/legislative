@@ -3,7 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/ciudadanointeligente/legislative/badge.png)](https://coveralls.io/r/ciudadanointeligente/legislative)
 [![Code Climate](https://codeclimate.com/github/ciudadanointeligente/legislative.png)](https://codeclimate.com/github/ciudadanointeligente/legislative)
 
-[Trunk](http://beta.congresodechile.cl)
+[Trunk](http://beta.congresoabierto.cl)
 
 Legislative is a channel of participation and seeks to bring information to the public what is happening to our Congress. Built using POPLUS environment.
 

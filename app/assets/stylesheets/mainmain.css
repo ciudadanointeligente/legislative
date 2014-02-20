@@ -20,7 +20,6 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
-  text-align: center;
 }
 
 h2 {
@@ -56,7 +55,7 @@ a:hover {
   color: #dd8740;
 }
 
-p.light {
+.light {
   color: #a6a691;
 }
 
@@ -64,6 +63,22 @@ strong {
   font-weight: 700;
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
+}
+
+.small {
+  font-size: 80%;
+}
+
+.txt-red {
+  color: #ea6a56;
+}
+
+.txt-green {
+  color: #3db091;
+}
+
+.col-md-1.side {
+  margin-top: 10px;
 }
 
 /*Botones*/
@@ -147,6 +162,74 @@ strong {
   display: inline-flex;
 }
 
+.action-btn {
+  float: right;
+  margin-bottom: 20px;
+}
+
+.action-btn>li a {
+  padding: 2px 5px;
+  text-decoration: none;
+}
+
+.action-btn.list-inline>li {
+  padding: 0px 1px;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/*Labels*/
+
+.label-default {
+  background-color: #e6e6c9;
+  position: relative;
+  border-radius: 0;
+  color: #a6a691;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  padding: .3em .6em .2em;
+}
+
+.label-default:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: #e6e6c9;
+  border-width: 9px;
+  margin-top: -10px;
+}
+
+.label-default:after{
+  content:"";
+  position:absolute;
+  top:8px;
+  left:-1px;
+  float:left;
+  width:4px;
+  height:4px;
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  border-radius:2px;
+  background:#f9f9eb;
+}
+
+.hero-space .label-default:after{
+  background:#3e1f3e;
+}
+
 /*Menu*/
 
 .navbar-nav {
@@ -160,6 +243,23 @@ strong {
 
 .nav a:hover {
   color: #c4b7c4;
+}
+
+.breadcrumb {
+  padding: 0px 0px;
+  background-color: transparent;
+}
+
+.breadcrumb a {
+  color: #a6a691;
+}
+
+.breadcrumb>.active {
+  color: #a6a691;
+}
+
+.breadcrumb>li+li:before {
+  color: #a6a691;
 }
 
 /*Hero space*/
@@ -176,6 +276,17 @@ strong {
   color: #e6e6c9;
   padding: 10px 0px 35px;
   margin-bottom: 20px;
+}
+
+.hero-space .breadcrumb {
+  margin: -49px 0 20px 0;
+}
+
+#graph > h4 > a {
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: initial;
+  font-family: 'Lato';
 }
 
 /*Tablas*/
@@ -242,7 +353,6 @@ strong {
 /*HOME*/
 
 .hero-space h4 {
-  margin-bottom: 50px;
 }
 
 /*hot-space*/
@@ -476,4 +586,138 @@ span.paring {
 .title-header a {
   color: #FFF;
 }
+
+#graph {
+  padding: 40px 0;
+}
+
+#timeline div.resume.col-md-11 {
+  margin-bottom: 20px;
+}
+
+.progress {
+  background-color: #fff;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 10px 0 5px;
+}
+
+.progress-bar {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/*a favor*/
+.progress-bar-success {
+  background-color: #3db091;
+}
+
+/*en contra*/
+.progress-bar-danger {
+  background-color: #ea6a56;
+}
+
+/*se abstienen*/
+.progress-bar-warning {
+  background-color: #e6e6c9;
+}
+
+/*ausentes*/
+.progress-bar-info {
+  background-color: #cdcdb3;
+}
+
+/*pareos*/
+.progress-bar-default {
+  background-color: #a6a691;
+}
+
+
 /*end bills*/
+
+/*SVG Graph*/
+svg.graph {
+  height: 210px;
+  width: 750px;
+  margin: 2em 0 5em;
+}
+
+svg.graph .grid {
+  stroke: #CCC;
+  stroke-dasharray: 1 2;
+  stroke-width: 1;
+}
+
+svg.graph .points {
+  stroke: white;
+  stroke-width: 3;
+}
+svg.graph .first_set {
+  fill: #a6a691;
+}
+
+svg.graph .surfaces {
+  fill-opacity: 0.5;
+}
+
+svg.graph .grid.double {
+  stroke-opacity: 0.4;
+}
+
+svg.graph .labels {
+font-family: 'Lato', sans-serif;
+font-size: 12px;
+letter-spacing: -1px;
+}
+
+svg.graph .labels.x-labels {
+  text-anchor: middle;
+}
+
+svg.graph .labels.y-labels {
+  text-anchor: end;
+}
+
+#tooltip {
+  position: absolute;
+  background: black;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 9px 11px 0px 11px;
+  display: none;
+  z-index: 100 !important;
+  width: 165px;
+  min-height: 80px;
+  box-shadow: 1px 1px 1px 0px #000;
+}
+#tooltip.right {
+    box-shadow: -1px 1px 1px 0px #000;
+}
+#tooltip.right svg {
+    left: auto;
+    right: 0px;
+}
+#tooltip svg {
+    position: absolute;
+    display: inline;
+    float: right;
+    left: 0px;
+    right: auto;
+    top: -13px;
+    width: 11px;
+    height: 13px;
+}
+#tooltip #tooltip-triangle {
+    background: black;
+    fill: rgba(0, 0, 0, 0.8);
+}
+#tooltip .value .value-part {
+    font-size: 32px;
+    vertical-align: top;
+    position: relative;
+    top: -3px;
+}

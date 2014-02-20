@@ -11,12 +11,12 @@ describe CommunicationsController do
   end
   describe "writeit form creation" do
 
-    it "obtains list of parliamentarians" do
+    it "obtains list of congressmen" do
       get 'index', locale: 'es'
-      assigns(:parliamentarians).should_not be_nil
-      assigns(:parliamentarians).should be_an_instance_of PopitPersonCollection
-      assigns(:parliamentarians).persons.should_not be_nil
-      assigns(:parliamentarians).persons[0].should be_an_instance_of PopitPerson
+      assigns(:congressmen).should_not be_nil
+      assigns(:congressmen).should be_an_instance_of PopitPersonCollection
+      assigns(:congressmen).persons.should_not be_nil
+      assigns(:congressmen).persons[0].should be_an_instance_of PopitPerson
     end
     it "obtains list of messages" do
       value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_one_message.yaml )
@@ -47,16 +47,16 @@ describe CommunicationsController do
 
     it "Form Post trigger pushing to the writeit API" do
       #testing that clicking the submit button triggers the push to the API method of the writeit-rails gem
-      parliamentarians = PopitPersonCollection.new
-      parliamentarians.get ENV['popit_persons'], 'application/json'
-      parliamentarian1 = parliamentarians.persons[0]
+      congressmen = PopitPersonCollection.new
+      congressmen.get ENV['popit_persons'], 'application/json'
+      congressman1 = congressmen.persons[0]
       post :create, locale: 'es', 
                 :author_name => 'autor 1',
                 :author_email => 'test@ciudadanointeligente.org',
                 :subject => 'subject 1',
                 :content => 'Content 1',
                 :recipients => [
-                  parliamentarian1.popit_api_uri,
+                  congressman1.popit_api_uri,
                 ]
 
       assigns(:message).should_not be_nil

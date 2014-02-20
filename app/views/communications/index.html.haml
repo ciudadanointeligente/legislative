@@ -35,9 +35,9 @@
                 %label{:for=>"author_name"}
                   Seleccione un senador o diputado
                 %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => 'Seleccione'}
-                  - @parliamentarians.persons.each do |parliamentarians|
-                    %option{:value => parliamentarians.popit_api_uri}
-                      =parliamentarians.name
+                  - @congressmen.persons.each do |congressmen|
+                    %option{:value => congressmen.popit_api_uri}
+                      =congressmen.name
 
             %div.col-md-9.message-box-right
               %h4
