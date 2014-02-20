@@ -32,7 +32,7 @@ development:
   disqus_language:  ~     #example: 'ru'; For a full list of supported languages https://www.transifex.com/projects/p/disqus/
   disqus_developer: '1'   #Use '1' for local testing, otherwise use '0'
   bill_graph_data_length:   '12'  # amount of points in the graph
-  bill_graph_day_interval:  '7'   # amount of days per point in graph
+  bill_graph_day_interval:  '28'   # amount of days per point in graph
   parliaments_initial_date: '1990-03-01' #The initial date for bill search purposes
   billit_url: ~       #example: 'http://billit-instance.org/bills/'; for more info about this POPLUS component check https://github.com/ciudadanointeligente/bill-it
   paperworks_url: 'http://billit.ciudadanointeligente.org/paperworks/'
