@@ -1,3 +1,5 @@
+require 'popit_representers/models/organization_collection'
+
 class ParliamentariansController < ApplicationController
 
   # GET /parliamentarians
@@ -8,14 +10,16 @@ class ParliamentariansController < ApplicationController
 
   # GET /parliamentarians/1
   def show
-    #@parliamentarians = PopitPersonCollection.new
-    #@parliamentarians.get ENV['popit_persons'], 'application/json'
-    #@parliamentarians.persons.each do | parliamentarian |
-    #  @parliamentarian = parliamentarian if parliamentarian.id == params[:id]
-    #end
-    @parliamentarian = PopitPerson.new
-    @parliamentarian.name = 'Pedro Pablo Alvarez-Salamanca Ramirez'
-    @parliamentarian.links = JSON.parse ('[{"url": "www.arenasdiputado.cl/","note": "Website"},{"url": "http://www.camara.cl/pdf.aspx?prmid=507&prmtipo=TRANSPARENCIA","note": "Declaration Interes"},{"url": "http://www.camara.cl/pdf.aspx?prmid=392&prmtipo=TRANSPARENCIA","note": "Declaration Patrimonio"},{"url": "http://facebook.com/group.php?gid=103267507483","note": "Facebook"}]')
+    
+    @parliamentarians = PopitPersonCollection.new
+    @parliamentarians.get ENV['popit_persons'], 'application/json'
+
+    @organizations = Popit::OrganizationCollection.new
+    @organizations.get ENV['popit_organizations'], 'application/json'
+
+    @parliamentarians.result.each do |parliamentarian|
+      @parliamentarian = parliamentarian if parliamentarian.id == params[:id]
+    end
   end
 
   # GET /parliamentarians/new

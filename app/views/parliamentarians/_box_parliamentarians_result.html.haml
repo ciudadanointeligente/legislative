@@ -9,7 +9,7 @@
       %div.row
         %div.col-md-9
           %h4
-            = link_to parliamentarian.name, parliamentarian_path(parliamentarian.slug)
+            = link_to parliamentarian.name, parliamentarian_path(parliamentarian.id)
         %div.col-md-3
           %a{'href'=>'#'}
             %i.fa.fa-pencil
@@ -17,10 +17,11 @@
       %p
         %strong
           Partido:
-        El Partido
-        %strong
-          Lugar que representa:
-        Región patito
+        el Partido
+        - if ! parliamentarian.represent[0].region.blank?
+          %strong
+            Lugar que representa:
+          = parliamentarian.represent[0].region
 
 - if @parliamentarians.persons.count == 0
   %p.text-center

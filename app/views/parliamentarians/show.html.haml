@@ -25,39 +25,70 @@
     = @parliamentarian.name
   %h4
     Senador
-  
+
+
 %div.row
   %div.col-md-3
-    %img{ 'src' => 'http://placehold.it/230x230'}
+    - if ! @parliamentarian.images.nil?
+      %img.img-responsive{:src=>@parliamentarian.images[0].url}
+    - else
+      %img.img-responsive{ 'src' => 'http://placehold.it/230x230'}
     %p
-      Lugar que representa: Región Metropolitana
+      Lugar que representa:
+      %ul
+      - @parliamentarian.represent.each do | r |
+        - if ! r.district.blank?
+          %li 
+            = 'Distrito: ' + r.district
+        
+        - if ! r.region.blank?
+          %li 
+            = 'Región: ' + r.region
+
+        - if ! r.comunas.blank?
+          %li 
+            = 'Comunas: ' + r.comunas
+
     %p
-      Periodo: 2000 - 2004 Senador, 2010 - 2014 Diputado
+      Periodo: 
+      %ul
+      - @parliamentarian.parliamentarian_period.each do | p |
+        - if ! p.date.blank?
+          %li 
+            = p.date  
+        
     %p
       Partido:
-      %a{ 'href' => 'http://www.google.cl' }
-        Partido Independiente Popular Latinoamericano
-        %i.fa.fa-external-link
+      - @organizations.result.each do | o |
+        - url = '#';
+        -if ! o.links[1].blank?
+          - url = @parliamentarian.memberships[0].organization_id == o.id ? o.links[1].url : '#'
+        %a{ 'href' => url, 'target' => '_blank' }
+          = o.name if @parliamentarian.memberships[0].organization_id == o.id
+      %i.fa.fa-external-link
     %p
-      Comisión: Educación
+      Comisiones:
+      %ul
+      - @parliamentarian.commissions.each do | c |
+        - if ! c.permanent.blank?
+          %li 
+            = 'Permanente: ' + c.permanent  
+        
+        - if ! c.special.blank?
+          %li 
+            = 'Especial: ' + c.special 
+        
+        - if ! c.researcher.blank?
+          %li 
+            = 'Investigadora: ' + c.researcher 
     %div
       %ul
-        %li
-          %a{ 'href' => 'http://www.google.cl' }
-            %i.fa.fa-globe
-            Sitio Web
-        %li
-          %a{ 'href' => 'http://www.linkedin.com' }
-            %i.fa.fa-linkedin-square
-            CV
-        %li
-          %a{ 'href' => 'http://www.facebook.com' }
-            %i.fa.fa-facebook-square
-            Facebook
-        %li
-          %a{ 'href' => 'http://www.twitter.com' }
-            %i.fa.fa-twitter-square
-            Twitter
+        - @parliamentarian.links.each do | link |
+          %li
+            %a{ 'href' => link.url }
+              %i.fa.fa-globe
+              = link.note
+        
       
     %h5
       Biografía

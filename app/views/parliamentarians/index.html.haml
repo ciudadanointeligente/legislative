@@ -24,7 +24,7 @@
   %div.col-md-3
     = render :partial => "filter_search_form"
   %div.col-md-9
-    - @parliamentarians.persons.each do | parliamentarian |
+    - @parliamentarians.result.each do | parliamentarian |
       %div.row
         %div.col-md-1
           - if parliamentarian.images.nil?
