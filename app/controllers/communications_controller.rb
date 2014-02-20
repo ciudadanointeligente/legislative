@@ -7,7 +7,11 @@ class CommunicationsController < ApplicationController
     @congressmen = PopitPersonCollection.new
     @congressmen.get ENV['popit_persons'], 'application/json'
     @messages = LegislativeMessageCollection.new
-    @messages.get
+    page = 1
+    if !params[:page].nil?
+      page = params[:page]
+    end
+    @messages.get page
     
     set_pagination @messages.meta
     # [fix] - improbe the ENV url for popit, actually works without http in some instances

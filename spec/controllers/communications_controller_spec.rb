@@ -44,6 +44,12 @@ describe CommunicationsController do
       # It should be calculated instead of just a plain
       assigns(:pagination)['total_pages'].should eql 5
     end
+    it "it paginates the result" do
+      value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_21_messages.yaml )
+      get 'index', locale: 'es', page: '2'
+      assigns(:messages).objects.length.should eql ENV['writeit_messages_per_page'].to_i
+      assigns(:pagination)['current_page'].should eql 2
+    end
     it "instanciates a writeit instance based on environment" do
       controller = CommunicationsController.new
       controller.instance_eval{ set_current_instance }
