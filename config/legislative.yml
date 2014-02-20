@@ -17,6 +17,8 @@ production:
   popit_url:  ~
   popit_persons: ~
   popit_search:  ~
+  popit_organizations: ~
+  popit_organizations_search: ~
   tables_url:    ~
   writeit_base_url: ~
   writeit_url:      ~
@@ -37,6 +39,8 @@ development:
   popit_url:  ~       #example: 'legislative-instance.popit.mysociety.org'; you will need create a instance, please contact with mysociety's popit team in popit@mysociety.org. http://popit.mysociety.org/instances/new
   popit_persons:  ~   #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/persons/'; the same instance used above but with http and person path
   popit_search:   ~   #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/search/persons?'; used for person search
+  popit_organizations: ~  #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/organizations/' 
+  popit_organizations_search: ~ #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/search/organizations?' 
   tables_url:     ~   #example: 'http://pmo.apidone.com/tables/tables'; temporal resource, is an array of tables, inside has bills. [WIP]
   writeit_base_url: ~ #example: 'http://localhost:3001'; you will need create a instance, please contact with ciudadanointeligente's lab team in lab@ciudadanointeligente.org. http://writeit.ciudadanointeligente.org/
   writeit_url:      ~ #example: '/api/v1/instance/2/'; writeit instance path
@@ -57,6 +61,8 @@ test:
   popit_url:  'localhost:3002'
   popit_persons:  'http://localhost:3002/api/persons/'
   popit_search:   'http://localhost:3002/api/search/persons?'
+  popit_organizations: ~
+  popit_organizations_search: ~
   tables_url:     'http://pmo.apidone.com/tables'
   writeit_base_url: 'http://localhost:3001'
   writeit_url:      '/api/v1/instance/1/'
