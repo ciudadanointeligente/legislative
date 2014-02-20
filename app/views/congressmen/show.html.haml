@@ -29,65 +29,74 @@
 
 %div.row
   %div.col-md-3
-    - if ! @congressman.images.nil?
+    - if ! @congressman.images.blank?
       %img.img-responsive{:src=>@congressman.images[0].url}
     - else
       %img.img-responsive{ 'src' => 'http://placehold.it/230x230'}
-    %p
-      Lugar que representa:
-      %ul
-      - @congressman.represent.each do | r |
-        - if ! r.district.blank?
-          %li 
-            = 'Distrito: ' + r.district
-        
-        - if ! r.region.blank?
-          %li 
-            = 'Región: ' + r.region
+    
+    - if ! @congressman.represent.blank?
+      %p
+        Lugar que representa:
+        %ul
+        - @congressman.represent.each do | r |
+          - if ! r.district.blank?
+            %li 
+              = 'Distrito: ' + r.district
+          
+          - if ! r.region.blank?
+            %li 
+              = 'Región: ' + r.region
 
-        - if ! r.comunas.blank?
-          %li 
-            = 'Comunas: ' + r.comunas
+          - if ! r.comunas.blank?
+            %li 
+              = 'Comunas: ' + r.comunas
 
-    %p
-      Periodo: 
-      %ul
-      - @congressman.parliamentarian_period.each do | p |
-        - if ! p.date.blank?
-          %li 
-            = p.date  
+    - if ! @congressman.parliamentarian_period.blank?
+      %p
+        Periodo: 
+        %ul
+        - @congressman.parliamentarian_period.each do | p |
+          - if ! p.date.blank?
+            %li 
+              = p.date  
         
-    %p
-      Partido:
-      - @organizations.result.each do | o |
-        - url = '#';
-        -if ! o.links[1].blank?
-          - url = @congressman.memberships[0].organization_id == o.id ? o.links[1].url : '#'
-        %a{ 'href' => url, 'target' => '_blank' }
-          = o.name if @congressman.memberships[0].organization_id == o.id
-      %i.fa.fa-external-link
-    %p
-      Comisiones:
-      %ul
-      - @congressman.commissions.each do | c |
-        - if ! c.permanent.blank?
-          %li 
-            = 'Permanente: ' + c.permanent  
-        
-        - if ! c.special.blank?
-          %li 
-            = 'Especial: ' + c.special 
-        
-        - if ! c.researcher.blank?
-          %li 
-            = 'Investigadora: ' + c.researcher 
-    %div
-      %ul
-        - @congressman.links.each do | link |
-          %li
-            %a{ 'href' => link.url }
-              %i.fa.fa-globe
-              = link.note
+    - if ! @congressman.memberships.blank?
+      %p
+        Partido:
+        - @organizations.result.each do | o |
+          - url = '#';
+          -if ! o.links[1].blank?
+            - url = @congressman.memberships[0].organization_id == o.id ? o.links[1].url : '#'
+          
+            %a{ 'href' => url, 'target' => '_blank' }
+              = o.name if @congressman.memberships[0].organization_id == o.id
+            %i.fa.fa-external-link
+    
+    - if ! @congressman.commissions.blank?
+      %p
+        Comisiones:
+        %ul
+        - @congressman.commissions.each do | c |
+          - if ! c.permanent.blank?
+            %li 
+              = 'Permanente: ' + c.permanent  
+          
+          - if ! c.special.blank?
+            %li 
+              = 'Especial: ' + c.special 
+          
+          - if ! c.researcher.blank?
+            %li 
+              = 'Investigadora: ' + c.researcher 
+    
+    - if ! @congressman.links.blank?
+      %div
+        %ul
+          - @congressman.links.each do | link |
+            %li
+              %a{ 'href' => link.url }
+                %i.fa.fa-globe
+                = link.note
         
     %h5
       Biografía
