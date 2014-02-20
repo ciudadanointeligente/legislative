@@ -6,28 +6,28 @@
           = link_to "Portada", root_path
         %li
           %a{'href'=>'#'}
-            Proyectos de Ley
+            Proyectos de ley
         %li.active
           Lorem ipsum dolor sit amet, consectetur adipisicing elit...
       %ul.list-inline.action-btn
         %li
-          %a{'href'=>'#'}
+          %a.btn-warning{'href'=>'#'}
             %i.fa.fa-star-o 
-            9999 Suscripciones
+            9999 suscripciones
         %li
-          %a{'href'=>'#'}
+          %a.btn-warning{'href'=>'#'}
             %i.fa.fa-pencil 
-            9999 Preguntas
+            9999 preguntas
         %li
-          %a{'href'=>'#'}
+          %a.btn-warning{'href'=>'#'}
             %i.fa.fa-facebook 
             Comparte
         %li
-          %a{'href'=>'#'}
+          %a.btn-warning{'href'=>'#'}
             %i.fa.fa-twitter 
             Twittea
     %div.row
-      %div.col-md-1
+      %div.col-md-1.side
         %p.light
           0000000
         = image_tag("statusicon/introduced.svg",class:"hidden-xs")
@@ -36,6 +36,7 @@
           = @bill.title
         %p
           = @bill.abstract
+          Resumen del proyecto de ley, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et manatoque penatibus et ma. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis er adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et manatoque penatibus et ma. Aenean commodo ligula eget dolor. Aenean massa. 
         %p
           Autores:
           %span
@@ -61,5 +62,5 @@
                   %span.label.label-default= tag
         %p
           %a{'href'=>'#'}
-            %i.fa.fa-download
-            Descargar proyecto
+            Ver proyecto 
+            %i.fa.fa-chevron-circle-right

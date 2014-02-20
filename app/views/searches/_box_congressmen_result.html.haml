@@ -1,13 +1,13 @@
-- @parliamentarians.persons.first(3).each do | parliamentarian |
+- @congressmen.persons.first(3).each do | congressman |
   %div.row
     %div.col-md-1
-      - if !parliamentarian.images[0].nil?
-        %img.img-circle.img-responsive{:src=>parliamentarian.images[0]['url']}
+      - if !congressman.images[0].nil?
+        %img.img-circle.img-responsive{:src=>congressman.images[0]['url']}
       - else
         %img.img-circle.img-responsive{:src=>'http://placehold.it/200x200'}
     %div.col-md-11
       %h4
-        = link_to parliamentarian.name, parliamentarian_path(parliamentarian.id)
+        = link_to congressman.name, congressman_path(congressman.id)
       %p
         - if ! parliamentarian.represent[0].region.blank?
           %strong

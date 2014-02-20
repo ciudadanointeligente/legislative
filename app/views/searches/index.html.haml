@@ -16,7 +16,7 @@
         %div.row
           %div.col-md-10
             %h3 
-              Proyectos de Ley
+              Proyectos de ley
           %div.col-md-2
             = link_to 'Búsqueda Avanzada', searches_bills_path, class: 'btn btn-default btn-xs'
             
@@ -25,22 +25,22 @@
     - else
       %div
         %p
-          No se encontraron Proyectos de Ley relacionados a tu búsqueda
+          No se encontraron proyectos de ley relacionados a tu búsqueda
     /end of loop
 
-    /loop for parliamentarians
-    - if params[:parliamentarians] == '2' || @parliamentarians.persons.count > 0
+    /loop for congressmen
+    - if params[:congressmen] == '2' || @congressmen.persons.count > 0
       %div
         %div.row
           %div.col-md-10
             %h3 
-              Parlamentarios
+              Congresistas
           %div.col-md-2
-            = link_to 'Búsqueda Avanzada', searches_parliamentarians_path, class: 'btn btn-default btn-xs'
+            = link_to 'Búsqueda Avanzada', searches_congressmen_path, class: 'btn btn-default btn-xs'
 
-        = render :partial => "box_parliamentarians_result"
+        = render :partial => "box_congressmen_result"
     - else
       %div
         %p
-          No se encontraron Parlamentarios relacionados a tu búsqueda
+          No se encontraron congresistas relacionados a tu búsqueda
     /end of loop

@@ -8,7 +8,7 @@ es:
     glossary: Glosario
     communication: Preguntales
     disclosure: Declaraciones
-    parliamentarians: Parlamentarios
+    congressmen: Congresistas
     tables: Tablas
     about_us: Acerca de nosotros
   main:
@@ -162,13 +162,12 @@ es:
     verified_mail: El correo electrónico fue exitosamente verificado
     subscribe: Suscríbete
     email: Correo Electrónico
-  notifiers:
-  
   routes:
     bills: proyectos
+    bills_search: busquedas_de_proyectos
     communications: comunicaciones
     disclosures: declaraciones
-    parliamentarians: parlamentarios
+    congressmen: congresistas
     tables: tablas
     users: usuarios
     glossaries: glosarios

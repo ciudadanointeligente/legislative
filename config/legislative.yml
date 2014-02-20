@@ -13,6 +13,7 @@ production:
   bill_graph_day_interval:  '7'
   parliaments_initial_date: '1990-03-01'
   billit_url: ~
+  paperworks_url: 'http://billit.ciudadanointeligente.org/paperworks/'
   popit_url:  ~
   popit_persons: ~
   popit_search:  ~
@@ -23,7 +24,7 @@ production:
   writeit_api_key:  ~
 
 development:
-  root_url:   ~           #example: 'http://www.congresodechile.cl/'; used for links in the exported XLS files
+  root_url:   ~           #example: 'http://www.congresoabierto.cl/'; used for links in the exported XLS files
   analytics:  ~           #example: 'UA-XXXXX-X'; Google Analytics code
   disqus_shortname: ~     #example: 'qwerty'; Disqus identifier, to manage comments in Disqus you will need a account. https://disqus.com/admin/signup/
   disqus_language:  ~     #example: 'ru'; For a full list of supported languages https://www.transifex.com/projects/p/disqus/
@@ -32,6 +33,7 @@ development:
   bill_graph_day_interval:  '7'   # amount of days per point in graph
   parliaments_initial_date: '1990-03-01' #The initial date for bill search purposes
   billit_url: ~       #example: 'http://billit-instance.org/bills/'; for more info about this POPLUS component check https://github.com/ciudadanointeligente/bill-it
+  paperworks_url: 'http://billit.ciudadanointeligente.org/paperworks/'
   popit_url:  ~       #example: 'legislative-instance.popit.mysociety.org'; you will need create a instance, please contact with mysociety's popit team in popit@mysociety.org. http://popit.mysociety.org/instances/new
   popit_persons:  ~   #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/persons/'; the same instance used above but with http and person path
   popit_search:   ~   #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/search/persons?'; used for person search
@@ -51,6 +53,7 @@ test:
   bill_graph_day_interval:  '7'
   parliaments_initial_date: '1990-03-01'
   billit_url: 'http://127.0.0.1.xip.io:3003/bills/'
+  paperworks_url: 'http://billit.ciudadanointeligente.org/paperworks/'
   popit_url:  'localhost:3002'
   popit_persons:  'http://localhost:3002/api/persons/'
   popit_search:   'http://localhost:3002/api/search/persons?'

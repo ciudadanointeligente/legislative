@@ -4,15 +4,15 @@
       %li
         = link_to 'Portada', root_url
       %li.active
-        = @parliamentarian.name
+        = @congressman.name
   %div.col-md-5
     %ul.list-inline
       %li
         %i.fa.fa-star-o 
-        9999 Suscripciones
+        9999 suscripciones
       %li
         %i.fa.fa-pencil 
-        9999 Preguntas
+        9999 preguntas
       %li
         %i.fa.fa-facebook 
         Comparte
@@ -22,21 +22,21 @@
 
 %div
   %h2
-    = @parliamentarian.name
+    = @congressman.name
   %h4
     Senador
 
 
 %div.row
   %div.col-md-3
-    - if ! @parliamentarian.images.nil?
-      %img.img-responsive{:src=>@parliamentarian.images[0].url}
+    - if ! @congressman.images.nil?
+      %img.img-responsive{:src=>@congressman.images[0].url}
     - else
       %img.img-responsive{ 'src' => 'http://placehold.it/230x230'}
     %p
       Lugar que representa:
       %ul
-      - @parliamentarian.represent.each do | r |
+      - @congressman.represent.each do | r |
         - if ! r.district.blank?
           %li 
             = 'Distrito: ' + r.district
@@ -52,7 +52,7 @@
     %p
       Periodo: 
       %ul
-      - @parliamentarian.parliamentarian_period.each do | p |
+      - @congressman.parliamentarian_period.each do | p |
         - if ! p.date.blank?
           %li 
             = p.date  
@@ -62,14 +62,14 @@
       - @organizations.result.each do | o |
         - url = '#';
         -if ! o.links[1].blank?
-          - url = @parliamentarian.memberships[0].organization_id == o.id ? o.links[1].url : '#'
+          - url = @congressman.memberships[0].organization_id == o.id ? o.links[1].url : '#'
         %a{ 'href' => url, 'target' => '_blank' }
-          = o.name if @parliamentarian.memberships[0].organization_id == o.id
+          = o.name if @congressman.memberships[0].organization_id == o.id
       %i.fa.fa-external-link
     %p
       Comisiones:
       %ul
-      - @parliamentarian.commissions.each do | c |
+      - @congressman.commissions.each do | c |
         - if ! c.permanent.blank?
           %li 
             = 'Permanente: ' + c.permanent  
@@ -83,13 +83,12 @@
             = 'Investigadora: ' + c.researcher 
     %div
       %ul
-        - @parliamentarian.links.each do | link |
+        - @congressman.links.each do | link |
           %li
             %a{ 'href' => link.url }
               %i.fa.fa-globe
               = link.note
         
-      
     %h5
       Biografía
     %p
@@ -101,7 +100,7 @@
 
   %div.col-md-9
     %h3
-      Últimas Iniciativas
+      Últimas iniciativas
     %div.table-responsive
       %table.table
         %tr
@@ -114,7 +113,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
             %p
               %a{ 'href' => '#' }
-                Ver Proyecto
+                Ver proyecto
         %tr
           %td
             %img{ 'src' => 'http://placehold.it/35x58' }
@@ -125,7 +124,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
             %p
               %a{ 'href' => '#' }
-                Ver Proyecto
+                Ver proyecto
         %tr
           %td
             %img{ 'src' => 'http://placehold.it/35x58' }
@@ -136,7 +135,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
             %p
               %a{ 'href' => '#' }
-                Ver Proyecto
+                Ver proyecto
     
     %div.special-box
       %p.question
@@ -175,7 +174,7 @@
 
     %div.intervencions.table-responsive
       %h3
-        Últimas Intervenciones
+        Últimas intervenciones
       %table.table
         %tr
           %td

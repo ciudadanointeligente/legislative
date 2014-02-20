@@ -12,7 +12,6 @@ class LegislativeMessageRepresenter
 		super
 	end
 
-
 	property :subject
 	property :content
 	# property :recipients
