@@ -76,42 +76,25 @@
   
   
   %div#timeline.row
-    - cnt = 0
-    - while cnt < 6
+    - @bill.paperworks.each do | paperwork |
       %div.timeline-container
-        %div.status.col-md-1.side
-          %img{'src'=>'http://placehold.it/50x50'}
-        %div.resume.col-md-11
-          %h5
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, eum, esse in consectetur libero obcaecati
-            %span.light
-              \- 20/02/2013
+      %div.resume.col-md-11
+        %h5
+          = paperwork.description
+          %span.light
+            = Date.parse(paperwork.date).strftime("%d de %B, %Y")
+
+        %p
+          = paperwork.stage
+        
+        - if paperwork.chamber.length > 1
           %p
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, doloribus porro aperiam a soluta natus repellat perferendis rerum fuga neque vero delectus quae magnam. Quisquam quo velit expedita fuga nam?
-          - if cycle('odd', 'even') == 'odd'
-            - green = "width:" + rand(30...50).to_s + "%"
-            - yellow = "width:" + rand(20...35).to_s + "%"
-            - red = "width:" + rand(10...30).to_s + "%"
-            %p
-              Quorum: 
-              %strong
-                %span
-                  6/7 -
-                %span.txt-red
-                  Aprobado
-            
-            %div.progress
-              %div.progress-bar.progress-bar-success{"style" => green}
-                %span.sr-only
-                  35% Complete (success)
-              %div.progress-bar.progress-bar-warning{"style" => yellow}
-                %span.sr-only
-                  20% Complete (warning)
-              %div.progress-bar.progress-bar-danger{"style" => red}
-                %span.sr-only
-                  45% Complete (danger)
-            %p.small.light
-              %strong
-                30% A FAVOR 45% EN CONTRA,  5% ABSTENCIÓN,  5% AUSENTES 15% PAREOS
-          - cnt += 1
-  
+            Cámara:
+            %strong
+              = paperwork.chamber
+
+        - if paperwork.session.length > 1
+          %p
+            Sesión:
+            %strong
+              = paperwork.session
