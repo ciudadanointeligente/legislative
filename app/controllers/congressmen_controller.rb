@@ -23,7 +23,6 @@ class CongressmenController < ApplicationController
 
   # GET /congressmen/new
   def new
-    # @congressman = Congressman.new
   end
 
   # GET /congressmen/1/edit
@@ -32,28 +31,14 @@ class CongressmenController < ApplicationController
 
   # POST /congressmen
   def create
-    # @congressman = Congressman.new(congressman_params)
-
-    # if @congressman.save
-    #   redirect_to @congressman, notice: 'Congressman was successfully created.'
-    # else
-    #   render action: 'new'
-    # end
   end
 
   # PATCH/PUT /congressmen/1
   def update
-    # if @congressman.update(congressman_params)
-    #   redirect_to @congressman, notice: 'Congressman was successfully updated.'
-    # else
-    #   render action: 'edit'
-    # end
   end
 
   # DELETE /congressmen/1
   def destroy
-    # @congressman.destroy
-    # redirect_to congressmen_url, notice: 'Congressman was successfully destroyed.'
   end
 
   def searches
