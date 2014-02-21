@@ -62,7 +62,7 @@
   /the graph
 
   
-  %h4
+  %h4{name:'timeline'}
     HISTORIA DEL PROYECTO
     %a{'href'=>'#'}
       Descargar historial
@@ -77,31 +77,44 @@
   
   %div.pull-right.hidden-xs
     Invertir orden temporal
-    %a{'href'=>'#'}
+    %a.down{'href'=>'#'}
       %i.fa.fa-chevron-circle-down
-    %a{'href'=>'#'}
+    %a.up{'href'=>'#'}
       %i.fa.fa-chevron-circle-up
   
   %div#timeline.row
-    - @bill.paperworks.each do | paperwork |
-      %div.timeline-container
-      %div.resume.col-md-11
-        %h5
-          = paperwork.description
-          %span.light
-            = Date.parse(paperwork.date).strftime("%d de %B, %Y")
+    - @bill.paperworks.each_with_index do | paperwork, index |
+      %div{ 'data-sort' => index.to_s }
+        %div.timeline-container
+        %div.resume.col-md-11
+          %h5
+            = paperwork.description
+            %span.light
+              = Date.parse(paperwork.date).strftime("%d de %B, %Y")
 
-        %p
-          = paperwork.stage
-        
-        - if paperwork.chamber.length > 1
           %p
-            Cámara:
-            %strong
-              = paperwork.chamber
+            = paperwork.stage
+          
+          - if paperwork.chamber.length > 1
+            %p
+              Cámara:
+              %strong
+                = paperwork.chamber
 
-        - if paperwork.session.length > 1
-          %p
-            Sesión:
-            %strong
-              = paperwork.session
+          - if paperwork.session.length > 1
+            %p
+              Sesión:
+              %strong
+                = paperwork.session
+  }
+
+:javascript
+  $('a.up').on('click', function(e){
+    e.preventDefault();
+    $("div#timeline>div").tsort({order:'asc', data:'sort'});
+  });
+
+  $('a.down').on('click', function(e){
+    e.preventDefault();
+    $("div#timeline>div").tsort({order:'desc', data:'sort'});
+  });
