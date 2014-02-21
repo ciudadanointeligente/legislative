@@ -53,7 +53,7 @@ class SearchesController < ApplicationController
       @congressmen.get ENV['popit_search']+"#{URI.encode(@keywords)}per_page=3", 'application/json'
     else
       @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?per_page=3", 'application/json')
-      @congressmen.get ENV['popit_search']+"?per_page=3", 'application/json'
+      @congressmen.get ENV['popit_search']+"per_page=3", 'application/json'
     end
   end
 end
