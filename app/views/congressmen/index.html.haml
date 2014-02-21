@@ -25,6 +25,7 @@
     = render :partial => "filter_search_form"
   %div.col-md-9
     - @congressmen.persons.each do | congressman |
+
       %div.row
         %div.col-md-1
           - if congressman.images.nil?
@@ -34,11 +35,6 @@
         %div.col-md-11
           = link_to congressman.name, congressman_path(congressman.slug)
           %p
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, officiis, eveniet, rem consequatur omnis voluptatum molestiae adipisci odio perferendis tempore ducimus tempora eaque saepe sed aut ipsa asperiores similique doloribus.
-          %p
-            %strong
-              Partido:
-            Partido diferente
             %strong
               Lugar que representa:
-            Alguna región
+            = congressman.represent[0].district

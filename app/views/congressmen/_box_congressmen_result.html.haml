@@ -17,10 +17,11 @@
       %p
         %strong
           Partido:
-        El Partido
-        %strong
-          Lugar que representa:
-        Región patito
+        el Partido
+        - if ! congressman.represent[0].region.blank?
+          %strong
+            Lugar que representa:
+          = congressman.represent[0].region
 
 - if @congressmen.persons.count == 0
   %p.text-center

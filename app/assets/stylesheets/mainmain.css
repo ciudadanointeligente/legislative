@@ -162,11 +162,6 @@ strong {
   display: inline-flex;
 }
 
-.action-btn {
-  float: right;
-  margin-bottom: 20px;
-}
-
 .action-btn>li a {
   padding: 2px 5px;
   text-decoration: none;
@@ -232,6 +227,10 @@ strong {
 
 /*Menu*/
 
+#site-logo {
+  padding: 10px 0;
+}
+
 .navbar-nav {
   float: right;
 }
@@ -276,10 +275,6 @@ strong {
   color: #e6e6c9;
   padding: 10px 0px 35px;
   margin-bottom: 20px;
-}
-
-.hero-space .breadcrumb {
-  margin: -49px 0 20px 0;
 }
 
 #graph > h4 > a {
@@ -645,8 +640,8 @@ svg.graph {
 
 svg.graph .grid {
   stroke: #CCC;
-  stroke-dasharray: 1 2;
-  stroke-width: 1;
+  /*stroke-dasharray: 1 2;*/
+  stroke-width: 0.5;
 }
 
 svg.graph .points {
@@ -654,7 +649,8 @@ svg.graph .points {
   stroke-width: 3;
 }
 svg.graph .first_set {
-  fill: #a6a691;
+  fill: none;
+  stroke: #000;
 }
 
 svg.graph .surfaces {

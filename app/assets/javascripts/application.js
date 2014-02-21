@@ -11,6 +11,7 @@
 //= require_tree ./directives/main
 //= require jquery.ui.all
 //= require tag-it.min
+//= require jquery.tinysort.min
 //= require tag-it_updates
 //= require mainmain
 //= require_self
