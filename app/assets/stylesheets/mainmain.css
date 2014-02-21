@@ -162,11 +162,6 @@ strong {
   display: inline-flex;
 }
 
-.action-btn {
-  float: right;
-  margin-bottom: 20px;
-}
-
 .action-btn>li a {
   padding: 2px 5px;
   text-decoration: none;
@@ -276,10 +271,6 @@ strong {
   color: #e6e6c9;
   padding: 10px 0px 35px;
   margin-bottom: 20px;
-}
-
-.hero-space .breadcrumb {
-  margin: -49px 0 20px 0;
 }
 
 #graph > h4 > a {
