@@ -82,7 +82,7 @@
 
       - (1..@pagination['total_pages']).each do |page|
         %li.active
-          %a{:href=>'#'}
+          %a{:href=>'?page=' + page.to_s}
             = page
       
       %li.disabled

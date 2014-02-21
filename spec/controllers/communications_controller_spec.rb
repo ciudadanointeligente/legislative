@@ -41,7 +41,7 @@ describe CommunicationsController do
       assigns(:messages).objects.length.should eql ENV['writeit_messages_per_page'].to_i
       assigns(:pagination)['current_page'].should eql 1
       #This is coupled to the settings definition of writeit_messages_per_page
-      # It should be calculated instead of just a plain
+      # It should be calculated instead of just a plain 5
       assigns(:pagination)['total_pages'].should eql 5
     end
     it "it paginates the result" do

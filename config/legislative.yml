@@ -43,7 +43,7 @@ development:
   writeit_url:      ~ #example: '/api/v1/instance/2/'; writeit instance path
   writeit_username: ~ #example: 'admin'; writeit username
   writeit_api_key:  ~ #example: 'a'; writeit apikey
-  writeit_messages_per_page: '20'
+  writeit_messages_per_page: '2'
 
 test:
   root_url:  ~
