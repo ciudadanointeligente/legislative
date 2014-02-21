@@ -227,6 +227,10 @@ strong {
 
 /*Menu*/
 
+#site-logo {
+  padding: 10px 0;
+}
+
 .navbar-nav {
   float: right;
 }
