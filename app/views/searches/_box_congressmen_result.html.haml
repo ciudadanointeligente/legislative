@@ -2,7 +2,7 @@
   %div.row
     %div.col-md-1
       - if !congressman.images.blank?
-        %img.img-circle.img-responsive{:src=>congressman.images[0]['url']}
+        %img.img-circle.img-responsive{:src=>congressman.images[0].url}
       - else
         %img.img-circle.img-responsive{:src=>'http://placehold.it/200x200'}
     %div.col-md-11
