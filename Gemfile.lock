@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/ciudadanointeligente/writeit-rails.git
-  revision: 2759a870fc8dbe9dbb08e6a3b410103fa00c6186
+  revision: 449ab9c2da6c1d3ab404c8b1c9545709a113c0ba
   specs:
-    writeit-rails (0.0.1)
-      rest-client
+    writeit-rails (0.0.3)
+      rest-client (= 1.6.7)
 
 GIT
   remote: git://github.com/rails/activerecord-deprecated_finders.git

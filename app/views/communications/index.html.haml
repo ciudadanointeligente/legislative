@@ -51,6 +51,44 @@
               %div.text-right
                 = submit_tag 'Enviar', :class => "btn btn-success"
 
+
+%section#responses
+  %div.page-header
+    %h3
+      Mensajes enviados
+  %div.panel.panel-default
+
+    - @messages.objects.each do |message|
+      %div.panel-heading
+        %h4
+          = message.subject
+      %div.panel-body
+        %p
+          = message.content
+
+        %ul.list-inline
+          - message.people.each do |person|
+            %li
+              %span.badge
+                = person.name
+
+
+  %div.text-center
+    %ul.pagination
+      %li
+        %a{:href=>'#'}
+          &laquo;
+
+
+      - (1..@pagination['total_pages']).each do |page|
+        %li.active
+          %a{:href=>'?page=' + page.to_s}
+            = page
+      
+      %li.disabled
+        %a{:href=>'#'}
+          &raquo;
+
 %script{src: "http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.jquery.min.js"}
 :javascript
   $(document).ready(function(){
