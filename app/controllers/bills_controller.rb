@@ -35,6 +35,9 @@ class BillsController < ApplicationController
       data_length += 1
     end
 
+    #setup the title page
+    @title = " - " + @bill.title
+
     @paperworks = @bill.paperworks
     response_with = @paperworks
 
