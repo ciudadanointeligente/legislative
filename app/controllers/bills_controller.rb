@@ -36,7 +36,7 @@ class BillsController < ApplicationController
     end
 
     #setup the title page
-    @title = " - " + @bill.title
+    @title = @bill.title + " - "
 
     @paperworks = @bill.paperworks
     response_with = @paperworks
