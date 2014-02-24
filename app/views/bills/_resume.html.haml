@@ -1,7 +1,7 @@
 %div.hero-space
   %div.container
     %div.row
-      %div.col-md-6
+      %div.col-md-10
         %ol.breadcrumb
           %li
             = link_to "Portada", root_path
@@ -11,7 +11,7 @@
           %li.active
             = @bill.title[0..30] + '...'
       
-      %div.col-md-6
+      %div.col-md-2
         %ul.list-inline.action-btn
           %li
             - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
@@ -52,5 +52,5 @@
         - if ! @bill.bill_draft_link.blank?
           %p
             %a{'href'=> @bill.bill_draft_link}
-              Ver proyecto 
-              %i.fa.fa-chevron-circle-right
+              Descargar proyecto 
+              %i.fa.fa-download
