@@ -35,6 +35,9 @@ class BillsController < ApplicationController
       data_length += 1
     end
 
+    @paperworks = @bill.paperworks
+    response_with = @paperworks
+
     case @bill.status.strip
     when "Archivado"
       @icon_bill = 'filed.png'

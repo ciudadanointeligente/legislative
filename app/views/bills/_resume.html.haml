@@ -39,9 +39,9 @@
         - if !@bill.authors.blank?
           %p
             Autores:
-            - @bill.authors.each do | author |
-              %span
-                = author
+            - authors = @bill.authors.map { |author| a = author.split(','); a[1].strip + ' ' + a[0].strip  }
+            %span
+              = authors.join(', ')
 
         %p
           %ul.list-inline
