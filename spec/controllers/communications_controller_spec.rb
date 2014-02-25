@@ -98,7 +98,7 @@ describe CommunicationsController do
       #response.should route_to("communications#per_person", :id => "5008048c7a317e126400046d")
       #this is gonzalo arenas
       response.should be_success
-      assigns(:person).should eql 
+      assigns(:person).should eql arenas
       assigns(:messages).objects.should_not be_empty
       assigns(:messages).objects.length.should eql 1
       

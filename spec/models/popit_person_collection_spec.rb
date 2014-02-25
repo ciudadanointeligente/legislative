@@ -11,4 +11,10 @@ describe PopitPersonCollection do
     ppc.persons[0].images[0]['url'].should_not be_nil
 
   end
+  it "gets one person" do
+  	arenas = PopitPerson.get 'http://localhost:3002/api/persons/5008048c7a317e126400046d', 
+                'application/json'
+    arenas.id.should eq "5008048c7a317e126400046d"
+    arenas.name.should eq "Gonzalo Arenas Hodar"
+  end
 end

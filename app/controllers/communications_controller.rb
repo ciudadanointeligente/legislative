@@ -30,6 +30,10 @@ class CommunicationsController < ApplicationController
   end
   def per_person
     id = params[:id]
+    @person = PopitPerson.get ENV['popit_persons'] + id, 
+                'application/json'
+    @messages = LegislativeMessageCollection.new
+    @messages.get person: @person
   end
 
   private

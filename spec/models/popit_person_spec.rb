@@ -45,6 +45,5 @@ describe PopitPerson do
     arenas.from_json json_with_result
     arenas.id.should eq "5008048c7a317e126400046d"
     arenas.name.should eq "Gonzalo Arenas Hodar"
-    #json_without_result = ''
   end
 end
