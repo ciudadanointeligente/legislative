@@ -1,5 +1,7 @@
 require 'billit_representers/models/bill'
 require 'billit_representers/models/bill_page'
+require './app/models/bill'
+require './app/models/paperwork'
 
 class BillsController < ApplicationController
   include Roar::Rails::ControllerAdditions
@@ -40,21 +42,6 @@ class BillsController < ApplicationController
 
     @paperworks = @bill.paperworks
     response_with = @paperworks
-
-    case @bill.status.strip
-    when "Archivado"
-      @icon_bill = 'filed.png'
-    when "Publicado"
-      @icon_bill = 'published.png'
-    when "En tramitación"
-      @icon_bill = 'paperwork.png' #icono pendiente 
-    when "Rechazado"
-      @icon_bill = 'rejected.png' 
-    when "Retirado"
-      @icon_bill = 'discarded.png' 
-    else
-      @icon_bill = ''
-    end
   end
 
   # GET /bills/new
