@@ -10,7 +10,7 @@ class CommunicationsController < ApplicationController
     if !params[:page].nil?
       page = params[:page]
     end
-    @messages.get page
+    @messages.get page: page
     
     set_pagination @messages.meta
   end
