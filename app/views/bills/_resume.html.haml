@@ -15,12 +15,12 @@
         %ul.list-inline.action-btn
           %li
             - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
-            %a.btn-default{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+            %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
               %i.fa.fa-facebook 
               Comparte
           %li
             - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags=pmo&text='+@bill.title[0..50]
-            %a.btn-default{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+            %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
               %i.fa.fa-twitter 
               Twittea
     

@@ -650,11 +650,16 @@ svg.graph .grid {
 
 svg.graph .points {
   stroke: white;
-  stroke-width: 3;
+  stroke-width: 0.5;
 }
+
 svg.graph .first_set {
   fill: none;
-  stroke: #000;
+  stroke: #A6A691;
+}
+
+#points > circle {
+  fill: #F9F9EB;
 }
 
 svg.graph .surfaces {
