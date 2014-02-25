@@ -86,7 +86,7 @@ describe CommunicationsController do
 
     end
 
-    xit "get per person messages" do
+    it "get per person messages" do
       %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_2_messages.yaml )
       get :per_person, :id => "5008048c7a317e126400046d", locale: 'es'
 
