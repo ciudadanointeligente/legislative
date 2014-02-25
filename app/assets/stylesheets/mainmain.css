@@ -244,6 +244,14 @@ strong {
   color: #c4b7c4;
 }
 
+.navbar-inverse .navbar-nav>li>a {
+  color: #B99EAF;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+  color: #E6E6C9;
+}
+
 .breadcrumb {
   padding: 0px 0px;
   background-color: transparent;
@@ -642,11 +650,16 @@ svg.graph .grid {
 
 svg.graph .points {
   stroke: white;
-  stroke-width: 3;
+  stroke-width: 0.5;
 }
+
 svg.graph .first_set {
   fill: none;
-  stroke: #000;
+  stroke: #A6A691;
+}
+
+#points > circle {
+  fill: #F9F9EB;
 }
 
 svg.graph .surfaces {
