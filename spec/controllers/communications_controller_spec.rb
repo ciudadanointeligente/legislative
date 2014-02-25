@@ -27,6 +27,29 @@ describe CommunicationsController do
       assigns(:messages).objects[0].should be_an_instance_of LegislativeMessageRepresenter
 
     end
+    it "obtains the pagination things" do
+      value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_one_message.yaml )
+      get 'index', locale: 'es'
+      assigns(:pagination).should_not be_nil
+      assigns(:pagination)['current_page'].should eql 1
+      assigns(:pagination)['total_pages'].should eql 1
+
+    end
+    it "it paginates the result" do
+      value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_21_messages.yaml )
+      get 'index', locale: 'es'
+      assigns(:messages).objects.length.should eql ENV['writeit_messages_per_page'].to_i
+      assigns(:pagination)['current_page'].should eql 1
+      #This is coupled to the settings definition of writeit_messages_per_page
+      # It should be calculated instead of just a plain 5
+      assigns(:pagination)['total_pages'].should eql 5
+    end
+    it "it paginates the result" do
+      value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_21_messages.yaml )
+      get 'index', locale: 'es', page: '2'
+      assigns(:messages).objects.length.should eql ENV['writeit_messages_per_page'].to_i
+      assigns(:pagination)['current_page'].should eql 2
+    end
     it "instanciates a writeit instance based on environment" do
       controller = CommunicationsController.new
       controller.instance_eval{ set_current_instance }
@@ -35,6 +58,7 @@ describe CommunicationsController do
       controller.instance_eval{ @writeitinstance }.url.should eql ENV['writeit_url']
       controller.instance_eval{ @writeitinstance }.username.should eql ENV['writeit_username']
       controller.instance_eval{ @writeitinstance }.api_key.should eql ENV['writeit_api_key']
+      controller.instance_eval{ @writeitinstance }.per_page.should eql ENV['writeit_messages_per_page']
     end
 
     it "Form Post trigger pushing to the writeit API" do

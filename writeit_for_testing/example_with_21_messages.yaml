@@ -1279,3 +1279,163 @@
 - fields: {contact: 1, message: 1, status: new}
   model: nuntium.outboundmessage
   pk: 1
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-2, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 2
+- fields: {contact: 1, message: 2, status: new}
+  model: nuntium.outboundmessage
+  pk: 2
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-3, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 3
+- fields: {contact: 1, message: 3, status: new}
+  model: nuntium.outboundmessage
+  pk: 3
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-4, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 4
+- fields: {contact: 1, message: 4, status: new}
+  model: nuntium.outboundmessage
+  pk: 4
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-5, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 5
+- fields: {contact: 1, message: 5, status: new}
+  model: nuntium.outboundmessage
+  pk: 5
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-6, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 6
+- fields: {contact: 1, message: 6, status: new}
+  model: nuntium.outboundmessage
+  pk: 6
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-7, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 7
+- fields: {contact: 1, message: 7, status: new}
+  model: nuntium.outboundmessage
+  pk: 7
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-8, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 8
+- fields: {contact: 1, message: 8, status: new}
+  model: nuntium.outboundmessage
+  pk: 8
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-9, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 9
+- fields: {contact: 1, message: 9, status: new}
+  model: nuntium.outboundmessage
+  pk: 9
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-10, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 10
+- fields: {contact: 1, message: 10, status: new}
+  model: nuntium.outboundmessage
+  pk: 10
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-11, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 11
+- fields: {contact: 1, message: 11, status: new}
+  model: nuntium.outboundmessage
+  pk: 11
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-12, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 12
+- fields: {contact: 1, message: 12, status: new}
+  model: nuntium.outboundmessage
+  pk: 12
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-13, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 13
+- fields: {contact: 1, message: 13, status: new}
+  model: nuntium.outboundmessage
+  pk: 13
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-14, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 14
+- fields: {contact: 1, message: 14, status: new}
+  model: nuntium.outboundmessage
+  pk: 14
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-15, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 15
+- fields: {contact: 1, message: 15, status: new}
+  model: nuntium.outboundmessage
+  pk: 15
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-16, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 16
+- fields: {contact: 1, message: 16, status: new}
+  model: nuntium.outboundmessage
+  pk: 16
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-17, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 17
+- fields: {contact: 1, message: 17, status: new}
+  model: nuntium.outboundmessage
+  pk: 17
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-18, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 18
+- fields: {contact: 1, message: 18, status: new}
+  model: nuntium.outboundmessage
+  pk: 18
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-19, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 19
+- fields: {contact: 1, message: 19, status: new}
+  model: nuntium.outboundmessage
+  pk: 19
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-20, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 20
+- fields: {contact: 1, message: 20, status: new}
+  model: nuntium.outboundmessage
+  pk: 20
+- fields: {author_email: test@ciudadanointeligente.org, author_name: autor 1, confirmated: true,
+    content: Content 1, moderated: null, public: true, slug: subject-21, subject: subject
+      1, writeitinstance: 1}
+  model: nuntium.message
+  pk: 21
+- fields: {contact: 1, message: 21, status: new}
+  model: nuntium.outboundmessage
+  pk: 21
