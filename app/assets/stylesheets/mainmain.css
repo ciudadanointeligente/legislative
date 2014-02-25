@@ -244,6 +244,14 @@ strong {
   color: #c4b7c4;
 }
 
+.navbar-inverse .navbar-nav>li>a {
+  color: #B99EAF;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+  color: #E6E6C9;
+}
+
 .breadcrumb {
   padding: 0px 0px;
   background-color: transparent;
