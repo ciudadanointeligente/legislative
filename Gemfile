@@ -15,6 +15,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
+  gem 'guard-bundler'
+  gem 'guard-rails'
+  gem 'guard-rspec'
 end
 
 gem 'json'
