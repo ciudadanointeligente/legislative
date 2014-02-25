@@ -1,7 +1,7 @@
 %div.hero-space
   %div.container
     %div.row
-      %div.col-md-10
+      %div.col-md-9
         %ol.breadcrumb
           %li
             = link_to "Portada", root_path
@@ -11,7 +11,7 @@
           %li.active
             = @bill.title[0..30] + '...'
       
-      %div.col-md-2
+      %div.col-md-3
         %ul.list-inline.action-btn
           %li
             - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
