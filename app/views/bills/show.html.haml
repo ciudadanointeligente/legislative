@@ -87,7 +87,8 @@
     %div#timeline.row
       - @bill.paperworks.each_with_index do | paperwork, index |
         %div{ 'data-sort' => index.to_s }
-          %div.timeline-container
+          %div.timeline-container.col-md-1
+            = image_tag("statusicon/" + paperwork.icon_event, class:"hidden-xs")
           %div.resume.col-md-11
             %h5
               = paperwork.description
