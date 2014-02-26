@@ -45,7 +45,7 @@ if [ ! -e done.txt ]; then
   cp config/sunspot.yml.example config/sunspot.yml
   cp config/mongoid.yml.example config/mongoid.yml
   cp config/hateoas.yml.example config/hateoas.yml
-  mkdir log
+  mkdir -p log
   sed -i 's/development.site.org/127.0.0.1.xip.io:3003/g' config/hateoas.yml
 
   touch done.txt;
