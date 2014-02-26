@@ -1,9 +1,6 @@
 = form_tag({controller: "searches", action: "index"}, :method => 'get') do
   %div
-    %div.input-group
-      %input.form-control{:name=>'q', value: params[:q], :placeholder => t('search.placeholder_search_for'), :onfocus => "ga('send','searches','focus_search')"}
-      %span.input-group-addon
-        %i.fa.fa-search
+    %input.form-control{:name=>'q', value: params[:q], :placeholder => t('search.placeholder_search_for'), :onfocus => "ga('send','searches','focus_search')"}
     
     %div
       %div.checkbox{:style=>'padding-right:15px'}
