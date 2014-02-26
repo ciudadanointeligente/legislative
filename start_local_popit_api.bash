@@ -16,8 +16,8 @@ set -e
 # just checkout the mysociety-deploy branch
 # http://stackoverflow.com/a/7349740/5349
 export DIR=popit_local_for_testing
-export BRANCH=mysociety-deploy
-export REMOTE_REPO=https://github.com/mysociety/popit-api.git
+export BRANCH=master
+export REMOTE_REPO=https://github.com/lfalvarez/testing_popit_api.git
 export PORT=3002
 
 if [ ! -e $DIR ]; then mkdir $DIR; fi
@@ -28,10 +28,6 @@ if [ ! -e done.txt ]; then
   git init;
   git remote add -t $BRANCH -f origin $REMOTE_REPO;
   git checkout $BRANCH;
-
-  echo "{ \"serverPort\": $PORT }" > config/general.json
-
-  # install the required node modules
   npm install mongodb --quiet
   npm install mongodb-fixtures --quiet
   npm install --quiet

@@ -1,5 +1,9 @@
 require 'spec_helper'
-# require 'popit_representers'
+#I know that I should not be testing with
+# it('does something') 
+#but i f**ckin love it, is so expresive :)
+#there might be a time when I evolve to test like
+# it(#method) but not now
 
 describe LegislativeMessageRepresenter do
   it "has a method from_json " do
@@ -16,10 +20,8 @@ describe LegislativeMessageRepresenter do
 end
 
 describe LegislativeMessageCollection do
-  before(:each) do
-    value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_one_message.yaml )
-  end
   it "gets the messages from the server" do
+    value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_one_message.yaml )
     collection = LegislativeMessageCollection.new
     collection.get
 
@@ -30,6 +32,7 @@ describe LegislativeMessageCollection do
     message.content.should eql 'Content 1'
   end
   it "gets a single one" do
+    value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_one_message.yaml )
     message = LegislativeMessageRepresenter.new
     message.get 1
     message.subject.should eql "subject 1"
@@ -39,10 +42,26 @@ describe LegislativeMessageCollection do
     message.author_email.should eql "test@ciudadanointeligente.org"
   end
   it "gets the parlamentarians" do
+    value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_one_message.yaml )
     arenas = PopitPerson.get 'http://localhost:3002/api/persons/5008048c7a317e126400046d', 'application/json'
 
     collection = LegislativeMessageCollection.new
     collection.get 
+
+    collection.objects.length.should eql 1
+    message = collection.objects[0]
+
+
+    message.people.should include arenas
+  end
+  it "filter messages per person" do
+    value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_2_messages.yaml )
+    # arenas = PopitPerson.get 'http://localhost:3002/api/persons/5008048c7a317e126400046d', 'application/json'
+    arenas = PopitPerson.new
+    arenas.id = '5008048c7a317e126400046d'
+
+    collection = LegislativeMessageCollection.new
+    collection.get(person: arenas)
 
     collection.objects.length.should eql 1
     message = collection.objects[0]

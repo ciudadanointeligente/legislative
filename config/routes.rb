@@ -13,12 +13,14 @@ Legislative::Application.routes.draw do
   end
 
   put "bills/:id/update" => "bills#update", method: :put
-
   localized do
     resources :bills do
       get 'searches', on: :collection
     end
-    resources :communications
+    resources :communications do
+      get 'per_person', on: :collection
+    end
+
     resources :disclosures
     resources :glossaries
     resources :mains

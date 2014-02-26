@@ -23,4 +23,27 @@ describe PopitPerson do
     response = RestClient.get pp.popit_api_uri
     response.code.should equal 200
   end
+  it "loads a person from two different jsons" do
+    json_with_result = '{
+        "result": {
+          "id": "5008048c7a317e126400046d",
+          "name": "Gonzalo Arenas Hodar",
+          "slug": "gonzalo-arenas-hodar",
+          "images": [
+            {
+              "url": "http://legislativo.votainteligente.cl/images/parlamentarios/134.png"
+            }
+          ],
+          "memberships": [],
+          "links": [],
+          "contact_details": [],
+          "identifiers": [],
+          "other_names": []
+        }
+      }'
+    arenas = PopitPerson.new
+    arenas.from_json json_with_result
+    arenas.id.should eq "5008048c7a317e126400046d"
+    arenas.name.should eq "Gonzalo Arenas Hodar"
+  end
 end
