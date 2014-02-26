@@ -700,6 +700,10 @@ svg.graph .labels.y-labels {
     top: -3px;
 }
 
+.header-congressmen {
+  margin-bottom: 5px;
+}
+
 @media (min-width: 768px) {
   h2 {
     font-size: 36px;
