@@ -1,3 +1,5 @@
+require 'billit_representers/models/bill'
+
 class Billit::Bill
   def icon
     case self.status.strip
