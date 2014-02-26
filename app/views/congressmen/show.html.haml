@@ -12,7 +12,8 @@
         9999 suscripciones
       %li
         %i.fa.fa-pencil 
-        9999 preguntas
+        = link_to 'Preguntas hechas', controller: "communications", action: "per_person", id: @congressman.id
+          
       %li
         %i.fa.fa-facebook 
         Comparte

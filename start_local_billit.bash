@@ -33,9 +33,9 @@ if [ ! -e done.txt ]; then
   # set up the environment
   mkdir vendor/gems
   
-  rvm gemdir
-  rvm gemset name
-  rvm gemset list
+  # rvm gemdir
+  # rvm gemset name
+  # rvm gemset list
 
 
   bundle install --path vendor/gems
