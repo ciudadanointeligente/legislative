@@ -38,7 +38,7 @@ a:hover {
 strong {
   font-weight: 700;
   font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .small {
