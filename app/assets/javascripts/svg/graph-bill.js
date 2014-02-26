@@ -66,7 +66,7 @@ window.onload = function()
   
   if( !display_graph ) {
     var d = document.getElementById("timeline"); 
-        d.innerHTML = 'No se han registrado actividades/eventos en el último año';
+        d.innerHTML = 'No se han registrado movimientos en el último año';
   }
 
   $(".showmebutton").click(function(e) {
