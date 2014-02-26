@@ -57,7 +57,7 @@ fi
 
 # Run the server in the background. Send access logging to file.
 bundle exec rake sunspot:solr:start
-rails s -p $PORT > billit_access.log &
+bundle exec rails s -p $PORT > billit_access.log &
 
 if [ ! -e done_post.txt ]; then
   sleep 5
