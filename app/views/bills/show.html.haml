@@ -1,16 +1,16 @@
 %section#graph
   :javascript
     freq = #{@date_freq};
-  
+
   = javascript_include_tag 'svg/jquery.svg.min.js'
   = javascript_include_tag 'svg/jquery.svgdom.min.js'
   = javascript_include_tag 'svg/jquery.svganim.min.js'
   = javascript_include_tag 'svg/graph-bill.js'
 
-  %h4
+  %h4.hidden-xs
     EVENTOS QUE HA TENIDO ESTE PROYECTO
 
-  %div
+  %div#timeline.hidden-xs
     %svg.graph{'version'=>'1.1', 'xmlns:xlink'=>"http://www.w3.org/1999/xlink", 'xmlns'=>"http://www.w3.org/2000/svg", 'width'=>"800", 'height'=>"200"}
       %g.grid.y-grid#yGrid
         %line{'x1'=>"80", 'x2'=>"800", 'y1'=>"0", 'y2'=>"0"}
@@ -26,8 +26,7 @@
           %stop{'offset'=>'0%', 'style'=>'stop-color:rgb(0,0,0); stop-opacity:1'}
           %stop{'offset'=>'100%', 'style'=>'stop-color:#AAA; stop-opacity:0'}
       /surface
-      %g.surfaces
-        %path#first_set.first_set
+      %g.surfaces#surfaces
       /grid lines
       %use.grid.double{'xlink:href'=>'#xGrid','style'=>''}
       %use.grid.double{'xlink:href'=>'#yGrid','style'=>''}
@@ -62,57 +61,61 @@
           eventos
   /the graph
 
-  %div.pull-right
-    Invertir orden temporal
-    %a{'href'=>'#'}
-      %i.fa.fa-chevron-circle-down
-    %a{'href'=>'#'}
-      %i.fa.fa-chevron-circle-up
-  
-  %h4
-    HISTORIA DEL PROYECTO
-    %a{'href'=>'#'}
-      Descargar historial
-      %i.fa.fa-download
-  
-  
-  %div#timeline.row
-    - cnt = 0
-    - while cnt < 6
-      %div.timeline-container
-        %div.status.col-md-1.side
-          %img{'src'=>'http://placehold.it/50x50'}
-        %div.resume.col-md-11
-          %h5
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, eum, esse in consectetur libero obcaecati
-            %span.light
-              \- 20/02/2013
-          %p
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, doloribus porro aperiam a soluta natus repellat perferendis rerum fuga neque vero delectus quae magnam. Quisquam quo velit expedita fuga nam?
-          - if cycle('odd', 'even') == 'odd'
-            - green = "width:" + rand(30...50).to_s + "%"
-            - yellow = "width:" + rand(20...35).to_s + "%"
-            - red = "width:" + rand(10...30).to_s + "%"
+  - if ! @bill.paperworks.blank?
+    %h4{name:'timeline'}
+      HISTORIA DEL PROYECTO
+      
+      = link_to 'Descargar historial', params.merge(:format => :xls)
+    
+    %div.row.visible-xs
+      %div.col-xs-5
+        %button.down.btn
+          %i.fa.fa-chevron-circle-down
+          Más recientes
+      %div.col-xs-5
+        %button.up.btn
+          %i.fa.fa-chevron-circle-up
+          Menos reciente
+    
+    %div.pull-right.hidden-xs
+      Invertir orden temporal
+      %a.down{'href'=>'#'}
+        %i.fa.fa-chevron-circle-down
+      %a.up{'href'=>'#'}
+        %i.fa.fa-chevron-circle-up
+    
+    %div#timeline.row
+      - @bill.paperworks.each_with_index do | paperwork, index |
+        %div{ 'data-sort' => index.to_s }
+          %div.timeline-container
+          %div.resume.col-md-11
+            %h5
+              = paperwork.description
+              %span.light
+                = Date.parse(paperwork.date).strftime("%d de %B, %Y")
+
             %p
-              Quorum: 
-              %strong
-                %span
-                  6/7 -
-                %span.txt-red
-                  Aprobado
+              = paperwork.stage
             
-            %div.progress
-              %div.progress-bar.progress-bar-success{"style" => green}
-                %span.sr-only
-                  35% Complete (success)
-              %div.progress-bar.progress-bar-warning{"style" => yellow}
-                %span.sr-only
-                  20% Complete (warning)
-              %div.progress-bar.progress-bar-danger{"style" => red}
-                %span.sr-only
-                  45% Complete (danger)
-            %p.small.light
-              %strong
-                30% A FAVOR 45% EN CONTRA,  5% ABSTENCIÓN,  5% AUSENTES 15% PAREOS
-          - cnt += 1
-  
+            - if paperwork.chamber.length > 1
+              %p
+                Cámara:
+                %strong
+                  = paperwork.chamber
+
+            - if paperwork.session.length > 1
+              %p
+                Sesión:
+                %strong
+                  = paperwork.session
+
+:javascript
+  $('.up').on('click', function(e){
+    e.preventDefault();
+    $("div#timeline>div").tsort({order:'asc', data:'sort'});
+  });
+
+  $('.down').on('click', function(e){
+    e.preventDefault();
+    $("div#timeline>div").tsort({order:'desc', data:'sort'});
+  });

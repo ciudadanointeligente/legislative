@@ -15,6 +15,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
+  gem 'guard-bundler'
+  gem 'guard-rails'
+  gem 'guard-rspec'
 end
 
 gem 'json'
@@ -50,7 +53,7 @@ gem 'roar', '0.11.19'
 gem 'roar-rails', '0.1.0'
 gem 'faraday', '0.8.1'
 gem 'billit_representers', '0.8.4'
-gem 'popit_representers', '0.0.10'
+gem 'popit_representers', '0.0.12'
 gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
 
 # Support to XLS export

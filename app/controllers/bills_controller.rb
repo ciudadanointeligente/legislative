@@ -8,12 +8,6 @@ class BillsController < ApplicationController
   # GET /bills
   # GET /bills.json
   def index
-    # @bills = Bill.get(ENV['billit_url'], 'application/json')
-
-    # respond_to do |format|
-      # format.html # index.html.erb
-      # format.json { render json: @bills }
-    # end
   end
 
   # GET /bills/1
@@ -40,38 +34,41 @@ class BillsController < ApplicationController
       bottom_date = top_date - ENV['bill_graph_day_interval'].to_i.days
       data_length += 1
     end
+
+    #setup the title page
+    @title = @bill.title + " - "
+
+    @paperworks = @bill.paperworks
+    response_with = @paperworks
+
+    case @bill.status.strip
+    when "Archivado"
+      @icon_bill = 'filed.png'
+    when "Publicado"
+      @icon_bill = 'published.png'
+    when "En tramitación"
+      @icon_bill = 'paperwork.png' #icono pendiente 
+    when "Rechazado"
+      @icon_bill = 'rejected.png' 
+    when "Retirado"
+      @icon_bill = 'discarded.png' 
+    else
+      @icon_bill = ''
+    end
   end
 
   # GET /bills/new
   # GET /bills/new.json
   def new
-    # @bill = Bill.new
-
-    # respond_to do |format|
-      # format.html # new.html.erb
-      # format.json { render json: @bill }
-    # end
   end
 
   # GET /bills/1/edit
   def edit
-    # @bill = Bill.get(params[:id], 'application/json')
   end
 
   # POST /bills
   # POST /bills.json
   def create
-    # @bill = Bill.new(params[:bill])
-
-    # respond_to do |format|
-    #   if @bill.save
-    #     format.html { redirect_to @bill, notice: 'Bill was successfully created.' }
-    #     format.json { render json: @bill, status: :created, location: @bill }
-    #   else
-    #     format.html { render action: "new" }
-    #     format.json { render json: @bill.errors, status: :unprocessable_entity }
-    #   end
-    # end
   end
 
   # PUT /bills/1
@@ -87,13 +84,6 @@ class BillsController < ApplicationController
   # DELETE /bills/1
   # DELETE /bills/1.json
   def destroy
-    # @bill = Bill.find(params[:id])
-    # @bill.destroy
-
-    # respond_to do |format|
-    #   format.html { redirect_to bills_url }
-    #   format.json { head :no_content }
-    # end
   end
 
   def searches

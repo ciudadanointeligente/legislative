@@ -1,66 +1,56 @@
 %div.hero-space
   %div.container
-    %div.clearfix
-      %ol.breadcrumb
-        %li
-          = link_to "Portada", root_path
-        %li
-          %a{'href'=>'#'}
-            Proyectos de ley
-        %li.active
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit...
-      %ul.list-inline.action-btn
-        %li
-          %a.btn-warning{'href'=>'#'}
-            %i.fa.fa-star-o 
-            9999 suscripciones
-        %li
-          %a.btn-warning{'href'=>'#'}
-            %i.fa.fa-pencil 
-            9999 preguntas
-        %li
-          %a.btn-warning{'href'=>'#'}
-            %i.fa.fa-facebook 
-            Comparte
-        %li
-          %a.btn-warning{'href'=>'#'}
-            %i.fa.fa-twitter 
-            Twittea
+    %div.row
+      %div.col-md-10
+        %ol.breadcrumb
+          %li
+            = link_to "Portada", root_path
+          %li
+            %a{'href'=>'#'}
+              Proyectos de ley
+          %li.active
+            = @bill.title[0..30] + '...'
+      
+      %div.col-md-2
+        %ul.list-inline.action-btn
+          %li
+            - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
+            %a.btn-default{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+              %i.fa.fa-facebook 
+              Comparte
+          %li
+            - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags=pmo&text='+@bill.title[0..50]
+            %a.btn-default{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+              %i.fa.fa-twitter 
+              Twittea
+    
     %div.row
       %div.col-md-1.side
         %p.light
-          0000000
-        = image_tag("statusicon/introduced.svg",class:"hidden-xs")
+          = @bill.uid
+        = image_tag("statusicon/" + @icon_bill, class:"hidden-xs", title:@bill.status.strip)
       %div.col-md-11
         %h4
           = @bill.title
+        
         %p
           = @bill.abstract
-          Resumen del proyecto de ley, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et manatoque penatibus et ma. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis er adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et manatoque penatibus et ma. Aenean commodo ligula eget dolor. Aenean massa. 
-        %p
-          Autores:
-          %span
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga,
-          %span
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga,
-          %span
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga,
-          %span
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga,
-          %span
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga
+        
+        - if !@bill.authors.blank?
+          %p
+            Autores:
+            - authors = @bill.authors.map { |author| a = author.split(','); a[1].strip + ' ' + a[0].strip  }
+            %span
+              = authors.join(', ')
+
         %p
           %ul.list-inline
             - if !@bill.tags.blank?
               - @bill.tags.each do |tag|
                 %li
                   %span.label.label-default= tag
-        %p
-          %a{'href'=>'#'}
-            Ver proyecto 
-            %i.fa.fa-chevron-circle-right
+        - if ! @bill.bill_draft_link.blank?
+          %p
+            %a{'href'=> @bill.bill_draft_link}
+              Descargar proyecto 
+              %i.fa.fa-download

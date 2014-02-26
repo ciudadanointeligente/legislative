@@ -10,19 +10,25 @@ window.onload = function()
     var posX = x;
         height = 200;
         posX = 58*posX+32;
-        posY = height-(event*20);
+        posX2 = 58*(x+1)+32;
+        posY = height-(event*20),
+        posY2 = height-(freq[x]*20),
+        d = '';
 
     createPoints(posX, posY, highest, event);
-    if(x==1) {
-      d += 'M'+posX+','+posY;
-    }
-    d += ' L'+posX+','+posY;
-    if(nro_elements == x) {
-      d += ' Z';
-      document.getElementById('first_set').setAttribute('d', d);
-    }
     
-    x +=1;
+    if(posY2)
+    {
+      d = 'M'+posX+','+posY+' L'+posX2+','+posY2;
+    
+      var shape = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      shape.setAttributeNS(null, "d", d);
+      shape.setAttributeNS(null, "class", "first_set");
+
+      document.getElementById('surfaces').appendChild(shape);
+      
+      x +=1;
+    }
 
   });
 
@@ -50,6 +56,17 @@ window.onload = function()
     
     document.getElementById('points').appendChild(shape1);
 
+  }
+
+  function isBigEnough(element, index, array) {
+    return (element > 0);
+  }
+
+  display_graph = freq.some(isBigEnough);
+  
+  if( !display_graph ) {
+    var d = document.getElementById("timeline"); 
+        d.innerHTML = 'No se han registrado actividades/eventos en el último año';
   }
 
   $(".showmebutton").click(function(e) {

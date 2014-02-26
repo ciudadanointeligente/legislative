@@ -1,7 +1,10 @@
 require 'net/http'
 require 'httparty'
+
+require 'popit_representers/models/organization_collection'
 require 'billit_representers/models/bill'
 require 'billit_representers/models/bill_page'
+
 
 class SearchesController < ApplicationController
   def index
@@ -14,6 +17,11 @@ class SearchesController < ApplicationController
     authors_detail_list.map do |author|
       @authors_list.push(author['name'])
     end
+
+    @organizations = Popit::OrganizationCollection.new
+    @organizations.get ENV['popit_organizations'], 'application/json'
+
+    @congressmen = PopitPersonCollection.new
 
     if !params.nil? && params.length > 3 # default have 3 keys {'action'=>'index', 'controller'=>'searchs', "locale"=>"xx"}
       
@@ -41,12 +49,11 @@ class SearchesController < ApplicationController
           end
         end
       end
-      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}&per_page=3", 'application/json')
+      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}per_page=3", 'application/json')
+      @congressmen.get ENV['popit_search']+"#{URI.encode(@keywords)}per_page=3", 'application/json'
     else
       @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?per_page=3", 'application/json')
+      @congressmen.get ENV['popit_search']+"per_page=3", 'application/json'
     end
-    
-    @congressmen = PopitPersonCollection.new
-    @congressmen.get ENV['popit_persons'], 'application/json'
   end
 end
