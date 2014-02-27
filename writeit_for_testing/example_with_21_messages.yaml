@@ -457,11 +457,6 @@
     popit_url: 'http://localhost:3002/api/persons/500804717a317e126400005e', summary: ''}
   model: popit.person
   pk: 2
-- fields: {api_instance: 2, image: '', name: Gonzalo Arenas Hodar, popit_id: 5008048c7a317e126400046d,
-    popit_url: 'http://billit-demo.popit.mysociety.org/api/v0.1/persons/5008048c7a317e126400046d',
-    summary: ''}
-  model: popit.person
-  pk: 3
 - fields: {api_instance: 2, image: '', name: Orlando Vargas Pizarro, popit_id: 500804717a317e126400005e,
     popit_url: 'http://billit-demo.popit.mysociety.org/api/v0.1/persons/500804717a317e126400005e',
     summary: ''}
