@@ -97,17 +97,13 @@
             %p
               = paperwork.stage
             
-            - if paperwork.chamber.length > 1
-              %p
-                Cámara:
-                %strong
-                  = paperwork.chamber
+              - if paperwork.chamber.length > 1
+                • Cámara:
+                = paperwork.chamber
 
-            - if paperwork.session.length > 1
-              %p
-                Sesión:
-                %strong
-                  = paperwork.session
+              - if paperwork.session.length > 1
+                • Sesión:
+                = paperwork.session
 
 :javascript
   $('.up').on('click', function(e){
