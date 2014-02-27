@@ -21,11 +21,21 @@
         %i.fa.fa-twitter 
         Twittea
 
+
 %div
   %h2
     = @congressman.name
   %h4
     Senador
+
+- if ! @message.nil?
+  %div
+    última pregunta
+    %div
+      %div
+      = @message.subject
+      %div
+      = @message.content
 
 
 %div.row

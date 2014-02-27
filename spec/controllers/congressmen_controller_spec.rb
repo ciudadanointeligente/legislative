@@ -23,9 +23,11 @@ describe CongressmenController do
   end
 
   it "brings the last message for that person" do
+    value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_2_messages.yaml )
     get :show, :id => "5008048c7a317e126400046d", locale: 'es'
     assigns(:message).should_not be_nil
     assigns(:message).should be_a_kind_of LegislativeMessageRepresenter
+    assigns(:message).author_name.should eql "autor 1"
   end
 
 end
