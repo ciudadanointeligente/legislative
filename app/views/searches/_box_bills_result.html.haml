@@ -10,5 +10,4 @@
       %p 
         = bill.abstract
 %div.text-right
-  %a.btn.btn-default{'href'=>'#'}
-    Ver todos los resultados
+  = link_to "Ver todos los resultados", searches_bills_path + "/?#{URI.encode(@keywords)}", :class => "btn btn-default"
