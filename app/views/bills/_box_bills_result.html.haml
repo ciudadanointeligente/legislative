@@ -5,14 +5,12 @@
         %p
           = bill.uid
       %div.col-md-3
-        %span.fav
-          %a{'href'=>'#'}
-            99999
-            %i.fa.fa-star
-        %span.alert
-          %a{'href'=>'#'}
-            99999
-            %i.fa.fa-bell
+        %ul.list-inline
+          %li
+            %span.alert
+              = link_to (new_user_subscription_path(:bill => params[:id])) do
+                %i.fa.fa-bell
+                Suscribir
     %div.row
       %div.col-md-1.hidden-xs
         - if ! bill.icon.blank?
@@ -20,7 +18,7 @@
             = image_tag("statusicon/" + bill.icon)
       %div.col-md-11
         %h3
-          = link_to bill.title, bill_path(bill.uid), :onclick => "ga('send','paperwork','bill', '"+bill.uid+"')"
+          = link_to bill.title.capitalize, bill_path(bill.uid), :onclick => "ga('send','paperwork','bill', '"+bill.uid+"')"
         %p 
           = bill.abstract
 
