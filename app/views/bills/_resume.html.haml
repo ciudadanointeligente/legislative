@@ -1,7 +1,7 @@
 %div.hero-space
   %div.container
     %div.row
-      %div.col-md-10
+      %div.col-md-9
         %ol.breadcrumb
           %li
             = link_to "Portada", root_path
@@ -11,8 +11,12 @@
           %li.active
             = @bill.title[0..30] + '...'
       
-      %div.col-md-2
+      %div.col-md-3
         %ul.list-inline.action-btn
+          %li
+            = link_to (new_user_subscription_path(:bill => params[:id])), class: 'btn-warning' do
+              %i.fa.fa-star-o
+              Suscribir
           %li
             - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
             %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
@@ -28,7 +32,8 @@
       %div.col-md-1.side
         %p.light
           = @bill.uid
-        = image_tag("statusicon/" + @icon_bill, class:"hidden-xs", title:@bill.status.strip)
+        - if ! @bill.icon.blank?
+          = image_tag("statusicon/" + @bill.icon, class:"hidden-xs", title:@bill.status.strip)
       %div.col-md-11
         %h4
           = @bill.title

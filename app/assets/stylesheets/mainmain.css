@@ -17,33 +17,8 @@ body {
   border-color: transparent;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-size: 36px;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 28px;
-  font-weight: 700;
-}
-
-h4 {
-  font-size: 21px;
-  font-weight: 700;
-}
-
-h5 {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-h6 {
-  font-size: 10px;
   font-weight: 700;
 }
 
@@ -62,7 +37,7 @@ a:hover {
 strong {
   font-weight: 700;
   font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .small {
@@ -93,7 +68,6 @@ strong {
   border-color: transparent;
   border-bottom: 2px solid #7c7c6d;
   border-radius: 0px;
-  height: 50px;
 }
 
 .btn-default:hover {
@@ -121,7 +95,6 @@ strong {
   border-color: transparent;
   border-bottom: 2px solid #1e8466;
   border-radius: 0px;
-  height: 50px;
 }
 
 .btn-primary:hover {
@@ -335,7 +308,6 @@ strong {
   background-image: none;
   border: none;
   border-radius: 0px;
-  height: 50px;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -356,6 +328,7 @@ strong {
 /*HOME*/
 
 .hero-space h4 {
+  text-transform: uppercase;
 }
 
 /*hot-space*/
@@ -727,11 +700,43 @@ svg.graph .labels.y-labels {
     top: -3px;
 }
 
+.header-congressmen {
+  margin-bottom: 5px;
+}
+
 @media (min-width: 768px) {
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 21px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  h6 {
+    font-size: 10px;
+  }
   .hero-space {
     padding: 60px 0px;
   }
   #graph {
     padding: 40px 0px;
+  }
+  .form-control {
+    height: 50px;
+  }
+  .btn-primary {
+    height: 50px;
+  }
+  .btn-default {
+    height: 50px;
   }
 }

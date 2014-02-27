@@ -24,14 +24,18 @@
         = render :partial => "box_bills_result" 
     - else
       %div
+        %h3 
+          Proyectos de ley
         %p
-          No se encontraron proyectos de ley relacionados a tu búsqueda
+          No se encontraron proyectos de ley relacionados a la búsqueda
+          %strong 
+            = params[:q]
     /end of loop
 
     /loop for congressmen
     - if params[:congressmen] == '2' || @congressmen.persons.count > 0
       %div
-        %div.row
+        %div.row.header-congressmen
           %div.col-md-10
             %h3 
               Congresistas
@@ -41,6 +45,10 @@
         = render :partial => "box_congressmen_result"
     - else
       %div
+        %h3 
+          Congresistas
         %p
           No se encontraron congresistas relacionados a tu búsqueda
+          %strong 
+            = params[:q]
     /end of loop

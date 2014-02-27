@@ -10,7 +10,7 @@ class CommunicationsController < ApplicationController
     if !params[:page].nil?
       page = params[:page]
     end
-    @messages.get page
+    @messages.get page: page
     
     set_pagination @messages.meta
   end
@@ -27,6 +27,13 @@ class CommunicationsController < ApplicationController
     @message.author_name = params[:author_name]
     @message.author_email = params[:author_email]
     @message.push_to_api
+  end
+  def per_person
+    id = params[:id]
+    @person = PopitPerson.get ENV['popit_persons'] + id, 
+                'application/json'
+    @messages = LegislativeMessageCollection.new
+    @messages.get person: @person
   end
 
   private

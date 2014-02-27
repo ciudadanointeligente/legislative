@@ -1,32 +1,26 @@
-%div
-  %ol.breadcrumb
-    %li
-      %a{'href'=>'#'}
-        Portada
-    %li
-      %a{'href'=>'#'}
-        Proyectos de ley
-    %li.current
-      Resultado de búsqueda
-
 %div.row
-  %div.col-md-3
-    %h4
-      Proyectos de ley
   %div.col-md-9
-    %ul.list-inline
+    %ol.breadcrumb
       %li
-        %i.fa.fa-star
-        9999 suscripciones
+        = link_to "Portada", root_path
+      %li.current
+        Resultado de búsqueda
+  %div.col-md-3
+    %ul.list-inline.action-btn
       %li
-        %i.fa.fa-pencil
-        9999 preguntas
+        - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
+        %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+          %i.fa.fa-facebook 
+          Comparte
       %li
-        %i.fa.fa-facebook
-        Comparte
-      %li
-        %i.fa.fa-twitter
-        Twittea
+        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags=pmo,congresoabierto'
+        %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+          %i.fa.fa-twitter 
+          Twittea
+
+%div
+  %h4
+    Proyectos de ley    
 
 %div.row
   %div.col-md-3

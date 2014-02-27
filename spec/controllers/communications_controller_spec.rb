@@ -85,5 +85,27 @@ describe CommunicationsController do
       assigns(:message).should be_an_instance_of Message
 
     end
+
+    it "get per person messages" do
+      %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_2_messages.yaml )
+      get :per_person, :id => "5008048c7a317e126400046d", locale: 'es'
+
+      #the person with id 5008048c7a317e126400046d is
+      #gonzalo arenas
+      # i get something like 
+      arenas = PopitPerson.get 'http://localhost:3002/api/persons/5008048c7a317e126400046d', 
+                'application/json'
+      #response.should route_to("communications#per_person", :id => "5008048c7a317e126400046d")
+      #this is gonzalo arenas
+      response.should be_success
+      assigns(:person).should eql arenas
+      assigns(:messages).objects.should_not be_empty
+      assigns(:messages).objects.length.should eql 1
+      
+      message = assigns(:messages).objects[0]
+      message.content.should eql "Content 1"
+      message.author_name.should eql "autor 1"
+
+    end
   end
 end

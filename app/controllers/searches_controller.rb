@@ -2,8 +2,8 @@ require 'net/http'
 require 'httparty'
 
 require 'popit_representers/models/organization_collection'
-require 'billit_representers/models/bill'
 require 'billit_representers/models/bill_page'
+require './app/models/bill'
 
 
 class SearchesController < ApplicationController
