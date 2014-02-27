@@ -105,7 +105,11 @@ describe CommunicationsController do
       message = assigns(:messages).objects[0]
       message.content.should eql "Content 1"
       message.author_name.should eql "autor 1"
-
+    end
+    it "should return 404 if the person does not exist" do
+      %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_2_messages.yaml )
+      get :per_person, :id => "5008048c7a317e12640d", locale: 'es'
+      response.status.should eql 404
     end
   end
 end
