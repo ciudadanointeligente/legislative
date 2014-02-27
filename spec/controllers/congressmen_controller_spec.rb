@@ -14,6 +14,18 @@ describe CongressmenController do
       assigns(:congressmen).persons[0].should be_an_instance_of PopitPerson
 
     end
+
+  end
+  it "shows only one congressman" do
+    get :show, :id => "5008048c7a317e126400046d", locale: 'es'
+    assigns(:congressman).id.should eql "5008048c7a317e126400046d"
+    assigns(:congressman).should be_a_kind_of PopitPerson
+  end
+
+  it "brings the last message for that person" do
+    get :show, :id => "5008048c7a317e126400046d", locale: 'es'
+    assigns(:message).should_not be_nil
+    assigns(:message).should be_a_kind_of LegislativeMessageRepresenter
   end
 
 end
