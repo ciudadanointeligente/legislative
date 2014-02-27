@@ -328,6 +328,7 @@ strong {
 /*HOME*/
 
 .hero-space h4 {
+  text-transform: uppercase;
 }
 
 /*hot-space*/
