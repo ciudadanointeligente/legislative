@@ -92,8 +92,8 @@
           %div.resume.col-md-11
             %h5
               = paperwork.description
-              %span.light
-                = Date.parse(paperwork.date).strftime("%d de %B, %Y")
+            %p.light
+              = localize paperwork.date.to_date, :format => :long
 
             %p
               = paperwork.stage
