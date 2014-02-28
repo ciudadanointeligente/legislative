@@ -38,7 +38,11 @@ class BillsController < ApplicationController
     end
 
     #setup the title page
-    @title = @bill.title + " - "
+    law = ''
+    if ! @bill.resulting_document.blank?
+      law = @bill.resulting_document + ' - '
+    end
+    @title = law + @bill.title + " - "
 
     @paperworks = @bill.paperworks
     response_with = @paperworks
