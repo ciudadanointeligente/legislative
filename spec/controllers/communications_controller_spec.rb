@@ -83,6 +83,7 @@ describe CommunicationsController do
       assigns(:message).remote_uri.should_not be_nil
       assigns(:message).remote_id.should_not be_nil
       assigns(:message).should be_an_instance_of Message
+      response.status.should eql 200
 
     end
 
@@ -110,6 +111,13 @@ describe CommunicationsController do
       %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_2_messages.yaml )
       get :per_person, :id => "5008048c7a317e12640d", locale: 'es'
       response.status.should eql 404
+    end
+
+    it "should return 200 even if there is a problem in writeit" do
+      %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_2_messages.yaml )
+      # this guy produces an error in write it
+      get :per_person, :id => "500804717a317e126400005e", :locale => 'es'
+      response.status.should eql 200
     end
   end
 end
