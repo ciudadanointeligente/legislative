@@ -35,7 +35,10 @@ class CommunicationsController < ApplicationController
 
     if not @person.id.nil?
       @messages = LegislativeMessageCollection.new
-      @messages.get person: @person
+      begin
+        @messages.get person: @person
+      rescue
+      end
     else
       render text: "404 No lo encontramos", status: 404
     end
