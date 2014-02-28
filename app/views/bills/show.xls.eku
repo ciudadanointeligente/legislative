@@ -15,5 +15,6 @@ sheet1[0, 0] = 'Historia del proyecto'
 sheet1.row(1).concat ['Fecha', 'Descripción', 'Estado', 'Cámara', 'Sesión']
 
 @paperworks.each_with_index do |paperwork, i|
-  sheet1.update_row i+2, Date.parse(paperwork.date).strftime("%d de %B, %Y"), paperwork.description, paperwork.stage, paperwork.chamber, paperwork.session
+  fecha = localize paperwork.date.to_date, :format => :long
+  sheet1.update_row i+2, fecha, paperwork.description, paperwork.stage, paperwork.chamber, paperwork.session
 end
