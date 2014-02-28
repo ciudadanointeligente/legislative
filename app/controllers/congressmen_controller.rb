@@ -22,6 +22,9 @@ class CongressmenController < ApplicationController
     messages = LegislativeMessageCollection.new
     messages.get(person: @congressman)
     @message = messages.objects[0]
+
+    #setup the title page
+    @title = @congressman.name + " - "
   end
 
   # GET /congressmen/new
