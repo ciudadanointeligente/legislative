@@ -20,6 +20,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 a {
@@ -554,7 +555,17 @@ span.paring {
 }
 /*End Comunicacion*/
 
-/*bills*/
+
+/* BILLS*/
+
+
+.hero-space-bill {
+  padding: 20px 0px 60px;
+  background: #462445;
+  color: #e6e6c9;
+  margin-top: -10px;
+}
+
 .title-header {
   color: #FFF;
   background-color: #67675A;
@@ -564,7 +575,19 @@ span.paring {
 }
 
 #timeline div.resume.col-md-11 {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.resume h5 {
+  margin-bottom: 0;
+}
+
+.resume p {
+  margin: 0 0 0px;
+}
+
+.timeline-container img {
+  margin-top: 8px;
 }
 
 .progress {
@@ -704,6 +727,8 @@ svg.graph .labels.y-labels {
   margin-bottom: 5px;
 }
 
+/* SCREEN */
+
 @media (min-width: 768px) {
   h2 {
     font-size: 36px;
@@ -739,4 +764,11 @@ svg.graph .labels.y-labels {
   .btn-default {
     height: 50px;
   }
+}
+
+@media (max-width: 768px) {
+  h5 {
+    text-transform: none;
+  }
+
 }
