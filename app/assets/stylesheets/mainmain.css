@@ -162,6 +162,27 @@ strong {
   *zoom: 1;
 }
 
+/*ALERTS*/
+
+
+.alert-info, .alert-success {
+  background-color: #CEEAE2;
+  border-color: #8EDDC5;
+  color: #3DB091;
+}
+
+.alert-warning {
+  background-color: #FFEDE3;
+  border-color: #FFD4B0;
+  color: #F4A458;
+}
+
+.alert-danger {
+  background-color: #FFE2E1;
+  border-color: #FFC0BB;
+  color: #EA6A56;
+}
+
 /*Labels*/
 
 .label-default {
