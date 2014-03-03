@@ -25,6 +25,7 @@ production:
   writeit_username: ~
   writeit_api_key:  ~
   writeit_messages_per_page: '20'
+  twitter_tags: ~
 
 development:
   root_url:   ~           #example: 'http://www.congresoabierto.cl/'; used for links in the exported XLS files
@@ -48,6 +49,7 @@ development:
   writeit_username: ~ #example: 'admin'; writeit username
   writeit_api_key:  ~ #example: 'a'; writeit apikey
   writeit_messages_per_page: '2'
+  twitter_tags: ~
 
 test:
   root_url:  ~
@@ -71,3 +73,4 @@ test:
   writeit_username: 'admin'
   writeit_api_key:  'a'
   writeit_messages_per_page: '5'
+  twitter_tags: ~

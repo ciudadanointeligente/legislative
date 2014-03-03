@@ -1,5 +1,6 @@
 .row
-	.col-md-offset-4.col-md-4
-		%h2 Subscribe
-		%hr
-			= render :partial => "form", :locals => {:user => @user }
+  .col-md-offset-4.col-md-4
+    %h2
+      = t('user_subscriptions.subscribe')
+    %hr
+      = render :partial => "form", :locals => {:user => @user }
