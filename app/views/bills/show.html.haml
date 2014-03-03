@@ -3,17 +3,17 @@
     %div.col-md-3
       - if ! @bill.paperworks.blank?
         %h4{name:'timeline'}
-          HISTORIA DEL PROYECTO
+          EVENTOS DEL PROYECTO
     %div.col-md-9.links-paperworks-action
       %ul.list-inline
         %li
           = link_to url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls' do
-            %i.fa.fa-download
             Descargar historial
+            %i.fa.fa-download
         %li
           %a{'href'=>'#', 'data-toggle'=>'modal', 'data-target'=>'#Documents'}
-            %i.fa.fa-file
             Ver documentos
+            %i.fa.fa-file
       
       %div.modal.fade#Documents{'tabindex'=>'-1', 'role'=>'dialog', 'aria-labelledby'=>'myModalLabel', 'aria-hidden'=>'true'}
         %div.modal-dialog.modal-lg

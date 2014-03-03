@@ -48,12 +48,14 @@
             %span
               = authors.join(', ')
 
-        %p
-          %ul.list-inline
-            - if !@bill.tags.blank?
-              - @bill.tags.each do |tag|
-                %li
-                  %span.label.label-default= tag
+        - if !@bill.tags.blank?
+          %p
+            %ul.list-inline
+              - if !@bill.tags.blank?
+                - @bill.tags.each do |tag|
+                  %li
+                    %span.label.label-default= tag
+        
         - if ! @bill.bill_draft_link.blank?
           %p
             %a{'href'=> @bill.bill_draft_link}
