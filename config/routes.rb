@@ -17,6 +17,7 @@ Legislative::Application.routes.draw do
     resources :bills do
       get 'searches', on: :collection
     end
+    
     resources :communications do
       get 'per_person', on: :collection
     end
