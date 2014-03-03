@@ -4,9 +4,15 @@
       %div.col-md-9
         %ol.breadcrumb
           %li
-            = link_to t('layout.home'), root_path
+            - if current_user
+              = link_to t('layout.home'), root_path
+            - else
+              = t('layout.home')
           %li
-            %a{'href'=>'#'}
+            - if current_user
+              %a{'href'=>'#'}
+                Proyectos de ley
+            - else
               Proyectos de ley
           %li.active
             = @bill.title[0..30] + '...'
