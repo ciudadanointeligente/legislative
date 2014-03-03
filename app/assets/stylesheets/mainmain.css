@@ -611,7 +611,7 @@ span.paring {
 
 
 .hero-space-bill {
-  padding: 20px 0px 60px;
+  padding: 20px 0px 15px;
   background: #462445;
   color: #e6e6c9;
 }
@@ -828,6 +828,9 @@ svg.graph .labels.y-labels {
   }
   #site-logo #defci {
     text-align: right;
+  }
+  .hero-space-bill {
+    padding: 20px 0px 60px;
   }
 }
 
