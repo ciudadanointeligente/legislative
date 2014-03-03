@@ -8,28 +8,32 @@ Legislative::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   get "confirmed" => "user_subscriptions#confirmed"
 
+  put "bills/:id/update" => "bills#update", method: :put
+
   resources :notifiers do
     get 'run_tasks', on: :collection
   end
 
-  put "bills/:id/update" => "bills#update", method: :put
   localized do
     resources :bills do
       get 'searches', on: :collection
     end
+
     resources :communications do
       get 'per_person', on: :collection
+    end
+
+    resources :congressmen do
+      get 'searches', on: :collection
     end
 
     resources :disclosures
     resources :glossaries
     resources :mains
-    resources :congressmen do
-      get 'searches', on: :collection
-    end
+    resources :searches
+    resources :sessions
     resources :tables
     resources :users
-    resources :searches
     resources :user_subscriptions # do
       # delete 'unsubscribe_all', on: :collection
     # end  

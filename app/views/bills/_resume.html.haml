@@ -4,7 +4,7 @@
       %div.col-md-9
         %ol.breadcrumb
           %li
-            = link_to "Portada", root_path
+            = link_to t('layout.home'), root_path
           %li
             %a{'href'=>'#'}
               Proyectos de ley
@@ -36,8 +36,6 @@
           = image_tag("statusicon/" + @bill.icon, class:"hidden-xs", title:@bill.status.strip)
       %div.col-md-11
         %h4
-          - if ! @bill.resulting_document.blank?
-            = @bill.resulting_document + ' - '
           = @bill.title
         
         %p
@@ -50,12 +48,14 @@
             %span
               = authors.join(', ')
 
-        %p
-          %ul.list-inline
-            - if !@bill.tags.blank?
-              - @bill.tags.each do |tag|
-                %li
-                  %span.label.label-default= tag
+        - if !@bill.tags.blank?
+          %p
+            %ul.list-inline
+              - if !@bill.tags.blank?
+                - @bill.tags.each do |tag|
+                  %li
+                    %span.label.label-default= tag
+        
         - if ! @bill.bill_draft_link.blank?
           %p
             %a{'href'=> @bill.bill_draft_link}
