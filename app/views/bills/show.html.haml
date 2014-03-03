@@ -38,7 +38,8 @@
                     - if ! doc.link.blank?
                       %tr
                         %td
-                          = localize doc.date.to_date
+                          - if ! doc.date.blank?
+                            = localize doc.date.to_date
                         %td
                           %a{'href'=>doc.link}
                             = doc.step
