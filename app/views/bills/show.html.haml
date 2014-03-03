@@ -34,15 +34,15 @@
                       Fecha
                     %th
                       Trámite
-                  - @bill.reports.each do | doc |
-                    - if ! doc.link.blank?
+                  - @bill.reports.each do | rep |
+                    - if ! rep.link.blank?
                       %tr
                         %td
-                          - if ! doc.date.blank?
-                            = localize doc.date.to_date
+                          - if ! rep.date.blank?
+                            = localize rep.date.to_date
                         %td
-                          %a{'href'=>doc.link}
-                            = doc.step
+                          %a{'href'=>rep.link}
+                            = rep.step
                         
               - if ! @bill.documents.blank?
                 %h4
@@ -57,7 +57,8 @@
                     - if ! doc.link.blank?
                       %tr
                         %td
-                          = localize doc.date.to_date
+                          - if ! doc.date.blank?
+                            = localize doc.date.to_date
                         %td
                           %a{'href'=>doc.link}
                             = doc.step
@@ -71,14 +72,15 @@
                       Fecha
                     %th
                       Trámite
-                  - @bill.directives.each do | doc |
-                    - if ! doc.link.blank?
+                  - @bill.directives.each do | dir |
+                    - if ! dir.link.blank?
                       %tr
                         %td
-                          = localize doc.date.to_date
+                          - if ! dir.date.blank?
+                            = localize dir.date.to_date
                         %td
-                          %a{'href'=>doc.link}
-                            = doc.step
+                          %a{'href'=>dir.link}
+                            = dir.step
               
               - if ! @bill.revisions.blank?
                 %h4
@@ -91,14 +93,12 @@
                       Trámite
                     %th
                       Documento
-                  - @bill.revisions.each do | doc |
-                    - if ! doc.link.blank?
+                  - @bill.revisions.each do | rev |
+                    - if ! rev.link.blank?
                       %tr
                         %td
-                          = localize doc.date.to_date
-                        %td
-                          %a{'href'=>doc.link}
-                            = doc.step
+                          %a{'href'=>rev.link}
+                            = rev.description
 
     
   %div.row.visible-xs
