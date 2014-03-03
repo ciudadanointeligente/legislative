@@ -21,6 +21,8 @@ class Billit::Paperwork
       return "report.png"
     when "Retiro de Urgencia"
       return "priority-withdrawal.png"
+    when "Tramitación Terminada"
+      return "published.png"
     else
       return "paperwork.png"
     end
