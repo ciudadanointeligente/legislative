@@ -727,6 +727,12 @@ svg.graph .labels.y-labels {
   margin-bottom: 5px;
 }
 
+/* bill history */
+.links-paperworks-action {
+  margin-top: 13px
+}
+/*end bill history*/
+
 /* SCREEN */
 
 @media (min-width: 768px) {
@@ -766,9 +772,14 @@ svg.graph .labels.y-labels {
   }
 }
 
+@media (min-width: 768px) {
+  .modal-lg {
+    width: 700px;
+  }
+}
+
 @media (max-width: 768px) {
   h5 {
     text-transform: none;
   }
-
 }
