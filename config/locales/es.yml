@@ -3,7 +3,7 @@
 
 es:
   layout:
-    home: Principal
+    home: Portada
     search: Búsqueda
     glossary: Glosario
     communication: Preguntales
@@ -172,6 +172,7 @@ es:
     users: usuarios
     glossaries: glosarios
     searches: busquedas
+    sessions: sesiones
     new: nuevo
     edit: editar
     user_subscriptions: suscripcion

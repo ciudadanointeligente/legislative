@@ -172,6 +172,7 @@ en:
     users: users
     glossaries: glossaries
     searches: searches
+    sessions: sessions
     new: new
     edit: edit
     user_subscriptions: subscription
