@@ -26,6 +26,9 @@ Legislative::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+  # Enable serving of images, stylesheets, and JavaScripts from an asset server
+  config.action_controller.asset_host = ENV['root_url']
+
   # Do not compress assets
   config.assets.compress = false
 
