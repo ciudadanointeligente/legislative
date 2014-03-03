@@ -1,48 +1,143 @@
 %section#graph
-  - if ! @bill.paperworks.blank?
-    %h4{name:'timeline'}
-      HISTORIA DEL PROYECTO
+  %div.row
+    %div.col-md-3
+      - if ! @bill.paperworks.blank?
+        %h4{name:'timeline'}
+          HISTORIA DEL PROYECTO
+    %div.col-md-9.links-paperworks-action
+      %ul.list-inline
+        %li
+          = link_to url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls' do
+            %i.fa.fa-download
+            Descargar historial
+        %li
+          %a{'href'=>'#', 'data-toggle'=>'modal', 'data-target'=>'#Documents'}
+            %i.fa.fa-file
+            Ver documentos
       
-      = link_to 'Descargar historial', params.merge(:format => :xls)
+      %div.modal.fade#Documents{'tabindex'=>'-1', 'role'=>'dialog', 'aria-labelledby'=>'myModalLabel', 'aria-hidden'=>'true'}
+        %div.modal-dialog.modal-lg
+          %div.modal-content
+            %div.modal-header
+              %button.close{'type'=>'button', 'data-dismiss'=>'modal', 'aria-hidden'=>'true'}
+                &times;
+              %h4.modal-title#myModalLabel
+                Documentos Boletín 
+            %div.modal-body
+
+              - if ! @bill.reports.blank?
+                %h4
+                  Informes
+                %table.table.table-striped
+                  %tr
+                    %th
+                      Fecha
+                    %th
+                      Trámite
+                  - @bill.reports.each do | doc |
+                    - if ! doc.link.blank?
+                      %tr
+                        %td
+                          = localize doc.date.to_date
+                        %td
+                          %a{'href'=>doc.link}
+                            = doc.step
+                        
+              - if ! @bill.documents.blank?
+                %h4
+                  Oficios
+                %table.table.table-striped
+                  %tr
+                    %th
+                      Fecha
+                    %th
+                      Trámite
+                  - @bill.documents.each do | doc |
+                    - if ! doc.link.blank?
+                      %tr
+                        %td
+                          = localize doc.date.to_date
+                        %td
+                          %a{'href'=>doc.link}
+                            = doc.step
+              
+              - if ! @bill.directives.blank?
+                %h4
+                  Indicaciones
+                %table.table.table-striped
+                  %tr
+                    %th
+                      Fecha
+                    %th
+                      Trámite
+                  - @bill.directives.each do | doc |
+                    - if ! doc.link.blank?
+                      %tr
+                        %td
+                          = localize doc.date.to_date
+                        %td
+                          %a{'href'=>doc.link}
+                            = doc.step
+              
+              - if ! @bill.revisions.blank?
+                %h4
+                  Comparados
+                %table.table.table-striped
+                  %tr
+                    %th
+                      Fecha
+                    %th
+                      Trámite
+                    %th
+                      Documento
+                  - @bill.revisions.each do | doc |
+                    - if ! doc.link.blank?
+                      %tr
+                        %td
+                          = localize doc.date.to_date
+                        %td
+                          %a{'href'=>doc.link}
+                            = doc.step
+
     
-    %div.row.visible-xs
-      %div.col-xs-5
-        %button.down.btn
-          %i.fa.fa-chevron-circle-down
-          Más recientes
-      %div.col-xs-5
-        %button.up.btn
-          %i.fa.fa-chevron-circle-up
-          Menos reciente
-    
-    %div.pull-right.hidden-xs
-      Invertir orden temporal
-      %a.down{'href'=>'#'}
+  %div.row.visible-xs
+    %div.col-xs-5
+      %button.down.btn
         %i.fa.fa-chevron-circle-down
-      %a.up{'href'=>'#'}
+        Más recientes
+    %div.col-xs-5
+      %button.up.btn
         %i.fa.fa-chevron-circle-up
-    
-    %div#timeline.row
-      - @bill.paperworks.each_with_index do | paperwork, index |
-        %div{ 'data-sort' => index.to_s }
-          %div.timeline-container.col-md-1
-            = image_tag("statusicon/" + paperwork.icon_event, class:"hidden-xs")
-          %div.resume.col-md-11
-            %h5
-              = paperwork.description
-            %p.light
-              = localize paperwork.date.to_date, :format => :long
+        Menos reciente
+  
+  %div.pull-right.hidden-xs
+    Invertir orden temporal
+    %a.down{'href'=>'#'}
+      %i.fa.fa-chevron-circle-down
+    %a.up{'href'=>'#'}
+      %i.fa.fa-chevron-circle-up
+  
+  %div#timeline.row
+    - @bill.paperworks.each_with_index do | paperwork, index |
+      %div{ 'data-sort' => index.to_s }
+        %div.timeline-container.col-md-1
+          = image_tag("statusicon/" + paperwork.icon_event, class:"hidden-xs")
+        %div.resume.col-md-11
+          %h5
+            = paperwork.description
+          %p.light
+            = localize paperwork.date.to_date, :format => :long
 
-            %p
-              = paperwork.stage
-            
-              - if paperwork.chamber.length > 1
-                • Cámara:
-                = paperwork.chamber
+          %p
+            = paperwork.stage
+          
+            - if paperwork.chamber.length > 1
+              • Cámara:
+              = paperwork.chamber
 
-              - if paperwork.session.length > 1
-                • Sesión:
-                = paperwork.session
+            - if paperwork.session.length > 1
+              • Sesión:
+              = paperwork.session
 
 :javascript
   $('.up').on('click', function(e){

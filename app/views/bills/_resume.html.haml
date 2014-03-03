@@ -36,8 +36,6 @@
           = image_tag("statusicon/" + @bill.icon, class:"hidden-xs", title:@bill.status.strip)
       %div.col-md-11
         %h4
-          - if ! @bill.resulting_document.blank?
-            = @bill.resulting_document + ' - '
           = @bill.title
         
         %p
