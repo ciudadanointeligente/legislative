@@ -313,6 +313,7 @@ strong {
 
 .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
   background-color: #e6e6c9;
+  color: #67675a;
 }
 
 .table>tbody>tr>td {
@@ -431,6 +432,17 @@ strong {
   margin-bottom: 50px;
 }
 
+/*MODAL*/
+
+.modal-header {
+  background: #462445;
+  color: #E6E6C9;
+}
+
+.modal-body {
+  background-color: #f5f5dd;
+}
+
 /*respuestas*/
 
 .home-answers-wraper {
@@ -454,6 +466,7 @@ strong {
   right: 27px;
   color: #e6e6c9;
 }
+
 
 /*Otros*/
 

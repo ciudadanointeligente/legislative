@@ -28,7 +28,7 @@
             %div.modal-body
 
               - if ! @bill.reports.blank?
-                %h4
+                %h5
                   Informes
                 %table.table.table-striped
                   %tr
@@ -47,7 +47,7 @@
                             = rep.step
                         
               - if ! @bill.documents.blank?
-                %h4
+                %h5
                   Oficios
                 %table.table.table-striped
                   %tr
@@ -66,7 +66,7 @@
                             = doc.step
               
               - if ! @bill.directives.blank?
-                %h4
+                %h5
                   Indicaciones
                 %table.table.table-striped
                   %tr
@@ -85,7 +85,7 @@
                             = dir.step
               
               - if ! @bill.revisions.blank?
-                %h4
+                %h5
                   Comparados
                 %table.table.table-striped
                   %tr
