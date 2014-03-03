@@ -34,6 +34,9 @@ gem 'turbolinks'
 # Using thin for development server
 gem 'thin', :group => :development
 
+# Replaces default rails error page with a much better and more useful error page
+gem 'better_errors', :group => :development
+
 # Support to XLS export
 gem 'ekuseru'
 
