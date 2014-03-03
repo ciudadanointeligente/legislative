@@ -1,0 +1,19 @@
+- @congressmen.result.each do | congressman |
+  %div.row
+    %div.col-md-1
+      - if !congressman.images.blank?
+        %img.img-circle.img-responsive{:src=>congressman.images[0].url}
+      - else
+        %img.img-circle.img-responsive{:src=>'http://placehold.it/200x200'}
+    %div.col-md-11
+      %h4
+        = link_to congressman.name, congressman_path(congressman.id)
+      %p
+        - if ! congressman.represent[0].region.blank?
+          %strong
+            Lugar que representa:
+          = congressman.represent[0].region
+  
+%div.text-right
+  - if ! params[:q].blank?
+    = link_to "Ver todos los resultados", searches_congressmen_path + '/?q=' + params[:q] + '&congressmen=2', :class => "btn btn-default"

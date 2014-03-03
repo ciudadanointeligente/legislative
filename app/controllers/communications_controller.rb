@@ -1,15 +1,20 @@
 require 'writeit-rails'
 
-
 class CommunicationsController < ApplicationController
-  # GET /communications
+
   def index
-    @parliamentarians = PopitPersonCollection.new
-    @parliamentarians.get ENV['popit_persons'], 'application/json'
+    @congressmen = PopitPersonCollection.new
+    @congressmen.get ENV['popit_persons'], 'application/json'
     @messages = LegislativeMessageCollection.new
-    @messages.get
-    # [fix] - improbe the ENV url for popit, actually works without http in some instances
+    page = 1
+    if !params[:page].nil?
+      page = params[:page]
+    end
+    @messages.get page: page
+    
+    set_pagination @messages.meta
   end
+
   def create
     set_current_instance
   	@message = Message.new
@@ -23,6 +28,21 @@ class CommunicationsController < ApplicationController
     @message.author_email = params[:author_email]
     @message.push_to_api
   end
+  def per_person
+    id = params[:id]
+    @person = PopitPerson.get ENV['popit_persons'] + id, 
+                'application/json'
+
+    if not @person.id.nil?
+      @messages = LegislativeMessageCollection.new
+      begin
+        @messages.get person: @person
+      rescue
+      end
+    else
+      render text: "404 No lo encontramos", status: 404
+    end
+  end
 
   private
   def set_current_instance
@@ -31,5 +51,12 @@ class CommunicationsController < ApplicationController
     @writeitinstance.base_url = ENV['writeit_base_url']
     @writeitinstance.username = ENV['writeit_username']
     @writeitinstance.api_key = ENV['writeit_api_key']
+    @writeitinstance.per_page = ENV['writeit_messages_per_page']
+  end
+  def set_pagination meta
+    @pagination = Hash.new
+    @pagination['current_page'] = (meta['offset']/meta['limit']) + 1
+    @pagination['total_pages'] = (meta['total_count']/meta['limit']) + 1
+
   end
 end

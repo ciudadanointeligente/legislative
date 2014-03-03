@@ -17,35 +17,10 @@ body {
   border-color: transparent;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
-}
-
-h2 {
-  font-size: 36px;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 28px;
-  font-weight: 700;
-}
-
-h4 {
-  font-size: 21px;
-  font-weight: 700;
-}
-
-h5 {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-h6 {
-  font-size: 10px;
-  font-weight: 700;
 }
 
 a {
@@ -56,14 +31,30 @@ a:hover {
   color: #dd8740;
 }
 
-p.light {
+.light {
   color: #a6a691;
 }
 
 strong {
   font-weight: 700;
   font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
+}
+
+.small {
+  font-size: 80%;
+}
+
+.txt-red {
+  color: #ea6a56;
+}
+
+.txt-green {
+  color: #3db091;
+}
+
+.col-md-1.side {
+  margin-top: 10px;
 }
 
 /*Botones*/
@@ -78,7 +69,6 @@ strong {
   border-color: transparent;
   border-bottom: 2px solid #7c7c6d;
   border-radius: 0px;
-  height: 50px;
 }
 
 .btn-default:hover {
@@ -106,7 +96,6 @@ strong {
   border-color: transparent;
   border-bottom: 2px solid #1e8466;
   border-radius: 0px;
-  height: 50px;
 }
 
 .btn-primary:hover {
@@ -147,7 +136,74 @@ strong {
   display: inline-flex;
 }
 
+.action-btn>li a {
+  padding: 2px 5px;
+  text-decoration: none;
+}
+
+.action-btn.list-inline>li {
+  padding: 0px 1px;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/*Labels*/
+
+.label-default {
+  background-color: #e6e6c9;
+  position: relative;
+  border-radius: 0;
+  color: #a6a691;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  padding: .3em .6em .2em;
+}
+
+.label-default:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: #e6e6c9;
+  border-width: 9px;
+  margin-top: -10px;
+}
+
+.label-default:after{
+  content:"";
+  position:absolute;
+  top:8px;
+  left:-1px;
+  float:left;
+  width:4px;
+  height:4px;
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  border-radius:2px;
+  background:#f9f9eb;
+}
+
+.hero-space .label-default:after{
+  background:#3e1f3e;
+}
+
 /*Menu*/
+
+#site-logo {
+  padding: 10px 0;
+}
 
 .navbar-nav {
   float: right;
@@ -162,12 +218,37 @@ strong {
   color: #c4b7c4;
 }
 
+.navbar-inverse .navbar-nav>li>a {
+  color: #B99EAF;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+  color: #E6E6C9;
+}
+
+.breadcrumb {
+  padding: 0px 0px;
+  background-color: transparent;
+}
+
+.breadcrumb a {
+  color: #a6a691;
+}
+
+.breadcrumb>.active {
+  color: #a6a691;
+}
+
+.breadcrumb>li+li:before {
+  color: #a6a691;
+}
+
 /*Hero space*/
 
 .hero-space {
   background: #462445;
   color: #e6e6c9;
-  padding: 60px 0px;
+  padding: 10px 0px;
   margin-top: -10px;
 }
 
@@ -176,6 +257,13 @@ strong {
   color: #e6e6c9;
   padding: 10px 0px 35px;
   margin-bottom: 20px;
+}
+
+#graph > h4 > a {
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: initial;
+  font-family: 'Lato';
 }
 
 /*Tablas*/
@@ -221,7 +309,6 @@ strong {
   background-image: none;
   border: none;
   border-radius: 0px;
-  height: 50px;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -242,7 +329,7 @@ strong {
 /*HOME*/
 
 .hero-space h4 {
-  margin-bottom: 50px;
+  text-transform: uppercase;
 }
 
 /*hot-space*/
@@ -468,7 +555,17 @@ span.paring {
 }
 /*End Comunicacion*/
 
-/*bills*/
+
+/* BILLS*/
+
+
+.hero-space-bill {
+  padding: 20px 0px 60px;
+  background: #462445;
+  color: #e6e6c9;
+  margin-top: -10px;
+}
+
 .title-header {
   color: #FFF;
   background-color: #67675A;
@@ -476,4 +573,213 @@ span.paring {
 .title-header a {
   color: #FFF;
 }
+
+#timeline div.resume.col-md-11 {
+  margin-bottom: 40px;
+}
+
+.resume h5 {
+  margin-bottom: 0;
+}
+
+.resume p {
+  margin: 0 0 0px;
+}
+
+.timeline-container img {
+  margin-top: 8px;
+}
+
+.progress {
+  background-color: #fff;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 10px 0 5px;
+}
+
+.progress-bar {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/*a favor*/
+.progress-bar-success {
+  background-color: #3db091;
+}
+
+/*en contra*/
+.progress-bar-danger {
+  background-color: #ea6a56;
+}
+
+/*se abstienen*/
+.progress-bar-warning {
+  background-color: #e6e6c9;
+}
+
+/*ausentes*/
+.progress-bar-info {
+  background-color: #cdcdb3;
+}
+
+/*pareos*/
+.progress-bar-default {
+  background-color: #a6a691;
+}
+
+
 /*end bills*/
+
+/*SVG Graph*/
+svg.graph {
+  height: 210px;
+  width: 750px;
+  margin: 2em 0 5em;
+}
+
+svg.graph .grid {
+  stroke: #CCC;
+  /*stroke-dasharray: 1 2;*/
+  stroke-width: 0.5;
+}
+
+svg.graph .points {
+  stroke: white;
+  stroke-width: 0.5;
+}
+
+svg.graph .first_set {
+  fill: none;
+  stroke: #A6A691;
+}
+
+#points > circle {
+  fill: #F9F9EB;
+}
+
+svg.graph .surfaces {
+  fill-opacity: 0.5;
+}
+
+svg.graph .grid.double {
+  stroke-opacity: 0.4;
+}
+
+svg.graph .labels {
+font-family: 'Lato', sans-serif;
+font-size: 12px;
+letter-spacing: -1px;
+}
+
+svg.graph .labels.x-labels {
+  text-anchor: middle;
+}
+
+svg.graph .labels.y-labels {
+  text-anchor: end;
+}
+
+#tooltip {
+  position: absolute;
+  background: black;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 9px 11px 0px 11px;
+  display: none;
+  z-index: 100 !important;
+  width: 165px;
+  min-height: 80px;
+  box-shadow: 1px 1px 1px 0px #000;
+}
+#tooltip.right {
+    box-shadow: -1px 1px 1px 0px #000;
+}
+#tooltip.right svg {
+    left: auto;
+    right: 0px;
+}
+#tooltip svg {
+    position: absolute;
+    display: inline;
+    float: right;
+    left: 0px;
+    right: auto;
+    top: -13px;
+    width: 11px;
+    height: 13px;
+}
+#tooltip #tooltip-triangle {
+    background: black;
+    fill: rgba(0, 0, 0, 0.8);
+}
+#tooltip .value .value-part {
+    font-size: 32px;
+    vertical-align: top;
+    position: relative;
+    top: -3px;
+}
+
+.header-congressmen {
+  margin-bottom: 5px;
+}
+
+/* bill history */
+.links-paperworks-action {
+  margin-top: 13px
+}
+/*end bill history*/
+
+/* SCREEN */
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 21px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  h6 {
+    font-size: 10px;
+  }
+  .hero-space {
+    padding: 60px 0px;
+  }
+  #graph {
+    padding: 40px 0px;
+  }
+  .form-control {
+    height: 50px;
+  }
+  .btn-primary {
+    height: 50px;
+  }
+  .btn-default {
+    height: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-lg {
+    width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  h5 {
+    text-transform: none;
+  }
+}

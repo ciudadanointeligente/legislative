@@ -8,10 +8,11 @@
     <p>
         Los proyectos de ley con actualizaciones son:
         <ul>
-          <%= @bills.each do |bill|
-            link_to(bill, bill_path(bill))
-          end 
-          %>
+          <% @bills.each do | bill | %>
+          <li>
+          <% @bill_title = Billit::Bill.get(ENV['billit_url'] + bill, 'application/json').title %>
+          <%= link_to(bill + ": " + @bill_title, 'http://www.congresoabierto.cl' + bill_path(bill)) %>
+          <%- end %>
         </ul>
       <br/>
     </p>

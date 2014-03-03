@@ -4,13 +4,15 @@
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" ng-app="pmoApp"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="pmoApp" lang="es"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title><%= Legislative::Application.config.application_name %></title>
+    <title><%= @title %><%= Legislative::Application.config.application_name %></title>
     <meta name="description" content="">
+    <meta name="og:image" content="<%= asset_path('assets/congreso-abierto-og-fb.png') %>">
+    <meta name="og:title" content="<%= @title %><%= Legislative::Application.config.application_name %>">
 
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
     <meta name="viewport" content="width=device-width">
@@ -36,7 +38,7 @@
     <%= javascript_include_tag 'modernizr.2.7.0.min.js' %>
     -->
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-
+    
     <%= csrf_meta_tag %>
 </head>
 <body>
@@ -51,15 +53,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to Legislative::Application.config.application_name, root_path, :class => 'navbar-brand' %>
+          <div id='site-logo'>
+            <a href="<%=root_path%>"><%= image_tag "logo-congresoabierto.png", alt:'Congreso Abierto' %></a>
+          </div>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to t('layout.search'), searches_path %><li/>
-            <li><%= link_to t('layout.tables'), tables_path %><li/>
+            <!-- <li><%= link_to t('layout.tables'), tables_path %><li/> -->
             <li><%= link_to t('layout.communication'), communications_path %><li/>
-            <li><%= link_to t('layout.disclosure'), disclosures_path %><li/>
-            <li><%= link_to t('layout.parliamentarians'), parliamentarians_path %><li/>
+            <!-- <li><%= link_to t('layout.disclosure'), disclosures_path %><li/> -->
+            <li><%= link_to t('layout.congressmen'), congressmen_path %><li/>
             <li><%= link_to t('layout.glossary'), glossaries_path %><li/>
             <!-- <li><%= link_to t('layout.about_us'), 'http://www.ciudadanointeligente.org/quienes-somos/' %><li/> -->
           </ul>

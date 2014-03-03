@@ -1,72 +1,152 @@
 %section#graph
   %div.row
-    %div.col-md-9
-      %h3
-        Título Gráfico
     %div.col-md-3
-      %p
-        Descargar historial
-        %i.fa.fa-download
-  %div.graph{'style'=>'height:200px'}
-  /the graph
+      - if ! @bill.paperworks.blank?
+        %h4{name:'timeline'}
+          EVENTOS DEL PROYECTO
+    %div.col-md-9.links-paperworks-action
+      %ul.list-inline
+        %li
+          = link_to url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls' do
+            Descargar historial
+            %i.fa.fa-download
+        %li
+          %a{'href'=>'#', 'data-toggle'=>'modal', 'data-target'=>'#Documents'}
+            Ver documentos
+            %i.fa.fa-file
+      
+      %div.modal.fade#Documents{'tabindex'=>'-1', 'role'=>'dialog', 'aria-labelledby'=>'myModalLabel', 'aria-hidden'=>'true'}
+        %div.modal-dialog.modal-lg
+          %div.modal-content
+            %div.modal-header
+              %button.close{'type'=>'button', 'data-dismiss'=>'modal', 'aria-hidden'=>'true'}
+                &times;
+              %h4.modal-title#myModalLabel
+                Documentos Boletín 
+            %div.modal-body
+
+              - if ! @bill.reports.blank?
+                %h4
+                  Informes
+                %table.table.table-striped
+                  %tr
+                    %th
+                      Fecha
+                    %th
+                      Trámite
+                  - @bill.reports.each do | rep |
+                    - if ! rep.link.blank?
+                      %tr
+                        %td
+                          - if ! rep.date.blank?
+                            = localize rep.date.to_date
+                        %td
+                          %a{'href'=>rep.link}
+                            = rep.step
+                        
+              - if ! @bill.documents.blank?
+                %h4
+                  Oficios
+                %table.table.table-striped
+                  %tr
+                    %th
+                      Fecha
+                    %th
+                      Trámite
+                  - @bill.documents.each do | doc |
+                    - if ! doc.link.blank?
+                      %tr
+                        %td
+                          - if ! doc.date.blank?
+                            = localize doc.date.to_date
+                        %td
+                          %a{'href'=>doc.link}
+                            = doc.step
+              
+              - if ! @bill.directives.blank?
+                %h4
+                  Indicaciones
+                %table.table.table-striped
+                  %tr
+                    %th
+                      Fecha
+                    %th
+                      Trámite
+                  - @bill.directives.each do | dir |
+                    - if ! dir.link.blank?
+                      %tr
+                        %td
+                          - if ! dir.date.blank?
+                            = localize dir.date.to_date
+                        %td
+                          %a{'href'=>dir.link}
+                            = dir.step
+              
+              - if ! @bill.revisions.blank?
+                %h4
+                  Comparados
+                %table.table.table-striped
+                  %tr
+                    %th
+                      Fecha
+                    %th
+                      Trámite
+                    %th
+                      Documento
+                  - @bill.revisions.each do | rev |
+                    - if ! rev.link.blank?
+                      %tr
+                        %td
+                          %a{'href'=>rev.link}
+                            = rev.description
+
+    
+  %div.row.visible-xs
+    %div.col-xs-5
+      %button.down.btn
+        %i.fa.fa-chevron-circle-down
+        Más recientes
+    %div.col-xs-5
+      %button.up.btn
+        %i.fa.fa-chevron-circle-up
+        Menos reciente
   
-  %div#timeline
-    - cnt = 0
-    - while cnt < 6
-      %div.timeline-container
-        %div.status
-          %img{'src'=>'http://placehold.it/50x50'}
-        %div.resume
-          %h4
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, eum, esse in consectetur libero obcaecati
+  %div.pull-right.hidden-xs
+    Invertir orden temporal
+    %a.down{'href'=>'#'}
+      %i.fa.fa-chevron-circle-down
+    %a.up{'href'=>'#'}
+      %i.fa.fa-chevron-circle-up
+  
+  %div#timeline.row
+    - @bill.paperworks.each_with_index do | paperwork, index |
+      %div{ 'data-sort' => index.to_s }
+        %div.timeline-container.col-md-1
+          = image_tag("statusicon/" + paperwork.icon_event, class:"hidden-xs")
+        %div.resume.col-md-11
+          %h5
+            = paperwork.description
+          %p.light
+            = localize paperwork.date.to_date, :format => :long
+
           %p
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, doloribus porro aperiam a soluta natus repellat perferendis rerum fuga neque vero delectus quae magnam. Quisquam quo velit expedita fuga nam?
-          - if cycle('odd', 'even') == 'odd'
-            - green = "width:" + rand(30...50).to_s + "%"
-            - yellow = "width:" + rand(20...35).to_s + "%"
-            - red = "width:" + rand(10...30).to_s + "%"
-            
-            %div.progress
-              %div.progress-bar.progress-bar-success{"style" => green}
-                %span.sr-only
-                  35% Complete (success)
-              %div.progress-bar.progress-bar-warning{"style" => yellow}
-                %span.sr-only
-                  20% Complete (warning)
-              %div.progress-bar.progress-bar-danger{"style" => red}
-                %span.sr-only
-                  45% Complete (danger)
-          - cnt += 1
+            = paperwork.stage
+          
+            - if paperwork.chamber.length > 1
+              • Cámara:
+              = paperwork.chamber
 
-  %p.showmore.text-center
-    %i#showicon.fa.fa-chevron-down
-
-:css
-  .showmore {
-    background-color: #CCC;
-  }
-  .showless {
-    background-color: #CCC;
-  }
-  #timeline {
-    height: 100px;
-    overflow: hidden;
-  }
+            - if paperwork.session.length > 1
+              • Sesión:
+              = paperwork.session
 
 :javascript
-  $('#graph').on('click', 'p.showmore', function(){
-    $('#timeline').css('height', 'auto');
-    $('#timeline').css('overflow', 'visible');
-    $(this).attr('class','showless');
-    $(this).addClass('text-center');
-    $('#showicon').attr('class','fa fa-chevron-up');
+  $('.up').on('click', function(e){
+    e.preventDefault();
+    $("div#timeline>div").tsort({order:'asc', data:'sort'});
   });
 
-  $('#graph').on('click', 'p.showless', function(){
-    $('#timeline').css('height', '100px');
-    $('#timeline').css('overflow', 'hidden');
-    $(this).attr('class','showmore');
-    $(this).addClass('text-center');
-    $('#showicon').attr('class','fa fa-chevron-down');
-  })
-  
+  $('.down').on('click', function(e){
+    e.preventDefault();
+    $("div#timeline>div").tsort({order:'desc', data:'sort'});
+  });

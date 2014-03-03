@@ -36,7 +36,7 @@ describe BillsController do
 
   describe "GET index" do
     xit "assigns all bills as @bills" do
-      bill = Bill.create! valid_attributes
+      bill = Billit::Bill.create! valid_attributes
       get :index, {}, valid_session
       assigns(:bills).should eq([bill])
     end
@@ -44,7 +44,7 @@ describe BillsController do
 
   describe "GET show" do
     it "assigns the requested bill as @bill" do
-      bill = Bill.get(ENV['billit'] + "6967-06", 'application/json')
+      bill = Billit::Bill.get(ENV['billit_url'] + "6967-06", 'application/json')
       # bill = Bill.create! valid_attributes
       get :show, {:id => bill.uid, :locale => 'es'}, valid_session
       assigns(:bill).uid.should eq(bill.uid)
@@ -77,7 +77,7 @@ describe BillsController do
     end
 
     it "returns @date_freq as an array of integers" do
-      bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
+      bill = Billit::Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
       # bill = Bill.create! valid_attributes
       get :show, {:id => bill.uid, :locale => 'es'}, valid_session
       assigns(:date_freq).should be_an_instance_of Array
@@ -88,7 +88,7 @@ describe BillsController do
     end
 
     it "assigns @date_freq values according to defined time intervals" do
-      bill = Bill.get(ENV['billit'] + "6967-06", 'application/json')
+      bill = Billit::Bill.get(ENV['billit_url'] + "6967-06", 'application/json')
       Date.stub(:today) {Date.new(2013, 4)}
       response = get :show, {:id => bill.uid, :locale => 'es'}, valid_session
       p response.body
@@ -102,13 +102,13 @@ describe BillsController do
   describe "GET new" do
     xit "assigns a new bill as @bill" do
       get :new, {}, valid_session
-      assigns(:bill).should be_a_new(Bill)
+      assigns(:bill).should be_a_new(Billit::Bill)
     end
   end
 
   describe "GET edit" do
     xit "assigns the requested bill as @bill" do
-      bill = Bill.create! valid_attributes
+      bill = Billit::Bill.create! valid_attributes
       get :edit, {:id => bill.to_param}, valid_session
       assigns(:bill).should eq(bill)
     end
@@ -119,32 +119,32 @@ describe BillsController do
       xit "creates a new Bill" do
         expect {
           post :create, {:bill => valid_attributes}, valid_session
-        }.to change(Bill, :count).by(1)
+        }.to change(Billit::Bill, :count).by(1)
       end
 
       xit "assigns a newly created bill as @bill" do
         post :create, {:bill => valid_attributes}, valid_session
-        assigns(:bill).should be_a(Bill)
+        assigns(:bill).should be_a(Billit::Bill)
         assigns(:bill).should be_persisted
       end
 
       xit "redirects to the created bill" do
         post :create, {:bill => valid_attributes}, valid_session
-        response.should redirect_to(Bill.last)
+        response.should redirect_to(Billit::Bill.last)
       end
     end
 
     describe "with invalid params" do
       xit "assigns a newly created but unsaved bill as @bill" do
         # Trigger the behavior that occurs when invalid params are submitted
-        Bill.any_instance.stub(:save).and_return(false)
+        Billit::Bill.any_instance.stub(:save).and_return(false)
         post :create, {:bill => {  }}, valid_session
-        assigns(:bill).should be_a_new(Bill)
+        assigns(:bill).should be_a_new(Billit::Bill)
       end
 
       xit "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
-        Bill.any_instance.stub(:save).and_return(false)
+        Billit::Bill.any_instance.stub(:save).and_return(false)
         post :create, {:bill => {  }}, valid_session
         response.should render_template("new")
       end
@@ -153,20 +153,20 @@ describe BillsController do
 
   describe "PUT update" do
     describe "with valid params" do
-      it "updates the requested bill" do
-        bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
+      xit "updates the requested bill" do
+        bill = Billit::Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
         put :update, {id: bill.uid, tags: bill.tags, locale: 'es'}, valid_session
         assigns(:bill).tags.should eq(bill.tags)
       end
 
       xit "assigns the requested bill as @bill" do
-        bill = Bill.create! valid_attributes
+        bill = Billit::Bill.create! valid_attributes
         put :update, {:id => bill.to_param, :bill => valid_attributes}, valid_session
         assigns(:bill).should eq(bill)
       end
 
       xit "redirects to the bill" do
-        bill = Bill.create! valid_attributes
+        bill = Billit::Bill.create! valid_attributes
         put :update, {:id => bill.to_param, :bill => valid_attributes}, valid_session
         response.should redirect_to(bill)
       end
@@ -174,17 +174,17 @@ describe BillsController do
 
     describe "with invalid params" do
       xit "assigns the bill as @bill" do
-        bill = Bill.create! valid_attributes
+        bill = Billit::Bill.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        Bill.any_instance.stub(:save).and_return(false)
+        Billit::Bill.any_instance.stub(:save).and_return(false)
         put :update, {:id => bill.to_param, :bill => {  }}, valid_session
         assigns(:bill).should eq(bill)
       end
 
       xit "re-renders the 'edit' template" do
-        bill = Bill.create! valid_attributes
+        bill = Billit::Bill.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        Bill.any_instance.stub(:save).and_return(false)
+        Billit::Bill.any_instance.stub(:save).and_return(false)
         put :update, {:id => bill.to_param, :bill => {  }}, valid_session
         response.should render_template("edit")
       end
@@ -193,14 +193,14 @@ describe BillsController do
 
   describe "DELETE destroy" do
     xit "destroys the requested bill" do
-      bill = Bill.create! valid_attributes
+      bill = Billit::Bill.create! valid_attributes
       expect {
         delete :destroy, {:id => bill.to_param}, valid_session
-      }.to change(Bill, :count).by(-1)
+      }.to change(Billit::Bill, :count).by(-1)
     end
 
     xit "redirects to the bills list" do
-      bill = Bill.create! valid_attributes
+      bill = Billit::Bill.create! valid_attributes
       delete :destroy, {:id => bill.to_param}, valid_session
       response.should redirect_to(bills_url)
     end

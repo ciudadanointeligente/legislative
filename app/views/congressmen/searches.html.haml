@@ -1,0 +1,16 @@
+%div
+  %ol.breadcrumb
+    %li
+      %a{'href'=>'#'}
+        Portada
+    %li.active
+      Resultado congresistas
+
+%div.row
+  %div.col-md-3
+    %h4
+      Congresistas
+    = render :partial => "filter_search_form"
+
+  %div.col-md-9
+    = render :partial => "box_congressmen_result" 

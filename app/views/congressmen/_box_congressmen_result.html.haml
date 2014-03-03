@@ -1,0 +1,28 @@
+- @congressmen.persons.each do |congressman|
+  %div.row
+    %div.col-md-1
+      - if !congressman.images[0].blank?
+        %img.img-circle.img-responsive{:src=>congressman.images[0].url}
+      - else
+        %img.img-circle.img-responsive{'src'=>'http://www.placehold.it/200x200'}
+    %div.col-md-11
+      %div.row
+        %div.col-md-9
+          %h4
+            = link_to congressman.name, congressman_path(congressman.id)
+        %div.col-md-3
+          %a{'href'=>'#'}
+            %i.fa.fa-pencil
+            99999
+      %p
+        %strong
+          Partido:
+        el Partido
+        - if ! congressman.represent[0].region.blank?
+          %strong
+            Lugar que representa:
+          = congressman.represent[0].region
+
+- if @congressmen.persons.count == 0
+  %p.text-center
+    = t('search.there_are_no_results')

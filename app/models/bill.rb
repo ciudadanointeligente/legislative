@@ -1,35 +1,20 @@
-require 'roar/representer/feature/client'
-require 'billit_representers/representers/bill_representer'
+require 'billit_representers/models/bill'
 
-class Bill
-  include Billit::BillRepresenter
-
-  # FIXME: why can't we override #id here?
-  def id
-    links[:self].href
-  end
-  
-  def url
-    links[:self].href
-  end
-
-  def to_param
-    CGI::escape(url)
-  end
-
-  def self.from_param(param)
-    find_by_id(param)
-  end
-
-  def persisted?
-    @persisted
-  end
-  
-  def errors
-    []
-  end
-
-  def web_url
-    ENV['root_url'] + 'proyectos/' + self.uid
+class Billit::Bill
+  def icon
+    case self.status.strip
+    when "Archivado"
+      return 'filed.png'
+    when "Publicado"
+      return 'published.png'
+    when "En tramitación"
+      return 'paperwork.png' #icono pendiente 
+    when "Rechazado"
+      return 'rejected.png' 
+    when "Retirado"
+      return 'discarded.png' 
+    else
+      return ''
+    end
   end
 end

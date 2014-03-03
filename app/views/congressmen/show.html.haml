@@ -1,65 +1,113 @@
 %div.row
-  %div.col-md-7
+  %div.col-md-8
     %ul.breadcrumb
       %li
-        %a{'href'=>'#'}
-          Parlamentarios
+        = link_to 'Portada', root_url
       %li.active
-        Pedro Pablo Alvarez-Salamanca Ramirez
-  %div.col-md-5
-    %ul.list-inline
+        = @congressman.name
+  %div.col-md-4
+    %ul.list-inline.action-btn
       %li
-        %i.fa.fa-star-o 
-        9999 Suscripciones
+        = link_to "Preguntale", {controller: "communications", action: "per_person", id: @congressman.id}, class: "btn-warning"
       %li
-        %i.fa.fa-pencil 
-        9999 Preguntas
+        - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
+        %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+          %i.fa.fa-facebook 
+          Comparte
       %li
-        %i.fa.fa-facebook 
-        Comparte
-      %li
-        %i.fa.fa-twitter 
-        Twittea
+        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags=pmo&text='+@congressman.name
+        %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+          %i.fa.fa-twitter 
+          Twittea
+
 
 %div
   %h2
-    = @parliamentarian.name
+    = @congressman.name
   %h4
     Senador
-  
+
+- if ! @message.nil?
+  %div
+    última pregunta
+    %div
+      %div
+      = @message.subject
+      %div
+      = @message.content
+
+
 %div.row
   %div.col-md-3
-    %img{ 'src' => 'http://placehold.it/230x230'}
-    %p
-      Lugar que representa: Región Metropolitana
-    %p
-      Periodo: 2000 - 2004 Senador, 2010 - 2014 Diputado
-    %p
-      Partido:
-      %a{ 'href' => 'http://www.google.cl' }
-        Partido Independiente Popular Latinoamericano
-        %i.fa.fa-external-link
-    %p
-      Comisión: Educación
-    %div
-      %ul
-        %li
-          %a{ 'href' => 'http://www.google.cl' }
-            %i.fa.fa-globe
-            Sitio Web
-        %li
-          %a{ 'href' => 'http://www.linkedin.com' }
-            %i.fa.fa-linkedin-square
-            CV
-        %li
-          %a{ 'href' => 'http://www.facebook.com' }
-            %i.fa.fa-facebook-square
-            Facebook
-        %li
-          %a{ 'href' => 'http://www.twitter.com' }
-            %i.fa.fa-twitter-square
-            Twitter
-      
+    - if ! @congressman.images.blank?
+      %img.img-responsive{:src=>@congressman.images[0].url}
+    - else
+      %img.img-responsive{ 'src' => 'http://placehold.it/230x230'}
+    
+    - if ! @congressman.represent.blank?
+      %p
+        Lugar que representa:
+        %ul
+        - @congressman.represent.each do | r |
+          - if ! r.district.blank?
+            %li 
+              = 'Distrito: ' + r.district
+          
+          - if ! r.region.blank?
+            %li 
+              = 'Región: ' + r.region
+
+          - if ! r.comunas.blank?
+            %li 
+              = 'Comunas: ' + r.comunas
+
+    - if ! @congressman.parliamentarian_period.blank?
+      %p
+        Periodo: 
+        %ul
+        - @congressman.parliamentarian_period.each do | p |
+          - if ! p.date.blank?
+            %li 
+              = p.date  
+        
+    - if ! @congressman.memberships.blank?
+      %p
+        Partido:
+        - @organizations.result.each do | o |
+          - url = '#';
+          -if ! o.links[1].blank?
+            - url = @congressman.memberships[0].organization_id == o.id ? o.links[1].url : '#'
+          
+            %a{ 'href' => url, 'target' => '_blank' }
+              = o.name if @congressman.memberships[0].organization_id == o.id
+            %i.fa.fa-external-link
+    
+    - if ! @congressman.commissions.blank?
+      %p
+        Comisiones:
+        %ul
+        - @congressman.commissions.each do | c |
+          - if ! c.permanent.blank?
+            %li 
+              = 'Permanente: ' + c.permanent  
+          
+          - if ! c.special.blank?
+            %li 
+              = 'Especial: ' + c.special 
+          
+          - if ! c.researcher.blank?
+            %li 
+              = 'Investigadora: ' + c.researcher 
+    
+    - if ! @congressman.links.blank?
+      %div
+        %ul
+          - @congressman.links.each do | link |
+            %li
+              %a{ 'href' => link.url }
+                %i.fa.fa-globe
+                = link.note
+        
     %h5
       Biografía
     %p
@@ -71,7 +119,7 @@
 
   %div.col-md-9
     %h3
-      Últimas Iniciativas
+      Últimas iniciativas
     %div.table-responsive
       %table.table
         %tr
@@ -84,7 +132,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
             %p
               %a{ 'href' => '#' }
-                Ver Proyecto
+                Ver proyecto
         %tr
           %td
             %img{ 'src' => 'http://placehold.it/35x58' }
@@ -95,7 +143,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
             %p
               %a{ 'href' => '#' }
-                Ver Proyecto
+                Ver proyecto
         %tr
           %td
             %img{ 'src' => 'http://placehold.it/35x58' }
@@ -106,7 +154,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
             %p
               %a{ 'href' => '#' }
-                Ver Proyecto
+                Ver proyecto
     
     %div.special-box
       %p.question
@@ -145,7 +193,7 @@
 
     %div.intervencions.table-responsive
       %h3
-        Últimas Intervenciones
+        Últimas intervenciones
       %table.table
         %tr
           %td

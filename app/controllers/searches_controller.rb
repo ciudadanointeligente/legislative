@@ -1,6 +1,11 @@
 require 'net/http'
 require 'httparty'
 
+require 'popit_representers/models/organization_collection'
+require 'billit_representers/models/bill_page'
+require './app/models/bill'
+
+
 class SearchesController < ApplicationController
   def index
     response = HTTParty.get(ENV['popit_persons'])
@@ -13,16 +18,23 @@ class SearchesController < ApplicationController
       @authors_list.push(author['name'])
     end
 
+    @organizations = Popit::OrganizationCollection.new
+    @organizations.get ENV['popit_organizations'], 'application/json'
+
+    @congressmen = PopitPersonCollection.new
+
     if !params.nil? && params.length > 3 # default have 3 keys {'action'=>'index', 'controller'=>'searchs', "locale"=>"xx"}
       
-      # make a redirect in case of someone pick just one filter in main page
-      # redirect to bills advanced search
-      if params[:bills] == '1' || params[:parliamentarians] == ''
-        redirect_to searches_bills_path(params)
-      end
-      # redirect to parliamentarians advanced search
-      if params[:parliamentarians] == '2' || params[:bills] == ''
-        redirect_to searches_parliamentarians_path(params)
+      if ! ( params[:bills] == '1' && params[:congressmen] == '2' )
+        # make a redirect in case of someone pick just one filter in main page
+        # redirect to bills advanced search
+        if params[:bills] == '1' || params[:congressmen] == ''
+          redirect_to searches_bills_path(params)
+        end
+        # redirect to congressmen advanced search
+        if params[:congressmen] == '2' || params[:bills] == ''
+          redirect_to searches_congressmen_path(params)
+        end
       end
 
       @keywords = String.new
@@ -39,12 +51,11 @@ class SearchesController < ApplicationController
           end
         end
       end
-      @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}&per_page=3", 'application/json')
+      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}per_page=3", 'application/json')
+      @congressmen.get ENV['popit_search']+"#{URI.encode(@keywords)}per_page=3", 'application/json'
     else
-      @bills_query = BillCollectionPage.get(ENV['billit_url'] + "search.json/?per_page=3", 'application/json')
+      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?per_page=3", 'application/json')
+      @congressmen.get ENV['popit_search']+"per_page=3", 'application/json'
     end
-    
-    @parliamentarians = PopitPersonCollection.new
-    @parliamentarians.get ENV['popit_persons'], 'application/json'
   end
 end

@@ -15,14 +15,22 @@ class LegislativeMessageCollection
 
 	collection :objects, :class => LegislativeMessageRepresenter
 
-	def get
-		
+	property :meta
+
+	def get(page: 1, person: nil)
 		url = URI.join(ENV['writeit_base_url'], ENV['writeit_url'], 'messages/')
-		params = URI.encode_www_form("format" => "json", 
+		hash_parameters = {
+			"format" => "json", 
 			"username" => ENV["writeit_username"], 
-			"api_key" => ENV["writeit_api_key"])
-		url.query = params
-		
+			"api_key" => ENV["writeit_api_key"], 
+			"limit" => ENV["writeit_messages_per_page"],
+			"page" => page
+		}
+		if not person.nil?
+			hash_parameters['person__popit_id'] = person.id
+		end
+		parameters = URI.encode_www_form hash_parameters
+		url.query = parameters
 		super(url.to_s, 'application/json')
 	end
 end

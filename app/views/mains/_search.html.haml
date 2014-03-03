@@ -1,8 +1,8 @@
 %div.hero-space
   %div.container
-    %h2
+    %h2.text-center
       Lorem ipsum dolor sit amet
-    %h4
+    %h4.text-center
       CONSECTETUER ADIPISCING ELIT. AENEAN COMMODO LIGULA EGET DOLOR. AENEAN MASSA.
 
     = form_tag(t('routes.searches'), :method => 'get', :class => "form-inline") do
@@ -16,8 +16,8 @@
 
           %div.checkbox
             %label
-              %input{:type => 'checkbox', :name => 'bills', :value => '1'}
+              %input{:type => 'checkbox', :name => 'bills', :value => '1', :checked=>true}
                 Proyectos de ley
             %label
-              %input{:type => 'checkbox', :name => 'parliamentarians', :value => '2'}
-                Parlamentarios
+              %input{:type => 'checkbox', :name => 'congressmen', :value => '2', :checked=>true}
+                Congresistas

@@ -1,60 +1,63 @@
-%div.hero-space
+%div.hero-space-bill
   %div.container
     %div.row
-      %div.col-md-7
+      %div.col-md-9
         %ol.breadcrumb
           %li
-            %a{'href'=>'#'}
-              Portada
+            = link_to t('layout.home'), root_path
           %li
             %a{'href'=>'#'}
-              Proyectos de Ley
+              Proyectos de ley
           %li.active
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit...
-      %div.col-md-5
-        %ul.list-inline
+            = @bill.title[0..30] + '...'
+      
+      %div.col-md-3
+        %ul.list-inline.action-btn
           %li
-            %i.fa.fa-star-o 
-            9999 Suscripciones
+            = link_to (new_user_subscription_path(:bill => params[:id])), class: 'btn-warning' do
+              %i.fa.fa-star-o
+              Suscribir
           %li
-            %i.fa.fa-pencil 
-            9999 Preguntas
+            - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
+            %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+              %i.fa.fa-facebook 
+              Comparte
           %li
-            %i.fa.fa-facebook 
-            Comparte
-          %li
-            %i.fa.fa-twitter 
-            Twittea
-    %div
-      %h2
-        = @bill.title
-      %p
-        = @bill.abstract
-      %p
-        Autores:
-        %ul.list-inline
-          %li
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga
-          %li
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga
-          %li
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga
-          %li
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga
-          %li
-            %a{'href'=>'#'}
-              Juan Pedro Pablo Rockefeller Astaburoaga
-      %p
-        %ul.list-inline
-          - if !@bill.tags.blank?
-            - @bill.tags.each do |tag|
-              %li
-                %span.label.label-info= tag
-      %p
-        %a{'href'=>'#'}
-          %i.fa.fa-download
-          Descargar proyecto
+            - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags=pmo&text='+@bill.title[0..50]
+            %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+              %i.fa.fa-twitter 
+              Twittea
+    
+    %div.row
+      %div.col-md-1.side
+        %p.light
+          = @bill.uid
+        - if ! @bill.icon.blank?
+          = image_tag("statusicon/" + @bill.icon, class:"hidden-xs", title:@bill.status.strip)
+      %div.col-md-11
+        %h4
+          = @bill.title
+        
+        %p
+          = @bill.abstract
+        
+        - if !@bill.authors.blank?
+          %p
+            Autores:
+            - authors = @bill.authors.map { |author| a = author.split(','); a[1].strip + ' ' + a[0].strip  }
+            %span
+              = authors.join(', ')
+
+        - if !@bill.tags.blank?
+          %p
+            %ul.list-inline
+              - if !@bill.tags.blank?
+                - @bill.tags.each do |tag|
+                  %li
+                    %span.label.label-default= tag
+        
+        - if ! @bill.bill_draft_link.blank?
+          %p
+            %a{'href'=> @bill.bill_draft_link}
+              Descargar proyecto 
+              %i.fa.fa-download
