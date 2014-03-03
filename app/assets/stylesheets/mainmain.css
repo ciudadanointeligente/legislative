@@ -308,6 +308,7 @@ strong {
 
 .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
   background-color: #e6e6c9;
+  color: #67675a;
 }
 
 .table>tbody>tr>td {
@@ -424,6 +425,13 @@ strong {
 .table.tablas {
   margin-top: 20px;
   margin-bottom: 50px;
+}
+
+/*MODAL*/
+
+.modal-header {
+  background: #462445;
+  color: #E6E6C9;
 }
 
 /*respuestas*/
