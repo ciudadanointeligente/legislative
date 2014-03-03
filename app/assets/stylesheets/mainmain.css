@@ -18,7 +18,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', Helvetica, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -37,7 +37,7 @@ a:hover {
 
 strong {
   font-weight: 700;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', Helvetica, sans-serif;
   /*text-transform: uppercase;*/
 }
 
@@ -57,10 +57,17 @@ strong {
   margin-top: 10px;
 }
 
-/*Botones*/
+/* BUTTONS */
 
 .btn-small {
   height: 35px;
+}
+
+.btn-lg {
+  text-transform: uppercase;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 .btn-default {
@@ -90,7 +97,7 @@ strong {
   background-color: #e6e6c9;
 }
 
-.btn-primary {
+.btn-primary, .btn-success {
   color: #e6e6c9;
   background-color: #3db091;
   border-color: transparent;
@@ -98,7 +105,7 @@ strong {
   border-radius: 0px;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-success:hover, .btn-success:active, .btn-success:focus {
   color: #e6e6c9;
   background-color: #2f9b7c;
 }
@@ -162,7 +169,7 @@ strong {
   position: relative;
   border-radius: 0;
   color: #a6a691;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', Helvetica, sans-serif;
   text-transform: uppercase;
   padding: .3em .6em .2em;
 }
@@ -304,8 +311,8 @@ strong {
 }
 
 .form-control {
-  color: #f9f9eb;
-  background-color: #cdcdb3;
+  color: #67675A;
+  background-color: #FFFFFF;
   background-image: none;
   border: none;
   border-radius: 0px;
@@ -313,16 +320,24 @@ strong {
 
 .form-control::-webkit-input-placeholder {
     font-family: 'Lato', sans-serif;
+    color: #A6A691;
 }
 .form-control:-moz-placeholder {
     font-family: 'Lato', sans-serif;
+    color: #A6A691;
 }
 .form-control::-moz-placeholder {
     font-family: 'Lato', sans-serif;
+    color: #A6A691;
 }
 
 .form-control:-ms-input-placeholder {
     font-family: 'Lato', sans-serif;
+    color: #A6A691;
+}
+
+.form-control[readonly] {
+  background-color: #ffffff;
 }
 
 
@@ -361,7 +376,7 @@ strong {
 .big-number {
   font-size: 36px;
   font-weight: 700;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', Helvetica, sans-serif;
   text-transform: uppercase;
 }
 
