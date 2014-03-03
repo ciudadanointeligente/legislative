@@ -233,6 +233,11 @@ strong {
   padding: 10px 0;
 }
 
+#site-logo #defci {
+  text-align: right;
+  color: #B99EAF;
+}
+
 .navbar-nav {
   float: right;
 }
