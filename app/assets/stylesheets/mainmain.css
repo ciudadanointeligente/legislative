@@ -313,6 +313,11 @@ strong {
 
 /*Inputs*/
 
+.hero-space form {
+  max-width: 550px;
+  margin: 30px auto 0;
+}
+
 .hero-space .form-control {
   background-color: #593551;
 }

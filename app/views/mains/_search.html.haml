@@ -1,23 +1,20 @@
 %div.hero-space
   %div.container
     %h2.text-center
-      Lorem ipsum dolor sit amet
-    %h4.text-center
-      CONSECTETUER ADIPISCING ELIT. AENEAN COMMODO LIGULA EGET DOLOR. AENEAN MASSA.
+      BIENVENIDO A TU CONGRESO ONLINE 
+      %br ENTRA SIN PEDIR PERMISO
 
     = form_tag(t('routes.searches'), :method => 'get', :class => "form-inline") do
-      %div.row
-        %div.col-md-5.col-md-offset-3
-          %div.input-group
-            %input.form-control{:type => "text", :name => 'q', :placeholder => t("main.search_placeholder")}
-            %span.input-group-btn
-              %button{:type => "submit", :class => "btn btn-primary btn-lg"}
-                =t("search.search")
+      %div.input-group
+        %input.form-control{:type => "text", :name => 'q', :placeholder => t("main.search_placeholder")}
+        %span.input-group-btn
+          %button{:type => "submit", :class => "btn btn-primary btn-lg"}
+            =t("search.search")
 
-          %div.checkbox
-            %label
-              %input{:type => 'checkbox', :name => 'bills', :value => '1', :checked=>true}
-                Proyectos de ley
-            %label
-              %input{:type => 'checkbox', :name => 'congressmen', :value => '2', :checked=>true}
-                Congresistas
+      %div.checkbox
+        %label
+          %input{:type => 'checkbox', :name => 'bills', :value => '1', :checked=>true}
+            Proyectos de ley
+        %label
+          %input{:type => 'checkbox', :name => 'congressmen', :value => '2', :checked=>true}
+            Congresistas
