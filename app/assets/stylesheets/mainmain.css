@@ -794,6 +794,11 @@ svg.graph .labels.y-labels {
 .links-paperworks-action {
   margin-top: 13px
 }
+
+#graph li.pull-right {
+  margin-top: 14px;
+}
+
 /*end bill history*/
 
 /* SCREEN */
