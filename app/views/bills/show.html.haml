@@ -5,15 +5,16 @@
         %h4{name:'timeline'}
           EVENTOS DEL PROYECTO
     %div.col-md-9.links-paperworks-action
-      %ul.list-inline
-        %li
-          = link_to url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls' do
-            Descargar historial
-            %i.fa.fa-download
-        %li
-          %a{'href'=>'#', 'data-toggle'=>'modal', 'data-target'=>'#Documents'}
-            Ver documentos
-            %i.fa.fa-file
+      - if ! @bill.paperworks.blank?
+        %ul.list-inline
+          %li
+            = link_to url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls' do
+              Descargar historial
+              %i.fa.fa-download
+          %li
+            %a{'href'=>'#', 'data-toggle'=>'modal', 'data-target'=>'#Documents'}
+              Ver documentos
+              %i.fa.fa-file
       
       %div.modal.fade#Documents{'tabindex'=>'-1', 'role'=>'dialog', 'aria-labelledby'=>'myModalLabel', 'aria-hidden'=>'true'}
         %div.modal-dialog.modal-lg
@@ -23,10 +24,11 @@
                 &times;
               %h4.modal-title#myModalLabel
                 Documentos Boletín 
+                = @bill.uid
             %div.modal-body
 
               - if ! @bill.reports.blank?
-                %h4
+                %h5
                   Informes
                 %table.table.table-striped
                   %tr
@@ -45,7 +47,7 @@
                             = rep.step
                         
               - if ! @bill.documents.blank?
-                %h4
+                %h5
                   Oficios
                 %table.table.table-striped
                   %tr
@@ -64,7 +66,7 @@
                             = doc.step
               
               - if ! @bill.directives.blank?
-                %h4
+                %h5
                   Indicaciones
                 %table.table.table-striped
                   %tr
@@ -83,16 +85,12 @@
                             = dir.step
               
               - if ! @bill.revisions.blank?
-                %h4
+                %h5
                   Comparados
                 %table.table.table-striped
                   %tr
                     %th
-                      Fecha
-                    %th
                       Trámite
-                    %th
-                      Documento
                   - @bill.revisions.each do | rev |
                     - if ! rev.link.blank?
                       %tr
@@ -101,22 +99,23 @@
                             = rev.description
 
     
-  %div.row.visible-xs
-    %div.col-xs-5
-      %button.down.btn
+  - if ! @bill.paperworks.blank?
+    %div.row.visible-xs
+      %div.col-xs-5
+        %button.down.btn
+          %i.fa.fa-chevron-circle-down
+          Más recientes
+      %div.col-xs-5
+        %button.up.btn
+          %i.fa.fa-chevron-circle-up
+          Menos reciente
+    
+    %div.pull-right.hidden-xs
+      Invertir orden temporal
+      %a.down{'href'=>'#'}
         %i.fa.fa-chevron-circle-down
-        Más recientes
-    %div.col-xs-5
-      %button.up.btn
+      %a.up{'href'=>'#'}
         %i.fa.fa-chevron-circle-up
-        Menos reciente
-  
-  %div.pull-right.hidden-xs
-    Invertir orden temporal
-    %a.down{'href'=>'#'}
-      %i.fa.fa-chevron-circle-down
-    %a.up{'href'=>'#'}
-      %i.fa.fa-chevron-circle-up
   
   %div#timeline.row
     - @bill.paperworks.each_with_index do | paperwork, index |
