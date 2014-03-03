@@ -17,6 +17,11 @@ body {
   border-color: transparent;
 }
 
+.navbar-toggle .text-bar {
+  font-size: 10px;
+  color: white;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', Helvetica, sans-serif;
   font-weight: 700;
@@ -234,7 +239,7 @@ strong {
 }
 
 #site-logo #defci {
-  text-align: right;
+  text-align: center;
   color: #B99EAF;
 }
 
@@ -820,6 +825,9 @@ svg.graph .labels.y-labels {
 @media (min-width: 768px) {
   .modal-lg {
     width: 700px;
+  }
+  #site-logo #defci {
+    text-align: right;
   }
 }
 
