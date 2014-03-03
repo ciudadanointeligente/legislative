@@ -172,6 +172,7 @@ es:
     users: usuarios
     glossaries: glosarios
     searches: busquedas
+    sessions: sesiones
     new: nuevo
     edit: editar
     user_subscriptions: suscripcion
