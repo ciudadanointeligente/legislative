@@ -23,6 +23,7 @@
                 &times;
               %h4.modal-title#myModalLabel
                 Documentos Boletín 
+                = @bill.uid
             %div.modal-body
 
               - if ! @bill.reports.blank?
