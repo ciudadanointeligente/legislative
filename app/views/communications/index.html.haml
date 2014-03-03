@@ -69,7 +69,7 @@
         %ul.list-inline
           - message.people.each do |person|
             %li
-              %span.badge
+              %span.badge.per_person{"data-container"=>"body", "data-toggle"=>"popover", "data-content"=>"#{link_to 'Preguntas hechas a '+person.name , controller: "communications", action: "per_person", id: person.id}"}
                 = person.name
 
 
@@ -93,4 +93,11 @@
 :javascript
   $(document).ready(function(){
     $(".chosen").chosen();
+    $('.per_person').popover({
+      'trigger':'hover',
+      'html':true,
+      'placement':'top',
+      'delay': { show: 0, hide: 1000 }
+    })
   })
+  

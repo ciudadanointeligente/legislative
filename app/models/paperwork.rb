@@ -7,7 +7,7 @@ class Billit::Paperwork
       return "go-forward.png"
     when "Indicaciones"
       return "directives.png"
-    when "Votacion"
+    when "Votación"
       return "vote.png"
     when "Urgencia"
       return "priority.png"
@@ -19,7 +19,7 @@ class Billit::Paperwork
       return "discarded.png"
     when "Informe"
       return "report.png"
-    when "Retiro urgencia"
+    when "Retiro de Urgencia"
       return "priority-withdrawal.png"
     else
       return "paperwork.png"

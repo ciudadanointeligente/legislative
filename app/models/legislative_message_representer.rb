@@ -5,7 +5,7 @@ require 'writeit-rails'
 require 'popit_representers/representers/person_representer'
 
 class LegislativeMessageRepresenter
-		include Roar::Representer::JSON::HAL
+	include Roar::Representer::JSON::HAL
 	include Roar::Representer::Feature::HttpVerbs
 	
 	def initialize

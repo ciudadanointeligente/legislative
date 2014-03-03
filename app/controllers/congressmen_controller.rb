@@ -19,6 +19,12 @@ class CongressmenController < ApplicationController
     @congressmen.result.each do |congressman|
       @congressman = congressman if congressman.id == params[:id]
     end
+    messages = LegislativeMessageCollection.new
+    messages.get(person: @congressman)
+    @message = messages.objects[0]
+
+    #setup the title page
+    @title = @congressman.name + " - "
   end
 
   # GET /congressmen/new

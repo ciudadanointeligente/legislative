@@ -32,8 +32,16 @@ class CommunicationsController < ApplicationController
     id = params[:id]
     @person = PopitPerson.get ENV['popit_persons'] + id, 
                 'application/json'
-    @messages = LegislativeMessageCollection.new
-    @messages.get person: @person
+
+    if not @person.id.nil?
+      @messages = LegislativeMessageCollection.new
+      begin
+        @messages.get person: @person
+      rescue
+      end
+    else
+      render text: "404 No lo encontramos", status: 404
+    end
   end
 
   private

@@ -1,31 +1,40 @@
 %div.row
-  %div.col-md-7
+  %div.col-md-8
     %ul.breadcrumb
       %li
         = link_to 'Portada', root_url
       %li.active
         = @congressman.name
-  %div.col-md-5
-    %ul.list-inline
+  %div.col-md-4
+    %ul.list-inline.action-btn
       %li
-        %i.fa.fa-star-o 
-        9999 suscripciones
+        = link_to "Preguntale", {controller: "communications", action: "per_person", id: @congressman.id}, class: "btn-warning"
       %li
-        %i.fa.fa-pencil 
-        = link_to 'Preguntas hechas', controller: "communications", action: "per_person", id: @congressman.id
-          
+        - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
+        %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+          %i.fa.fa-facebook 
+          Comparte
       %li
-        %i.fa.fa-facebook 
-        Comparte
-      %li
-        %i.fa.fa-twitter 
-        Twittea
+        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags=pmo&text='+@congressman.name
+        %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+          %i.fa.fa-twitter 
+          Twittea
+
 
 %div
   %h2
     = @congressman.name
   %h4
     Senador
+
+- if ! @message.nil?
+  %div
+    última pregunta
+    %div
+      %div
+      = @message.subject
+      %div
+      = @message.content
 
 
 %div.row
