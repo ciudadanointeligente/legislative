@@ -176,6 +176,9 @@ es:
     new: nuevo
     edit: editar
     user_subscriptions: suscripcion
+    password: clave
+    sign_in: ingresar
+    sign_up: registrar
   date:
     abbr_day_names:
     - dom
