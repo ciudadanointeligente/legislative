@@ -119,7 +119,7 @@
   
   %div#timeline.row
     - @bill.paperworks.each_with_index do | paperwork, index |
-      %div{ 'data-sort' => index.to_s }
+      %div{ 'data-sort' => paperwork.date.to_time.to_i }
         %div.timeline-container.col-md-1
           = image_tag("statusicon/" + paperwork.icon_event, class:"hidden-xs")
         %div.resume.col-md-11
@@ -149,3 +149,7 @@
     e.preventDefault();
     $("div#timeline>div").tsort({order:'desc', data:'sort'});
   });
+
+  $(document).ready(function(){
+    $("div#timeline>div").tsort({order:'asc', data:'sort'});
+  })
