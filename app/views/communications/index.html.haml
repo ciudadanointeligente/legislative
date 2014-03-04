@@ -18,44 +18,43 @@
             %div.col-md-3.message-box-left
               %div.form-group
                 %label{:for=>"author_name"}
-                  Nombre
+                  = t('communication.name')
                 %div.input-group
-                  = text_field_tag :author_name, nil ,:class => "form-control", :placeholder=>"Nombre"
+                  = text_field_tag :author_name, nil ,:class => "form-control", :placeholder=>t('communication.name')
                   %span.input-group-addon
                     %i.fa.fa-user
               %div.form-group
                 %label{:for=>"author_name"}
-                  E-mail
+                  = t('communication.email')
                 %div.input-group
-                  = text_field_tag :author_email, nil ,:class => "form-control",:placeholder=>"E-mail"
+                  = text_field_tag :author_email, nil ,:class => "form-control",:placeholder=>t('communication.email')
                   %span.input-group-addon
                     %i.fa.fa-envelope
 
               %div.form-group.tab-content
                 %label{:for=>"author_name"}
-                  Seleccione un senador o diputado
-                %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => 'Seleccione'}
+                  = t('communication.choose_congressmen')
+                %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => t('communication.choose_congressmen')}
                   - @congressmen.persons.each do |congressmen|
                     %option{:value => congressmen.popit_api_uri}
                       =congressmen.name
 
             %div.col-md-9.message-box-right
               %h4
-                Redacta tu mensaje
-              %p
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, suscipit architecto esse eaque labore laboriosam soluta dolores! Animi, deserunt, consequatur, quod sequi repellat omnis at nihil dolores voluptatibus facere inventore.
+                = t('communication.writte_message')
+              
               %div.form-group
-                = text_field_tag :subject, nil ,:class => "form-control", :placeholder=>"Título de tu mensaje"
+                = text_field_tag :subject, nil ,:class => "form-control", :placeholder=>t('communication.subject')
               %div.form-group
-                = text_area_tag :content, nil ,:class => "form-control", :placeholder=>"Contenido del mensaje", :rows => '6'
+                = text_area_tag :content, nil ,:class => "form-control", :placeholder=>t('communication.message'), :rows => '6'
               %div.text-right
-                = submit_tag 'Enviar', :class => "btn btn-success"
+                = submit_tag t('communication.send'), :class => "btn btn-success"
 
 
 %section#responses
   %div.page-header
     %h3
-      Mensajes enviados
+      = t('communication.list_messages')
   %div.panel.panel-default
 
     - @messages.objects.each do |message|
@@ -69,7 +68,7 @@
         %ul.list-inline
           - message.people.each do |person|
             %li
-              %span.badge.per_person{"data-container"=>"body", "data-toggle"=>"popover", "data-content"=>"#{link_to 'Preguntas hechas a '+person.name , controller: "communications", action: "per_person", id: person.id}"}
+              %span.badge.per_person{"data-container"=>"body", "data-toggle"=>"popover", "data-content"=>"#{link_to sprintf(t('communication.questions'),person.name), controller: "communications", action: "per_person", id: person.id}"}
                 = person.name
 
 

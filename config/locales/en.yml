@@ -275,3 +275,13 @@ en:
       month: Month
       second: Seconds
       year: Year
+  communication:
+    name: Nombre
+    email: E-mail
+    choose_congressmen: Seleccione un senador o diputado
+    writte_message: Redacta tu mensaje
+    subject: Título del mensaje
+    message: Contenido del mensaje
+    send: Enviar
+    list_messages: Mensajes enviados
+    questions: Preguntas hechas a %s
