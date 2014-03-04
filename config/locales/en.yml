@@ -67,6 +67,11 @@ en:
     placeholder_author: Type an author's name
     there_are_no_results: There are no results for this search
     event_range: paperworks range
+    bills_advanced_search: Advanced search
+    congressmen_advanced_search: Advanced search
+    congressmen: Congressmen
+    represent: 'Represent:'
+    all_results: View all results
   bill:
     bulletin: Bulletin
     title: Title

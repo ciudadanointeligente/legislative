@@ -11,9 +11,9 @@
       %p
         - if ! congressman.represent[0].region.blank?
           %strong
-            Lugar que representa:
+            = t('search.represent')
           = congressman.represent[0].region
   
 %div.text-right
   - if ! params[:q].blank?
-    = link_to "Ver todos los resultados", searches_congressmen_path + '/?q=' + params[:q] + '&congressmen=2', :class => "btn btn-default"
+    = link_to t('search.all_results'), searches_congressmen_path + '/?q=' + params[:q] + '&congressmen=2', :class => "btn btn-default"

@@ -11,4 +11,4 @@
         = bill.abstract
 %div.text-right
   - if ! params[:q].blank?
-    = link_to "Ver todos los resultados", searches_bills_path + '/?q=' + params[:q] + '&bills=1', :class => "btn btn-default"
+    = link_to t('search.all_results'), searches_bills_path + '/?q=' + params[:q] + '&bills=1', :class => "btn btn-default"
