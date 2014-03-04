@@ -31,12 +31,6 @@
     <link rel="icon" href="<%= asset_path('assets/favicon.ico') %>" type="image/x-icon" />
     <%= stylesheet_link_tag 'mainmain' %>
 
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
     <!--
     <%= javascript_include_tag 'modernizr.2.7.0.min.js' %>
     -->
@@ -123,12 +117,30 @@
     </div> <!-- /container -->
   </div> <!-- /wrap -->
 
+  <!-- FOOTER -->
   <div id="footer">
-    <div class="container">
-      <p class="text-muted credit">
-        (cc) 2014. <%= Legislative::Application.config.created_by_name %></p>
-    </div>
-  </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul>
+                            <li><a href="https://github.com/ciudadanointeligente/legislative" target="_blank"><i class="fa fa-github-alt"></i> Revisa nuestro código en Github</a></li>
+                            <!-- <li><a href="http://www.ciudadanointeligente.org/servicios/#votainteligente" target="_blank"><i class="fa fa-heart-o"></i> ¿Quieres tener un sitio como éste para tu congreso?</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        Desarrollado por <a href="http://www.ciudadanointeligente.org/" target="_blank"><img src="<%= asset_path('assets/logo-ciudadanoi.png') %>" alt="Fundación Ciudadano Inteligente" title="Fundación Ciudadano Inteligente"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <ul>
+                            <li><a href="tel:+56224192770"><i class="fa fa-phone"></i> +562 2 419 2770</a></li>
+                            <li><a href="mailto:prensa@ciudadanointeligente.org?Subject=Prensa%20votainteligente" class="email-prensa" target="_top"><i class="fa fa-envelope-o"></i> Contacto prensa</a></li>
+                            <li><a href="http://bit.ly/17qiMkf" target="_blank"><i class="fa fa-map-marker"></i> Holanda 895, Providencia, Santiago, Chile</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <!-- CIERRE FOOTER -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script>window.jQuery || document.write('<script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
