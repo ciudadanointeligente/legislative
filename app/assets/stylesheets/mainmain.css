@@ -244,6 +244,13 @@ strong {
   color: #B99EAF;
 }
 
+#beta {
+  background: #B9B9A7;
+  color: #2f172f;
+  font-size: 10px;
+  padding: 0px 2px;
+}
+
 .navbar-nav {
   float: right;
 }
