@@ -32,6 +32,15 @@ es:
     yes: Sí
     no: No
     abstentions: Abstenciones
+    title_slogan: Bienvenido a tu congreso online
+    title_subslogan: Entra sin pedir permiso
+    filter_bills: Proyectos de ley
+    filter_congressmen: Congresistas
+    board_title: Hoy en tabla
+    board_table_title_high_chamber: Tabla diputados
+    board_table_title_low_chamber: Tabla senado
+    last_responses: Últimas Respuestas
+    view_more_questions: Ver más preguntas
   search:
     search_title: Búsqueda
     search_for: 'Buscar por:'

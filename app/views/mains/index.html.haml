@@ -1,199 +1,150 @@
-%div.modal.fade.hot-modal#miModal{:tabindex=>'-1', :role=>'dialog', :'aria-labelledby'=>'myModalLabel', :'aria-hidden'=>'true'}
-  %div.modal-dialog
-    %div.modal-content
-      %div.modal-header
-        %button.close{:type=>"button", :'data-dismiss'=>"modal", :'aria-hidden'=>"true"}
-          &times
-        %h4.modal-title#myModalLabel
-          Proyectos urgentes en educación
-      %div.modal-body
-        %table.table.table-striped
-          %thead.sr-only
-            %tr
-              %th
-                %span.sr-only
-                  Proyectos urgentes en educación
-              %th
-                %span.sr-only
-                  Urgencia
-              %th
-                %span.sr-only
-                  Suscripción alertas
-                
-          %tbody
-            %tr
-              %td
-                %p.light 975-25
-              %td
-                %strong
-                  = link_to 'Sesión Nº 85 | Legislatura 361 | Tipo Ordinaria', tables_path
-                %p
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma
-              %td
-                %div.inline-action
-                  26 
-                  %a{href: "/"}
-                    %i.fa.fa-bell-o
-              %td
-                %span.big-number
-                  4 
-                urgencias
-            %tr
-              %td
-                %p.light 975-25
-              %td
-                %strong 
-                  = link_to 'Sesión Nº 84 | Legislatura 358 | Tipo Ordinaria', tables_path
-                %p
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma
-              %td
-                %div.inline-action
-                  26 
-                  %a{href: "/"}
-                    %i.fa.fa-bell-o
-              %td
-                %span.big-number
-                  4 
-                urgencias
-%h3.text-center Hoy en tabla
-%div.row
-  %div.col-md-6
-    %table.table.table-striped.tablas
-      %thead
-        %tr
-          %th{:colspan=>"3"}
-            %h4 Tabla diputados
-      %tbody
-        %tr
-          %td
-            %p.light 975-25
-          %td
-            %strong 
-              = link_to 'Sesión 111ª ordinaria, Legislatura 361', tables_path
-            %p
-              09 de enero de 2014
-          %td
-            3
-            %a{href: "/"}
-              %i.fa.fa-bell-o
-        %tr
-          %td
-            %p.light 975-25
-          %td
-            %strong 
-              = link_to 'Sesión 110ª ordinaria, Legislatura 361', tables_path
-            %p
-              08 de enero de 2014
-          %td
-            0
-            %a{href: "/"}
-              %i.fa.fa-bell-o
-        %tr
-          %td
-            %p.light 975-25
-          %td
-            %strong 
-              = link_to 'Sesión 109ª pedida, Legislatura 361', tables_path
-            %p
-              07 de enero de 2014
-          %td
-            19
-            %a{href: "/"}
-              %i.fa.fa-bell-o
-        %tr
-          %td
-            %p.light 975-25
-          %td
-            %strong 
-              = link_to 'Sesión 109ª pedida, Legislatura 361', tables_path
-            %p
-              06 de enero de 2014
-          %td
-            27
-            %a{href: "/"}
-              %i.fa.fa-bell-o
+%section#board
+  %h3.text-center.txt-board 
+    = t('main.board_title')
+  %div.row
+    %div.col-md-6
+      %table.table.table-striped.tablas
+        %thead
+          %tr
+            %th{:colspan=>"3"}
+              %h4.table-title 
+                = t('main.board_table_title_high_chamber')
+        %tbody
+          %tr
+            %td
+              %p.light 975-25
+            %td
+              %strong 
+                = link_to 'Sesión 111ª ordinaria, Legislatura 361', tables_path
+              %p
+                09 de enero de 2014
+            %td
+              3
+              %a{href: "/"}
+                %i.fa.fa-bell-o
+          %tr
+            %td
+              %p.light 975-25
+            %td
+              %strong 
+                = link_to 'Sesión 110ª ordinaria, Legislatura 361', tables_path
+              %p
+                08 de enero de 2014
+            %td
+              0
+              %a{href: "/"}
+                %i.fa.fa-bell-o
+          %tr
+            %td
+              %p.light 975-25
+            %td
+              %strong 
+                = link_to 'Sesión 109ª pedida, Legislatura 361', tables_path
+              %p
+                07 de enero de 2014
+            %td
+              19
+              %a{href: "/"}
+                %i.fa.fa-bell-o
+          %tr
+            %td
+              %p.light 975-25
+            %td
+              %strong 
+                = link_to 'Sesión 109ª pedida, Legislatura 361', tables_path
+              %p
+                06 de enero de 2014
+            %td
+              27
+              %a{href: "/"}
+                %i.fa.fa-bell-o
 
-  %div.col-md-6
-    %table.table.table-striped.tablas
-      %thead
-        %tr
-          %th{:colspan=>"3"}
-            %h4 Tabla senado
-      %tbody
-        %tr
-          %td
-            %p.light 975-25        
-          %td
-            %strong 
-              = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
-            %p
-              Martes 14 de enero de 2014
-          %td
-            19
-            %a{href: "/"}
-              %i.fa.fa-bell-o
-        %tr
-          %td
-            %p.light 975-25        
-          %td
-            %strong 
-              = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
-            %p
-              Martes 14 de enero de 2014
-          %td
-            127
-            %a{href: "/"}
-              %i.fa.fa-bell-o
-        %tr
-          %td
-            %p.light 975-25        
-          %td
-            %strong 
-              = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
-            %p
-              Martes 14 de enero de 2014
-          %td
-            0
-            %a{href: "/"}
-              %i.fa.fa-bell-o
-        %tr
-          %td
-            %p.light 975-25        
-          %td
-            %strong 
-              = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
-            %p
-              Martes 14 de enero de 2014
-          %td
-            89
-            %a{href: "/"}
-              %i.fa.fa-bell-o
+    %div.col-md-6
+      %table.table.table-striped.tablas
+        %thead
+          %tr
+            %th{:colspan=>"3"}
+              %h4.table-title
+                = t('main.board_table_title_low_chamber')
+        %tbody
+          %tr
+            %td
+              %p.light 975-25        
+            %td
+              %strong 
+                = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
+              %p
+                Martes 14 de enero de 2014
+            %td
+              19
+              %a{href: "/"}
+                %i.fa.fa-bell-o
+          %tr
+            %td
+              %p.light 975-25        
+            %td
+              %strong 
+                = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
+              %p
+                Martes 14 de enero de 2014
+            %td
+              127
+              %a{href: "/"}
+                %i.fa.fa-bell-o
+          %tr
+            %td
+              %p.light 975-25        
+            %td
+              %strong 
+                = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
+              %p
+                Martes 14 de enero de 2014
+            %td
+              0
+              %a{href: "/"}
+                %i.fa.fa-bell-o
+          %tr
+            %td
+              %p.light 975-25        
+            %td
+              %strong 
+                = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
+              %p
+                Martes 14 de enero de 2014
+            %td
+              89
+              %a{href: "/"}
+                %i.fa.fa-bell-o
 
-%h3 ÚLTIMAS RESPUESTAS
-%div.row
-  %div.col-md-6.home-answers-wraper
-    %div.home-answers
-      %div.col-md-2  
-        %img.img-responsive{:src=>'http://placehold.it/200x200'}
-      %div.col-md-10
-        %p.light
-          ¿Quiero saber qué acciones va a tomar Ud. señor senador en cuanto a las va a tomar Ud. señor senador en cuantva a tomar Ud. señor senador en cuantciclovías?
-        %p
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, porro, architecto totam incidunt alias animi recusandae ipsam illum omnis sunt voluptatem exercitationem quasi quae doloribus aliquid! Dolorum, rerum quaerat dolor!
-      %p.text-right
-        Juanito Perez. 
-        %a{href: "/"} Ver más preguntas
-    %i.fa.fa-quote-right.fa-2x
-  %div.col-md-6.home-answers-wraper
-    %div.home-answers
-      %div.col-md-2  
-        %img.img-responsive{:src=>'http://placehold.it/200x200'}
-      %div.col-md-10
-        %p.light
-          ¿Quiero saber qué acciones va a tomar Ud. señor senador en cuanto a las va a tomar Ud. señor senador en cuantva a tomar Ud. señor senador en cuantciclovías?
-        %p
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, porro, architecto totam incidunt alias animi recusandae ipsam illum omnis sunt voluptatem exercitationem quasi quae doloribus aliquid! Dolorum, rerum quaerat dolor!
-      %p.text-right
-        Juanito Perez. 
-        %a{href: "/"} Ver más preguntas
-    %i.fa.fa-quote-right.fa-2x
+%section#last-responses
+  %h3.title-last-responses 
+    = t('main.last_responses')
+  %div.row
+    %div.col-md-6.home-answers-wraper
+      %div.home-answers
+        %div.col-md-2  
+          %img.img-responsive{:src=>'http://placehold.it/200x200'}
+        %div.col-md-10
+          %p.light
+            ¿Quiero saber qué acciones va a tomar Ud. señor senador en cuanto a las va a tomar Ud. señor senador en cuantva a tomar Ud. señor senador en cuantciclovías?
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, porro, architecto totam incidunt alias animi recusandae ipsam illum omnis sunt voluptatem exercitationem quasi quae doloribus aliquid! Dolorum, rerum quaerat dolor!
+        %p.text-right
+          Juanito Perez. 
+          %a{href: "/"} 
+            = t('main.view_more_questions')
+      %i.fa.fa-quote-right.fa-2x
+    %div.col-md-6.home-answers-wraper
+      %div.home-answers
+        %div.col-md-2  
+          %img.img-responsive{:src=>'http://placehold.it/200x200'}
+        %div.col-md-10
+          %p.light
+            ¿Quiero saber qué acciones va a tomar Ud. señor senador en cuanto a las va a tomar Ud. señor senador en cuantva a tomar Ud. señor senador en cuantciclovías?
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, porro, architecto totam incidunt alias animi recusandae ipsam illum omnis sunt voluptatem exercitationem quasi quae doloribus aliquid! Dolorum, rerum quaerat dolor!
+        %p.text-right
+          Juanito Perez. 
+          %a{href: "/"}
+            = t('main.view_more_questions')
+      %i.fa.fa-quote-right.fa-2x
