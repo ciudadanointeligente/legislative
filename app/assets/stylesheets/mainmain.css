@@ -10,6 +10,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #67675a;
+  padding-top: 60px;
 }
 
 .navbar-inverse {
@@ -243,6 +244,13 @@ strong {
   color: #B99EAF;
 }
 
+#beta {
+  background: #B9B9A7;
+  color: #2f172f;
+  font-size: 10px;
+  padding: 0px 2px;
+}
+
 .navbar-nav {
   float: right;
 }
@@ -313,6 +321,7 @@ strong {
 
 .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
   background-color: #e6e6c9;
+  color: #67675a;
 }
 
 .table>tbody>tr>td {
@@ -431,6 +440,17 @@ strong {
   margin-bottom: 50px;
 }
 
+/*MODAL*/
+
+.modal-header {
+  background: #462445;
+  color: #E6E6C9;
+}
+
+.modal-body {
+  background-color: #f5f5dd;
+}
+
 /*respuestas*/
 
 .home-answers-wraper {
@@ -454,6 +474,7 @@ strong {
   right: 27px;
   color: #e6e6c9;
 }
+
 
 /*Otros*/
 
@@ -781,7 +802,29 @@ svg.graph .labels.y-labels {
 .links-paperworks-action {
   margin-top: 13px
 }
+
+#graph li.pull-right {
+  margin-top: 14px;
+}
+
 /*end bill history*/
+
+/*FOOTER*/
+
+#footer {
+  background: #462445;
+  color: #A6A691;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+#footer a {
+  color: #A6A691;
+}
+
+#footer ul {
+  list-style: none;
+}
 
 /* SCREEN */
 

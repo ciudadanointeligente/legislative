@@ -1,20 +1,37 @@
 %section#graph
-  %div.row
-    %div.col-md-3
-      - if ! @bill.paperworks.blank?
+  %ul.list-inline
+    - if ! @bill.paperworks.blank?
+      %li
         %h4{name:'timeline'}
           = t('bill.title_event')
-    %div.col-md-9.links-paperworks-action
-      - if ! @bill.paperworks.blank?
-        %ul.list-inline
-          %li
-            = link_to url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls' do
-              = t('bill.download_history')
-              %i.fa.fa-download
-          %li
-            %a{'href'=>'#', 'data-toggle'=>'modal', 'data-target'=>'#Documents'}
-              = t('bill.view_documents')
-              %i.fa.fa-file
+    - if ! @bill.paperworks.blank?
+      %li
+        = link_to url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls' do
+          = t('bill.download_history')
+          %i.fa.fa-download
+      %li
+        %a{'href'=>'#', 'data-toggle'=>'modal', 'data-target'=>'#Documents'}
+          = t('bill.view_documents')
+          %i.fa.fa-file
+
+      %li.pull-right
+        - if ! @bill.paperworks.blank?
+          %div.row.visible-xs
+            %div.col-xs-5
+              %button.down.btn
+                %i.fa.fa-chevron-circle-down
+                = t('bill.more_recents')
+            %div.col-xs-5
+              %button.up.btn
+                %i.fa.fa-chevron-circle-up
+                = t('bill.less_recents')
+          
+          %div.hidden-xs
+            = t('bill.sort_time')
+            %a.down{'href'=>'#'}
+              %i.fa.fa-chevron-circle-down
+            %a.up{'href'=>'#'}
+              %i.fa.fa-chevron-circle-up
       
       %div.modal.fade#Documents{'tabindex'=>'-1', 'role'=>'dialog', 'aria-labelledby'=>'myModalLabel', 'aria-hidden'=>'true'}
         %div.modal-dialog.modal-lg
@@ -28,7 +45,7 @@
             %div.modal-body
 
               - if ! @bill.reports.blank?
-                %h4
+                %h5
                   = t('bill.modal_reports') 
                 %table.table.table-striped
                   %tr
@@ -47,7 +64,7 @@
                             = rep.step
                         
               - if ! @bill.documents.blank?
-                %h4
+                %h5
                   = t('bill.modal_documents') 
                 %table.table.table-striped
                   %tr
@@ -66,7 +83,7 @@
                             = doc.step
               
               - if ! @bill.directives.blank?
-                %h4
+                %h5
                   = t('bill.modal_directives')
                 %table.table.table-striped
                   %tr
@@ -85,7 +102,7 @@
                             = dir.step
               
               - if ! @bill.revisions.blank?
-                %h4
+                %h5
                   = t('bill.modal_revision')
                 %table.table.table-striped
                   %tr
@@ -98,25 +115,6 @@
                           %a{'href'=>rev.link}
                             = rev.description
 
-    
-  - if ! @bill.paperworks.blank?
-    %div.row.visible-xs
-      %div.col-xs-5
-        %button.down.btn
-          %i.fa.fa-chevron-circle-down
-          = t('bill.more_recents')
-      %div.col-xs-5
-        %button.up.btn
-          %i.fa.fa-chevron-circle-up
-          = t('bill.less_recents')
-    
-    %div.pull-right.hidden-xs
-      = t('bill.sort_time')
-      %a.down{'href'=>'#'}
-        %i.fa.fa-chevron-circle-down
-      %a.up{'href'=>'#'}
-        %i.fa.fa-chevron-circle-up
-  
   %div#timeline.row
     - @bill.paperworks.each_with_index do | paperwork, index |
       %div{ 'data-sort' => paperwork.date.to_time.to_i }
