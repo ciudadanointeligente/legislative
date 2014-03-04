@@ -37,6 +37,9 @@ gem 'thin', :group => :development
 # Replaces default rails error page with a much better and more useful error page
 gem 'better_errors', :group => :development
 
+# Turns off the rails asset pipeline log
+gem 'quiet_assets', :group => :development
+
 # Support to XLS export
 gem 'ekuseru'
 
