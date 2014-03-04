@@ -3,17 +3,17 @@
     %div.col-md-3
       - if ! @bill.paperworks.blank?
         %h4{name:'timeline'}
-          EVENTOS DEL PROYECTO
+          = t('bill.title_event')
     %div.col-md-9.links-paperworks-action
       - if ! @bill.paperworks.blank?
         %ul.list-inline
           %li
             = link_to url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls' do
-              Descargar historial
+              = t('bill.download_history')
               %i.fa.fa-download
           %li
             %a{'href'=>'#', 'data-toggle'=>'modal', 'data-target'=>'#Documents'}
-              Ver documentos
+              = t('bill.view_documents')
               %i.fa.fa-file
       
       %div.modal.fade#Documents{'tabindex'=>'-1', 'role'=>'dialog', 'aria-labelledby'=>'myModalLabel', 'aria-hidden'=>'true'}
@@ -23,19 +23,19 @@
               %button.close{'type'=>'button', 'data-dismiss'=>'modal', 'aria-hidden'=>'true'}
                 &times;
               %h4.modal-title#myModalLabel
-                Documentos Boletín 
+                = t('bill.modal_bulletin_number') 
                 = @bill.uid
             %div.modal-body
 
               - if ! @bill.reports.blank?
                 %h4
-                  Informes
+                  = t('bill.modal_reports') 
                 %table.table.table-striped
                   %tr
                     %th
-                      Fecha
+                      = t('bill.modal_table_date')
                     %th
-                      Trámite
+                      = t('bill.modal_table_paperwork')
                   - @bill.reports.each do | rep |
                     - if ! rep.link.blank?
                       %tr
@@ -48,13 +48,13 @@
                         
               - if ! @bill.documents.blank?
                 %h4
-                  Oficios
+                  = t('bill.modal_documents') 
                 %table.table.table-striped
                   %tr
                     %th
-                      Fecha
+                      = t('bill.modal_table_date')
                     %th
-                      Trámite
+                      = t('bill.modal_table_paperwork')
                   - @bill.documents.each do | doc |
                     - if ! doc.link.blank?
                       %tr
@@ -67,13 +67,13 @@
               
               - if ! @bill.directives.blank?
                 %h4
-                  Indicaciones
+                  = t('bill.modal_directives')
                 %table.table.table-striped
                   %tr
                     %th
-                      Fecha
+                      = t('bill.modal_table_date')
                     %th
-                      Trámite
+                      = t('bill.modal_table_paperwork')
                   - @bill.directives.each do | dir |
                     - if ! dir.link.blank?
                       %tr
@@ -86,11 +86,11 @@
               
               - if ! @bill.revisions.blank?
                 %h4
-                  Comparados
+                  = t('bill.modal_revision')
                 %table.table.table-striped
                   %tr
                     %th
-                      Trámite
+                      = t('bill.modal_table_paperwork')
                   - @bill.revisions.each do | rev |
                     - if ! rev.link.blank?
                       %tr
@@ -104,14 +104,14 @@
       %div.col-xs-5
         %button.down.btn
           %i.fa.fa-chevron-circle-down
-          Más recientes
+          = t('bill.more_recents')
       %div.col-xs-5
         %button.up.btn
           %i.fa.fa-chevron-circle-up
-          Menos reciente
+          = t('bill.less_recents')
     
     %div.pull-right.hidden-xs
-      Invertir orden temporal
+      = t('bill.sort_time')
       %a.down{'href'=>'#'}
         %i.fa.fa-chevron-circle-down
       %a.up{'href'=>'#'}
@@ -132,11 +132,11 @@
             = paperwork.stage
           
             - if paperwork.chamber.length > 1
-              • Cámara:
+              = '•' + t('bill.chamber') + ':'
               = paperwork.chamber
 
             - if paperwork.session.length > 1
-              • Sesión:
+              = '•' + t('bill.session') + ':'
               = paperwork.session
 
 :javascript
