@@ -56,11 +56,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="text-bar">Menú</span>
+            <span class="text-bar"><%= t('layout.menu') %></span>
           </button>
           <div id='site-logo'>
-            <a href="<%=root_path%>"><%= image_tag "logo-congresoabierto.png", alt:'Congreso Abierto' %></a>
-            <div id="defci">de Ciudadano Inteligente</div>
+            <a href="<%=root_path%>"><%= image_tag "logo-congresoabierto.png", alt:t('layout.title_project') %></a>
+            <div id="defci"><%= t('layout.from') %></div>
           </div>
         </div>
         <div class="collapse navbar-collapse">
