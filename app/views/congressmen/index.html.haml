@@ -4,21 +4,21 @@
       %li
         = link_to t('layout.home'), root_path
       %li.active
-        = link_to "Congresistas", congressmen_path
+        = link_to t('congressmen.breadcrumb'), congressmen_path
   %div.col-md-5
     %ul.list-inline
       %li
         %a{'href'=>'#'}
           %i.fa.fa-facebook
-          Comparte
+          = link_to t('congressmen.fb_share')
       %li
         %a{'href'=>'#'}
           %i.fa.fa-twitter
-          Twittea
+          = link_to t('congressmen.tw_share')
 
 %div
   %h4
-    Congresistas
+    = link_to t('congressmen.title')
 
 %div.row
   %div.col-md-3
@@ -36,5 +36,5 @@
           = link_to congressman.name, congressman_path(congressman.id)
           %p
             %strong
-              Lugar que representa:
+              = t('congressmen.represent')
             = congressman.represent[0].district

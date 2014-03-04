@@ -285,3 +285,28 @@ es:
     send: Enviar
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
+  congressmen:
+    home: Portada
+    breadcrumb: Congresistas
+    fb_share: Comparte
+    tw_share: Twittea
+    title: Congresistas
+    represent: 'Lugar que representa:'
+    search_for: 'Buscar por:'
+    placeholder_search_for: Ingresa una palabra clave
+    askthem: Preguntales
+    district: 'Distrito:'
+    region: 'Región:'
+    comuna: 'Comuna:'
+    period: 'Periodo:'
+    party: 'Partido:'
+    commissions: 'Comisiones:'
+    permanent: 'Permanente:'
+    special: 'Especial:'
+    research: 'Investigadora:'
+    bio: Biografía
+    last_initiatives: Últimas iniciativas
+    view_project: Ver proyecto
+    askthem_responses: '%s ha respondido %s de las %s preguntas ciudadanas'
+    votes: Votaciones
+    last_interventions: Últimas intervenciones
