@@ -1,13 +1,7 @@
 Legislative::Application.routes.draw do
 
   root :to => "mains#index"
-
-  get "log_out" => "sessions#destroy", :as => "log_out"
-  get "log_in" => "sessions#login", :as => "log_in"
-  post "auth" => "sessions#login"
-  get "sign_up" => "users#new", :as => "sign_up"
   get "confirmed" => "user_subscriptions#confirmed"
-
   put "bills/:id/update" => "bills#update", method: :put
 
   resources :notifiers do
@@ -31,10 +25,10 @@ Legislative::Application.routes.draw do
     resources :glossaries
     resources :mains
     resources :searches
-    resources :sessions
+    # resources :sessions
     resources :tables
-    resources :users
     resources :user_subscriptions # do
+    devise_for :users
       # delete 'unsubscribe_all', on: :collection
     # end  
   end

@@ -37,6 +37,9 @@ Legislative::Application.configure do
 
   config.eager_load = false
 
+  # Config for devise
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
   # Send mails to Cuttlefish (see http://cuttlefish.io)
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
