@@ -307,6 +307,6 @@ es:
     bio: Biografía
     last_initiatives: Últimas iniciativas
     view_project: Ver proyecto
-    askthem_responses: '%s ha respondido %s de las %s preguntas ciudadanas'
+    askthem_responses: 'Preguntas hechas a %s'
     votes: Votaciones
     last_interventions: Últimas intervenciones
