@@ -74,6 +74,10 @@ es:
     congressmen: Congresistas
     represent: 'Lugar que representa:'
     all_results: Ver todos los resultados
+  agendas:
+    chamber: Cámara
+    date: Fecha
+    bills: Proyectos de ley
   bill:
     bulletin: Boletín
     title: Título

@@ -74,6 +74,10 @@ en:
     congressmen: Congressmen
     represent: 'Represent:'
     all_results: View all results
+  agendas:
+    chamber: Chamber
+    date: Date
+    bills: Bills
   bill:
     bulletin: Bulletin
     title: Title
