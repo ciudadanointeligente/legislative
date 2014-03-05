@@ -3,9 +3,9 @@
 
 %table.table.table-striped
   %tr
-    %th='Cámara'
-    %th='Fecha'
-    %th='Proyectos de ley'
+    %th= t('agendas.chamber')
+    %th= t('agendas.date')
+    %th= t('agendas.bills')
   
   - @agendas.each do |agenda|
     %tr
