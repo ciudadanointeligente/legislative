@@ -37,8 +37,8 @@ es:
     filter_bills: Proyectos de ley
     filter_congressmen: Congresistas
     board_title: Hoy en tabla
-    board_table_title_high_chamber: Tabla diputados
-    board_table_title_low_chamber: Tabla senado
+    board_table_title_high_chamber: Tabla senado
+    board_table_title_low_chamber: Tabla diputados
     last_responses: Últimas Respuestas
     view_more_questions: Ver más preguntas
   search:
