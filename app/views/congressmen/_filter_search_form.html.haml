@@ -1,6 +1,6 @@
 %div
   = form_tag(t('routes.searches'), :method => 'get') do
     %div.form-group
-      = label_tag :q, t('search.search_for')
-      = text_field_tag :q, params[:q], :class => 'form-control', :placeholder => t('search.placeholder_search_for'), :onfocus => "ga('send','congressmen','focus_search')"
+      = label_tag :q, t('congressmen.search_for')
+      = text_field_tag :q, params[:q], :class => 'form-control', :placeholder => t('congressmen.placeholder_search_for'), :onfocus => "ga('send','congressmen','focus_search')"
     %input{'type'=>'hidden', 'name'=>'congressmen', 'value'=>2}

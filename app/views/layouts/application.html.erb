@@ -10,11 +10,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title><%= @title %><%= Legislative::Application.config.application_name %></title>
-    <meta name="description" content="Congreso online, entra sin pedir permiso.">
+    <meta name="description" content="<%= ENV['description'] %>">
+    <meta name="keywords" content="<%= ENV['keywords'] %>">
     
     <meta name="og:image" content="<%= asset_path('assets/congreso-abierto-og-fb-404.png') %>">
     <meta name="og:title" content="<%= @title %><%= Legislative::Application.config.application_name %>">
-    <meta name="og:description" content="Congreso online, entra sin pedir permiso.">
+    <meta name="og:description" content="<%= ENV['og_description'] %>">
 
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
     <meta name="viewport" content="width=device-width">
@@ -49,11 +50,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="text-bar">Menu</span>
+            <span class="text-bar"><%= t('layout.menu') %></span>
           </button>
           <div id='site-logo'>
-            <a href="<%=root_path%>"><%= image_tag "logo-congresoabierto.png", alt:'Congreso Abierto' %></a>
-            <div id="defci">de Ciudadano Inteligente <span id="beta">BETA</span></div>
+            <a href="<%=root_path%>"><%= image_tag "logo-congresoabierto.png", alt:t('layout.title_project') %></a>
+            <div id="defci"><%= t('layout.from') %> <span id="beta">BETA</span></div>
           </div>
         </div>
         <div class="collapse navbar-collapse">
@@ -71,7 +72,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" title="<%= t('users.logged_as')%> <%= current_user.email %>"></i> <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li class="dropdown-header">Bienvenido(a) <%= current_user.username %></li>
+                <li class="dropdown-header"><%= t('layout.welcome') %> <%= current_user.username %></li>
                 <li role="presentation" class="divider"></li>
                 <li><%= link_to t('users.log_out'), log_out_path %></li>
               </ul>
@@ -119,27 +120,27 @@
 
   <!-- FOOTER -->
   <div id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <ul>
-                            <li><a href="https://github.com/ciudadanointeligente/legislative" target="_blank"><i class="fa fa-github-alt"></i> Revisa nuestro código en Github</a></li>
-                            <!-- <li><a href="http://www.ciudadanointeligente.org/servicios/#votainteligente" target="_blank"><i class="fa fa-heart-o"></i> ¿Quieres tener un sitio como éste para tu congreso?</a></li> -->
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        Desarrollado por <a href="http://www.ciudadanointeligente.org/" target="_blank"><img src="<%= asset_path('assets/logo-ciudadanoi.png') %>" alt="Fundación Ciudadano Inteligente" title="Fundación Ciudadano Inteligente"></a>
-                    </div>
-                    <div class="col-md-4">
-                        <ul>
-                            <li><a href="tel:+56224192770"><i class="fa fa-phone"></i> +562 2 419 2770</a></li>
-                            <li><a href="mailto:prensa@ciudadanointeligente.org?Subject=Prensa%20votainteligente" class="email-prensa" target="_top"><i class="fa fa-envelope-o"></i> Contacto prensa</a></li>
-                            <li><a href="http://bit.ly/17qiMkf" target="_blank"><i class="fa fa-map-marker"></i> Holanda 895, Providencia, Santiago, Chile</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+            <ul>
+                <li><a href="https://github.com/ciudadanointeligente/legislative" target="_blank"><i class="fa fa-github-alt"></i> Revisa nuestro código en Github</a></li>
+                <!-- <li><a href="http://www.ciudadanointeligente.org/servicios/#pmo" target="_blank"><i class="fa fa-heart-o"></i> ¿Quieres tener un sitio como éste para tu congreso?</a></li> -->
+            </ul>
         </div>
+        <div class="col-md-4">
+            Desarrollado por <a href="http://www.ciudadanointeligente.org/" target="_blank"><img src="<%= asset_path('assets/logo-ciudadanoi.png') %>" alt="Fundación Ciudadano Inteligente" title="Fundación Ciudadano Inteligente"></a>
+        </div>
+        <div class="col-md-4">
+            <ul>
+                <li><a href="tel:+56224192770"><i class="fa fa-phone"></i> +562 2 419 2770</a></li>
+                <li><a href="mailto:prensa@ciudadanointeligente.org?Subject=Prensa%20de%20Congreso%20abierto" class="email-prensa" target="_top"><i class="fa fa-envelope-o"></i> Contacto prensa</a></li>
+                <li><a href="http://bit.ly/17qiMkf" target="_blank"><i class="fa fa-map-marker"></i> Holanda 895, Providencia, Santiago, Chile</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- CIERRE FOOTER -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->

@@ -1,8 +1,9 @@
 %div.hero-space
   %div.container
     %h2.text-center
-      BIENVENIDO A TU CONGRESO ONLINE 
-      %br ENTRA SIN PEDIR PERMISO
+      = t('main.title_slogan')
+      %br
+      = t('main.title_subslogan')
 
     = form_tag(t('routes.searches'), :method => 'get', :class => "form-inline") do
       %div.input-group
@@ -14,7 +15,7 @@
       %div.checkbox
         %label
           %input{:type => 'checkbox', :name => 'bills', :value => '1', :checked=>true}
-            Proyectos de ley
+            = t('main.filter_bills')
         %label
           %input{:type => 'checkbox', :name => 'congressmen', :value => '2', :checked=>true}
-            Congresistas
+            = t('main.filter_congressmen')

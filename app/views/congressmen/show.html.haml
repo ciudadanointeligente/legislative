@@ -2,23 +2,23 @@
   %div.col-md-8
     %ul.breadcrumb
       %li
-        = link_to 'Portada', root_url
+        = link_to t('congressmen.home'), root_url
       %li.active
         = @congressman.name
   %div.col-md-4
     %ul.list-inline.action-btn
       %li
-        = link_to "Preguntale", {controller: "communications", action: "per_person", id: @congressman.id}, class: "btn-warning"
+        = link_to t("congressmen.askthem"), {controller: "communications", action: "per_person", id: @congressman.id}, class: "btn-warning"
       %li
         - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
         %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
           %i.fa.fa-facebook 
-          Comparte
+          = t("congressmen.fb_share")
       %li
         - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags=pmo&text='+@congressman.name
         %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
           %i.fa.fa-twitter 
-          Twittea
+          = t("congressmen.tw_share")
 
 
 %div
@@ -46,24 +46,24 @@
     
     - if ! @congressman.represent.blank?
       %p
-        Lugar que representa:
+        = t('congressmen.represent')
         %ul
         - @congressman.represent.each do | r |
           - if ! r.district.blank?
             %li 
-              = 'Distrito: ' + r.district
+              = t('congressmen.district') + r.district
           
           - if ! r.region.blank?
             %li 
-              = 'Región: ' + r.region
+              = t('congressmen.region') + r.region
 
           - if ! r.comunas.blank?
             %li 
-              = 'Comunas: ' + r.comunas
+              = t('congressmen.comuna') + r.comunas
 
     - if ! @congressman.parliamentarian_period.blank?
       %p
-        Periodo: 
+        = t('congressmen.period')
         %ul
         - @congressman.parliamentarian_period.each do | p |
           - if ! p.date.blank?
@@ -72,7 +72,7 @@
         
     - if ! @congressman.memberships.blank?
       %p
-        Partido:
+        = t('congressmen.party')
         - @organizations.result.each do | o |
           - url = '#';
           -if ! o.links[1].blank?
@@ -84,20 +84,20 @@
     
     - if ! @congressman.commissions.blank?
       %p
-        Comisiones:
+        = t('congressmen.commissions')
         %ul
         - @congressman.commissions.each do | c |
           - if ! c.permanent.blank?
             %li 
-              = 'Permanente: ' + c.permanent  
+              = t('congressmen.permanent') + c.permanent  
           
           - if ! c.special.blank?
             %li 
-              = 'Especial: ' + c.special 
+              = t('congressmen.special') + c.special 
           
           - if ! c.researcher.blank?
             %li 
-              = 'Investigadora: ' + c.researcher 
+              = t('congressmen.research') + c.researcher 
     
     - if ! @congressman.links.blank?
       %div
@@ -109,17 +109,13 @@
                 = link.note
         
     %h5
-      Biografía
+      = t('congressmen.bio')
     %p
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab ut aperiam quae fuga! Dolorum, ex, quos veniam culpa qui explicabo non ullam exercitationem inventore tempora adipisci doloremque facere nisi.
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, saepe repellendus officiis nulla dicta qui quas sit placeat distinctio. Dignissimos, fuga expedita sint placeat harum vel atque at reiciendis. Consequatur!
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, exercitationem maxime labore recusandae ut magni quisquam quae quo necessitatibus rerum tempora autem voluptatem molestiae vel rem ad quas eligendi fugit.
 
   %div.col-md-9
     %h3
-      Últimas iniciativas
+      = t('congressmen.last_initiatives')
     %div.table-responsive
       %table.table
         %tr
@@ -132,7 +128,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
             %p
               %a{ 'href' => '#' }
-                Ver proyecto
+                = t('congressmen.view_project')
         %tr
           %td
             %img{ 'src' => 'http://placehold.it/35x58' }
@@ -143,7 +139,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
             %p
               %a{ 'href' => '#' }
-                Ver proyecto
+                = t('congressmen.view_project')
         %tr
           %td
             %img{ 'src' => 'http://placehold.it/35x58' }
@@ -154,7 +150,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
             %p
               %a{ 'href' => '#' }
-                Ver proyecto
+                = t('congressmen.view_project')
     
     %div.special-box
       %p.question
@@ -162,11 +158,11 @@
       %p.answer
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, temporibus, veniam, modi, facere laudantium aliquam facilis officiis aperiam delectus eum sapiente natus harum ut unde quisquam repellat magni expedita sunt.
       %p.total-answers.text-right
-        Pedro Pablo Alvarez-Salamanca Ramirez ha respondido 999 de las 999 preguntas ciudadanas
+        = sprintf( t('congressmen.askthem_responses'), 'Pedro Pablo Alvarez-Salamanca Ramirez', '20', '40' )
 
     %div.votes.table-responsive
       %h3
-        Votaciones
+        = t('congressmen.votes')
       %table.table
         %tr
           %td
@@ -193,7 +189,7 @@
 
     %div.intervencions.table-responsive
       %h3
-        Últimas intervenciones
+        = t('congressmen.last_interventions')
       %table.table
         %tr
           %td

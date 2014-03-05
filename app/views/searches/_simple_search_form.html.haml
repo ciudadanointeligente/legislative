@@ -9,13 +9,13 @@
             %input{type: "checkbox", name: 'bills', value: '1', checked: 'checked'}
           - else
             %input{type: "checkbox", name: 'bills', value: '1'}
-          Proyectos de ley
+          = t('search.bills')
       %div.checkbox{:style=>'padding-right:15px'}
         %label
           - if params[:congressmen] == '2'
             %input{type: "checkbox", name: "congressmen", value: '2', checked: 'checked'}
           - else
             %input{type: "checkbox", name: "congressmen", value: '2'}
-          Congresistas
+          = t('search.congressmen')
     %button.btn.btn-default
-      Buscar
+      = t('search.search')

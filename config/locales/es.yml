@@ -11,6 +11,10 @@ es:
     congressmen: Congresistas
     tables: Tablas
     about_us: Acerca de nosotros
+    menu: Menú
+    from: de Ciudadano Inteligente
+    title_project: Congreso Abierto
+    welcome: Bienvenido(a)
   main:
     search_placeholder: Ingresa tu búsqueda
     username: Nombre de usuario
@@ -28,6 +32,15 @@ es:
     yes: Sí
     no: No
     abstentions: Abstenciones
+    title_slogan: Bienvenido a tu congreso online
+    title_subslogan: Entra sin pedir permiso
+    filter_bills: Proyectos de ley
+    filter_congressmen: Congresistas
+    board_title: Hoy en tabla
+    board_table_title_high_chamber: Tabla diputados
+    board_table_title_low_chamber: Tabla senado
+    last_responses: Últimas Respuestas
+    view_more_questions: Ver más preguntas
   search:
     search_title: Búsqueda
     search_for: 'Buscar por:'
@@ -54,6 +67,11 @@ es:
     placeholder_author: Ingresa el nombre de un autor
     there_are_no_results: No hay resultados para esta búsqueda
     event_range: rango de eventos
+    bills_advanced_search: Búsqueda avanzada
+    congressmen_advanced_search: Búsqueda avanzada
+    congressmen: Congresistas
+    represent: 'Lugar que representa:'
+    all_results: Ver todos los resultados
   bill:
     bulletin: Boletín
     title: Título
@@ -81,6 +99,26 @@ es:
     directives: Indicaciones
     remarks: Observaciones
     comments: Comentarios
+    title_event: EVENTOS DEL PROYECTO
+    download_history: Descargar historial
+    view_documents: Ver documentos
+    more_recents: Más recientes
+    less_recents: Menos reciente
+    sort_time: Invertir orden temporal
+    session: Sesión
+    modal_bulletin_number: Documentos Boletín
+    modal_reports: Informes
+    modal_table_date: Fecha
+    modal_table_paperwork: Trámite
+    modal_documents: Oficios
+    modal_directives: Indicaciones
+    modal_revision: Comparados
+    subscribe: Suscribir
+    fb_share: Comparte
+    tw_share: Twittea
+    tw_text: Revisa el boletín %s en congresoabierto.cl
+    breadcrumb_bill: Proyectos de ley
+    download_project: Descargar proyecto
   paperwork:
     chamber: 'Cámara:'
     created_at: 'Fecha de creación:'
@@ -237,3 +275,38 @@ es:
       month: Mes
       second: Segundos
       year: Año
+  communication:
+    name: Nombre
+    email: E-mail
+    choose_congressmen: Seleccione un senador o diputado
+    writte_message: Redacta tu mensaje
+    subject: Título del mensaje
+    message: Contenido del mensaje
+    send: Enviar
+    list_messages: Mensajes enviados
+    questions: Preguntas hechas a %s
+  congressmen:
+    home: Portada
+    breadcrumb: Congresistas
+    fb_share: Comparte
+    tw_share: Twittea
+    title: Congresistas
+    represent: 'Lugar que representa:'
+    search_for: 'Buscar por:'
+    placeholder_search_for: Ingresa una palabra clave
+    askthem: Preguntales
+    district: 'Distrito:'
+    region: 'Región:'
+    comuna: 'Comuna:'
+    period: 'Periodo:'
+    party: 'Partido:'
+    commissions: 'Comisiones:'
+    permanent: 'Permanente:'
+    special: 'Especial:'
+    research: 'Investigadora:'
+    bio: Biografía
+    last_initiatives: Últimas iniciativas
+    view_project: Ver proyecto
+    askthem_responses: '%s ha respondido %s de las %s preguntas ciudadanas'
+    votes: Votaciones
+    last_interventions: Últimas intervenciones

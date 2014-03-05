@@ -3,15 +3,15 @@
     - if ! @bill.paperworks.blank?
       %li
         %h4{name:'timeline'}
-          EVENTOS DEL PROYECTO
+          = t('bill.title_event')
     - if ! @bill.paperworks.blank?
       %li
         = link_to url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls' do
-          Descargar historial
+          = t('bill.download_history')
           %i.fa.fa-download
       %li
         %a{'href'=>'#', 'data-toggle'=>'modal', 'data-target'=>'#Documents'}
-          Ver documentos
+          = t('bill.view_documents')
           %i.fa.fa-file
 
       %li.pull-right
@@ -20,14 +20,14 @@
             %div.col-xs-5
               %button.down.btn
                 %i.fa.fa-chevron-circle-down
-                Más recientes
+                = t('bill.more_recents')
             %div.col-xs-5
               %button.up.btn
                 %i.fa.fa-chevron-circle-up
-                Menos reciente
+                = t('bill.less_recents')
           
           %div.hidden-xs
-            Invertir orden temporal
+            = t('bill.sort_time')
             %a.down{'href'=>'#'}
               %i.fa.fa-chevron-circle-down
             %a.up{'href'=>'#'}
@@ -40,19 +40,19 @@
               %button.close{'type'=>'button', 'data-dismiss'=>'modal', 'aria-hidden'=>'true'}
                 &times;
               %h4.modal-title#myModalLabel
-                Documentos Boletín 
+                = t('bill.modal_bulletin_number') 
                 = @bill.uid
             %div.modal-body
 
               - if ! @bill.reports.blank?
                 %h5
-                  Informes
+                  = t('bill.modal_reports') 
                 %table.table.table-striped
                   %tr
                     %th
-                      Fecha
+                      = t('bill.modal_table_date')
                     %th
-                      Trámite
+                      = t('bill.modal_table_paperwork')
                   - @bill.reports.each do | rep |
                     - if ! rep.link.blank?
                       %tr
@@ -65,13 +65,13 @@
                         
               - if ! @bill.documents.blank?
                 %h5
-                  Oficios
+                  = t('bill.modal_documents') 
                 %table.table.table-striped
                   %tr
                     %th
-                      Fecha
+                      = t('bill.modal_table_date')
                     %th
-                      Trámite
+                      = t('bill.modal_table_paperwork')
                   - @bill.documents.each do | doc |
                     - if ! doc.link.blank?
                       %tr
@@ -84,13 +84,13 @@
               
               - if ! @bill.directives.blank?
                 %h5
-                  Indicaciones
+                  = t('bill.modal_directives')
                 %table.table.table-striped
                   %tr
                     %th
-                      Fecha
+                      = t('bill.modal_table_date')
                     %th
-                      Trámite
+                      = t('bill.modal_table_paperwork')
                   - @bill.directives.each do | dir |
                     - if ! dir.link.blank?
                       %tr
@@ -103,11 +103,11 @@
               
               - if ! @bill.revisions.blank?
                 %h5
-                  Comparados
+                  = t('bill.modal_revision')
                 %table.table.table-striped
                   %tr
                     %th
-                      Trámite
+                      = t('bill.modal_table_paperwork')
                   - @bill.revisions.each do | rev |
                     - if ! rev.link.blank?
                       %tr
@@ -115,10 +115,9 @@
                           %a{'href'=>rev.link}
                             = rev.description
 
-  
   %div#timeline.row
     - @bill.paperworks.each_with_index do | paperwork, index |
-      %div{ 'data-sort' => index.to_s }
+      %div{ 'data-sort' => paperwork.date.to_time.to_i }
         %div.timeline-container.col-md-1
           = image_tag("statusicon/" + paperwork.icon_event, class:"hidden-xs")
         %div.resume.col-md-11
@@ -131,11 +130,11 @@
             = paperwork.stage
           
             - if paperwork.chamber.length > 1
-              • Cámara:
+              = '•' + t('bill.chamber') + ':'
               = paperwork.chamber
 
             - if paperwork.session.length > 1
-              • Sesión:
+              = '•' + t('bill.session') + ':'
               = paperwork.session
 
 :javascript
@@ -148,3 +147,7 @@
     e.preventDefault();
     $("div#timeline>div").tsort({order:'desc', data:'sort'});
   });
+
+  $(document).ready(function(){
+    $("div#timeline>div").tsort({order:'asc', data:'sort'});
+  })

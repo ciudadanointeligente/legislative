@@ -3,7 +3,7 @@
     %li
       = link_to t('layout.home'), root_path
     %li.active
-      Búsqueda
+      = t('search.search_title')
 
 %div.row
   %div.col-md-3
@@ -16,18 +16,18 @@
         %div.row
           %div.col-md-10
             %h3 
-              Proyectos de ley
+              = t('search.bills')
           %div.col-md-2
-            = link_to 'Búsqueda Avanzada', searches_bills_path, class: 'btn btn-default btn-xs'
+            = link_to t('search.bills_advanced_search'), searches_bills_path, class: 'btn btn-default btn-xs'
             
         - @bills = @bills_query.bills
         = render :partial => "box_bills_result" 
     - else
       %div
         %h3 
-          Proyectos de ley
+          = t('search.bills')
         %p
-          No se encontraron proyectos de ley relacionados a la búsqueda
+          = t('search.there_are_no_results')
           %strong 
             = params[:q]
     /end of loop
@@ -38,17 +38,17 @@
         %div.row.header-congressmen
           %div.col-md-10
             %h3 
-              Congresistas
+              = t('search.congressmen')
           %div.col-md-2
-            = link_to 'Búsqueda Avanzada', searches_congressmen_path, class: 'btn btn-default btn-xs'
+            = link_to t('search.congressmen_advanced_search'), searches_congressmen_path, class: 'btn btn-default btn-xs'
 
         = render :partial => "box_congressmen_result"
     - else
       %div
         %h3 
-          Congresistas
+          = t('search.congressmen')
         %p
-          No se encontraron congresistas relacionados a tu búsqueda
+          = t('search.there_are_no_results')
           %strong 
             = params[:q]
     /end of loop

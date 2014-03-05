@@ -7,7 +7,7 @@
             = link_to t('layout.home'), root_path
           %li
             %a{'href'=>'#'}
-              Proyectos de ley
+              = t('bill.breadcrumb_bill')
           %li.active
             = @bill.title[0..30] + '...'
       
@@ -16,17 +16,18 @@
           %li
             = link_to (new_user_subscription_path(:bill => params[:id])), class: 'btn-warning' do
               %i.fa.fa-star-o
-              Suscribir
+              = t('bill.subscribe')
           %li
             - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
             %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
               %i.fa.fa-facebook 
-              Comparte
+              = t('bill.fb_share')
           %li
-            - url = 'https://twitter.com/share?url='+request.original_url+'&via=ciudadanoi&hashtags='+ENV['twitter_tags']+'&text=Revisa el boletín '+@bill.uid+' en congresoabierto.cl'
+            - txt_twitter = sprintf(t('bill.tw_text'),@bill.uid)
+            - url = 'https://twitter.com/share?url='+request.original_url+'&via=ciudadanoi&hashtags='+ENV['twitter_tags']+'&text='+txt_twitter
             %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
               %i.fa.fa-twitter 
-              Twittea
+              = t('bill.tw_share')
     
     %div.row
       %div.col-md-1.side
@@ -43,7 +44,7 @@
         
         - if !@bill.authors.blank?
           %p
-            Autores:
+            = t('bill.authors') + ':'
             - authors = @bill.authors.map { |author| a = author.split(','); a[1].strip + ' ' + a[0].strip  }
             %span
               = authors.join(', ')
@@ -59,5 +60,5 @@
         - if ! @bill.bill_draft_link.blank?
           %p
             %a{'href'=> @bill.bill_draft_link}
-              Descargar proyecto 
+              = t('bill.download_project')
               %i.fa.fa-download
