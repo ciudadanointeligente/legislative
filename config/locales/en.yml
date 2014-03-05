@@ -207,40 +207,40 @@ en:
     subscribe: Subscribe
     email: Email
   communication:
-    name: Nombre
+    name: Name
     email: E-mail
     choose_congressmen: Seleccione un senador o diputado
     writte_message: Redacta tu mensaje
-    subject: Título del mensaje
-    message: Contenido del mensaje
-    send: Enviar
+    subject: Subject
+    message: Message
+    send: Send
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
   congressmen:
-    home: Portada
+    home: Home
     breadcrumb: Congresistas
-    fb_share: Comparte
-    tw_share: Twittea
+    fb_share: Share
+    tw_share: Twitt
     title: Congresistas
     represent: 'Lugar que representa:'
     search_for: 'Buscar por:'
     placeholder_search_for: Ingresa una palabra clave
     askthem: Preguntales
-    district: 'Distrito:'
-    region: 'Región:'
+    district: 'District:'
+    region: 'Region:'
     comuna: 'Comuna:'
-    period: 'Periodo:'
-    party: 'Partido:'
-    commissions: 'Comisiones:'
-    permanent: 'Permanente:'
-    special: 'Especial:'
-    research: 'Investigadora:'
+    period: 'Period:'
+    party: 'Party:'
+    commissions: 'Commissions:'
+    permanent: 'Permanent:'
+    special: 'Special:'
+    research: 'Research:'
     bio: Biografía
-    last_initiatives: Últimas iniciativas
-    view_project: Ver proyecto
-    askthem_responses: '%s ha respondido %s de las %s preguntas ciudadanas'
-    votes: Votaciones
-    last_interventions: Últimas intervenciones
+    last_initiatives: Last initiatives
+    view_project: View project
+    askthem_responses: 'Questions for %s'
+    votes: Votes
+    last_interventions: Last interventions
   routes:
     bills: bills
     bills_search: bills_search
