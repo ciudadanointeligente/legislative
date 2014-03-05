@@ -1,63 +1,29 @@
 %section#board
   %h3.text-center.txt-board 
-    = t('main.board_title')
+    = t('main.discussion_agendas')
   %div.row
     %div.col-md-6
       %table.table.table-striped.tablas
         %thead
           %tr
             %th{:colspan=>"3"}
-              %h4.table-title 
-                = t('main.board_table_title_high_chamber')
+              %h4.table-title
+                = t('main.high_chamber_agenda')
         %tbody
-          %tr
-            %td
-              %p.light 975-25
-            %td
-              %strong 
-                = link_to 'Sesión 111ª ordinaria, Legislatura 361', tables_path
-              %p
-                09 de enero de 2014
-            %td
-              3
-              %a{href: "/"}
-                %i.fa.fa-bell-o
-          %tr
-            %td
-              %p.light 975-25
-            %td
-              %strong 
-                = link_to 'Sesión 110ª ordinaria, Legislatura 361', tables_path
-              %p
-                08 de enero de 2014
-            %td
-              0
-              %a{href: "/"}
-                %i.fa.fa-bell-o
-          %tr
-            %td
-              %p.light 975-25
-            %td
-              %strong 
-                = link_to 'Sesión 109ª pedida, Legislatura 361', tables_path
-              %p
-                07 de enero de 2014
-            %td
-              19
-              %a{href: "/"}
-                %i.fa.fa-bell-o
-          %tr
-            %td
-              %p.light 975-25
-            %td
-              %strong 
-                = link_to 'Sesión 109ª pedida, Legislatura 361', tables_path
-              %p
-                06 de enero de 2014
-            %td
-              27
-              %a{href: "/"}
-                %i.fa.fa-bell-o
+          - @high_chamber_agendas.each do |high_chamber_agenda|
+            %tr
+              %td
+                %p.light
+                  = high_chamber_agenda['uid']
+              %td
+                %strong
+                  = link_to (t('main.session') + ' ' + high_chamber_agenda['session'] + 'ª, ' + t('main.legislature') + ' ' + high_chamber_agenda['legislature']), tables_path
+                %p
+                  = localize high_chamber_agenda['date'].to_date, :format => :long
+                /%td
+                /put here a notification counter
+                /%a{href: "/"}
+                /%i.fa.fa-bell-o
 
     %div.col-md-6
       %table.table.table-striped.tablas
@@ -65,56 +31,22 @@
           %tr
             %th{:colspan=>"3"}
               %h4.table-title
-                = t('main.board_table_title_low_chamber')
+                = t('main.low_chamber_agenda')
         %tbody
-          %tr
-            %td
-              %p.light 975-25        
-            %td
-              %strong 
-                = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
-              %p
-                Martes 14 de enero de 2014
-            %td
-              19
-              %a{href: "/"}
-                %i.fa.fa-bell-o
-          %tr
-            %td
-              %p.light 975-25        
-            %td
-              %strong 
-                = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
-              %p
-                Martes 14 de enero de 2014
-            %td
-              127
-              %a{href: "/"}
-                %i.fa.fa-bell-o
-          %tr
-            %td
-              %p.light 975-25        
-            %td
-              %strong 
-                = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
-              %p
-                Martes 14 de enero de 2014
-            %td
-              0
-              %a{href: "/"}
-                %i.fa.fa-bell-o
-          %tr
-            %td
-              %p.light 975-25        
-            %td
-              %strong 
-                = link_to 'Sesión Nº 84, Legislatura 358, Tipo Ordinaria', tables_path
-              %p
-                Martes 14 de enero de 2014
-            %td
-              89
-              %a{href: "/"}
-                %i.fa.fa-bell-o
+          - @low_chamber_agendas.each do |low_chamber_agenda|
+            %tr
+              %td
+                %p.light
+                  = low_chamber_agenda['uid']
+              %td
+                %strong
+                  = link_to (t('main.session') + ' ' + low_chamber_agenda['session'] + 'ª, ' + t('main.legislature') + ' ' + low_chamber_agenda['legislature']), tables_path
+                %p
+                  = localize low_chamber_agenda['date'].to_date, :format => :long
+                /%td
+                /put here a notification counter
+                /%a{href: "/"}
+                /%i.fa.fa-bell-o
 
 %section#last-responses
   %h3.title-last-responses 
