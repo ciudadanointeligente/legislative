@@ -5,14 +5,18 @@
         %img.img-circle.img-responsive{:src=>congressman.images[0].url}
       - else
         %img.img-circle.img-responsive{:src=>'http://placehold.it/200x200'}
-    %div.col-md-11
-      %h4
+    %div.col-md-10
+      %h5
         = link_to congressman.name, congressman_path(congressman.id)
       %p
         - if ! congressman.represent[0].region.blank?
-          %strong
+          %span.light
             = t('search.represent')
           = congressman.represent[0].region
+    %div.col-md-1
+      %a{href: "/"}
+        0
+        %i.fa.fa-star-o
   
 %div.text-right
   - if ! params[:q].blank?

@@ -10,7 +10,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #67675a;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 .navbar-inverse {
@@ -65,8 +65,21 @@ strong {
 
 /* BUTTONS */
 
-.btn-small {
-  height: 35px;
+.btn {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Raleway', Helvetica, sans-serif;
+}
+
+.btn-xs {
+  height: 25px;
+  font-size: 11px;
+  padding: 4px;
+}
+
+
+.btn-sm {
+  height: 50px;
 }
 
 .btn-lg {
@@ -74,6 +87,7 @@ strong {
   font-family: 'Raleway', Helvetica, sans-serif;
   font-weight: 700;
   font-size: 14px;
+  height: 50px;
 }
 
 .btn-default {
@@ -95,7 +109,6 @@ strong {
   border-color: transparent;
   border-bottom: 2px solid #d8d7bc;
   border-radius: 0px;
-  height: 50px;
 }
 
 .btn-info:hover {
@@ -157,6 +170,12 @@ strong {
 .action-btn.list-inline>li {
   padding: 0px 1px;
 }
+
+.btn .fa-search {
+  padding: 0 5px;
+}
+
+/*CLEARFIX*/
 
 .clearfix:after {
   content: "";
@@ -590,6 +609,34 @@ span.paring {
   border-radius: 25px;
 }
 
+/*SEARCH RESULTS*/
+
+.whitewithaside {
+  background: #fff;
+  padding: 20px;
+}
+
+.aside {
+  background: #CDCDB3;
+  padding: 20px;
+}
+
+.aside .checkbox {
+   padding-left: 0px; 
+}
+
+.aside .checkbox input[type="checkbox"] {
+  float: none;
+  margin-left: 0px;
+}
+
+h4 span.nostyle {
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
 /*Comunicacion*/
 .form-comunication {
   color: #FFF;
@@ -855,12 +902,6 @@ svg.graph .labels.y-labels {
     padding: 40px 0px;
   }
   .form-control {
-    height: 50px;
-  }
-  .btn-primary {
-    height: 50px;
-  }
-  .btn-default {
     height: 50px;
   }
 }
