@@ -36,11 +36,13 @@ en:
     title_subslogan: Entra sin pedir permiso
     filter_bills: Bills
     filter_congressmen: Congressmen
-    board_title: On Board
-    board_table_title_high_chamber: High Chamber Board
-    board_table_title_low_chamber: Low Chamber Board
+    discussion_agendas: Discussion agendas
+    high_chamber_agenda: High Chamber Board
+    low_chamber_agenda: Low Chamber Board
     last_responses: Last responses
     view_more_questions: View more questions
+    session: Session
+    legislature: Legislature
   search:
     search_title: Search
     search_for: 'Search for:'
@@ -200,6 +202,41 @@ en:
     verified_mail: Your email was successfully verified
     subscribe: Subscribe
     email: Email
+  communication:
+    name: Nombre
+    email: E-mail
+    choose_congressmen: Seleccione un senador o diputado
+    writte_message: Redacta tu mensaje
+    subject: Título del mensaje
+    message: Contenido del mensaje
+    send: Enviar
+    list_messages: Mensajes enviados
+    questions: Preguntas hechas a %s
+  congressmen:
+    home: Portada
+    breadcrumb: Congresistas
+    fb_share: Comparte
+    tw_share: Twittea
+    title: Congresistas
+    represent: 'Lugar que representa:'
+    search_for: 'Buscar por:'
+    placeholder_search_for: Ingresa una palabra clave
+    askthem: Preguntales
+    district: 'Distrito:'
+    region: 'Región:'
+    comuna: 'Comuna:'
+    period: 'Periodo:'
+    party: 'Partido:'
+    commissions: 'Comisiones:'
+    permanent: 'Permanente:'
+    special: 'Especial:'
+    research: 'Investigadora:'
+    bio: Biografía
+    last_initiatives: Últimas iniciativas
+    view_project: Ver proyecto
+    askthem_responses: '%s ha respondido %s de las %s preguntas ciudadanas'
+    votes: Votaciones
+    last_interventions: Últimas intervenciones
   routes:
     bills: bills
     bills_search: bills_search
@@ -275,38 +312,3 @@ en:
       month: Month
       second: Seconds
       year: Year
-  communication:
-    name: Nombre
-    email: E-mail
-    choose_congressmen: Seleccione un senador o diputado
-    writte_message: Redacta tu mensaje
-    subject: Título del mensaje
-    message: Contenido del mensaje
-    send: Enviar
-    list_messages: Mensajes enviados
-    questions: Preguntas hechas a %s
-  congressmen:
-    home: Portada
-    breadcrumb: Congresistas
-    fb_share: Comparte
-    tw_share: Twittea
-    title: Congresistas
-    represent: 'Lugar que representa:'
-    search_for: 'Buscar por:'
-    placeholder_search_for: Ingresa una palabra clave
-    askthem: Preguntales
-    district: 'Distrito:'
-    region: 'Región:'
-    comuna: 'Comuna:'
-    period: 'Periodo:'
-    party: 'Partido:'
-    commissions: 'Comisiones:'
-    permanent: 'Permanente:'
-    special: 'Especial:'
-    research: 'Investigadora:'
-    bio: Biografía
-    last_initiatives: Últimas iniciativas
-    view_project: Ver proyecto
-    askthem_responses: '%s ha respondido %s de las %s preguntas ciudadanas'
-    votes: Votaciones
-    last_interventions: Últimas intervenciones
