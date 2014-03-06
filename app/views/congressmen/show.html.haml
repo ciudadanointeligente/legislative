@@ -27,15 +27,6 @@
   %h4
     Senador
 
-- if ! @message.nil?
-  %div
-    última pregunta
-    %div
-      %div
-      = @message.subject
-      %div
-      = @message.content
-
 
 %div.row
   %div.col-md-3
@@ -151,14 +142,18 @@
             %p
               %a{ 'href' => '#' }
                 = t('congressmen.view_project')
-    
-    %div.special-box
-      %p.question
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, perspiciatis, consequatur non inventore adipisci placeat deleniti animi tempora accusantium ipsa incidunt doloremque ducimus quos dolores minus doloribus debitis. Necessitatibus, impedit.
-      %p.answer
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, temporibus, veniam, modi, facere laudantium aliquam facilis officiis aperiam delectus eum sapiente natus harum ut unde quisquam repellat magni expedita sunt.
-      %p.total-answers.text-right
-        = sprintf( t('congressmen.askthem_responses'), 'Pedro Pablo Alvarez-Salamanca Ramirez', '20', '40' )
+
+    - if ! @message.nil?
+      %div.special-box
+        = t('Última pregunta')
+        %div
+          %p.question.subject
+          = @message.subject
+          %p.question.subject
+          = @message.content
+          %p.total-answers.text-right
+          = sprintf( t('congressmen.askthem_responses'), @congressman.name  )
+
 
     %div.votes.table-responsive
       %h3

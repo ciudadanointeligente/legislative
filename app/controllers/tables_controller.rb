@@ -6,10 +6,9 @@ class TablesController < ApplicationController
   
   # GET /tables
   def index
-    # @tables = Table.all
-    @tables = TableCollection.new
-    #puts ENV['tables_url']
-    @tables.get(ENV['tables_url'],'application/json')
+    @agendas = get_all_the_agendas
+    # @tables = TableCollection.new
+    # @tables.get(ENV['tables_url'],'application/json')
   end
 
   # GET /tables/1
@@ -49,6 +48,12 @@ class TablesController < ApplicationController
   def destroy
     # @table.destroy
     redirect_to tables_url, notice: 'Table was successfully destroyed.'
+  end
+
+  # GET all the agendas
+  def get_all_the_agendas
+    response = RestClient.get(ENV['agendas_url'] + "select%20*%20from%20data%20limit%2020", :content_type => :json, :accept => :json, :"x-api-key" => ENV['agendas_api_key'])
+    response = JSON.parse(response)
   end
 
   private

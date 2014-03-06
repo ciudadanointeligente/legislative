@@ -13,7 +13,7 @@ es:
     about_us: Acerca de nosotros
     menu: Menú
     from: de Ciudadano Inteligente
-    title_project: Congreso Abierto
+    title_project: Congreso abierto
     welcome: Bienvenido(a)
   main:
     search_placeholder: Ingresa tu búsqueda
@@ -23,8 +23,8 @@ es:
     login: Ingresar
     registry: Crear una cuenta
     forgot: Olvidaste tu clave?
-    latest_tables: Últimas Tablas
-    latest_bills: Últimos Proyectos de ley
+    latest_tables: Últimas tablas
+    latest_bills: Últimos proyectos de ley
     view_more: Ver más
     senator_highlights: Senador destacado
     option_votes: Opciones
@@ -36,11 +36,13 @@ es:
     title_subslogan: Entra sin pedir permiso
     filter_bills: Proyectos de ley
     filter_congressmen: Congresistas
-    board_title: Hoy en tabla
-    board_table_title_high_chamber: Tabla diputados
-    board_table_title_low_chamber: Tabla senado
-    last_responses: Últimas Respuestas
+    discussion_agendas: Tablas de discusión
+    high_chamber_agenda: Tabla senado
+    low_chamber_agenda: Tabla cámara de diputados
+    last_responses: Últimas respuestas
     view_more_questions: Ver más preguntas
+    session: Sesión
+    legislature: Legislatura
   search:
     search_title: Búsqueda
     search_for: 'Buscar por:'
@@ -72,6 +74,10 @@ es:
     congressmen: Congresistas
     represent: 'Lugar que representa:'
     all_results: Ver todos los resultados
+  agendas:
+    chamber: Cámara
+    date: Fecha
+    bills: Proyectos de ley
   bill:
     bulletin: Boletín
     title: Título
@@ -106,7 +112,7 @@ es:
     less_recents: Menos reciente
     sort_time: Invertir orden temporal
     session: Sesión
-    modal_bulletin_number: Documentos Boletín
+    modal_bulletin_number: Documentos boletín
     modal_reports: Informes
     modal_table_date: Fecha
     modal_table_paperwork: Trámite
@@ -200,6 +206,41 @@ es:
     verified_mail: El correo electrónico fue exitosamente verificado
     subscribe: Suscríbete
     email: Correo Electrónico
+  communication:
+    name: Nombre
+    email: E-mail
+    choose_congressmen: Seleccione un senador o diputado
+    writte_message: Redacta tu mensaje
+    subject: Título del mensaje
+    message: Contenido del mensaje
+    send: Enviar
+    list_messages: Mensajes enviados
+    questions: Preguntas hechas a %s
+  congressmen:
+    home: Portada
+    breadcrumb: Congresistas
+    fb_share: Comparte
+    tw_share: Twittea
+    title: Congresistas
+    represent: 'Lugar que representa:'
+    search_for: 'Buscar por:'
+    placeholder_search_for: Ingresa una palabra clave
+    askthem: Preguntales
+    district: 'Distrito:'
+    region: 'Región:'
+    comuna: 'Comuna:'
+    period: 'Periodo:'
+    party: 'Partido:'
+    commissions: 'Comisiones:'
+    permanent: 'Permanente:'
+    special: 'Especial:'
+    research: 'Investigadora:'
+    bio: Biografía
+    last_initiatives: Últimas iniciativas
+    view_project: Ver proyecto
+    askthem_responses: 'Preguntas hechas a %s'
+    votes: Votaciones
+    last_interventions: Últimas intervenciones
   routes:
     bills: proyectos
     bills_search: busquedas_de_proyectos
@@ -275,38 +316,3 @@ es:
       month: Mes
       second: Segundos
       year: Año
-  communication:
-    name: Nombre
-    email: E-mail
-    choose_congressmen: Seleccione un senador o diputado
-    writte_message: Redacta tu mensaje
-    subject: Título del mensaje
-    message: Contenido del mensaje
-    send: Enviar
-    list_messages: Mensajes enviados
-    questions: Preguntas hechas a %s
-  congressmen:
-    home: Portada
-    breadcrumb: Congresistas
-    fb_share: Comparte
-    tw_share: Twittea
-    title: Congresistas
-    represent: 'Lugar que representa:'
-    search_for: 'Buscar por:'
-    placeholder_search_for: Ingresa una palabra clave
-    askthem: Preguntales
-    district: 'Distrito:'
-    region: 'Región:'
-    comuna: 'Comuna:'
-    period: 'Periodo:'
-    party: 'Partido:'
-    commissions: 'Comisiones:'
-    permanent: 'Permanente:'
-    special: 'Especial:'
-    research: 'Investigadora:'
-    bio: Biografía
-    last_initiatives: Últimas iniciativas
-    view_project: Ver proyecto
-    askthem_responses: '%s ha respondido %s de las %s preguntas ciudadanas'
-    votes: Votaciones
-    last_interventions: Últimas intervenciones
