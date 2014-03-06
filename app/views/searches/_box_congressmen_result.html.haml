@@ -9,14 +9,17 @@
       %h5
         = link_to congressman.name, congressman_path(congressman.id)
       %p
+        Senador 2010-2014.
+        %br/
         - if ! congressman.represent[0].region.blank?
           %span.light
             = t('search.represent')
           = congressman.represent[0].region
     %div.col-md-1
       %a{href: "/"}
-        0
-        %i.fa.fa-star-o
+        %h5
+          0
+          %i.fa.fa-pencil
   
 %div.text-right
   - if ! params[:q].blank?

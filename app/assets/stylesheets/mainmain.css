@@ -218,6 +218,9 @@ strong {
   font-family: 'Raleway', Helvetica, sans-serif;
   text-transform: uppercase;
   padding: .3em .6em .2em;
+  font-size: 10px;
+  font-weight: 700;
+  margin-right: 9px;
 }
 
 .label-default:before {
@@ -250,6 +253,10 @@ strong {
 
 .hero-space .label-default:after{
   background:#3e1f3e;
+}
+
+.list-inline>li.label-default:first-child {
+  padding-left: 6px;
 }
 
 /*Menu*/
@@ -314,7 +321,7 @@ strong {
   background: #462445;
   color: #e6e6c9;
   padding: 10px 0px;
-  margin-top: -10px;
+  margin-top: -20px;
 }
 
 .hot-space {
@@ -886,6 +893,8 @@ svg.graph .labels.y-labels {
 
   h4 {
     font-size: 21px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   h5 {
