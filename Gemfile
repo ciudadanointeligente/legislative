@@ -31,14 +31,17 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
-# Using thin for development server
-gem 'thin', :group => :development
+group :development do
+  # Using thin for development server
+  gem 'thin'
 
-# Replaces default rails error page with a much better and more useful error page
-gem 'better_errors', :group => :development
+  # Replaces default rails error page with a much better and more useful error page
+  gem 'better_errors'
 
-# Turns off the rails asset pipeline log
-gem 'quiet_assets', :group => :development
+  # Turns off the rails asset pipeline log
+  gem 'quiet_assets'
+  gem 'binding_of_caller'
+end
 
 # Support to XLS export
 gem 'ekuseru'
@@ -51,8 +54,8 @@ gem 'route_translator'
 gem 'roar', '0.11.19'
 gem 'roar-rails', '0.1.0'
 gem 'faraday', '0.8.1'
-gem 'billit_representers', '0.8.6'
-gem 'popit_representers', '0.0.12'
+gem 'billit_representers', '0.8.9'
+gem 'popit_representers', '0.0.13', path: '/home/jgarrido/dev/FCI'
 gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
 
 group :development, :test do

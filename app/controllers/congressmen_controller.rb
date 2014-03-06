@@ -5,26 +5,23 @@ class CongressmenController < ApplicationController
   # GET /congressmen
   def index
     @congressmen = PopitPersonCollection.new
-    @congressmen.get ENV['popit_persons'], 'application/json'
+    @congressmen.get ENV['popit_persons']+'?page='+"#{params[:page]}", 'application/json'
   end
 
   # GET /congressmen/1
   def show
-    @congressmen = PopitPersonCollection.new
-    @congressmen.get ENV['popit_persons'], 'application/json'
+    @congressman = PopitPerson.new
+    @congressman.get ENV['popit_persons']+params[:id]+'?include_root=false', 'application/json'
 
     @organizations = Popit::OrganizationCollection.new
     @organizations.get ENV['popit_organizations'], 'application/json'
 
-    @congressmen.result.each do |congressman|
-      @congressman = congressman if congressman.id == params[:id]
-    end
+    #setup the title page
+    @title = @congressman.name + " - "
+    
     messages = LegislativeMessageCollection.new
     messages.get(person: @congressman)
     @message = messages.objects[0]
-
-    #setup the title page
-    @title = @congressman.name + " - "
   end
 
   # GET /congressmen/new
