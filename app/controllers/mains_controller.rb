@@ -10,13 +10,13 @@ class MainsController < ApplicationController
 
   # GET the high chamber agenda
   def get_high_chamber_agenda
-    response = RestClient.get(ENV['agendas_url'] + "select%20*%20from%20data%20where%20chamber%20%3D%20'Senado'%20limit%204", :content_type => :json, :accept => :json, :"x-api-key" => ENV['agendas_api_key'])
+    response = RestClient.get(ENV['agendas_url'] + "select%20*%20from%20data%20where%20chamber%20%3D%20'Senado'%20limit%204", :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
     response = JSON.parse(response)
   end
 
   # GET the low chamber agenda
   def get_low_chamber_agenda
-    response = RestClient.get(ENV['agendas_url'] + "select%20*%20from%20data%20where%20chamber%20%3D%20'C.Diputados'%20limit%204", :content_type => :json, :accept => :json, :"x-api-key" => ENV['agendas_api_key'])
+    response = RestClient.get(ENV['agendas_url'] + "select%20*%20from%20data%20where%20chamber%20%3D%20'C.Diputados'%20limit%204", :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
     response = JSON.parse(response)
   end
 end
