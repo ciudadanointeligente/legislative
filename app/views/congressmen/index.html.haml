@@ -28,13 +28,22 @@
 
       %div.row
         %div.col-md-1
-          - if congressman.images.nil?
-            %img.img-circle.img-responsive{:src=>congressman.images[0]['url']}
+          - if ! congressman.images.blank?
+            %img.img-circle.img-responsive{:src=>congressman.images[0].url}
           - else
             %img.img-circle.img-responsive{:src=>'http://placehold.it/200x200'}
         %div.col-md-11
           = link_to congressman.name, congressman_path(congressman.id)
+
           %p
             %strong
               = t('congressmen.represent')
             = congressman.represent[0].district
+
+    %div.col-md-6
+      - if ! @congressmen.prev_url.blank?
+        = link_to t('pagination.previous'), congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default'
+    %div.col-md-6
+      - if ! @congressmen.next_url.blank?
+        - if @congressmen.has_more
+          = link_to t('pagination.next'), congressmen_path + '/?page=' + (@congressmen.page + 1).to_s, :class => 'btn btn-default'
