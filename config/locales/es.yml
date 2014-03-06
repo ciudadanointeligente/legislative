@@ -69,8 +69,8 @@ es:
     placeholder_author: Ingresa el nombre de un autor
     there_are_no_results: No hay resultados para esta búsqueda
     event_range: rango de eventos
-    bills_advanced_search: Búsqueda avanzada
-    congressmen_advanced_search: Búsqueda avanzada
+    bills_advanced_search: Ver todos los resultados
+    congressmen_advanced_search: Ver todos los resultados
     congressmen: Congresistas
     represent: 'Lugar que representa:'
     all_results: Ver todos los resultados
