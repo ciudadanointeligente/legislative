@@ -74,6 +74,7 @@ es:
     congressmen: Congresistas
     represent: 'Lugar que representa:'
     all_results: Ver todos los resultados
+    search_results: Resultados de búsqueda
   agendas:
     chamber: Cámara
     date: Fecha
