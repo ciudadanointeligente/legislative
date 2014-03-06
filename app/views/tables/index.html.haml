@@ -3,15 +3,15 @@
 
 %table.table.table-striped
   %tr
-    %th='Cámara'
-    %th='Fecha'
-    %th='Proyectos de ley'
+    %th= t('agendas.chamber')
+    %th= t('agendas.date')
+    %th= t('agendas.bills')
   
-  - @tables.tables.each do |table|
+  - @agendas.each do |agenda|
     %tr
-      %td= table.initial_chamber
-      %td= localize table.creation_date.to_date, :format => :default
+      %td= agenda['chamber']
+      %td= agenda['date']
       %td
-        - table.bills.each do |bill|
+        - JSON.parse(agenda['bill_list']).uniq.each do |bill|
           = link_to bill, bill_path(bill)
   
