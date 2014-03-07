@@ -21,9 +21,9 @@
     = link_to t('congressmen.title')
 
 %div.row
-  %div.col-md-3
+  %div.col-md-3.aside
     = render :partial => "filter_search_form"
-  %div.col-md-9
+  %div.col-md-9.whitewithaside
     - @congressmen.persons.each do | congressman |
 
       %div.row
