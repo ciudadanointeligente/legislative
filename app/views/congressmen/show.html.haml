@@ -15,7 +15,7 @@
           %i.fa.fa-facebook 
           = t("congressmen.fb_share")
       %li
-        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags=pmo&text='+@congressman.name
+        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags='+ENV['twitter_tags']+'&text='+@congressman.name
         %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
           %i.fa.fa-twitter 
           = t("congressmen.tw_share")
@@ -76,33 +76,37 @@
     - if ! @congressman.commissions.blank?
       %p
         = t('congressmen.commissions')
-      %ul
-      - @congressman.commissions.each do | c |
-        - if ! c.permanent.blank?
-          %li 
-            = t('congressmen.permanent') + c.permanent  
-        
-        - if ! c.special.blank?
-          %li 
-            = t('congressmen.special') + c.special 
-        
-        - if ! c.researcher.blank?
-          %li 
-            = t('congressmen.research') + c.researcher 
+        %ul
+        - @congressman.commissions.each do | c |
+          - if ! c.permanent.blank?
+            %li 
+              = t('congressmen.permanent') + c.permanent  
+          
+          - if ! c.special.blank?
+            %li 
+              = t('congressmen.special') + c.special 
+          
+          - if ! c.researcher.blank?
+            %li 
+              = t('congressmen.research') + c.researcher 
     
     - if ! @congressman.enlaces.blank?
       %div
         %ul
           - @congressman.enlaces.each do | link |
+            - icon = 'fa-globe'
+            - case link.note
+            - when 'twitter'
+              - icon = 'fa-twitter'
+            - when 'facebook'
+              - icon = 'fa-facebook'
             %li
-              %a{ 'href' => link.url }
-                %i.fa.fa-globe
-                = link.note
+              %a{ 'href' => link.url, 'target' => '_blank' }
+                %i{:class=>'fa '+icon}
+                = link.note.capitalize
         
     %h5
       = t('congressmen.bio')
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab ut aperiam quae fuga! Dolorum, ex, quos veniam culpa qui explicabo non ullam exercitationem inventore tempora adipisci doloremque facere nisi.
 
   %div.col-md-9
     %h3

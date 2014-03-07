@@ -6,11 +6,11 @@
           = t('bill.title_event')
     - if ! @bill.paperworks.blank?
       %li
-        = link_to url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls' do
+        = link_to (url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls'), :onclick => "ga('send','download','download_bill_history_xls')" do
           = t('bill.download_history')
           %i.fa.fa-download
       %li
-        %a{'href'=>'#', 'data-toggle'=>'modal', 'data-target'=>'#Documents'}
+        %a{'href'=>'#', 'data-toggle'=>'modal', 'data-target'=>'#Documents', 'onclick' => "ga('send','view','view_documents')"}
           = t('bill.view_documents')
           %i.fa.fa-file
 
@@ -18,19 +18,19 @@
         - if ! @bill.paperworks.blank?
           %div.row.visible-xs
             %div.col-xs-5
-              %button.down.btn
+              %button.down.btn{'onclick'=>"ga('send','click','mobile_more_recent')"}
                 %i.fa.fa-chevron-circle-down
                 = t('bill.more_recents')
             %div.col-xs-5
-              %button.up.btn
+              %button.up.btn{'onclick'=>"ga('send','click','mobile_less_recent')"}
                 %i.fa.fa-chevron-circle-up
                 = t('bill.less_recents')
           
           %div.hidden-xs
             = t('bill.sort_time')
-            %a.down{'href'=>'#'}
+            %a.down{'href'=>'#','onclick'=>"ga('send','click','desktop_more_recent')"}
               %i.fa.fa-chevron-circle-down
-            %a.up{'href'=>'#'}
+            %a.up{'href'=>'#','onclick'=>"ga('send','click','desktop_less_recent')"}
               %i.fa.fa-chevron-circle-up
       
       %div.modal.fade#Documents{'tabindex'=>'-1', 'role'=>'dialog', 'aria-labelledby'=>'myModalLabel', 'aria-hidden'=>'true'}
