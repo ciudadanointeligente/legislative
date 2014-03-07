@@ -143,6 +143,7 @@ GEM
     multi_json (1.8.2)
     multi_xml (0.5.5)
     multipart-post (1.2.0)
+    newrelic_rpm (3.7.3.199)
     nio4r (1.0.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
@@ -283,6 +284,7 @@ DEPENDENCIES
   httparty
   jquery-rails
   json
+  newrelic_rpm
   popit_representers (= 0.0.15)
   protected_attributes
   quiet_assets
