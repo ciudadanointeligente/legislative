@@ -33,7 +33,6 @@ gem 'turbolinks'
 
 group :development do
   # Using thin for development server
-  gem 'thin'
   # Replaces default rails error page with a much better and more useful error page
   gem 'better_errors'
   # Turns off the rails asset pipeline log

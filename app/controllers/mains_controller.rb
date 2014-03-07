@@ -1,3 +1,4 @@
+require "billit_representers/models/bill_page"
 class MainsController < ApplicationController
 
   # GET /mains
@@ -6,6 +7,7 @@ class MainsController < ApplicationController
     @condition_priority_box = true
     @high_chamber_agendas = get_high_chamber_agenda
     @low_chamber_agendas = get_low_chamber_agenda
+    @hot_bills = Billit::BillCollectionPage.get(ENV['billit_url'] + "search?current_urgency=Simple&per_page=6", 'application/json').bills
   end
 
   # GET the high chamber agenda
