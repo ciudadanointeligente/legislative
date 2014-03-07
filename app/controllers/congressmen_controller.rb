@@ -47,7 +47,8 @@ class CongressmenController < ApplicationController
   def searches
     @congressmen = PopitPersonCollection.new
     if !params.nil? && params.length > 3
-      @congressmen.get ENV['popit_search']+"q="+params[:q], 'application/json'
+      param_q = URI::escape(params[:q])
+      @congressmen.get ENV['popit_search']+"q="+param_q, 'application/json'
     else
       @congressmen.get ENV['popit_search'], 'application/json'
     end
