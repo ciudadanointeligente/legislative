@@ -25,7 +25,7 @@
   %h2
     = @congressman.name
   %h4
-    Senador
+    = @congressman.title
 
 
 %div.row
@@ -76,24 +76,24 @@
     - if ! @congressman.commissions.blank?
       %p
         = t('congressmen.commissions')
-        %ul
-        - @congressman.commissions.each do | c |
-          - if ! c.permanent.blank?
-            %li 
-              = t('congressmen.permanent') + c.permanent  
-          
-          - if ! c.special.blank?
-            %li 
-              = t('congressmen.special') + c.special 
-          
-          - if ! c.researcher.blank?
-            %li 
-              = t('congressmen.research') + c.researcher 
+      %ul
+      - @congressman.commissions.each do | c |
+        - if ! c.permanent.blank?
+          %li 
+            = t('congressmen.permanent') + c.permanent  
+        
+        - if ! c.special.blank?
+          %li 
+            = t('congressmen.special') + c.special 
+        
+        - if ! c.researcher.blank?
+          %li 
+            = t('congressmen.research') + c.researcher 
     
-    - if ! @congressman.links.blank?
+    - if ! @congressman.enlaces.blank?
       %div
         %ul
-          - @congressman.links.each do | link |
+          - @congressman.enlaces.each do | link |
             %li
               %a{ 'href' => link.url }
                 %i.fa.fa-globe
