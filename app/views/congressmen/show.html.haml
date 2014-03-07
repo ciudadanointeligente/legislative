@@ -33,7 +33,7 @@
     - if ! @congressman.images.blank?
       %img.img-responsive{:src=>@congressman.images[0].url}
     - else
-      %img.img-responsive{ 'src' => 'http://placehold.it/230x230'}
+      = image_tag('default-profile.png', class: "img-responsive")
     
     - if ! @congressman.represent.blank?
       %p
