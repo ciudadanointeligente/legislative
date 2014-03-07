@@ -32,3 +32,4 @@ writeit_local_for_testing
 db/schema.rb
 .watsonrc
 .ruby-version
+/config/newrelic.yml
