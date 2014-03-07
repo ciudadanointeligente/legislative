@@ -34,33 +34,33 @@ production:
   writeit_messages_per_page: '20'
 
 development:
-  root_url:   ~           #example: 'http://www.congresoabierto.cl/'; used for links in the exported XLS files
-  analytics:  ~           #example: 'UA-XXXXX-X'; Google Analytics code
+  root_url:   ~           # example: 'http://www.congresoabierto.cl/'; used for links in the exported XLS files
+  analytics:  ~           # example: 'UA-XXXXX-X'; Google Analytics code
   description: ~
   og_description: ~
-  disqus_shortname: ~     #example: 'qwerty'; Disqus identifier, to manage comments in Disqus you will need a account. https://disqus.com/admin/signup/
-  disqus_language:  ~     #example: 'ru'; For a full list of supported languages https://www.transifex.com/projects/p/disqus/
-  disqus_developer: '1'   #Use '1' for local testing, otherwise use '0'
-  high_chamber_name: 'Senado'
-  low_chamber_name:  'C.Diputados'
+  disqus_shortname: ~     # example: 'qwerty'; Disqus identifier, to manage comments in Disqus you will need a account. https://disqus.com/admin/signup/
+  disqus_language:  ~     # example: 'ru'; For a full list of supported languages https://www.transifex.com/projects/p/disqus/
+  disqus_developer: '1'   # use '1' for local testing, otherwise use '0'
+  high_chamber_name: 'Senado' # for consume the high chamber agendas in morph.io
+  low_chamber_name:  'C.Diputados' # for consume the low chamber agendas in morph.io
   keywords: ~
-  twitter_tags: ~
-  agendas_url:      ~
-  morph_io_api_key: ~
+  twitter_tags: ~   # tags for use in the twitter share 
+  agendas_url:      ~ # example: 'https://api.morph.io/owner/agenda_repo/data.json?query='
+  morph_io_api_key: ~ # for use morph.io API 
   bill_graph_data_length:   '12'  # amount of points in the graph
   bill_graph_day_interval:  '28'   # amount of days per point in graph
-  parliaments_initial_date: '1990-03-01' #The initial date for bill search purposes
-  billit_url: ~       #example: 'http://billit-instance.org/bills/'; for more info about this POPLUS component check https://github.com/ciudadanointeligente/bill-it
+  parliaments_initial_date: '1990-03-01' # the initial date for bill search purposes
+  billit_url: ~       # example: 'http://billit-instance.org/bills/'; for more info about this POPLUS component check https://github.com/ciudadanointeligente/bill-it
   paperworks_url: 'http://billit.ciudadanointeligente.org/paperworks/'
-  popit_url:  ~       #example: 'legislative-instance.popit.mysociety.org'; you will need create a instance, please contact with mysociety's popit team in popit@mysociety.org. http://popit.mysociety.org/instances/new
-  popit_persons:  ~   #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/persons/'; the same instance used above but with http and person path
-  popit_search:   ~   #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/search/persons?'; used for person search
+  popit_url:  ~       # example: 'legislative-instance.popit.mysociety.org'; you will need create a instance, please contact with mysociety's popit team in popit@mysociety.org. http://popit.mysociety.org/instances/new
+  popit_persons:  ~   # example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/persons/'; the same instance used above but with http and person path
+  popit_search:   ~   # example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/search/persons?'; used for person search
   popit_organizations: 'http://localhost:3002/api/organizations/'  #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/organizations/' 
   popit_organizations_search: ~ #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/search/organizations?' 
-  writeit_base_url: ~ #example: 'http://localhost:3001'; you will need create a instance, please contact with ciudadanointeligente's lab team in lab@ciudadanointeligente.org. http://writeit.ciudadanointeligente.org/
-  writeit_url:      ~ #example: '/api/v1/instance/2/'; writeit instance path
-  writeit_username: ~ #example: 'admin'; writeit username
-  writeit_api_key:  ~ #example: 'a'; writeit apikey
+  writeit_base_url: ~ # example: 'http://localhost:3001'; you will need create a instance, please contact with ciudadanointeligente's lab team in lab@ciudadanointeligente.org. http://writeit.ciudadanointeligente.org/
+  writeit_url:      ~ # example: '/api/v1/instance/2/'; writeit instance path
+  writeit_username: ~ # example: 'admin'; writeit username
+  writeit_api_key:  ~ # example: 'a'; writeit apikey
   writeit_messages_per_page: '2'
 
 test:
