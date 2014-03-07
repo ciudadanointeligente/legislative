@@ -5,8 +5,8 @@ class MainsController < ApplicationController
   def index
     @condition_search = true
     @condition_priority_box = true
-    @high_chamber_agendas = get_high_chamber_agenda
-    @low_chamber_agendas = get_low_chamber_agenda
+    # @high_chamber_agendas = get_high_chamber_agenda
+    # @low_chamber_agendas = get_low_chamber_agenda
     @hot_bills = Billit::BillCollectionPage.get(ENV['billit_url'] + "search?current_urgency=Simple&per_page=6", 'application/json').bills
   end
 
