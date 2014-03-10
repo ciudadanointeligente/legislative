@@ -6,6 +6,8 @@ class CongressmenController < ApplicationController
   def index
     @congressmen = PopitPersonCollection.new
     @congressmen.get ENV['popit_persons']+'?page='+"#{params[:page]}", 'application/json'
+    
+    @title = t('congressmen.title') + ' - '
   end
 
   # GET /congressmen/1
@@ -52,5 +54,6 @@ class CongressmenController < ApplicationController
     else
       @congressmen.get ENV['popit_search'], 'application/json'
     end
+    @title = t('congressmen.title_search') + ' - '
   end
 end
