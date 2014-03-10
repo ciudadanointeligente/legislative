@@ -87,7 +87,7 @@ strong {
   font-family: 'Raleway', Helvetica, sans-serif;
   font-weight: 700;
   font-size: 14px;
-  height: 50px;
+  padding: 7px 10px;
 }
 
 .btn-default {
@@ -905,6 +905,10 @@ svg.graph .labels.y-labels {
   }
   .hero-space-bill {
     padding: 20px 0px 60px;
+  }
+  .btn-lg {
+    height: 50px;
+    padding: 10px 16px;
   }
 }
 

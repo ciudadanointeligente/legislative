@@ -13,6 +13,7 @@
         - else
           %input{type: "checkbox", name: 'bills', value: '1'}
         = t('search.bills')
+    %div.checkbox
       %label
         - if params[:congressmen] == '2'
           %input{type: "checkbox", name: "congressmen", value: '2', checked: 'checked'}
