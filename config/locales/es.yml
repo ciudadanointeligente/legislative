@@ -38,12 +38,13 @@ es:
     filter_bills: Proyectos de ley
     filter_congressmen: Congresistas
     discussion_agendas: Tablas de discusión
-    high_chamber_agenda: Tabla senado
-    low_chamber_agenda: Tabla cámara de diputados
+    high_chamber: Senado
+    low_chamber: Cámara de diputados
     last_responses: Últimas respuestas
     view_more_questions: Ver más preguntas
     session: Sesión
     legislature: Legislatura
+    view_previous_agendas: Ver tablas anteriores
   search:
     search_title: Búsqueda
     search_for: 'Buscar por:'
@@ -293,6 +294,7 @@ es:
       default: ! '%d/%m/%Y'
       long: ! '%A %d de %B de %Y'
       short: ! '%d de %b'
+      day_and_month: ! '%A %d de %B'
     month_names:
     -
     - enero
