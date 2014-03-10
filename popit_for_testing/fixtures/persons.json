@@ -1,5 +1,4 @@
-{
-  "gonzalo-arenas-hodar": {
+[{
     "name": "Gonzalo Arenas Hodar",
     "slug": "gonzalo-arenas-hodar",
     "_id": "5008048c7a317e126400046d",
@@ -54,8 +53,7 @@
               "other_names": [ ],
               "url": "http://localhost:3002/api/persons/5008048c7a317e126400046d",
               "html_url": "http://localhost:3002/api/persons/5008048c7a317e126400046d"
-  },
-  "orlando-vargas-pizarro": {
+  }, {
     "name": "Orlando Vargas Pizarro",
     "slug": "orlando-vargas-pizarro",
     "_id": "500804717a317e126400005e",
@@ -106,4 +104,4 @@
               "url": "http://localhost:3002/api/persons/500804717a317e126400005e",
               "html_url": "http://localhost:3002/api/persons/500804717a317e126400005e"
   }
-}
+]

@@ -1,21 +1,6 @@
 %div.hot-space
   %div.container
-    %h3.text-center
-      Temas urgentes
-    %p.text-center Temas que han recibido más urgencias en sus proyectos
-    %ul.list-inline
-      %li
-        %button.btn.btn-info{'href'=>'#miModal', :'data-toggle'=>"modal", :'data-target'=>'#miModal'}
-          %h5 Educación
-      %li
-        %button.btn.btn-info
-          %h5 Salud
-      %li
-        %button.btn.btn-info
-          %h5 Pesca
-      %li
-        %button.btn.btn-info
-          %h5 Vivienda
-      %li
-        %button.btn.btn-info
-          %h5 Transporte
+    %h3.text-center.hot-title
+      Proyectos con urgencia
+    %div.row
+      = render :partial => "hot_bill", collection: @hot_bills

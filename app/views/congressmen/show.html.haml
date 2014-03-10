@@ -2,39 +2,30 @@
   %div.col-md-8
     %ul.breadcrumb
       %li
-        = link_to 'Portada', root_url
+        = link_to t('congressmen.home'), root_url
       %li.active
         = @congressman.name
   %div.col-md-4
     %ul.list-inline.action-btn
       %li
-        = link_to "Preguntale", {controller: "communications", action: "per_person", id: @congressman.id}, class: "btn-warning"
+        = link_to t("congressmen.askthem"), {controller: "communications", action: "index", id: @congressman.id}, class: "btn-warning"
       %li
         - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
         %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
           %i.fa.fa-facebook 
-          Comparte
+          = t("congressmen.fb_share")
       %li
-        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags=pmo&text='+@congressman.name
+        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags='+ENV['twitter_tags']+'&text='+@congressman.name
         %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
           %i.fa.fa-twitter 
-          Twittea
+          = t("congressmen.tw_share")
 
 
 %div
   %h2
     = @congressman.name
   %h4
-    Senador
-
-- if ! @message.nil?
-  %div
-    última pregunta
-    %div
-      %div
-      = @message.subject
-      %div
-      = @message.content
+    = @congressman.title
 
 
 %div.row
@@ -42,28 +33,28 @@
     - if ! @congressman.images.blank?
       %img.img-responsive{:src=>@congressman.images[0].url}
     - else
-      %img.img-responsive{ 'src' => 'http://placehold.it/230x230'}
+      = image_tag('default-profile.png', class: "img-responsive")
     
     - if ! @congressman.represent.blank?
       %p
-        Lugar que representa:
+        = t('congressmen.represent')
         %ul
         - @congressman.represent.each do | r |
           - if ! r.district.blank?
             %li 
-              = 'Distrito: ' + r.district
+              = t('congressmen.district') + r.district
           
           - if ! r.region.blank?
             %li 
-              = 'Región: ' + r.region
+              = t('congressmen.region') + r.region
 
           - if ! r.comunas.blank?
             %li 
-              = 'Comunas: ' + r.comunas
+              = t('congressmen.comuna') + r.comunas
 
     - if ! @congressman.parliamentarian_period.blank?
       %p
-        Periodo: 
+        = t('congressmen.period')
         %ul
         - @congressman.parliamentarian_period.each do | p |
           - if ! p.date.blank?
@@ -72,7 +63,7 @@
         
     - if ! @congressman.memberships.blank?
       %p
-        Partido:
+        = t('congressmen.party')
         - @organizations.result.each do | o |
           - url = '#';
           -if ! o.links[1].blank?
@@ -84,42 +75,42 @@
     
     - if ! @congressman.commissions.blank?
       %p
-        Comisiones:
+        = t('congressmen.commissions')
         %ul
         - @congressman.commissions.each do | c |
           - if ! c.permanent.blank?
             %li 
-              = 'Permanente: ' + c.permanent  
+              = t('congressmen.permanent') + c.permanent  
           
           - if ! c.special.blank?
             %li 
-              = 'Especial: ' + c.special 
+              = t('congressmen.special') + c.special 
           
           - if ! c.researcher.blank?
             %li 
-              = 'Investigadora: ' + c.researcher 
+              = t('congressmen.research') + c.researcher 
     
-    - if ! @congressman.links.blank?
+    - if ! @congressman.enlaces.blank?
       %div
         %ul
-          - @congressman.links.each do | link |
+          - @congressman.enlaces.each do | link |
+            - icon = 'fa-globe'
+            - case link.note
+            - when 'twitter'
+              - icon = 'fa-twitter'
+            - when 'facebook'
+              - icon = 'fa-facebook'
             %li
-              %a{ 'href' => link.url }
-                %i.fa.fa-globe
-                = link.note
+              %a{ 'href' => link.url, 'target' => '_blank' }
+                %i{:class=>'fa '+icon}
+                = link.note.capitalize
         
-    %h5
-      Biografía
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab ut aperiam quae fuga! Dolorum, ex, quos veniam culpa qui explicabo non ullam exercitationem inventore tempora adipisci doloremque facere nisi.
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, saepe repellendus officiis nulla dicta qui quas sit placeat distinctio. Dignissimos, fuga expedita sint placeat harum vel atque at reiciendis. Consequatur!
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, exercitationem maxime labore recusandae ut magni quisquam quae quo necessitatibus rerum tempora autem voluptatem molestiae vel rem ad quas eligendi fugit.
+    /%h5
+    /  = t('congressmen.bio')
 
   %div.col-md-9
     %h3
-      Últimas iniciativas
+      = t('congressmen.last_initiatives')
     %div.table-responsive
       %table.table
         %tr
@@ -132,7 +123,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
             %p
               %a{ 'href' => '#' }
-                Ver proyecto
+                = t('congressmen.view_project')
         %tr
           %td
             %img{ 'src' => 'http://placehold.it/35x58' }
@@ -143,7 +134,7 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
             %p
               %a{ 'href' => '#' }
-                Ver proyecto
+                = t('congressmen.view_project')
         %tr
           %td
             %img{ 'src' => 'http://placehold.it/35x58' }
@@ -154,19 +145,23 @@
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
             %p
               %a{ 'href' => '#' }
-                Ver proyecto
-    
-    %div.special-box
-      %p.question
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, perspiciatis, consequatur non inventore adipisci placeat deleniti animi tempora accusantium ipsa incidunt doloremque ducimus quos dolores minus doloribus debitis. Necessitatibus, impedit.
-      %p.answer
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, temporibus, veniam, modi, facere laudantium aliquam facilis officiis aperiam delectus eum sapiente natus harum ut unde quisquam repellat magni expedita sunt.
-      %p.total-answers.text-right
-        Pedro Pablo Alvarez-Salamanca Ramirez ha respondido 999 de las 999 preguntas ciudadanas
+                = t('congressmen.view_project')
+
+    - if ! @message.nil?
+      %div.special-box
+        = t('Última pregunta')
+        %div
+          %p.question.subject
+          = @message.subject
+          %p.question.subject
+          = @message.content
+          %p.total-answers.text-right
+          = sprintf( t('congressmen.askthem_responses'), @congressman.name  )
+
 
     %div.votes.table-responsive
       %h3
-        Votaciones
+        = t('congressmen.votes')
       %table.table
         %tr
           %td
@@ -193,7 +188,7 @@
 
     %div.intervencions.table-responsive
       %h3
-        Últimas intervenciones
+        = t('congressmen.last_interventions')
       %table.table
         %tr
           %td

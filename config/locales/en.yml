@@ -11,6 +11,11 @@ en:
     congressmen: Congressmen
     tables: Tables
     about_us: About us
+    menu: Menu
+    from: from Ciudadano Inteligente
+    title_project: Congreso Abierto
+    welcome: Welcome
+    bills: Proyectos de ley
   main:
     search_placeholder: Search
     username: Username
@@ -28,6 +33,18 @@ en:
     yes: Yes
     no: No
     abstentions: Abstentions
+    title_slogan: Bienvenido a tu congreso online
+    title_subslogan: Entra sin pedir permiso
+    filter_bills: Bills
+    filter_congressmen: Congressmen
+    discussion_agendas: Discussion agendas
+    high_chamber: High Chamber
+    low_chamber: Low Chamber
+    last_responses: Last responses
+    view_more_questions: View more questions
+    session: Session
+    legislature: Legislature
+    view_previous_agendas: View previous agendas
   search:
     search_title: Search
     search_for: 'Search for:'
@@ -47,6 +64,8 @@ en:
     bulletin: 'Bulletin:'
     placeholder_bulletin: Input a bulletin number
     stage: 'Stage:'
+    creation_date: 'Creation date: '
+    initiative: 'Initiative: '
     creation_date_min: 'Creation date (min):'
     creation_date_max: 'Creation date (max):'
     initial_chamber: 'Initial chamber:'
@@ -54,6 +73,16 @@ en:
     placeholder_author: Type an author's name
     there_are_no_results: There are no results for this search
     event_range: paperworks range
+    bills_advanced_search: Advanced search
+    congressmen_advanced_search: Advanced search
+    congressmen: Congressmen
+    represent: 'Represent:'
+    all_results: View all results
+    search_results: Search results
+  agendas:
+    chamber: Chamber
+    date: Date
+    bills: Bills
   bill:
     bulletin: Bulletin
     title: Title
@@ -81,6 +110,27 @@ en:
     directives: Directives
     remarks: Remarks
     comments: Comments
+    title_event: PROJECT PAPERWORKS
+    download_history: Download history
+    view_law: View law
+    view_documents: View documents
+    more_recents: Newer
+    less_recents: Older
+    sort_time: Reverse order
+    session: Session
+    modal_bulletin_number: Bulletin Documents
+    modal_reports: Reports
+    modal_table_date: Date
+    modal_table_paperwork: Paperwork
+    modal_documents: Documents
+    modal_directives: Directives
+    modal_revision: Revisions
+    subscribe: Subscribe
+    fb_share: Share
+    tw_share: Twitt
+    tw_text: Check the bulletin %s in congresoabierto.cl
+    breadcrumb_bill: Bills
+    download_project: Download project
   paperworks:
     chamber: 'Chamber:'
     created_at: 'Created at:'
@@ -162,6 +212,42 @@ en:
     verified_mail: Your email was successfully verified
     subscribe: Subscribe
     email: Email
+  communication:
+    name: Name
+    email: E-mail
+    choose_congressmen: Seleccione un senador o diputado
+    writte_message: Redacta tu mensaje
+    subject: Subject
+    message: Message
+    send: Send
+    list_messages: Mensajes enviados
+    questions: Preguntas hechas a %s
+  congressmen:
+    home: Home
+    breadcrumb: Congresistas
+    fb_share: Share
+    tw_share: Twitt
+    title: Congressmen
+    title_search: Congressmen search
+    represent: 'Represents: '
+    search_for: 'Search by: '
+    placeholder_search_for: Ingresa una palabra clave
+    askthem: Ask them
+    district: 'District: '
+    region: 'Region: '
+    comuna: 'Comuna: '
+    period: 'Period: '
+    party: 'Party: '
+    commissions: 'Commissions'
+    permanent: 'Permanent: '
+    special: 'Special: '
+    research: 'Research: '
+    bio: Biografía
+    last_initiatives: Last initiatives
+    view_project: View project
+    askthem_responses: 'Questions for %s'
+    votes: Votes
+    last_interventions: Last interventions
   routes:
     bills: bills
     bills_search: bills_search
@@ -211,6 +297,7 @@ en:
       default: ! '%m-%d-%Y'
       long: ! '%B %d, %Y'
       short: ! '%b %d'
+      day_and_month: ! '%B %d'
     month_names:
     -
     - January

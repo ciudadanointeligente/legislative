@@ -1,21 +1,22 @@
 = form_tag({controller: "searches", action: "index"}, :method => 'get') do
-  %div
+  %div.input-group
     %input.form-control{:name=>'q', value: params[:q], :placeholder => t('search.placeholder_search_for'), :onfocus => "ga('send','searches','focus_search')"}
-    
-    %div
-      %div.checkbox{:style=>'padding-right:15px'}
-        %label
-          - if params[:bills] == '1'
-            %input{type: "checkbox", name: 'bills', value: '1', checked: 'checked'}
-          - else
-            %input{type: "checkbox", name: 'bills', value: '1'}
-          Proyectos de ley
-      %div.checkbox{:style=>'padding-right:15px'}
-        %label
-          - if params[:congressmen] == '2'
-            %input{type: "checkbox", name: "congressmen", value: '2', checked: 'checked'}
-          - else
-            %input{type: "checkbox", name: "congressmen", value: '2'}
-          Congresistas
-    %button.btn.btn-default
-      Buscar
+    %span.input-group-btn
+      %button.btn.btn-default.btn-lg
+        %i.fa.fa-search
+
+  %div
+    %div.checkbox
+      %label
+        - if params[:bills] == '1'
+          %input{type: "checkbox", name: 'bills', value: '1', checked: 'checked'}
+        - else
+          %input{type: "checkbox", name: 'bills', value: '1'}
+        = t('search.bills')
+    %div.checkbox
+      %label
+        - if params[:congressmen] == '2'
+          %input{type: "checkbox", name: "congressmen", value: '2', checked: 'checked'}
+        - else
+          %input{type: "checkbox", name: "congressmen", value: '2'}
+        = t('search.congressmen')

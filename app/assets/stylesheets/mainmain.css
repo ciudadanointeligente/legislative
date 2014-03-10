@@ -10,7 +10,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #67675a;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 .navbar-inverse {
@@ -44,7 +44,6 @@ a:hover {
 strong {
   font-weight: 700;
   font-family: 'Raleway', Helvetica, sans-serif;
-  /*text-transform: uppercase;*/
 }
 
 .small {
@@ -65,8 +64,20 @@ strong {
 
 /* BUTTONS */
 
-.btn-small {
-  height: 35px;
+.btn {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Raleway', Helvetica, sans-serif;
+}
+
+.btn-xs {
+  height: 25px;
+  padding: 4px;
+}
+
+
+.btn-sm {
+  height: 50px;
 }
 
 .btn-lg {
@@ -74,6 +85,7 @@ strong {
   font-family: 'Raleway', Helvetica, sans-serif;
   font-weight: 700;
   font-size: 14px;
+  padding: 7px 10px;
 }
 
 .btn-default {
@@ -95,7 +107,6 @@ strong {
   border-color: transparent;
   border-bottom: 2px solid #d8d7bc;
   border-radius: 0px;
-  height: 50px;
 }
 
 .btn-info:hover {
@@ -158,6 +169,12 @@ strong {
   padding: 0px 1px;
 }
 
+.btn .fa-search {
+  padding: 0 5px;
+}
+
+/*CLEARFIX*/
+
 .clearfix:after {
   content: "";
   display: table;
@@ -199,6 +216,9 @@ strong {
   font-family: 'Raleway', Helvetica, sans-serif;
   text-transform: uppercase;
   padding: .3em .6em .2em;
+  font-size: 10px;
+  font-weight: 700;
+  margin-right: 9px;
 }
 
 .label-default:before {
@@ -231,6 +251,14 @@ strong {
 
 .hero-space .label-default:after{
   background:#3e1f3e;
+}
+
+.list-inline>li.label-default:first-child {
+  padding-left: 6px;
+}
+
+.list-inline>li {
+  padding-left: 0px;
 }
 
 /*Menu*/
@@ -295,14 +323,7 @@ strong {
   background: #462445;
   color: #e6e6c9;
   padding: 10px 0px;
-  margin-top: -10px;
-}
-
-.hot-space {
-  background: #ea6a56;
-  color: #e6e6c9;
-  padding: 10px 0px 35px;
-  margin-bottom: 20px;
+  margin-top: -20px;
 }
 
 #graph > h4 > a {
@@ -355,6 +376,10 @@ strong {
     color: #968495;
 }
 
+.hero-space .form-control {
+  color: #e6e6c9;
+}
+
 .form-control {
   color: #67675A;
   background-color: #FFFFFF;
@@ -394,43 +419,42 @@ strong {
 
 /*hot-space*/
 
-.hot-space .btn-info {
-  color: #ea6a56;
-}
-
-.hot-space .btn-info:hover {
-  color: #ea6a56;
-}
-
-.hot-space .list-inline {
-  padding-top: 20px;
-}
-
-.table thead th {
-}
-
-.hot-modal .modal-header {
+.hot-space {
   background: #ea6a56;
-  color: #f9f9eb;
+  padding: 10px 0px 35px;
+  margin-bottom: 20px;
 }
 
-.hot-modal .modal-body {
-  padding: 0px;
-}
-
-.big-number {
-  font-size: 36px;
-  font-weight: 700;
-  font-family: 'Raleway', Helvetica, sans-serif;
-  text-transform: uppercase;
-}
-
-.hot-modal .big-number {
+.hot-space a {
   color: #ea6a56;
 }
 
-.hot-modal td:last-child {
-  text-align: center;
+.hot-space h3 {
+  color: #E6E6C9;
+}
+
+.boxdisplay {
+  background: #F5F5DD;
+  padding: 15px;
+}
+
+.hot-space .fa-bell-o {
+animation: urgency 2s infinite;
+-webkit-animation: urgency 2s infinite; /* Safari and Chrome */
+}
+
+@keyframes urgency
+{
+0%   {color: #EA6A56;}
+50%  {color: #E6E6C9;}
+100% {color: #EA6A56;}
+}
+
+@-webkit-keyframes urgency /* Safari and Chrome */
+{
+0%   {color: #EA6A56;}
+50%  {color: #E6E6C9;}
+100% {color: #EA6A56;}
 }
 
 /*tablas*/
@@ -440,15 +464,13 @@ strong {
   margin-bottom: 50px;
 }
 
-/*MODAL*/
-
-.modal-header {
-  background: #462445;
-  color: #E6E6C9;
-}
-
-.modal-body {
-  background-color: #f5f5dd;
+.table.tablas tbody {
+  display: block;
+  max-height: 350px;
+  overflow-y: scroll;
+  border-bottom: 9px solid #67675a;
+  height: 350px;
+  background: #f5f5dd;
 }
 
 /*respuestas*/
@@ -588,6 +610,34 @@ span.paring {
   position: relative;
   opacity: 0.3;
   border-radius: 25px;
+}
+
+/*SEARCH RESULTS*/
+
+.whitewithaside {
+  background: #fff;
+  padding: 20px;
+}
+
+.aside {
+  background: #CDCDB3;
+  padding: 20px;
+}
+
+.aside .checkbox {
+   padding-left: 0px; 
+}
+
+.aside .checkbox input[type="checkbox"] {
+  float: none;
+  margin-left: 0px;
+}
+
+h4 span.nostyle {
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
 }
 
 /*Comunicacion*/
@@ -839,6 +889,8 @@ svg.graph .labels.y-labels {
 
   h4 {
     font-size: 21px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   h5 {
@@ -857,12 +909,6 @@ svg.graph .labels.y-labels {
   .form-control {
     height: 50px;
   }
-  .btn-primary {
-    height: 50px;
-  }
-  .btn-default {
-    height: 50px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -874,6 +920,10 @@ svg.graph .labels.y-labels {
   }
   .hero-space-bill {
     padding: 20px 0px 60px;
+  }
+  .btn-lg {
+    height: 50px;
+    padding: 10px 16px;
   }
 }
 
