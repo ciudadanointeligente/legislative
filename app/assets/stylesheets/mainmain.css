@@ -458,6 +458,15 @@ animation: urgency 2s infinite;
   margin-bottom: 50px;
 }
 
+.table.tablas tbody {
+  display: block;
+  max-height: 350px;
+  overflow-y: scroll;
+  border-bottom: 9px solid #67675a;
+  height: 350px;
+  background: #f5f5dd;
+}
+
 /*respuestas*/
 
 .home-answers-wraper {
