@@ -38,8 +38,8 @@ en:
     filter_bills: Bills
     filter_congressmen: Congressmen
     discussion_agendas: Discussion agendas
-    high_chamber_agenda: High Chamber Board
-    low_chamber_agenda: Low Chamber Board
+    high_chamber: High Chamber
+    low_chamber: Low Chamber
     last_responses: Last responses
     view_more_questions: View more questions
     session: Session
@@ -293,6 +293,7 @@ en:
       default: ! '%m-%d-%Y'
       long: ! '%B %d, %Y'
       short: ! '%b %d'
+      day_and_month: ! '%B %d'
     month_names:
     -
     - January

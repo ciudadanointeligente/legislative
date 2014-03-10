@@ -8,45 +8,59 @@
           %tr
             %th{:colspan=>"3"}
               %h4.table-title
-                = t('main.high_chamber_agenda')
+                = t('main.low_chamber') + ' - ' |
+                = localize @low_chamber_agenda[0]['date'].to_date, :format => :day_and_month
         %tbody
-    /       - @high_chamber_agendas.each do |high_chamber_agenda|
-    /         %tr
-    /           %td
-    /             %p.light
-    /               = high_chamber_agenda['uid']
-    /           %td
-    /             %strong
-    /               = link_to (t('main.session') + ' ' + high_chamber_agenda['session'] + 'ª, ' + t('main.legislature') + ' ' + high_chamber_agenda['legislature']), tables_path
-    /             %p
-    /               = localize high_chamber_agenda['date'].to_date, :format => :long
-    /             /%td
-    /             /put here a notification counter
-    /             /%a{href: "/"}
-    /             /%i.fa.fa-bell-o
+          - @low_chamber_bills = @low_chamber_agenda[1]
+          - @low_chamber_bills.bills.each do |bill|
+            %tr
+              %td
+                %p.light
+                  = bill.uid
+              %td
+                %strong
+                  = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
+                %p
+                  = bill.stage
+                - if !bill.tags.blank?
+                  %ul.list-inline
+                    - bill.tags.each do |tag|
+                      %li.label-default
+                        = tag
+                %td
+                  0
+                  %a{href: "/"}
+                    %i.fa.fa-bell-o
 
-    / %div.col-md-6
-    /   %table.table.table-striped.tablas
-    /     %thead
-    /       %tr
-    /         %th{:colspan=>"3"}
-    /           %h4.table-title
-    /             = t('main.low_chamber_agenda')
-    /     %tbody
-    /       - @low_chamber_agendas.each do |low_chamber_agenda|
-    /         %tr
-    /           %td
-    /             %p.light
-    /               = low_chamber_agenda['uid']
-    /           %td
-    /             %strong
-    /               = link_to (t('main.session') + ' ' + low_chamber_agenda['session'] + 'ª, ' + t('main.legislature') + ' ' + low_chamber_agenda['legislature']), tables_path
-    /             %p
-    /               = localize low_chamber_agenda['date'].to_date, :format => :long
-    /             %td
-    /             put here a notification counter
-    /             %a{href: "/"}
-    /             %i.fa.fa-bell-o
+    %div.col-md-6
+      %table.table.table-striped.tablas
+        %thead
+          %tr
+            %th{:colspan=>"3"}
+              %h4.table-title
+                = t('main.high_chamber') + ' - ' |
+                = localize @high_chamber_agenda[0]['date'].to_date, :format => :day_and_month
+        %tbody
+          - @high_chamber_bills = @high_chamber_agenda[1]
+          - @high_chamber_bills.bills.each do |bill|
+            %tr
+              %td
+                %p.light
+                  = bill.uid
+              %td
+                %strong
+                  = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
+                %p
+                  = bill.stage
+                - if !bill.tags.blank?
+                  %ul.list-inline
+                    - bill.tags.each do |tag|
+                      %li.label-default
+                        = tag
+                %td
+                  0
+                  %a{href: "/"}
+                    %i.fa.fa-bell-o
 
 %section#last-responses
   %h3.title-last-responses 
