@@ -1,4 +1,3 @@
-require 'billit_representers/models/bill'
 require 'billit_representers/models/bill_page'
 
 class MainsController < ApplicationController
