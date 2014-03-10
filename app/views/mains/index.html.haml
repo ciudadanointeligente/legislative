@@ -19,7 +19,7 @@
                   = bill.uid
               %td
                 %strong
-                  = link_to bill.title, t('routes.bills') + '/' + bill.uid
+                  = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
                 %p
                   = bill.stage
                 %td
@@ -44,7 +44,7 @@
                   = bill.uid
               %td
                 %strong
-                  = link_to bill.title, t('routes.bills') + '/' + bill.uid
+                  = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
                 %p
                   = bill.stage
                 %td
