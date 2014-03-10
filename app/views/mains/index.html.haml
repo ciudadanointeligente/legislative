@@ -17,12 +17,12 @@
           - @low_chamber_bills.bills.each do |bill|
             %tr
               %td.hidden-xs
-                %p.light
+                %h5.light
                   = bill.uid
               %td
-                %p.light.visible-xs
+                %h5.light.visible-xs
                   = bill.uid
-                %strong
+                %h5
                   = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
                 %p
                   = bill.stage
@@ -48,12 +48,12 @@
           - @high_chamber_bills.bills.each do |bill|
             %tr
               %td.hidden-xs
-                %p.light
+                %h5.light
                   = bill.uid
               %td
-                %p.light.visible-xs
+                %h5.light.visible-xs
                   = bill.uid
-                %strong
+                %h5
                   = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
                 %p
                   = bill.stage

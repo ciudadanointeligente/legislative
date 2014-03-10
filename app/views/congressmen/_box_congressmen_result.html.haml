@@ -11,7 +11,7 @@
           %h4
             = link_to congressman.name, congressman_path(congressman.id)
           - if ! congressman.title.blank?
-            %p
+            %h5
               = congressman.title
 
             - if ! congressman.represent[0].region.blank?
