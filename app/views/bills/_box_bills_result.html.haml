@@ -1,26 +1,24 @@
 - @bills.each do |bill|
   %div
     %div.row
-      %div.col-md-9
-        %p
+      %div.col-md-1
+        %h5.light
           = bill.uid
-      %div.col-md-3
+        - if ! bill.icon.blank?
+          %div.iconoclast
+            = image_tag("statusicon/" + bill.icon)
+      %div.col-md-10
+        %h5
+          = link_to bill.title.capitalize, bill_path(bill.uid), :onclick => "ga('send','paperwork','bill', '"+bill.uid+"')"
+        %p 
+          = bill.abstract
+      %div.col-md-1
         %ul.list-inline
           %li
             %span.alert
               = link_to (new_user_subscription_path(:bill => params[:id])) do
                 %i.fa.fa-bell
                 Suscribir
-    %div.row
-      %div.col-md-1.hidden-xs
-        - if ! bill.icon.blank?
-          %div.iconoclast
-            = image_tag("statusicon/" + bill.icon)
-      %div.col-md-11
-        %h3
-          = link_to bill.title.capitalize, bill_path(bill.uid), :onclick => "ga('send','paperwork','bill', '"+bill.uid+"')"
-        %p 
-          = bill.abstract
 
 - if @bills.count == 0
   %p.text-center
