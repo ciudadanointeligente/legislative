@@ -3,7 +3,7 @@
     %p.bill-id 
       = hot_bill.uid
     %h5.bill-title
-      = link_to hot_bill.title, "proyectos/" + hot_bill.uid
+      = link_to hot_bill.title, t('routes.bills') + hot_bill.uid
     %p.bill-stage
       = hot_bill.stage
     %ul.list-inline
