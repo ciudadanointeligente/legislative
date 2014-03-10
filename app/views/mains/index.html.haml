@@ -22,6 +22,11 @@
                   = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
                 %p
                   = bill.stage
+                - if !bill.tags.blank?
+                  %ul.list-inline
+                    - bill.tags.each do |tag|
+                      %li.label-default
+                        = tag
                 %td
                   0
                   %a{href: "/"}
@@ -47,6 +52,11 @@
                   = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
                 %p
                   = bill.stage
+                - if !bill.tags.blank?
+                  %ul.list-inline
+                    - bill.tags.each do |tag|
+                      %li.label-default
+                        = tag
                 %td
                   0
                   %a{href: "/"}
