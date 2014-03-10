@@ -1,15 +1,15 @@
 %div
   %ol.breadcrumb
     %li
-      %a{'href'=>'#'}
-        Portada
+      = link_to t('layout.home'), root_path
     %li.active
-      Resultado congresistas
+      = t('congressmen.breadcrumb')
 
 %div.row
   %div.col-md-3
     %h4
-      Congresistas
+      = t('congressmen.title')
+
     = render :partial => "filter_search_form"
 
   %div.col-md-9

@@ -11,31 +11,25 @@
       %p
         - if ! bill.stage.blank?
           %span.light 
-            Etapa: 
+            = t('search.stage')
           = bill.stage
           %br/
         - if ! bill.creation_date.blank?
           %span.light 
-            Fecha de Ingreso: 
+            = t('search.creation_date')
           = localize bill.creation_date.to_date, :format => :long
           %br/
         - if ! bill.source.blank?
           %span.light 
-            Iniciativa: 
+            = t('search.initiative')
           = bill.source
 
-      %ul.list-inline
-        %li.label-default
-          etiqueta1
-        %li.label-default
-          etiqueta2
+      /%ul.list-inline
+      /  %li.label-default
+      /    etiqueta1
+      /  %li.label-default
+      /    etiqueta2
 
     %div.col-md-1
-      %a{href: "/"}
-        %h5
-          0
-          %i.fa.fa-star-o
-
-%div.text-right
-  - if ! params[:q].blank?
-    = link_to t('search.all_results'), searches_bills_path + '/?q=' + params[:q] + '&bills=1', :class => "btn btn-default"
+      = link_to (new_user_subscription_path(:bill => bill.uid)) do
+        %i.fa.fa-star-o

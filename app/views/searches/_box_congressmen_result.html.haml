@@ -16,11 +16,6 @@
             = t('search.represent')
           = congressman.represent[0].region
     %div.col-md-1
-      %a{href: "/"}
-        %h5
-          0
-          %i.fa.fa-pencil
+      = link_to url_for(controller: "communications", action: "index", id: congressman.id) do
+        %i.fa.fa-pencil
   
-%div.text-right
-  - if ! params[:q].blank?
-    = link_to t('search.all_results'), searches_congressmen_path + '/?q=' + params[:q] + '&congressmen=2', :class => "btn btn-default"

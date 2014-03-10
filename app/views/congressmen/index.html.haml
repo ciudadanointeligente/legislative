@@ -4,17 +4,20 @@
       %li
         = link_to t('layout.home'), root_path
       %li.active
-        = link_to t('congressmen.breadcrumb'), congressmen_path
+        = t('congressmen.breadcrumb')
   %div.col-md-5
     %ul.list-inline
       %li
-        %a{'href'=>'#'}
-          %i.fa.fa-facebook
-          = link_to t('congressmen.fb_share')
+        - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
+        %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+          %i.fa.fa-facebook 
+          = t("congressmen.fb_share")
+
       %li
-        %a{'href'=>'#'}
-          %i.fa.fa-twitter
-          = link_to t('congressmen.tw_share')
+        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags='+ENV['twitter_tags']
+        %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+          %i.fa.fa-twitter 
+          = t("congressmen.tw_share")
 
 %div
   %h4
@@ -40,10 +43,10 @@
               = t('congressmen.represent')
             = congressman.represent[0].district
         %div.col-md-1
-          %a{href: "/"}
-            %h5
-              0
-              %i.fa.fa-pencil
+          = link_to url_for(controller: "communications", action: "index", id: congressman.id) do
+            %span.visible-xs
+              = t('congressmen.askthem')
+            %i.fa.fa-pencil.hidden-xs{title: t('congressmen.askthem')}
 
     %div.col-md-6
       - if ! @congressmen.prev_url.blank?
