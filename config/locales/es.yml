@@ -63,6 +63,8 @@ es:
     bulletin: 'Boletín:'
     placeholder_bulletin: Ingresa nro de boletín
     stage: 'Etapa:'
+    creation_date: 'Fecha de ingreso: '
+    initiative: 'Iniciativa: '
     creation_date_min: 'Fecha de ingreso (min):'
     creation_date_max: 'Fecha de ingreso (max):'
     initial_chamber: 'Cámara de origen:'
@@ -225,19 +227,20 @@ es:
     fb_share: Comparte
     tw_share: Twittea
     title: Congresistas
+    title_search: Búsqueda de Congresistas
     represent: 'Lugar que representa:'
     search_for: 'Buscar por:'
     placeholder_search_for: Ingresa una palabra clave
     askthem: Preguntales
-    district: 'Distrito:'
-    region: 'Región:'
-    comuna: 'Comuna:'
+    district: 'Distrito: '
+    region: 'Región: '
+    comuna: 'Comuna: '
     period: 'Periodo:'
     party: 'Partido:'
-    commissions: 'Comisiones:'
-    permanent: 'Permanente:'
-    special: 'Especial:'
-    research: 'Investigadora:'
+    commissions: Comisiones
+    permanent: 'Permanente: '
+    special: 'Especial: '
+    research: 'Investigadora: '
     bio: Biografía
     last_initiatives: Últimas iniciativas
     view_project: Ver proyecto

@@ -63,6 +63,8 @@ en:
     bulletin: 'Bulletin:'
     placeholder_bulletin: Input a bulletin number
     stage: 'Stage:'
+    creation_date: 'Creation date: '
+    initiative: 'Initiative: '
     creation_date_min: 'Creation date (min):'
     creation_date_max: 'Creation date (max):'
     initial_chamber: 'Initial chamber:'
@@ -224,20 +226,21 @@ en:
     breadcrumb: Congresistas
     fb_share: Share
     tw_share: Twitt
-    title: Congresistas
-    represent: 'Lugar que representa:'
-    search_for: 'Buscar por:'
+    title: Congressmen
+    title_search: Congressmen search
+    represent: 'Represents: '
+    search_for: 'Search by: '
     placeholder_search_for: Ingresa una palabra clave
-    askthem: Preguntales
-    district: 'District:'
-    region: 'Region:'
-    comuna: 'Comuna:'
-    period: 'Period:'
-    party: 'Party:'
-    commissions: 'Commissions:'
-    permanent: 'Permanent:'
-    special: 'Special:'
-    research: 'Research:'
+    askthem: Ask them
+    district: 'District: '
+    region: 'Region: '
+    comuna: 'Comuna: '
+    period: 'Period: '
+    party: 'Party: '
+    commissions: 'Commissions'
+    permanent: 'Permanent: '
+    special: 'Special: '
+    research: 'Research: '
     bio: Biografía
     last_initiatives: Last initiatives
     view_project: View project
