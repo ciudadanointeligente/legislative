@@ -24,11 +24,11 @@
   - if ! @bill.paperworks.blank?
     %div.row.visible-xs
       %div.col-xs-6
-        %button.down.btn{'onclick'=>"ga('send','click','mobile_more_recent')"}
+        %button.down{'onclick'=>"ga('send','click','mobile_more_recent')"}
           %i.fa.fa-chevron-circle-down
           = t('bill.more_recents')
       %div.col-xs-6
-        %button.up.btn{'onclick'=>"ga('send','click','mobile_less_recent')"}
+        %button.up{'onclick'=>"ga('send','click','mobile_less_recent')"}
           %i.fa.fa-chevron-circle-up
           = t('bill.less_recents')
     
