@@ -25,8 +25,11 @@
           = bill.source
 
     %div.col-md-1
-      = link_to (new_user_subscription_path(:bill => bill.uid)) do
-        %i.fa.fa-star-o
+      %p
+        = link_to (new_user_subscription_path(:bill => bill.uid)) do
+          %i.fa.fa-star-o{title: t('bill.subscribe')}
+          %span.visible-xs 
+            = t('bill.subscribe')
 
 - if @bills.count == 0
   %p.text-center
