@@ -72,7 +72,6 @@ strong {
 
 .btn-xs {
   height: 25px;
-  font-size: 11px;
   padding: 4px;
 }
 
@@ -256,6 +255,10 @@ strong {
 
 .list-inline>li.label-default:first-child {
   padding-left: 6px;
+}
+
+.list-inline>li {
+  padding-left: 0px;
 }
 
 /*Menu*/
