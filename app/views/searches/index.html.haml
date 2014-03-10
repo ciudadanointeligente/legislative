@@ -14,7 +14,7 @@
     
   %div.col-md-9.whitewithaside
     /loop for bills
-    - if params[:bills] == '1' || @bills_query.bills.count > 0
+    - if params[:bills] == '1' && @bills_query.bills.count > 0
       %div
         %div.row
           %div.col-md-10
@@ -29,23 +29,22 @@
             
         - @bills = @bills_query.bills
         = render :partial => "box_bills_result" 
+      
+      %div
+        = link_to searches_bills_path, class: 'btn btn-default btn-xs pull-right' do
+          =t('search.bills_advanced_search')
+          %i.fa.fa-long-arrow-right
     - else
       %div
         %h4 
           = t('search.bills')
         %p
           = t('search.there_are_no_results')
-          %strong 
-            = params[:q]
 
     /end of loop
-    %div
-      = link_to searches_bills_path, class: 'btn btn-default btn-xs pull-right' do
-        =t('search.bills_advanced_search')
-        %i.fa.fa-long-arrow-right
 
     /loop for congressmen
-    - if params[:congressmen] == '2' || @congressmen.persons.count > 0
+    - if params[:congressmen] == '2' && @congressmen.persons.count > 0
       %div
         %div.row.header-congressmen
           %div.col-md-10
@@ -57,16 +56,15 @@
                   %i.fa.fa-long-arrow-right
 
         = render :partial => "box_congressmen_result"
+
+      %div
+        = link_to searches_congressmen_path, class: 'btn btn-default btn-xs pull-right' do
+          =t('search.congressmen_advanced_search')
+          %i.fa.fa-long-arrow-right
     - else
       %div
         %h4 
           = t('search.congressmen')
         %p
           = t('search.there_are_no_results')
-          %strong 
-            = params[:q]
     /end of loop
-    %div
-      = link_to searches_congressmen_path, class: 'btn btn-default btn-xs pull-right' do
-        =t('search.congressmen_advanced_search')
-        %i.fa.fa-long-arrow-right

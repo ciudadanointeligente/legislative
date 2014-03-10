@@ -8,7 +8,7 @@
   %div.col-md-4
     %ul.list-inline.action-btn
       %li
-        = link_to t("congressmen.askthem"), {controller: "communications", action: "per_person", id: @congressman.id}, class: "btn-warning"
+        = link_to t("congressmen.askthem"), {controller: "communications", action: "index", id: @congressman.id}, class: "btn-warning"
       %li
         - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
         %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
@@ -105,8 +105,8 @@
                 %i{:class=>'fa '+icon}
                 = link.note.capitalize
         
-    %h5
-      = t('congressmen.bio')
+    /%h5
+    /  = t('congressmen.bio')
 
   %div.col-md-9
     %h3

@@ -57,5 +57,7 @@ class SearchesController < ApplicationController
       @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?per_page=3", 'application/json')
       @congressmen.get ENV['popit_search']+"per_page=3", 'application/json'
     end
+
+    @title =  t('search.search_results') + ' - '
   end
 end

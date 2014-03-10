@@ -30,9 +30,8 @@
                       %li.label-default
                         = tag
                 %td
-                  0
-                  %a{href: "/"}
-                    %i.fa.fa-bell-o
+                  = link_to (new_user_subscription_path(:bill => bill.uid)) do
+                    %i.fa.fa-bell-o{title: t('bill.subscribe')}
 
     %div.col-md-6
       %table.table.table-striped.tablas
@@ -60,9 +59,8 @@
                       %li.label-default
                         = tag
                 %td
-                  0
-                  %a{href: "/"}
-                    %i.fa.fa-bell-o
+                  = link_to (new_user_subscription_path(:bill => bill.uid)) do
+                    %i.fa.fa-bell-o{title: t('bill.subscribe')}
 
 %section#last-responses
   %h3.title-last-responses 
@@ -71,7 +69,7 @@
     %div.col-md-6.home-answers-wraper
       %div.home-answers
         %div.col-md-2  
-          %img.img-responsive{:src=>'http://placehold.it/200x200'}
+          = image_tag('default-profile.png', class: "img-circle img-responsive")
         %div.col-md-10
           %p.light
             ¿Quiero saber qué acciones va a tomar Ud. señor senador en cuanto a las va a tomar Ud. señor senador en cuantva a tomar Ud. señor senador en cuantciclovías?
@@ -85,7 +83,7 @@
     %div.col-md-6.home-answers-wraper
       %div.home-answers
         %div.col-md-2  
-          %img.img-responsive{:src=>'http://placehold.it/200x200'}
+          = image_tag('default-profile.png', class: "img-circle img-responsive")
         %div.col-md-10
           %p.light
             ¿Quiero saber qué acciones va a tomar Ud. señor senador en cuanto a las va a tomar Ud. señor senador en cuantva a tomar Ud. señor senador en cuantciclovías?
