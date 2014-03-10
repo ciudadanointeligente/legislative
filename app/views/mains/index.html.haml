@@ -30,9 +30,8 @@
                       %li.label-default
                         = tag
                 %td
-                  0
-                  %a{href: "/"}
-                    %i.fa.fa-bell-o
+                  = link_to (new_user_subscription_path(:bill => bill.uid)) do
+                    %i.fa.fa-bell-o{title: t('bill.subscribe')}
 
     %div.col-md-6
       %table.table.table-striped.tablas
@@ -60,9 +59,8 @@
                       %li.label-default
                         = tag
                 %td
-                  0
-                  %a{href: "/"}
-                    %i.fa.fa-bell-o
+                  = link_to (new_user_subscription_path(:bill => bill.uid)) do
+                    %i.fa.fa-bell-o{title: t('bill.subscribe')}
 
 %section#last-responses
   %h3.title-last-responses 
