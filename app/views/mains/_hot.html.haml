@@ -1,23 +1,6 @@
 %div.hot-space
   %div.container
     %h3.text-center.hot-title
-      Proyectos con discusión inmediata
-    - i = 0
-    - while i < 6
-      %div
-        %p.bill-id 
-          123-45
-        %h4.bill-title
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, eaque, odio, cupiditate reprehenderit veritatis nihil quae non omnis suscipit eveniet quod neque quam quia cum minima voluptatem voluptate mollitia similique!
-        %p.bill-stage
-          Etapa: 2do trámite constitucional
-        %ul.list-inline.bill-tags
-          %li
-            Salud
-          %li
-            Educación
-          %li
-            Transporte
-          %li
-            Medio Ambiente
-      - i += 1
+      Proyectos con urgencia
+    %div.row
+      = render :partial => "hot_bill", collection: @hot_bills

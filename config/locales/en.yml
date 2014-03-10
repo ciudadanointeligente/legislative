@@ -15,6 +15,7 @@ en:
     from: from Ciudadano Inteligente
     title_project: Congreso Abierto
     welcome: Welcome
+    bills: Proyectos de ley
   main:
     search_placeholder: Search
     username: Username
@@ -74,6 +75,7 @@ en:
     congressmen: Congressmen
     represent: 'Represent:'
     all_results: View all results
+    search_results: Search results
   agendas:
     chamber: Chamber
     date: Date

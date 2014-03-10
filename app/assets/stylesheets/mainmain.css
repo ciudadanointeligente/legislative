@@ -87,7 +87,7 @@ strong {
   font-family: 'Raleway', Helvetica, sans-serif;
   font-weight: 700;
   font-size: 14px;
-  height: 50px;
+  padding: 7px 10px;
 }
 
 .btn-default {
@@ -324,13 +324,6 @@ strong {
   margin-top: -20px;
 }
 
-.hot-space {
-  background: #ea6a56;
-  color: #e6e6c9;
-  padding: 10px 0px 35px;
-  margin-bottom: 20px;
-}
-
 #graph > h4 > a {
   font-weight: 400;
   font-size: 14px;
@@ -420,43 +413,42 @@ strong {
 
 /*hot-space*/
 
-.hot-space .btn-info {
-  color: #ea6a56;
-}
-
-.hot-space .btn-info:hover {
-  color: #ea6a56;
-}
-
-.hot-space .list-inline {
-  padding-top: 20px;
-}
-
-.table thead th {
-}
-
-.hot-modal .modal-header {
+.hot-space {
   background: #ea6a56;
-  color: #f9f9eb;
+  padding: 10px 0px 35px;
+  margin-bottom: 20px;
 }
 
-.hot-modal .modal-body {
-  padding: 0px;
-}
-
-.big-number {
-  font-size: 36px;
-  font-weight: 700;
-  font-family: 'Raleway', Helvetica, sans-serif;
-  text-transform: uppercase;
-}
-
-.hot-modal .big-number {
+.hot-space a {
   color: #ea6a56;
 }
 
-.hot-modal td:last-child {
-  text-align: center;
+.hot-space h3 {
+  color: #E6E6C9;
+}
+
+.boxdisplay {
+  background: #F5F5DD;
+  padding: 15px;
+}
+
+.hot-space .fa-bell-o {
+animation: urgency 2s infinite;
+-webkit-animation: urgency 2s infinite; /* Safari and Chrome */
+}
+
+@keyframes urgency
+{
+0%   {color: #EA6A56;}
+50%  {color: #E6E6C9;}
+100% {color: #EA6A56;}
+}
+
+@-webkit-keyframes urgency /* Safari and Chrome */
+{
+0%   {color: #EA6A56;}
+50%  {color: #E6E6C9;}
+100% {color: #EA6A56;}
 }
 
 /*tablas*/
@@ -464,17 +456,6 @@ strong {
 .table.tablas {
   margin-top: 20px;
   margin-bottom: 50px;
-}
-
-/*MODAL*/
-
-.modal-header {
-  background: #462445;
-  color: #E6E6C9;
-}
-
-.modal-body {
-  background-color: #f5f5dd;
 }
 
 /*respuestas*/
@@ -924,6 +905,10 @@ svg.graph .labels.y-labels {
   }
   .hero-space-bill {
     padding: 20px 0px 60px;
+  }
+  .btn-lg {
+    height: 50px;
+    padding: 10px 16px;
   }
 }
 

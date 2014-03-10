@@ -1,0 +1,20 @@
+%div.col-md-3
+  %div.boxdisplay
+    %p.bill-id 
+      = hot_bill.uid
+    %h5.bill-title
+      = link_to hot_bill.title, "proyectos/" + hot_bill.uid
+    %p.bill-stage
+      = hot_bill.stage
+    %ul.list-inline
+      %li.label-default
+        Salud
+      %li.label-default
+        Educación
+      %li.label-default
+        Transporte
+      %li.label-default
+        Medio Ambiente
+
+- if hot_bill_counter == 3
+  '</div><div class="row">'

@@ -15,7 +15,7 @@
           %i.fa.fa-facebook 
           = t("congressmen.fb_share")
       %li
-        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags=pmo&text='+@congressman.name
+        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags='+ENV['twitter_tags']+'&text='+@congressman.name
         %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
           %i.fa.fa-twitter 
           = t("congressmen.tw_share")
@@ -25,7 +25,7 @@
   %h2
     = @congressman.name
   %h4
-    Senador
+    = @congressman.title
 
 
 %div.row
@@ -33,7 +33,7 @@
     - if ! @congressman.images.blank?
       %img.img-responsive{:src=>@congressman.images[0].url}
     - else
-      %img.img-responsive{ 'src' => 'http://placehold.it/230x230'}
+      = image_tag('default-profile.png', class: "img-responsive")
     
     - if ! @congressman.represent.blank?
       %p
@@ -90,19 +90,23 @@
             %li 
               = t('congressmen.research') + c.researcher 
     
-    - if ! @congressman.links.blank?
+    - if ! @congressman.enlaces.blank?
       %div
         %ul
-          - @congressman.links.each do | link |
+          - @congressman.enlaces.each do | link |
+            - icon = 'fa-globe'
+            - case link.note
+            - when 'twitter'
+              - icon = 'fa-twitter'
+            - when 'facebook'
+              - icon = 'fa-facebook'
             %li
-              %a{ 'href' => link.url }
-                %i.fa.fa-globe
-                = link.note
+              %a{ 'href' => link.url, 'target' => '_blank' }
+                %i{:class=>'fa '+icon}
+                = link.note.capitalize
         
     %h5
       = t('congressmen.bio')
-    %p
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab ut aperiam quae fuga! Dolorum, ex, quos veniam culpa qui explicabo non ullam exercitationem inventore tempora adipisci doloremque facere nisi.
 
   %div.col-md-9
     %h3

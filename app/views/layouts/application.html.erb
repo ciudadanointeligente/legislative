@@ -59,13 +59,10 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to t('layout.search'), searches_path %><li/>
-            <!-- <li><%= link_to t('layout.tables'), tables_path %><li/> -->
-            <li><%= link_to t('layout.communication'), communications_path %><li/>
-            <!-- <li><%= link_to t('layout.disclosure'), disclosures_path %><li/> -->
+            <li><%= link_to t('layout.bills'), searches_bills_path %><li/>
             <li><%= link_to t('layout.congressmen'), congressmen_path %><li/>
+            <li><%= link_to t('layout.communication'), communications_path %><li/>
             <li><%= link_to t('layout.glossary'), glossaries_path %><li/>
-            <!-- <li><%= link_to t('layout.about_us'), 'http://www.ciudadanointeligente.org/quienes-somos/' %><li/> -->
           </ul>
           <% if current_user %>
           <ul class="nav navbar-nav navbar-right">
@@ -125,16 +122,20 @@
         <div class="col-md-4">
             <ul>
                 <li><a href="https://github.com/ciudadanointeligente/legislative" target="_blank"><i class="fa fa-github-alt"></i> Revisa nuestro código en Github</a></li>
-                <!-- <li><a href="http://www.ciudadanointeligente.org/servicios/#pmo" target="_blank"><i class="fa fa-heart-o"></i> ¿Quieres tener un sitio como éste para tu congreso?</a></li> -->
+                <li><a href="http://www.ciudadanointeligente.org/servicios/#congreso" target="_blank"><i class="fa fa-heart-o"></i> ¿Quieres tener un sitio como éste para tu congreso?</a></li>
             </ul>
         </div>
         <div class="col-md-4">
-            Desarrollado por <a href="http://www.ciudadanointeligente.org/" target="_blank"><img src="<%= asset_path('assets/logo-ciudadanoi.png') %>" alt="Fundación Ciudadano Inteligente" title="Fundación Ciudadano Inteligente"></a>
+          <ul>
+            <li>
+              Desarrollado por <a href="http://www.ciudadanointeligente.org/" target="_blank"><img src="<%= asset_path('assets/logo-ciudadanoi.png') %>" alt="Fundación Ciudadano Inteligente" title="Fundación Ciudadano Inteligente"></a>
+            </li>
+          </ul>
         </div>
         <div class="col-md-4">
             <ul>
                 <li><a href="tel:+56224192770"><i class="fa fa-phone"></i> +562 2 419 2770</a></li>
-                <li><a href="mailto:prensa@ciudadanointeligente.org?Subject=Prensa%20de%20Congreso%20abierto" class="email-prensa" target="_top"><i class="fa fa-envelope-o"></i> Contacto prensa</a></li>
+                <li><a href="" class="email-prensa" target="_top"><i class="fa fa-envelope-o"></i> Contacto prensa</a></li>
                 <li><a href="http://bit.ly/17qiMkf" target="_blank"><i class="fa fa-map-marker"></i> Holanda 895, Providencia, Santiago, Chile</a></li>
             </ul>
         </div>
@@ -164,6 +165,13 @@
 
     ga('create', '<%= ENV['analytics'] %>');  // Replace with your property ID.
     ga('send', 'pageview');
+
+    $(document).ready(function(){
+      var pref = 'mailto:prensa',
+          suf = 'ciudadanointeligente.org',
+          subject = '?Subject=Prensa%20de%20Congreso%20abierto';
+      $('a.email-prensa').attr('href', pref+'@'+suf+subject);
+    })
   </script>
   <!-- End Google Analytics -->
 </body>

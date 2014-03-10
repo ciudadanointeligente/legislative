@@ -4,7 +4,7 @@
       - if !congressman.images[0].blank?
         %img.img-circle.img-responsive{:src=>congressman.images[0].url}
       - else
-        %img.img-circle.img-responsive{'src'=>'http://www.placehold.it/200x200'}
+        = image_tag('default-profile.png', class: "img-circle img-responsive")
     %div.col-md-11
       %div.row
         %div.col-md-9
@@ -15,9 +15,6 @@
             %i.fa.fa-pencil
             99999
       %p
-        %strong
-          Partido:
-        el Partido
         - if ! congressman.represent[0].region.blank?
           %strong
             Lugar que representa:

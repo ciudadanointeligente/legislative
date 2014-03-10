@@ -34,11 +34,14 @@ gem 'turbolinks'
 group :development do
   # Using thin for development server
   gem 'thin'
+
   # Replaces default rails error page with a much better and more useful error page
   gem 'better_errors'
+
   # Turns off the rails asset pipeline log
   gem 'quiet_assets'
   gem 'binding_of_caller'
+  gem 'newrelic_rpm'
 end
 
 # Support to XLS export
@@ -53,7 +56,7 @@ gem 'roar', '0.11.19'
 gem 'roar-rails', '0.1.0'
 gem 'faraday', '0.8.1'
 gem 'billit_representers', '0.8.9'
-gem 'popit_representers', '0.0.13'
+gem 'popit_representers', '0.0.15'
 gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
 
 group :development, :test do

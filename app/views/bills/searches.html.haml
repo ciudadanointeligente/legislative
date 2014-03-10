@@ -13,7 +13,7 @@
           %i.fa.fa-facebook 
           Comparte
       %li
-        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags=pmo,congresoabierto'
+        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags='+ENV['twitter_tags']
         %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
           %i.fa.fa-twitter 
           Twittea

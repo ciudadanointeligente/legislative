@@ -15,6 +15,7 @@ es:
     from: de Ciudadano Inteligente
     title_project: Congreso abierto
     welcome: Bienvenido(a)
+    bills: Proyectos de ley
   main:
     search_placeholder: Ingresa tu búsqueda
     username: Nombre de usuario
@@ -74,6 +75,7 @@ es:
     congressmen: Congresistas
     represent: 'Lugar que representa:'
     all_results: Ver todos los resultados
+    search_results: Resultados de búsqueda
   agendas:
     chamber: Cámara
     date: Fecha

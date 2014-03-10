@@ -21,9 +21,9 @@
     = link_to t('congressmen.title')
 
 %div.row
-  %div.col-md-3
+  %div.col-md-3.aside
     = render :partial => "filter_search_form"
-  %div.col-md-9
+  %div.col-md-9.whitewithaside
     - @congressmen.persons.each do | congressman |
 
       %div.row
@@ -31,14 +31,19 @@
           - if ! congressman.images.blank?
             %img.img-circle.img-responsive{:src=>congressman.images[0].url}
           - else
-            %img.img-circle.img-responsive{:src=>'http://placehold.it/200x200'}
-        %div.col-md-11
+            = image_tag('default-profile.png', class: "img-circle img-responsive")
+        %div.col-md-10
           = link_to congressman.name, congressman_path(congressman.id)
 
           %p
             %strong
               = t('congressmen.represent')
             = congressman.represent[0].district
+        %div.col-md-1
+          %a{href: "/"}
+            %h5
+              0
+              %i.fa.fa-pencil
 
     %div.col-md-6
       - if ! @congressmen.prev_url.blank?
