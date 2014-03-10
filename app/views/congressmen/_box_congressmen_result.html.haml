@@ -7,18 +7,22 @@
         = image_tag('default-profile.png', class: "img-circle img-responsive")
     %div.col-md-11
       %div.row
-        %div.col-md-9
+        %div.col-md-11
           %h4
             = link_to congressman.name, congressman_path(congressman.id)
-        %div.col-md-3
-          %a{'href'=>'#'}
-            %i.fa.fa-pencil
-            99999
-      %p
-        - if ! congressman.represent[0].region.blank?
-          %strong
-            Lugar que representa:
-          = congressman.represent[0].region
+          - if ! congressman.title.blank?
+            %p
+              = congressman.title
+
+            - if ! congressman.represent[0].region.blank?
+              %strong
+                = t('congressmen.represent')
+              = congressman.represent[0].region
+        %div.col-md-1
+          = link_to url_for(controller: "communications", action: "index", id: congressman.id) do
+            %span.visible-xs
+              = t('congressmen.askthem')
+            %i.fa.fa-pencil.hidden-xs{title: t('congressmen.askthem')}
 
 - if @congressmen.persons.count == 0
   %p.text-center
