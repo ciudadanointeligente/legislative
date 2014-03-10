@@ -374,6 +374,10 @@ strong {
     color: #968495;
 }
 
+.hero-space .form-control {
+  color: #e6e6c9;
+}
+
 .form-control {
   color: #67675A;
   background-color: #FFFFFF;
