@@ -10,17 +10,17 @@
   %div.col-md-4
     %ul.list-inline.pull-right
       %li
-        = link_to communications_path, class: "btn-warning btn-xs" do
-          %i.fa.fa-pencil
+        = link_to communications_path, class: "btn btn-warning btn-xs" do
+          %i.fa.fa-envelope-o
           = t('congressmen.askthem')
       %li
         - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
-        %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+        %a.btn.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
           %i.fa.fa-facebook 
           = t("congressmen.fb_share")
       %li
         - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags='+ENV['twitter_tags']+'&text='+@congressman.name
-        %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+        %a.btn.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
           %i.fa.fa-twitter 
           = t("congressmen.tw_share")
 
@@ -114,7 +114,7 @@
     /  = t('congressmen.bio')
 
   %div.col-md-9.whitewithaside
-    %h3
+    %h4
       = t('congressmen.last_initiatives')
     %div.alert.alert-warning
       = sprintf('%s aún no tiene iniciativas', @congressman.name)
@@ -167,7 +167,7 @@
 
 
     %div.votes.table-responsive
-      %h3
+      %h4
         = t('congressmen.votes')
       %div.alert.alert-info
         = sprintf('Próximamente aquí se mostrará la postura de %s en las diferentes votaciones.', @congressman.name)
@@ -196,7 +196,7 @@
       /         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
 
     %div.intervencions.table-responsive
-      %h3
+      %h4
         = t('congressmen.last_interventions')
       %div.alert.alert-info
         = sprintf('Próximamente aquí se mostraran las intervenciones de %s en las diferentes sesiones.', @congressman.name)
