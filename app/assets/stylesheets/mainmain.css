@@ -43,7 +43,6 @@ a:hover {
 
 strong {
   font-weight: 700;
-  font-family: 'Raleway', Helvetica, sans-serif;
 }
 
 .small {
@@ -622,6 +621,10 @@ span.paring {
 .aside {
   background: #CDCDB3;
   padding: 20px;
+}
+
+.aside.aside-congressman {
+  background: #E6E6C9;
 }
 
 .aside .checkbox {

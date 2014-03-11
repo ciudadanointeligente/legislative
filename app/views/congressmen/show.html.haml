@@ -29,7 +29,7 @@
 
 
 %div.row
-  %div.col-md-3
+  %div.col-md-3.aside.aside-congressman
     - if ! @congressman.images.blank?
       %img.img-responsive{:src=>@congressman.images[0].url}
     - else
@@ -108,44 +108,46 @@
     /%h5
     /  = t('congressmen.bio')
 
-  %div.col-md-9
+  %div.col-md-9.whitewithaside
     %h3
       = t('congressmen.last_initiatives')
-    %div.table-responsive
-      %table.table
-        %tr
-          %td
-            %img{ 'src' => 'http://placehold.it/35x58' }
-          %td
-            %h5
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, hic velit repudiandae modi ab provident quibusdam laudantium maxime deserunt asperiores debitis ducimus alias placeat accusamus sit sapiente in eos delectus.
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
-            %p
-              %a{ 'href' => '#' }
-                = t('congressmen.view_project')
-        %tr
-          %td
-            %img{ 'src' => 'http://placehold.it/35x58' }
-          %td
-            %h5
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, hic velit repudiandae modi ab provident quibusdam laudantium maxime deserunt asperiores debitis ducimus alias placeat accusamus sit sapiente in eos delectus.
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
-            %p
-              %a{ 'href' => '#' }
-                = t('congressmen.view_project')
-        %tr
-          %td
-            %img{ 'src' => 'http://placehold.it/35x58' }
-          %td
-            %h5
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, hic velit repudiandae modi ab provident quibusdam laudantium maxime deserunt asperiores debitis ducimus alias placeat accusamus sit sapiente in eos delectus.
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
-            %p
-              %a{ 'href' => '#' }
-                = t('congressmen.view_project')
+    %div.alert.alert-warning
+      = sprintf('%s aún no tiene iniciativas', @congressman.name)
+    / %div.table-responsive
+    /   %table.table
+    /     %tr
+    /       %td
+    /         %img{ 'src' => 'http://placehold.it/35x58' }
+    /       %td
+    /         %h5
+    /           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, hic velit repudiandae modi ab provident quibusdam laudantium maxime deserunt asperiores debitis ducimus alias placeat accusamus sit sapiente in eos delectus.
+    /         %p
+    /           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
+    /         %p
+    /           %a{ 'href' => '#' }
+    /             = t('congressmen.view_project')
+    /     %tr
+    /       %td
+    /         %img{ 'src' => 'http://placehold.it/35x58' }
+    /       %td
+    /         %h5
+    /           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, hic velit repudiandae modi ab provident quibusdam laudantium maxime deserunt asperiores debitis ducimus alias placeat accusamus sit sapiente in eos delectus.
+    /         %p
+    /           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
+    /         %p
+    /           %a{ 'href' => '#' }
+    /             = t('congressmen.view_project')
+    /     %tr
+    /       %td
+    /         %img{ 'src' => 'http://placehold.it/35x58' }
+    /       %td
+    /         %h5
+    /           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, hic velit repudiandae modi ab provident quibusdam laudantium maxime deserunt asperiores debitis ducimus alias placeat accusamus sit sapiente in eos delectus.
+    /         %p
+    /           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
+    /         %p
+    /           %a{ 'href' => '#' }
+    /             = t('congressmen.view_project')
 
     - if ! @message.nil?
       %div.special-box
@@ -162,64 +164,68 @@
     %div.votes.table-responsive
       %h3
         = t('congressmen.votes')
-      %table.table
-        %tr
-          %td
-            %img{ 'src' => 'http://placehold.it/35x58' }
-          %td
-            %p
-              %strong
-                A FAVOR
-              %span.date
-                24 de Octubre, 2013
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
-        %tr
-          %td
-            %img{ 'src' => 'http://placehold.it/35x58' }
-          %td
-            %p
-              %strong
-                A FAVOR
-              %span.date
-                24 de Octubre, 2013
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
+      %div.alert.alert-info
+        = sprintf('Próximamente aquí se mostrará la postura de %s en las diferentes votaciones.', @congressman.name)
+      / %table.table
+      /   %tr
+      /     %td
+      /       %img{ 'src' => 'http://placehold.it/35x58' }
+      /     %td
+      /       %p
+      /         %strong
+      /           A FAVOR
+      /         %span.date
+      /           24 de Octubre, 2013
+      /       %p
+      /         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
+      /   %tr
+      /     %td
+      /       %img{ 'src' => 'http://placehold.it/35x58' }
+      /     %td
+      /       %p
+      /         %strong
+      /           A FAVOR
+      /         %span.date
+      /           24 de Octubre, 2013
+      /       %p
+      /         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
 
     %div.intervencions.table-responsive
       %h3
         = t('congressmen.last_interventions')
-      %table.table
-        %tr
-          %td
-            %img{ 'src' => 'http://placehold.it/35x58' }
-          %td
-            %p
-              %strong
-                SESIÓN 84
-              %span.date
-                24 de Octubre, 2013
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
-        %tr
-          %td
-            %img{ 'src' => 'http://placehold.it/35x58' }
-          %td
-            %p
-              %strong
-                SESIÓN 84
-              %span.date
-                24 de Octubre, 2013
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
-        %tr
-          %td
-            %img{ 'src' => 'http://placehold.it/35x58' }
-          %td
-            %p
-              %strong
-                SESIÓN 84
-              %span.date
-                24 de Octubre, 2013
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
+      %div.alert.alert-info
+        = sprintf('Próximamente aquí se mostraran las intervenciones de %s en las diferentes sesiones.', @congressman.name)
+      / %table.table
+      /   %tr
+      /     %td
+      /       %img{ 'src' => 'http://placehold.it/35x58' }
+      /     %td
+      /       %p
+      /         %strong
+      /           SESIÓN 84
+      /         %span.date
+      /           24 de Octubre, 2013
+      /       %p
+      /         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
+      /   %tr
+      /     %td
+      /       %img{ 'src' => 'http://placehold.it/35x58' }
+      /     %td
+      /       %p
+      /         %strong
+      /           SESIÓN 84
+      /         %span.date
+      /           24 de Octubre, 2013
+      /       %p
+      /         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
+      /   %tr
+      /     %td
+      /       %img{ 'src' => 'http://placehold.it/35x58' }
+      /     %td
+      /       %p
+      /         %strong
+      /           SESIÓN 84
+      /         %span.date
+      /           24 de Octubre, 2013
+      /       %p
+      /         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.

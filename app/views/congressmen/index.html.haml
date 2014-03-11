@@ -6,22 +6,22 @@
       %li.active
         = t('congressmen.breadcrumb')
   %div.col-md-5
-    %ul.list-inline
+    %ul.list-inline.pull-right
       %li
         - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
-        %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+        %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
           %i.fa.fa-facebook 
           = t("congressmen.fb_share")
 
       %li
         - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags='+ENV['twitter_tags']
-        %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+        %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
           %i.fa.fa-twitter 
           = t("congressmen.tw_share")
 
 %div
-  %h4
-    = link_to t('congressmen.title')
+  %h2
+    = t('congressmen.title')
 
 %div.row
   %div.col-md-3.aside
@@ -36,7 +36,8 @@
           - else
             = image_tag('default-profile.png', class: "img-circle img-responsive")
         %div.col-md-10
-          = link_to congressman.name, congressman_path(congressman.id)
+          %h5
+            = link_to congressman.name, congressman_path(congressman.id)
 
           %p
             %strong
