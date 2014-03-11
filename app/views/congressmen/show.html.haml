@@ -97,8 +97,8 @@
       %div
         %p
           - @congressman.enlaces.each do | link |
-            - icon = 'fa-external-link-square'
-            - case link.note
+            - icon = 'fa-globe'
+            - case link.note.downcase
             - when 'twitter'
               - icon = 'fa-twitter'
             - when 'facebook'
