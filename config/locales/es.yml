@@ -239,9 +239,9 @@ es:
     period: 'Periodo:'
     party: 'Partido:'
     commissions: Comisiones
-    permanent: 'Permanente: '
-    special: 'Especial: '
-    research: 'Investigadora: '
+    permanent: 'Comisión permanente: '
+    special: 'Comisión especial: '
+    research: 'Comisión investigadora: '
     bio: Biografía
     last_initiatives: Últimas iniciativas
     view_project: Ver proyecto

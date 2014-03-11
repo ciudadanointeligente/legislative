@@ -24,11 +24,15 @@
             %i.fa.fa-pencil.hidden-xs{title: t('congressmen.askthem')}
 %div.pull-left
   - if ! @congressmen.prev_url.blank?
-    = link_to t('pagination.previous'), congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default'
+    = link_to congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default' do
+      %i.fa.fa-long-arrow-left
+      = t('pagination.previous')
 %div.pull-right
   - if ! @congressmen.next_url.blank?
     - if @congressmen.has_more
-      = link_to t('pagination.next'), congressmen_path + '/?page=' + (@congressmen.page + 1).to_s, :class => 'btn btn-default'
+      = link_to congressmen_path + '/?page=' + (@congressmen.page + 1).to_s, :class => 'btn btn-default' do
+        = t('pagination.next')
+        %i.fa.fa-long-arrow-right
 
 - if @congressmen.persons.count == 0
   %p.text-center

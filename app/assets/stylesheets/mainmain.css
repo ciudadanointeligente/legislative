@@ -660,6 +660,7 @@ h4 span.nostyle {
 }
 
 /*Comunicacion*/
+
 .form-comunication {
   color: #FFF;
 }
@@ -704,6 +705,7 @@ h4 span.nostyle {
   padding: 20px 0px 15px;
   background: #462445;
   color: #e6e6c9;
+  margin-top: -15px;
 }
 
 .title-header {
@@ -877,6 +879,13 @@ svg.graph .labels.y-labels {
 }
 
 /*end bill history*/
+
+/*CONGRESSMAN*/
+
+.aside-congressman img {
+  margin-bottom: 30px;
+  width: 100%;
+}
 
 /*FOOTER*/
 
