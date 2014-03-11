@@ -3,12 +3,14 @@
     %ul.breadcrumb
       %li
         = link_to t('congressmen.home'), root_url
+      %li
+        = link_to t('congressmen.breadcrumb'), congressmen_path
       %li.active
         = @congressman.name
   %div.col-md-4
     %ul.list-inline.pull-right
       %li
-        = link_to controller: "communications", action: "index", id: @congressman.id, class: "btn-warning btn-xs" do
+        = link_to communications_path, class: "btn-warning btn-xs" do
           %i.fa.fa-pencil
           = t('congressmen.askthem')
       %li
