@@ -6,8 +6,7 @@
           %li
             = link_to t('layout.home'), root_path
           %li
-            %a{'href'=>'#'}
-              = t('bill.breadcrumb_bill')
+            = link_to t('bill.breadcrumb_bill'), searches_bills_path
           %li.active
             = @bill.title[0..30] + '...'
       
