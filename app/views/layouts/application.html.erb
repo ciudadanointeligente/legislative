@@ -20,9 +20,7 @@
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
     <meta name="viewport" content="width=device-width">
 
-    <%= stylesheet_link_tag 'bootstrap.min.css' %>
-    <%= stylesheet_link_tag 'jquery.tagit.css' %>
-    <%= stylesheet_link_tag 'style' %>
+    <%= stylesheet_link_tag 'application' %>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css" rel="stylesheet">
     <link href="http://zhaber.github.io/datetimepicker/datetimepicker.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -30,13 +28,6 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="icon" href="<%= asset_path('assets/favicon.ico') %>" type="image/x-icon" />
-    <%= stylesheet_link_tag 'mainmain' %>
-
-    <!--
-    <%= javascript_include_tag 'modernizr.2.7.0.min.js' %>
-    -->
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    
     <%= csrf_meta_tag %>
 </head>
 <body>
@@ -145,13 +136,12 @@
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script>window.jQuery || document.write('<script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
   <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
   <script src="http://zhaber.github.io/datetimepicker/datetimepicker.js"></script>
 
   <!-- scripts concatenated and minified via build script -->
-  <%= javascript_include_tag 'jquery_ujs.js' %>
-  <%= javascript_include_tag 'bootstrap.min.js' %>
   <%= javascript_include_tag 'application.js' %>
   <!-- end scripts -->
 
