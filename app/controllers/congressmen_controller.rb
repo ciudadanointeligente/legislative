@@ -15,7 +15,7 @@ class CongressmenController < ApplicationController
     @congressman = PopitPerson.new
     @congressman.get ENV['popit_persons']+params[:id]+'?include_root=false', 'application/json'
 
-    @bills = Billit::BillCollectionPage.get ENV['billit_url']+'search.json?authors='+URI::escape(@congressman.name), 'application/json'    
+    #@bills = Billit::BillCollectionPage.get ENV['billit_url']+'search.json?authors='+URI::escape(@congressman.name), 'application/json'    
 
     @organizations = Popit::OrganizationCollection.new
     @organizations.get ENV['popit_organizations'], 'application/json'
