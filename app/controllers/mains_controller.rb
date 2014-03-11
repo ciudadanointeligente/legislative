@@ -16,6 +16,12 @@ class MainsController < ApplicationController
     @high_chamber_agenda[1] = get_bills_per_agenda JSON.parse(@high_chamber_agenda[0]['bill_list']).uniq
 
     @hot_bills = Billit::BillCollectionPage.get(ENV['billit_url'] + "search?current_urgency=Simple&per_page=6", 'application/json').bills
+
+    @messages = LegislativeMessageCollection.get()
+    if @messages.objects.length > 2
+      @messages.objects = @messages.objects[0..1]
+    end
+
   end
 
   # GET last chamber agenda
