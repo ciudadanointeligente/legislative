@@ -29,6 +29,10 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+h5 {
+  margin: 3px 0;
+}
+
 a {
   color: #f4a458;
 }
@@ -39,6 +43,10 @@ a:hover {
 
 a:visited {
   color: #ce7a3c;
+}
+
+a.btn:visited {
+  color: #e6e6c9;
 }
 
 .light {
@@ -645,6 +653,10 @@ h4 span.nostyle {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   text-transform: none;
+}
+
+.result {
+  margin-top: 25px;
 }
 
 /*Comunicacion*/

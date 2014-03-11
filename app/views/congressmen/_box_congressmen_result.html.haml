@@ -1,5 +1,5 @@
 - @congressmen.persons.each do |congressman|
-  %div.row
+  %div.row.result
     %div.col-md-1
       - if !congressman.images[0].blank?
         %img.img-circle.img-responsive{:src=>congressman.images[0].url}
@@ -8,14 +8,13 @@
     %div.col-md-11
       %div.row
         %div.col-md-11
-          %h4
+          %h5
             = link_to congressman.name, congressman_path(congressman.id)
           - if ! congressman.title.blank?
-            %h5
-              = congressman.title
-
+            = congressman.title
+          %p
             - if ! congressman.represent[0].region.blank?
-              %strong
+              %span.light
                 = t('congressmen.represent')
               = congressman.represent[0].region
         %div.col-md-1
@@ -23,6 +22,13 @@
             %span.visible-xs
               = t('congressmen.askthem')
             %i.fa.fa-pencil.hidden-xs{title: t('congressmen.askthem')}
+%div.pull-left
+  - if ! @congressmen.prev_url.blank?
+    = link_to t('pagination.previous'), congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default'
+%div.pull-right
+  - if ! @congressmen.next_url.blank?
+    - if @congressmen.has_more
+      = link_to t('pagination.next'), congressmen_path + '/?page=' + (@congressmen.page + 1).to_s, :class => 'btn btn-default'
 
 - if @congressmen.persons.count == 0
   %p.text-center
