@@ -50,7 +50,7 @@ development:
   bill_graph_data_length:   '12'  # amount of points in the graph
   bill_graph_day_interval:  '28'   # amount of days per point in graph
   parliaments_initial_date: '1990-03-01' # the initial date for bill search purposes
-  billit_url: ~       # example: 'http://billit-instance.org/bills/'; for more info about this POPLUS component check https://github.com/ciudadanointeligente/bill-it
+  billit_url: 'http://billit.ciudadanointeligente.org/bills/'       # example: 'http://billit-instance.org/bills/'; for more info about this POPLUS component check https://github.com/ciudadanointeligente/bill-it
   paperworks_url: 'http://billit.ciudadanointeligente.org/paperworks/'
   popit_url:  ~       # example: 'legislative-instance.popit.mysociety.org'; you will need create a instance, please contact with mysociety's popit team in popit@mysociety.org. http://popit.mysociety.org/instances/new
   popit_persons:  ~   # example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/persons/'; the same instance used above but with http and person path
@@ -61,7 +61,7 @@ development:
   writeit_url:      ~ # example: '/api/v1/instance/2/'; writeit instance path
   writeit_username: ~ # example: 'admin'; writeit username
   writeit_api_key:  ~ # example: 'a'; writeit apikey
-  writeit_messages_per_page: '2'
+  writeit_messages_per_page: '5'
 
 test:
   root_url:  ~
