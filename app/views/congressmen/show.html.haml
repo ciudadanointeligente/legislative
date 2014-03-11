@@ -68,15 +68,16 @@
         
     - if ! @congressman.memberships.blank?
       %p
-        = t('congressmen.party')
+        %span.light
+          = t('congressmen.party')
         - @organizations.result.each do | o |
-          - url = '#';
-          -if ! o.links[1].blank?
-            - url = @congressman.memberships[0].organization_id == o.id ? o.links[1].url : '#'
+          /- url = '#';
+          /-if ! o.links[1].blank?
+          /  - url = @congressman.memberships[0].organization_id == o.id ? o.links[1].url : '#'
           
-            %a{ 'href' => url, 'target' => '_blank' }
-              = o.name if @congressman.memberships[0].organization_id == o.id
-            %i.fa.fa-external-link
+          /  %a{ 'href' => url, 'target' => '_blank' }
+          = o.name if @congressman.memberships[0].organization_id == o.id
+          /%i.fa.fa-external-link
     
     - if ! @congressman.commissions.blank?
       %p
