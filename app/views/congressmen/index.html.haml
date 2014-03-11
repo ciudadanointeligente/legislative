@@ -1,45 +1,46 @@
 %div.row
-  %div.col-md-7
+  %div.col-md-6
     %ol.breadcrumb
       %li
         = link_to t('layout.home'), root_path
       %li.active
         = t('congressmen.breadcrumb')
-  %div.col-md-5
-    %ul.list-inline
+  %div.col-md-6
+    %ul.list-inline.pull-right
       %li
         - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
-        %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+        %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
           %i.fa.fa-facebook 
           = t("congressmen.fb_share")
 
       %li
         - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags='+ENV['twitter_tags']
-        %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+        %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
           %i.fa.fa-twitter 
           = t("congressmen.tw_share")
 
-%div
-  %h4
-    = link_to t('congressmen.title')
 
 %div.row
+  %h2
+    = t('congressmen.title')
   %div.col-md-3.aside
     = render :partial => "filter_search_form"
   %div.col-md-9.whitewithaside
     - @congressmen.persons.each do | congressman |
 
-      %div.row
+      %div.row.result
         %div.col-md-1
           - if ! congressman.images.blank?
             %img.img-circle.img-responsive{:src=>congressman.images[0].url}
           - else
             = image_tag('default-profile.png', class: "img-circle img-responsive")
         %div.col-md-10
-          = link_to congressman.name, congressman_path(congressman.id)
-
+          %h5
+            = link_to congressman.name, congressman_path(congressman.id)
+          - if ! congressman.title.blank?
+            = congressman.title
           %p
-            %strong
+            %span.light
               = t('congressmen.represent')
             = congressman.represent[0].district
         %div.col-md-1
@@ -48,10 +49,14 @@
               = t('congressmen.askthem')
             %i.fa.fa-pencil.hidden-xs{title: t('congressmen.askthem')}
 
-    %div.col-md-6
+    %div.pull-left
       - if ! @congressmen.prev_url.blank?
-        = link_to t('pagination.previous'), congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default'
-    %div.col-md-6
+        = link_to congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default' do
+          %i.fa.fa-long-arrow-left
+          = t('pagination.previous')
+    %div.pull-right
       - if ! @congressmen.next_url.blank?
         - if @congressmen.has_more
-          = link_to t('pagination.next'), congressmen_path + '/?page=' + (@congressmen.page + 1).to_s, :class => 'btn btn-default'
+          = link_to congressmen_path + '/?page=' + (@congressmen.page + 1).to_s, :class => 'btn btn-default' do
+            = t('pagination.next')
+            %i.fa.fa-long-arrow-right

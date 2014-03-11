@@ -40,6 +40,10 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+h5 {
+  margin: 3px 0;
+}
+
 a {
   color: #f4a458;
 }
@@ -48,13 +52,20 @@ a:hover {
   color: #dd8740;
 }
 
+a:visited {
+  color: #ce7a3c;
+}
+
+a.btn:visited {
+  color: #e6e6c9;
+}
+
 .light {
   color: #a6a691;
 }
 
 strong {
   font-weight: 700;
-  font-family: 'Raleway', Helvetica, sans-serif;
 }
 
 .small {
@@ -635,6 +646,10 @@ span.paring {
   padding: 20px;
 }
 
+.aside.aside-congressman {
+  background: #E6E6C9;
+}
+
 .aside .checkbox {
    padding-left: 0px; 
 }
@@ -651,7 +666,12 @@ h4 span.nostyle {
   text-transform: none;
 }
 
+.result {
+  margin-top: 25px;
+}
+
 /*Comunicacion*/
+
 .form-comunication {
   color: #FFF;
 }
@@ -696,6 +716,7 @@ h4 span.nostyle {
   padding: 20px 0px 15px;
   background: #462445;
   color: #e6e6c9;
+  margin-top: -15px;
 }
 
 .title-header {
@@ -869,6 +890,13 @@ svg.graph .labels.y-labels {
 }
 
 /*end bill history*/
+
+/*CONGRESSMAN*/
+
+.aside-congressman img {
+  margin-bottom: 30px;
+  width: 100%;
+}
 
 /*FOOTER*/
 
