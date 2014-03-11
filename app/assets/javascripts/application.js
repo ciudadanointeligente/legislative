@@ -10,7 +10,6 @@
 //= require_tree ./directives/global
 //= require_tree ./directives/main
 //= require tag-it.min
-//= require jquery.tinysort.min
 //= require tag-it_updates
 //= require mainmain
 //= require_self
