@@ -17,7 +17,7 @@ class LegislativeMessageCollection
 
 	property :meta
 
-	def get(page: 1, person: nil)
+	def get(page: 1, person: nil, **options)
 		url = URI.join(ENV['writeit_base_url'], ENV['writeit_url'], 'messages/')
 		hash_parameters = {
 			"format" => "json", 
@@ -31,6 +31,6 @@ class LegislativeMessageCollection
 		end
 		parameters = URI.encode_www_form hash_parameters
 		url.query = parameters
-		super(url.to_s, 'application/json')
+		super url.to_s, 'application/json' 
 	end
 end

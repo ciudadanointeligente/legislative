@@ -1,7 +1,7 @@
 [{
-    "name": "Gonzalo Arenas Hodar",
-    "slug": "gonzalo-arenas-hodar",
-    "_id": "5008048c7a317e126400046d",
+    "_id":"531f31d804d7b561780d7e10",
+    "name": "Felipe Álvarez",
+    "slug": "felipe-alvarez",
     "images": [{"url": "http://legislativo.votainteligente.cl/images/parlamentarios/134.png"}],
     "represent": [
               {
@@ -21,7 +21,7 @@
               "birth_date": "1976-03-15",
               "personal_info": [
               {
-                "profession": "Abogado"
+                "profession": "Ninja"
               }
               ],
               "professional_info": [
@@ -50,13 +50,11 @@
               ],
               "contact_details": [ ],
               "identifiers": [ ],
-              "other_names": [ ],
-              "url": "http://localhost:3002/api/persons/5008048c7a317e126400046d",
-              "html_url": "http://localhost:3002/api/persons/5008048c7a317e126400046d"
+              "other_names": [ ]
   }, {
-    "name": "Orlando Vargas Pizarro",
-    "slug": "orlando-vargas-pizarro",
-    "_id": "500804717a317e126400005e",
+    "_id":"531f31d804d7b561780d7e11",
+    "name": "Damián Garrido",
+    "slug": "damian-garrido",
     "images": [{"url": "http://legislativo.votainteligente.cl/images/parlamentarios/39.png"}],
     "represent": [
               {
@@ -76,7 +74,7 @@
               "birth_date": "1976-03-15",
               "personal_info": [
               {
-                "profession": "Técnico Mecánico"
+                "profession": "Modelo"
               }
               ],
               "professional_info": [
@@ -100,8 +98,246 @@
               ],
               "contact_details": [ ],
               "identifiers": [ ],
-              "other_names": [ ],
-              "url": "http://localhost:3002/api/persons/500804717a317e126400005e",
-              "html_url": "http://localhost:3002/api/persons/500804717a317e126400005e"
+              "other_names": [ ]
+  }, {
+    "_id":"531f31d804d7b561780d7e12",
+    "name": "Pedro Daire",
+    "slug": "pedro-daire",
+    "images": [{"url": "http://legislativo.votainteligente.cl/images/parlamentarios/39.png"}],
+    "represent": [
+              {
+                "district": "Distrito 2"
+              }
+    ],
+    "parliamentarian_period": [
+              {
+                "date": "2014-2018"
+              }
+              ],
+    "commissions": [
+    {
+      "permanent": "Revisadora de cuentas, Zonas extremas, Ciencia y tecnología, Derechos humanos"
+    }
+    ],
+              "birth_date": "1976-03-15",
+              "personal_info": [
+              {
+                "profession": "Escalador"
+              }
+              ],
+              "professional_info": [
+              {
+                "percentage_votes": "25,77",
+                "place": "Seguna mayoría"
+              }
+              ],
+              "memberships": [ ],
+              "links": [
+              {
+                "id": "530358b1882db86e720e51e2",
+                "note": "Facebook",
+                "url": "https://www.facebook.com/orlandovargas"
+              },
+              {
+                "id": "530358b1882db86e720e51e1",
+                "note": "Website",
+                "url": "https://es.wikipedia.org/wiki/Orlando_Vargas_Pizarro"
+              }
+              ],
+              "contact_details": [ ],
+              "identifiers": [ ],
+              "other_names": [ ]
+  }, {
+    "_id":"531f31d804d7b561780d7e13",
+    "name": "Marcel Augsburger",
+    "slug": "marcel-augsburger",
+    "images": [{"url": "http://legislativo.votainteligente.cl/images/parlamentarios/39.png"}],
+    "represent": [
+              {
+                "district": "Distrito 2"
+              }
+    ],
+    "parliamentarian_period": [
+              {
+                "date": "2014-2018"
+              }
+              ],
+    "commissions": [
+    {
+      "permanent": "Revisadora de cuentas, Zonas extremas, Ciencia y tecnología, Derechos humanos"
+    }
+    ],
+              "birth_date": "1976-03-15",
+              "personal_info": [
+              {
+                "profession": "Escalador"
+              }
+              ],
+              "professional_info": [
+              {
+                "percentage_votes": "25,77",
+                "place": "Seguna mayoría"
+              }
+              ],
+              "memberships": [ ],
+              "links": [
+              {
+                "id": "530358b1882db86e720e51e2",
+                "note": "Facebook",
+                "url": "https://www.facebook.com/orlandovargas"
+              },
+              {
+                "id": "530358b1882db86e720e51e1",
+                "note": "Website",
+                "url": "https://es.wikipedia.org/wiki/Orlando_Vargas_Pizarro"
+              }
+              ],
+              "contact_details": [ ],
+              "identifiers": [ ],
+              "other_names": [ ]
+  }, {
+    "_id":"531f31d804d7b561780d7e14",
+    "name": "Juan Pablo Perez",
+    "slug": "jp-perez",
+    "images": [{"url": "http://legislativo.votainteligente.cl/images/parlamentarios/39.png"}],
+    "represent": [
+              {
+                "district": "Distrito 2"
+              }
+    ],
+    "parliamentarian_period": [
+              {
+                "date": "2014-2018"
+              }
+              ],
+    "commissions": [
+    {
+      "permanent": "Revisadora de cuentas, Zonas extremas, Ciencia y tecnología, Derechos humanos"
+    }
+    ],
+              "birth_date": "1976-03-15",
+              "personal_info": [
+              {
+                "profession": "Ciclista"
+              }
+              ],
+              "professional_info": [
+              {
+                "percentage_votes": "25,77",
+                "place": "Seguna mayoría"
+              }
+              ],
+              "memberships": [ ],
+              "links": [
+              {
+                "id": "530358b1882db86e720e51e2",
+                "note": "Facebook",
+                "url": "https://www.facebook.com/orlandovargas"
+              },
+              {
+                "id": "530358b1882db86e720e51e1",
+                "note": "Website",
+                "url": "https://es.wikipedia.org/wiki/Orlando_Vargas_Pizarro"
+              }
+              ],
+              "contact_details": [ ],
+              "identifiers": [ ],
+              "other_names": [ ]
+  }, {
+    "_id":"531f31d804d7b561780d7e15",
+    "name": "Cata Margozzini",
+    "slug": "cata",
+    "images": [{"url": "http://legislativo.votainteligente.cl/images/parlamentarios/39.png"}],
+    "represent": [
+              {
+                "district": "Distrito 2"
+              }
+    ],
+    "parliamentarian_period": [
+              {
+                "date": "2014-2018"
+              }
+              ],
+    "commissions": [
+    {
+      "permanent": "Revisadora de cuentas, Zonas extremas, Ciencia y tecnología, Derechos humanos"
+    }
+    ],
+              "birth_date": "1976-03-15",
+              "personal_info": [
+              {
+                "profession": "Protectora de animales"
+              }
+              ],
+              "professional_info": [
+              {
+                "percentage_votes": "25,77",
+                "place": "Seguna mayoría"
+              }
+              ],
+              "memberships": [ ],
+              "links": [
+              {
+                "id": "530358b1882db86e720e51e2",
+                "note": "Facebook",
+                "url": "https://www.facebook.com/orlandovargas"
+              },
+              {
+                "id": "530358b1882db86e720e51e1",
+                "note": "Website",
+                "url": "https://es.wikipedia.org/wiki/Orlando_Vargas_Pizarro"
+              }
+              ],
+              "contact_details": [ ],
+              "identifiers": [ ],
+              "other_names": [ ]
+  }, {
+    "_id":"531f31d804d7b561780d7e16",
+    "name": "Kathe Malis",
+    "slug": "kathe malis",
+    "images": [{"url": "http://legislativo.votainteligente.cl/images/parlamentarios/39.png"}],
+    "represent": [
+              {
+                "district": "Distrito 2"
+              }
+    ],
+    "parliamentarian_period": [
+              {
+                "date": "2014-2018"
+              }
+              ],
+    "commissions": [
+    {
+      "permanent": "Revisadora de cuentas, Zonas extremas, Ciencia y tecnología, Derechos humanos"
+    }
+    ],
+              "birth_date": "1976-03-15",
+              "personal_info": [
+              {
+                "profession": "Ciclista"
+              }
+              ],
+              "professional_info": [
+              {
+                "percentage_votes": "25,77",
+                "place": "Seguna mayoría"
+              }
+              ],
+              "memberships": [ ],
+              "links": [
+              {
+                "id": "530358b1882db86e720e51e2",
+                "note": "Facebook",
+                "url": "https://www.facebook.com/orlandovargas"
+              },
+              {
+                "id": "530358b1882db86e720e51e1",
+                "note": "Website",
+                "url": "https://es.wikipedia.org/wiki/Orlando_Vargas_Pizarro"
+              }
+              ],
+              "contact_details": [ ],
+              "identifiers": [ ],
+              "other_names": [ ]
   }
 ]

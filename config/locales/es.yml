@@ -41,6 +41,7 @@ es:
     high_chamber: Senado
     low_chamber: Cámara de diputados
     last_responses: Últimas respuestas
+    last_questions: Últimas Preguntas
     view_more_questions: Ver más preguntas
     session: Sesión
     legislature: Legislatura
@@ -239,9 +240,9 @@ es:
     period: 'Periodo:'
     party: 'Partido:'
     commissions: Comisiones
-    permanent: 'Permanente: '
-    special: 'Especial: '
-    research: 'Investigadora: '
+    permanent: 'Comisión permanente: '
+    special: 'Comisión especial: '
+    research: 'Comisión investigadora: '
     bio: Biografía
     last_initiatives: Últimas iniciativas
     view_project: Ver proyecto

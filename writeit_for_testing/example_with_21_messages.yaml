@@ -403,14 +403,14 @@
   model: auth.permission
   pk: 120
 - fields:
-    date_joined: 2013-12-18 21:29:08.466407+00:00
+    date_joined: '2013-12-18 21:29:08.466407+00:00'
     email: admin@admines.cl
     first_name: ''
     groups: []
     is_active: true
     is_staff: true
     is_superuser: true
-    last_login: 2013-12-18 21:33:59.610540+00:00
+    last_login: '2013-12-18 21:33:59.610540+00:00'
     last_name: ''
     password: pbkdf2_sha256$12000$1Q4Q7Eoc7dYc$1qGRAIa0/KLouN2JLX4ZEuvZJgzzYhj9/U2PvLdEHcM=
     user_permissions: []
