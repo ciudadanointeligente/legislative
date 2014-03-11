@@ -37,6 +37,10 @@ a:hover {
   color: #dd8740;
 }
 
+a:visited {
+  color: #ce7a3c;
+}
+
 .light {
   color: #a6a691;
 }
