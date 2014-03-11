@@ -51,13 +51,12 @@
           = t('congressmen.represent')
         - @congressman.represent.each do | r |
           - if ! r.district.blank?
-            = t('congressmen.district') + r.district
+            = r.district
           - if ! r.region.blank?
             %p
               %span.light 
                 = t('congressmen.region')
               = r.region
-
           - if ! r.comunas.blank?
             %p
               %span.light 
