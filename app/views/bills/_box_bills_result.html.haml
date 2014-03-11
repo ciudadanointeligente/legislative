@@ -40,7 +40,11 @@
 
   %div.col-md-6.text-center
     - if ! @bills_query.next.blank?
-      = link_to searches_bills_path + '?q='+params[:q]+'&page=' + (params[:page].to_i + 1).to_s + '&bills=1', :class => 'btn btn-default' do
+      / we need change this shit
+      - page = 2
+      - if ! params[:page].blank?
+        - page = params[:page].to_i + 1
+      = link_to searches_bills_path + '?q='+params[:q].to_s+'&page=' + page.to_s + '&bills=1', :class => 'btn btn-default' do
         = t('pagination.next')
         %i.fa.fa-long-arrow-right
 
