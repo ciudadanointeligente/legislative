@@ -34,7 +34,7 @@ production:
   writeit_messages_per_page: '20'
 
 development:
-  root_url:   ~           # example: 'http://www.congresoabierto.cl/'; used for links in the exported XLS files
+  root_url:   ~           # example: 'http://www.congresoabierto.cl'
   analytics:  ~           # example: 'UA-XXXXX-X'; Google Analytics code
   description: ~
   og_description: ~

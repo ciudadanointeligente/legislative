@@ -16,11 +16,13 @@
           - @low_chamber_bills = @low_chamber_agenda[1]
           - @low_chamber_bills.bills.each do |bill|
             %tr
-              %td
-                %p.light
+              %td.hidden-xs
+                %h5.light
                   = bill.uid
               %td
-                %strong
+                %h5.light.visible-xs
+                  = bill.uid
+                %h5
                   = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
                 %p
                   = bill.stage
@@ -29,7 +31,7 @@
                     - bill.tags.each do |tag|
                       %li.label-default
                         = tag
-                %td
+                %td.hidden-xs
                   = link_to (new_user_subscription_path(:bill => bill.uid)) do
                     %i.fa.fa-bell-o{title: t('bill.subscribe')}
 
@@ -45,11 +47,13 @@
           - @high_chamber_bills = @high_chamber_agenda[1]
           - @high_chamber_bills.bills.each do |bill|
             %tr
-              %td
-                %p.light
+              %td.hidden-xs
+                %h5.light
                   = bill.uid
               %td
-                %strong
+                %h5.light.visible-xs
+                  = bill.uid
+                %h5
                   = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
                 %p
                   = bill.stage
@@ -58,7 +62,7 @@
                     - bill.tags.each do |tag|
                       %li.label-default
                         = tag
-                %td
+                %td.hidden-xs
                   = link_to (new_user_subscription_path(:bill => bill.uid)) do
                     %i.fa.fa-bell-o{title: t('bill.subscribe')}
 

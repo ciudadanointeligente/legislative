@@ -44,7 +44,6 @@ a:hover {
 strong {
   font-weight: 700;
   font-family: 'Raleway', Helvetica, sans-serif;
-  /*text-transform: uppercase;*/
 }
 
 .small {
@@ -73,7 +72,6 @@ strong {
 
 .btn-xs {
   height: 25px;
-  font-size: 11px;
   padding: 4px;
 }
 
@@ -259,6 +257,10 @@ strong {
   padding-left: 6px;
 }
 
+.list-inline>li {
+  padding-left: 0px;
+}
+
 /*Menu*/
 
 #site-logo {
@@ -372,6 +374,10 @@ strong {
 
 .hero-space .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: #968495;
+}
+
+.hero-space .form-control {
+  color: #e6e6c9;
 }
 
 .form-control {
