@@ -25,6 +25,20 @@ Check at [http://localhost:3000](http://localhost:3000)
 
 You can try loggin in with `admin@ciudadanointeligente.org / benito`
 
+## System requirements
+
+The following system requirements are also needed, for image manipulation:
+
+Red Hat / Fedora
+<pre>
+yum install ImageMagick-devel
+</pre>
+
+Debian / Ubuntu
+<pre>
+apt-get install imagemagick
+</pre>
+
 ## Features
 
 ##### [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/)
