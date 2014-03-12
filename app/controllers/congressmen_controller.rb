@@ -1,4 +1,6 @@
 require 'popit_representers/models/organization_collection'
+require 'RMagick'
+require "open-uri"
 
 class CongressmenController < ApplicationController
 
