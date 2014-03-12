@@ -1,4 +1,5 @@
 require 'popit_representers/models/organization_collection'
+require './app/models/bill'
 
 class CongressmenController < ApplicationController
 
@@ -25,7 +26,7 @@ class CongressmenController < ApplicationController
     @congressman = PopitPerson.new
     @congressman.get ENV['popit_persons']+params[:id]+'?include_root=false', 'application/json'
 
-    #@bills = Billit::BillCollectionPage.get ENV['billit_url']+'search.json?authors='+URI::escape(@congressman.name), 'application/json'    
+    @bills = (Billit::BillCollectionPage.get ENV['billit_url']+'search.json?authors='+URI::escape(@congressman.name)+ '&per_page=3', 'application/json').bills
 
     @organizations = Popit::OrganizationCollection.new
     @organizations.get ENV['popit_organizations'], 'application/json'
