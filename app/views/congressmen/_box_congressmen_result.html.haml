@@ -1,7 +1,7 @@
 - @congressmen.persons.each do |congressman|
   %div.row.result
     %div.col-md-1
-      - if !congressman.images[0].blank?
+      - if ! congressman.images.blank?
         %img.img-circle.img-responsive{:src=>congressman.images[0].url}
       - else
         = image_tag('default-profile.png', class: "img-circle img-responsive")

@@ -71,18 +71,18 @@
       </div>
     </div>
     
-    <!-- LLamada buscardor -->
+    <!-- Show browser -->
     <% if @condition_search %>
     <%= render :partial => "search"%>
     <% end %>
 
     <% if @condition_priority_box %>
-    <!-- LLamada hot -->
+    <!-- Show hot urgencies -->
     <%= render :partial => "hot"%>
     <% end %>
 
     <% if @condition_resume_bill %>
-    <!-- LLamada resumen proyectos de ley -->
+    <!-- Show bill resume -->
     <%= render :partial => "resume"%>
     <% end %>
 
@@ -99,14 +99,14 @@
         </div>
       </div>
 
-      <!-- the content -->
+      <!-- Content -->
       <%= yield %>
-      <!-- end of content -->
+      <!-- End content -->
 
     </div> <!-- /container -->
   </div> <!-- /wrap -->
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <div id="footer">
     <div class="container">
       <div class="row">
@@ -133,12 +133,14 @@
       </div>
     </div>
   </div>
-  <!-- CIERRE FOOTER -->
+  <!-- End footer -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script>window.jQuery || document.write('<script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+
   <!-- scripts concatenated and minified via build script -->
   <%= javascript_include_tag 'application.js' %>
+
   <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js" %>
   <%= javascript_include_tag "http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js" %>
   <%= javascript_include_tag "http://zhaber.github.io/datetimepicker/datetimepicker.js" %>

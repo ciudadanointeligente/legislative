@@ -19,14 +19,13 @@
           %i.fa.fa-twitter 
           = t("congressmen.tw_share")
 
-
 %div.row
   %h2
     = t('congressmen.title')
   %div.col-md-3.aside
     = render :partial => "filter_search_form"
   %div.col-md-9.whitewithaside
-    - @congressmen.persons.each do | congressman |
+    - @congressmen.each do | congressman |
 
       %div.row.result
         %div.col-md-1
@@ -49,14 +48,15 @@
               = t('congressmen.askthem')
             %i.fa.fa-pencil.hidden-xs{title: t('congressmen.askthem')}
 
-    %div.pull-left
-      - if ! @congressmen.prev_url.blank?
-        = link_to congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default' do
-          %i.fa.fa-long-arrow-left
-          = t('pagination.previous')
-    %div.pull-right
-      - if ! @congressmen.next_url.blank?
-        - if @congressmen.has_more
-          = link_to congressmen_path + '/?page=' + (@congressmen.page + 1).to_s, :class => 'btn btn-default' do
-            = t('pagination.next')
-            %i.fa.fa-long-arrow-right
+    / Disable pagination
+    / %div.pull-left
+    /   - if ! @congressmen.prev_url.blank?
+    /     = link_to congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default' do
+    /       %i.fa.fa-long-arrow-left
+    /       = t('pagination.previous')
+    / %div.pull-right
+    /   - if ! @congressmen.next_url.blank?
+    /     - if @congressmen.has_more
+    /       = link_to congressmen_path + '/?page=' + (@congressmen.page + 1).to_s, :class => 'btn btn-default' do
+    /         = t('pagination.next')
+    /         %i.fa.fa-long-arrow-right
