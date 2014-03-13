@@ -115,11 +115,16 @@
     /  = t('congressmen.bio')
 
   %div.col-md-9.whitewithaside
-    %h3
-      = t('congressmen.last_initiatives')
-      = render partial: "bill", collection: @bills
-      = link_to_if @bills, t("search.bills_advanced_search"), {controller: :bills, action: :searches, authors: @congressman.name}
-      %i.fa.fa-long-arrow-right
+    %div
+      %h3
+        = t('congressmen.last_initiatives')
+        = render partial: "bill", collection: @bills
+        - if ! @bills.blank?
+          = link_to t("search.bills_advanced_search"), {controller: :bills, action: :searches, authors: @congressman.name}
+          %i.fa.fa-long-arrow-right
+        - else
+          %div.alert.alert-info
+            = sprintf('Próximamente aquí se mostrará las iniciativas de %s.', @congressman.name)
 
     - if ! @message.nil?
       %div.special-box
@@ -133,13 +138,13 @@
           = sprintf( t('congressmen.askthem_responses'), @congressman.name  )
 
 
-    %div.votes.table-responsive
+    %div.votes
       %h3
         = t('congressmen.votes')
       %div.alert.alert-info
         = sprintf('Próximamente aquí se mostrará la postura de %s en las diferentes votaciones.', @congressman.name)
 
-    %div.intervencions.table-responsive
+    %div.intervencions
       %h3
         = t('congressmen.last_interventions')
       %div.alert.alert-info
