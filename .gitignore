@@ -33,3 +33,4 @@ db/schema.rb
 .watsonrc
 .ruby-version
 /config/newrelic.yml
+/public/assets

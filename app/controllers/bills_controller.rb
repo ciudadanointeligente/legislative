@@ -74,16 +74,6 @@ class BillsController < ApplicationController
   end
 
   def searches
-    response = Net::HTTP.get_response(ENV['popit_url'], '/api/v0.1/persons/')
-    json_response = JSON.parse(response.body)
-    authors_detail_list = json_response['result']
-
-    @authors_list = []
-    @persons_query = []
-    authors_detail_list.map do |author|
-      @authors_list.push(author['name'])
-    end
-
     if !params.nil? && params.length > 3 # default have 3 keys {'action'=>'index', 'controller'=>'searchs', "locale"=>"xx"}
       @keywords = String.new
       params.each do |param|
@@ -91,23 +81,8 @@ class BillsController < ApplicationController
          @keywords << param[0] + '=' + param[1] + '&'
         end
       end
-      if params['authors'] != nil
-        @authors_list = []
-        authors_detail_list.map do |author|
-          if params['authors'] == author['name']
-            @persons_query.push(author)
-          end
-        end
-      end
-      
-      # defaul limit, when a user make a search for a bills or congressmen
-      limit = '3'
-      # if a user make a specific search the limit change to, in this case, 30
-      if params[:bills] || params[:congressmen]
-        limit = '30'
-      end
 
-      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?#{URI.encode(@keywords)}&per_page="+limit, 'application/json')
+      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?#{URI.encode(@keywords)}", 'application/json')
     else
       @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?", 'application/json')
     end

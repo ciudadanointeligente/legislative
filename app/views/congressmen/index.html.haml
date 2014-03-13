@@ -19,19 +19,25 @@
           %i.fa.fa-twitter 
           = t("congressmen.tw_share")
 
-
 %div.row
   %h2
     = t('congressmen.title')
   %div.col-md-3.aside
     = render :partial => "filter_search_form"
   %div.col-md-9.whitewithaside
-    - @congressmen.persons.each do | congressman |
+    - @congressmen.each do | congressman |
 
       %div.row.result
         %div.col-md-1
           - if ! congressman.images.blank?
-            %img.img-circle.img-responsive{:src=>congressman.images[0].url}
+            - fantasy_name = Rack::Utils.escape(I18n.transliterate(congressman.name.gsub("'", "")))
+            - if ! File.exist?('app/assets/images/'+fantasy_name+'.jpg')
+              - image = Magick::ImageList.new
+              - url_image = open(congressman.images[0].url)
+              - image.from_blob(url_image.read)
+              - crop = image.crop(15,15,160,150)
+              - crop.write('app/assets/images/'+fantasy_name+'.jpg')
+            = image_tag(fantasy_name+'.jpg', class: "img-circle img-responsive")
           - else
             = image_tag('default-profile.png', class: "img-circle img-responsive")
         %div.col-md-10
@@ -49,14 +55,15 @@
               = t('congressmen.askthem')
             %i.fa.fa-envelope-o.hidden-xs{title: t('congressmen.askthem')}
 
-    %div.pull-left
-      - if ! @congressmen.prev_url.blank?
-        = link_to congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default' do
-          %i.fa.fa-long-arrow-left
-          = t('pagination.previous')
-    %div.pull-right
-      - if ! @congressmen.next_url.blank?
-        - if @congressmen.has_more
-          = link_to congressmen_path + '/?page=' + (@congressmen.page + 1).to_s, :class => 'btn btn-default' do
-            = t('pagination.next')
-            %i.fa.fa-long-arrow-right
+    / Disable pagination
+    / %div.pull-left
+    /   - if ! @congressmen.prev_url.blank?
+    /     = link_to congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default' do
+    /       %i.fa.fa-long-arrow-left
+    /       = t('pagination.previous')
+    / %div.pull-right
+    /   - if ! @congressmen.next_url.blank?
+    /     - if @congressmen.has_more
+    /       = link_to congressmen_path + '/?page=' + (@congressmen.page + 1).to_s, :class => 'btn btn-default' do
+    /         = t('pagination.next')
+    /         %i.fa.fa-long-arrow-right
