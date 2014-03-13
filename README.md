@@ -39,6 +39,11 @@ Debian / Ubuntu
 apt-get install imagemagick
 </pre>
 
+for Ubuntu 13.04 also install
+<pre>
+apt-get install libmagickwand-dev
+</pre>
+
 ## Features
 
 ##### [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/)

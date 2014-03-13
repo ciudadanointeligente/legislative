@@ -10,17 +10,17 @@
   %div.col-md-4
     %ul.list-inline.pull-right
       %li
-        = link_to communications_path, class: "btn-warning btn-xs" do
-          %i.fa.fa-pencil
+        = link_to communications_path, class: "btn btn-warning btn-xs" do
+          %i.fa.fa-envelope-o
           = t('congressmen.askthem')
       %li
         - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
-        %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+        %a.btn.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
           %i.fa.fa-facebook 
           = t("congressmen.fb_share")
       %li
         - url = 'https://twitter.com/share?url='+request.original_url+'&via=ciudadanoi&hashtags='+ENV['twitter_tags']+'&text=Revisa el perfil de '+@el_twitter+' en '
-        %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+        %a.btn.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
           %i.fa.fa-twitter 
           = t("congressmen.tw_share")
 
@@ -115,46 +115,15 @@
     /  = t('congressmen.bio')
 
   %div.col-md-9.whitewithaside
-    %h3
+    %h4
       = t('congressmen.last_initiatives')
-    %div.alert.alert-warning
-      = sprintf('%s aún no tiene iniciativas', @congressman.name)
-    / %div.table-responsive
-    /   %table.table
-    /     %tr
-    /       %td
-    /         %img{ 'src' => 'http://placehold.it/35x58' }
-    /       %td
-    /         %h5
-    /           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, hic velit repudiandae modi ab provident quibusdam laudantium maxime deserunt asperiores debitis ducimus alias placeat accusamus sit sapiente in eos delectus.
-    /         %p
-    /           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
-    /         %p
-    /           %a{ 'href' => '#' }
-    /             = t('congressmen.view_project')
-    /     %tr
-    /       %td
-    /         %img{ 'src' => 'http://placehold.it/35x58' }
-    /       %td
-    /         %h5
-    /           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, hic velit repudiandae modi ab provident quibusdam laudantium maxime deserunt asperiores debitis ducimus alias placeat accusamus sit sapiente in eos delectus.
-    /         %p
-    /           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
-    /         %p
-    /           %a{ 'href' => '#' }
-    /             = t('congressmen.view_project')
-    /     %tr
-    /       %td
-    /         %img{ 'src' => 'http://placehold.it/35x58' }
-    /       %td
-    /         %h5
-    /           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, hic velit repudiandae modi ab provident quibusdam laudantium maxime deserunt asperiores debitis ducimus alias placeat accusamus sit sapiente in eos delectus.
-    /         %p
-    /           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, placeat, quos, ab eius maxime voluptatibus iure sit ipsam expedita eveniet atque quo voluptas modi eligendi tempore harum aperiam excepturi non.
-    /         %p
-    /           %a{ 'href' => '#' }
-    /             = t('congressmen.view_project')
-
+    - if !@bills.blank?
+      = render partial: "bills/bill", collection: @bills
+      = link_to_if @bills, t("search.bills_advanced_search"), {controller: :bills, action: :searches, authors: @congressman.name}
+      %i.fa.fa-long-arrow-right
+    - else
+      %div.alert.alert-warning
+        = sprintf('%s aún no tiene iniciativas', @congressman.name)
     - if ! @message.nil?
       %div.special-box
         = t('Última pregunta')
@@ -168,70 +137,13 @@
 
 
     %div.votes.table-responsive
-      %h3
+      %h4
         = t('congressmen.votes')
       %div.alert.alert-info
         = sprintf('Próximamente aquí se mostrará la postura de %s en las diferentes votaciones.', @congressman.name)
-      / %table.table
-      /   %tr
-      /     %td
-      /       %img{ 'src' => 'http://placehold.it/35x58' }
-      /     %td
-      /       %p
-      /         %strong
-      /           A FAVOR
-      /         %span.date
-      /           24 de Octubre, 2013
-      /       %p
-      /         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
-      /   %tr
-      /     %td
-      /       %img{ 'src' => 'http://placehold.it/35x58' }
-      /     %td
-      /       %p
-      /         %strong
-      /           A FAVOR
-      /         %span.date
-      /           24 de Octubre, 2013
-      /       %p
-      /         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
 
     %div.intervencions.table-responsive
-      %h3
+      %h4
         = t('congressmen.last_interventions')
       %div.alert.alert-info
         = sprintf('Próximamente aquí se mostraran las intervenciones de %s en las diferentes sesiones.', @congressman.name)
-      / %table.table
-      /   %tr
-      /     %td
-      /       %img{ 'src' => 'http://placehold.it/35x58' }
-      /     %td
-      /       %p
-      /         %strong
-      /           SESIÓN 84
-      /         %span.date
-      /           24 de Octubre, 2013
-      /       %p
-      /         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
-      /   %tr
-      /     %td
-      /       %img{ 'src' => 'http://placehold.it/35x58' }
-      /     %td
-      /       %p
-      /         %strong
-      /           SESIÓN 84
-      /         %span.date
-      /           24 de Octubre, 2013
-      /       %p
-      /         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
-      /   %tr
-      /     %td
-      /       %img{ 'src' => 'http://placehold.it/35x58' }
-      /     %td
-      /       %p
-      /         %strong
-      /           SESIÓN 84
-      /         %span.date
-      /           24 de Octubre, 2013
-      /       %p
-      /         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reiciendis sunt maiores laudantium eos facere vero. Possimus, odio, nesciunt, facilis, est nostrum temporibus tempora repellendus perferendis enim quisquam voluptatibus vitae.
