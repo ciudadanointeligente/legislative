@@ -94,7 +94,11 @@ strong {
 
 .btn-xs {
   height: 25px;
-  padding: 4px;
+  padding: 2px 4px 4px;
+  font-size: 12px;
+  text-transform: none;
+  font-weight: 400;
+  font-family: 'Lato', Helvetica, sans-serif;
 }
 
 
@@ -155,7 +159,6 @@ strong {
   border-color: transparent;
   border-bottom: 2px solid #ce7a3c;
   border-radius: 0px;
-  height: 50px;
 }
 
 .btn-warning:hover {
