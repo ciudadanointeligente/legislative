@@ -35,7 +35,12 @@
 %div.row
   %div.col-md-3.aside.aside-congressman
     - if ! @congressman.images.blank?
-      %img.img-responsive{:src=>@congressman.images[0].url}
+      - begin
+        - timeout(2) do
+          - url_image = open(@congressman.images[0].url)
+          %img.img-responsive{:src=>@congressman.images[0].url}
+      - rescue Timeout::Error
+        = image_tag('default-profile.png', class: "img-responsive")
     - else
       = image_tag('default-profile.png', class: "img-responsive")
     
