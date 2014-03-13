@@ -117,8 +117,11 @@
   %div.col-md-9.whitewithaside
     %h3
       = t('congressmen.last_initiatives')
-    %div.alert.alert-warning
-      = sprintf('%s aún no tiene iniciativas', @congressman.name)
+      = render partial: "bill", collection: @bills
+      = link_to_if @bills, t("search.bills_advanced_search"), {controller: :bills, action: :searches, authors: @congressman.name}
+      %i.fa.fa-long-arrow-right
+    /%div.alert.alert-warning
+    /  = sprintf('%s aún no tiene iniciativas', @congressman.name)
     / %div.table-responsive
     /   %table.table
     /     %tr

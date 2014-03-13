@@ -1,4 +1,6 @@
 require 'popit_representers/models/organization_collection'
+require 'billit_representers/models/bill_page'
+require './app/models/bill'
 require 'RMagick'
 require "open-uri"
 
@@ -27,7 +29,7 @@ class CongressmenController < ApplicationController
     @congressman = PopitPerson.new
     @congressman.get ENV['popit_persons']+params[:id]+'?include_root=false', 'application/json'
 
-    #@bills = Billit::BillCollectionPage.get ENV['billit_url']+'search.json?authors='+URI::escape(@congressman.name), 'application/json'    
+    @bills = (Billit::BillCollectionPage.get ENV['billit_url']+'search.json?authors='+URI::escape(@congressman.name)+ '&per_page=3', 'application/json').bills
 
     @organizations = Popit::OrganizationCollection.new
     @organizations.get ENV['popit_organizations'], 'application/json'
