@@ -974,3 +974,9 @@ svg.graph .labels.y-labels {
     text-transform: none;
   }
 }
+
+@media (min-width: 176px) {
+  .boxdisplay {
+    margin-bottom: 20px;
+  }
+}
