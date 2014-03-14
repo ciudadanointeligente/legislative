@@ -31,6 +31,9 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
+# bcrypt-ruby is a Ruby binding for the OpenBSD bcrypt() password hashing algorithm
+gem 'bcrypt-ruby', :require => 'bcrypt'
+
 # An interface to the ImageMagick and GraphicsMagick image processing libraries
 gem 'rmagick'
 
