@@ -126,7 +126,8 @@ en:
     modal_documents: Documents
     modal_directives: Directives
     modal_revision: Revisions
-    subscribe: Subscribe
+    bill_subscribe: Suscríbete
+    subscribe: Suscríbete a este proyecto
     fb_share: Share
     tw_share: Twitt
     tw_text: Check the bulletin %s in congresoabierto.cl
