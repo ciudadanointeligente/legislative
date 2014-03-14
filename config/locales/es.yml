@@ -233,7 +233,7 @@ es:
     title_search: Búsqueda de Congresistas
     represent: 'Representa:'
     search_for: 'Buscar por:'
-    placeholder_search_for: Ingresa una palabra clave
+    placeholder_search_for: 'Nombre, comuna o region'
     askthem: Preguntales
     district: 'Distrito: '
     region: 'Región: '
