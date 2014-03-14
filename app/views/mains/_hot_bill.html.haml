@@ -1,6 +1,6 @@
 %div.col-md-3
   %div.boxdisplay
-    %p.bill-id 
+    %p.bill-id.light 
       = hot_bill.uid
     %h5.bill-title
       = link_to truncate(hot_bill.title, :length => 160), t('routes.bills') + '/' + hot_bill.uid
