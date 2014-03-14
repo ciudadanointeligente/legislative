@@ -17,7 +17,7 @@ es:
     welcome: Bienvenido(a)
     bills: Proyectos de ley
   main:
-    search_placeholder: Ingresa tu búsqueda
+    search_placeholder: Ingresa un proyecto de ley o congresista
     username: Nombre de usuario
     password: Contraseña
     stay_signed: Mantenerme conectado
@@ -234,7 +234,7 @@ es:
     title_search: Búsqueda de Congresistas
     represent: 'Representa:'
     search_for: 'Buscar por:'
-    placeholder_search_for: Ingresa una palabra clave
+    placeholder_search_for: 'Nombre, comuna o region'
     askthem: Preguntales
     district: 'Distrito: '
     region: 'Región: '

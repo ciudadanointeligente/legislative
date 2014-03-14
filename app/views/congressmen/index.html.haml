@@ -49,10 +49,11 @@
             = link_to congressman.name, congressman_path(congressman.id)
           - if ! congressman.title.blank?
             = congressman.title
-          %p
-            %span.light
-              = t('congressmen.represent')
-            = congressman.represent[0].district
+          - if ! congressman.represent[0].region.blank?
+            %p
+              %span.light
+                = t('congressmen.represent')
+              = congressman.represent[0].region
         %div.col-md-1
           = link_to url_for(controller: "communications", action: "index", id: congressman.id) do
             %span.visible-xs

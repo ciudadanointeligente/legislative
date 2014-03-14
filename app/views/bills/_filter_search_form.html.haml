@@ -7,12 +7,12 @@
     = label_tag :bill_id, t('search.bulletin')
     = text_field_tag :bill_id, params[:bill_id], :class => 'form-control', :placeholder => t('search.placeholder_bulletin'), :onfocus => "ga('send','paperwork','focus_bulletin')"
 
-  /%div.form-group
-  /  = label_tag :authors, t('search.author')
-  /  - if params[:authors] == nil
-  /    - params[:authors] = ""
-  /  %div{"ng-controller" => "TypeaheadCtrl"}
-  /    %input{"type" => "text", "ng-model" => "selected_author", "typeahead" => "author for author in authors | filter:$viewValue | limitTo:8", "class" => "form-control", "id" => "authors", "name" => "authors", "ng-init" => "selected_author='"+params[:authors]+"'", "placeholder" => t('search.placeholder_author'), :autocomplete=>"off"}
+  %div.form-group
+    = label_tag :authors, t('search.author')
+    - if params[:authors] == nil
+      - params[:authors] = ""
+    %div
+      %input{"type" => "text", "value" => params[:authors], "class" => "form-control", "id" => "authors", "name" => "authors", "placeholder" => t('search.placeholder_author'), :autocomplete=>"off"}
 
   %div.form-group
     = label_tag :stage, t('search.stage')
@@ -23,12 +23,13 @@
         - @stages.each do |stage|
           %option{:value => stage, selected: params[:stage] == stage}= stage
 
-  %div.form-group
-    = label_tag :initial_chamber, t('search.bill_type')
-    %select{:name => "status", :class => "form-control", :onfocus => "ga('send','paperwork','focus_type')"}
-      %option{:value => "", selected: params[:initial_chamber] == ""}= t 'search.all_the_types'
-      %option{:value => "Publicado", selected: params[:initial_chamber] == "Publicado"}= 'Ley'
-      %option{:value => "En tramitación", selected: params[:initial_chamber] == "En tramitación"}= 'Proyecto de ley'
+  /
+    %div.form-group
+      = label_tag :initial_chamber, t('search.bill_type')
+      %select{:name => "status", :class => "form-control", :onfocus => "ga('send','paperwork','focus_type')"}
+        %option{:value => "", selected: params[:initial_chamber] == ""}= t 'search.all_the_types'
+        %option{:value => "Publicado", selected: params[:initial_chamber] == "Publicado"}= 'Ley'
+        %option{:value => "En tramitación", selected: params[:initial_chamber] == "En tramitación"}= 'Proyecto de ley'
 
   %div.form-group
     = label_tag :initial_chamber, t('search.initial_chamber')
