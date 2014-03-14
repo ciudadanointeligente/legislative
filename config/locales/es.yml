@@ -126,7 +126,8 @@ es:
     modal_documents: Oficios
     modal_directives: Indicaciones
     modal_revision: Comparados
-    subscribe: Suscribir
+    bill_subscribe: Suscríbete
+    subscribe: Suscríbete a este proyecto
     fb_share: Comparte
     tw_share: Twittea
     tw_text: Revisa el boletín %s en congresoabierto.cl
@@ -230,7 +231,7 @@ es:
     tw_share: Twittea
     title: Congresistas
     title_search: Búsqueda de Congresistas
-    represent: 'Lugar que representa:'
+    represent: 'Representa:'
     search_for: 'Buscar por:'
     placeholder_search_for: Ingresa una palabra clave
     askthem: Preguntales
@@ -249,6 +250,8 @@ es:
     askthem_responses: 'Preguntas hechas a %s'
     votes: Votaciones
     last_interventions: Últimas intervenciones
+    birth_date: 'Fecha nacimiento: '
+    years: '%s (%s años)'
   routes:
     bills: proyectos
     bills_search: busquedas_de_proyectos

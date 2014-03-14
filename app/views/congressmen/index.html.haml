@@ -14,7 +14,7 @@
           = t("congressmen.fb_share")
 
       %li
-        - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags='+ENV['twitter_tags']
+        - url = 'https://twitter.com/share?url='+request.original_url+'&via=ciudadanoi&hashtags='+ENV['twitter_tags']
         %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
           %i.fa.fa-twitter 
           = t("congressmen.tw_share")
@@ -33,7 +33,11 @@
             - fantasy_name = Rack::Utils.escape(I18n.transliterate(congressman.name.gsub("'", "")))
             - if ! File.exist?('app/assets/images/'+fantasy_name+'.jpg')
               - image = Magick::ImageList.new
-              - url_image = open(congressman.images[0].url)
+              - begin
+                - timeout(2) do
+                  - url_image = open(congressman.images[0].url)
+              - rescue Timeout::Error
+                - url_image = open('app/assets/images/default-profile.png')
               - image.from_blob(url_image.read)
               - crop = image.crop(15,15,160,150)
               - crop.write('app/assets/images/'+fantasy_name+'.jpg')

@@ -44,6 +44,23 @@ for Ubuntu 13.04 also install
 apt-get install libmagickwand-dev
 </pre>
 
+for OSX
+<pre>
+brew update
+</pre>
+<pre>
+brew uninstall ImageMagick
+</pre>
+<pre>
+brew install ImageMagick
+</pre>
+<pre>
+gem uninstall rmagick
+</pre>
+<pre>
+gem install rmagick
+</pre>
+
 ## Features
 
 ##### [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/)

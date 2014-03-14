@@ -35,17 +35,27 @@
 %div.row
   %div.col-md-3.aside.aside-congressman
     - if ! @congressman.images.blank?
-      %img.img-responsive{:src=>@congressman.images[0].url}
+      - begin
+        - timeout(2) do
+          - url_image = open(@congressman.images[0].url)
+          %img.img-responsive{:src=>@congressman.images[0].url}
+      - rescue Timeout::Error
+        = image_tag('default-profile.png', class: "img-responsive")
     - else
       = image_tag('default-profile.png', class: "img-responsive")
     
+    - if ! @congressman.birth_date.blank?
+      %p
+        %span.light
+          = t('congressmen.birth_date')
+        - date_birth = localize @congressman.birth_date.to_date
+        = sprintf( t('congressmen.years'), date_birth, age(@congressman.birth_date.to_date))
+
     - if ! @congressman.parliamentarian_period.blank?
       %p
         %span.light
           = t('congressmen.period')
-        - @congressman.parliamentarian_period.each do | p |
-          - if ! p.date.blank?
-            = p.date
+        = @congressman.parliamentarian_period.map {|p| p.date}.join(', ')
 
     - if ! @congressman.represent.blank?
       %p
@@ -110,16 +120,18 @@
               %i{:class=>'fa '+icon}
               = link.note.capitalize
               %br/
-        
-    /%h5
-    /  = t('congressmen.bio')
+
 
   %div.col-md-9.whitewithaside
     %h4
       = t('congressmen.last_initiatives')
-      = render partial: "bill", collection: @bills
+    - if !@bills.blank?
+      = render partial: "bills/bill", collection: @bills
       = link_to_if @bills, t("search.bills_advanced_search"), {controller: :bills, action: :searches, authors: @congressman.name}
       %i.fa.fa-long-arrow-right
+    - else
+      %div.alert.alert-warning
+        = sprintf('%s aún no tiene iniciativas', @congressman.name)
 
     - if ! @message.nil?
       %div.special-box
@@ -133,13 +145,13 @@
           = sprintf( t('congressmen.askthem_responses'), @congressman.name  )
 
 
-    %div.votes.table-responsive
+    %div.votes
       %h4
         = t('congressmen.votes')
       %div.alert.alert-info
         = sprintf('Próximamente aquí se mostrará la postura de %s en las diferentes votaciones.', @congressman.name)
 
-    %div.intervencions.table-responsive
+    %div.intervencions
       %h4
         = t('congressmen.last_interventions')
       %div.alert.alert-info
