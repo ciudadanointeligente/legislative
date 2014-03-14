@@ -250,7 +250,7 @@ es:
     askthem_responses: 'Preguntas hechas a %s'
     votes: Votaciones
     last_interventions: Últimas intervenciones
-    age: 'Edad: '
+    birth_date: 'Fecha nacimiento: '
     years: '%s (%s años)'
   routes:
     bills: proyectos
