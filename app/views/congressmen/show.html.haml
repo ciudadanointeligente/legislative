@@ -47,16 +47,15 @@
     - if ! @congressman.birth_date.blank?
       %p
         %span.light
-          = t('congressmen.age')
-        = sprintf( t('congressmen.years'), @congressman.birth_date, age(@congressman.birth_date.to_date))
+          = t('congressmen.birth_date')
+        - date_birth = localize @congressman.birth_date.to_date
+        = sprintf( t('congressmen.years'), date_birth, age(@congressman.birth_date.to_date))
 
     - if ! @congressman.parliamentarian_period.blank?
       %p
         %span.light
           = t('congressmen.period')
-        - @congressman.parliamentarian_period.each do | p |
-          - if ! p.date.blank?
-            = p.date
+        = @congressman.parliamentarian_period.map {|p| p.date}.join(', ')
 
     - if ! @congressman.represent.blank?
       %p
