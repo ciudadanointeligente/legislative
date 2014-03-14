@@ -31,5 +31,5 @@
       /    etiqueta2
 
     %div.col-md-1
-      = link_to (new_user_subscription_path(:bill => bill.uid)) do
+      = link_to new_user_subscription_path(:bill => bill.uid),{title: t('bill.subscribe')} do
         %i.fa.fa-star-o
