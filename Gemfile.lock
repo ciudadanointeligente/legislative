@@ -268,6 +268,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   better_errors
   billit_representers (= 0.8.9)
   binding_of_caller
