@@ -46,6 +46,7 @@ en:
     session: Session
     legislature: Legislature
     view_previous_agendas: View previous agendas
+    hot_projects: Hot projects
   search:
     search_title: Search
     search_for: 'Search for:'
