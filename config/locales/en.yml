@@ -249,6 +249,8 @@ en:
     askthem_responses: 'Questions for %s'
     votes: Votes
     last_interventions: Last interventions
+    age: 'Age: '
+    years: '%s (%s years)'
   routes:
     bills: bills
     bills_search: bills_search
