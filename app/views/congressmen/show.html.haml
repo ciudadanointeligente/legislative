@@ -44,6 +44,12 @@
     - else
       = image_tag('default-profile.png', class: "img-responsive")
     
+    - if ! @congressman.birth_date.blank?
+      %p
+        %span.light
+          = t('congressmen.age')
+        = sprintf( t('congressmen.years'), @congressman.birth_date, age(@congressman.birth_date.to_date))
+
     - if ! @congressman.parliamentarian_period.blank?
       %p
         %span.light
