@@ -17,7 +17,7 @@ es:
     welcome: Bienvenido(a)
     bills: Proyectos de ley
   main:
-    search_placeholder: Ingresa tu búsqueda
+    search_placeholder: Ingresa un proyecto de ley o congresista
     username: Nombre de usuario
     password: Contraseña
     stay_signed: Mantenerme conectado
