@@ -443,6 +443,8 @@ strong {
   text-transform: uppercase;
 }
 
+
+
 /*hot-space*/
 
 .hot-space {
@@ -914,6 +916,9 @@ svg.graph .labels.y-labels {
   color: #A6A691;
   /*padding: 30px 0;
   margin-top: 60px;*/
+  height: 150px;
+  padding-top: 45px;
+  margin-top: 100px;
 }
 
 #footer a {
