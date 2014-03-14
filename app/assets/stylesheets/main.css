@@ -454,6 +454,11 @@ strong {
   margin-bottom: 20px;
 }
 
+.hidden-xs.subscription {
+    float: right;
+    margin-top: -31px;
+}
+
 .hot-space a {
   color: #ea6a56;
 }
@@ -928,6 +933,10 @@ svg.graph .labels.y-labels {
 
 #footer ul {
   list-style: none;
+}
+
+.arregloFotter {
+    height: 110px;
 }
 
 /* SCREEN */
