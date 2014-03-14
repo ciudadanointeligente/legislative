@@ -23,6 +23,7 @@ body {
   color: #67675a;
   /*padding-top: 80px;*/
   margin-bottom: 70px;
+  margin-top: 80px;
 }
 
 .navbar-inverse {
@@ -443,12 +444,19 @@ strong {
   text-transform: uppercase;
 }
 
+
+
 /*hot-space*/
 
 .hot-space {
   background: #ea6a56;
   padding: 10px 0px 35px;
   margin-bottom: 20px;
+}
+
+.hidden-xs.subscription {
+    float: right;
+    margin-top: -31px;
 }
 
 .hot-space a {
@@ -914,6 +922,9 @@ svg.graph .labels.y-labels {
   color: #A6A691;
   /*padding: 30px 0;
   margin-top: 60px;*/
+  height: 150px;
+  padding-top: 45px;
+  margin-top: 100px;
 }
 
 #footer a {
@@ -922,6 +933,10 @@ svg.graph .labels.y-labels {
 
 #footer ul {
   list-style: none;
+}
+
+.arregloFotter {
+    height: 110px;
 }
 
 /* SCREEN */
@@ -978,5 +993,11 @@ svg.graph .labels.y-labels {
 @media (max-width: 768px) {
   h5 {
     text-transform: none;
+  }
+}
+
+@media (min-width: 176px) {
+  .boxdisplay {
+    margin-bottom: 20px;
   }
 }
