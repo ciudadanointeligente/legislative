@@ -2,12 +2,12 @@
  * They will automatically be included in application.css.
  * You can use Sass (SCSS) here: http://sass-lang.com */
 
-.center
-	text-align: center
-.tab-content
-	padding-top: 10px
-.search_separator
-	border-left: 1px solid #ccc
+.center {
+  text-align: center}
+.tab-content{
+  padding-top: 10px}
+.search_separator{
+  border-left: 1px solid #ccc}
 
 /*General*/
 
