@@ -36,99 +36,70 @@
       %div.col-md-11
         %h4
           = @bill.title
-        -if !@bill.creation_date.blank?
-          %p
+        %p
+          -if !@bill.creation_date.blank?
             %span.light
               = t('bill.creation_date') + ":"
             = localize @bill.creation_date.to_date
-        -if !@bill.source.blank?
-          %p
+            %br/
+          -if !@bill.source.blank?
             %span.light
               = t('bill.source') + ":"
             = @bill.source
-        -if !@bill.initial_chamber.blank?
-          %p
+            %br/
+          -if !@bill.initial_chamber.blank?
             %span.light
               = t('bill.initial_chamber') + ":"
             = @bill.initial_chamber
-        -if !@bill.current_priority.blank?
-          %p
+            %br/
+          -if !@bill.current_priority.blank?
             %span.light
               = t('bill.current_priority') + ":"
             = @bill.current_priority
-        -if !@bill.stage.blank?
-          %p
+            %br/
+          -if !@bill.stage.blank?
             %span.light
               = t('bill.stage') + ":"
             = @bill.stage
-        / -if !@bill.sub_stage.blank? && !@bill.sub_stage =~ /\//
-        /   %p
-        /     %span.light
-        /       = t('bill.sub_stage') + ":"
-        /     = @bill.sub_stage
-        -if !@bill.status.blank?
-          %p
+            %br/
+          -if !@bill.status.blank?
             %span.light
               = t('bill.status') + ":"
             = @bill.status
-        / -if !@bill.resulting_document.blank?
-        /   %p
-        /     %span.light
-        /       = t('bill.resulting_document') + ":"
-        /     = @bill.resulting_document
-        /-if !@bill.law_id.blank?
-        /  %p
-        /    %span.light
-        /      = t('bill.law_id')
-        /    = @bill.law_id
-        / -if !@bill.merged_bills.blank?
-        /   %p
-        /     %span.light
-        /       = t('bill.merged_bills') + ":"
-        /     = @bill.merged_bills
-        / -if !@bill.subject_areas.blank?
-        /   %p
-        /     %span.light
-        /       = t('bill.subject_areas') + ":"
-        /     = @bill.subject_areas.join(", ")
-        -if !@bill.publish_date.blank?
-          %p
+            %br/
+          -if !@bill.publish_date.blank?
             %span.light
               = t('bill.publish_date') + ":"
             = localize @bill.publish_date.to_date
-        -if !@bill.abstract.blank?
-          %p
+            %br/
+          -if !@bill.abstract.blank?
             %span.light
               = t('bill.abstract') + ":"
             = @bill.abstract
-        -if !@bill.tags.blank?
-          %p
+            %br/
+          -if !@bill.tags.blank?
             %span.light
               = t('bill.tags') + ":"
             = @bill.tags.join(',')
-        
-        - if !@bill.authors.blank?
-          %p
+            %br/
+          -if !@bill.authors.blank?
             = t('bill.authors') + ':'
             - authors = @bill.authors.map { |author| a = author.split(','); a[1].strip + ' ' + a[0].strip  }
             %span
               = authors.join(', ')
-
-        - if !@bill.tags.blank?
-          %p
+            %br/
+          -if !@bill.tags.blank?
             %ul.list-inline
               - if !@bill.tags.blank?
                 - @bill.tags.each do |tag|
                   %li
                     %span.label.label-default= tag
-        
-        - if ! @bill.bill_draft_link.blank?
-          %p
+            %br/
+          -if ! @bill.bill_draft_link.blank?
             %a{'href'=> @bill.bill_draft_link}
               = t('bill.download_project')
               %i.fa.fa-download
-        - if ! @bill.law_web_link.blank?
-          %p
+          -if ! @bill.law_web_link.blank?
             %a{'href'=> @bill.law_web_link, 'target'=>'_blank'}
               = t('bill.view_law')
               %i.fa.fa-eye
