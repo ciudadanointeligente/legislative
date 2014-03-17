@@ -7,6 +7,7 @@
 
 # Ignore environment variables config
 /config/private_legislative.yml
+/config/database.yml
 
 # Ignore bundler config
 /.bundle
