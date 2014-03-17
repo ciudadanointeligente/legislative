@@ -730,15 +730,15 @@ h4 span.nostyle {
   color: #FFF;
 }
 
-#timeline div.resume.col-md-11 {
+#timeline div.bill_header.col-md-11 {
   margin-bottom: 40px;
 }
 
-.resume h5 {
+.bill_header h5 {
   margin-bottom: 0;
 }
 
-.resume p {
+.bill_header p {
   margin: 0 0 0px;
 }
 

@@ -15,7 +15,7 @@ class BillsController < ApplicationController
   # GET /bills/1
   # GET /bills/1.json
   def show
-    @condition_resume_bill = true
+    @condition_bill_header = true
     @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
     @popit_url = 'http://' + ENV['popit_url'] + '/persons/'
 
