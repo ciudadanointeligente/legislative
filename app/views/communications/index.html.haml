@@ -34,7 +34,7 @@
               %div.form-group.tab-content
                 %label{:for=>"author_name"}
                   = t('communication.choose_congressmen')
-                %select.form-control{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => t('communication.choose_congressmen')}
+                %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => t('communication.choose_congressmen')}
                   - @congressmen.persons.each do |congressmen|
                     %option{:value => congressmen.popit_api_uri}
                       =congressmen.name
