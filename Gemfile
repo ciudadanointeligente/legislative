@@ -1,59 +1,80 @@
 source 'https://rubygems.org'
 
 ruby '2.0.0'
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-gem 'journey', :git => 'git://github.com/rails/journey.git'
-gem 'arel'
-gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerecord-deprecated_finders.git'
+# Use Devise for user authentication
+gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :ref => '49aebde'
 
-
-# ORM
+# Database
 #gem 'pg', :group => :production
-
-group :development, :test do
-  gem 'sqlite3'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'coveralls', require: false
-end
-
-group :test do
-  gem 'webmock'
-end
-
-gem 'json'
-
-# For using protected attributes
-gem 'protected_attributes'
-
-# Server
-gem 'unicorn'
+gem 'sqlite3'
 
 # Template Engine
-gem 'haml-rails'
+gem 'haml'
+gem 'haml-rails', :group => :development
 
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.0'
+
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
+
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
+
+# bcrypt-ruby is a Ruby binding for the OpenBSD bcrypt() password hashing algorithm
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sprockets-rails'
-  gem 'sass-rails', :git => 'git://github.com/rails/sass-rails.git'
-  gem 'coffee-rails', :git => 'git://github.com/rails/coffee-rails.git'
+# An interface to the ImageMagick and GraphicsMagick image processing libraries
+gem 'rmagick'
 
-  # gem 'therubyracer', platforms: :ruby
+group :development do
+  # Using thin for development server
+  gem 'thin'
 
-  gem 'uglifier', '1.0.3'
+  # Replaces default rails error page with a much better and more useful error page
+  gem 'better_errors'
+
+  # Turns off the rails asset pipeline log
+  gem 'quiet_assets'
+  gem 'binding_of_caller'
+  gem 'newrelic_rpm'
 end
-
-# POPLUS integration
-gem 'roar', '0.12.0'
-gem 'roar-rails', '0.1.4'
-gem 'faraday', '0.8.1'
-gem 'billit_representers'
 
 # Support to XLS export
 gem 'ekuseru'
 
-gem 'jquery-rails'
+# Support for localization
+gem 'rails-i18n', '~> 4.0.0'
+gem 'route_translator'
+
+# POPLUS integration
+gem 'roar', '0.11.19'
+gem 'roar-rails', '0.1.0'
+gem 'faraday', '0.8.1'
+gem 'billit_representers', '0.8.9'
+gem 'popit_representers', '0.0.15'
+gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'coveralls', require: false
+  gem 'guard-bundler'
+  gem 'guard-rails'
+  gem 'guard-rspec'
+end
+
+gem 'httparty'
+gem 'json'
+gem 'protected_attributes'
+gem 'rake', '10.1.1'

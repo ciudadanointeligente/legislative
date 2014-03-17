@@ -1,5 +1,0 @@
-%h1= t 'search.basic_search'
-= form_tag('/search', :method => 'get') do
-  = label_tag :q, t('search.search_for')
-  = text_field_tag :q, params[:q]
-  = submit_tag t 'search.search'

@@ -1,0 +1,68 @@
+%div.hero-space-bill
+  %div.container
+    %div.row
+      %div.col-md-9
+        %ol.breadcrumb
+          %li
+            = link_to t('layout.home'), root_path
+          %li
+            = link_to t('bill.breadcrumb_bill'), searches_bills_path
+          %li.active
+            = @bill.title[0..30] + '...'
+      
+      %div.col-md-3
+        %ul.list-inline.action-btn
+          %li
+            = link_to (new_user_subscription_path(:bill => params[:id])), class: 'btn-warning' do
+              %i.fa.fa-star-o
+              = t('bill.bill_subscribe')
+          %li
+            - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
+            %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+              %i.fa.fa-facebook 
+              = t('bill.fb_share')
+          %li
+            - txt_twitter = sprintf(t('bill.tw_text'),@bill.uid)
+            - url = 'https://twitter.com/share?url='+request.original_url+'&via=ciudadanoi&hashtags='+ENV['twitter_tags']+'&text='+txt_twitter
+            %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+              %i.fa.fa-twitter 
+              = t('bill.tw_share')
+    
+    %div.row
+      %div.col-md-1.side
+        %p.light
+          = @bill.uid
+        - if ! @bill.icon.blank?
+          = image_tag("statusicon/" + @bill.icon, class:"hidden-xs", title:@bill.status.strip)
+      %div.col-md-11
+        %h4
+          = @bill.title
+        
+        %p
+          = @bill.abstract
+        
+        - if !@bill.authors.blank?
+          %p
+            = t('bill.authors') + ':'
+            - authors = @bill.authors.map { |author| a = author.split(','); a[1].strip + ' ' + a[0].strip  }
+            %span
+              = authors.join(', ')
+
+        - if !@bill.tags.blank?
+          %p
+            %ul.list-inline
+              - if !@bill.tags.blank?
+                - @bill.tags.each do |tag|
+                  %li
+                    %span.label.label-default= tag
+        
+        - if ! @bill.bill_draft_link.blank?
+          %p
+            %a{'href'=> @bill.bill_draft_link}
+              = t('bill.download_project')
+              %i.fa.fa-download
+        - if ! @bill.law_web_link.blank?
+          %p
+            %a{'href'=> @bill.law_web_link, 'target'=>'_blank'}
+              = t('bill.view_law')
+              %i.fa.fa-eye

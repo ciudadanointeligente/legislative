@@ -1,0 +1,149 @@
+%div.page-header
+  %h2 Declaraciones
+
+%section#disclosure-top
+  %div.row
+    %div.col-md-6
+      %div.row
+        %div.col-md-4
+          %a{:href=>'#' ,:'data-target'=>'#VideoSesion', :'data-toggle'=>'modal'}
+            %img.img-responsive{:src=>'http://placehold.it/200x200'}
+          %div
+            %i.fa.fa-youtube-play.fa-2x{:title=>'Ver declaración'}
+            
+        %div.col-md-8
+          %blockquote
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, soluta, minus tenetur quos magni eaque vero pariatur unde dolores sunt illum voluptate molestiae harum consequatur qui aperiam itaque architecto recusandae.
+            %small
+              García Huidobro Sanfuentes, Alejandro
+      
+
+    %div.col-md-6
+      %div.row
+        %div.col-md-4
+          %img.img-responsive{:src=>'http://placehold.it/200x200'}
+          %div
+            %i.fa.fa-twitter-square.fa-2x{:title=>'Leer declaración'}
+            
+        %div.col-md-8
+          %blockquote
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, soluta, minus tenetur quos magni eaque vero pariatur unde dolores sunt illum voluptate molestiae harum consequatur qui aperiam itaque architecto recusandae.
+            %small
+              Ruiz-Esquide Jara, Mariano
+      
+%section#disclosure-table
+  %div.page-header
+    %h4
+      Listado de declaraciones
+  %div.table-responsive
+    %table.table.table-striped
+      %thead
+        %tr
+          %th{:style=>'width: 20%'}
+            Sesion
+          %th{:style=>'width: 10%'}
+            Fecha
+          %th
+            Oradores
+          %th{:style=>'width: 15%'}
+            Media
+      %tbody
+        %tr
+          %td
+            Sesion 102, Ordinaria
+          %td
+            Miércoles 6 de Marzo de 2013
+          %td
+            Larraín F., Hernán; Espina O., Alberto; Larrain P., Carlos; Walker P., Patricio; ; Orpis B., Jaime; Zaldívar L., Andrés; Von B., Jahn Ena; Letelier M., Juan Pablo; Pérez S., Martín Lily; Girardi L., Guido; Navarro B., Alejandro; Chahuán C., Francisco; Novoa V., Jovino; Pizarro S., Jorge; Cantero O., Carlos; García R., José;
+          %td
+            %a{:href=>'#' ,:'data-target'=>'#VideoSesion', :'data-toggle'=>'modal'}
+              %img.img-responsive{:src=>'http://placehold.it/150x100'}
+        %tr
+          %td
+            Sesion 101, Especial
+          %td
+            Miércoles 6 de Marzo de 2013
+          %td
+            Larraín F., Hernán; Ministerio de Justicia; Rossi C., Fulvio; Orpis B., Jaime; Walker P., Patricio; Espina O., Alberto; Alvear V., Soledad; Pérez S., Martín Lily; Gómez U., José Antonio; Larraín F., Hernán; ;
+          %td
+            %img.img-responsive{:src=>'http://placehold.it/150x100'}
+        %tr
+          %td
+            Sesión 100, Ordinaria
+          %td
+            Martes 5 de Marzo de 2013
+          %td
+            Tuma Z., Eugenio; Horvath K., Antonio; Larraín F., Hernán; Chahuán C., Francisco; Espina O., Alberto; Walker P., Patricio; Coloma C., Juan Antonio; Zaldívar L., Andrés; Lagos W., Ricardo; Alvear V., Soledad; Gómez U., José Antonio; Ministerio de Justicia; Pérez S., Martín Lily; Allende B., Isabel; Letelier M., Juan Pablo; RuizEsquide J., Mariano; Sabag C., Hosaín; Tuma Z., Eugenio; Ministerio de Trabajo y Previsión Social; García R., José; Bianchi C., Carlos;
+          %td
+            %img.img-responsive{:src=>'http://placehold.it/150x100'}
+        %tr
+          %td
+            Sesión 99, Ordinaria
+          %td
+            Miércoles 23 de Enero de 2013
+          %td
+            Otro Orador; Chahuán C., Francisco; Zaldívar L., Andrés; Ministerio de Economía; Larraín F., Hernán; Espina O., Alberto; Tuma Z., Eugenio; Rincón G., Ximena; Sabag C., Hosaín; Orpis B., Jaime; Gómez U., José Antonio; Novoa V., Jovino; Cantero O., Carlos; RuizEsquide J., Mariano; Walker P., Ignacio; Von B., Jahn Ena; Quintana L., Jaime; Navarro B., Alejandro; Letelier M., Juan Pablo; Pérez S., Martín Lily; García H., Sanfuentes Ale; Allende B., Isabel;
+          %td
+            %img.img-responsive{:src=>'http://placehold.it/150x100'}
+
+  / video sesion
+  %div.modal.fade{:id=>"VideoSesion", :tabindex=>"-1", :role=>"dialog", :'aria-labelledby'=>"myModalLabel", :'aria-hidden'=>"true"}
+    %div.modal-dialog{:style=>'width:700px'}
+      %div.modal-content
+        %div.modal-header
+          %button.close{:type=>"button", :'data-dismiss'=>"modal", :'aria-hidden'=>"true"}
+            x
+          %h4{:id=>"myModalLabel"}
+            Sesion 102, Ordinaria
+        %div.modal-body
+          %iframe{:width=>"640", :height=>"360", :src=>"//www.youtube.com/embed/n7k8IV8TPs4", :frameborder=>"0"}
+  / fin video sesion
+
+%section#disclosure-all
+  %div.page-header
+    %h4
+      Otras declaraciones
+  %div.row
+    %div.col-md-4
+      %div.row
+        %div.col-md-4
+          %img.img-responsive{:src=>'http://placehold.it/100x100'}
+          %div
+            %i.fa.fa-youtube-play{:title=>'Ver declaración'}
+            
+        %div.col-md-8
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, totam, quos eius accusamus itaque quae fugiat ut assumenda earum officia illo hic numquam nemo aspernatur magnam.
+          %small
+            Pérez San Martín, Lily
+      
+    %div.col-md-4
+      %div.row
+        %div.col-md-4
+          %img.img-responsive{:src=>'http://placehold.it/100x100'}
+          %div
+            %i.fa.fa-twitter-square{:title=>'Leer declaración'}
+            
+        %div.col-md-8
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, totam, quos eius accusamus itaque quae fugiat ut assumenda earum officia illo hic numquam nemo aspernatur magnam.
+          %small
+            Letelier Morel, Juan Pablo
+      
+    %div.col-md-4
+      %div.row
+        %div.col-md-4
+          %img.img-responsive{:src=>'http://placehold.it/100x100'}
+          %div
+            %i.fa.fa-youtube-play{:title=>'Ver declaración'}
+            
+        %div.col-md-8
+          %p
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, totam, quos eius accusamus itaque quae fugiat ut assumenda earum officia illo hic numquam nemo aspernatur magnam.
+          %small
+            Larraín Fernández, Hernán
+      
+
+

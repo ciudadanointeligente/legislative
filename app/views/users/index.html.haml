@@ -1,18 +1,28 @@
-%h2= t('users.users')
-%hr
-  %table.table.table-bordered
-    %thead
-      %tr
-        %th #
-        %th Email
-        %th #
-        %th #
-        %th #
-    %tbody
-      - @users.each do |user|
-        %tr
-          %td= user.id
-          %td= user.email
-          %td= link_to t('users.show'), user
-          %td= link_to t('users.edit'), edit_user_path(user)
-          %td= link_to t('users.delete'), user, :confirm => "Are you sure?", :method => :delete
+%div.page-header
+  %h2= t('users.users')
+%div.row
+  %div.col-md-12
+    %div.table-responsive
+      %table.table.table-striped
+        %thead
+          %tr
+            %th #
+            %th Email
+            %th= t('users.show')
+            %th= t('users.edit') 
+            %th= t('users.delete') 
+        %tbody
+          - @users.each do |user|
+            %tr
+              %td= user.id
+              %td= user.email
+              %td
+                = link_to user do 
+                  %i.fa.fa-eye{title: t('users.show')}
+              %td
+                = link_to edit_user_path(user) do
+                  %i.fa.fa-pencil-square-o{title: t('users.edit')}
+              %td
+                = link_to user, :confirm => "Are you sure?", :method => :delete do
+                  %i.fa.fa-trash-o{title: t('users.delete')}
+                

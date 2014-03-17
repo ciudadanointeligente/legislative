@@ -1,22 +1,44 @@
-CabildoAbierto::Application.routes.draw do
+Legislative::Application.routes.draw do
 
-  root :to => "users#home"
-  #root :to => "bills#index"
-  
-  get "bills/:id" => "bills#show"
-  post "bills/:id/update" => "bills#update", method: :put
-  get "search" => "bills#search"
-  get "advanced_search" => "bills#advanced_search"
-  get "glossary" => "bills#glossary"
+  root :to => "mains#index"
 
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#login", :as => "log_in"
   post "auth" => "sessions#login"
-
   get "sign_up" => "users#new", :as => "sign_up"
+  get "confirmed" => "user_subscriptions#confirmed"
 
-  resources :bills
-  resources :users
+  put "bills/:id/update" => "bills#update", method: :put
+
+  resources :notifiers do
+    get 'run_tasks', on: :collection
+  end
+
+  localized do
+    resources :bills do
+      get 'searches', on: :collection
+    end
+
+    resources :communications do
+      get 'per_person', on: :collection
+    end
+
+    resources :congressmen do
+      get 'searches', on: :collection
+    end
+
+    resources :disclosures
+    resources :glossaries
+    resources :mains
+    resources :searches
+    resources :sessions
+    resources :tables
+    resources :users
+    resources :user_subscriptions # do
+      # delete 'unsubscribe_all', on: :collection
+    # end  
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

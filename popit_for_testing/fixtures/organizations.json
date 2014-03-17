@@ -1,0 +1,160 @@
+[
+{
+"id": "52fa6c2a67a027d001ba3c0e",
+"name": "Independientes",
+"slug": "independientes",
+"posts": [ ],
+"memberships": [ ],
+"links": [ ],
+"contact_details": [ ],
+"identifiers": [ ],
+"other_names": [ ],
+"url": "http://pmocl.popit.mysociety.org/api/v0.1/organizations/52fa6c2a67a027d001ba3c0e",
+"html_url": "http://pmocl.popit.mysociety.org/organizations/independientes"
+},
+{
+"id": "52fa6c3767a027d001ba3c0f",
+"name": "Movimiento Amplio Social",
+"slug": "movimiento-amplio-social",
+"posts": [ ],
+"memberships": [ ],
+"links": [ ],
+"contact_details": [ ],
+"identifiers": [ ],
+"other_names": [ ],
+"url": "http://pmocl.popit.mysociety.org/api/v0.1/organizations/52fa6c3767a027d001ba3c0f",
+"html_url": "http://pmocl.popit.mysociety.org/organizations/movimiento-amplio-social"
+},
+{
+"id": "52fa6c4c67a027d001ba3c11",
+"name": "Partido Demócrata Cristiano",
+"slug": "partido-democrata-cristiano",
+"posts": [ ],
+"memberships": [ ],
+"links": [ ],
+"contact_details": [ ],
+"identifiers": [ ],
+"other_names": [ ],
+"url": "http://pmocl.popit.mysociety.org/api/v0.1/organizations/52fa6c4c67a027d001ba3c11",
+"html_url": "http://pmocl.popit.mysociety.org/organizations/partido-democrata-cristiano"
+},
+{
+"id": "52fa6c6a67a027d001ba3c12",
+"name": "Partido Liberal de Chile",
+"slug": "partido-liberal-de-chile",
+"posts": [ ],
+"memberships": [ ],
+"links": [ ],
+"contact_details": [ ],
+"identifiers": [ ],
+"other_names": [ ],
+"url": "http://pmocl.popit.mysociety.org/api/v0.1/organizations/52fa6c6a67a027d001ba3c12",
+"html_url": "http://pmocl.popit.mysociety.org/organizations/partido-liberal-de-chile"
+},
+{
+"id": "52fa6c8067a027d001ba3c13",
+"name": "Partido por la Democracia",
+"slug": "partido-por-la-democracia",
+"posts": [ ],
+"memberships": [ ],
+"links": [ ],
+"contact_details": [ ],
+"identifiers": [ ],
+"other_names": [ ],
+"url": "http://pmocl.popit.mysociety.org/api/v0.1/organizations/52fa6c8067a027d001ba3c13",
+"html_url": "http://pmocl.popit.mysociety.org/organizations/partido-por-la-democracia"
+},
+{
+"id": "52fa6cae67a027d001ba3c14",
+"name": "Partido Radical Social Demócrata ",
+"slug": "partido-radical-social-democrata",
+"posts": [ ],
+"memberships": [
+],
+"links": [ ],
+"contact_details": [ ],
+"identifiers": [ ],
+"other_names": [ ],
+"url": "http://pmocl.popit.mysociety.org/api/v0.1/organizations/52fa6cae67a027d001ba3c14",
+"html_url": "http://pmocl.popit.mysociety.org/organizations/partido-radical-social-democrata"
+},
+{
+"id": "52fa6cb967a027d001ba3c15",
+"name": "Partido Socialista de Chile",
+"slug": "partido-socialista-de-chile",
+"posts": [ ],
+"memberships": [ ],
+"links": [ ],
+"contact_details": [ ],
+"identifiers": [ ],
+"other_names": [ ],
+"url": "http://pmocl.popit.mysociety.org/api/v0.1/organizations/52fa6cb967a027d001ba3c15",
+"html_url": "http://pmocl.popit.mysociety.org/organizations/partido-socialista-de-chile"
+},
+{
+"id": "52fa6cc567a027d001ba3c16",
+"name": "Renovación Nacional",
+"slug": "renovacion-nacional",
+"posts": [ ],
+"memberships": [ ],
+"links": [ ],
+"contact_details": [ ],
+"identifiers": [ ],
+"other_names": [ ],
+"url": "http://pmocl.popit.mysociety.org/api/v0.1/organizations/52fa6cc567a027d001ba3c16",
+"html_url": "http://pmocl.popit.mysociety.org/organizations/renovacion-nacional"
+},
+{
+"id": "52fa6cdb67a027d001ba3c17",
+"name": "Unión Demócrata Independiente",
+"slug": "union-democrata-independiente",
+"posts": [ ],
+"memberships": [ ],
+"links": [ ],
+"contact_details": [ ],
+"identifiers": [ ],
+"other_names": [ ],
+"url": "http://pmocl.popit.mysociety.org/api/v0.1/organizations/52fa6cdb67a027d001ba3c17",
+"html_url": "http://pmocl.popit.mysociety.org/organizations/union-democrata-independiente"
+},
+{
+"id": "52fa6c4167a027d001ba3c10",
+"founding_date": "1922-01-02",
+"html_url": "http://pmocl.popit.mysociety.org/organizations/partido-comunista-de-chile",
+"images": [
+{
+"_id": "52fa7377f37760d00100000e",
+"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Partido_Comunista_de_Chile.svg/500px-Partido_Comunista_de_Chile.svg.png",
+"created": "2014-02-11T19:01:11.967Z"
+}
+],
+"name": "Partido Comunista de Chile",
+"slug": "partido-comunista-de-chile",
+"url": "http://pmocl.popit.mysociety.org/api/v0.1/organizations/52fa6c4167a027d001ba3c10",
+"posts": [ ],
+"memberships": [],
+"links": [
+{
+"id": "52fa742267a027d001ba3c31",
+"url": "https://twitter.com/jjcc_chile",
+"note": "Twitter"
+},
+{
+"id": "52fa742267a027d001ba3c30",
+"url": "http://www.pcchile.cl",
+"note": "Website"
+}
+],
+"contact_details": [ ],
+"identifiers": [ ],
+"other_names": [
+{
+"id": "52fa742267a027d001ba3c2f",
+"name": "PC",
+"start_date": null,
+"end_date": null,
+"note": ""
+}
+]
+}
+]

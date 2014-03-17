@@ -1,0 +1,88 @@
+%section#board
+  %h3.text-center.txt-board 
+    = t('main.discussion_agendas')
+  %p.text-center
+    = link_to t('main.view_previous_agendas'), tables_path
+  %div.row
+    %div.col-md-6
+      %table.table.table-striped.tablas
+        %thead
+          %tr
+            %th{:colspan=>"3"}
+              %h4.table-title
+                = t('main.low_chamber') + ' - ' |
+                = localize @low_chamber_agenda[0]['date'].to_date, :format => :day_and_month
+        %tbody
+          - @low_chamber_bills = @low_chamber_agenda[1]
+          - @low_chamber_bills.bills.each do |bill|
+            %tr
+              %td.hidden-xs
+                %h5.light
+                  = bill.uid
+              %td
+                %h5.light.visible-xs
+                  = bill.uid
+                %h5
+                  = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
+                %p
+                  = bill.stage
+                - if !bill.tags.blank?
+                  %ul.list-inline
+                    - bill.tags.each do |tag|
+                      %li.label-default
+                        = tag
+                %td.hidden-xs
+                  = link_to (new_user_subscription_path(:bill => bill.uid)) do
+                    %i.fa.fa-star-o{title: t('bill.subscribe')}
+
+    %div.col-md-6
+      %table.table.table-striped.tablas
+        %thead
+          %tr
+            %th{:colspan=>"3"}
+              %h4.table-title
+                = t('main.high_chamber') + ' - ' |
+                = localize @high_chamber_agenda[0]['date'].to_date, :format => :day_and_month
+        %tbody
+          - @high_chamber_bills = @high_chamber_agenda[1]
+          - @high_chamber_bills.bills.each do |bill|
+            %tr
+              %td.hidden-xs
+                %h5.light
+                  = bill.uid
+              %td
+                %h5.light.visible-xs
+                  = bill.uid
+                %h5
+                  = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
+                %p
+                  = bill.stage
+                - if !bill.tags.blank?
+                  %ul.list-inline
+                    - bill.tags.each do |tag|
+                      %li.label-default
+                        = tag
+                %td.hidden-xs
+                  = link_to (new_user_subscription_path(:bill => bill.uid)) do
+                    %i.fa.fa-star-o{title: t('bill.subscribe')}
+
+%section#last-responses
+  %h3.title-last-responses 
+    = t('main.last_questions')
+  %div.row
+    - if ! @messages.objects.blank?
+      - @messages.objects.each do |message|
+        %div.col-md-6.home-answers-wraper
+          %div.home-answers
+            %div.col-md-2  
+              = image_tag('default-profile.png', class: "img-circle img-responsive")
+            %div.col-md-10
+              %p.light
+                = message.subject
+              %p
+                = message.content
+            %p.text-right
+              = message.author_name
+              %a{href: "/"} 
+                = t('main.view_more_questions')
+          %i.fa.fa-quote-right.fa-2x

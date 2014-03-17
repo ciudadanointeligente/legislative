@@ -1,0 +1,102 @@
+%div
+  %ol.breadcrumb
+    %li
+      = link_to 'Portada', root_path
+    %li.active
+      = t('layout.communication')
+
+%div.page-header
+  %h2
+    = t('layout.communication')
+
+%section#communication
+  %div.panel.panel-default
+    %div.form-comunication.panel-body
+      = form_tag  :method => 'POST' do
+        = field_set_tag do
+          %div.row{'style'=>'background-color:#3E1F3E'}
+            %div.col-md-3.message-box-left
+              %div.form-group
+                %label{:for=>"author_name"}
+                  = t('communication.name')
+                %div.input-group
+                  = text_field_tag :author_name, nil ,:class => "form-control", :placeholder=>t('communication.name')
+                  %span.input-group-addon
+                    %i.fa.fa-user
+              %div.form-group
+                %label{:for=>"author_name"}
+                  = t('communication.email')
+                %div.input-group
+                  = text_field_tag :author_email, nil ,:class => "form-control",:placeholder=>t('communication.email')
+                  %span.input-group-addon
+                    %i.fa.fa-envelope
+
+              %div.form-group.tab-content
+                %label{:for=>"author_name"}
+                  = t('communication.choose_congressmen')
+                %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => t('communication.choose_congressmen')}
+                  - @congressmen.persons.each do |congressmen|
+                    %option{:value => congressmen.popit_api_uri}
+                      =congressmen.name
+
+            %div.col-md-9.message-box-right
+              %h4
+                = t('communication.writte_message')
+              
+              %div.form-group
+                = text_field_tag :subject, nil ,:class => "form-control", :placeholder=>t('communication.subject')
+              %div.form-group
+                = text_area_tag :content, nil ,:class => "form-control", :placeholder=>t('communication.message'), :rows => '6'
+              %div.text-right
+                = submit_tag t('communication.send'), :class => "btn btn-success"
+
+
+%section#responses
+  %div.page-header
+    %h3
+      = t('communication.list_messages')
+  %div.panel.panel-default
+
+    - @messages.objects.each do |message|
+      %div.panel-heading
+        %h4
+          = message.subject
+      %div.panel-body
+        %p
+          = message.content
+
+        %ul.list-inline
+          - message.people.each do |person|
+            %li
+              %span.badge.per_person{"data-container"=>"body", "data-toggle"=>"popover", "data-content"=>"#{link_to sprintf(t('communication.questions'),person.name), controller: "communications", action: "per_person", id: person.id}"}
+                = person.name
+
+
+  %div.text-center
+    %ul.pagination
+      %li
+        %a{:href=>'#'}
+          &laquo;
+
+
+      - (1..@pagination['total_pages']).each do |page|
+        %li.active
+          %a{:href=>'?page=' + page.to_s}
+            = page
+      
+      %li.disabled
+        %a{:href=>'#'}
+          &raquo;
+
+%script{src: "http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.jquery.min.js"}
+:javascript
+  $(document).ready(function(){
+    $(".chosen").chosen();
+    $('.per_person').popover({
+      'trigger':'hover',
+      'html':true,
+      'placement':'top',
+      'delay': { show: 0, hide: 1000 }
+    })
+  })
+  

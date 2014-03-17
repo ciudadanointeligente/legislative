@@ -36,7 +36,7 @@ describe BillsController do
 
   describe "GET index" do
     xit "assigns all bills as @bills" do
-      bill = Bill.create! valid_attributes
+      bill = Billit::Bill.create! valid_attributes
       get :index, {}, valid_session
       assigns(:bills).should eq([bill])
     end
@@ -44,105 +44,73 @@ describe BillsController do
 
   describe "GET show" do
     it "assigns the requested bill as @bill" do
-      raw_response_file = File.open("./spec/webmock/bills-6967-06.json")
-      stub_request(:get, "http://billit.ciudadanointeligente.org/bills/6967-06").
-         with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-         to_return(:status => 200, :body => raw_response_file, :headers => {})
-
-      bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
+      bill = Billit::Bill.get(ENV['billit_url'] + "6967-06", 'application/json')
       # bill = Bill.create! valid_attributes
-      get :show, {:id => bill.uid}, valid_session
+      get :show, {:id => bill.uid, :locale => 'es'}, valid_session
       assigns(:bill).uid.should eq(bill.uid)
       assigns(:bill).title.should eq(bill.title)
       assigns(:bill).creation_date.should eq(bill.creation_date)
-      assigns(:bill).initiative.should eq(bill.initiative)
-      assigns(:bill).origin_chamber.should eq(bill.origin_chamber)
-      assigns(:bill).current_urgency.should eq(bill.current_urgency)
+      assigns(:bill).source.should eq(bill.source)
+      assigns(:bill).initial_chamber.should eq(bill.initial_chamber)
+      assigns(:bill).current_priority.should eq(bill.current_priority)
       assigns(:bill).stage.should eq(bill.stage)
       assigns(:bill).sub_stage.should eq(bill.sub_stage)
-      assigns(:bill).state.should eq(bill.state)
-      assigns(:bill).law.should eq(bill.law)
-      assigns(:bill).link_law.should eq(bill.link_law)
-      assigns(:bill).merged.should eq(bill.merged)
-      assigns(:bill).matters.should eq(bill.matters)
+      assigns(:bill).status.should eq(bill.status)
+      assigns(:bill).resulting_document.should eq(bill.resulting_document)
+      assigns(:bill).law_link.should eq(bill.law_link)
+      assigns(:bill).merged_bills.should eq(bill.merged_bills)
+      assigns(:bill).subject_areas.should eq(bill.subject_areas)
       assigns(:bill).authors.should eq(bill.authors)
-      assigns(:bill).events.should eq(bill.events)
-      assigns(:bill).urgencies.should eq(bill.urgencies)
+      assigns(:bill).priorities.should eq(bill.priorities)
       assigns(:bill).reports.should eq(bill.reports)
-      assigns(:bill).modifications.should eq(bill.modifications)
+      assigns(:bill).revisions.should eq(bill.revisions)
       assigns(:bill).documents.should eq(bill.documents)
-      assigns(:bill).instructions.should eq(bill.instructions)
-      assigns(:bill).observations.should eq(bill.observations)
+      assigns(:bill).directives.should eq(bill.directives)
+      assigns(:bill).remarks.should eq(bill.remarks)
       assigns(:bill).links.should eq(bill.links)
+
+      controller_sessions = assigns(:bill).paperworks.map {|paperwork| paperwork.session}
+      bill.paperworks.each do |paperwork| 
+        controller_sessions.include?(paperwork.session).should be_true
+      end
+
+    end
+
+    it "returns @date_freq as an array of integers" do
+      bill = Billit::Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
+      # bill = Bill.create! valid_attributes
+      get :show, {:id => bill.uid, :locale => 'es'}, valid_session
+      assigns(:date_freq).should be_an_instance_of Array
+      assigns(:date_freq).length.should be ENV['bill_graph_data_length'].to_i
+      assigns(:date_freq).each do |freq|
+        freq.should be_an Integer
+      end
+    end
+
+    it "assigns @date_freq values according to defined time intervals" do
+      bill = Billit::Bill.get(ENV['billit_url'] + "6967-06", 'application/json')
+      Date.stub(:today) {Date.new(2013, 4)}
+      response = get :show, {:id => bill.uid, :locale => 'es'}, valid_session
+      p response.body
+      assigns(:date_freq).should eq [1,0,0,0,0,0,0,0,0,4,0,0]
+    end
+
+    xit "define time lapse (weeks, months, years) in ENV" do
     end
   end
 
   describe "GET new" do
     xit "assigns a new bill as @bill" do
       get :new, {}, valid_session
-      assigns(:bill).should be_a_new(Bill)
+      assigns(:bill).should be_a_new(Billit::Bill)
     end
   end
 
   describe "GET edit" do
     xit "assigns the requested bill as @bill" do
-      bill = Bill.create! valid_attributes
+      bill = Billit::Bill.create! valid_attributes
       get :edit, {:id => bill.to_param}, valid_session
       assigns(:bill).should eq(bill)
-    end
-  end
-
-  describe "GET search" do
-    it "returns an array" do
-      raw_response_file = File.open("./spec/webmock/bills-salud-page1.json")
-      stub_request(:get, "http://billit.ciudadanointeligente.org/bills/search/?action=search&controller=bills&q=salud").
-         with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-         to_return(:status => 200, :body => raw_response_file, :headers => {})
-
-      get :search, q: "salud"
-      assigns(:query).bills.should be_an Array
-    end
-
-    it "has a self reference" do
-      raw_response_file = File.open("./spec/webmock/bills-salud-page1.json")
-      stub_request(:get, "http://billit.ciudadanointeligente.org/bills/search/?action=search&controller=bills&q=salud").
-         with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-         to_return(:status => 200, :body => raw_response_file, :headers => {})
-
-      get :search, q: "salud"
-      assigns(:query).self.should eq("http://billit.ciudadanointeligente.org/bills/search?page=1&q=salud")
-    end
-
-    it "has a next page" do
-      raw_response_file = File.open("./spec/webmock/bills-salud-page1.json")
-      stub_request(:get, "http://billit.ciudadanointeligente.org/bills/search/?action=search&controller=bills&q=salud").
-         with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-         to_return(:status => 200, :body => raw_response_file, :headers => {})
-
-      get :search, q: "salud"
-      assigns(:query).next.should eq("http://billit.ciudadanointeligente.org/bills/search?page=2&q=salud")
-    end
-
-    it "has a previous page" do
-      raw_response_file = File.open("./spec/webmock/bills-salud-page2.json")
-      stub_request(:get, "http://billit.ciudadanointeligente.org/bills/search/?action=search&controller=bills&page=2&q=salud").
-         with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-         to_return(:status => 200, :body => raw_response_file, :headers => {})
-
-      get :search, q: "salud", page: 2
-      assigns(:query).previous.should eq("http://billit.ciudadanointeligente.org/bills/search?page=1&q=salud")
-    end
-
-    it "has all metadata" do
-      raw_response_file = File.open("./spec/webmock/bills-salud-page1.json")
-      stub_request(:get, "http://billit.ciudadanointeligente.org/bills/search/?action=search&controller=bills&q=salud").
-      with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-         to_return(:status => 200, :body => raw_response_file, :headers => {})
-
-      get :search, q: "salud"
-      assigns(:query).total_entries.should_not be_nil
-      assigns(:query).current_page.should_not be_nil
-      assigns(:query).total_pages.should_not be_nil
     end
   end
 
@@ -151,32 +119,32 @@ describe BillsController do
       xit "creates a new Bill" do
         expect {
           post :create, {:bill => valid_attributes}, valid_session
-        }.to change(Bill, :count).by(1)
+        }.to change(Billit::Bill, :count).by(1)
       end
 
       xit "assigns a newly created bill as @bill" do
         post :create, {:bill => valid_attributes}, valid_session
-        assigns(:bill).should be_a(Bill)
+        assigns(:bill).should be_a(Billit::Bill)
         assigns(:bill).should be_persisted
       end
 
       xit "redirects to the created bill" do
         post :create, {:bill => valid_attributes}, valid_session
-        response.should redirect_to(Bill.last)
+        response.should redirect_to(Billit::Bill.last)
       end
     end
 
     describe "with invalid params" do
       xit "assigns a newly created but unsaved bill as @bill" do
         # Trigger the behavior that occurs when invalid params are submitted
-        Bill.any_instance.stub(:save).and_return(false)
+        Billit::Bill.any_instance.stub(:save).and_return(false)
         post :create, {:bill => {  }}, valid_session
-        assigns(:bill).should be_a_new(Bill)
+        assigns(:bill).should be_a_new(Billit::Bill)
       end
 
       xit "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
-        Bill.any_instance.stub(:save).and_return(false)
+        Billit::Bill.any_instance.stub(:save).and_return(false)
         post :create, {:bill => {  }}, valid_session
         response.should render_template("new")
       end
@@ -185,29 +153,20 @@ describe BillsController do
 
   describe "PUT update" do
     describe "with valid params" do
-      it "updates the requested bill" do
-        raw_response_file = File.open("./spec/webmock/bills-6967-06.json")
-        stub_request(:get, "http://billit.ciudadanointeligente.org/bills/6967-06").
-           with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-           to_return(:status => 200, :body => raw_response_file, :headers => {})
-
-        stub_request(:put, "http://billit.ciudadanointeligente.org/bills/6967-06").
-           with(:headers => {'Accept'=>'application/json', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Content-Type'=>'application/json', 'User-Agent'=>'Ruby'}).
-           to_return(:status => 200, :body => "", :headers => {})
-
-        bill = Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
-        put :update, {id: bill.uid, tags: bill.tags}, valid_session
+      xit "updates the requested bill" do
+        bill = Billit::Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
+        put :update, {id: bill.uid, tags: bill.tags, locale: 'es'}, valid_session
         assigns(:bill).tags.should eq(bill.tags)
       end
 
       xit "assigns the requested bill as @bill" do
-        bill = Bill.create! valid_attributes
+        bill = Billit::Bill.create! valid_attributes
         put :update, {:id => bill.to_param, :bill => valid_attributes}, valid_session
         assigns(:bill).should eq(bill)
       end
 
       xit "redirects to the bill" do
-        bill = Bill.create! valid_attributes
+        bill = Billit::Bill.create! valid_attributes
         put :update, {:id => bill.to_param, :bill => valid_attributes}, valid_session
         response.should redirect_to(bill)
       end
@@ -215,17 +174,17 @@ describe BillsController do
 
     describe "with invalid params" do
       xit "assigns the bill as @bill" do
-        bill = Bill.create! valid_attributes
+        bill = Billit::Bill.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        Bill.any_instance.stub(:save).and_return(false)
+        Billit::Bill.any_instance.stub(:save).and_return(false)
         put :update, {:id => bill.to_param, :bill => {  }}, valid_session
         assigns(:bill).should eq(bill)
       end
 
       xit "re-renders the 'edit' template" do
-        bill = Bill.create! valid_attributes
+        bill = Billit::Bill.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        Bill.any_instance.stub(:save).and_return(false)
+        Billit::Bill.any_instance.stub(:save).and_return(false)
         put :update, {:id => bill.to_param, :bill => {  }}, valid_session
         response.should render_template("edit")
       end
@@ -234,14 +193,14 @@ describe BillsController do
 
   describe "DELETE destroy" do
     xit "destroys the requested bill" do
-      bill = Bill.create! valid_attributes
+      bill = Billit::Bill.create! valid_attributes
       expect {
         delete :destroy, {:id => bill.to_param}, valid_session
-      }.to change(Bill, :count).by(-1)
+      }.to change(Billit::Bill, :count).by(-1)
     end
 
     xit "redirects to the bills list" do
-      bill = Bill.create! valid_attributes
+      bill = Billit::Bill.create! valid_attributes
       delete :destroy, {:id => bill.to_param}, valid_session
       response.should redirect_to(bills_url)
     end

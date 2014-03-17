@@ -1,0 +1,22 @@
+%div.hero-space
+  %div.container
+    %h2.text-center
+      = t('main.title_slogan')
+      %br
+      = t('main.title_subslogan')
+
+    = form_tag(t('routes.searches'), :method => 'get', :class => "form-inline") do
+      %div.input-group
+        %input.form-control{:type => "text", :name => 'q', :placeholder => t("main.search_placeholder")}
+        %span.input-group-btn
+          %button{:type => "submit", :class => "btn btn-primary btn-lg"}
+            =t("search.search")
+
+      %div.checkbox
+        %label
+          %input{:type => 'checkbox', :name => 'bills', :value => '1', :checked=>true}
+            = t('main.filter_bills')
+      %div.checkbox
+        %label
+          %input{:type => 'checkbox', :name => 'congressmen', :value => '2', :checked=>true}
+            = t('main.filter_congressmen')

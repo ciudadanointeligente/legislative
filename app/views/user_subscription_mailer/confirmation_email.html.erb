@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Bienvenido a Congreso abierto, <%= @user.username %></h1>
+    <p>
+      Para confirmar tu suscripción al bill: <%= @bill %>,
+      por favor haz click en: 
+      <%= link_to('Click aca!', controller: 'user_subscriptions', action: 'confirmed', email_token: @user_subscription.email_token, host: 'www.congresoabierto.cl') %><br/>
+    </p>
+    <p>
+      Visítanos en <%= @url %>
+    </p>
+    <p>Gracias por suscribirte!</p>
+  </body>
+</html>

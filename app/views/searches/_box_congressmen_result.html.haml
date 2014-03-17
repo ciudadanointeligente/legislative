@@ -1,0 +1,21 @@
+- @congressmen.result.each do | congressman |
+  %div.row
+    %div.col-md-1
+      - if !congressman.images.blank?
+        %img.img-circle.img-responsive{:src=>congressman.images[0].url}
+      - else
+        = image_tag('default-profile.png', class: "img-circle img-responsive")
+    %div.col-md-10
+      %h5
+        = link_to congressman.name, congressman_path(congressman.id)
+      %p
+        = congressman.title
+        %br/
+        - if ! congressman.represent[0].region.blank?
+          %span.light
+            = t('search.represent')
+          = congressman.represent[0].region
+    %div.col-md-1
+      = link_to url_for(controller: "communications", action: "index", id: congressman.id) do
+        %i.fa.fa-envelope-o
+  
