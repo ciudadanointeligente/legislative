@@ -70,7 +70,7 @@ Red Hat / Fedora / CentOS
 
 Debian / Ubuntu / Mint
 <pre>
-  sudo apt-get install mariadb-server mariadb-devel
+  sudo apt-get install mariadb-server libmariadbd-dev
 </pre>
 
 and then, you need config your config/database.yml file
