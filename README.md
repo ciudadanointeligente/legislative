@@ -61,6 +61,20 @@ gem uninstall rmagick
 gem install rmagick
 </pre>
 
+The following system requirements are also needed, for database
+
+Red Hat / Fedora / CentOS
+<pre>
+  sudo yum install mariadb-server mariadb-devel
+</pre>
+
+Debian / Ubuntu / Mint
+<pre>
+  sudo apt-get install mariadb-server libmariadbd-dev
+</pre>
+
+and then, you need config your config/database.yml file
+
 ## Features
 
 ##### [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/)
@@ -78,7 +92,7 @@ gem install rmagick
 ### Databases support
 
 * SQLite (Default)
-
+* MySQL / MariaDB
 
 ### Best practices
 ---
