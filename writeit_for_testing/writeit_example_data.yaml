@@ -1266,3 +1266,6 @@
 - fields: {created: ! '2013-12-18 21:41:46+00:00', key: a, user: 1}
   model: tastypie.apikey
   pk: 1
+- fields: {content: This is the content, created: 2014-03-17, message: 1, person: 1}
+  model: nuntium.answer
+  pk: 1

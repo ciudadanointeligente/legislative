@@ -1274,3 +1274,6 @@
 - fields: {contact: 1, message: 1, status: new}
   model: nuntium.outboundmessage
   pk: 1
+- fields: {content: This is the content, created: 2014-03-17, message: 1, person: 1}
+  model: nuntium.answer
+  pk: 1
