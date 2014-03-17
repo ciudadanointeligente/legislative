@@ -14,7 +14,7 @@
           %li
             = link_to (new_user_subscription_path(:bill => params[:id])), class: 'btn-warning' do
               %i.fa.fa-star-o
-              = t('bill.subscribe')
+              = t('bill.bill_subscribe')
           %li
             - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
             %a.btn-warning{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}

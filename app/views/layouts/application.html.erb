@@ -35,9 +35,17 @@
     <%= javascript_include_tag 'application.js' %>
     <!-- end scripts -->
 
+    <style type="text/css">
+      html {
+        position: relative;
+        min-height: 100%;
+      }
+    </style>
+
     <%= csrf_meta_tag %>
 </head>
 <body>
+<<<<<<< HEAD
   <div class="wrap">
     <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -91,26 +99,82 @@
     <!-- Show bill header -->
     <%= render :partial => "bill_header"%>
     <% end %>
+=======
+>>>>>>> master
 
+  <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-
-      <div class="row">
-        <div class="col-md-12">
-          <% flash.each do |name, msg| %>
-            <div class="alert alert-info">
-            <button type="button" class="close" aria-hidden="true" data-dismiss="alert">&times;</button>
-              <%= content_tag :div, msg, :id => "flash_#{name}" %>
-            </div>
-          <% end %>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="text-bar"><%= t('layout.menu') %></span>
+        </button>
+        <div id='site-logo'>
+          <a href="<%=root_path%>"><%= image_tag "logo-congresoabierto.png", alt:t('layout.title_project') %></a>
+          <div id="defci"><%= t('layout.from') %> <span id="beta">BETA</span></div>
         </div>
       </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><%= link_to t('layout.bills'), searches_bills_path %><li/>
+          <li><%= link_to t('layout.congressmen'), congressmen_path %><li/>
+          <li><%= link_to t('layout.communication'), communications_path %><li/>
+          <li><%= link_to t('layout.glossary'), glossaries_path %><li/>
+        </ul>
+        <% if current_user %>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" title="<%= t('users.logged_as')%> <%= current_user.email %>"></i> <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header"><%= t('layout.welcome') %> <%= current_user.username %></li>
+              <li role="presentation" class="divider"></li>
+              <li><%= link_to t('users.log_out'), log_out_path %></li>
+            </ul>
+          </li>
+        </ul>
+        <% end %>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  
+  <!-- Show browser -->
+  <% if @condition_search %>
+  <%= render :partial => "search"%>
+  <% end %>
 
-      <!-- Content -->
-      <%= yield %>
-      <!-- End content -->
+  <% if @condition_priority_box %>
+  <!-- Show hot urgencies -->
+  <%= render :partial => "hot"%>
+  <% end %>
 
-    </div> <!-- /container -->
-  </div> <!-- /wrap -->
+  <% if @condition_resume_bill %>
+  <!-- Show bill resume -->
+  <%= render :partial => "resume"%>
+  <% end %>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-12">
+        <% flash.each do |name, msg| %>
+          <div class="alert alert-info">
+          <button type="button" class="close" aria-hidden="true" data-dismiss="alert">&times;</button>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <%= yield %>
+    <!-- End content -->
+
+  </div> <!-- /container -->
+  
+  <div class="arregloFotter"></div>
 
   <!-- Footer -->
   <div id="footer">
