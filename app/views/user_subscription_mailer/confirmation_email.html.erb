@@ -8,7 +8,7 @@
     <p>
       Para confirmar tu suscripción al bill: <%= @bill %>,
       por favor haz click en: 
-      <%= link_to('Click aca!', controller: 'user_subscriptions', action: 'confirmed', email_token: @user_subscription.email_token, host: 'www.congresoabierto.cl') %><br/>
+      <%= link_to('Click aca!', controller: 'user_subscriptions', action: 'confirmed', email_token: @user_subscription.email_token, host: ENV['root_url']) %><br/>
     </p>
     <p>
       Visítanos en <%= @url %>
