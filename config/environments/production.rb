@@ -66,4 +66,11 @@ Legislative::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   config.eager_load = true
+
+  # Send mails to Cuttlefish (see http://cuttlefish.io)
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "localhost",
+    :port => 2525,
+  }
 end
