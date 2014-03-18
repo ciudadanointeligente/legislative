@@ -103,5 +103,5 @@
               %i.fa.fa-download
           -if ! @bill.law_web_link.blank?
             %a{'href'=> @bill.law_web_link, 'target'=>'_blank'}
-              = t('bill.view_law')
+              = t('bill.view_law') + ' ' + @bill.law_id
               %i.fa.fa-eye
