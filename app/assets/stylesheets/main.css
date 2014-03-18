@@ -3,11 +3,13 @@
  * You can use Sass (SCSS) here: http://sass-lang.com */
 
 .center
-	text-align: center
+	{text-align: center}
 .tab-content
-	padding-top: 10px
+	{padding-top: 10px;
+    width: 270px !important;}
+
 .search_separator
-	border-left: 1px solid #ccc
+	{border-left: 1px solid #ccc}
 
 /*General*/
 
@@ -81,6 +83,10 @@ strong {
 
 .col-md-1.side {
   margin-top: 10px;
+}
+
+input {
+  font-family: 'lato', sans-serif;
 }
 
 /* BUTTONS */
@@ -700,9 +706,9 @@ h4 span.nostyle {
   padding: 10px;
 }
 .message-box-right .form-control {
-  border: 1px solid #462445;
-  background-color: #6B506A;
-  color: #FFF;
+ background-color: #462445;
+    border: 1px solid #6B506A;
+    color: #E6E6C9 !important;
 }
 .message-box-right .form-control::-webkit-input-placeholder {
   color: #FFF;
@@ -715,6 +721,158 @@ h4 span.nostyle {
   background-image: none;
   background-color: #FFF !important;
 }
+
+.search-field {
+  height: 42px;
+  width: 150px;
+  background-color: #3E1F3E;
+  border: 1px solid #6B506A;
+}
+
+.search-field input.default{
+  height: 35px !important;
+  background-color: #3E1F3E;
+  border: none!important;
+  color: #A6A691!important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset!important;
+  padding-left: 12px!important;
+  padding-top: 10px!important;
+
+}
+
+.form-control::-moz-placeholder {
+  color: #A6A691!important;
+}
+
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+  font-family: 'lato', sans-serif !important;
+  color: #E0DFC4;
+  background-color: #3E1F3E;
+}
+
+.form-group.tab-content .chosen-container-active .chosen-choices li.search-field input[type=text] {
+color: #C8D39C!important;
+}
+
+
+.chosen-container .chosen-results li.no-results {
+    background: none;
+    background-color: #3E1F3E!important;
+    display: list-item;
+}
+
+
+
+.tituloFormulario h4 {
+color: #E6E6C9;
+}
+.chosen-resul
+ts {
+  color: #67675A;
+  padding-top: 5px;
+}
+
+.form-comunication {
+  color: #E6E6C9 !important;
+
+}
+
+.message-box-right .form-control {
+  color: #E6E6C9 !important;
+}
+
+.message-box-left .input-group-addon {
+  background-color: #3E1F3E;
+  border-left: 1px solid #6B506A;
+  height: 2px;
+}
+
+
+
+.search-field.chosen-container-multi .chosen-choices li.search-field input[type="text"]{
+  color: #4E2D4D!important;
+}
+
+.chosen-choices ul{
+  background-color: #3E1F3E !important;
+  width: 200px;
+  border: none;
+}
+
+
+
+.chosen-container .chosen-container-multi{
+  border: none;
+}
+
+.chosen-container-multi .chosen-choices {
+  background-color: #3E1F3E !important;
+ /* border: none!important;*/
+  background-image: none!important;
+   border: 1px solid #6B506A!important;
+   border-radius: 4px!important;
+}
+
+.search-field {
+  width: 270px;
+  color: #CAC6B2;
+  border: none!important;
+}
+
+/*.prueba {
+  height: 50px;
+}*/
+
+#author_name{
+  background-color: #3E1F3E;
+  border: 1px solid #6B506A;
+  color: #F9F9EB !important;
+}
+
+#author_email{
+  background-color: #3E1F3E;
+  border: 1px solid #6B506A;
+  color: #F9F9EB !important;
+}
+
+.default{
+  background-color: #3E1F3E !important; 
+  color: #E6E6C9!important;
+  border: 1px solid #6B506A;
+}
+
+.message-box-left .input-group-addon {
+    color: #6B506A;
+}
+
+.chosen-results {
+  background-color: #3E1F3E !important;
+}
+
+.chosen-drop {
+  background-color: #3E1F3E !important;
+}
+
+.chosen-choices{
+  background-color: #3E1F3E !important;
+}
+
+/*.form-control::-moz-placeholder {
+    color: #6B506A;
+}*/
+
+.panel-default .panel-heading {
+    background-color: #E5E5C9 !important;
+    color: #67675A !important;
+}
+
+.page-header {
+    border-bottom: none;
+  }
+.panel-body {
+  background-color: #E6E6C9;
+}
+
 /*End Comunicacion*/
 
 
@@ -968,6 +1126,7 @@ svg.graph .labels.y-labels {
   }
   .form-control {
     height: 50px;
+
   }
 }
 

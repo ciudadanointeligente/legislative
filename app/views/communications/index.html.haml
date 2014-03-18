@@ -5,7 +5,7 @@
     %li.active
       = t('layout.communication')
 
-%div.page-header
+%div.row.page-header
   %h2
     = t('layout.communication')
 
@@ -29,7 +29,7 @@
                 %div.input-group
                   = text_field_tag :author_email, nil ,:class => "form-control",:placeholder=>t('communication.email')
                   %span.input-group-addon
-                    %i.fa.fa-envelope
+                    %i.fa.fa-envelope-o
 
               %div.form-group.tab-content
                 %label{:for=>"author_name"}
@@ -37,9 +37,9 @@
                 %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => t('communication.choose_congressmen')}
                   - @congressmen.persons.each do |congressmen|
                     %option{:value => congressmen.popit_api_uri}
-                      =congressmen.name
+                      =congressmen.name 
 
-            %div.col-md-9.message-box-right
+            %div.col-md-9.message-box-right.tituloFormulario
               %h4
                 = t('communication.writte_message')
               
@@ -52,18 +52,18 @@
 
 
 %section#responses
-  %div.page-header
+  %div.row.page-header
     %h3
       = t('communication.list_messages')
-  %div.panel.panel-default
+  %div.row.panel.panel-default
 
     - @messages.objects.each do |message|
-      %div.panel-heading
-        %h4
+      %div.col-md-12.panel-heading
+        %h5
           = message.subject
-      %div.panel-body
         %p
           = message.content
+          %i.fa.fa-quote-right.fa-2x
 
         %ul.list-inline
           - message.people.each do |person|
