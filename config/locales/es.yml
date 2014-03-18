@@ -329,3 +329,8 @@ es:
       month: Mes
       second: Segundos
       year: Año
+  email:
+    subject: 'Congreso abierto, confirmación de suscripción'
+    body_header: 'Bienvenido a Congreso abierto, %s'
+    body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
+    body_footer: 'Atte el equipo de Congreso abierto'

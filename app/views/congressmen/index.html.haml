@@ -25,7 +25,7 @@
   %div.col-md-3.aside
     = render :partial => "filter_search_form"
   %div.col-md-9.whitewithaside
-    - @congressmen.each do | congressman |
+    - @congressmen.persons.each do | congressman |
 
       %div.row.result
         %div.col-md-1

@@ -1,8 +1,8 @@
 require 'popit_representers/models/organization_collection'
-require './app/models/bill'
 require 'billit_representers/models/bill_page'
+require './app/models/bill'
 require 'RMagick'
-require "open-uri"
+require 'open-uri'
 
 class CongressmenController < ApplicationController
 
@@ -13,15 +13,9 @@ class CongressmenController < ApplicationController
     
     @title = t('congressmen.title') + ' - '
 
-    # Very, very ugly code, sorry. Impossible (yet) obtains all the persons ordered by name in Popit, and the per_page param is fixed
-    @congressmenFirstBatch = PopitPersonCollection.new
-    @congressmenSecondBatch = PopitPersonCollection.new
-    @congressmenTotal = Array.new
-
-    @congressmenFirstBatch.get ENV['popit_persons']+'?per_page=100&page=1', 'application/json'
-    @congressmenSecondBatch.get ENV['popit_persons']+'?per_page=100&page=2', 'application/json'
-    @congressmen = @congressmenFirstBatch.persons + @congressmenSecondBatch.persons
-    @congressmen.sort! { |x,y| x.name <=> y.name }
+    @congressmen = PopitPersonCollection.new
+    @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
+    @congressmen.persons.sort! { |x,y| x.name <=> y.name }
   end
 
   # GET /congressmen/1
