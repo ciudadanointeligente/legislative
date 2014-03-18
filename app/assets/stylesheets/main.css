@@ -90,6 +90,10 @@ strong {
   font-family: 'Raleway', Helvetica, sans-serif;
 }
 
+a.btn:visited {
+  color: #e6e6c9;
+}
+
 .btn-xs {
   height: 25px;
   padding: 2px 4px 4px;
