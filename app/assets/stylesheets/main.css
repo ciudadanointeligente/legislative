@@ -2,14 +2,6 @@
  * They will automatically be included in application.css.
  * You can use Sass (SCSS) here: http://sass-lang.com */
 
-.center
-	{text-align: center}
-.tab-content
-	{padding-top: 10px;
-    width: 270px !important;}
-
-.search_separator
-	{border-left: 1px solid #ccc}
 
 /*General*/
 
@@ -18,7 +10,6 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #67675a;
-  /*padding-top: 80px;*/
   margin-bottom: 70px;
   margin-top: 80px;
   -webkit-font-smoothing: antialiased;
@@ -89,12 +80,24 @@ input {
   font-family: 'lato', sans-serif;
 }
 
+.center {
+  text-align: center}
+.tab-content{
+  padding-top: 10px}
+.search_separator{
+  border-left: 1px solid #ccc}
+
+
 /* BUTTONS */
 
 .btn {
   text-transform: uppercase;
   font-weight: 700;
   font-family: 'Raleway', Helvetica, sans-serif;
+}
+
+a.btn:visited {
+  color: #e6e6c9;
 }
 
 .btn-xs {
@@ -241,11 +244,11 @@ input {
 .label-default {
   background-color: #e6e6c9;
   position: relative;
-  border-radius: 0;
+  border-radius: 0px 2px 2px 0px;
   color: #a6a691;
   font-family: 'Raleway', Helvetica, sans-serif;
   text-transform: uppercase;
-  padding: .3em .6em .2em;
+  padding: .4em .7em .3em;
   font-size: 10px;
   font-weight: 700;
   margin-right: 9px;
@@ -262,13 +265,13 @@ input {
   pointer-events: none;
   border-right-color: #e6e6c9;
   border-width: 9px;
-  margin-top: -10px;
+  margin-top: -9px;
 }
 
 .label-default:after{
   content:"";
   position:absolute;
-  top:8px;
+  top: 7px;
   left:-1px;
   float:left;
   width:4px;
@@ -277,6 +280,10 @@ input {
   -webkit-border-radius:2px;
   border-radius:2px;
   background:#f9f9eb;
+}
+
+.hero-space-bill .label-default:after {
+  background: #462445;
 }
 
 .hero-space .label-default:after{
@@ -908,15 +915,15 @@ ts {
   color: #FFF;
 }
 
-#timeline div.resume.col-md-11 {
+#timeline div.bill_header.col-md-11 {
   margin-bottom: 40px;
 }
 
-.resume h5 {
+.bill_header h5 {
   margin-bottom: 0;
 }
 
-.resume p {
+.bill_header p {
   margin: 0 0 0px;
 }
 
@@ -1152,7 +1159,7 @@ svg.graph .labels.y-labels {
     text-align: right;
   }
   .hero-space-bill {
-    padding: 20px 0px 60px;
+    padding: 20px 0px;
   }
   .btn-lg {
     height: 50px;
