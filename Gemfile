@@ -47,7 +47,6 @@ group :development do
   # Turns off the rails asset pipeline log
   gem 'quiet_assets'
   gem 'binding_of_caller'
-  gem 'newrelic_rpm'
 end
 
 # Support to XLS export
@@ -81,4 +80,5 @@ gem 'rake', '10.1.1'
 
 group :production do
   gem 'mysql'
+  gem 'newrelic_rpm'
 end
