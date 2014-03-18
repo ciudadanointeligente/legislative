@@ -233,8 +233,13 @@ en:
     title: Congressmen
     title_search: Congressmen search
     represent: 'Represents: '
-    search_for: 'Search by: '
-    placeholder_search_for: Ingresa una palabra clave
+    form_keyword: Keyword
+    form_chamber: Chamber
+    form_region: Region
+    form_party: Party
+    placeholder_keyword: 'Name, commune or region'
+    placeholder_region: Insert a commune or region
+    placeholder_party: Insert a party
     askthem: Ask them
     district: 'District: '
     region: 'Region: '

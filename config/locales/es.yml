@@ -233,8 +233,13 @@ es:
     title: Congresistas
     title_search: Búsqueda de Congresistas
     represent: 'Representa:'
-    search_for: 'Buscar por:'
-    placeholder_search_for: 'Nombre, comuna o region'
+    form_keyword: Palabra clave
+    form_chamber: Cámara
+    form_region: Región
+    form_party: Partido
+    placeholder_keyword: 'Nombre, comuna o región'
+    placeholder_region: Ingrese una comuna o región
+    placeholder_party: Ingrese un partido político
     askthem: Preguntales
     district: 'Distrito: '
     region: 'Región: '
