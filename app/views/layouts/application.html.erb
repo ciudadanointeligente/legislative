@@ -33,6 +33,7 @@
 
     <!-- scripts concatenated and minified via build script -->
     <%= javascript_include_tag 'application.js' %>
+    <%= javascript_include_tag 'http://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js' %>
     <!-- end scripts -->
 
     <style type="text/css">
@@ -87,6 +88,11 @@
   <!-- Show browser -->
   <% if @condition_search %>
   <%= render :partial => "search"%>
+  <% end %>
+
+  <% if @social_network_box %>
+  <!-- Show hot urgencies -->
+  <%= render :partial => "social_network_box"%>
   <% end %>
 
   <% if @condition_priority_box %>
