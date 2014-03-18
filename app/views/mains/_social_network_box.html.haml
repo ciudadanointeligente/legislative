@@ -1,0 +1,10 @@
+%div
+  %div.row
+    %div.col-md-6.text-right
+      - url = 'https://twitter.com/share?url='+request.original_url+'&via=ciudadanoi&hashtags='+ENV['twitter_tags']+'&text=Bienvenido a tu congreso online, entra sin pedir permiso'
+      %a{'href' => '#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+        %i.fa.fa-twitter.fa-2x
+    %div.col-md-6
+      - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
+      %a{'href'=> '#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+        %i.fa.fa-facebook.fa-2x

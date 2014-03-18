@@ -89,6 +89,11 @@
   <%= render :partial => "search"%>
   <% end %>
 
+  <% if @social_network_box %>
+  <!-- Show hot urgencies -->
+  <%= render :partial => "social_network_box"%>
+  <% end %>
+
   <% if @condition_priority_box %>
   <!-- Show hot urgencies -->
   <%= render :partial => "hot"%>
