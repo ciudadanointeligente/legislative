@@ -76,14 +76,10 @@
             %span.light
               = t('bill.abstract') + ":"
             = @bill.abstract
-            %br/
-          -if !@bill.tags.blank?
-            %span.light
-              = t('bill.tags') + ":"
-            = @bill.tags.join(',')
-            %br/
+        %p
           -if !@authors.blank?
-            = t('bill.authors') + ':'
+            %span.light
+              = t('bill.authors') + ':'
             - @authors.each_with_index do |author, index|
               %span
                 - author = author.second
