@@ -1,9 +1,8 @@
-%div
-  = form_tag(t('routes.searches'), :method => 'get') do
-    = label_tag :q, t('congressmen.search_for')
-    %div.input-group
-      = text_field_tag :q, params[:q], :class => 'form-control', :placeholder => t('congressmen.placeholder_search_for'), :onfocus => "ga('send','congressmen','focus_search')"
-      %input{'type'=>'hidden', 'name'=>'congressmen', 'value'=>2}
-      %span.input-group-btn
-        %button.btn.btn-default.btn-lg
-          %i.fa.fa-search
+= form_tag(t('routes.searches'), :method => 'get') do
+= label_tag :q, t('congressmen.search_for')
+%div.input-group
+  = text_field_tag :q, params[:q], :class => 'form-control', :placeholder => t('congressmen.placeholder_search_for'), :onfocus => "ga('send','congressmen','focus_search')"
+  %input{'type'=>'hidden', 'name'=>'congressmen', 'value'=>2}
+  %span.input-group-btn
+    %button.btn.btn-default.btn-lg
+      %i.fa.fa-search
