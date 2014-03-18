@@ -5,7 +5,7 @@
     %li.active
       = t('layout.communication')
 
-%div.page-header
+%div.row.page-header
   %h2
     = t('layout.communication')
 
@@ -29,7 +29,7 @@
                 %div.input-group
                   = text_field_tag :author_email, nil ,:class => "form-control",:placeholder=>t('communication.email')
                   %span.input-group-addon
-                    %i.fa.fa-envelope
+                    %i.fa.fa-envelope-o
 
               %div.form-group.tab-content
                 %label{:for=>"author_name"}
@@ -37,9 +37,9 @@
                 %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => t('communication.choose_congressmen')}
                   - @congressmen.persons.each do |congressmen|
                     %option{:value => congressmen.popit_api_uri}
-                      =congressmen.name
+                      =congressmen.name 
 
-            %div.col-md-9.message-box-right
+            %div.col-md-9.message-box-right.tituloFormulario
               %h4
                 = t('communication.writte_message')
               
@@ -52,24 +52,40 @@
 
 
 %section#responses
-  %div.page-header
+  %div.row.page-header
     %h3
       = t('communication.list_messages')
-  %div.panel.panel-default
+  
 
-    - @messages.objects.each do |message|
-      %div.panel-heading
-        %h4
-          = message.subject
-      %div.panel-body
-        %p
-          = message.content
-
-        %ul.list-inline
-          - message.people.each do |person|
-            %li
-              %span.badge.per_person{"data-container"=>"body", "data-toggle"=>"popover", "data-content"=>"#{link_to sprintf(t('communication.questions'),person.name), controller: "communications", action: "per_person", id: person.id}"}
-                = person.name
+  - @messages.objects.each do |message|
+    %div.row.preguntasRespuestas
+      %h5
+        = message.subject
+      %p 
+        %span.light
+          Katherina Malis preguntó:
+        = message.content
+      %ul.list-inline
+        %li
+          %span.light
+            Pregunta hecha a:
+        %li
+          %a
+            Giorgio Jakson
+        %li
+          %a
+            Perioc Los Palotes
+      %div.row
+        %div.col-md-1  
+          = image_tag('default-profile.png', class: "img-circle img-responsive") 
+        %div.col-md-11
+          %p
+            %i.fa.fa-quote-left.light
+            Respuesta Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            %i.fa.fa-quote-right.light
+          %p.text-right
+            %a
+              Giogio Jakson
 
 
   %div.text-center
