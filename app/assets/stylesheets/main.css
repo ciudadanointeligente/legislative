@@ -882,8 +882,10 @@ ts {
 }
 
 .preguntasRespuestas{
-  margin-bottom: 20px;
-  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .preguntasRespuestas:nth-child(odd){
@@ -892,6 +894,16 @@ ts {
 
 .preguntasRespuestas:nth-child(even){
   background-color: #F4F5DD;
+}
+
+.pagination > .active > a {
+  background-color: #E5E5C9;
+  border-color: #DDDDDD;
+}
+
+.pagination > .active > a:hover {
+  background-color: #D3D3AF;
+  border-color: #DDDDDD;
 }
 
 /*End Comunicacion*/
