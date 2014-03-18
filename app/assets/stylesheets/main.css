@@ -454,13 +454,26 @@ a.btn:visited {
   text-transform: uppercase;
 }
 
+.social-network {
+  margin-top: -19px;
+  margin-bottom: -19px;
+  text-align: center;
+}
+
+.social-network .fa-inverse {
+  color: #e6e6c9;
+}
+
+.social-network a {
+  color: #2f172f;
+}
 
 
 /*hot-space*/
 
 .hot-space {
   background: #ea6a56;
-  padding: 10px 0px 35px;
+  padding: 30px 0px 40px;
   margin-bottom: 20px;
 }
 
