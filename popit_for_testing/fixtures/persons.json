@@ -339,5 +339,110 @@
               "contact_details": [ ],
               "identifiers": [ ],
               "other_names": [ ]
+  },{
+    "name": "Gonzalo Arenas Hodar",
+    "slug": "gonzalo-arenas-hodar",
+    "_id": "5008048c7a317e126400046d",
+    "images": [{"url": "http://legislativo.votainteligente.cl/images/parlamentarios/134.png"}],
+    "represent": [
+              {
+                "district": "Distrito 2"
+              }
+              ],
+                "parliamentarian_period": [
+              {
+                "date": "2014-2018"
+              }
+              ],
+              "commissions": [
+              {
+              "permanent": "Revisadora de cuentas, Zonas extremas, Ciencia y tecnología, Derechos humanos"
+              }
+              ],
+              "birth_date": "1976-03-15",
+              "personal_info": [
+              {
+                "profession": "Abogado"
+              }
+              ],
+              "professional_info": [
+              {
+                "percentage_votes": "25,77",
+                "place": "Seguna mayoría"
+              }
+              ],
+              "memberships": [ ],
+              "links": [
+              {
+                "id": "530358b1882db86e720e51e3",
+                "note": "Twitter",
+                "url": "https://twitter.com/diputadoarenas"
+              },
+              {
+                "id": "530358b1882db86e720e51e2",
+                "note": "Facebook",
+                "url": "https://www.facebook.com/"
+              },
+              {
+                "id": "530358b1882db86e720e51e1",
+                "note": "Website",
+                "url": "https://twitter.com/diputadoarenas"
+              }
+              ],
+              "contact_details": [ ],
+              "identifiers": [ ],
+              "other_names": [ ],
+              "url": "http://localhost:3002/api/persons/5008048c7a317e126400046d",
+              "html_url": "http://localhost:3002/api/persons/5008048c7a317e126400046d"
+  }, {
+    "name": "Orlando Vargas Pizarro",
+    "slug": "orlando-vargas-pizarro",
+    "_id": "500804717a317e126400005e",
+    "images": [{"url": "http://legislativo.votainteligente.cl/images/parlamentarios/39.png"}],
+    "represent": [
+              {
+                "district": "Distrito 2"
+              }
+    ],
+    "parliamentarian_period": [
+              {
+                "date": "2014-2018"
+              }
+              ],
+    "commissions": [
+    {
+      "permanent": "Revisadora de cuentas, Zonas extremas, Ciencia y tecnología, Derechos humanos"
+    }
+    ],
+              "birth_date": "1976-03-15",
+              "personal_info": [
+              {
+                "profession": "Técnico Mecánico"
+              }
+              ],
+              "professional_info": [
+              {
+                "percentage_votes": "25,77",
+                "place": "Seguna mayoría"
+              }
+              ],
+              "memberships": [ ],
+              "links": [
+              {
+                "id": "530358b1882db86e720e51e2",
+                "note": "Facebook",
+                "url": "https://www.facebook.com/orlandovargas"
+              },
+              {
+                "id": "530358b1882db86e720e51e1",
+                "note": "Website",
+                "url": "https://es.wikipedia.org/wiki/Orlando_Vargas_Pizarro"
+              }
+              ],
+              "contact_details": [ ],
+              "identifiers": [ ],
+              "other_names": [ ],
+              "url": "http://localhost:3002/api/persons/500804717a317e126400005e",
+              "html_url": "http://localhost:3002/api/persons/500804717a317e126400005e"
   }
 ]
