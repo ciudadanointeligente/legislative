@@ -932,6 +932,10 @@ ts {
   margin-top: -15px;
 }
 
+.hero-space-bill .fa-download {
+  margin-right: 20px;
+}
+
 .title-header {
   color: #FFF;
   background-color: #67675A;
