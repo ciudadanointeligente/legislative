@@ -238,11 +238,11 @@ a.btn:visited {
 .label-default {
   background-color: #e6e6c9;
   position: relative;
-  border-radius: 0;
+  border-radius: 0px 2px 2px 0px;
   color: #a6a691;
   font-family: 'Raleway', Helvetica, sans-serif;
   text-transform: uppercase;
-  padding: .3em .6em .2em;
+  padding: .4em .7em .3em;
   font-size: 10px;
   font-weight: 700;
   margin-right: 9px;
@@ -259,13 +259,13 @@ a.btn:visited {
   pointer-events: none;
   border-right-color: #e6e6c9;
   border-width: 9px;
-  margin-top: -10px;
+  margin-top: -9px;
 }
 
 .label-default:after{
   content:"";
   position:absolute;
-  top:8px;
+  top: 7px;
   left:-1px;
   float:left;
   width:4px;
@@ -274,6 +274,10 @@ a.btn:visited {
   -webkit-border-radius:2px;
   border-radius:2px;
   background:#f9f9eb;
+}
+
+.hero-space-bill .label-default:after {
+  background: #462445;
 }
 
 .hero-space .label-default:after{

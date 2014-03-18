@@ -83,7 +83,8 @@
             = @bill.tags.join(',')
             %br/
           -if !@bill.authors.blank?
-            = t('bill.authors') + ':'
+            %span.light
+              = t('bill.authors') + ':'
             - authors = @bill.authors.map { |author| a = author.split(','); a[1].strip + ' ' + a[0].strip  }
             %span
               = authors.join(', ')
