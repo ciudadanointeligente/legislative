@@ -4,15 +4,14 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Bienvenido a Congreso abierto, <%= @user.username %></h1>
+    <h1><%= sprintf( t('email.body_header'), @user.username ) %></h1>
     <p>
-      Para confirmar tu suscripción al bill: <%= @bill %>,
-      por favor haz click en: 
-      <%= link_to('Click aca!', controller: 'user_subscriptions', action: 'confirmed', email_token: @user_subscription.email_token, host: 'www.congresoabierto.cl') %><br/>
+      <%= sprintf( t('email.body_content'), @bill) %>
+      <%= link_to('acá!', controller: 'user_subscriptions', action: 'confirmed', email_token: @user_subscription.email_token, host: ENV['root_url']) %>
     </p>
     <p>
       Visítanos en <%= @url %>
     </p>
-    <p>Gracias por suscribirte!</p>
+    <p><%= t('email.body_footer') %></p>
   </body>
 </html>
