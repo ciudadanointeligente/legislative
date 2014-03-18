@@ -93,6 +93,15 @@
             %a
               Giogio Jakson
 
+        %div.answers
+          - message.answers[0..1].each do |answer|
+            %div.answer
+              %p.answer.content
+                = answer.content
+              %p.answer.person
+                Todavía no está listo
+
+
 
   %div.text-center
     %ul.pagination
