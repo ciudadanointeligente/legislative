@@ -85,4 +85,10 @@
               = message.author_name
               %a{href: "/"} 
                 = t('main.view_more_questions')
+              - if !message.answers.blank?
+                %p.light
+                  Respuestas
+                %div
+                  =message.answers[0].content
+
           %i.fa.fa-quote-right.fa-2x
