@@ -2,6 +2,7 @@
  * They will automatically be included in application.css.
  * You can use Sass (SCSS) here: http://sass-lang.com */
 
+
 /*General*/
 
 body {
@@ -75,12 +76,17 @@ strong {
   margin-top: 10px;
 }
 
+input {
+  font-family: 'lato', sans-serif;
+}
+
 .center {
   text-align: center}
 .tab-content{
   padding-top: 10px}
 .search_separator{
   border-left: 1px solid #ccc}
+
 
 /* BUTTONS */
 
@@ -448,13 +454,26 @@ a.btn:visited {
   text-transform: uppercase;
 }
 
+.social-network {
+  margin-top: -19px;
+  margin-bottom: -19px;
+  text-align: center;
+}
+
+.social-network .fa-inverse {
+  color: #e6e6c9;
+}
+
+.social-network a {
+  color: #2f172f;
+}
 
 
 /*hot-space*/
 
 .hot-space {
   background: #ea6a56;
-  padding: 10px 0px 35px;
+  padding: 30px 0px 40px;
   margin-bottom: 20px;
 }
 
@@ -707,9 +726,9 @@ h4 span.nostyle {
   padding: 10px;
 }
 .message-box-right .form-control {
-  border: 1px solid #462445;
-  background-color: #6B506A;
-  color: #FFF;
+ background-color: #462445;
+    border: 1px solid #6B506A;
+    color: #E6E6C9 !important;
 }
 .message-box-right .form-control::-webkit-input-placeholder {
   color: #FFF;
@@ -722,6 +741,184 @@ h4 span.nostyle {
   background-image: none;
   background-color: #FFF !important;
 }
+
+.search-field {
+  height: 42px;
+  width: 150px;
+  background-color: #3E1F3E;
+  border: 1px solid #6B506A;
+}
+
+.search-field input.default{
+  height: 35px !important;
+  background-color: #3E1F3E;
+  border: none!important;
+  color: #A6A691!important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset!important;
+  padding-left: 12px!important;
+  padding-top: 10px!important;
+
+}
+
+.form-control::-moz-placeholder {
+  color: #A6A691!important;
+}
+
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+  font-family: 'lato', sans-serif !important;
+  color: #E0DFC4;
+  background-color: #3E1F3E;
+}
+
+.form-group.tab-content .chosen-container-active .chosen-choices li.search-field input[type=text] {
+color: #C8D39C!important;
+}
+
+
+.chosen-container .chosen-results li.no-results {
+    background: none;
+    background-color: #3E1F3E!important;
+    display: list-item;
+}
+
+
+
+.tituloFormulario h4 {
+color: #E6E6C9;
+}
+.chosen-resul
+ts {
+  color: #67675A;
+  padding-top: 5px;
+}
+
+.form-comunication {
+  color: #E6E6C9 !important;
+
+}
+
+.message-box-right .form-control {
+  color: #E6E6C9 !important;
+}
+
+.message-box-left .input-group-addon {
+  background-color: #3E1F3E;
+  border-left: 1px solid #6B506A;
+  height: 2px;
+}
+
+
+
+.search-field.chosen-container-multi .chosen-choices li.search-field input[type="text"]{
+  color: #4E2D4D!important;
+}
+
+.chosen-choices ul{
+  background-color: #3E1F3E !important;
+  width: 200px;
+  border: none;
+}
+
+
+
+.chosen-container .chosen-container-multi{
+  border: none;
+}
+
+.chosen-container-multi .chosen-choices {
+  background-color: #3E1F3E !important;
+ /* border: none!important;*/
+  background-image: none!important;
+   border: 1px solid #6B506A!important;
+   border-radius: 4px!important;
+}
+
+.search-field {
+  width: 270px;
+  color: #CAC6B2;
+  border: none!important;
+}
+
+#author_name{
+  background-color: #3E1F3E;
+  border: 1px solid #6B506A;
+  color: #F9F9EB !important;
+}
+
+#author_email{
+  background-color: #3E1F3E;
+  border: 1px solid #6B506A;
+  color: #F9F9EB !important;
+}
+
+.default{
+  background-color: #3E1F3E !important; 
+  color: #E6E6C9!important;
+  border: 1px solid #6B506A;
+}
+
+.message-box-left .input-group-addon {
+    color: #6B506A;
+}
+
+.chosen-results {
+  background-color: #3E1F3E !important;
+}
+
+.chosen-drop {
+  background-color: #3E1F3E !important;
+}
+
+.chosen-choices{
+  background-color: #3E1F3E !important;
+}
+
+.panel-default .panel-heading {
+    background-color: #E5E5C9 !important;
+    color: #67675A !important;
+}
+
+.page-header {
+    border-bottom: none;
+  }
+.panel-body {
+  background-color: #E6E6C9;
+}
+
+.destacadoPregunta {
+  background-color: #E5E5C9;
+}
+
+.panel-preguntale{
+  background-color: #E5E5C9;
+  margin-bottom: 50px;
+}
+
+.preguntasRespuestas{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.preguntasRespuestas:nth-child(odd){
+  background-color: #E5E5C9;
+}
+
+.preguntasRespuestas:nth-child(even){
+  background-color: #F4F5DD;
+}
+
+.pagination > .active > a {
+  background-color: #E5E5C9;
+  border-color: #DDDDDD;
+}
+
+.pagination > .active > a:hover {
+  background-color: #D3D3AF;
+  border-color: #DDDDDD;
+}
+
 /*End Comunicacion*/
 
 
@@ -979,6 +1176,7 @@ svg.graph .labels.y-labels {
   }
   .form-control {
     height: 50px;
+
   }
 }
 
