@@ -235,9 +235,11 @@ es:
     represent: 'Representa:'
     form_keyword: Palabra clave
     form_chamber: Cámara
+    form_name: Nombre
     form_region: Región
     form_party: Partido
     placeholder_keyword: 'Nombre, comuna o región'
+    placeholder_name: Ingrese un nombre o apellido
     placeholder_region: Ingrese una comuna o región
     placeholder_party: Ingrese un partido político
     askthem: Preguntales
