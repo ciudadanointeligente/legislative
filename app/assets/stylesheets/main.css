@@ -819,10 +819,6 @@ ts {
   border: none!important;
 }
 
-/*.prueba {
-  height: 50px;
-}*/
-
 #author_name{
   background-color: #3E1F3E;
   border: 1px solid #6B506A;
@@ -857,10 +853,6 @@ ts {
   background-color: #3E1F3E !important;
 }
 
-/*.form-control::-moz-placeholder {
-    color: #6B506A;
-}*/
-
 .panel-default .panel-heading {
     background-color: #E5E5C9 !important;
     color: #67675A !important;
@@ -871,6 +863,28 @@ ts {
   }
 .panel-body {
   background-color: #E6E6C9;
+}
+
+.destacadoPregunta {
+  background-color: #E5E5C9;
+}
+
+.panel-preguntale{
+  background-color: #E5E5C9;
+  margin-bottom: 50px;
+}
+
+.preguntasRespuestas{
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.preguntasRespuestas:nth-child(odd){
+  background-color: #E5E5C9;
+}
+
+.preguntasRespuestas:nth-child(even){
+  background-color: #F4F5DD;
 }
 
 /*End Comunicacion*/
