@@ -2,5 +2,6 @@
   %div.container
     %h3.text-center.hot-title
       = t('main.hot_projects')
+      %i.fa.fa-bell-o
     %div.row
       = render :partial => "hot_bill", collection: @hot_bills
