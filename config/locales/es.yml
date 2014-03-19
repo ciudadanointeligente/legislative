@@ -54,8 +54,8 @@ es:
     bill: Proyecto de ley 
     bills: Proyectos de ley
     persons: Autores
-    current_priority: 'Urgencia actual:'
-    bill_type: 'Tipo de proyecto:'
+    current_priority: Urgencia actual
+    bill_type: 'Tipo de proyecto'
     download_as_excel: Descargar como Excel
     all_the_types: Todos los tipos
     all_the_stages: Todas las etapas
@@ -63,14 +63,14 @@ es:
     all_the_priorities: Todas las urgencias
     quick: Vista rápida
     placeholder_search_for: Ingresa una palabra clave
-    bulletin: 'Boletín:'
+    bulletin: 'Boletín'
     placeholder_bulletin: Ingresa nro de boletín
-    stage: 'Etapa:'
+    stage: 'Etapa'
     creation_date: 'Fecha de ingreso: '
     initiative: 'Iniciativa: '
-    creation_date_min: 'Fecha de ingreso (min):'
-    creation_date_max: 'Fecha de ingreso (max):'
-    initial_chamber: 'Cámara de origen:'
+    creation_date_min: 'Fecha de ingreso (min)'
+    creation_date_max: 'Fecha de ingreso (max)'
+    initial_chamber: 'Cámara de origen'
     author: Autor
     placeholder_author: Ingresa el nombre de un autor
     there_are_no_results: No hay resultados para esta búsqueda
@@ -233,8 +233,15 @@ es:
     title: Congresistas
     title_search: Búsqueda de Congresistas
     represent: 'Representa:'
-    search_for: 'Buscar por:'
-    placeholder_search_for: 'Nombre, comuna o region'
+    form_keyword: Palabra clave
+    form_chamber: Cámara
+    form_name: Nombre
+    form_region: Región
+    form_party: Partido
+    placeholder_keyword: 'Nombre, comuna o región'
+    placeholder_name: Ingrese un nombre o apellido
+    placeholder_region: Ingrese una comuna o región
+    placeholder_party: Ingrese un partido político
     askthem: Preguntales
     district: 'Distrito: '
     region: 'Región: '
