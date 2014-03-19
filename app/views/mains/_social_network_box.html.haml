@@ -1,10 +1,14 @@
 %div.socialnetwork-home
-  %div.row
-    %div.col-md-2.col-md-offset-4.col-xs-6.text-right
+  %ul.social-network.list-inline
+    %li
       - url = 'https://twitter.com/share?url='+request.original_url+'&via=ciudadanoi&hashtags='+ENV['twitter_tags']+'&text=Bienvenido a tu congreso online, entra sin pedir permiso'
       %a{'href' => '#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
-        %i.fa.fa-twitter.fa-2x
-    %div.col-md-6.col-xs-6
+        %span.fa-stack.fa-lg
+          %i.fa.fa-circle.fa-stack-2x
+          %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+    %li
       - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
       %a{'href'=> '#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
-        %i.fa.fa-facebook.fa-2x
+        %span.fa-stack.fa-lg
+          %i.fa.fa-circle.fa-stack-2x
+          %i.fa.fa-facebook.fa-stack-1x.fa-inverse

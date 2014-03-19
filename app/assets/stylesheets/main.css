@@ -241,6 +241,10 @@ a.btn:visited {
 
 /*Labels*/
 
+.label {
+  color: #F5F5DD;
+}
+
 .label-default {
   background-color: #e6e6c9;
   position: relative;
@@ -296,6 +300,10 @@ a.btn:visited {
 
 .list-inline>li {
   padding-left: 0px;
+}
+
+.label-danger {
+  background-color: #ea6a56;
 }
 
 /*Menu*/
@@ -454,19 +462,44 @@ a.btn:visited {
   text-transform: uppercase;
 }
 
+.social-network {
+  margin-top: -19px;
+  margin-bottom: -19px;
+  text-align: center;
+}
+
+.social-network .fa-inverse {
+  color: #e6e6c9;
+}
+
+.social-network a {
+  color: #2f172f;
+}
+
+.social-network .fa-inverse:hover {
+  color: #2f172f;
+}
+
+.social-network a:hover {
+  color: #e6e6c9;
+}
 
 
 /*hot-space*/
 
 .hot-space {
   background: #ea6a56;
-  padding: 10px 0px 35px;
+  padding: 30px 0px 40px;
   margin-bottom: 20px;
+}
+
+.hot-space p {
+  line-height: 16px;
 }
 
 .hidden-xs.subscription {
     float: right;
-    margin-top: -31px;
+    margin-top: -26px;
 }
 
 .hot-space a {
@@ -718,11 +751,13 @@ h4 span.nostyle {
     color: #E6E6C9 !important;
 }
 .message-box-right .form-control::-webkit-input-placeholder {
-  color: #FFF;
+  color: #E6E6C9;
 }
+
 .message-box-right .form-control:-moz-placeholder {
-  color: #FFF;
+  color: #E6E6C9;
 }
+
 /*chosen*/
 .chosen-container-multi .chosen-choices {
   background-image: none;
@@ -906,6 +941,9 @@ ts {
   border-color: #DDDDDD;
 }
 
+.form-control#subject {
+  color: #F9F9EB!important;
+}
 /*End Comunicacion*/
 
 
@@ -917,6 +955,10 @@ ts {
   background: #462445;
   color: #e6e6c9;
   margin-top: -15px;
+}
+
+.hero-space-bill .fa-download {
+  margin-right: 20px;
 }
 
 .title-header {
@@ -1146,6 +1188,7 @@ svg.graph .labels.y-labels {
 
   h5 {
     font-size: 14px;
+    line-height: 1.2;
   }
 
   h6 {

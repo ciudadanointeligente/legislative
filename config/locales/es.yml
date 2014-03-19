@@ -46,7 +46,7 @@ es:
     session: Sesión
     legislature: Legislatura
     view_previous_agendas: Ver tablas anteriores
-    hot_projects: Proyectos contingentes
+    hot_projects: Proyectos urgentes
   search:
     search_title: Búsqueda
     search_for: 'Buscar por:'
@@ -114,7 +114,7 @@ es:
     comments: Comentarios
     title_event: EVENTOS DEL PROYECTO
     download_history: Descargar historial
-    view_law: Ver ley
+    view_law: Ver ley 
     view_documents: Ver documentos
     more_recents: Más recientes
     less_recents: Menos reciente
