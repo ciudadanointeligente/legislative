@@ -38,7 +38,7 @@
                   - @congressmen.persons.each do |congressmen|
                     - url = URI.parse(congressmen.popit_api_uri)
                     - compare_path = url.path.split('/')
-                    - if compare_path[4] == params[:id]
+                    - if compare_path.last == params[:id]
                       %option{:value => congressmen.popit_api_uri, :selected => 'selected'}
                         =congressmen.name 
                     - else
