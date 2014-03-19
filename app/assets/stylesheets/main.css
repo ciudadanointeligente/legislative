@@ -468,6 +468,14 @@ a.btn:visited {
   color: #2f172f;
 }
 
+.social-network .fa-inverse:hover {
+  color: #2f172f;
+}
+
+.social-network a:hover {
+  color: #e6e6c9;
+}
+
 
 /*hot-space*/
 
@@ -731,11 +739,13 @@ h4 span.nostyle {
     color: #E6E6C9 !important;
 }
 .message-box-right .form-control::-webkit-input-placeholder {
-  color: #FFF;
+  color: #E6E6C9;
 }
+
 .message-box-right .form-control:-moz-placeholder {
-  color: #FFF;
+  color: #E6E6C9;
 }
+
 /*chosen*/
 .chosen-container-multi .chosen-choices {
   background-image: none;
