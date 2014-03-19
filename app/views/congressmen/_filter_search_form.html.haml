@@ -15,8 +15,8 @@
       %option{:value => "Senado", selected: params[:chamber] == "Senado"}= 'Senado'
 
   %div.form-group
-    = label_tag :party, t('congressmen.form_party')
-    = text_field_tag :party, params[:party], :class => 'form-control', :placeholder => t('congressmen.placeholder_party'), :onfocus => "ga('send','congressmen_filters','focus_party')"
+    = label_tag :organizations, t('congressmen.form_party')
+    = text_field_tag :organizations, params[:organizations], :class => 'form-control', :placeholder => t('congressmen.placeholder_party'), :onfocus => "ga('send','congressmen_filters','focus_party')"
 
   %input{"type" => "hidden", "name" => "congressmen", "value" => 2}
 
