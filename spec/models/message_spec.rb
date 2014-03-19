@@ -40,6 +40,8 @@ describe LegislativeMessageCollection do
     message.id.should eql 1
     message.author_name.should eql "autor 1"
     message.author_email.should eql "test@ciudadanointeligente.org"
+    message.answers.length.should eql 1
+    message.answers[0].should be_an_instance_of LegislativeAnswerRepresenter
   end
   it "gets the parlamentarians" do
     value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_one_message.yaml )
