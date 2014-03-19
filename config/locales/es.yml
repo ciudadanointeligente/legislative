@@ -6,7 +6,7 @@ es:
     home: Portada
     search: Búsqueda
     glossary: Glosario
-    communication: Preguntales
+    communication: Pregúntales
     disclosure: Declaraciones
     congressmen: Congresistas
     tables: Tablas
@@ -41,7 +41,7 @@ es:
     high_chamber: Senado
     low_chamber: Cámara de diputados
     last_responses: Últimas respuestas
-    last_questions: Últimas Preguntas
+    last_questions: Últimas preguntas
     view_more_questions: Ver más preguntas
     session: Sesión
     legislature: Legislatura
@@ -242,7 +242,7 @@ es:
     placeholder_name: Ingrese un nombre o apellido
     placeholder_region: Ingrese una comuna o región
     placeholder_party: Ingrese un partido político
-    askthem: Preguntales
+    askthem: Pregúntales
     district: 'Distrito: '
     region: 'Región: '
     comuna: 'Comuna: '
