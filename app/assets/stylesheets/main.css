@@ -241,6 +241,10 @@ a.btn:visited {
 
 /*Labels*/
 
+.label {
+  color: #F5F5DD;
+}
+
 .label-default {
   background-color: #e6e6c9;
   position: relative;
@@ -296,6 +300,10 @@ a.btn:visited {
 
 .list-inline>li {
   padding-left: 0px;
+}
+
+.label-danger {
+  background-color: #ea6a56;
 }
 
 /*Menu*/
@@ -468,6 +476,14 @@ a.btn:visited {
   color: #2f172f;
 }
 
+.social-network .fa-inverse:hover {
+  color: #2f172f;
+}
+
+.social-network a:hover {
+  color: #e6e6c9;
+}
+
 
 /*hot-space*/
 
@@ -477,9 +493,13 @@ a.btn:visited {
   margin-bottom: 20px;
 }
 
+.hot-space p {
+  line-height: 16px;
+}
+
 .hidden-xs.subscription {
     float: right;
-    margin-top: -31px;
+    margin-top: -26px;
 }
 
 .hot-space a {
@@ -731,11 +751,13 @@ h4 span.nostyle {
     color: #E6E6C9 !important;
 }
 .message-box-right .form-control::-webkit-input-placeholder {
-  color: #FFF;
+  color: #E6E6C9;
 }
+
 .message-box-right .form-control:-moz-placeholder {
-  color: #FFF;
+  color: #E6E6C9;
 }
+
 /*chosen*/
 .chosen-container-multi .chosen-choices {
   background-image: none;
@@ -919,6 +941,9 @@ ts {
   border-color: #DDDDDD;
 }
 
+.form-control#subject {
+  color: #F9F9EB!important;
+}
 /*End Comunicacion*/
 
 
@@ -1160,6 +1185,7 @@ svg.graph .labels.y-labels {
 
   h5 {
     font-size: 14px;
+    line-height: 1.2;
   }
 
   h6 {
