@@ -341,3 +341,5 @@ es:
     body_header: 'Bienvenido a Congreso abierto, %s'
     body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
     body_footer: 'Atte el equipo de Congreso abierto'
+  communications:
+    confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'

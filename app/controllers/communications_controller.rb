@@ -30,6 +30,8 @@ class CommunicationsController < ApplicationController
     @message.author_name = params[:author_name]
     @message.author_email = params[:author_email]
     @message.push_to_api
+
+    flash[:notice] = t('communications.confirmation_mail_sent')
   end
   def per_person
     id = params[:id]
