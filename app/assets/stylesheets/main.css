@@ -241,6 +241,10 @@ a.btn:visited {
 
 /*Labels*/
 
+.label {
+  color: #F5F5DD;
+}
+
 .label-default {
   background-color: #e6e6c9;
   position: relative;
@@ -296,6 +300,10 @@ a.btn:visited {
 
 .list-inline>li {
   padding-left: 0px;
+}
+
+.label-danger {
+  background-color: #ea6a56;
 }
 
 /*Menu*/
@@ -485,9 +493,13 @@ a.btn:visited {
   margin-bottom: 20px;
 }
 
+.hot-space p {
+  line-height: 16px;
+}
+
 .hidden-xs.subscription {
     float: right;
-    margin-top: -31px;
+    margin-top: -26px;
 }
 
 .hot-space a {
@@ -1173,6 +1185,7 @@ svg.graph .labels.y-labels {
 
   h5 {
     font-size: 14px;
+    line-height: 1.2;
   }
 
   h6 {
