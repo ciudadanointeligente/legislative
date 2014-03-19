@@ -1144,15 +1144,14 @@ svg.graph .labels.y-labels {
 
 #footer {
   position: absolute;
-  bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 70px;
+  /*height: 70px;*/
   background: #462445;
   color: #A6A691;
   /*padding: 30px 0;
   margin-top: 60px;*/
-  height: 150px;
+  
   padding-top: 45px;
   margin-top: 100px;
 }
@@ -1165,9 +1164,7 @@ svg.graph .labels.y-labels {
   list-style: none;
 }
 
-.arregloFotter {
-    height: 110px;
-}
+
 
 /* SCREEN */
 
@@ -1219,6 +1216,13 @@ svg.graph .labels.y-labels {
   .btn-lg {
     height: 50px;
     padding: 10px 16px;
+  }
+  #footer {
+    bottom: 0px;
+    min-height: 150px;
+  }
+  .arregloFotter {
+    height: 110px;
   }
 }
 

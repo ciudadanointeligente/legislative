@@ -31,4 +31,6 @@ class LegislativeMessageRepresenter
 	property :author_name
 	property :author_email
 	collection :people, :class => PopitPerson, :extend => Popit::PersonRepresenter
+	collection :answers, :class => LegislativeAnswerRepresenter
+
 end

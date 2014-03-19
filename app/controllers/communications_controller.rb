@@ -45,6 +45,11 @@ class CommunicationsController < ApplicationController
       render text: "404 No lo encontramos", status: 404
     end
   end
+  def per_message
+    id = params[:id]
+    representer = LegislativeMessageRepresenter.new
+    @message = representer.get id
+  end
 
   private
   def set_current_instance
