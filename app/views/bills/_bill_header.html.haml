@@ -1,3 +1,7 @@
+:javascript
+  var billuid = '#{@bill.uid}',
+      path_bill = '#{t('routes.bills')}';
+
 %div.hero-space-bill
   %div.container
     %div.row
@@ -89,14 +93,14 @@
                   = author['name']
                 - if index < @authors.size - 1
                   = ', '
-            %br/
-          -if !@bill.tags.blank?
-            %ul.list-inline
-              - if !@bill.tags.blank?
-                - @bill.tags.each do |tag|
-                  %li
-                    %span.label.label-default= tag
-            %br/
+            
+        %ul.list-inline#myTags
+          - if @bill.tags != nil
+            - @bill.tags.each do |tag|
+              %li#preexisting
+                = tag
+            
+        %p
           -if ! @bill.bill_draft_link.blank?
             %a{'href'=> @bill.bill_draft_link}
               = t('bill.download_project')
