@@ -21,6 +21,7 @@ Legislative::Application.routes.draw do
 
     resources :communications do
       get 'per_person', on: :collection
+      get 'per_message', on: :collection
     end
 
     resources :congressmen do
