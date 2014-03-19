@@ -4,7 +4,8 @@ class CommunicationsController < ApplicationController
 
   def index
     @congressmen = PopitPersonCollection.new
-    @congressmen.get ENV['popit_persons'], 'application/json'
+    @congressmen.get ENV['popit_persons'] + '?per_page=200', 'application/json'
+    @congressmen.persons.sort! { |x,y| x.name <=> y.name }
     @messages = LegislativeMessageCollection.new
     page = 1
     if !params[:page].nil?
@@ -29,6 +30,8 @@ class CommunicationsController < ApplicationController
     @message.author_name = params[:author_name]
     @message.author_email = params[:author_email]
     @message.push_to_api
+
+    flash[:notice] = t('communications.confirmation_mail_sent')
   end
   def per_person
     id = params[:id]
@@ -42,7 +45,7 @@ class CommunicationsController < ApplicationController
       rescue
       end
     else
-      render text: "404 No lo encontramos", status: 404
+      render text: "404 no lo encontramos", status: 404
     end
   end
   def per_message
