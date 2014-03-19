@@ -577,6 +577,29 @@ animation: urgency 2s infinite;
   background: #f5f5dd;
 }
 
+.tituloTablaResumen{
+  margin-bottom: 15px;
+}
+
+.camaraTabla{
+  width: 20%;
+}
+
+.fechaTabla{
+  width: 20%;
+}
+.agendaTabla {
+  width: 60%;
+}
+
+.fechaTituloTabla {
+  margin-bottom: 20px;
+}
+
+.tablaResumen {
+  margin-bottom: 40px !important;
+}
+
 /*respuestas*/
 
 .home-answers-wraper {
