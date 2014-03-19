@@ -7,9 +7,9 @@ $(document).ready(function() {
     var tags_array = $("#myTags").tagit("assignedTags");
     var data = {tags: tags_array};
     $.ajax({
-        url: '/bills/' + billuid,
+        url: '/'+path_bill+'/'+billuid,
         type: 'PUT',
-        data: 'key1=value1&key2=value2'//data
+        data: data
     })
     .done(function(msg){
       console.log('done: '+msg)
