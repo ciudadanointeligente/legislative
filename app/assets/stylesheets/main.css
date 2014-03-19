@@ -972,6 +972,9 @@ ts {
   border-color: #DDDDDD;
 }
 
+.form-control#subject {
+  color: #F9F9EB!important;
+}
 /*End Comunicacion*/
 
 
