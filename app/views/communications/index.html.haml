@@ -36,8 +36,14 @@
                   = t('communication.choose_congressmen')
                 %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => t('communication.choose_congressmen')}
                   - @congressmen.persons.each do |congressmen|
-                    %option{:value => congressmen.popit_api_uri}
-                      =congressmen.name 
+                    - url = URI.parse(congressmen.popit_api_uri)
+                    - compare_path = url.path.split('/')
+                    - if compare_path.last == params[:id]
+                      %option{:value => congressmen.popit_api_uri, :selected => 'selected'}
+                        =congressmen.name 
+                    - else
+                      %option{:value => congressmen.popit_api_uri}
+                        =congressmen.name 
 
             %div.col-md-9.message-box-right.tituloFormulario
               %h4
