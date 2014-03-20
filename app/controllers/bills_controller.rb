@@ -87,7 +87,7 @@ class BillsController < ApplicationController
   # PUT /bills/1.json
   def update
     @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
-    
+
     !params[:tags].nil? ? @bill.tags = params[:tags] : @bill.tags = []
     @bill.put(ENV['billit_url'] + "#{params[:id]}", 'application/json')
     render text: params.to_s, status: 201
@@ -99,14 +99,23 @@ class BillsController < ApplicationController
   end
 
   def searches
-    if !params.nil? && params.length > 3 # default have 3 keys {'action'=>'index', 'controller'=>'searchs', "locale"=>"xx"}
+    if !params.nil? && params.length > 3
       @keywords = String.new
-      params.each do |param|
-        if param[0] != 'utf8' && param[0] != 'commit' && param[0] != 'format' && param[0] != 'locale' && param[0] != 'action'  && param[0] != 'controller'
-         @keywords << param[0] + '=' + param[1] + '&'
+      params.each do |key, value|
+        if key != 'utf8' && key != 'locale' && !(value.is_a? Array) && !value.blank?
+          @keywords << key + '=' + value + '&'
+        elsif (value.is_a? Array)
+          @keywords << key + '='
+          array_keyword = String.new
+          value.each_with_index do |priority_value, index|
+            array_keyword << priority_value
+            if index < value.size - 1
+              array_keyword << '|'
+            end
+          end
+          @keywords << array_keyword + '&'
         end
       end
-
       @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?#{URI.encode(@keywords)}", 'application/json')
     else
       @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?", 'application/json')
