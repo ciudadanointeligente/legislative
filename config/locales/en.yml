@@ -236,7 +236,7 @@ en:
     form_keyword: Keyword
     form_chamber: Chamber
     form_name: Name
-    form_region: Region
+    form_zone: Zone
     form_party: Party
     placeholder_keyword: 'Name, commune or region'
     placeholder_name: Insert a name
