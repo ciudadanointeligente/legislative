@@ -664,6 +664,14 @@ animation: urgency 2s infinite;
   margin-bottom: 40px !important;
 }
 
+.separadorBoletines{
+  font-weight: 900;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+
+
 /*respuestas*/
 
 .home-answers-wraper {
