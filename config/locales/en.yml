@@ -240,7 +240,7 @@ en:
     form_party: Party
     placeholder_keyword: 'Name, commune or region'
     placeholder_name: Insert a name
-    placeholder_region: Insert a commune or region
+    placeholder_zone: Insert a commune or region
     placeholder_party: Insert a party
     askthem: Ask them
     district: 'District: '

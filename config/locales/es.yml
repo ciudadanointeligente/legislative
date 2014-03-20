@@ -240,7 +240,7 @@ es:
     form_party: Partido
     placeholder_keyword: 'Nombre, comuna o región'
     placeholder_name: Ingrese un nombre o apellido
-    placeholder_region: Ingrese una comuna o región
+    placeholder_zone: Ingrese una comuna o región
     placeholder_party: Ingrese un partido político
     askthem: Pregúntales
     district: 'Distrito: '
