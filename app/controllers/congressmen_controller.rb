@@ -16,6 +16,10 @@ class CongressmenController < ApplicationController
     @congressmen = PopitPersonCollection.new
     @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
     @congressmen.persons.sort! { |x,y| x.name <=> y.name }
+
+    organizations = Popit::OrganizationCollection.new
+    organizations.get ENV['popit_organizations'], 'application/json'
+    @organizations = organizations.result
   end
 
   # GET /congressmen/1
@@ -72,6 +76,10 @@ class CongressmenController < ApplicationController
     # else
     #   @congressmen.get ENV['popit_search'], 'application/json'
     # end
+
+    organizations = Popit::OrganizationCollection.new
+    organizations.get ENV['popit_organizations'], 'application/json'
+    @organizations = organizations.result
 
     @title = t('congressmen.title_search') + ' - '
 

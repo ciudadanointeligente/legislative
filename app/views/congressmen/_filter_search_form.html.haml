@@ -16,9 +16,14 @@
 
   %div.form-group
     = label_tag :organizations, t('congressmen.form_party')
-    = text_field_tag :organizations, params[:organizations], :class => 'form-control', :placeholder => t('congressmen.placeholder_party'), :onfocus => "ga('send','congressmen_filters','focus_party')"
+    = select_tag "organizations", options_from_collection_for_select(@organizations, "name", "name", params[:organizations]), prompt: "Selecciona un partido político", class: 'form-control'
 
   %input{"type" => "hidden", "name" => "congressmen", "value" => 2}
 
   %button.btn.btn-primary.pull-right.btn-lg
     Buscar
+
+:javascript
+  $(document).ready(function(){
+    $(".chosen").chosen();
+  });
