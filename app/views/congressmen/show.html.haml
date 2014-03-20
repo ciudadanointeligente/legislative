@@ -10,7 +10,7 @@
   %div.col-md-4
     %ul.list-inline.pull-right
       %li
-        = link_to communications_path, class: "btn btn-warning btn-xs" do
+        = link_to url_for(controller: "communications", action: "index", id: @congressman.id), class: "btn btn-warning btn-xs" do
           %i.fa.fa-envelope-o
           = t('congressmen.askthem')
       %li
