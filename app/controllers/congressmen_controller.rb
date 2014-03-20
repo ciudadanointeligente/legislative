@@ -86,7 +86,7 @@ class CongressmenController < ApplicationController
     if !params.nil? && params.length > 3
       keywords = Hash.new
       params.each do |key, value|
-        if key != 'utf8' && key != 'congressmen' && key != 'locale' && key != 'format' && key != 'controller'
+        if key != 'utf8' && key != 'congressmen' && key != 'locale' && key != 'format' && key != 'controller' && key != 'action'
           keywords.merge!(key => value)
         end
       end
@@ -100,7 +100,11 @@ class CongressmenController < ApplicationController
     if !keywords.blank?
       query_keywords = "WHERE "
       keywords.each_with_index do |param, index|
-        query_keywords << param[0] + " LIKE '%" + param[1] + "%'"
+        if param[0] == 'zone'
+          query_keywords << "region LIKE '%" + param[1] + "%' OR commune LIKE '%" + param[1] + "%'"
+        else
+          query_keywords << param[0] + " LIKE '%" + param[1] + "%'"
+        end
         if index < keywords.size - 1
           query_keywords << ' AND '
         end
