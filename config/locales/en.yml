@@ -60,7 +60,6 @@ en:
     all_the_types: All the types
     all_the_stages: All the stages
     all_the_chambers: All the chambers
-    all_the_priorities: All the priorities
     quick: Quick view
     placeholder_search_for: Input a keyword
     bulletin: 'Bulletin'
@@ -73,6 +72,7 @@ en:
     initial_chamber: Initial chamber
     author: Author
     placeholder_author: Type an author's name
+    placeholder_priority: Types of priority
     there_are_no_results: There are no results for this search
     event_range: paperworks range
     bills_advanced_search: Advanced search
