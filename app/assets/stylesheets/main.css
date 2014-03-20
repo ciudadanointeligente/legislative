@@ -241,6 +241,13 @@ a.btn:visited {
 
 /*Labels*/
 
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: #A6A691;
+}
+
 .label {
   color: #F5F5DD;
 }
@@ -398,6 +405,25 @@ a.btn:visited {
 
 /*Inputs*/
 
+.hero-space .form-control::-webkit-input-placeholder { /* WebKit browsers */
+    font-family: 'Lato', sans-serif;
+}
+.hero-space .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-family: 'Lato', sans-serif;
+}
+.hero-space .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-family: 'Lato', sans-serif;
+}
+
+.hero-space .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-family: 'Lato', sans-serif;
+}
+
+.hero-space .form-control {
+  font-family: 'Lato', sans-serif;
+}
+
+
 .hero-space form {
   max-width: 550px;
   margin: 30px auto 0;
@@ -426,11 +452,12 @@ a.btn:visited {
 }
 
 .form-control {
-  color: #67675A;
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0);
   background-image: none;
-  border: none;
+  border: 2px solid #f9f9eb;
   border-radius: 0px;
+  box-shadow: none;
+  color: #67675a;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -548,6 +575,29 @@ animation: urgency 2s infinite;
   border-bottom: 9px solid #67675a;
   height: 350px;
   background: #f5f5dd;
+}
+
+.tituloTablaResumen{
+  margin-bottom: 15px;
+}
+
+.camaraTabla{
+  width: 20%;
+}
+
+.fechaTabla{
+  width: 20%;
+}
+.agendaTabla {
+  width: 60%;
+}
+
+.fechaTituloTabla {
+  margin-bottom: 20px;
+}
+
+.tablaResumen {
+  margin-bottom: 40px !important;
 }
 
 /*respuestas*/
@@ -697,7 +747,7 @@ span.paring {
 }
 
 .aside {
-  background: #CDCDB3;
+  background: #E6E6C9;
   padding: 20px;
 }
 
@@ -752,10 +802,12 @@ h4 span.nostyle {
 }
 .message-box-right .form-control::-webkit-input-placeholder {
   color: #E6E6C9;
+  font-family: 'Lato', sans-serif; 
 }
 
 .message-box-right .form-control:-moz-placeholder {
   color: #E6E6C9;
+  font-family: 'Lato', sans-serif; 
 }
 
 /*chosen*/
@@ -784,6 +836,7 @@ h4 span.nostyle {
 
 .form-control::-moz-placeholder {
   color: #A6A691!important;
+  font-family: 'Lato', sans-serif; 
 }
 
 .chosen-container-multi .chosen-choices li.search-field input[type="text"] {
@@ -863,8 +916,9 @@ ts {
 
 #author_name{
   background-color: #3E1F3E;
-  border: 1px solid #6B506A;
+  border: 2px solid #6B506A;
   color: #F9F9EB !important;
+  border-right: none;
 }
 
 #author_email{
@@ -946,6 +1000,41 @@ ts {
 }
 /*End Comunicacion*/
 
+/*Glosario*/
+
+.palabra{
+  padding:20px;
+  margin-bottom: 0px;
+}
+
+.palabra:nth-child(odd){
+  background-color: #E5E5C9;
+}
+
+.palabra:nth-child(even){
+  background-color: #F4F5DD;
+}
+
+.pagination > li > a{
+  background-color: #E5E5C9;
+  border-color: #C1C1B8;
+  color:  #67675A;
+}
+
+.pagination > li > a:hover  {
+  background-color: #D3D3AF;
+  border-color: #C1C1B8;
+}
+
+.botonMenuGlosario {
+  float: right;
+  margin-top: -30px;
+}
+
+.colorNaranjo {
+  color: #F4A458;
+}
+/*End Glosario*/
 
 /* BILLS*/
 
