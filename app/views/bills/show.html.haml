@@ -3,7 +3,7 @@
     - if ! @bill.paperworks.blank?
       %li
         %h4{name:'timeline'}
-          = t('bill.title_event')
+          = t('bill.timeline').upcase
     - if ! @bill.paperworks.blank?
       %li
         = link_to (url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls'), :onclick => "ga('send','download','download_bill_history_xls')" do
