@@ -11,6 +11,28 @@ describe LegislativeAnswerRepresenter do
 		answer.created.should eql DateTime.new(2014,3,17)
 		answer.id.should eql 1
 	end
+    it "loads the person who wrote the answer" do
+        json = '{
+                "content": "Hello I am an answer",
+                "created": "2014-03-17T00:00:00",
+                "id": 1,
+                "person": {
+                    "id": 1,
+                    "image": "",
+                    "name": "Gonzalo Arenas Hodar",
+                    "popit_id": "5008048c7a317e126400046d",
+                    "popit_url": "http://localhost:3002/api/persons/5008048c7a317e126400046d",
+                    "resource_uri": "http://localhost:3002/api/persons/5008048c7a317e126400046d",
+                    "summary": ""
+                },
+                "resource_uri": ""
+                }'
+        answer = LegislativeAnswerRepresenter.new
+        answer.from_json json
+        answer.content.should eql "Hello I am an answer"
+        answer.person.should be_an_instance_of PopitPerson
+        answer.person.name.should eql "Gonzalo Arenas Hodar"
+    end
 end
 
 describe LegislativeAnswerCollection do

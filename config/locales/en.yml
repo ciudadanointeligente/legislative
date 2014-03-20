@@ -60,7 +60,6 @@ en:
     all_the_types: All the types
     all_the_stages: All the stages
     all_the_chambers: All the chambers
-    all_the_priorities: All the priorities
     quick: Quick view
     placeholder_search_for: Input a keyword
     bulletin: 'Bulletin'
@@ -73,6 +72,7 @@ en:
     initial_chamber: Initial chamber
     author: Author
     placeholder_author: Type an author's name
+    placeholder_priority: Types of priority
     there_are_no_results: There are no results for this search
     event_range: paperworks range
     bills_advanced_search: Advanced search
@@ -112,7 +112,7 @@ en:
     directives: Directives
     remarks: Remarks
     comments: Comments
-    title_event: PROJECT PAPERWORKS
+    timeline: Project history
     download_history: Download history
     view_law: View law
     view_documents: View documents
@@ -236,11 +236,11 @@ en:
     form_keyword: Keyword
     form_chamber: Chamber
     form_name: Name
-    form_region: Region
+    form_zone: Zone
     form_party: Party
     placeholder_keyword: 'Name, commune or region'
     placeholder_name: Insert a name
-    placeholder_region: Insert a commune or region
+    placeholder_zone: Insert a commune or region
     placeholder_party: Insert a party
     askthem: Ask them
     district: 'District: '
