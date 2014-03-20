@@ -33,6 +33,7 @@ production:
   writeit_username: ~
   writeit_api_key:  ~
   writeit_messages_per_page: '20'
+  google_site_verification: ''
 
 development:
   root_url:   ~           # example: 'http://www.congresoabierto.cl'
@@ -64,6 +65,7 @@ development:
   writeit_username: ~ # example: 'admin'; writeit username
   writeit_api_key:  ~ # example: 'a'; writeit apikey
   writeit_messages_per_page: '5'
+  google_site_verification: ''
 
 test:
   root_url:  ~
