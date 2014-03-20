@@ -77,11 +77,9 @@ class CongressmenController < ApplicationController
 
     if !params.nil? && params.length > 3
       keywords = Hash.new
-      params.each do |param|
-        if param[0] != 'utf8' && param[0] != 'congressmen' && param[0] != 'format' && param[0] != 'locale' && param[0] != 'action'  && param[0] != 'controller'
-          if !param[1].blank?
-            keywords.merge!(param[0] => param[1])
-          end
+      params.each do |key, value|
+        if key != 'utf8' && key != 'congressmen' && key != 'locale' && key != 'format' && key != 'controller'&& !(value.is_a? Array) && !value.blank?
+          keywords.merge!(key => value)
         end
       end
     else
