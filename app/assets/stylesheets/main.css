@@ -433,7 +433,12 @@ label {
     -webkit-font-smoothing: antialiased;
 }
 
-/*FORM PREGUNTALES*/
+/*FORM COMUNICATION*/
+
+.form-comunication {
+  color: #e6e6c9;
+}
+
 .form-comunication .form-control::-webkit-input-placeholder { /* WebKit browsers */
     font-family: 'Lato', sans-serif;
     color: #A6A691;
@@ -462,10 +467,31 @@ label {
 }
 
 .form-comunication .chosen-container-multi .chosen-choices {
-  background-color: #3E1F3E ;
+  background-color: #3E1F3E!important;
   background-image: none;
   border: 2px solid #6B506A;
   height: 50px;
+}
+
+.form-comunication .chosen-container-multi .chosen-choices li.search-field input[type=text] {
+  height: 50px!important;
+  padding: 0px 0px 10px 0px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.form-comunication .form-group.tab-content .chosen-container-active .chosen-choices li.search-field input[type=text] {
+  color: #e6e6c9!important;
+}
+
+.form-comunication .chosen-container-multi .chosen-drop .result-selected {
+  display: list-item;
+  cursor: default;
+  color: #a6a691;
+}
+
+.form-comunication .chosen-container .chosen-drop {
+  border: 2px solid #6B506A;
 }
 
 .input-group-addon {
@@ -849,9 +875,6 @@ h4 span.nostyle {
 
 /*Comunicacion*/
 
-.form-comunication {
-  color: #FFF;
-}
 #communication .panel .panel-body {
   padding: 0;
 }
@@ -902,18 +925,11 @@ h4 span.nostyle {
   background-color: #3E1F3E;
 }
 
-.form-group.tab-content .chosen-container-active .chosen-choices li.search-field input[type=text] {
-color: #C8D39C!important;
-}
-
-
 .chosen-container .chosen-results li.no-results {
     background: none;
     background-color: #3E1F3E!important;
     display: list-item;
 }
-
-
 
 .tituloFormulario h4 {
 color: #E6E6C9;
