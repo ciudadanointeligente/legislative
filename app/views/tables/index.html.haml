@@ -3,6 +3,7 @@
   
 - @agendas.each do |agenda|
   %h5.tituloTablaResumen
+    %i.fa.fa-calendar
     Fecha
     %span.light.fechaTituloTabla=agenda['date']
   %table.table.table-striped.tablaResumen
@@ -16,6 +17,11 @@
         %td= agenda['chamber']
         %td= agenda['date']
         %td
-          - JSON.parse(agenda['bill_list']).uniq.each do |bill|
+          - JSON.parse(agenda['bill_list']).uniq.each_with_index do |bill,index|
             = link_to bill, bill_path(bill)
+            - if index < JSON.parse(agenda['bill_list']).uniq.size - 1
+              %span.light.separadorBoletines
+                = '*'
+
+
         
