@@ -13,7 +13,6 @@ class LegislativeAnswerRepresenter
     end
 
     def from_json(document,options={})
-        
         super
         self.created = Date.parse(self.created)
     end
@@ -21,4 +20,5 @@ class LegislativeAnswerRepresenter
     property :id
     property :content
     property :created
+    property :person, :class => PopitPerson, :extend => Popit::PersonRepresenter
 end
