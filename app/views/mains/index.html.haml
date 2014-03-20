@@ -28,7 +28,12 @@
               - if !message.answers.blank?
                 %p.light
                   Respuestas
-                %div
-                  =message.answers[0].content
+                  - message.answers[0..1].each do |answer|
+                    %div
+                      %span
+                        =answer.content
+                      %span
+                        =answer.person.name
+
 
           %i.fa.fa-quote-right.fa-2x
