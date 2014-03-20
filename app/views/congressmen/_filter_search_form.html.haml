@@ -4,8 +4,8 @@
     = select_tag "congressmen", options_from_collection_for_select(@congressmen.persons, "name", "name", params[:congressmen]), prompt: t('congressmen.placeholder_name'), class: 'form-control chosen'
 
   %div.form-group
-    = label_tag :region, t('congressmen.form_region')
-    = text_field_tag :region, params[:region], :class => 'form-control', :placeholder => t('congressmen.placeholder_region'), :onfocus => "ga('send','congressmen_filters','focus_region')"
+    = label_tag :zone, t('congressmen.form_zone')
+    = text_field_tag :zone, params[:zone], :class => 'form-control', :placeholder => t('congressmen.placeholder_zone'), :onfocus => "ga('send','congressmen_filters','focus_zone')"
 
   %div.form-group
     = label_tag :chamber, t('congressmen.form_chamber')
