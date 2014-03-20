@@ -1,9 +1,24 @@
-%div
-  = form_tag(t('routes.searches'), :method => 'get') do
-    = label_tag :q, t('congressmen.search_for')
-    %div.input-group
-      = text_field_tag :q, params[:q], :class => 'form-control', :placeholder => t('congressmen.placeholder_search_for'), :onfocus => "ga('send','congressmen','focus_search')"
-      %input{'type'=>'hidden', 'name'=>'congressmen', 'value'=>2}
-      %span.input-group-btn
-        %button.btn.btn-success.btn-lg
-          %i.fa.fa-search
+= form_tag(t('routes.searches'), :method => 'get') do
+  %div.form-group
+    = label_tag :name, t('congressmen.form_name')
+    = text_field_tag :name, params[:name], :class => 'form-control', :placeholder => t('congressmen.placeholder_name'), :onfocus => "ga('send','congressmen_filters','focus_name')"
+
+  %div.form-group
+    = label_tag :region, t('congressmen.form_region')
+    = text_field_tag :region, params[:region], :class => 'form-control', :placeholder => t('congressmen.placeholder_region'), :onfocus => "ga('send','congressmen_filters','focus_region')"
+
+  %div.form-group
+    = label_tag :chamber, t('congressmen.form_chamber')
+    %select{:name => "chamber", :class => "form-control", :onfocus => "ga('send','congressmen_filters','focus_chamber')"}
+      %option{:value => "", selected: params[:chamber] == ""}= 'Todas las cámaras'
+      %option{:value => "C.Diputados", selected: params[:chamber] == "C.Diputados"}= 'Cámara de diputados'
+      %option{:value => "Senado", selected: params[:chamber] == "Senado"}= 'Senado'
+
+  %div.form-group
+    = label_tag :organizations, t('congressmen.form_party')
+    = text_field_tag :organizations, params[:organizations], :class => 'form-control', :placeholder => t('congressmen.placeholder_party'), :onfocus => "ga('send','congressmen_filters','focus_party')"
+
+  %input{"type" => "hidden", "name" => "congressmen", "value" => 2}
+
+  %button.btn.btn-primary.pull-right.btn-lg
+    Buscar
