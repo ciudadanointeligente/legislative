@@ -11,8 +11,8 @@
     = label_tag :chamber, t('congressmen.form_chamber')
     %select{:name => "chamber", :class => "form-control", :onfocus => "ga('send','congressmen_filters','focus_chamber')"}
       %option{:value => "", selected: params[:chamber] == ""}= 'Todas las cámaras'
-      %option{:value => "C.Diputados", selected: params[:chamber] == "C.Diputados"}= 'Cámara de diputados'
-      %option{:value => "Senado", selected: params[:chamber] == "Senado"}= 'Senado'
+      %option{:value => "Diputado", selected: params[:chamber] == "C.Diputados"}= 'Cámara de diputados'
+      %option{:value => "Senador", selected: params[:chamber] == "Senado"}= 'Senado'
 
   %div.form-group
     = label_tag :organizations, t('congressmen.form_party')

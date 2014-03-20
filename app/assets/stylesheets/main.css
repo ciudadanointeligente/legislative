@@ -994,6 +994,18 @@ ts {
   background-color: #F4F5DD;
 }
 
+.response-separation {
+  padding: 15px 0px;
+}
+
+.response-separation:nth-child(odd){
+  background-color: #F4F5AD;
+}
+
+.response-separation:nth-child(even){
+  background-color: #E5E5C9;
+}
+
 .pagination > .active > a {
   background-color: #E5E5C9;
   border-color: #DDDDDD;
