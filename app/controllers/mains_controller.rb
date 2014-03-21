@@ -47,5 +47,7 @@ class MainsController < ApplicationController
     @congressmen = PopitPersonCollection.new
     @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
     @congressmen.persons.sort! { |x,y| x.name <=> y.name }
+
+    @hot_bills = Billit::BillCollectionPage.get(ENV['billit_url'] + "search?current_urgency=Simple&per_page=8", 'application/json').bills
   end
 end
