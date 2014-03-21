@@ -481,6 +481,10 @@ label {
   background: #3DB091;
 }
 
+.aside .chosen-container-multi .chosen-choices li.search-field input[type=text] {
+  height: 25px;
+}
+
 /*FORM COMUNICATION*/
 
 .form-comunication {
@@ -540,6 +544,10 @@ label {
 
 .form-comunication .chosen-container .chosen-drop {
   border: 2px solid #6B506A;
+}
+
+.form-comunication .chosen-container .chosen-results li.highlighted {
+  background: #3DB091;
 }
 
 .input-group-addon {
@@ -957,6 +965,27 @@ h4 span.nostyle {
   font-family: 'Lato', sans-serif; 
 }
 
+.questions {
+  background-color: #67675A;
+  border-radius: 6px 6px 0px 0px;
+  color: #E6E6C9;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+
+.answers {
+  padding: 15px 0;
+}
+
+.response-separation:nth-child(odd){
+  background-color: #E6E6C9;
+}
+
+.response-separation:nth-child(even){
+  background-color: #F5F5DD;
+}
+
+
 /*chosen*/
 .chosen-container-multi .chosen-choices {
   background-image: none;
@@ -971,7 +1000,6 @@ h4 span.nostyle {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset!important;
   padding-left: 12px!important;
   padding-top: 10px!important;
-
 }
 
 .form-control::-moz-placeholder {
@@ -1068,14 +1096,6 @@ ts {
 
 .response-separation {
   padding: 15px 0px;
-}
-
-.response-separation:nth-child(odd){
-  background-color: #F4F5AD;
-}
-
-.response-separation:nth-child(even){
-  background-color: #E5E5C9;
 }
 
 .pagination > .active > a {
