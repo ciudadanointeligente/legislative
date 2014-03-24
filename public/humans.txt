@@ -1,0 +1,44 @@
+/* TEAM */
+  Daniela Tejada
+  Contact: dtejada [at] ciudadanointeligente.org
+  Twitter: @ladanitejada
+  From: Santiago, Chile
+
+  Katherina Malis
+  Contact: kmalis [at] ciudadanointeligente.org
+  Twitter: 
+  From: Santiago, Chile
+
+  Catalina Margozzini
+  Contact: cmargozzini [at] ciudadanointeligente.org
+  Twitter: 
+  From: Santiago, Chile
+
+  Felipe Alvarez
+  Contact: falvarez [at] ciudadanointeligente.org
+  Twitter: @falvarez
+  From: Valdivia, Chile
+
+  Juan Pablo Pérez
+  Contact: jpperez [at] ciudadanointeligente.org
+  Twitter: @rezzo
+  From: Arica, Chile
+
+  Pedro Daire
+  Contact: pdaire [at] ciudadanointeligente.org
+  Twitter: @pdaire
+  From: Santiago, Chile
+
+  José Damián Garrido
+  Contact: dgarrido [at] ciudadanointeligente.org
+  Twitter: @jgarrido
+  From: Con-Con, Chile
+
+/* THANKS */
+  MySociety team
+  Practitioners (Cindy, Mario, César)
+  Greenpeace, Matías Asun
+  Libertad y Desarrollo, Constanza Hube
+  NGO Ciudadano Inteligente, Manuel Aris
+  Revista Que Pasa, Sebastián Rivas
+  Marcelo Pérez, Information Architect

@@ -17,23 +17,21 @@
           %div.row{'style'=>'background-color:#3E1F3E'}
             %div.col-md-3.message-box-left
               %div.form-group
-                %label{:for=>"author_name"}
-                  = t('communication.name')
+                %h5
+                  de:
                 %div.input-group
                   = text_field_tag :author_name, nil ,:class => "form-control", :placeholder=>t('communication.name')
                   %span.input-group-addon
                     %i.fa.fa-user
               %div.form-group
-                %label{:for=>"author_name"}
-                  = t('communication.email')
                 %div.input-group
                   = text_field_tag :author_email, nil ,:class => "form-control",:placeholder=>t('communication.email')
                   %span.input-group-addon
                     %i.fa.fa-envelope-o
 
               %div.form-group.tab-content
-                %label{:for=>"author_name"}
-                  = t('communication.choose_congressmen')
+                %h5
+                  para:
                 %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => t('communication.choose_congressmen')}
                   - @congressmen.persons.each do |congressmen|
                     - url = URI.parse(congressmen.popit_api_uri)
@@ -46,7 +44,7 @@
                         =congressmen.name 
 
             %div.col-md-9.message-box-right.tituloFormulario
-              %h4
+              %h5
                 = t('communication.writte_message')
               
               %div.form-group
@@ -64,24 +62,25 @@
   
 
   - @messages.objects.each do |message|
-    %div.row.preguntasRespuestas
-      %h5
-        = message.subject
-      %p 
-        %span.light
-          = message.author_name + " preguntó:"
-        = message.content
-      %ul.list-inline
-        %li
+    %div.row.questions
+      %div.col-md-12
+        %h5
+          = message.subject
+        %p 
           %span.light
-            Pregunta hecha a:
-        - message.people.each do |person|
+            = message.author_name + " preguntó:"
+          = message.content
+        %ul.list-inline
           %li
-            %a
-              = person.name
-
+            %span.light
+              Pregunta hecha a:
+          - message.people.each do |person|
+            %li
+              %a
+                = person.name
+    %div
       - message.answers[0..1].each do |answer|
-        %div.row
+        %div.row.response-separation.answers
           %div.col-md-1  
             = image_tag('default-profile.png', class: "img-circle img-responsive") 
           %div.col-md-11
@@ -93,23 +92,23 @@
               %a
                 = answer.person.name
 
-  %div.text-center
-    %ul.pagination
-      %li
-        %a{:href=>'#'}
-          &laquo;
+  -if @pagination['total_pages'] > 1
+    %div.text-center
+      %ul.pagination
+        %li
+          %a{:href=>'#'}
+            &laquo;
 
+        - (1..@pagination['total_pages']).each do |page|
+          %li.active
+            %a{:href=>'?page=' + page.to_s}
+              = page
 
-      - (1..@pagination['total_pages']).each do |page|
-        %li.active
-          %a{:href=>'?page=' + page.to_s}
-            = page
-      
-      %li.disabled
-        %a{:href=>'#'}
-          &raquo;
+        %li
+          %a{:href=>'#'}
+            &raquo;
 
-%script{src: "http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.jquery.min.js"}
+/%script{src: "http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.jquery.min.js"}
 :javascript
   $(document).ready(function(){
     $(".chosen").chosen();

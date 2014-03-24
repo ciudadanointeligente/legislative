@@ -16,6 +16,10 @@ class CongressmenController < ApplicationController
     @congressmen = PopitPersonCollection.new
     @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
     @congressmen.persons.sort! { |x,y| x.name <=> y.name }
+
+    organizations = Popit::OrganizationCollection.new
+    organizations.get ENV['popit_organizations'], 'application/json'
+    @organizations = organizations.result
   end
 
   # GET /congressmen/1
@@ -73,15 +77,17 @@ class CongressmenController < ApplicationController
     #   @congressmen.get ENV['popit_search'], 'application/json'
     # end
 
+    organizations = Popit::OrganizationCollection.new
+    organizations.get ENV['popit_organizations'], 'application/json'
+    @organizations = organizations.result
+
     @title = t('congressmen.title_search') + ' - '
 
     if !params.nil? && params.length > 3
       keywords = Hash.new
-      params.each do |param|
-        if param[0] != 'utf8' && param[0] != 'congressmen' && param[0] != 'format' && param[0] != 'locale' && param[0] != 'action'  && param[0] != 'controller'
-          if !param[1].blank?
-            keywords.merge!(param[0] => param[1])
-          end
+      params.each do |key, value|
+        if key != 'utf8' && key != 'congressmen' && key != 'locale' && key != 'format' && key != 'controller' && key != 'action'
+          keywords.merge!(key => value)
         end
       end
     else
@@ -94,7 +100,11 @@ class CongressmenController < ApplicationController
     if !keywords.blank?
       query_keywords = "WHERE "
       keywords.each_with_index do |param, index|
-        query_keywords << param[0] + " LIKE '%" + param[1] + "%'"
+        if param[0] == 'zone'
+          query_keywords << "region LIKE '%" + param[1] + "%' OR commune LIKE '%" + param[1] + "%'"
+        else
+          query_keywords << param[0] + " LIKE '%" + param[1] + "%'"
+        end
         if index < keywords.size - 1
           query_keywords << ' AND '
         end

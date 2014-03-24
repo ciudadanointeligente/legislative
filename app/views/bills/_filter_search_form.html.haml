@@ -25,7 +25,7 @@
 
   /
     %div.form-group
-      = label_tag :initial_chamber, t('search.bill_type')
+      = label_tag :bill_type, t('search.bill_type')
       %select{:name => "status", :class => "form-control", :onfocus => "ga('send','bills_filters','focus_type')"}
         %option{:value => "", selected: params[:initial_chamber] == ""}= t 'search.all_the_types'
         %option{:value => "Publicado", selected: params[:initial_chamber] == "Publicado"}= 'Ley'
@@ -41,13 +41,18 @@
           %option{:value => chamber, selected: params[:initial_chamber] == chamber}= chamber
 
   %div.form-group
-    = label_tag :initial_chamber, t('search.current_priority')
-    %select{:name => "current_priority", :class => "form-control", :onfocus => "ga('send','bills_filters','focus_priority')"}
-      %option{:value => "", selected: params[:current_priority] == ""}= t 'search.all_the_priorities'
+    = label_tag :current_priority, t('search.current_priority')
+    %select{:name => "current_priority[]", :class => "form-control chosen", :multiple => "multiple", :'data-placeholder' => t('search.placeholder_priority'), :onfocus => "ga('send','bills_filters','focus_priority')"}
+      %option{:value => "", selected: params[:current_priority] == ""}
       - @priorities = Billit::Bill.class_variable_get(:@@current_priority_valid_values)
       - if @priorities != nil
         - @priorities.each do |priority|
-          %option{:value => priority, selected: params[:current_priority] == priority}= priority
+          - if !params[:current_priority].blank?
+            - params[:current_priority].each do |priority_in_param|
+              - if priority_in_param == priority
+                %option{:value => priority, selected: "selected"}= priority
+          - else
+            %option{:value => priority}= priority
 
   %div.form-group
     = label_tag :creation_date_min, t('search.creation_date_min')
@@ -71,3 +76,8 @@
 
   %button.btn.btn-primary.pull-right.btn-lg
     Buscar
+
+:javascript
+  $(document).ready(function(){
+    $(".chosen").chosen();
+  })

@@ -1,24 +1,29 @@
 = form_tag(t('routes.searches'), :method => 'get') do
   %div.form-group
     = label_tag :name, t('congressmen.form_name')
-    = text_field_tag :name, params[:name], :class => 'form-control', :placeholder => t('congressmen.placeholder_name'), :onfocus => "ga('send','congressmen_filters','focus_name')"
+    = select_tag "congressmen", options_from_collection_for_select(@congressmen.persons, "name", "name", params[:congressmen]), prompt: t('congressmen.placeholder_name'), class: 'form-control chosen'
 
   %div.form-group
-    = label_tag :region, t('congressmen.form_region')
-    = text_field_tag :region, params[:region], :class => 'form-control', :placeholder => t('congressmen.placeholder_region'), :onfocus => "ga('send','congressmen_filters','focus_region')"
+    = label_tag :zone, t('congressmen.form_zone')
+    = text_field_tag :zone, params[:zone], :class => 'form-control', :placeholder => t('congressmen.placeholder_zone'), :onfocus => "ga('send','congressmen_filters','focus_zone')"
 
   %div.form-group
     = label_tag :chamber, t('congressmen.form_chamber')
     %select{:name => "chamber", :class => "form-control", :onfocus => "ga('send','congressmen_filters','focus_chamber')"}
       %option{:value => "", selected: params[:chamber] == ""}= 'Todas las cámaras'
-      %option{:value => "C.Diputados", selected: params[:chamber] == "C.Diputados"}= 'Cámara de diputados'
-      %option{:value => "Senado", selected: params[:chamber] == "Senado"}= 'Senado'
+      %option{:value => "Diputado", selected: params[:chamber] == "C.Diputados"}= 'Cámara de diputados'
+      %option{:value => "Senador", selected: params[:chamber] == "Senado"}= 'Senado'
 
   %div.form-group
     = label_tag :organizations, t('congressmen.form_party')
-    = text_field_tag :organizations, params[:organizations], :class => 'form-control', :placeholder => t('congressmen.placeholder_party'), :onfocus => "ga('send','congressmen_filters','focus_party')"
+    = select_tag "organizations", options_from_collection_for_select(@organizations, "name", "name", params[:organizations]), prompt: t('congressmen.placeholder_party'), class: 'form-control'
 
   %input{"type" => "hidden", "name" => "congressmen", "value" => 2}
 
   %button.btn.btn-primary.pull-right.btn-lg
     Buscar
+
+:javascript
+  $(document).ready(function(){
+    $(".chosen").chosen();
+  });
