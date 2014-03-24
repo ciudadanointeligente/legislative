@@ -1,5 +1,5 @@
 require 'billit_representers/representers/table_collection_representer'
 
-class AgendaCollection
+class TableCollection
   include Billit::TableCollectionRepresenter
 end

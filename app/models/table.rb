@@ -1,5 +1,5 @@
 require 'billit_representers/representers/table_representer'
 
-class Agenda
+class Table
   include Billit::TableRepresenter
 end

@@ -2,7 +2,7 @@ require 'json'
 require 'rest_client'
 
 class AgendasController < ApplicationController
-  before_action :set_agenda, only: [:show, :edit, :update, :destroy]
+  before_action :set_table, only: [:show, :edit, :update, :destroy]
   
   # GET /agendas
   def index
@@ -58,8 +58,8 @@ class AgendasController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_agenda
-      @agenda = Agenda.find(params[:id])
+    def set_table
+      @agenda = Table.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
