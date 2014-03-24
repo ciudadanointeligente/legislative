@@ -25,7 +25,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
   end
 
   xml.url do
-    xml.loc ENV['root_url'] + tables_path()
+    xml.loc ENV['root_url'] + agendas_path()
     xml.changefreq("daily")
     xml.priority 1.0
   end

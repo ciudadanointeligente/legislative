@@ -1,0 +1,2 @@
+module AgendasHelper
+end

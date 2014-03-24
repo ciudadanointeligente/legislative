@@ -1,0 +1,10 @@
+= form_for @agenda do |f|
+  - if @agenda.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@agenda.errors.count, "error")} prohibited this agenda from being saved:"
+      %ul
+        - @agenda.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'

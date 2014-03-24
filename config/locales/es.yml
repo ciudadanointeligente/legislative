@@ -3,19 +3,19 @@
 
 es:
   layout:
-    home: Portada
-    search: Búsqueda
-    glossary: Glosario
-    communication: Pregúntales
-    disclosure: Declaraciones
-    congressmen: Congresistas
-    tables: Tablas
     about_us: Acerca de nosotros
-    menu: Menú
+    bills: Proyectos de ley
+    communication: Pregúntales
+    congressmen: Congresistas
+    disclosure: Declaraciones
     from: de Ciudadano Inteligente
+    glossary: Glosario
+    home: Portada
+    menu: Menú
+    search: Búsqueda
+    tables: Tablas
     title_project: Congreso abierto
     welcome: Bienvenido(a)
-    bills: Proyectos de ley
   main:
     search_placeholder: Ingresa un proyecto de ley o congresista
     username: Nombre de usuario
@@ -261,16 +261,16 @@ es:
     birth_date: 'Fecha nacimiento: '
     years: '%s (%s años)'
   routes:
+    agendas: agendas
     bills: proyectos
     bills_search: busquedas_de_proyectos
     communications: comunicaciones
-    disclosures: declaraciones
     congressmen: congresistas
-    tables: tablas
-    users: usuarios
+    disclosures: declaraciones
     glossaries: glosarios
     searches: busquedas
     sessions: sesiones
+    users: usuarios
     new: nuevo
     edit: editar
     user_subscriptions: suscripcion
