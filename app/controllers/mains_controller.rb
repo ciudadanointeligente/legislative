@@ -6,6 +6,7 @@ class MainsController < ApplicationController
   def index
     @condition_search = true
     @condition_priority_box = true
+    @social_network_box = true
     @low_chamber_agenda = Array.new
     @high_chamber_agenda = Array.new
 
@@ -40,5 +41,11 @@ class MainsController < ApplicationController
     end
     @keywords = URI::escape(@keywords)
     bills = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?uid=#{@keywords}", 'application/json')
+  end
+
+  def sitemap
+    @congressmen = PopitPersonCollection.new
+    @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
+    @congressmen.persons.sort! { |x,y| x.name <=> y.name }
   end
 end

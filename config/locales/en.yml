@@ -54,25 +54,25 @@ en:
     bill: Bill
     bills: Bills
     persons: Authors
-    current_priority: 'Current priority:'
-    bill_type: 'Bill type:'
+    current_priority: Current priority
+    bill_type: 'Bill type'
     download_as_excel: Download as Excel
     all_the_types: All the types
     all_the_stages: All the stages
     all_the_chambers: All the chambers
-    all_the_priorities: All the priorities
     quick: Quick view
     placeholder_search_for: Input a keyword
-    bulletin: 'Bulletin:'
+    bulletin: 'Bulletin'
     placeholder_bulletin: Input a bulletin number
-    stage: 'Stage:'
+    stage: 'Stage'
     creation_date: 'Creation date: '
     initiative: 'Initiative: '
-    creation_date_min: 'Creation date (min):'
-    creation_date_max: 'Creation date (max):'
-    initial_chamber: 'Initial chamber:'
+    creation_date_min: 'Creation date (min)'
+    creation_date_max: 'Creation date (max)'
+    initial_chamber: Initial chamber
     author: Author
     placeholder_author: Type an author's name
+    placeholder_priority: Types of priority
     there_are_no_results: There are no results for this search
     event_range: paperworks range
     bills_advanced_search: Advanced search
@@ -112,7 +112,7 @@ en:
     directives: Directives
     remarks: Remarks
     comments: Comments
-    title_event: PROJECT PAPERWORKS
+    timeline: Project history
     download_history: Download history
     view_law: View law
     view_documents: View documents
@@ -229,12 +229,19 @@ en:
     home: Home
     breadcrumb: Congresistas
     fb_share: Share
-    tw_share: Twitt
+    tw_share: Tweet
     title: Congressmen
     title_search: Congressmen search
     represent: 'Represents: '
-    search_for: 'Search by: '
-    placeholder_search_for: Ingresa una palabra clave
+    form_keyword: Keyword
+    form_chamber: Chamber
+    form_name: Name
+    form_zone: Zone
+    form_party: Party
+    placeholder_keyword: 'Name, commune or region'
+    placeholder_name: Insert a name
+    placeholder_zone: Insert a commune or region
+    placeholder_party: Insert a party
     askthem: Ask them
     district: 'District: '
     region: 'Region: '
@@ -329,8 +336,10 @@ en:
       month: Month
       second: Seconds
       year: Year
-email:
+  email:
     subject: 'Congreso abierto, confirmación de suscripción'
     body_header: 'Bienvenido a Congreso abierto, %s'
     body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
     body_footer: 'Atte el equipo de Congreso abierto'
+  communications:
+    confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'

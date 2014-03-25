@@ -4,7 +4,7 @@ require 'writeit-rails'
 describe CommunicationsController do
   describe "GET 'index'" do
     it "returns http success" do
-      get :index, locale: 'es'
+      get 'index', locale: 'es'
       response.should be_success
     end
     
@@ -63,16 +63,13 @@ describe CommunicationsController do
 
     it "Form Post trigger pushing to the writeit API" do
       #testing that clicking the submit button triggers the push to the API method of the writeit-rails gem
-      congressmen = PopitPersonCollection.new
-      congressmen.get ENV['popit_persons'], 'application/json'
-      congressman1 = congressmen.persons[0]
       post :create, locale: 'es', 
                 :author_name => 'autor 1',
                 :author_email => 'test@ciudadanointeligente.org',
                 :subject => 'subject 1',
                 :content => 'Content 1',
                 :recipients => [
-                  congressman1.popit_api_uri,
+                  "http://localhost:3002/api/persons/5008048c7a317e126400046d",
                 ]
 
       assigns(:message).should_not be_nil
@@ -118,6 +115,12 @@ describe CommunicationsController do
       # this guy produces an error in write it
       get :per_person, :id => "500804717a317e126400005e", :locale => 'es'
       response.status.should eql 200
+    end
+    it "has a page per message" do
+      %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_2_messages.yaml )
+      get :per_message, :locale => 'es', :id=> '1'
+      response.should be_success
+      assigns(:message).content.should eql "Content 1"
     end
   end
 end

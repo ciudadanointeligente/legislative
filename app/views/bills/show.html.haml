@@ -3,7 +3,7 @@
     - if ! @bill.paperworks.blank?
       %li
         %h4{name:'timeline'}
-          = t('bill.title_event')
+          = t('bill.timeline').upcase
     - if ! @bill.paperworks.blank?
       %li
         = link_to (url_for :controller => 'bills', :action=>'show', :id=>@bill.uid, :format => 'xls'), :onclick => "ga('send','download','download_bill_history_xls')" do
@@ -120,7 +120,7 @@
       %div{ 'data-sort' => paperwork.date.to_time.to_i }
         %div.timeline-container.col-md-1
           = image_tag("statusicon/" + paperwork.icon_event, class:"hidden-xs")
-        %div.resume.col-md-11
+        %div.bill_header.col-md-11
           %h5
             = paperwork.description
           %p.light

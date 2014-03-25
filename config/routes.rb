@@ -7,8 +7,7 @@ Legislative::Application.routes.draw do
   post "auth" => "sessions#login"
   get "sign_up" => "users#new", :as => "sign_up"
   get "confirmed" => "user_subscriptions#confirmed"
-
-  put "bills/:id/update" => "bills#update", method: :put
+  get "sitemap.:format" => "mains#sitemap"
 
   resources :notifiers do
     get 'run_tasks', on: :collection
@@ -21,6 +20,7 @@ Legislative::Application.routes.draw do
 
     resources :communications do
       get 'per_person', on: :collection
+      get 'per_message', on: :collection
     end
 
     resources :congressmen do

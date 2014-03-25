@@ -6,7 +6,7 @@ es:
     home: Portada
     search: Búsqueda
     glossary: Glosario
-    communication: Preguntales
+    communication: Pregúntales
     disclosure: Declaraciones
     congressmen: Congresistas
     tables: Tablas
@@ -41,12 +41,12 @@ es:
     high_chamber: Senado
     low_chamber: Cámara de diputados
     last_responses: Últimas respuestas
-    last_questions: Últimas Preguntas
+    last_questions: Últimas preguntas
     view_more_questions: Ver más preguntas
     session: Sesión
     legislature: Legislatura
     view_previous_agendas: Ver tablas anteriores
-    hot_projects: Proyectos contingentes
+    hot_projects: Proyectos urgentes
   search:
     search_title: Búsqueda
     search_for: 'Buscar por:'
@@ -54,25 +54,25 @@ es:
     bill: Proyecto de ley 
     bills: Proyectos de ley
     persons: Autores
-    current_priority: 'Urgencia actual:'
-    bill_type: 'Tipo de proyecto:'
+    current_priority: Urgencia actual
+    bill_type: 'Tipo de proyecto'
     download_as_excel: Descargar como Excel
     all_the_types: Todos los tipos
     all_the_stages: Todas las etapas
     all_the_chambers: Todas las cámaras
-    all_the_priorities: Todas las urgencias
     quick: Vista rápida
     placeholder_search_for: Ingresa una palabra clave
-    bulletin: 'Boletín:'
+    bulletin: 'Boletín'
     placeholder_bulletin: Ingresa nro de boletín
-    stage: 'Etapa:'
+    stage: 'Etapa'
     creation_date: 'Fecha de ingreso: '
     initiative: 'Iniciativa: '
-    creation_date_min: 'Fecha de ingreso (min):'
-    creation_date_max: 'Fecha de ingreso (max):'
-    initial_chamber: 'Cámara de origen:'
+    creation_date_min: 'Fecha de ingreso (min)'
+    creation_date_max: 'Fecha de ingreso (max)'
+    initial_chamber: 'Cámara de origen'
     author: Autor
     placeholder_author: Ingresa el nombre de un autor
+    placeholder_priority: Tipos de urgencia
     there_are_no_results: No hay resultados para esta búsqueda
     event_range: rango de eventos
     bills_advanced_search: Ver todos los resultados
@@ -112,9 +112,9 @@ es:
     directives: Indicaciones
     remarks: Observaciones
     comments: Comentarios
-    title_event: EVENTOS DEL PROYECTO
+    timeline: Historial del proyecto
     download_history: Descargar historial
-    view_law: Ver ley
+    view_law: Ver ley 
     view_documents: Ver documentos
     more_recents: Más recientes
     less_recents: Menos reciente
@@ -233,9 +233,16 @@ es:
     title: Congresistas
     title_search: Búsqueda de Congresistas
     represent: 'Representa:'
-    search_for: 'Buscar por:'
-    placeholder_search_for: 'Nombre, comuna o region'
-    askthem: Preguntales
+    form_keyword: Palabra clave
+    form_chamber: Cámara
+    form_name: Nombre
+    form_zone: Zona
+    form_party: Partido
+    placeholder_keyword: 'Nombre, comuna o región'
+    placeholder_name: Seleccione un congresista
+    placeholder_zone: Ingrese una comuna o región
+    placeholder_party: Seleccione un partido político
+    askthem: Pregúntales
     district: 'Distrito: '
     region: 'Región: '
     comuna: 'Comuna: '
@@ -334,3 +341,5 @@ es:
     body_header: 'Bienvenido a Congreso abierto, %s'
     body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
     body_footer: 'Atte el equipo de Congreso abierto'
+  communications:
+    confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'

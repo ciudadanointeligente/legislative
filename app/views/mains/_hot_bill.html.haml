@@ -1,14 +1,17 @@
 %div.col-md-3
   %div.boxdisplay
-    %p.bill-id.light 
+    %h5.bill-id.light 
       = hot_bill.uid
     %p.hidden-xs.subscription
       = link_to (new_user_subscription_path(:bill => hot_bill.uid)) do
-        %i.fa.fa-bell-o{title: t('bill.subscribe')}
+        %i.fa.fa-star-o{title: t('bill.subscribe')}
     %h5.bill-title
       = link_to truncate(hot_bill.title, :length => 160), t('routes.bills') + '/' + hot_bill.uid
     %p.bill-stage
       = hot_bill.stage
+    -if !hot_bill.current_priority.blank?
+      %p.label.label-danger
+        = hot_bill.current_priority
     - if !hot_bill.tags.blank?
       %ul.list-inline
         - hot_bill.tags.each do |tag|
@@ -16,4 +19,4 @@
             = tag
 
 - if hot_bill_counter == 3
-  != '</div><div class="row">'
+  != '</div><div class="row hidden-xs">'

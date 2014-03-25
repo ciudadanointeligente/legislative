@@ -17,14 +17,27 @@
     <meta name="og:title" content="<%= @title %><%= Legislative::Application.config.application_name %>">
     <meta name="og:description" content="<%= ENV['og_description'] %>">
 
+    <meta name="google-site-verification" content="<%= ENV['google_site_verification'] %>" />
+    <link type="text/plain" rel="author" href="<%= ENV['root_url'] %>/humans.txt" />
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
     <meta name="viewport" content="width=device-width">
+
+    <!-- meta for windows -->
+    <meta name="application-name" content="Congreso Abierto"/>
+    <meta name="msapplication-TileColor" content="#3e1f3e"/>
+    <meta name="msapplication-square70x70logo" content="<%= asset_path('tiny.png') %>"/>
+    <meta name="msapplication-square150x150logo" content="<%= asset_path('square.png') %>"/>
+    <meta name="msapplication-wide310x150logo" content="<%= asset_path('wide.png') %>"/>
+    <meta name="msapplication-square310x310logo" content="<%= asset_path('large.png') %>"/>
+    <!-- end meta for windows -->
 
     <%= stylesheet_link_tag 'application' %>
     <%= stylesheet_link_tag "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" %>
     <%= stylesheet_link_tag "http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.min.css" %>
     <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
-    <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Lato' %>
+    <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Lato:400,700' %>
+    <%= stylesheet_link_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css' %>
+    <%= stylesheet_link_tag 'http://cdn.jsdelivr.net/tag-it/2.0/css/jquery.tagit.css' %>
 
     <%= favicon_link_tag '/assets/favicon.ico' %>
 
@@ -33,6 +46,9 @@
 
     <!-- scripts concatenated and minified via build script -->
     <%= javascript_include_tag 'application.js' %>
+    <%= javascript_include_tag 'http://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js' %>
+    <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js' %>
+    <%= javascript_include_tag 'http://cdn.jsdelivr.net/tag-it/2.0/js/tag-it.min.js' %>
     <!-- end scripts -->
 
     <style type="text/css">
@@ -89,14 +105,19 @@
   <%= render :partial => "search"%>
   <% end %>
 
+  <% if @social_network_box %>
+  <!-- Show hot urgencies -->
+  <%= render :partial => "social_network_box"%>
+  <% end %>
+
   <% if @condition_priority_box %>
   <!-- Show hot urgencies -->
   <%= render :partial => "hot"%>
   <% end %>
 
-  <% if @condition_resume_bill %>
+  <% if @condition_bill_header %>
   <!-- Show bill resume -->
-  <%= render :partial => "resume"%>
+  <%= render :partial => "bill_header"%>
   <% end %>
 
   <div class="container">
@@ -152,7 +173,7 @@
   <!-- User feedback by freshdesk -->
   <script type="text/javascript" src="http://assets.freshdesk.com/widget/freshwidget.js"></script>
   <script type="text/javascript">
-    FreshWidget.init("", {"queryString": "&widgetType=popup&formTitle=Dudas%2C+problemas+y+sugerencias&submitThanks=Gracias.+Con+tu+ayuda+mejoraremos+pronto.", "widgetType": "popup", "buttonType": "text", "buttonText": "¿Comentarios?", "buttonColor": "white", "buttonBg": "#006063", "alignment": "2", "offset": "235px", "submitThanks": "Gracias. Con tu ayuda mejoraremos pronto.", "formHeight": "500px", "url": "http://ciudadanoi.freshdesk.com"} );
+    FreshWidget.init("", {"queryString": "&widgetType=popup&formTitle=Dudas%2C+problemas+y+sugerencias&submitThanks=Gracias.+Con+tu+ayuda+mejoraremos+pronto.", "widgetType": "popup", "buttonType": "text", "buttonText": "¿Comentarios?", "buttonColor": "#E6E6C9", "buttonBg": "#A6A691", "alignment": "2", "offset": "235px", "submitThanks": "Gracias. Con tu ayuda mejoraremos pronto.", "formHeight": "500px", "url": "http://ciudadanoi.freshdesk.com"} );
   </script>
   <!-- End user feedback by freshdesk -->
 

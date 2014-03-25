@@ -6,7 +6,7 @@
   %div.row
     = render :partial => "latest_agendas"
 
-%section#last-responses
+%section#last-responses.hidden-xs
   %h3.title-last-responses 
     = t('main.last_questions')
   %div.row
@@ -25,4 +25,15 @@
               = message.author_name
               %a{href: "/"} 
                 = t('main.view_more_questions')
+              - if !message.answers.blank?
+                %p.light
+                  Respuestas
+                  - message.answers[0..1].each do |answer|
+                    %div
+                      %span
+                        =answer.content
+                      %span
+                        =answer.person.name
+
+
           %i.fa.fa-quote-right.fa-2x
