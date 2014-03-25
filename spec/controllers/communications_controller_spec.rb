@@ -69,7 +69,7 @@ describe CommunicationsController do
                 :subject => 'subject 1',
                 :content => 'Content 1',
                 :recipients => [
-                  "5008048c7a317e126400046d",
+                  "http://localhost:3002/api/persons/5008048c7a317e126400046d",
                 ]
 
       assigns(:message).should_not be_nil
