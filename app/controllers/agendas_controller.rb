@@ -52,7 +52,9 @@ class AgendasController < ApplicationController
 
   # GET all the agendas
   def get_all_the_agendas
-    response = RestClient.get(ENV['agendas_url'] + "select%20*%20from%20data%20limit%2020", :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
+    query = 'select * from data limit 200'
+    query = URI::escape(query)
+    response = RestClient.get(ENV['agendas_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
     response = JSON.parse(response)
   end
 
