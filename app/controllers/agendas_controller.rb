@@ -6,9 +6,7 @@ class AgendasController < ApplicationController
   
   # GET /agendas
   def index
-    @agendas = get_all_the_agendas
-    # @agendas = AgendaCollection.new
-    # @agendas.get(ENV['tables_url'],'application/json')
+    @events = (get_agendas + get_district_weeks).to_json
   end
 
   # GET /agendas/1
@@ -50,12 +48,39 @@ class AgendasController < ApplicationController
     redirect_to tables_url, notice: 'Table was successfully destroyed.'
   end
 
-  # GET all the agendas
-  def get_all_the_agendas
+  # GET agendas event
+  def get_agendas
     query = 'select * from data limit 200'
     query = URI::escape(query)
     response = RestClient.get(ENV['agendas_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
-    response = JSON.parse(response)
+    @agendas = JSON.parse(response)
+
+    event_agendas = Array.new
+    @agendas.each_with_index do |table, index|
+      event_agendas[index] = Hash.new
+      event_agendas[index]['title'] = 'Tabla de sesión, legislatura ' + table['legislature'] + ' sesión nro. ' + table['session'] + ' (' + table['chamber'] + ')'
+      event_agendas[index]['start'] = table['date']
+      event_agendas[index]['backgroundColor'] = '#a6a691'
+      event_agendas[index]['borderColor'] = '#b3b3a4'
+    end
+    return event_agendas
+  end
+
+  # GET district weeks event
+  def get_district_weeks
+    query = 'select * from data limit 200'
+    query = URI::escape(query)
+    response = RestClient.get(ENV['district_weeks_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
+    event_district_weeks = JSON.parse(response)
+
+    event_district_weeks.each do |district_week|
+      district_week.delete('chamber')
+      district_week.delete('url')
+      district_week.delete('date_scraped')
+      district_week['backgroundColor'] = '#b99eaf'
+      district_week['borderColor'] = '#b3b3a4'
+    end
+    return event_district_weeks
   end
 
   private
