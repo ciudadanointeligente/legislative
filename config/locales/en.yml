@@ -229,6 +229,7 @@ en:
     send: Send
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
+    confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
   congressmen:
     home: Home
     breadcrumb: Congresistas
@@ -264,6 +265,11 @@ en:
     last_interventions: Last interventions
     birth_date: 'Birth date: '
     years: '%s (%s years)'
+  email:
+    subject: 'Congreso abierto, confirmación de suscripción'
+    body_header: 'Bienvenido a Congreso abierto, %s'
+    body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
+    body_footer: 'Atte el equipo de Congreso abierto'
   routes:
     agendas: agendas
     bills: bills
@@ -340,10 +346,3 @@ en:
       month: Month
       second: Seconds
       year: Year
-  email:
-    subject: 'Congreso abierto, confirmación de suscripción'
-    body_header: 'Bienvenido a Congreso abierto, %s'
-    body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
-    body_footer: 'Atte el equipo de Congreso abierto'
-  communications:
-    confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
