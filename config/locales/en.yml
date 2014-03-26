@@ -3,19 +3,19 @@
 
 en:
   layout:
-    home: Home
-    search: Search
-    glossary: Glossary
-    communication: Communication
-    disclosure: Disclosure
-    congressmen: Congressmen
-    tables: Tables
     about_us: About us
-    menu: Menu
+    bills: Proyectos de ley
+    communication: Communication
+    congressmen: Congressmen
+    disclosure: Disclosure
     from: from Ciudadano Inteligente
+    glossary: Glossary
+    home: Home
+    menu: Menu
+    search: Search
+    tables: Tables
     title_project: Congreso Abierto
     welcome: Welcome
-    bills: Proyectos de ley
   main:
     search_placeholder: Search
     username: Username
@@ -261,16 +261,16 @@ en:
     birth_date: 'Birth date: '
     years: '%s (%s years)'
   routes:
+    agendas: agendas
     bills: bills
     bills_search: bills_search
     communications: communications
-    disclosures: disclosures
     congressmen: congressmen
-    tables: tables
-    users: users
+    disclosures: disclosures
     glossaries: glossaries
     searches: searches
     sessions: sessions
+    users: users
     new: new
     edit: edit
     user_subscriptions: subscription

@@ -15,6 +15,7 @@ production:
   low_chamber_name:  'C.Diputados'
   keywords: ~
   agendas_url:      ~
+  district_weeks_url: ~
   congressmen_helper_url: ~
   morph_io_api_key: ~
   bill_graph_data_length:   '12'
@@ -48,6 +49,7 @@ development:
   twitter_tags: CongresoAbierto
   keywords: ~
   agendas_url:      ~ # example: 'https://api.morph.io/owner/agenda_repo/data.json?query='
+  district_weeks_url: ~ # example: 'https://api.morph.io/owner/district_weeks_repo/data.json?query='
   congressmen_helper_url: ~ # example: 'https://api.morph.io/owner/congressmen_helper/data.json?query='
   morph_io_api_key: ~ # for use morph.io API 
   bill_graph_data_length:   '12'  # amount of points in the graph

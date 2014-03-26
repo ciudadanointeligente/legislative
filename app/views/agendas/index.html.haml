@@ -1,0 +1,53 @@
+#calendar
+
+%h1.page-header
+  Tablas
+  
+- @agendas.each do |agenda|
+  %h5.tituloTablaResumen
+    %i.fa.fa-calendar
+    Fecha
+    %span.light.fechaTituloTabla=agenda['date']
+  %table.table.table-striped.tablaResumen
+    %tr
+      %th.camaraTabla= t('agendas.chamber')
+      %th.fechaTabla= t('agendas.date')
+      %th.agendaTabla= t('agendas.bills')
+
+
+      %tr
+        %td= agenda['chamber']
+        %td= agenda['date']
+        %td
+          - JSON.parse(agenda['bill_list']).uniq.each_with_index do |bill,index|
+            = link_to bill, bill_path(bill)
+            - if index < JSON.parse(agenda['bill_list']).uniq.size - 1
+              %span.light.separadorBoletines
+                = '*'
+
+:javascript
+  var events_array = #{@events};
+
+  $(document).ready(function() {
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      events: events_array,
+      eventTextColor: '#ffffff',
+      monthNames: ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
+      monthNamesShort: ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'],
+      dayNames: ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'],
+      dayNamesShort: ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'],
+      buttonText: {
+        today:    'hoy',
+        month:    'mes',
+        week:     'semana',
+        day:      'día'
+      }
+    })
+  });

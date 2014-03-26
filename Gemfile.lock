@@ -96,6 +96,7 @@ GEM
       multipart-post (~> 1.1)
     ffi (1.9.3)
     formatador (0.2.4)
+    fullcalendar-rails (1.6.4.0)
     guard (2.4.0)
       formatador (>= 0.2.4)
       listen (~> 2.1)
@@ -279,6 +280,7 @@ DEPENDENCIES
   ekuseru
   factory_girl_rails
   faraday (= 0.8.1)
+  fullcalendar-rails
   guard-bundler
   guard-rails
   guard-rspec
