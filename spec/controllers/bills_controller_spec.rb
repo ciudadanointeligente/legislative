@@ -35,10 +35,10 @@ describe BillsController do
   end
 
   describe "GET index" do
-    it "assigns all bills as @bills" do
+    it "#index redirects to search" do
       #bill = Billit::Bill.create! valid_attributes
-      get :index, {}, valid_session
-      assigns(:bills).should_not be_nil
+      get :index, {:locale => 'es'}, valid_session
+      response.should redirect_to :action => :searches
     end
   end
 

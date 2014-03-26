@@ -10,6 +10,7 @@ class BillsController < ApplicationController
   # GET /bills
   # GET /bills.json
   def index
+    redirect_to url_for :controller => 'bills', :action => 'searches'
   end
 
   # GET /bills/1
