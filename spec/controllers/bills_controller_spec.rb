@@ -36,7 +36,6 @@ describe BillsController do
 
   describe "GET index" do
     it "#index redirects to search" do
-      #bill = Billit::Bill.create! valid_attributes
       get :index, {:locale => 'es'}, valid_session
       response.should redirect_to :action => :searches
     end
@@ -44,40 +43,22 @@ describe BillsController do
 
   describe "GET show" do
     it "assigns the requested bill as @bill" do
-      bill = Billit::Bill.get(ENV['billit_url'] + "6967-06", 'application/json')
-      # bill = Bill.create! valid_attributes
-      get :show, {:id => bill.uid, :locale => 'es'}, valid_session
-      assigns(:bill).uid.should eq(bill.uid)
-      assigns(:bill).title.should eq(bill.title)
-      assigns(:bill).creation_date.should eq(bill.creation_date)
-      assigns(:bill).source.should eq(bill.source)
-      assigns(:bill).initial_chamber.should eq(bill.initial_chamber)
-      assigns(:bill).current_priority.should eq(bill.current_priority)
-      assigns(:bill).stage.should eq(bill.stage)
-      assigns(:bill).sub_stage.should eq(bill.sub_stage)
-      assigns(:bill).status.should eq(bill.status)
-      assigns(:bill).resulting_document.should eq(bill.resulting_document)
-      assigns(:bill).law_link.should eq(bill.law_link)
-      assigns(:bill).merged_bills.should eq(bill.merged_bills)
-      assigns(:bill).subject_areas.should eq(bill.subject_areas)
-      assigns(:bill).authors.should eq(bill.authors)
-      assigns(:bill).priorities.should eq(bill.priorities)
-      assigns(:bill).reports.should eq(bill.reports)
-      assigns(:bill).revisions.should eq(bill.revisions)
-      assigns(:bill).documents.should eq(bill.documents)
-      assigns(:bill).directives.should eq(bill.directives)
-      assigns(:bill).remarks.should eq(bill.remarks)
-      assigns(:bill).links.should eq(bill.links)
+      bill = Billit::Bill.get(ENV['billit_url'] + "6967-06.json", 'application/json')
 
-      controller_sessions = assigns(:bill).paperworks.map {|paperwork| paperwork.session}
-      bill.paperworks.each do |paperwork| 
-        controller_sessions.include?(paperwork.session).should be_true
-      end
+      get :show, {:id => bill.uid, :locale => 'es'}, valid_session
+      assigns(:paperworks).should_not be_nil
+      assigns(:bill).should_not be_nil
+      assigns(:bill).uid.should eq(bill.uid)
+      assigns(:bill).should be_an_instance_of Billit::Bill
+      assigns(:title).should eq bill.title + ' - '
+      #Muestra la zona morada
+      assigns(:condition_bill_header).should be true
+      #assigns(:authors).should_not be_nil
 
     end
 
     it "returns @date_freq as an array of integers" do
-      bill = Billit::Bill.get("http://billit.ciudadanointeligente.org/bills/6967-06", 'application/json')
+      bill = Billit::Bill.get(ENV['billit_url'] + "6967-06.json", 'application/json')
       # bill = Bill.create! valid_attributes
       get :show, {:id => bill.uid, :locale => 'es'}, valid_session
       assigns(:date_freq).should be_an_instance_of Array

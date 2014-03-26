@@ -17,35 +17,17 @@ class BillsController < ApplicationController
   # GET /bills/1.json
   def show
     @condition_bill_header = true
-    @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
+    @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}.json", 'application/json')
 
-    # paperworks
-    @date_freq = Array.new
-    bill_range_dates = @bill.paperworks.map {|paperwork| Date.strptime(paperwork.date, "%Y-%m-%d")}
+    # @authors = Hash.new
+    # i = 0
 
-    top_date = Date.today
-    bottom_date = top_date - ENV['bill_graph_day_interval'].to_i.days
-    data_length = 0
-    
-    while data_length < ENV['bill_graph_data_length'].to_i do
-      #comparación y agregar a @date_freq
-      dates_in_range = bill_range_dates.select {|date| date <= top_date && date > bottom_date} 
-      #array inverse
-      @date_freq.unshift dates_in_range.length
-      top_date = bottom_date
-      bottom_date = top_date - ENV['bill_graph_day_interval'].to_i.days
-      data_length += 1
-    end
-
-    @authors = Hash.new
-    i = 0
-
-    if !@bill.authors.blank?
-      @bill.authors.each do |author|
-        @authors[i] = get_author_related_info author
-        i = i + 1
-      end
-    end
+    # if !@bill.authors.blank?
+    #   @bill.authors.each do |author|
+    #     @authors[i] = get_author_related_info author
+    #     i = i + 1
+    #   end
+    # end
 
     #setup the title page
     @title = @bill.title + ' - '
@@ -61,8 +43,12 @@ class BillsController < ApplicationController
 
     query = sprintf('select * from data where name = "%s" limit 1', I18n.transliterate(author))
     query = URI::escape(query)
-    response = RestClient.get(ENV['congressmen_helper_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
-    response = JSON.parse(response).first
+    begin
+      response = RestClient.get(ENV['congressmen_helper_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
+      response = JSON.parse(response).first
+    rescue
+      return {'uid' => nil, 'name' => ''}
+    end
     if !response.nil?
       return {'uid' => response['uid'], 'name' => author}
     else
