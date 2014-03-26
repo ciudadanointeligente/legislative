@@ -99,6 +99,8 @@ class BillsController < ApplicationController
   end
 
   def searches
+    @title = t('bill.title') + ' - '
+
     if !params.nil? && params.length > 3
       @keywords = String.new
       params.each do |key, value|

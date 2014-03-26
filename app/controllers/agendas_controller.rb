@@ -6,6 +6,7 @@ class AgendasController < ApplicationController
   
   # GET /agendas
   def index
+    @title = t('agendas.title') + ' - '
     @events = (get_agendas + get_district_weeks).to_json
   end
 
