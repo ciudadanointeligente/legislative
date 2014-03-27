@@ -40,6 +40,44 @@ describe BillsController do
       response.should redirect_to :action => :searches
     end
   end
+  describe "#get_author_related_info" do
+    before :each do
+      
+    end
+    it('gets the information based on the name of an author') do
+      response = '[{
+      "uid":"5330377bd0c05d8b737b6de0",
+      "name":"Roberto Poblete Zapata"}]'
+      stub_request(:get, /.*morph.io*/)
+        .to_return(:body => response)
+      controller = BillsController.new
+      extra_info = controller.instance_eval{ get_author_related_info "Jaramillo Becker, Enrique" }
+      extra_info['uid'].should eql "5330377bd0c05d8b737b6de0"
+      extra_info['name'].should eql "Enrique Jaramillo Becker"
+    end
+    it('if morph doesnt have the person') do
+      response = '[]'
+      stub_request(:get, /.*morph.io*/)
+        .to_return(:body => response)
+      controller = BillsController.new
+      extra_info = controller.instance_eval{ get_author_related_info "Jaramillo Becker, Enrique" }
+      extra_info['uid'].should be_nil
+      extra_info['name'].should eql "Enrique Jaramillo Becker"
+    end
+    it('if morph returns more than one person') do
+      response = '[{
+      "uid":"5330377bd0c05d8b737b6de0",
+      "name":"Roberto Poblete Zapata"},{
+      "uid":"a",
+      "name":"hello"}]'
+      stub_request(:get, /.*morph.io*/)
+        .to_return(:body => response)
+      controller = BillsController.new
+      extra_info = controller.instance_eval{ get_author_related_info "Jaramillo Becker, Enrique" }
+      extra_info['uid'].should eql "5330377bd0c05d8b737b6de0"
+      extra_info['name'].should eql "Enrique Jaramillo Becker"
+    end
+  end
 
   describe "GET show" do
     it "assigns the requested bill as @bill" do
@@ -56,6 +94,7 @@ describe BillsController do
       #assigns(:authors).should_not be_nil
 
     end
+
 
     it "returns @date_freq as an array of integers" do
       bill = Billit::Bill.get(ENV['billit_url'] + "6967-06.json", 'application/json')

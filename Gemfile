@@ -71,6 +71,7 @@ group :development, :test do
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
+  gem 'webmock'
 end
 
 gem 'httparty'
