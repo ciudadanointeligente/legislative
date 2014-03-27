@@ -281,6 +281,8 @@ es:
     searches: busquedas
     sessions: sesiones
     users: usuarios
+    per_person: por_persona
+    per_message: por_mensaje
     new: nuevo
     edit: editar
     user_subscriptions: suscripcion
