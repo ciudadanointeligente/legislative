@@ -878,3 +878,15 @@ h4 span.nostyle {
     margin-bottom: 20px;
   }
 }
+
+/* Agendas in home */
+
+.table th {
+  background: #67675a;
+  color: #e6e6c9;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: #e6e6c9;
+  color: #67675a;
+}
