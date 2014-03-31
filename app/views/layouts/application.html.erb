@@ -100,45 +100,10 @@
     </div>
   </div>
   
-  <!-- Show browser -->
-  <% if @condition_search %>
-  <%= render :partial => "search"%>
-  <% end %>
+  <!-- Content -->
+  <%= yield %>
+  <!-- End content -->
 
-  <% if @social_network_box %>
-  <!-- Show hot urgencies -->
-  <%= render :partial => "social_network_box"%>
-  <% end %>
-
-  <% if @condition_priority_box %>
-  <!-- Show hot urgencies -->
-  <%= render :partial => "hot"%>
-  <% end %>
-
-  <% if @condition_bill_header %>
-  <!-- Show bill resume -->
-  <%= render :partial => "bill_header"%>
-  <% end %>
-
-  <div class="container">
-
-    <div class="row">
-      <div class="col-md-12">
-        <% flash.each do |name, msg| %>
-          <div class="alert alert-info">
-          <button type="button" class="close" aria-hidden="true" data-dismiss="alert">&times;</button>
-            <%= content_tag :div, msg, :id => "flash_#{name}" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-
-    <!-- Content -->
-    <%= yield %>
-    <!-- End content -->
-
-  </div> <!-- /container -->
-  
   <div class="arregloFotter"></div>
 
   <!-- Footer -->

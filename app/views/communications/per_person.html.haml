@@ -1,28 +1,29 @@
-%div
-  %ol.breadcrumb
-    %li
-      = link_to 'Portada', root_path
-    %li.active
+%div.container
+  %div
+    %ol.breadcrumb
+      %li
+        = link_to 'Portada', root_path
+      %li.active
+        = t('layout.communication')
+
+  %div.page-header
+    %h2
       = t('layout.communication')
 
-%div.page-header
-  %h2
-    = t('layout.communication')
-
-  %h2
-    = @person.name
+    %h2
+      = @person.name
 
 
-%section#responses
-  %div.page-header
-    %h3
-      Mensajes enviados
-  %div.panel.panel-default
+  %section#responses
+    %div.page-header
+      %h3
+        Mensajes enviados
+    %div.panel.panel-default
 
-    - @messages.objects.each do |message|
-      %div.panel-heading
-        %h4
-          = message.subject
-      %div.panel-body
-        %p
-          = message.content
+      - @messages.objects.each do |message|
+        %div.panel-heading
+          %h4
+            = message.subject
+        %div.panel-body
+          %p
+            = message.content
