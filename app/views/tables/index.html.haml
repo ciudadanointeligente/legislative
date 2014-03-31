@@ -1,27 +1,25 @@
-%h1.page-header
-  Tablas
-  
-- @agendas.each do |agenda|
-  %h5.tituloTablaResumen
-    %i.fa.fa-calendar
-    Fecha
-    %span.light.fechaTituloTabla=agenda['date']
-  %table.table.table-striped.tablaResumen
-    %tr
-      %th.camaraTabla= t('agendas.chamber')
-      %th.fechaTabla= t('agendas.date')
-      %th.agendaTabla= t('agendas.bills')
-
-
+%div.container
+  %h1.page-header
+    Tablas
+    
+  - @agendas.each do |agenda|
+    %h5.tituloTablaResumen
+      %i.fa.fa-calendar
+      Fecha
+      %span.light.fechaTituloTabla=agenda['date']
+    %table.table.table-striped.tablaResumen
       %tr
-        %td= agenda['chamber']
-        %td= agenda['date']
-        %td
-          - JSON.parse(agenda['bill_list']).uniq.each_with_index do |bill,index|
-            = link_to bill, bill_path(bill)
-            - if index < JSON.parse(agenda['bill_list']).uniq.size - 1
-              %span.light.separadorBoletines
-                = '*'
+        %th.camaraTabla= t('agendas.chamber')
+        %th.fechaTabla= t('agendas.date')
+        %th.agendaTabla= t('agendas.bills')
 
 
-        
+        %tr
+          %td= agenda['chamber']
+          %td= agenda['date']
+          %td
+            - JSON.parse(agenda['bill_list']).uniq.each_with_index do |bill,index|
+              = link_to bill, bill_path(bill)
+              - if index < JSON.parse(agenda['bill_list']).uniq.size - 1
+                %span.light.separadorBoletines
+                  = '*'

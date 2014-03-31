@@ -4,9 +4,6 @@ class MainsController < ApplicationController
 
   # GET /mains
   def index
-    @condition_search = true
-    @condition_priority_box = true
-    @social_network_box = true
     @low_chamber_agenda = Array.new
     @high_chamber_agenda = Array.new
 
