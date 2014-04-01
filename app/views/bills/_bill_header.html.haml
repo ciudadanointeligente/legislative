@@ -93,7 +93,8 @@
                   = author['name']
                 - if index < @authors.size - 1
                   = ', '
-            
+        %p
+          = t('bill.tags')
         %ul.list-inline#myTags
           - if @bill.tags != nil
             - @bill.tags.each do |tag|
