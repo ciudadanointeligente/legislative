@@ -100,12 +100,16 @@
                 = c.permanent  
             
             - if ! c.special.blank?
-              %p 
-                = t('congressmen.special') + c.special 
+              %p
+                %span.light 
+                  = t('congressmen.special') 
+                = c.special 
             
             - if ! c.researcher.blank?
               %p 
-                = t('congressmen.research') + c.researcher 
+                %span.light 
+                  = t('congressmen.research')
+                = c.researcher 
       
       - if ! @congressman.enlaces.blank?
         %div
