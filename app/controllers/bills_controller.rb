@@ -117,9 +117,9 @@ class BillsController < ApplicationController
           @keywords << array_keyword + '&'
         end
       end
-      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?#{URI.encode(@keywords)}", 'application/json')
+      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}", 'application/json')
     else
-      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?", 'application/json')
+      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?", 'application/json')
     end
   end
 end

@@ -27,5 +27,8 @@
     %div.col-md-3.aside
       = render :partial => "filter_search_form"
     %div.col-md-9.whitewithaside
+      %div
+        - if ! @bills_query.bills.blank?
+          = link_to t('search.download_as_excel'), params.merge(:format => :xls)
       - @bills = @bills_query.bills
       = render :partial => "box_bills_result"
