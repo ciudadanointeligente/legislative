@@ -122,7 +122,7 @@
       - @bill.paperworks.each_with_index do | paperwork, index |
         %div{ 'data-sort' => paperwork.date.to_time.to_i }
           %div.timeline-container.col-md-1
-            = image_tag("statusicon/" + paperwork.icon_event, class:"hidden-xs")
+            = image_tag("statusicon/" + paperwork.icon_event, class:"hidden-xs", title:paperwork.timeline_status.strip)
           %div.bill_header.col-md-11
             %h5
               = paperwork.description
