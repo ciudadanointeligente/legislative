@@ -4,9 +4,6 @@ class MainsController < ApplicationController
 
   # GET /mains
   def index
-    @condition_search = true
-    @condition_priority_box = true
-    @social_network_box = true
     @low_chamber_agenda = Array.new
     @high_chamber_agenda = Array.new
 
@@ -18,9 +15,9 @@ class MainsController < ApplicationController
 
     @hot_bills = Billit::BillCollectionPage.get(ENV['billit_url'] + "search?current_urgency=Simple&per_page=8", 'application/json').bills
 
-    @messages = LegislativeMessageCollection.get()
-    if @messages.objects.length > 2
-      @messages.objects = @messages.objects[0..1]
+    @answers = LegislativeAnswerCollection.get()
+    if @answers.objects.length > 2
+      @answers.objects = @answers.objects[0..1]
     end
 
   end

@@ -4,21 +4,22 @@ require 'roar/representer/feature/http_verbs'
 require 'writeit-rails'
 
 class LegislativeAnswerRepresenter
-    include Roar::Representer::JSON::HAL
-    include Roar::Representer::Feature::HttpVerbs
-    
-    def initialize
-        extend Roar::Representer::Feature::Client
-        super
-    end
+  include Roar::Representer::JSON::HAL
+  include Roar::Representer::Feature::HttpVerbs
 
-    def from_json(document,options={})
-        super
-        self.created = Date.parse(self.created)
-    end
+  def initialize
+    extend Roar::Representer::Feature::Client
+    super
+  end
 
-    property :id
-    property :content
-    property :created
-    property :person, :class => PopitPerson, :extend => Popit::PersonRepresenter
+  def from_json(document,options={})
+    super
+    self.created = Date.parse(self.created)
+  end
+
+  property :id
+  property :content
+  property :created
+  property :message_id
+  property :person, :class => PopitPerson, :extend => Popit::PersonRepresenter
 end

@@ -3,19 +3,19 @@
 
 en:
   layout:
-    home: Home
-    search: Search
-    glossary: Glossary
-    communication: Communication
-    disclosure: Disclosure
-    congressmen: Congressmen
-    tables: Tables
     about_us: About us
-    menu: Menu
+    bills: Proyectos de ley
+    communication: Communication
+    congressmen: Congressmen
+    disclosure: Disclosure
     from: from Ciudadano Inteligente
+    glossary: Glossary
+    home: Home
+    menu: Menu
+    search: Search
+    tables: Tables
     title_project: Congreso Abierto
     welcome: Welcome
-    bills: Proyectos de ley
   main:
     search_placeholder: Search
     username: Username
@@ -45,8 +45,10 @@ en:
     view_more_questions: View more questions
     session: Session
     legislature: Legislature
-    view_previous_agendas: View previous agendas
+    view_the_agenda: View the parliamentarian agenda
     hot_projects: Hot projects
+  glossaries:
+    title: Glossaries
   search:
     search_title: Search
     search_for: 'Search for:'
@@ -82,6 +84,7 @@ en:
     all_results: View all results
     search_results: Search results
   agendas:
+    title: Parliamentarian agenda
     chamber: Chamber
     date: Date
     bills: Bills
@@ -134,6 +137,7 @@ en:
     tw_text: Check the bulletin %s in congresoabierto.cl
     breadcrumb_bill: Bills
     download_project: Download project
+    title: Bills
   paperworks:
     chamber: 'Chamber:'
     created_at: 'Created at:'
@@ -225,6 +229,7 @@ en:
     send: Send
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
+    confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
   congressmen:
     home: Home
     breadcrumb: Congresistas
@@ -260,17 +265,24 @@ en:
     last_interventions: Last interventions
     birth_date: 'Birth date: '
     years: '%s (%s years)'
+  email:
+    subject: 'Congreso abierto, confirmación de suscripción'
+    body_header: 'Bienvenido a Congreso abierto, %s'
+    body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
+    body_footer: 'Atte el equipo de Congreso abierto'
   routes:
+    agendas: agendas
     bills: bills
     bills_search: bills_search
     communications: communications
-    disclosures: disclosures
     congressmen: congressmen
-    tables: tables
-    users: users
+    disclosures: disclosures
     glossaries: glossaries
     searches: searches
     sessions: sessions
+    users: users
+    per_person: per_person
+    per_message: per_message
     new: new
     edit: edit
     user_subscriptions: subscription
@@ -336,10 +348,3 @@ en:
       month: Month
       second: Seconds
       year: Year
-  email:
-    subject: 'Congreso abierto, confirmación de suscripción'
-    body_header: 'Bienvenido a Congreso abierto, %s'
-    body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
-    body_footer: 'Atte el equipo de Congreso abierto'
-  communications:
-    confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'

@@ -49,6 +49,9 @@ group :development do
   gem 'binding_of_caller'
 end
 
+# Adam Shaw's fullcalendar jquery plugin
+gem 'fullcalendar-rails'
+
 # Support to XLS export
 gem 'ekuseru'
 

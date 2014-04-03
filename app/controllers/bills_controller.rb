@@ -15,7 +15,6 @@ class BillsController < ApplicationController
   # GET /bills/1
   # GET /bills/1.json
   def show
-    @condition_bill_header = true
     @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
 
     # paperworks
@@ -99,6 +98,8 @@ class BillsController < ApplicationController
   end
 
   def searches
+    @title = t('bill.title') + ' - '
+
     if !params.nil? && params.length > 3
       @keywords = String.new
       params.each do |key, value|
@@ -116,9 +117,9 @@ class BillsController < ApplicationController
           @keywords << array_keyword + '&'
         end
       end
-      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?#{URI.encode(@keywords)}", 'application/json')
+      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}", 'application/json')
     else
-      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?", 'application/json')
+      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?", 'application/json')
     end
   end
 end

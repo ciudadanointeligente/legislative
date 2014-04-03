@@ -1,0 +1,19 @@
+/* Place all the styles related to the Agendas controller here.
+ * They will automatically be included in application.css.
+ * You can use Sass (SCSS) here: http://sass-lang.com */
+
+.table th {
+  background: #67675a;
+  color: #e6e6c9;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: #e6e6c9;
+  color: #67675a;
+}
+
+.table>tbody>tr>td {
+  background: #f5f5dd;
+  padding: 15px;
+  border-top: transparent;
+}
