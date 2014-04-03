@@ -80,6 +80,13 @@ describe BillsController do
   end
 
   describe "GET show" do
+    before :each do
+      response = '[{
+      "uid":"5330377bd0c05d8b737b6de0",
+      "name":"Roberto Poblete Zapata"}]'
+      stub_request(:get, /.*morph.io*/)
+        .to_return(:body => response)
+    end
     it "assigns the requested bill as @bill" do
       bill = Billit::Bill.get(ENV['billit_url'] + "6967-06.json", 'application/json')
 
@@ -91,7 +98,7 @@ describe BillsController do
       assigns(:title).should eq bill.title + ' - '
       #Muestra la zona morada
       assigns(:condition_bill_header).should be true
-      #assigns(:authors).should_not be_nil
+      assigns(:authors).should_not be_nil
 
     end
 
