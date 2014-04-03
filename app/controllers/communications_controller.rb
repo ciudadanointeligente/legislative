@@ -14,7 +14,7 @@ class CommunicationsController < ApplicationController
     @messages.get page: page
 
     @title = t('layout.communication') + ' - '
-    
+
     set_pagination @messages.meta
   end
 
@@ -33,10 +33,10 @@ class CommunicationsController < ApplicationController
 
     flash[:notice] = t('communication.confirmation_mail_sent')
   end
+
   def per_person
     id = params[:id]
-    @person = PopitPerson.get ENV['popit_persons'] + id, 
-                'application/json'
+    @person = PopitPerson.get ENV['popit_persons'] + id, 'application/json'
 
     if not @person.id.nil?
       @messages = LegislativeMessageCollection.new
@@ -48,6 +48,7 @@ class CommunicationsController < ApplicationController
       render text: "404 no lo encontramos", status: 404
     end
   end
+
   def per_message
     id = params[:id]
     representer = LegislativeMessageRepresenter.new
@@ -63,6 +64,7 @@ class CommunicationsController < ApplicationController
     @writeitinstance.api_key = ENV['writeit_api_key']
     @writeitinstance.per_page = ENV['writeit_messages_per_page']
   end
+
   def set_pagination meta
     @pagination = Hash.new
     @pagination['current_page'] = (meta['offset']/meta['limit']) + 1
