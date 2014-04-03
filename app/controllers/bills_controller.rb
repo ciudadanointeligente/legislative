@@ -1,6 +1,8 @@
 require 'billit_representers/models/bill'
 require 'billit_representers/models/bill_page'
+require 'billit_representers/models/bill_basic'
 require './app/models/bill'
+require './app/models/bill_basic'
 require './app/models/paperwork'
 
 class BillsController < ApplicationController
@@ -85,7 +87,7 @@ class BillsController < ApplicationController
   # PUT /bills/1
   # PUT /bills/1.json
   def update
-    @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
+    @bill = Billit::BillBasic.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
 
     !params[:tags].nil? ? @bill.tags = params[:tags] : @bill.tags = []
     @bill.put(ENV['billit_url'] + "#{params[:id]}", 'application/json')
@@ -117,9 +119,9 @@ class BillsController < ApplicationController
           @keywords << array_keyword + '&'
         end
       end
-      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}", 'application/json')
+      @bills_query = Billit::BillPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}", 'application/json')
     else
-      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?", 'application/json')
+      @bills_query = Billit::BillPage.get(ENV['billit_url'] + "search.json/?", 'application/json')
     end
   end
 end

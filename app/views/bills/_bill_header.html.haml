@@ -1,6 +1,7 @@
 :javascript
   var billuid = '#{@bill.uid}',
-      path_bill = '#{t('routes.bills')}';
+      path_bill = '#{t('routes.bills')}',
+      domain = '#{ENV['root_url']}';
 
 %div.hero-space-bill
   %div.container

@@ -51,7 +51,7 @@ GEM
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    billit_representers (0.8.10)
+    billit_representers (0.9.0)
       activemodel
       roar (= 0.11.19)
       roar-rails (= 0.1.0)
@@ -272,7 +272,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby
   better_errors
-  billit_representers (= 0.8.10)
+  billit_representers (= 0.9.0)
   binding_of_caller
   coffee-rails (~> 4.0.0)
   coveralls
