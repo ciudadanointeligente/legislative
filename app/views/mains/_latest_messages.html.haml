@@ -20,5 +20,7 @@
         %p.text-right
           %span
             = answer.person.name.concat('. ')
-            = link_to t('main.view_more_questions'), congressman_path(answer.person.id)
+            /= link_to url_for(:controller => 'communications', :action => 'per_person', :id => congressman['id']) do
+            = link_to communications_path + '/' + t('routes.per_person') + '?id=' + congressman['id'].to_s do
+              = t('main.view_more_questions')
       %i.fa.fa-quote-right.fa-2x

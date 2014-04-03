@@ -7,7 +7,7 @@ module MainsHelper
     if !response.nil?
       return {'id' => response['uid'], 'name' => name, 'image' => response['profile_image']}
     else
-      return {'uid' => nil, 'name' => name, 'image' => nil}
+      return {'id' => 0, 'name' => name, 'image' => nil}
     end
   end
 
