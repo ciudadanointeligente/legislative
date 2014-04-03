@@ -1285,3 +1285,6 @@
 - fields: {content: This is the content, created: 2014-03-17, message: 1, person: 1}
   model: nuntium.answer
   pk: 1
+- fields: {content: This is another content, created: 2014-03-31, message: 1, person: 1}
+  model: nuntium.answer
+  pk: 2
