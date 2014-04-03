@@ -3,7 +3,9 @@ require 'httparty'
 
 require 'popit_representers/models/organization_collection'
 require 'billit_representers/models/bill_page'
+require 'billit_representers/models/bill_basic'
 require './app/models/bill'
+require './app/models/bill_basic'
 
 
 class SearchesController < ApplicationController
@@ -51,10 +53,10 @@ class SearchesController < ApplicationController
           end
         end
       end
-      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}per_page=3", 'application/json')
+      @bills_query = Billit::BillPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}per_page=3", 'application/json')
       @congressmen.get ENV['popit_search']+"#{URI.encode(@keywords)}per_page=3", 'application/json'
     else
-      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search.json/?per_page=3", 'application/json')
+      @bills_query = Billit::BillPage.get(ENV['billit_url'] + "search.json/?per_page=3", 'application/json')
       @congressmen.get ENV['popit_search']+"per_page=3", 'application/json'
     end
 
