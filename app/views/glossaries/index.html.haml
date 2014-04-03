@@ -1,931 +1,932 @@
-%div
-  %ol.breadcrumb
-    %li
-      = link_to t('layout.home'), root_path
-    %li.current
+%div.container
+  %div
+    %ol.breadcrumb
+      %li
+        = link_to t('layout.home'), root_path
+      %li.current
+        = t('layout.glossary')
+
+  %div.page-header
+    %h2
       = t('layout.glossary')
-
-%div.page-header
-  %h2
-    = t('layout.glossary')
-    %a{:name => ""}
-
-%nav
-  %ul.pagination
-    - ("A".."Z").each do |letter|
-      %li 
-        %a{:href => "#"+letter}
-          = letter
-
-  %a{:name => "a"}
-%h3.text-center
-  A
-
-%p.palabra
-  %strong= 'Accountability:'
-  pese a no tener una traducción literal en español, hace referencia, por un lado, al deber o responsabilidad que tienen los órganos de la administración pública o agentes públicos de rendir cuentas de sus acciones a los demás órganos del Estado y a los ciudadanos; y por otro, al derecho de estos últimos de fiscalizar e informarse de las acciones de quienes los gobiernan.
-  Existe Accountability horizontal y vertical: el primero es el control que realizan entre sí los distintos poderes del Estado los cuales pueden examinar, cuestionar y en su caso sancionar actos irregulares cometidos durante el desempeño de los cargos públicos. El segundo, en tanto, se encuentra en el plano ciudadano, llevado a cabo a través de la vía electoral - que evalúa la gestión de las autoridades políticas mediante el voto - o por la vía social - por iniciativas ciudadanas, movimientos sociales y medios de comunicación - los cuales por medio de mecanismos institucionales (como demandas legales o reclamos ante agencias de control) y no institucionales (como movilizaciones sociales) buscan mejorar el funcionamiento de las instituciones representativas.
-
-%p.palabra
-  %strong='Acta:'
-  documento oficial en el que consta lo sucedido, tratado y acordado por las Cámaras o alguna de sus Comisiones, y una síntesis de las opiniones y declaraciones formuladas en cada sesión. Este documento es suscrito por el Secretario y por el Presidente de la Corporación o de una Comisión, según sea el caso.
-
-%p.palabra
-  %strong='Abstención:' 
-  privación voluntaria del voto.
-
-%p.palabra
-  %strong='Actos Administrativos:'
-  son las decisiones formales que emiten los órganos de la Administración del Estado en el ejercicio de sus potestades, y que pueden tomar la forma de decretos o resoluciones. También lo son los dictámenes o declaraciones de juicio, constancia o conocimiento que realicen los órganos de la administración en el ejercicio de sus competencias. (Artículo 3º de la Ley de Bases de los Procedimientos Administrativos) .
-
-%p.palabra
-  %strong='Acuerdos Internacionales:'
-  Todo acuerdo internacional que cumpla con los trámites de aprobación de un tratado internacional presenta esta naturaleza, siendo ambos términos sinónimos. 
-  Sin perjuicio de lo anterior este término también se utiliza para referirse a acuerdos de cooperación sin efectos vinculantes para los estados, como los acuerdos de cooperación que pudieren existir en el ámbito de organismos internos de dos países, como un acuerdo entre policías, un acuerdo entre municipalidades. 
-  También se utiliza para referirse al acto cuando se unen las opiniones o puntos de vista de sujetos de orden jurídico internacional, sobre cuestiones o problemas que surgen en sus relaciones internacionales con la finalidad de producir efectos jurídicos. Constituyen “compromisos de honor”, “acuerdos convencionales” sin presentar por sí mismo efectos jurídicos vinculantes entre los estados.
-
-%p.palabra
-  %strong='Acusación Constitucional:'
-  atribución exclusiva de la Cámara de Diputados que se enmarca dentro de sus facultades de fiscalización de los actos de Gobierno y cuyo objeto es que la Cámara declare si han o no lugar las acusaciones que no menos de diez ni más de veinte de sus miembros formulen contra el Presidente de la República, los Ministros de Estado, los Magistrados de los Tribunales Superiores de Justicia; el Contralor General de la República; los Generales y Almirantes y los Intendentes y Gobernadores. (Art. N° 52, N° 2 de la Constitución Política de la República). 
-
-%p.palabra
-  %strong='Adhesión:'
-  la adhesión, al igual que la ratificación, representa el compromiso, jurídicamente vinculante del Estado, de acatar las disposiciones de una Convención. El acto de ratificación no viene precedido de la firma de un tratado internacional sino que el Estado pasa a ser parte del mismo cuando el instrumento permite la posibilidad de que un Estado sin haber participado en la firma del tratado pueda pasar a ser Parte de éste. 
-  Normalmente lo estados adhieren a un tratado cuando han cumplido con los procedimientos internos de aprobación del mismo, ya sea a través de la aprobación del Congreso o ratificación de órganos internos, lo anterior dependiendo del país.
-
-%p.palabra
-  %strong='Aprobación:'
-  es el acto interno del ordenamiento jurídico de un Estado en virtud del cual se otorga el consentimiento de obligarse por un tratado internacional. En Chile, se requiere la aprobación del Parlamento respecto de aquellos tratados internacionales que traten sobre materias de ley. Para proceder luego, por parte del Presidente de la República, a su adhesión o ratificación y posterior depósito. 
-
-%p.palabra
-  %strong='Articulado:'
-  conjunto o serie de los artículos de un tratado, ley, reglamento, etc.
-
-%p.palabra
-  %strong='Asesor Parlamentario:'
-  personal de asesoría técnica y/o apoyo al trabajo de los Diputados, Senadores o comités parlamentarios. 
-
-%p.palabra
-  %strong='Asignaciones Parlamentarias:'
-  fondos adicionales que se le entregan a Diputados y Senadores destinados a contratación de asesorías, los gastos de traslado y las oficinas que implican la función parlamentaria, tanto en el ámbito legislativo como en la representación en cada distrito o circunscripción.
-
-%p.palabra
-  %strong='Autoridad, Jefatura o Jefe Superior del Órgano o Servicio de la Administración del Estado:'
-  es la autoridad con competencia comunal, provincial, regional o, en su caso, el jefe superior del servicio a nivel nacional. En consecuencia podrá ser un alcalde, un director regional, un superintendente, etc. (Artículo 3º reglamento ley de transparencia).
-
-%p.palabra
-  %strong='Audiencia Pública:'
-  son instancias convocadas por las Comisiones Permanentes de la Cámara y que están destinadas a escuchar el parecer de las personas involucradas en un determinado proyecto de ley. 
-
-  %a{:name => "B"}
-%p.palabra
-  %strong='Autos en relación:'
-  forma solemne por la cual la Corte de Apelaciones conoce y resuelve de la acciones que le encomienda la ley. Se lleva a cabo mediante un relator que comunica a la Corte de forma clara, completa y resumida los antecedentes que requiere para poder resolver, sin perjuicio de los alegatos que las partes involucradas hagan con posterioridad.
-
-%h3.text-center
-  B
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Bancada Parlamentaria:'
-  conjunto de diputados de un partido político, los que a través de un jefe, designado por ellos, facilitan la relación con la Mesa de la respectiva corporación, con el fin de hacer más expedita la tramitación de los asuntos sometidos a su conocimiento. 
-
-%p.palabra
-  %strong='Bicameralidad:'
-  hace referencia al sistema donde se contemplan dos cámaras legislativas. 
-
-%p.palabra
-  %strong='Boletín:'
-  es el número único que se le asigna a cada proyecto cuando ingresa a tramitación en el Congreso Nacional.
-  
-  %a{:name => "C"}
-%p.palabra
-  %strong='Boletín de Sesión:'
-  es la publicación oficial que recoge el debate de las sesiones de Sala, los informes evacuados por las Comisiones, los oficios recibidos por la Cámara de Diputados, así como otros documentos o debates acaecidos durante la sesión. 
-  Se publica un Boletín por cada sesión.
-
-%h3.text-center
-  C
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Cámara(s):'
-  se le llama a cada una de las ramas del Congreso Nacional, esto es, a la Cámara de Diputados y al Senado de la República.
-  A su vez, cuando se habla de "Cámara Alta" se hace referencia explícitamente al Senado, mientras que el concepto "Cámara Baja" alude a la Cámara de Diputados.
-
-%p.palabra
-  %strong='Cámara de Origen:'
-  es aquella a la cual ingresa un proyecto de ley para su tramitación. Esto porque los proyectos de ley pueden ser presentados indistintamente en la cámara de diputados o del senado, salvo las excepciones consagradas en la constitución.
-
-%p.palabra
-  %strong='Cámara Revisora:'
-  es aquella que conoce del proyecto una vez que ha concluido su tramitación en la cámara de origen.
-
-%p.palabra
-  %strong='Circunscripción:'
-  territorio definido geográficamente que es representado por un Senador en el Congreso Nacional y que está constituida por regla general, por una región, salvo en aquellos casos en que ciertas regiones se dividen en más de una circunscripción. Chile está dividido en 19 circunscripciones que eligen a 2 Senadores cada una. 
-
-%p.palabra
-  %strong='Citaciones:'
-  es la convocatoria que, cuando corresponda, se lleva a cabo en cualquiera de las Cámaras para que sus parlamentarios concurran a sesión u otra actividad y que debe ser realizada por el Presidente de la Cámara de Diputados o del Senado. 
-  Las Comisiones son citadas por sus respectivos presidentes, tanto en la Cámara como en el Senado.
-
-%p.palabra
-  %strong='Código:'
-  es el texto oficial que contiene las leyes basicas de nuestro ordenamiento. Estos texto son, por ejemplo de Civil, Penal o Procedimiento Civil.
-
-%p.palabra
-  %strong='Cohecho:'
-  es la solicitud o aceptación de un favor de tipo económico realizada por un empleado público para cumplir o dejar de cumplir una obligación relacionada con su cargo.
-
-%p.palabra
-  %strong='Comisión:'
-  es un grupo de trabajo compuesto, según sea el caso, por 5 senadores o por 13 diputados y excepcionalmente por representantes de ambas Cámaras (en el caso de la comisión mixta), cuya función primordial es el estudio pormenorizado y especializado de los proyectos de ley y de las materias sometidas a su conocimiento.
-
-%p.palabra
-  %strong='Comisión Bicameral:'
-  es un organismo compuesto por un múmero igualitario de Diputados y Senadores, que busca analizar y generar definiciones respecto de ciertas materias legislativas, y proponer sus conclusiones a ambas cámaras de forma general. 
-
-%p.palabra
-  %strong='Comisión Especial:'
-  es aquella que se crea por acuerdo de la Cámara de Diputados (con la composición y bajo las condiciones que ésta le señale) con el objeto de dedicarse al estudio de una determinada legislación o a reunir antecedentes sobre una materia específica, debiendo informar a la Sala del resultado de su cometido.
-
-%p.palabra
-  %strong='Comisión Interamericana de Derechos Humanos:'
-  es una de las dos entidades del sistema interamericano de protección de derechos humanos, que tiene por objeto promover la observancia y la defensa de los derechos humanos además de servir como órgano consultivo de la OEA en esta materia. Tiene su sede en Washington, DC.
-
-%p.palabra
-  %strong='Comisión Investigadora:'
-  es aquella que se crea por acuerdo de la Cámara de Diputados en ejercicio de sus facultades fiscalizadoras, con el objeto de reunir información relativa a determinados actos del Gobierno.
-
-%p.palabra
-  %strong='Comisión Mixta:'
-  es aquella que está formada por igual número de diputados y senadores (5 en cada caso), cuyo objetivo es solucionar las divergencias surgidas entre ambas cámaras durante la tramitación de un proyecto de ley. Serán presididas por el senador que elija la mayoría de la comisión, y formarán quórum para sesionar con la mayoría de los miembros de cada corporación que las integren.
-
-%p.palabra
-  %strong='Comisión Permanente:'
-  es aquella comisión cuya constitución está contemplada en los reglamentos internos de ambas Cámaras y que funciona siempre.
-
-%p.palabra
-  %strong='Comisión Unida:'
-  es una comisión formada por dos o más comisiones cuando las materias sometidas a estudio tienen relación con más de una de ellas.
-
-%p.palabra
-  %strong='Comité Parlamentario:'
-  es el conjunto de senadores de un partido político, los que a través de un jefe, facilitan y hacen más expedita la relación con la Mesa de la respectiva corporación.
-
-%p.palabra
-  %strong='Conflictos de interés:'
-  son aquellos que se producen cuando una persona tiene intereses personales respecto de materias sobre las cuales debiese resolver con independencia y autonomía.
-
-%p.palabra
-  %strong='Congreso Nacional:'
-  órgano del Estado que conforma el Poder Legislativo en Chile y está compuesto por la Cámara de Diputados (120 miembros) y por el Senado (38 miembros). Sus principales funciones son ejercer la representación de la ciudadanía, concurrir a la formación de las leyes junto con el Presidente de la República y fiscalizar los actos del gobierno.
-
-%p.palabra
-  %strong='Congreso Pleno:'
-  se denomina así a la sesión en que se reúnen los miembros de ambas Cámaras del Congreso Nacional.
-
-%p.palabra
-  %strong='Consejo para la Transparencia:'
-  es una corporación autónoma de derecho público, con personalidad jurídica y patrimonio propio, que no depende de ningún Ministerio para preservar su independencia. Por ley se encarga de promover la transparencia de la función pública, fiscalizar el cumplimiento de las normas sobre transparencia y publicidad de la información de los órganos de la Administración del Estado y garantizar el derecho de acceso a la información pública.
-
-%p.palabra
-  %strong='Constitución Política de la República:'
-  es la norma jurídica fundamental del Estado. Establece la forma de gobierno, los poderes públicos, sus atribuciones y determina los derechos y garantías de las personas.
-
-%p.palabra
-  %strong='Contienda de Competencia:'
-  es un conflicto suscitado entre dos o más tribunales (e incluso autoridades políticas o administrativas), en donde todos estiman tener competencia para conocer de determinado asunto o, por el contrario, estiman que ninguno de ellos la posee.
-
-%p.palabra
-  %strong='Contraloría General de la República:'
-  organismo autónomo del Estado, de rango constitucional, que desempeña una labor eminentemente fiscalizadora de carácter jurídico, contable y financiero, pues está destinada a cautelar el principio de legalidad, es decir, verificar que los órganos de la Administración del Estado actúen dentro del ámbito de sus atribuciones y conforme a los procedimientos que la ley contempla.
-
-%p.palabra
-  %strong='Corporación:'
-  cada una de las Cámaras del Congreso Nacional, esto es, Cámara de Diputados y Senado de la República.
-
-%p.palabra
-  %strong='Corrupción:'
-  es el antónimo de la probidad. Se entiende como la práctica o fenómeno que supone el uso o abuso de poderes y funciones públicas para generar indebidamente riqueza o beneficios privados.
-
-%p.palabra
-  %strong='Corte Interamericana de Derechos Humanos:'
-  es un órgano judicial de la Organización de los Estados Americanos (OEA) que goza de autonomía frente a los demás órganos de aquella y que tiene su sede en Dan José de Costa Rica, cuyo propósito es aplicar e interpretar la Convención Americana sobre Derechos Humanos y otros tratados de derechos humanos a los cuales se somete el llamado sistema interamericano de protección de derechos humanos.
-
-%p.palabra
-  %strong='Costos directos de reproducción:'
-  todos aquellos que sean necesarios para obtener la información en el soporte que el requirente haya solicitado, excluyendo el valor del tiempo que ocupe el o los funcionarios para realizar la reproducción. (Artículo 3º reglamento ley de transparencia)
-
-%p.palabra
-  %strong='Crimen o simple delito:'
-  son conductas (acciones u omisiones), contrarias a derecho (antijurídicas), culpables, tipificadas y penadas por ley, que se diferencian en la pena que se les aplica. Los crímenes son sancionados con penas más altas que los simples delitos.
-
-  %a{:name => "D"}
-%p.palabra
-  %strong='Cuenta:'
-  relación que contiene todos los documentos ingresados a la Cámara y que el Prosecretario lee a la Sala (da cuenta) al comienzo de la Sesión. Una vez que se da cuenta a la Sala el documento tiene plena vigencia o existencia y produce los efectos para los cuales ha sido enviado o recibido (Art. N° 13, Ley N° 18.918).
-
-%h3.text-center
-  D
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Datos Sensibles:'
-  los datos personales que se refieren a las características físicas o morales de las personas o a hechos o circunstancias de su vida privada o intimidad, tales como los hábitos personales, el origen social, las ideologías y opiniones políticas, las creencias o convicciones religiosas, los estados de salud físicos o psíquicos y la vida sexual. (Artículo 3º reglamento ley de transparencia).
-
-%p.palabra
-  %strong='Declaración de Intereses:'
-  es un mecanismo que busca prevenir conflictos de intereses por lo que determinados funcionarios públicos son obligados a declarar las actividades económicas y profesionales en que participan.
-
-%p.palabra
-  %strong='Declaración de Patrimonio:'
-  es un mecanismo que busca transparentar la evolución del patrimonio de los altos funcionarios mientras permanecen en sus cargos y prevenir el enriquecimiento ilícito de éstos.
-
-%p.palabra
-  %strong='Decreto:'
-  norma dictada por cualquier autoridad sobre los asuntos de su competencia. Cuando emana del Presidente de la República se denomina Decreto Supremo. 
-
-%p.palabra
-  %strong='Decreto con Fuerza de Ley (DFL):'
-  son normas dictadas por el Presidente de la República sobre materias propias de ley, en virtud de una autorización que le confiere el Congreso Nacional para ello, la que no puede exceder de un año y debe expresar las materias sobre las cuales versa la delegación. Asimismo, el Presidente de la República está autorizado para dictar DFL para fijar el texto refundido, coordinado y sintetizado de las leyes cuando sea conveniente para su mejor ejecución.
-
-%p.palabra
-  %strong='Decreto Ley:'
-  son normas dictadas por el Presidente de la República sobre materias propias de ley, sin autorización alguna del Congreso Nacional.
-
-%p.palabra
-  %strong='Decreto Promulgatorio:'
-  decreto dictado una vez aprobado el proyecto de ley por el Presidente de la República dentro de un plazo de 10 días, en el cual se declara la existencia de la ley, dejando de ser un proyecto y ordenar su cumplimiento.
-
-%p.palabra
-  %strong='Delito Flagrante:'
-  hecho delictivo que se descubre cuando se está cometiendo o cuando acaba de cometerse.
-
-%p.palabra
-  %strong='Democracia:'
-  forma de gobierno u organización del Estado, en la cual las decisiones colectivas son adoptadas por el pueblo mediante mecanismos de participación directa o indirecta que le confieren legitimidad a los representantes.
-
-%p.palabra
-  %strong='Derecho de Acceso a la Información Pública:'
-  es el derecho que permite a cualquier persona conocer la información que se encuentra en poder de los órganos de la Administración del Estado.
-  De acuerdo al artículo 13 de la Convención Americana de Derechos Humanos y 19 Nº 2 del Pacto Internacional de Derechos Civiles y Políticos “toda persona tiene derecho a la libertad de pensamiento y de expresión. Este derecho comprende la libertad de buscar, recibir y difundir informaciones e ideas de toda índole, sin consideración de fronteras, ya sea oralmente, por escrito o en forma impresa o artística, o por cualquier otro procedimiento de su elección…”
-  Por otra parte, el artículo 19 de la Declaración Universal de los Derechos Humanos señala que “todo individuo tiene derecho a la libertad de opinión y de expresión; este derecho incluye el de no ser molestado a causa de sus opiniones, el de investigar y recibir informaciones y opiniones, y el de difundirlas, sin limitación de fronteras, por cualquier medio de expresión”.
-
-%p.palabra
-  %strong='Discusión:'
-  etapa en que las cámaras hacen el estudio, análisis y deliberación sobre el proyecto de ley.
-
-%p.palabra
-  %strong='Diario de Sesiones:'
-  publicación oficial que recoge el debate de las sesiones de sala, los informes evacuados por las Comisiones, las peticiones de oficios de los senadores, así como otros documentos o debates acaecidos durante la sesión. Se publica un Diario por cada sesión.
-
-%p.palabra
-  %strong='Diario Oficial:'
-  es el periódico oficial del Estado, en donde se publican, entre otras cosas, las leyes promulgadas. Debe estar asociado a un diario de circulación nacional.
-
-%p.palabra
-  %strong='Dieta Parlamentaria:'
-  renta que los diputados y senadores perciben mensualmente y equivale a la remuneración de un Ministro de Estado incluidas todas las asignaciones que a estos correspondan. (Art. N° 62 Constitución Política de la República).
-
-%p.palabra
-  %strong='Diputado:'
-  representante correspondiente a un determinado distrito, electo cada 4 años en votaciones populares.
-
-%p.palabra
-  %strong='Diputado Informante:'
-  Diputado que tiene la responsabilidad de exponer, ante la Sala, el informe de un proyecto de ley que ha elaborado la comisión que integra. 
-
-%p.palabra
-  %strong='Discusión General:'
-  es aquella que tiene por objeto aprobar o desechar en su totalidad un proyecto de ley, considerando las ideas fundamentales o matrices contenidas en el Mensaje o Moción respectiva. 
-
-%p.palabra
-  %strong='Discusión Particular:'
-  es aquella que tiene por objeto examinar un proyecto de ley en detalle, es decir, artículo por artículo. 
-
-%p.palabra
-  %strong='Discusión Inmediata:'
-  plazo de 6 días para el despacho total de un proyecto de ley en la Cámara respectiva. 
-
-%p.palabra
-  %strong='Discusión única:'
-  es aquella en que el proyecto se discute en general y en particular a la vez. No tiene segundo informe y las indicaciones se votan una vez aprobado en general el proyecto.
-
-%p.palabra
-  %strong='Distrito:'
-  división territorial que representa un diputado en el Congreso Nacional y que puede estar constituida por una o más comunas. Chile está dividido en 60 Distritos que eligen a 2 diputados cada uno.
-
-  %a{:name => "E"}
-%p.palabra
-  %strong='Documentos:'
-  todo escrito, correspondencia, memorándum, plano, mapa, dibujo, diagrama, documento gráfico, fotografía, microforma, grabación sonora, video, dispositivo susceptible de ser leído mediante la utilización de sistemas mecánicos, electrónicos o computacionales y, en general, todo soporte material que contenga información, cualquiera sea su forma física o características, así como las copias de aquéllos. (Artículo 3º reglamento ley de transparencia).
-
-%h3.text-center
-  E
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Estado de Asamblea:'
-  es un estado de excepción constitucional que se da en caso de guerra externa. El presidente de la República lo puede decretar, en todo el territorio nacional o solo una parte de él, con acuerdo del Congreso Nacional.
-
-%p.palabra
-  %strong='Estado de Catástrofe:'
-  es un estado de excepción constitucional que se da en caso de calamidad pública, en una zona geográfica específica. Es declarado por el Presidente, pero debe informar al Congreso.
-
-%p.palabra
-  %strong='Estado de Emergencia:'
-  es un estado de excepción constitucional, se da por una grave alteración al orden público o daño a la seguridad de la Nación. Es declarado por el Presidente, pero si se quiere prorrogar, debe contar con autorización del congreso.
-
-%p.palabra
-  %strong='Estado de Excepción:'
-  es la acción por la cual todos los derechos y garantias que la constitución protege se ven afectadas, por alteraciones graves de las instituciones del Estado. Los estados son de Asamblea, de Sitio, de Catastrofe y de Emergencia.
-
-  %a{:name => "F"}
-%p.palabra
-  %strong='Estado de Sitio:'
-  es un estado de excepción constitucional que se da en caso de guerra interna o grave conmoción interior. Lo declara el Presidente de la República, con acuerdo del Congreso Nacional.
-
-%h3.text-center
-  F
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Facultades del jurado:'
-  facultad exclusiva del Senado de conocer y resolver, como jurado lego, la acusación constitucional presentada por la Cámara de Diputados declarando si el acusado es o no culpable del delito, infracción o abuso de poder que se el imputa (Art. 53 N° 1 Constitución Política de la República).
-
-%p.palabra
-  %strong='Fideicomiso Ciego:'
-  es un mecanismo que tiene por objeto evitar conflictos de intereses en las decisiones que adopten altas autoridades públicas en el ejercicio de su cargo, por lo que a través de esta figura les permite ceder la administración de su patrimonio a un tercero independiente, sin tener opción a saber del manejo posterior de sus bienes por parte de éste.
-
-%p.palabra
-  %strong='Financiamiento Electoral:'
-  toda contribución en dinero, o estimable en dinero, que se efectúe a un candidato o partido político. Es público, si se realiza por el estado, mientras que es privado si se materializa bajo la forma de mutuo, donación, comodato o cualquier acto o contrato a título gratuito, destinado al financiamiento de gastos electorales. 
-
-%p.palabra
-  %strong='Financiamiento Electoral:'
-  toda contribución en dinero, o estimable en dinero, que se efectúe a un candidato o partido político. Es público, si se realiza por el estado, mientras que es privado si se materializa bajo la forma de mutuo, donación, comodato o cualquier acto o contrato a título gratuito, destinado al financiamiento de gastos electorales. 
-
-%p.palabra
-  %strong='Firma:'
-  es un acto solemne en virtud del cual el Estado manifiesta su voluntad de querer obligarse por el Tratado Internacional.
-  Firmar el instrumento no establece una obligación jurídicamente vinculante para el Estado, pero es una indicación de que el país tiene intención de someter el tratado a un análisis nacional y tomar en consideración su ratificación. Sin embargo el Estado tiene la obligación de abstenerse de cualquier acto que ponga en peligro los objetivos y el propósito del tratado, o de tomar medidas que lo debilitan hasta su adhesión o ratificación. 
-
-%p.palabra
-  %strong='Fiscal Nacional:'
-  es el jefe de la Fiscalía Nacional y es nombrado por el Presidente de la República, a través de una quina propuesta por la Corte Suprema.
-
-%p.palabra
-  %strong='Fiscalía Nacional:'
-  o también llamado Ministerio Público, es un órgano que tiene como función investigación de los delitos, presentar al o los  imputado (s) en los tribunales de justicia, y dar protección a víctimas y testigos.
-
-%p.palabra
-  %strong='Flexibilidad Laboral:'
-  hace referencia a la fijación de un modelo regulador flexible para el manejo de los derechos laborales en el interior de las empresas y organizaciones privadas inmersas en una lógica capitalista y de libre mercado. La aplicación de la flexibilidad laboral requiere de un proceso de desregulación del mercado laboral.
-
-%p.palabra
-  %strong='Fuero Parlamentario:'
-  es aquel que permite que un diputado o senador, desde el día de su elección, designación o incorporación, no pueda ser procesado o privado de libertad, salvo el caso de delito flagrante, sin que antes exista un pronunciamiento de la Corte de Apelaciones respectiva. Si un parlamentario es desaforado queda suspendido de su cargo y sujeto al juez competente como cualquier otro ciudadano.
-
-%p.palabra
-  %strong='Funcionario Público:'
-  es el individuo que ejerce funciones públicas en el Estado, de carácter permanente, temporal, remunerado o a honorarios.
-
-  %a{:name => "G"}
-%p.palabra
-  %strong='Fundamentos de los actos administrativos:'
-  son las circunstancias y el raciocinio que justifican las decisiones que toman los órganos de la administración.
-
-%h3.text-center
-  G
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Gasto Electoral:'
-  todo desembolso (gasto) que se realice para el financiamiento de los equipos, oficinas  y servicios de los partidos políticos y candidatos, con ocasión y a propósito de actos electorales durante el período de campaña electoral, que es el comprendido entre el día que vence el  plazo para declarar candidaturas y el día de la elección  respectiva. (Artículo 2 y 3 de la ley sobre transparencia, límite y control electoral Nº 19.884).
-
-  %a{:name => "H"}
-%p.palabra
-  %strong='Grupos de interés:'
-  conjunto de personas que se organizan con el objeto de perseguir intereses específicos en el escenario político, económico y social, entre otros, y que funcionan ejerciendo presión sobre otros grupos.
-
-%h3.text-center
-  H
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-  %a{:name => "I"}
-%p.palabra
-  %strong='Hora de incidentes:'
-  es la última parte de una sesión ordinaria, donde los diputados y senadores pueden hacer presente (en sus respectivas Cámaras) temas de interés público y general o solicitar información a determinadas autoridades
-
-%h3.text-center
-  I
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Incompatibilidad:'
-  es el impedimento legal para ejercer dos o más cargos a la vez. Los artículos 58 y 59 de la Constitución Política de la República establecen estas incompatibilidades.
-%p.palabra
-  %strong='Indicación:'
-  es la proposición de sustitución, modificación o adición al texto de un proyecto de ley que pueden presentar los parlamentarios durante la tramitación legislativa. 
-
-%p.palabra
-  %strong='Indulto Presidencial:'
-  es una atribución especial del Presidente de la República que se reconoce en el artículo 32 Nº 14 de la Constitución Política y que consiste en el perdón que éste hace del cumplimiento de una pena o la conmutación de una pena por otra menos rigurosa, que se concede como gracia a una persona que ha sido condenada por sentencia ejecutoriada.
-
-%p.palabra
-  %strong='Información elaborada con presupuesto público:'
-  es aquella cuya producción fue financiada con recursos provenientes de la ley de presupuestos del sector público.
-
-%p.palabra
-  %strong='Información Pública:'
-  es aquella información a la cual la ciudadanía puede tener acceso. De acuerdo a la ley Nº 20.285 serán públicos los actos y resoluciones de los órganos de la Administración del Estado, sus fundamentos, los documentos que les sirvan de sustento o complemento directo o esencial, y los procedimientos que se utilicen para su dictación. Asimismo lo será la información elaborada con presupuesto público y toda otra información que obre en poder de los órganos de la Administración salvo las excepciones legales.
-
-%p.palabra
-  %strong='Informe:'
-  es el documento final del trabajo encomendado a una comisión para el estudio de una ley.
-
-%p.palabra
-  %strong='Inhabilidad:'
-  es el impedimento para desempeñar un cargo político.
-
-%p.palabra
-  %strong='Iniciativa de ley:'
-  es aquella que da el impulso inicial para que una proposición sea analizada por el Congreso Nacional. Según la Constitución Tiene nen iniciativa de ley el Presidente de la República a través de un mensaje y los parlamentarios, tanto diputados como senadores, a través de una moción.
-
-%p.palabra
-  %strong='Inmunidad parlamentaria:'
-  es un privilegio que la Constitución concede a los parlamentarios, con el objeto de asegurar la independencia del Congreso y la completa libertad de acción de sus miembros. En ella destacan: el fuero, la dieta y la inviolabilidad parlamentaria.
-
-%p.palabra
-  %strong='Institucionalidad Democrática:'
-  conjunto de reglas que inducen patrones de comportamiento democrático y protegen estos comportamientos de otros no democráticos.
-
-%p.palabra
-  %strong='Interpelación:'
-  es el proceso por el cual se llama a un ministro de estado al Congreso, para ser consultado sobre una materia en particular de su cartera y ver si existió alguna responsabilidad política en el suceso consultado.
-
-  %a{:name => "J"}
-%p.palabra
-  %strong='Inviolabilidad Parlamentaria:'
-  es un privilegio que la Constitución concede a los parlamentarios que impide que sean acusados por lo que dicen en sala y en comisiones.
-
-%h3.text-center
-  J
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-  %a{:name => "K"}
-%p.palabra
-  %strong='Jefe de bancada o comité parlamentario:'
-  es el diputado o senador que representa a una Bancada o Comité Parlamentario, o al conjunto de ellos, si existieren varios comités de un mismo partido.
-
-  %a{:name => "L"}
-%h3.text-center
-  K
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%h3.text-center
-  L
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Legislatura:'
-  período de sesiones en que el Congreso Nacional se aboca al estudio de los proyectos de ley.
-
-%p.palabra
-  %strong='Ley:'
-  es una declaración de los órganos legislativos, creada según el procedimiento señalado en la Constitución, y que tiene por objeto mandar, prohibir o permitir una determinada conducta.
-
-%p.palabra
-  %strong='Ley de Quórum Calificado:'
-  son las que tratan sobre materias señaladas en la Constitución. Para ser aprobadas, modificadas o derogadas, requiere de la mayoría absoluta de los diputados y senadores en ejercicio. 
-
-%p.palabra
-  %strong='Ley de transparencia de la función pública y de acceso a la información de la administración del Estado:'
-  ley publicada con fecha 20 de agosto de 2008 y vigente desde el día 20 de abril de 2009, que sistematiza en un cuerpo único el principio de transparencia de la función pública, el derecho de acceso a la información de los órganos de la Administración del Estado, los procedimientos para el ejercicio y amparo del derecho y las excepciones a la publicidad de la información.
-
-%p.palabra
-  %strong='Leyes interpretativas de la Constitución:'
-  son las que precisan o explican el sentido y alcance de un precepto o expresión de la Constitución Política. Para ser aprobada, modificada o derogada, se requiere de los tres quintos de los diputados y senadores en ejercicio.
-
-%p.palabra
-  %strong='Leyes ordinarias o comunes:'
-  son las normas restantes que regulan aspectos de la vida social que la Constitución define como materia de leyes. Para ser aprobadas, modificadas o derogadas, se requiere de la concurrencia de la mayoría de los diputados y senadores asistentes a la sesión.
-
-%p.palabra
-  %strong='Leyes orgánicas constitucionales:'
-  son normas complementarias de la Constitución que se refieren a materias expresamente previstas en el texto constitucional. Son objeto de un control preventivo de constitucionalidad y no pueden ser materia de delegación de facultades legislativas. Para ser aprobadas, modificadas o derogadas, se requiere de cuatro séptimas partes de los diputados y senadores en ejercicio.
-
-  %a{:name => "M"}
-%p.palabra
-  %strong='Lobby:'
-  es la actividad en que una persona o un grupo de personas unidas por intereses similares (económicos, políticos, religiosos, etc.) realiza acciones para influir en aquellos procesos de discusión y toma de decisiones de las autoridades públicas, sin retribución económica a diferencia del tráfico de influencias.
-
-%h3.text-center
-  M
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Materia:'
-  temática que incorpora un proyecto de ley.
-
-%p.palabra
-  %strong='Mensaje:'
-  iniciativa de ley impulsada por el Presidente de la República.
-
-%p.palabra
-  %strong='Mesa:'
-  autoridades elegidas por los propios parlamentarios, para dirigir la corporación.
-
-%p.palabra
-  %strong='Moción:'
-  iniciativa de ley impulsada por parlamentarios, tanto diputados como senadores. Esta no puede ser firmada por más de diez diputados ni más de cinco senadores.
-
-  %a{:name => "N"}
-%p.palabra
-  %strong='Muerte presunta:'
-  es la declarada por el juez, en conformidad a las reglas legales, respecto de un individuo que ha desaparecido y de quien se ignora si vive o no. El juez presume la muerte de una persona, por eso se la trata bajo el título de “presunción de muerte por desaparecimiento”.
-
-%h3.text-center
-  N
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Negociación Incompatible:'
-  es el delito que sanciona al funcionario que esta en ejercicio de sus funciones, favorece sus intereses o los de sus cercanos durante la adjudicación de un contrato administrativo o la realización de una determinada operación estatal.
-
-%p.palabra
-  %strong='Notificación:'
-  actuación que tiene por objeto poner una resolución o diligencia en conocimiento de las partes o de terceros.
-
-  %a{:name => "O"}
-%p.palabra
-  %strong='Notificación por cédula:'
-  es aquella que consiste en entregar en el domicilio del notificado copia íntegra de la resolución y los datos necesarios para su acertado entendimiento.
-
-%h3.text-center
-  O
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong=='Oficio:'
-  Documento oficial proveniente de algun servidor público respecto a una materia de ley determinada.
-
-  %a{:name => "P"}
-%p.palabra
-  %strong='Órganos o servicios de la Administración del Estado:'
-  la Administración del Estado está formada por los Ministerios, las Intendencias, las Gobernaciones y los órganos y servicios públicos creados para el cumplimiento de la función administrativa, incluidos la Contraloría General de la República, el Banco Central, las Fuerzas Armadas y las Fuerzas de Orden y Seguridad  pública, los Gobiernos Regionales, las Municipalidades y las empresas públicas creadas por ley (artículo 1º inciso 2º de la Ley Orgánica Constitucional de Bases Generales de la Administración del Estado).
-
-%h3.text-center
-  P
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Pareo:'
-  es un acuerdo entre dos parlamentarios, de distintos Comités, a través del cual durante un plazo determinado, se comprometen a no participar en ninguna votación si uno de ellos está ausente.
-
-%p.palabra
-  %strong='Parlamentarios:'
-  son los miembros que desempeñan la función legislativa: diputados y senadores.
-
-%p.palabra
-  %strong='Parlamento:'
-  corresponde al órgano en que reside el poder legislativo que  se denomina habitualmente Congreso Nacional y suele estar estructurado en cámaras, una de representantes o diputados y otra de senadores. 
-
-%p.palabra
-  %strong='Partidos Políticos:'
-  son asociaciones voluntarias dotadas de personalidad jurídica, formadas por ciudadanos que comparten una misma doctrina política de gobierno, cuya finalidad es contribuir al funcionamiento del régimen democrático y ejercer una legitima influencia en la conducción del Estado, para alcanzar el bien común y servir al interés nacional.
-
-%p.palabra
-  %strong='Pena Aflictiva:'
-  es la pena igual o superior a 3 años y un día de presidio, la cual implica la pérdida de la ciudadanía.
-
-%p.palabra
-  %strong='Poder Ejecutivo:'
-  es el poder encargado de la administración del Estado. Esta función recae en el Presidente de la República.
-
-%p.palabra
-  %strong='Poder Judicial:'
-  es el poder encargado de la administración de justicia. El principal tribunal es la Corte Suprema.
-
-%p.palabra
-  %strong='Período Legislativo:'
-  es un período de cuatro años, al cabo del cual la Cámara de Diputados se renueva en su totalidad y el Senado en forma parcial.
-
-%p.palabra
-  %strong='Poder Legislativo:'
-  es uno de los 3 poderes del Estado y esta encargado de la elaboración de las leyes que rigen la nación. Esta labor se realiza en el Congreso Nacional.
-
-%p.palabra
-  %strong='Potestad reglamentaria:'
-  permite al Presidente de la República y otras autoridades dictar un conjunto de normas de inferior jerarquía que las leyes, como los reglamentos, los simples decretos, las instrucciones, los decretos supremos y las resoluciones.
-
-%p.palabra
-  %strong='Presupuesto público:'
-  persigue reflejar los gastos y los ingresos previstos para un ámbito determinado del sector público en un período de tiempo que habitualmente es un 1 año.
-
-%p.palabra
-  %strong='Primer trámite constitucional:'
-  se le llama así a todo el proceso de discusión del que es objeto un proyecto de ley en la Cámara donde fue presentado originalmente (Cámara de origen).
-
-%p.palabra
-  %strong='Principio de probidad y publicidad de la información:'
-  el ejercicio de las funciones públicas obliga a sus titulares a dar estricto cumplimiento al principio de probidad en todas sus actuaciones.Son públicos los actos y resoluciones de los órganos del estado, así como sus fundamentos y los procedimientos que utilicen. Sin embargo, sólo una ley de quórum calificado podrá establecer la reserva o secreto de aquéllos o de estos, cuando la publicidad afectaré el debido cumplimiento de las funciones de dichos órganos, los derechos de las personas, la seguridad de la nación o el interés general.
-
-%p.palabra
-  %strong='Privilegio de pobreza:'
-  es un beneficio que se otorga a determinadas personas, que les permite ser atendidos gratuitamente por los funcionarios del orden judicial y por los abogados, procuradores y oficiales subalternos designados para prestar servicios a los litigantes con problemas económicos, según el artículo 591 del Código Orgánico de Tribunales.
-
-%p.palabra
-  %strong='Probidad:'
-  el Diccionario de la Real Academia Española identifica el término con “honradez” y la define como “rectitud de ánimo, integridad en el obrar”.
-
-%p.palabra
-  %strong='Probidad Administrativa:'
-  consiste en observar una conducta funcionaria intachable y un desempeño honesto y leal de la función o cargo, priorizando el interés general sobre el particular.
-
-%p.palabra
-  %strong='Promulgación del proyecto:'
-  es un acto que corresponde al Presidente de la República y tiene por finalidad certificar la existencia de la ley, dotarla de fuerza obligatoria y ordenar que sea cumplida como tal. Esta se expresa a través de la dictación de un  decreto promulgatorio.
-
-%p.palabra
-  %strong='Propaganda o publicidad electoral:'
-  es la dirigida a inducir a los electores a emitir su voto por candidatos determinados o a apoyar alguna de las proposiciones sometidas a plebiscito.
-
-%p.palabra
-  %strong='Proyecto de Acuerdo:'
-  proposición que presentan diputados o senadores en la sala, para poder adoptar acuerdos o sugerir observaciones sobre los actos realizados por el gobierno o para obtener un pronunciamiento de la corporación, en relación a temas de interés general.
-
-%p.palabra
-  %strong='Proyecto de ley:'
-  es la iniciativa de ley que ingresa al Congreso Nacional para cumplir el trámite de formación de la ley.
-
-  %a{:name => "Q"}
-%p.palabra
-  %strong='Publicación del proyecto:'
-  consiste en el acto mediante el cual se comunica o informa el contenido de la ley. En Chile debe hacerse en el Diario Oficial y desde ese momento es obligatoria y se presume conocida por todos.
-
-%h3.text-center
-  Q
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-  %a{:name => "R"}
-%p.palabra
-  %strong='Quórum:'
-  determinada mayoría exigida, para sesionar y adoptar acuerdos. No se consideraran en el cómputo los senadores y diputados que se encuentren suspendidos o ausentes del país con permiso constitucional.
-
-%h3.text-center
-  R
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Ratificación, aceptación, aprobación, y adhesión:'
-  acto internacional mediante el cual un Estado establece su consentimiento en obligarse por un tratado.
-
-%p.palabra
-  %strong='Receso parlamentario:'
-  período que media entre dos Legislaturas, usualmente se da en el mes de febrero.
-
-  %a{:name => "S"}
-%p.palabra
-  %strong='Resolución:'
-  es una norma dictada por cualquier autoridad inferior de la administración central sobre asuntos o negocios de su competencia, en virtud de una delegación de atribuciones del Presidente de la República.
-
-%h3.text-center
-  S
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Sala de Sesiones:'
-  es el lugar donde se efectúa la discusión parlamentaria y las votaciones.
-
-%p.palabra
-  %strong='Sanción:'
-  es el acto por el cual el Presidente de la República da su conformidad al proyecto de ley aprobado por ambas cámaras. La aprobación será expresa cuando el Presidente promulga el proyecto sin más trámite, y tácita cuando transcurren más de 30 días desde que recibió el proyecto y éste no lo devuelve al Congreso.
-
-%p.palabra
-  %strong='Segundo Trámite Constitucional:'
-  se refiere al proceso de tramitación por el que atraviesa un proyecto de ley que ya fue aprobado en su Cámara de Origen, en aquella Cámara donde no fue presentado el proyecto originalmente (Cámara Revisora).
-
-%p.palabra
-  %strong='Semana Distrital:'
-  corresponde a una semana del mes, en la cual no se celebran sesiones de Sala ni de comisiones. De esa manera, los diputados pueden permanecer en su zona, lo que les facilita el conocimiento en terreno de los problemas de sus distritos.
-
-%p.palabra
-  %strong='Senador:'
-  miembro del Congreso elegido democráticamente cuya principal función es la de concurrir, en unión con la Cámara de Diputados, a la formación de las leyes y a la aprobación de los tratados internacionales.
-
-%p.palabra
-  %strong='Sesión:'
-  reunión del Senado, de la Cámara de Diputados o del Congreso Pleno.
-
-%p.palabra
-  %strong='Sistema Binominal:'
-  es un sistema de elecciones populares destinado a la formación de un sistema bipartidista en torno a dos grandes partidos políticos o coaliciones. En la práctica se elaboran listas de candidatos que deben tener sólo dos postulantes al cargo como máximo.
-  En caso que la lista más votada obtenga el doble de votos que su más cercana competidora, elige a sus dos candidatos. Por el contrario, si no alcanza a obtener el doble de votos que la segunda lista más votada, obtienen un cargo cada una de ellas.
-
-%p.palabra
-  %strong='Soberanía Popular:'
-  supone que la legitimidad de las autoridades públicas deriva de la voluntad de todos, por lo que las autoridades son mandatarias o servidoras del pueblo y su función es cumplir con los objetivos de bien común.
-
-%p.palabra
-  %strong='Sociedad Civil:'
-  conjunto de ciudadanos organizados como tales para actuar e incidir en el campo de lo público en busca del bien común.
-
-%p.palabra
-  %strong='Subsecretaría Administrativa:'
-  corresponde a la administración de la Cámara de Diputados. Se divide en las siguientes áreas: Dirección de Administración, Oficina de Personal, Dirección de Finanzas, Departamento de Informática, Relaciones Públicas, Servicio de Alimentación y Personal de Administración.
-  
-%p.palabra
-  %strong='Subsecretaría Legislativa:'
-  es la responsable de la dirección, organización y coordinación de las diferentes actividades, funciones y cometidos que en materia de apoyo a las tareas de legislativa y fiscalizadora, competen a la Corporación.
-
-%p.palabra
-  %strong='Sufragio:'
-  es el voto que emite una persona con capacidad de elegir. Este puede ser Universal o Restringido.
-
-%p.palabra
-  %strong='Sufragio Restringido:'
-  es aquel que se reserva el derecho a voto para los ciudadanos que reúnen ciertas características.
-
-%p.palabra
-  %strong='Sufragio Universal:'
-  en el cual tienen derecho a participar todos los ciudadanos, salvo determinadas excepciones.
-
-%p.palabra
-  %strong='Sustento o complemento directo:'
-  los documentos que se vinculen necesariamente al acto administrativo en que concurren, siempre que dicho acto se haya dictado, precisa e inequívocamente, sobre las bases de esos documentos. (Artículo 3º reglamento ley de transparencia).
-
-  %a{:name => "T"}
-%p.palabra
-  %strong='Sustento o complemento esencial:'
-  los documentos indispensables para la elaboración y dictación del acto administrativo en que concurren, de modo que sean inseparables del mismo. (Artículo 3º reglamento ley de transparencia).
-
-%h3.text-center
-  T
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Tabla:'
-  es el conjunto de proyectos de ley u otras materias de las que pueden ocuparse la Cámaras o sus Comisiones en una determinada sesión.
-
-%p.palabra
-  %strong='Tercer Trámite Constitucional:'
-  es el proceso por el que debe atravesar un proyecto de ley una vez que ha cumplido su tramitación en la Cámara Revisora, y han surgido discrepancias con lo aprobado por la Cámara de Origen.
-
-%p.palabra
-  %strong='Toma de Razón:'
-  es un control jurídico previo, general y obligatorio, propio del sistema chileno, que en materia de legalidad y constitucionalidad realiza la Contraloría General de la República de Chile, respecto de los decretos, decretos con fuerza de ley y resoluciones.
-
-%p.palabra
-  %strong='Trabajo en Comisiones:'
-  corresponde al accionar los parlamentarios en las respectivas comisiones que integran o presiden.
-  
-%p.palabra
-  %strong='Trabajo en Sala:'
-  corresponde al accionar en sala de votación de los parlamentarios en el acto de legislar.
-
-%p.palabra
-  %strong='Trámite Constitucional:'
-  se le llama así a todo el proceso de discusión del que es objeto un proyecto de ley.
-
-%p.palabra
-  %strong='Transparencia:'
-  se entiende como el atributo o cualidad que nos permite contar con información clara y precisa sobre algo o alguien, lo que aumenta nuestras capacidades de comprensión, vigilancia y comunicación.
-
-%p.palabra
-  %strong='Transparencia Activa:'
-  es el deber que tienen los órganos de la Administración del Estado de mantener a disposición permanente del público (sin previo requerimiento formal) determinada información relevante y actualizada que deberá publicarse de manera sistematizada en sus sitios electrónicos.
-
-%p.palabra
-  %strong='Transparencia Pasiva:'
-  es el derecho que tiene toda persona a solicitar y recibir información de cualquier órgano de la administración del Estado que no esté sometida al régimen de Transparencia Activa, sea que ésta se encuentre contenida en actos, resoluciones, actas, expedientes, contratos, acuerdos y a toda información elaborada con presupuesto público, salvo excepciones legales.
-
-%p.palabra
-  %strong='Tratados Internacionales:'
-  son acuerdos, pactos o contratos, de carácter internacional, que rigen situaciones jurídicas establecidas de común acuerdo por dos o más Estados soberanos.
-
-%p.palabra
-  %strong='Tribunal Calificador de Elecciones:'
-  órgano encargado de llevar a cabo el proceso electoral nacional, vale decir, el escrutinio general y la calificación de las elecciones para Presidente de la República, Diputados y Senadores. También se encarga de los plebiscitos y de las posibles reclamaciones que se sucedan por estos procesos y proclama a los candidatos que resultan elegidos por la ciudadanía electoral.
-
-  %a{:name => "U"}
-%p.palabra
-  %strong='Tribunal Constitucional:'
-  es un órgano del Estado, autónomo e independiente .Este resuelve conflictos que se originan si un proyecto de ley o un decreto infringe la Constitución, o cuando la aplicación de una ley vigente puede resultar contraria a la Constitución, o bien, si una ley es completamente inconstitucional.
-
-%h3.text-center
-  U
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Unicameralidad:'
-  es una iniciativa, votación o un acontecimiento, que se da en solo una de las cámaras que componen el poder legislativo
-  
-%p.palabra
-  %strong='Urgencias:'
-  tienen por objeto acelerar las etapas del proceso de formación de una ley y le compete al Presidente de la República hacerla presente en el Mensaje o mediante un oficio dirigido al Presidente de la Cámara respectiva o al Senado cuando el proyecto estuviese en comisión mixta. Existen 3 tipos de urgencia: simple, suma y de discusión inmediata.
-
-%p.palabra
-  %strong='Urgencia Simple:'
-  es aquella que obliga a que la discusión y votación en la Cámara requerida quede terminada en el plazo de 30 días. En el caso de la comisión mixta, ésta tendrá 10 días para despachar su informe y 10 días para que cada una de las Cámaras se pronuncie sobre el informe de la comisión.
-
-%p.palabra
-  %strong='Urgencia Suma:'
-  es aquella que obliga a que la discusión y votación en la Cámara requerida quede terminada en el plazo de 15 días. En el caso de la comisión mixta, ésta tendrá 5 días para despachar su informe y 10 días para que cada una de las Cámaras (5 y 5) se pronuncie sobre el informe de la comisión.
-
-%p.palabra
-  %strong='Urgencia de Discusión inmediata:'
-  es aquella urgencia que obliga a que la discusión y votación en la Cámara requerida quede terminada en el plazo de 6 días, caso en el cual el proyecto se discutirá en general y en particular a la vez. En el caso de la comisión mixta, ésta tendrá 2 día para despachar su informe y 4 días para que cada una de las Cámaras (2 y 2) se pronuncie sobre el informe de la comisión.
-
-  %a{:name => "V"}
-%p.palabra
-  %strong='Uso de Información Privilegiada:'
-  es un beneficio propio o que se otorga a terceros,  a través de la utilización de información reservada o privilegiada a la que se tiene acceso en razón de la función que se desempeña.
-
-%h3.text-center
-  V
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-%p.palabra
-  %strong='Vacancia:'
-  período que media entre la renuncia, desvinculación o deceso de un cargo público y la incorporación de su reemplazo.
-
-%p.palabra
-  %strong='Veto Presidencial:'
-  es la acción por la cual, el Presidente de la República realiza observaciones o rechaza en forma parcial o total un proyecto de ley, que ha sido aprobado previamente por ambas cámaras.
-
-  %a{:name => "W"}
-%p.palabra
-  %strong='Votación:'
-  es el voto de cada senador o diputado respecto a una iniciativa de ley.
-
-%h3.text-center
-  W
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-  %a{:name => "X"}
-%h3.text-center
-  X
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-
-  %a{:name => "Y"}
-%h3.text-center
-  Y
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
-  
-  %a{:name => "Z"}
-%h3.text-center
-  Z
-%p.botonMenuGlosario
-  %a{:href =>"#"}Menú
-  %i.fa.fa-long-arrow-up.colorNaranjo
+      %a{:name => ""}
+
+  %nav
+    %ul.pagination
+      - ("A".."Z").each do |letter|
+        %li 
+          %a{:href => "#"+letter}
+            = letter
+
+    %a{:name => "a"}
+  %h3.text-center
+    A
+
+  %p.palabra
+    %strong= 'Accountability:'
+    pese a no tener una traducción literal en español, hace referencia, por un lado, al deber o responsabilidad que tienen los órganos de la administración pública o agentes públicos de rendir cuentas de sus acciones a los demás órganos del Estado y a los ciudadanos; y por otro, al derecho de estos últimos de fiscalizar e informarse de las acciones de quienes los gobiernan.
+    Existe Accountability horizontal y vertical: el primero es el control que realizan entre sí los distintos poderes del Estado los cuales pueden examinar, cuestionar y en su caso sancionar actos irregulares cometidos durante el desempeño de los cargos públicos. El segundo, en tanto, se encuentra en el plano ciudadano, llevado a cabo a través de la vía electoral - que evalúa la gestión de las autoridades políticas mediante el voto - o por la vía social - por iniciativas ciudadanas, movimientos sociales y medios de comunicación - los cuales por medio de mecanismos institucionales (como demandas legales o reclamos ante agencias de control) y no institucionales (como movilizaciones sociales) buscan mejorar el funcionamiento de las instituciones representativas.
+
+  %p.palabra
+    %strong='Acta:'
+    documento oficial en el que consta lo sucedido, tratado y acordado por las Cámaras o alguna de sus Comisiones, y una síntesis de las opiniones y declaraciones formuladas en cada sesión. Este documento es suscrito por el Secretario y por el Presidente de la Corporación o de una Comisión, según sea el caso.
+
+  %p.palabra
+    %strong='Abstención:' 
+    privación voluntaria del voto.
+
+  %p.palabra
+    %strong='Actos Administrativos:'
+    son las decisiones formales que emiten los órganos de la Administración del Estado en el ejercicio de sus potestades, y que pueden tomar la forma de decretos o resoluciones. También lo son los dictámenes o declaraciones de juicio, constancia o conocimiento que realicen los órganos de la administración en el ejercicio de sus competencias. (Artículo 3º de la Ley de Bases de los Procedimientos Administrativos) .
+
+  %p.palabra
+    %strong='Acuerdos Internacionales:'
+    Todo acuerdo internacional que cumpla con los trámites de aprobación de un tratado internacional presenta esta naturaleza, siendo ambos términos sinónimos. 
+    Sin perjuicio de lo anterior este término también se utiliza para referirse a acuerdos de cooperación sin efectos vinculantes para los estados, como los acuerdos de cooperación que pudieren existir en el ámbito de organismos internos de dos países, como un acuerdo entre policías, un acuerdo entre municipalidades. 
+    También se utiliza para referirse al acto cuando se unen las opiniones o puntos de vista de sujetos de orden jurídico internacional, sobre cuestiones o problemas que surgen en sus relaciones internacionales con la finalidad de producir efectos jurídicos. Constituyen “compromisos de honor”, “acuerdos convencionales” sin presentar por sí mismo efectos jurídicos vinculantes entre los estados.
+
+  %p.palabra
+    %strong='Acusación Constitucional:'
+    atribución exclusiva de la Cámara de Diputados que se enmarca dentro de sus facultades de fiscalización de los actos de Gobierno y cuyo objeto es que la Cámara declare si han o no lugar las acusaciones que no menos de diez ni más de veinte de sus miembros formulen contra el Presidente de la República, los Ministros de Estado, los Magistrados de los Tribunales Superiores de Justicia; el Contralor General de la República; los Generales y Almirantes y los Intendentes y Gobernadores. (Art. N° 52, N° 2 de la Constitución Política de la República). 
+
+  %p.palabra
+    %strong='Adhesión:'
+    la adhesión, al igual que la ratificación, representa el compromiso, jurídicamente vinculante del Estado, de acatar las disposiciones de una Convención. El acto de ratificación no viene precedido de la firma de un tratado internacional sino que el Estado pasa a ser parte del mismo cuando el instrumento permite la posibilidad de que un Estado sin haber participado en la firma del tratado pueda pasar a ser Parte de éste. 
+    Normalmente lo estados adhieren a un tratado cuando han cumplido con los procedimientos internos de aprobación del mismo, ya sea a través de la aprobación del Congreso o ratificación de órganos internos, lo anterior dependiendo del país.
+
+  %p.palabra
+    %strong='Aprobación:'
+    es el acto interno del ordenamiento jurídico de un Estado en virtud del cual se otorga el consentimiento de obligarse por un tratado internacional. En Chile, se requiere la aprobación del Parlamento respecto de aquellos tratados internacionales que traten sobre materias de ley. Para proceder luego, por parte del Presidente de la República, a su adhesión o ratificación y posterior depósito. 
+
+  %p.palabra
+    %strong='Articulado:'
+    conjunto o serie de los artículos de un tratado, ley, reglamento, etc.
+
+  %p.palabra
+    %strong='Asesor Parlamentario:'
+    personal de asesoría técnica y/o apoyo al trabajo de los Diputados, Senadores o comités parlamentarios. 
+
+  %p.palabra
+    %strong='Asignaciones Parlamentarias:'
+    fondos adicionales que se le entregan a Diputados y Senadores destinados a contratación de asesorías, los gastos de traslado y las oficinas que implican la función parlamentaria, tanto en el ámbito legislativo como en la representación en cada distrito o circunscripción.
+
+  %p.palabra
+    %strong='Autoridad, Jefatura o Jefe Superior del Órgano o Servicio de la Administración del Estado:'
+    es la autoridad con competencia comunal, provincial, regional o, en su caso, el jefe superior del servicio a nivel nacional. En consecuencia podrá ser un alcalde, un director regional, un superintendente, etc. (Artículo 3º reglamento ley de transparencia).
+
+  %p.palabra
+    %strong='Audiencia Pública:'
+    son instancias convocadas por las Comisiones Permanentes de la Cámara y que están destinadas a escuchar el parecer de las personas involucradas en un determinado proyecto de ley. 
+
+    %a{:name => "B"}
+  %p.palabra
+    %strong='Autos en relación:'
+    forma solemne por la cual la Corte de Apelaciones conoce y resuelve de la acciones que le encomienda la ley. Se lleva a cabo mediante un relator que comunica a la Corte de forma clara, completa y resumida los antecedentes que requiere para poder resolver, sin perjuicio de los alegatos que las partes involucradas hagan con posterioridad.
+
+  %h3.text-center
+    B
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Bancada Parlamentaria:'
+    conjunto de diputados de un partido político, los que a través de un jefe, designado por ellos, facilitan la relación con la Mesa de la respectiva corporación, con el fin de hacer más expedita la tramitación de los asuntos sometidos a su conocimiento. 
+
+  %p.palabra
+    %strong='Bicameralidad:'
+    hace referencia al sistema donde se contemplan dos cámaras legislativas. 
+
+  %p.palabra
+    %strong='Boletín:'
+    es el número único que se le asigna a cada proyecto cuando ingresa a tramitación en el Congreso Nacional.
+    
+    %a{:name => "C"}
+  %p.palabra
+    %strong='Boletín de Sesión:'
+    es la publicación oficial que recoge el debate de las sesiones de Sala, los informes evacuados por las Comisiones, los oficios recibidos por la Cámara de Diputados, así como otros documentos o debates acaecidos durante la sesión. 
+    Se publica un Boletín por cada sesión.
+
+  %h3.text-center
+    C
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Cámara(s):'
+    se le llama a cada una de las ramas del Congreso Nacional, esto es, a la Cámara de Diputados y al Senado de la República.
+    A su vez, cuando se habla de "Cámara Alta" se hace referencia explícitamente al Senado, mientras que el concepto "Cámara Baja" alude a la Cámara de Diputados.
+
+  %p.palabra
+    %strong='Cámara de Origen:'
+    es aquella a la cual ingresa un proyecto de ley para su tramitación. Esto porque los proyectos de ley pueden ser presentados indistintamente en la cámara de diputados o del senado, salvo las excepciones consagradas en la constitución.
+
+  %p.palabra
+    %strong='Cámara Revisora:'
+    es aquella que conoce del proyecto una vez que ha concluido su tramitación en la cámara de origen.
+
+  %p.palabra
+    %strong='Circunscripción:'
+    territorio definido geográficamente que es representado por un Senador en el Congreso Nacional y que está constituida por regla general, por una región, salvo en aquellos casos en que ciertas regiones se dividen en más de una circunscripción. Chile está dividido en 19 circunscripciones que eligen a 2 Senadores cada una. 
+
+  %p.palabra
+    %strong='Citaciones:'
+    es la convocatoria que, cuando corresponda, se lleva a cabo en cualquiera de las Cámaras para que sus parlamentarios concurran a sesión u otra actividad y que debe ser realizada por el Presidente de la Cámara de Diputados o del Senado. 
+    Las Comisiones son citadas por sus respectivos presidentes, tanto en la Cámara como en el Senado.
+
+  %p.palabra
+    %strong='Código:'
+    es el texto oficial que contiene las leyes basicas de nuestro ordenamiento. Estos texto son, por ejemplo de Civil, Penal o Procedimiento Civil.
+
+  %p.palabra
+    %strong='Cohecho:'
+    es la solicitud o aceptación de un favor de tipo económico realizada por un empleado público para cumplir o dejar de cumplir una obligación relacionada con su cargo.
+
+  %p.palabra
+    %strong='Comisión:'
+    es un grupo de trabajo compuesto, según sea el caso, por 5 senadores o por 13 diputados y excepcionalmente por representantes de ambas Cámaras (en el caso de la comisión mixta), cuya función primordial es el estudio pormenorizado y especializado de los proyectos de ley y de las materias sometidas a su conocimiento.
+
+  %p.palabra
+    %strong='Comisión Bicameral:'
+    es un organismo compuesto por un múmero igualitario de Diputados y Senadores, que busca analizar y generar definiciones respecto de ciertas materias legislativas, y proponer sus conclusiones a ambas cámaras de forma general. 
+
+  %p.palabra
+    %strong='Comisión Especial:'
+    es aquella que se crea por acuerdo de la Cámara de Diputados (con la composición y bajo las condiciones que ésta le señale) con el objeto de dedicarse al estudio de una determinada legislación o a reunir antecedentes sobre una materia específica, debiendo informar a la Sala del resultado de su cometido.
+
+  %p.palabra
+    %strong='Comisión Interamericana de Derechos Humanos:'
+    es una de las dos entidades del sistema interamericano de protección de derechos humanos, que tiene por objeto promover la observancia y la defensa de los derechos humanos además de servir como órgano consultivo de la OEA en esta materia. Tiene su sede en Washington, DC.
+
+  %p.palabra
+    %strong='Comisión Investigadora:'
+    es aquella que se crea por acuerdo de la Cámara de Diputados en ejercicio de sus facultades fiscalizadoras, con el objeto de reunir información relativa a determinados actos del Gobierno.
+
+  %p.palabra
+    %strong='Comisión Mixta:'
+    es aquella que está formada por igual número de diputados y senadores (5 en cada caso), cuyo objetivo es solucionar las divergencias surgidas entre ambas cámaras durante la tramitación de un proyecto de ley. Serán presididas por el senador que elija la mayoría de la comisión, y formarán quórum para sesionar con la mayoría de los miembros de cada corporación que las integren.
+
+  %p.palabra
+    %strong='Comisión Permanente:'
+    es aquella comisión cuya constitución está contemplada en los reglamentos internos de ambas Cámaras y que funciona siempre.
+
+  %p.palabra
+    %strong='Comisión Unida:'
+    es una comisión formada por dos o más comisiones cuando las materias sometidas a estudio tienen relación con más de una de ellas.
+
+  %p.palabra
+    %strong='Comité Parlamentario:'
+    es el conjunto de senadores de un partido político, los que a través de un jefe, facilitan y hacen más expedita la relación con la Mesa de la respectiva corporación.
+
+  %p.palabra
+    %strong='Conflictos de interés:'
+    son aquellos que se producen cuando una persona tiene intereses personales respecto de materias sobre las cuales debiese resolver con independencia y autonomía.
+
+  %p.palabra
+    %strong='Congreso Nacional:'
+    órgano del Estado que conforma el Poder Legislativo en Chile y está compuesto por la Cámara de Diputados (120 miembros) y por el Senado (38 miembros). Sus principales funciones son ejercer la representación de la ciudadanía, concurrir a la formación de las leyes junto con el Presidente de la República y fiscalizar los actos del gobierno.
+
+  %p.palabra
+    %strong='Congreso Pleno:'
+    se denomina así a la sesión en que se reúnen los miembros de ambas Cámaras del Congreso Nacional.
+
+  %p.palabra
+    %strong='Consejo para la Transparencia:'
+    es una corporación autónoma de derecho público, con personalidad jurídica y patrimonio propio, que no depende de ningún Ministerio para preservar su independencia. Por ley se encarga de promover la transparencia de la función pública, fiscalizar el cumplimiento de las normas sobre transparencia y publicidad de la información de los órganos de la Administración del Estado y garantizar el derecho de acceso a la información pública.
+
+  %p.palabra
+    %strong='Constitución Política de la República:'
+    es la norma jurídica fundamental del Estado. Establece la forma de gobierno, los poderes públicos, sus atribuciones y determina los derechos y garantías de las personas.
+
+  %p.palabra
+    %strong='Contienda de Competencia:'
+    es un conflicto suscitado entre dos o más tribunales (e incluso autoridades políticas o administrativas), en donde todos estiman tener competencia para conocer de determinado asunto o, por el contrario, estiman que ninguno de ellos la posee.
+
+  %p.palabra
+    %strong='Contraloría General de la República:'
+    organismo autónomo del Estado, de rango constitucional, que desempeña una labor eminentemente fiscalizadora de carácter jurídico, contable y financiero, pues está destinada a cautelar el principio de legalidad, es decir, verificar que los órganos de la Administración del Estado actúen dentro del ámbito de sus atribuciones y conforme a los procedimientos que la ley contempla.
+
+  %p.palabra
+    %strong='Corporación:'
+    cada una de las Cámaras del Congreso Nacional, esto es, Cámara de Diputados y Senado de la República.
+
+  %p.palabra
+    %strong='Corrupción:'
+    es el antónimo de la probidad. Se entiende como la práctica o fenómeno que supone el uso o abuso de poderes y funciones públicas para generar indebidamente riqueza o beneficios privados.
+
+  %p.palabra
+    %strong='Corte Interamericana de Derechos Humanos:'
+    es un órgano judicial de la Organización de los Estados Americanos (OEA) que goza de autonomía frente a los demás órganos de aquella y que tiene su sede en Dan José de Costa Rica, cuyo propósito es aplicar e interpretar la Convención Americana sobre Derechos Humanos y otros tratados de derechos humanos a los cuales se somete el llamado sistema interamericano de protección de derechos humanos.
+
+  %p.palabra
+    %strong='Costos directos de reproducción:'
+    todos aquellos que sean necesarios para obtener la información en el soporte que el requirente haya solicitado, excluyendo el valor del tiempo que ocupe el o los funcionarios para realizar la reproducción. (Artículo 3º reglamento ley de transparencia)
+
+  %p.palabra
+    %strong='Crimen o simple delito:'
+    son conductas (acciones u omisiones), contrarias a derecho (antijurídicas), culpables, tipificadas y penadas por ley, que se diferencian en la pena que se les aplica. Los crímenes son sancionados con penas más altas que los simples delitos.
+
+    %a{:name => "D"}
+  %p.palabra
+    %strong='Cuenta:'
+    relación que contiene todos los documentos ingresados a la Cámara y que el Prosecretario lee a la Sala (da cuenta) al comienzo de la Sesión. Una vez que se da cuenta a la Sala el documento tiene plena vigencia o existencia y produce los efectos para los cuales ha sido enviado o recibido (Art. N° 13, Ley N° 18.918).
+
+  %h3.text-center
+    D
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Datos Sensibles:'
+    los datos personales que se refieren a las características físicas o morales de las personas o a hechos o circunstancias de su vida privada o intimidad, tales como los hábitos personales, el origen social, las ideologías y opiniones políticas, las creencias o convicciones religiosas, los estados de salud físicos o psíquicos y la vida sexual. (Artículo 3º reglamento ley de transparencia).
+
+  %p.palabra
+    %strong='Declaración de Intereses:'
+    es un mecanismo que busca prevenir conflictos de intereses por lo que determinados funcionarios públicos son obligados a declarar las actividades económicas y profesionales en que participan.
+
+  %p.palabra
+    %strong='Declaración de Patrimonio:'
+    es un mecanismo que busca transparentar la evolución del patrimonio de los altos funcionarios mientras permanecen en sus cargos y prevenir el enriquecimiento ilícito de éstos.
+
+  %p.palabra
+    %strong='Decreto:'
+    norma dictada por cualquier autoridad sobre los asuntos de su competencia. Cuando emana del Presidente de la República se denomina Decreto Supremo. 
+
+  %p.palabra
+    %strong='Decreto con Fuerza de Ley (DFL):'
+    son normas dictadas por el Presidente de la República sobre materias propias de ley, en virtud de una autorización que le confiere el Congreso Nacional para ello, la que no puede exceder de un año y debe expresar las materias sobre las cuales versa la delegación. Asimismo, el Presidente de la República está autorizado para dictar DFL para fijar el texto refundido, coordinado y sintetizado de las leyes cuando sea conveniente para su mejor ejecución.
+
+  %p.palabra
+    %strong='Decreto Ley:'
+    son normas dictadas por el Presidente de la República sobre materias propias de ley, sin autorización alguna del Congreso Nacional.
+
+  %p.palabra
+    %strong='Decreto Promulgatorio:'
+    decreto dictado una vez aprobado el proyecto de ley por el Presidente de la República dentro de un plazo de 10 días, en el cual se declara la existencia de la ley, dejando de ser un proyecto y ordenar su cumplimiento.
+
+  %p.palabra
+    %strong='Delito Flagrante:'
+    hecho delictivo que se descubre cuando se está cometiendo o cuando acaba de cometerse.
+
+  %p.palabra
+    %strong='Democracia:'
+    forma de gobierno u organización del Estado, en la cual las decisiones colectivas son adoptadas por el pueblo mediante mecanismos de participación directa o indirecta que le confieren legitimidad a los representantes.
+
+  %p.palabra
+    %strong='Derecho de Acceso a la Información Pública:'
+    es el derecho que permite a cualquier persona conocer la información que se encuentra en poder de los órganos de la Administración del Estado.
+    De acuerdo al artículo 13 de la Convención Americana de Derechos Humanos y 19 Nº 2 del Pacto Internacional de Derechos Civiles y Políticos “toda persona tiene derecho a la libertad de pensamiento y de expresión. Este derecho comprende la libertad de buscar, recibir y difundir informaciones e ideas de toda índole, sin consideración de fronteras, ya sea oralmente, por escrito o en forma impresa o artística, o por cualquier otro procedimiento de su elección…”
+    Por otra parte, el artículo 19 de la Declaración Universal de los Derechos Humanos señala que “todo individuo tiene derecho a la libertad de opinión y de expresión; este derecho incluye el de no ser molestado a causa de sus opiniones, el de investigar y recibir informaciones y opiniones, y el de difundirlas, sin limitación de fronteras, por cualquier medio de expresión”.
+
+  %p.palabra
+    %strong='Discusión:'
+    etapa en que las cámaras hacen el estudio, análisis y deliberación sobre el proyecto de ley.
+
+  %p.palabra
+    %strong='Diario de Sesiones:'
+    publicación oficial que recoge el debate de las sesiones de sala, los informes evacuados por las Comisiones, las peticiones de oficios de los senadores, así como otros documentos o debates acaecidos durante la sesión. Se publica un Diario por cada sesión.
+
+  %p.palabra
+    %strong='Diario Oficial:'
+    es el periódico oficial del Estado, en donde se publican, entre otras cosas, las leyes promulgadas. Debe estar asociado a un diario de circulación nacional.
+
+  %p.palabra
+    %strong='Dieta Parlamentaria:'
+    renta que los diputados y senadores perciben mensualmente y equivale a la remuneración de un Ministro de Estado incluidas todas las asignaciones que a estos correspondan. (Art. N° 62 Constitución Política de la República).
+
+  %p.palabra
+    %strong='Diputado:'
+    representante correspondiente a un determinado distrito, electo cada 4 años en votaciones populares.
+
+  %p.palabra
+    %strong='Diputado Informante:'
+    Diputado que tiene la responsabilidad de exponer, ante la Sala, el informe de un proyecto de ley que ha elaborado la comisión que integra. 
+
+  %p.palabra
+    %strong='Discusión General:'
+    es aquella que tiene por objeto aprobar o desechar en su totalidad un proyecto de ley, considerando las ideas fundamentales o matrices contenidas en el Mensaje o Moción respectiva. 
+
+  %p.palabra
+    %strong='Discusión Particular:'
+    es aquella que tiene por objeto examinar un proyecto de ley en detalle, es decir, artículo por artículo. 
+
+  %p.palabra
+    %strong='Discusión Inmediata:'
+    plazo de 6 días para el despacho total de un proyecto de ley en la Cámara respectiva. 
+
+  %p.palabra
+    %strong='Discusión única:'
+    es aquella en que el proyecto se discute en general y en particular a la vez. No tiene segundo informe y las indicaciones se votan una vez aprobado en general el proyecto.
+
+  %p.palabra
+    %strong='Distrito:'
+    división territorial que representa un diputado en el Congreso Nacional y que puede estar constituida por una o más comunas. Chile está dividido en 60 Distritos que eligen a 2 diputados cada uno.
+
+    %a{:name => "E"}
+  %p.palabra
+    %strong='Documentos:'
+    todo escrito, correspondencia, memorándum, plano, mapa, dibujo, diagrama, documento gráfico, fotografía, microforma, grabación sonora, video, dispositivo susceptible de ser leído mediante la utilización de sistemas mecánicos, electrónicos o computacionales y, en general, todo soporte material que contenga información, cualquiera sea su forma física o características, así como las copias de aquéllos. (Artículo 3º reglamento ley de transparencia).
+
+  %h3.text-center
+    E
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Estado de Asamblea:'
+    es un estado de excepción constitucional que se da en caso de guerra externa. El presidente de la República lo puede decretar, en todo el territorio nacional o solo una parte de él, con acuerdo del Congreso Nacional.
+
+  %p.palabra
+    %strong='Estado de Catástrofe:'
+    es un estado de excepción constitucional que se da en caso de calamidad pública, en una zona geográfica específica. Es declarado por el Presidente, pero debe informar al Congreso.
+
+  %p.palabra
+    %strong='Estado de Emergencia:'
+    es un estado de excepción constitucional, se da por una grave alteración al orden público o daño a la seguridad de la Nación. Es declarado por el Presidente, pero si se quiere prorrogar, debe contar con autorización del congreso.
+
+  %p.palabra
+    %strong='Estado de Excepción:'
+    es la acción por la cual todos los derechos y garantias que la constitución protege se ven afectadas, por alteraciones graves de las instituciones del Estado. Los estados son de Asamblea, de Sitio, de Catastrofe y de Emergencia.
+
+    %a{:name => "F"}
+  %p.palabra
+    %strong='Estado de Sitio:'
+    es un estado de excepción constitucional que se da en caso de guerra interna o grave conmoción interior. Lo declara el Presidente de la República, con acuerdo del Congreso Nacional.
+
+  %h3.text-center
+    F
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Facultades del jurado:'
+    facultad exclusiva del Senado de conocer y resolver, como jurado lego, la acusación constitucional presentada por la Cámara de Diputados declarando si el acusado es o no culpable del delito, infracción o abuso de poder que se el imputa (Art. 53 N° 1 Constitución Política de la República).
+
+  %p.palabra
+    %strong='Fideicomiso Ciego:'
+    es un mecanismo que tiene por objeto evitar conflictos de intereses en las decisiones que adopten altas autoridades públicas en el ejercicio de su cargo, por lo que a través de esta figura les permite ceder la administración de su patrimonio a un tercero independiente, sin tener opción a saber del manejo posterior de sus bienes por parte de éste.
+
+  %p.palabra
+    %strong='Financiamiento Electoral:'
+    toda contribución en dinero, o estimable en dinero, que se efectúe a un candidato o partido político. Es público, si se realiza por el estado, mientras que es privado si se materializa bajo la forma de mutuo, donación, comodato o cualquier acto o contrato a título gratuito, destinado al financiamiento de gastos electorales. 
+
+  %p.palabra
+    %strong='Financiamiento Electoral:'
+    toda contribución en dinero, o estimable en dinero, que se efectúe a un candidato o partido político. Es público, si se realiza por el estado, mientras que es privado si se materializa bajo la forma de mutuo, donación, comodato o cualquier acto o contrato a título gratuito, destinado al financiamiento de gastos electorales. 
+
+  %p.palabra
+    %strong='Firma:'
+    es un acto solemne en virtud del cual el Estado manifiesta su voluntad de querer obligarse por el Tratado Internacional.
+    Firmar el instrumento no establece una obligación jurídicamente vinculante para el Estado, pero es una indicación de que el país tiene intención de someter el tratado a un análisis nacional y tomar en consideración su ratificación. Sin embargo el Estado tiene la obligación de abstenerse de cualquier acto que ponga en peligro los objetivos y el propósito del tratado, o de tomar medidas que lo debilitan hasta su adhesión o ratificación. 
+
+  %p.palabra
+    %strong='Fiscal Nacional:'
+    es el jefe de la Fiscalía Nacional y es nombrado por el Presidente de la República, a través de una quina propuesta por la Corte Suprema.
+
+  %p.palabra
+    %strong='Fiscalía Nacional:'
+    o también llamado Ministerio Público, es un órgano que tiene como función investigación de los delitos, presentar al o los  imputado (s) en los tribunales de justicia, y dar protección a víctimas y testigos.
+
+  %p.palabra
+    %strong='Flexibilidad Laboral:'
+    hace referencia a la fijación de un modelo regulador flexible para el manejo de los derechos laborales en el interior de las empresas y organizaciones privadas inmersas en una lógica capitalista y de libre mercado. La aplicación de la flexibilidad laboral requiere de un proceso de desregulación del mercado laboral.
+
+  %p.palabra
+    %strong='Fuero Parlamentario:'
+    es aquel que permite que un diputado o senador, desde el día de su elección, designación o incorporación, no pueda ser procesado o privado de libertad, salvo el caso de delito flagrante, sin que antes exista un pronunciamiento de la Corte de Apelaciones respectiva. Si un parlamentario es desaforado queda suspendido de su cargo y sujeto al juez competente como cualquier otro ciudadano.
+
+  %p.palabra
+    %strong='Funcionario Público:'
+    es el individuo que ejerce funciones públicas en el Estado, de carácter permanente, temporal, remunerado o a honorarios.
+
+    %a{:name => "G"}
+  %p.palabra
+    %strong='Fundamentos de los actos administrativos:'
+    son las circunstancias y el raciocinio que justifican las decisiones que toman los órganos de la administración.
+
+  %h3.text-center
+    G
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Gasto Electoral:'
+    todo desembolso (gasto) que se realice para el financiamiento de los equipos, oficinas  y servicios de los partidos políticos y candidatos, con ocasión y a propósito de actos electorales durante el período de campaña electoral, que es el comprendido entre el día que vence el  plazo para declarar candidaturas y el día de la elección  respectiva. (Artículo 2 y 3 de la ley sobre transparencia, límite y control electoral Nº 19.884).
+
+    %a{:name => "H"}
+  %p.palabra
+    %strong='Grupos de interés:'
+    conjunto de personas que se organizan con el objeto de perseguir intereses específicos en el escenario político, económico y social, entre otros, y que funcionan ejerciendo presión sobre otros grupos.
+
+  %h3.text-center
+    H
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+    %a{:name => "I"}
+  %p.palabra
+    %strong='Hora de incidentes:'
+    es la última parte de una sesión ordinaria, donde los diputados y senadores pueden hacer presente (en sus respectivas Cámaras) temas de interés público y general o solicitar información a determinadas autoridades
+
+  %h3.text-center
+    I
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Incompatibilidad:'
+    es el impedimento legal para ejercer dos o más cargos a la vez. Los artículos 58 y 59 de la Constitución Política de la República establecen estas incompatibilidades.
+  %p.palabra
+    %strong='Indicación:'
+    es la proposición de sustitución, modificación o adición al texto de un proyecto de ley que pueden presentar los parlamentarios durante la tramitación legislativa. 
+
+  %p.palabra
+    %strong='Indulto Presidencial:'
+    es una atribución especial del Presidente de la República que se reconoce en el artículo 32 Nº 14 de la Constitución Política y que consiste en el perdón que éste hace del cumplimiento de una pena o la conmutación de una pena por otra menos rigurosa, que se concede como gracia a una persona que ha sido condenada por sentencia ejecutoriada.
+
+  %p.palabra
+    %strong='Información elaborada con presupuesto público:'
+    es aquella cuya producción fue financiada con recursos provenientes de la ley de presupuestos del sector público.
+
+  %p.palabra
+    %strong='Información Pública:'
+    es aquella información a la cual la ciudadanía puede tener acceso. De acuerdo a la ley Nº 20.285 serán públicos los actos y resoluciones de los órganos de la Administración del Estado, sus fundamentos, los documentos que les sirvan de sustento o complemento directo o esencial, y los procedimientos que se utilicen para su dictación. Asimismo lo será la información elaborada con presupuesto público y toda otra información que obre en poder de los órganos de la Administración salvo las excepciones legales.
+
+  %p.palabra
+    %strong='Informe:'
+    es el documento final del trabajo encomendado a una comisión para el estudio de una ley.
+
+  %p.palabra
+    %strong='Inhabilidad:'
+    es el impedimento para desempeñar un cargo político.
+
+  %p.palabra
+    %strong='Iniciativa de ley:'
+    es aquella que da el impulso inicial para que una proposición sea analizada por el Congreso Nacional. Según la Constitución Tiene nen iniciativa de ley el Presidente de la República a través de un mensaje y los parlamentarios, tanto diputados como senadores, a través de una moción.
+
+  %p.palabra
+    %strong='Inmunidad parlamentaria:'
+    es un privilegio que la Constitución concede a los parlamentarios, con el objeto de asegurar la independencia del Congreso y la completa libertad de acción de sus miembros. En ella destacan: el fuero, la dieta y la inviolabilidad parlamentaria.
+
+  %p.palabra
+    %strong='Institucionalidad Democrática:'
+    conjunto de reglas que inducen patrones de comportamiento democrático y protegen estos comportamientos de otros no democráticos.
+
+  %p.palabra
+    %strong='Interpelación:'
+    es el proceso por el cual se llama a un ministro de estado al Congreso, para ser consultado sobre una materia en particular de su cartera y ver si existió alguna responsabilidad política en el suceso consultado.
+
+    %a{:name => "J"}
+  %p.palabra
+    %strong='Inviolabilidad Parlamentaria:'
+    es un privilegio que la Constitución concede a los parlamentarios que impide que sean acusados por lo que dicen en sala y en comisiones.
+
+  %h3.text-center
+    J
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+    %a{:name => "K"}
+  %p.palabra
+    %strong='Jefe de bancada o comité parlamentario:'
+    es el diputado o senador que representa a una Bancada o Comité Parlamentario, o al conjunto de ellos, si existieren varios comités de un mismo partido.
+
+    %a{:name => "L"}
+  %h3.text-center
+    K
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %h3.text-center
+    L
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Legislatura:'
+    período de sesiones en que el Congreso Nacional se aboca al estudio de los proyectos de ley.
+
+  %p.palabra
+    %strong='Ley:'
+    es una declaración de los órganos legislativos, creada según el procedimiento señalado en la Constitución, y que tiene por objeto mandar, prohibir o permitir una determinada conducta.
+
+  %p.palabra
+    %strong='Ley de Quórum Calificado:'
+    son las que tratan sobre materias señaladas en la Constitución. Para ser aprobadas, modificadas o derogadas, requiere de la mayoría absoluta de los diputados y senadores en ejercicio. 
+
+  %p.palabra
+    %strong='Ley de transparencia de la función pública y de acceso a la información de la administración del Estado:'
+    ley publicada con fecha 20 de agosto de 2008 y vigente desde el día 20 de abril de 2009, que sistematiza en un cuerpo único el principio de transparencia de la función pública, el derecho de acceso a la información de los órganos de la Administración del Estado, los procedimientos para el ejercicio y amparo del derecho y las excepciones a la publicidad de la información.
+
+  %p.palabra
+    %strong='Leyes interpretativas de la Constitución:'
+    son las que precisan o explican el sentido y alcance de un precepto o expresión de la Constitución Política. Para ser aprobada, modificada o derogada, se requiere de los tres quintos de los diputados y senadores en ejercicio.
+
+  %p.palabra
+    %strong='Leyes ordinarias o comunes:'
+    son las normas restantes que regulan aspectos de la vida social que la Constitución define como materia de leyes. Para ser aprobadas, modificadas o derogadas, se requiere de la concurrencia de la mayoría de los diputados y senadores asistentes a la sesión.
+
+  %p.palabra
+    %strong='Leyes orgánicas constitucionales:'
+    son normas complementarias de la Constitución que se refieren a materias expresamente previstas en el texto constitucional. Son objeto de un control preventivo de constitucionalidad y no pueden ser materia de delegación de facultades legislativas. Para ser aprobadas, modificadas o derogadas, se requiere de cuatro séptimas partes de los diputados y senadores en ejercicio.
+
+    %a{:name => "M"}
+  %p.palabra
+    %strong='Lobby:'
+    es la actividad en que una persona o un grupo de personas unidas por intereses similares (económicos, políticos, religiosos, etc.) realiza acciones para influir en aquellos procesos de discusión y toma de decisiones de las autoridades públicas, sin retribución económica a diferencia del tráfico de influencias.
+
+  %h3.text-center
+    M
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Materia:'
+    temática que incorpora un proyecto de ley.
+
+  %p.palabra
+    %strong='Mensaje:'
+    iniciativa de ley impulsada por el Presidente de la República.
+
+  %p.palabra
+    %strong='Mesa:'
+    autoridades elegidas por los propios parlamentarios, para dirigir la corporación.
+
+  %p.palabra
+    %strong='Moción:'
+    iniciativa de ley impulsada por parlamentarios, tanto diputados como senadores. Esta no puede ser firmada por más de diez diputados ni más de cinco senadores.
+
+    %a{:name => "N"}
+  %p.palabra
+    %strong='Muerte presunta:'
+    es la declarada por el juez, en conformidad a las reglas legales, respecto de un individuo que ha desaparecido y de quien se ignora si vive o no. El juez presume la muerte de una persona, por eso se la trata bajo el título de “presunción de muerte por desaparecimiento”.
+
+  %h3.text-center
+    N
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Negociación Incompatible:'
+    es el delito que sanciona al funcionario que esta en ejercicio de sus funciones, favorece sus intereses o los de sus cercanos durante la adjudicación de un contrato administrativo o la realización de una determinada operación estatal.
+
+  %p.palabra
+    %strong='Notificación:'
+    actuación que tiene por objeto poner una resolución o diligencia en conocimiento de las partes o de terceros.
+
+    %a{:name => "O"}
+  %p.palabra
+    %strong='Notificación por cédula:'
+    es aquella que consiste en entregar en el domicilio del notificado copia íntegra de la resolución y los datos necesarios para su acertado entendimiento.
+
+  %h3.text-center
+    O
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong=='Oficio:'
+    Documento oficial proveniente de algun servidor público respecto a una materia de ley determinada.
+
+    %a{:name => "P"}
+  %p.palabra
+    %strong='Órganos o servicios de la Administración del Estado:'
+    la Administración del Estado está formada por los Ministerios, las Intendencias, las Gobernaciones y los órganos y servicios públicos creados para el cumplimiento de la función administrativa, incluidos la Contraloría General de la República, el Banco Central, las Fuerzas Armadas y las Fuerzas de Orden y Seguridad  pública, los Gobiernos Regionales, las Municipalidades y las empresas públicas creadas por ley (artículo 1º inciso 2º de la Ley Orgánica Constitucional de Bases Generales de la Administración del Estado).
+
+  %h3.text-center
+    P
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Pareo:'
+    es un acuerdo entre dos parlamentarios, de distintos Comités, a través del cual durante un plazo determinado, se comprometen a no participar en ninguna votación si uno de ellos está ausente.
+
+  %p.palabra
+    %strong='Parlamentarios:'
+    son los miembros que desempeñan la función legislativa: diputados y senadores.
+
+  %p.palabra
+    %strong='Parlamento:'
+    corresponde al órgano en que reside el poder legislativo que  se denomina habitualmente Congreso Nacional y suele estar estructurado en cámaras, una de representantes o diputados y otra de senadores. 
+
+  %p.palabra
+    %strong='Partidos Políticos:'
+    son asociaciones voluntarias dotadas de personalidad jurídica, formadas por ciudadanos que comparten una misma doctrina política de gobierno, cuya finalidad es contribuir al funcionamiento del régimen democrático y ejercer una legitima influencia en la conducción del Estado, para alcanzar el bien común y servir al interés nacional.
+
+  %p.palabra
+    %strong='Pena Aflictiva:'
+    es la pena igual o superior a 3 años y un día de presidio, la cual implica la pérdida de la ciudadanía.
+
+  %p.palabra
+    %strong='Poder Ejecutivo:'
+    es el poder encargado de la administración del Estado. Esta función recae en el Presidente de la República.
+
+  %p.palabra
+    %strong='Poder Judicial:'
+    es el poder encargado de la administración de justicia. El principal tribunal es la Corte Suprema.
+
+  %p.palabra
+    %strong='Período Legislativo:'
+    es un período de cuatro años, al cabo del cual la Cámara de Diputados se renueva en su totalidad y el Senado en forma parcial.
+
+  %p.palabra
+    %strong='Poder Legislativo:'
+    es uno de los 3 poderes del Estado y esta encargado de la elaboración de las leyes que rigen la nación. Esta labor se realiza en el Congreso Nacional.
+
+  %p.palabra
+    %strong='Potestad reglamentaria:'
+    permite al Presidente de la República y otras autoridades dictar un conjunto de normas de inferior jerarquía que las leyes, como los reglamentos, los simples decretos, las instrucciones, los decretos supremos y las resoluciones.
+
+  %p.palabra
+    %strong='Presupuesto público:'
+    persigue reflejar los gastos y los ingresos previstos para un ámbito determinado del sector público en un período de tiempo que habitualmente es un 1 año.
+
+  %p.palabra
+    %strong='Primer trámite constitucional:'
+    se le llama así a todo el proceso de discusión del que es objeto un proyecto de ley en la Cámara donde fue presentado originalmente (Cámara de origen).
+
+  %p.palabra
+    %strong='Principio de probidad y publicidad de la información:'
+    el ejercicio de las funciones públicas obliga a sus titulares a dar estricto cumplimiento al principio de probidad en todas sus actuaciones.Son públicos los actos y resoluciones de los órganos del estado, así como sus fundamentos y los procedimientos que utilicen. Sin embargo, sólo una ley de quórum calificado podrá establecer la reserva o secreto de aquéllos o de estos, cuando la publicidad afectaré el debido cumplimiento de las funciones de dichos órganos, los derechos de las personas, la seguridad de la nación o el interés general.
+
+  %p.palabra
+    %strong='Privilegio de pobreza:'
+    es un beneficio que se otorga a determinadas personas, que les permite ser atendidos gratuitamente por los funcionarios del orden judicial y por los abogados, procuradores y oficiales subalternos designados para prestar servicios a los litigantes con problemas económicos, según el artículo 591 del Código Orgánico de Tribunales.
+
+  %p.palabra
+    %strong='Probidad:'
+    el Diccionario de la Real Academia Española identifica el término con “honradez” y la define como “rectitud de ánimo, integridad en el obrar”.
+
+  %p.palabra
+    %strong='Probidad Administrativa:'
+    consiste en observar una conducta funcionaria intachable y un desempeño honesto y leal de la función o cargo, priorizando el interés general sobre el particular.
+
+  %p.palabra
+    %strong='Promulgación del proyecto:'
+    es un acto que corresponde al Presidente de la República y tiene por finalidad certificar la existencia de la ley, dotarla de fuerza obligatoria y ordenar que sea cumplida como tal. Esta se expresa a través de la dictación de un  decreto promulgatorio.
+
+  %p.palabra
+    %strong='Propaganda o publicidad electoral:'
+    es la dirigida a inducir a los electores a emitir su voto por candidatos determinados o a apoyar alguna de las proposiciones sometidas a plebiscito.
+
+  %p.palabra
+    %strong='Proyecto de Acuerdo:'
+    proposición que presentan diputados o senadores en la sala, para poder adoptar acuerdos o sugerir observaciones sobre los actos realizados por el gobierno o para obtener un pronunciamiento de la corporación, en relación a temas de interés general.
+
+  %p.palabra
+    %strong='Proyecto de ley:'
+    es la iniciativa de ley que ingresa al Congreso Nacional para cumplir el trámite de formación de la ley.
+
+    %a{:name => "Q"}
+  %p.palabra
+    %strong='Publicación del proyecto:'
+    consiste en el acto mediante el cual se comunica o informa el contenido de la ley. En Chile debe hacerse en el Diario Oficial y desde ese momento es obligatoria y se presume conocida por todos.
+
+  %h3.text-center
+    Q
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+    %a{:name => "R"}
+  %p.palabra
+    %strong='Quórum:'
+    determinada mayoría exigida, para sesionar y adoptar acuerdos. No se consideraran en el cómputo los senadores y diputados que se encuentren suspendidos o ausentes del país con permiso constitucional.
+
+  %h3.text-center
+    R
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Ratificación, aceptación, aprobación, y adhesión:'
+    acto internacional mediante el cual un Estado establece su consentimiento en obligarse por un tratado.
+
+  %p.palabra
+    %strong='Receso parlamentario:'
+    período que media entre dos Legislaturas, usualmente se da en el mes de febrero.
+
+    %a{:name => "S"}
+  %p.palabra
+    %strong='Resolución:'
+    es una norma dictada por cualquier autoridad inferior de la administración central sobre asuntos o negocios de su competencia, en virtud de una delegación de atribuciones del Presidente de la República.
+
+  %h3.text-center
+    S
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Sala de Sesiones:'
+    es el lugar donde se efectúa la discusión parlamentaria y las votaciones.
+
+  %p.palabra
+    %strong='Sanción:'
+    es el acto por el cual el Presidente de la República da su conformidad al proyecto de ley aprobado por ambas cámaras. La aprobación será expresa cuando el Presidente promulga el proyecto sin más trámite, y tácita cuando transcurren más de 30 días desde que recibió el proyecto y éste no lo devuelve al Congreso.
+
+  %p.palabra
+    %strong='Segundo Trámite Constitucional:'
+    se refiere al proceso de tramitación por el que atraviesa un proyecto de ley que ya fue aprobado en su Cámara de Origen, en aquella Cámara donde no fue presentado el proyecto originalmente (Cámara Revisora).
+
+  %p.palabra
+    %strong='Semana Distrital:'
+    corresponde a una semana del mes, en la cual no se celebran sesiones de Sala ni de comisiones. De esa manera, los diputados pueden permanecer en su zona, lo que les facilita el conocimiento en terreno de los problemas de sus distritos.
+
+  %p.palabra
+    %strong='Senador:'
+    miembro del Congreso elegido democráticamente cuya principal función es la de concurrir, en unión con la Cámara de Diputados, a la formación de las leyes y a la aprobación de los tratados internacionales.
+
+  %p.palabra
+    %strong='Sesión:'
+    reunión del Senado, de la Cámara de Diputados o del Congreso Pleno.
+
+  %p.palabra
+    %strong='Sistema Binominal:'
+    es un sistema de elecciones populares destinado a la formación de un sistema bipartidista en torno a dos grandes partidos políticos o coaliciones. En la práctica se elaboran listas de candidatos que deben tener sólo dos postulantes al cargo como máximo.
+    En caso que la lista más votada obtenga el doble de votos que su más cercana competidora, elige a sus dos candidatos. Por el contrario, si no alcanza a obtener el doble de votos que la segunda lista más votada, obtienen un cargo cada una de ellas.
+
+  %p.palabra
+    %strong='Soberanía Popular:'
+    supone que la legitimidad de las autoridades públicas deriva de la voluntad de todos, por lo que las autoridades son mandatarias o servidoras del pueblo y su función es cumplir con los objetivos de bien común.
+
+  %p.palabra
+    %strong='Sociedad Civil:'
+    conjunto de ciudadanos organizados como tales para actuar e incidir en el campo de lo público en busca del bien común.
+
+  %p.palabra
+    %strong='Subsecretaría Administrativa:'
+    corresponde a la administración de la Cámara de Diputados. Se divide en las siguientes áreas: Dirección de Administración, Oficina de Personal, Dirección de Finanzas, Departamento de Informática, Relaciones Públicas, Servicio de Alimentación y Personal de Administración.
+    
+  %p.palabra
+    %strong='Subsecretaría Legislativa:'
+    es la responsable de la dirección, organización y coordinación de las diferentes actividades, funciones y cometidos que en materia de apoyo a las tareas de legislativa y fiscalizadora, competen a la Corporación.
+
+  %p.palabra
+    %strong='Sufragio:'
+    es el voto que emite una persona con capacidad de elegir. Este puede ser Universal o Restringido.
+
+  %p.palabra
+    %strong='Sufragio Restringido:'
+    es aquel que se reserva el derecho a voto para los ciudadanos que reúnen ciertas características.
+
+  %p.palabra
+    %strong='Sufragio Universal:'
+    en el cual tienen derecho a participar todos los ciudadanos, salvo determinadas excepciones.
+
+  %p.palabra
+    %strong='Sustento o complemento directo:'
+    los documentos que se vinculen necesariamente al acto administrativo en que concurren, siempre que dicho acto se haya dictado, precisa e inequívocamente, sobre las bases de esos documentos. (Artículo 3º reglamento ley de transparencia).
+
+    %a{:name => "T"}
+  %p.palabra
+    %strong='Sustento o complemento esencial:'
+    los documentos indispensables para la elaboración y dictación del acto administrativo en que concurren, de modo que sean inseparables del mismo. (Artículo 3º reglamento ley de transparencia).
+
+  %h3.text-center
+    T
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Tabla:'
+    es el conjunto de proyectos de ley u otras materias de las que pueden ocuparse la Cámaras o sus Comisiones en una determinada sesión.
+
+  %p.palabra
+    %strong='Tercer Trámite Constitucional:'
+    es el proceso por el que debe atravesar un proyecto de ley una vez que ha cumplido su tramitación en la Cámara Revisora, y han surgido discrepancias con lo aprobado por la Cámara de Origen.
+
+  %p.palabra
+    %strong='Toma de Razón:'
+    es un control jurídico previo, general y obligatorio, propio del sistema chileno, que en materia de legalidad y constitucionalidad realiza la Contraloría General de la República de Chile, respecto de los decretos, decretos con fuerza de ley y resoluciones.
+
+  %p.palabra
+    %strong='Trabajo en Comisiones:'
+    corresponde al accionar los parlamentarios en las respectivas comisiones que integran o presiden.
+    
+  %p.palabra
+    %strong='Trabajo en Sala:'
+    corresponde al accionar en sala de votación de los parlamentarios en el acto de legislar.
+
+  %p.palabra
+    %strong='Trámite Constitucional:'
+    se le llama así a todo el proceso de discusión del que es objeto un proyecto de ley.
+
+  %p.palabra
+    %strong='Transparencia:'
+    se entiende como el atributo o cualidad que nos permite contar con información clara y precisa sobre algo o alguien, lo que aumenta nuestras capacidades de comprensión, vigilancia y comunicación.
+
+  %p.palabra
+    %strong='Transparencia Activa:'
+    es el deber que tienen los órganos de la Administración del Estado de mantener a disposición permanente del público (sin previo requerimiento formal) determinada información relevante y actualizada que deberá publicarse de manera sistematizada en sus sitios electrónicos.
+
+  %p.palabra
+    %strong='Transparencia Pasiva:'
+    es el derecho que tiene toda persona a solicitar y recibir información de cualquier órgano de la administración del Estado que no esté sometida al régimen de Transparencia Activa, sea que ésta se encuentre contenida en actos, resoluciones, actas, expedientes, contratos, acuerdos y a toda información elaborada con presupuesto público, salvo excepciones legales.
+
+  %p.palabra
+    %strong='Tratados Internacionales:'
+    son acuerdos, pactos o contratos, de carácter internacional, que rigen situaciones jurídicas establecidas de común acuerdo por dos o más Estados soberanos.
+
+  %p.palabra
+    %strong='Tribunal Calificador de Elecciones:'
+    órgano encargado de llevar a cabo el proceso electoral nacional, vale decir, el escrutinio general y la calificación de las elecciones para Presidente de la República, Diputados y Senadores. También se encarga de los plebiscitos y de las posibles reclamaciones que se sucedan por estos procesos y proclama a los candidatos que resultan elegidos por la ciudadanía electoral.
+
+    %a{:name => "U"}
+  %p.palabra
+    %strong='Tribunal Constitucional:'
+    es un órgano del Estado, autónomo e independiente .Este resuelve conflictos que se originan si un proyecto de ley o un decreto infringe la Constitución, o cuando la aplicación de una ley vigente puede resultar contraria a la Constitución, o bien, si una ley es completamente inconstitucional.
+
+  %h3.text-center
+    U
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Unicameralidad:'
+    es una iniciativa, votación o un acontecimiento, que se da en solo una de las cámaras que componen el poder legislativo
+    
+  %p.palabra
+    %strong='Urgencias:'
+    tienen por objeto acelerar las etapas del proceso de formación de una ley y le compete al Presidente de la República hacerla presente en el Mensaje o mediante un oficio dirigido al Presidente de la Cámara respectiva o al Senado cuando el proyecto estuviese en comisión mixta. Existen 3 tipos de urgencia: simple, suma y de discusión inmediata.
+
+  %p.palabra
+    %strong='Urgencia Simple:'
+    es aquella que obliga a que la discusión y votación en la Cámara requerida quede terminada en el plazo de 30 días. En el caso de la comisión mixta, ésta tendrá 10 días para despachar su informe y 10 días para que cada una de las Cámaras se pronuncie sobre el informe de la comisión.
+
+  %p.palabra
+    %strong='Urgencia Suma:'
+    es aquella que obliga a que la discusión y votación en la Cámara requerida quede terminada en el plazo de 15 días. En el caso de la comisión mixta, ésta tendrá 5 días para despachar su informe y 10 días para que cada una de las Cámaras (5 y 5) se pronuncie sobre el informe de la comisión.
+
+  %p.palabra
+    %strong='Urgencia de Discusión inmediata:'
+    es aquella urgencia que obliga a que la discusión y votación en la Cámara requerida quede terminada en el plazo de 6 días, caso en el cual el proyecto se discutirá en general y en particular a la vez. En el caso de la comisión mixta, ésta tendrá 2 día para despachar su informe y 4 días para que cada una de las Cámaras (2 y 2) se pronuncie sobre el informe de la comisión.
+
+    %a{:name => "V"}
+  %p.palabra
+    %strong='Uso de Información Privilegiada:'
+    es un beneficio propio o que se otorga a terceros,  a través de la utilización de información reservada o privilegiada a la que se tiene acceso en razón de la función que se desempeña.
+
+  %h3.text-center
+    V
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+  %p.palabra
+    %strong='Vacancia:'
+    período que media entre la renuncia, desvinculación o deceso de un cargo público y la incorporación de su reemplazo.
+
+  %p.palabra
+    %strong='Veto Presidencial:'
+    es la acción por la cual, el Presidente de la República realiza observaciones o rechaza en forma parcial o total un proyecto de ley, que ha sido aprobado previamente por ambas cámaras.
+
+    %a{:name => "W"}
+  %p.palabra
+    %strong='Votación:'
+    es el voto de cada senador o diputado respecto a una iniciativa de ley.
+
+  %h3.text-center
+    W
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+    %a{:name => "X"}
+  %h3.text-center
+    X
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+
+    %a{:name => "Y"}
+  %h3.text-center
+    Y
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo
+    
+    %a{:name => "Z"}
+  %h3.text-center
+    Z
+  %p.botonMenuGlosario
+    %a{:href =>"#"}Menú
+    %i.fa.fa-long-arrow-up.colorNaranjo

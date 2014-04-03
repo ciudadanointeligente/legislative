@@ -58,7 +58,7 @@ es:
     persons: Autores
     current_priority: Urgencia actual
     bill_type: 'Tipo de proyecto'
-    download_as_excel: Descargar como Excel
+    download_as_excel: Descargar esta búsqueda como hoja de cálculo
     all_the_types: Todos los tipos
     all_the_stages: Todas las etapas
     all_the_chambers: Todas las cámaras
