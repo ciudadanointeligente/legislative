@@ -112,7 +112,7 @@
             %a{'href'=> @bill.bill_draft_link}
               = t('bill.download_project')
               %i.fa.fa-download
-          -if ! @bill.law_web_link.blank?
+          -if ! @bill.law_id.blank?
             %a{'href'=> @bill.law_web_link, 'target'=>'_blank'}
               = t('bill.view_law') + ' ' + @bill.law_id
               %i.fa.fa-eye
