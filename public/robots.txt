@@ -5,3 +5,4 @@
 # Disallow: /
 User-Agent: *
 Disallow: /suscripcion/
+Disallow: /usuarios/
