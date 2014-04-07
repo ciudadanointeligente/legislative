@@ -1,6 +1,7 @@
 require 'billit_representers/models/bill_page'
 
 class MainsController < ApplicationController
+  caches_page :index, :sitemap
 
   # GET /mains
   def index

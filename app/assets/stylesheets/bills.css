@@ -238,3 +238,7 @@ svg.graph .labels.y-labels {
 #graph li.pull-right {
   margin-top: 14px;
 }
+
+form#bills_search {
+  margin-bottom: 50px;
+}
