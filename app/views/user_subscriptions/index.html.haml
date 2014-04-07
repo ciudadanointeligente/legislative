@@ -1,29 +1,30 @@
-%div.page-header
-  %h2= 'User Subscriptions'
-%div.row
-  %div.col-md-12
-    %div.table-responsive
-      %table.table.table-striped
-        %thead
-          %tr
-            %th User
-            %th Bill
-            %th Confirmed
-            %th= t('users.show')
-            %th= t('users.edit') 
-            %th= t('users.delete') 
-        %tbody
-          - @user_subscriptions.each do |user_subscription|
+%div.container
+  %div.page-header
+    %h2= 'User Subscriptions'
+  %div.row
+    %div.col-md-12
+      %div.table-responsive
+        %table.table.table-striped
+          %thead
             %tr
-              %td= user_subscription.user
-              %td= user_subscription.bill
-              %td= user_subscription.confirmed
-              %td
-                = link_to user_subscription do 
-                  %i.fa.fa-eye{title: t('users.show')}
-              %td
-                = link_to edit_user_subscription_path(user_subscription) do
-                  %i.fa.fa-pencil-square-o{title: t('users.edit')}
-              %td
-                = link_to user_subscription, :confirm => "Are you sure?", :method => :delete do
-                  %i.fa.fa-trash-o{title: t('users.delete')}
+              %th User
+              %th Bill
+              %th Confirmed
+              %th= t('users.show')
+              %th= t('users.edit') 
+              %th= t('users.delete') 
+          %tbody
+            - @user_subscriptions.each do |user_subscription|
+              %tr
+                %td= user_subscription.user
+                %td= user_subscription.bill
+                %td= user_subscription.confirmed
+                %td
+                  = link_to user_subscription do 
+                    %i.fa.fa-eye{title: t('users.show')}
+                %td
+                  = link_to edit_user_subscription_path(user_subscription) do
+                    %i.fa.fa-pencil-square-o{title: t('users.edit')}
+                %td
+                  = link_to user_subscription, :confirm => "Are you sure?", :method => :delete do
+                    %i.fa.fa-trash-o{title: t('users.delete')}
