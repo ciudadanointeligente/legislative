@@ -5,6 +5,7 @@ require 'RMagick'
 require 'open-uri'
 
 class CongressmenController < ApplicationController
+  caches_page :index, :show
 
   # GET /congressmen
   def index

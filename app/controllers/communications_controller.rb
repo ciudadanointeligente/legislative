@@ -1,6 +1,7 @@
 require 'writeit-rails'
 
 class CommunicationsController < ApplicationController
+  caches_page :index
 
   def index
     @congressmen = PopitPersonCollection.new
