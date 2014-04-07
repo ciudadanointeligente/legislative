@@ -62,12 +62,10 @@
 
   %section#responses
     %div.row.page-header
+      
+    - if !@messages.objects.blank?
       %h3
         = t('communication.list_messages')
-    - if @messages.objects.blank?
-      Aún no existen mensajes
-    - else
-
       - @messages.objects.each do |message|
         %div.row.questions
           %div.col-md-12
