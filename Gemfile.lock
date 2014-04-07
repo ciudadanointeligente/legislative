@@ -56,6 +56,7 @@ GEM
       roar (= 0.11.19)
       roar-rails (= 0.1.0)
     builder (3.1.4)
+    cancancan (1.7.0)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     celluloid-io (0.15.0)
@@ -263,6 +264,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   billit_representers (= 0.8.6)
+  cancancan (~> 1.7)
   coffee-rails (~> 4.0.0)
   coveralls
   devise!

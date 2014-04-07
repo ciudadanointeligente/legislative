@@ -8,6 +8,9 @@ gem 'rails', '4.0.0'
 # Use Devise for user authentication
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :ref => '49aebde'
 
+# Authorization gem for ruby on rails
+gem 'cancancan', '~> 1.7'
+
 # Database
 #gem 'pg', :group => :production
 gem 'sqlite3'

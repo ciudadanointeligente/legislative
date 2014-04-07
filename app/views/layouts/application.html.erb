@@ -64,7 +64,9 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to t('layout.search'), searches_path %><li/>
+            <% if can? :show, @bill %>
+              <li><%= link_to t('layout.search'), searches_path %><li/>
+            <% end %>
             <!-- <li><%= link_to t('layout.tables'), tables_path %><li/> -->
             <li><%= link_to t('layout.communication'), communications_path %><li/>
             <!-- <li><%= link_to t('layout.disclosure'), disclosures_path %><li/> -->
