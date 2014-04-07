@@ -84,7 +84,8 @@ gem 'rake', '10.1.1'
 group :production do
   gem 'mysql'
   gem 'newrelic_rpm'
-  #cache
-  gem 'actionpack-page_caching'
-  gem 'actionpack-action_caching'
 end
+
+#cache
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
