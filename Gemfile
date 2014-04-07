@@ -76,6 +76,9 @@ group :development, :test do
   gem 'guard-rspec'
 end
 
+# Clean ruby syntax for writing and deploying cron jobs
+gem 'whenever', :require => false
+
 gem 'httparty'
 gem 'json'
 gem 'protected_attributes'
