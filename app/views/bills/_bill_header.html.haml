@@ -94,14 +94,14 @@
                   = author['name']
                 - if index < @authors.size - 1
                   = ', '
-        %p
+        %p.hidden-xs
           = t('bill.tags')
           %i.fa.fa-info-circle#tooltip-tag{:'title' => "Agrega etiquetas que puedan ayudar a encontrar más rápido este proyecto"}
           :javascript
             $(document).ready(function(){
               $('#tooltip-tag').tooltip();
             })
-        %ul.list-inline#myTags
+        %ul.list-inline.hidden-xs#myTags
           - if @bill.tags != nil
             - @bill.tags.each do |tag|
               %li#preexisting
