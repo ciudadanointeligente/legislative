@@ -49,6 +49,8 @@ class BillsController < ApplicationController
       end
     end
 
+    expire_fragment('message_confirmation')
+
     #setup the title page
     @title = @bill.title + ' - '
 
