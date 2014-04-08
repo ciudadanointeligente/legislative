@@ -8,6 +8,7 @@
 # Ignore environment variables config
 /config/private_legislative.yml
 /config/database.yml
+/config/schedule.rb
 
 # Ignore bundler config
 /.bundle
