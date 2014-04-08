@@ -1,5 +1,12 @@
 = render :partial => "bill_header"
 
+%div
+  - flash.each do |name, msg|
+    %div.alert.alert-info
+      %button.close{:'aria-hidden' => 'true', :'data-dismiss' => 'alert'}
+        &times;
+      = content_tag :div, msg, :id => "flash_#{name}"
+
 %div.container
   %section#graph
     %ul.list-inline
