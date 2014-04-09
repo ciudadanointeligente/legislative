@@ -8,9 +8,7 @@ require './app/models/paperwork'
 class BillsController < ApplicationController
   include Roar::Rails::ControllerAdditions
   respond_to :html, :xls
-
-  caches_page :show
-
+  
   # GET /bills
   # GET /bills.json
   def index
@@ -48,8 +46,6 @@ class BillsController < ApplicationController
         i = i + 1
       end
     end
-
-    expire_fragment('message_confirmation')
 
     #setup the title page
     @title = @bill.title + ' - '
