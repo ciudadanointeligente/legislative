@@ -1,10 +1,13 @@
 - @congressmen.result.each do | congressman |
   %div.row
     %div.col-md-1
-      - if !congressman.images.blank?
-        %img.img-circle.img-responsive{:src=>congressman.images[0].url}
+      - if ! congressman.images.blank?
+        - fantasy_name = congressmen_pic(congressman.name, congressman.images[0].url)
+        = image_tag(fantasy_name+'.jpg', class: "img-circle img-responsive hidden-xs")
+        = image_tag(fantasy_name+'.jpg', class: "img-thumbnail img-responsive visible-xs")
       - else
-        = image_tag('default-profile.png', class: "img-circle img-responsive")
+        = image_tag('default-profile.png', class: "img-circle img-responsive hidden-xs")
+        = image_tag('default-profile.png', class: "img-thumbnail img-responsive visible-xs")
     %div.col-md-10
       %h5
         = link_to congressman.name, congressman_path(congressman.id)

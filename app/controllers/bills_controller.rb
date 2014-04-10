@@ -1,12 +1,14 @@
 require 'billit_representers/models/bill'
 require 'billit_representers/models/bill_page'
+require 'billit_representers/models/bill_basic'
 require './app/models/bill'
+require './app/models/bill_basic'
 require './app/models/paperwork'
 
 class BillsController < ApplicationController
   include Roar::Rails::ControllerAdditions
   respond_to :html, :xls
-
+  
   # GET /bills
   # GET /bills.json
   def index
@@ -18,6 +20,28 @@ class BillsController < ApplicationController
   def show
     @condition_bill_header = true
     @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}.json", 'application/json')
+
+    # THE FOLLOWING HAS NOT BEEN TESTED SO IT WILL BE COMMENTED
+    # @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
+
+    # # paperworks
+    # @date_freq = Array.new
+    # bill_range_dates = @bill.paperworks.map {|paperwork| Date.strptime(paperwork.date, "%Y-%m-%d")}
+
+    # top_date = Date.today
+    # bottom_date = top_date - ENV['bill_graph_day_interval'].to_i.days
+    # data_length = 0
+    
+    # while data_length < ENV['bill_graph_data_length'].to_i do
+    #   #comparación y agregar a @date_freq
+    #   dates_in_range = bill_range_dates.select {|date| date <= top_date && date > bottom_date} 
+    #   #array inverse
+    #   @date_freq.unshift dates_in_range.length
+    #   top_date = bottom_date
+    #   bottom_date = top_date - ENV['bill_graph_day_interval'].to_i.days
+    #   data_length += 1
+    # end
+    # END OF NOT TESTED CODE
 
     # @authors = Hash.new
     # i = 0
@@ -73,7 +97,7 @@ class BillsController < ApplicationController
   # PUT /bills/1
   # PUT /bills/1.json
   def update
-    @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
+    @bill = Billit::BillBasic.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
 
     !params[:tags].nil? ? @bill.tags = params[:tags] : @bill.tags = []
     @bill.put(ENV['billit_url'] + "#{params[:id]}", 'application/json')
@@ -86,6 +110,8 @@ class BillsController < ApplicationController
   end
 
   def searches
+    @title = t('bill.title') + ' - '
+
     if !params.nil? && params.length > 3
       @keywords = String.new
       params.each do |key, value|
@@ -103,9 +129,9 @@ class BillsController < ApplicationController
           @keywords << array_keyword + '&'
         end
       end
-      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?#{URI.encode(@keywords)}", 'application/json')
+      @bills_query = Billit::BillPage.get(ENV['billit_url'] + "search.json/?#{URI.encode(@keywords)}", 'application/json')
     else
-      @bills_query = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?", 'application/json')
+      @bills_query = Billit::BillPage.get(ENV['billit_url'] + "search.json/?", 'application/json')
     end
   end
 end

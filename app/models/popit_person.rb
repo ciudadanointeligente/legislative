@@ -4,7 +4,7 @@ require 'multi_json'
 class PopitPerson < OpenStruct
   include Popit::PersonRepresenter
   def popit_api_uri
-    url = ENV['popit_persons']+ id
+    url = ENV['popit_persons']+ id.to_s
     return url
   end
 

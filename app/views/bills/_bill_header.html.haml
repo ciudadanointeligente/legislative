@@ -1,6 +1,7 @@
 :javascript
   var billuid = '#{@bill.uid}',
-      path_bill = '#{t('routes.bills')}';
+      path_bill = '#{t('routes.bills')}',
+      domain = '#{ENV['root_url']}';
 
 %div.hero-space-bill
   %div.container
@@ -36,7 +37,10 @@
         %h5.light
           = @bill.uid
         - if ! @bill.icon.blank?
-          = image_tag("statusicon/" + @bill.icon, class:"hidden-xs", title:@bill.status.strip)
+          - title = ''
+          - if ! @bill.status.blank?
+            - title = @bill.status.strip
+          = image_tag("statusicon/" + @bill.icon, class:"hidden-xs", title:title)
       %div.col-md-11
         %h4
           = @bill.title
@@ -93,8 +97,14 @@
                   = author['name']
                 - if index < @authors.size - 1
                   = ', '
-            
-        %ul.list-inline#myTags
+        %p.hidden-xs
+          = t('bill.tags')
+          %i.fa.fa-info-circle#tooltip-tag{:'title' => "Agrega etiquetas que puedan ayudar a encontrar más rápido este proyecto"}
+          :javascript
+            $(document).ready(function(){
+              $('#tooltip-tag').tooltip();
+            })
+        %ul.list-inline.hidden-xs#myTags
           - if @bill.tags != nil
             - @bill.tags.each do |tag|
               %li#preexisting
@@ -105,7 +115,7 @@
             %a{'href'=> @bill.bill_draft_link}
               = t('bill.download_project')
               %i.fa.fa-download
-          -if ! @bill.law_web_link.blank?
+          -if ! @bill.law_id.blank?
             %a{'href'=> @bill.law_web_link, 'target'=>'_blank'}
               = t('bill.view_law') + ' ' + @bill.law_id
               %i.fa.fa-eye

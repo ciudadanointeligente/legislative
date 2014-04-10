@@ -1,12 +1,10 @@
 require 'billit_representers/models/bill_page'
 
 class MainsController < ApplicationController
+  caches_page :index, :sitemap
 
   # GET /mains
   def index
-    @condition_search = true
-    @condition_priority_box = true
-    @social_network_box = true
     @low_chamber_agenda = Array.new
     @high_chamber_agenda = Array.new
 
@@ -16,11 +14,11 @@ class MainsController < ApplicationController
     @high_chamber_agenda[0] = get_current_chamber_agenda ENV['high_chamber_name']
     @high_chamber_agenda[1] = get_bills_per_agenda JSON.parse(@high_chamber_agenda[0]['bill_list']).uniq
 
-    @hot_bills = Billit::BillCollectionPage.get(ENV['billit_url'] + "search?current_urgency=Simple&per_page=8", 'application/json').bills
+    @hot_bills = Billit::BillPage.get(ENV['billit_url'] + "search?current_urgency=Simple&per_page=8", 'application/json').bills
 
-    @messages = LegislativeMessageCollection.get()
-    if @messages.objects.length > 2
-      @messages.objects = @messages.objects[0..1]
+    @answers = LegislativeAnswerCollection.get()
+    if @answers.objects.length > 2
+      @answers.objects = @answers.objects[0..1]
     end
 
   end
@@ -40,7 +38,7 @@ class MainsController < ApplicationController
       @keywords << bill_id + '|'
     end
     @keywords = URI::escape(@keywords)
-    bills = Billit::BillCollectionPage.get(ENV['billit_url'] + "search/?uid=#{@keywords}", 'application/json')
+    bills = Billit::BillPage.get(ENV['billit_url'] + "search/?uid=#{@keywords}", 'application/json')
   end
 
   def sitemap

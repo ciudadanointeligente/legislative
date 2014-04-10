@@ -3,19 +3,19 @@
 
 es:
   layout:
-    home: Portada
-    search: Búsqueda
-    glossary: Glosario
-    communication: Pregúntales
-    disclosure: Declaraciones
-    congressmen: Congresistas
-    tables: Tablas
     about_us: Acerca de nosotros
-    menu: Menú
+    bills: Proyectos de ley
+    communication: Pregúntales
+    congressmen: Congresistas
+    disclosure: Declaraciones
     from: de Ciudadano Inteligente
+    glossary: Glosario
+    home: Portada
+    menu: Menú
+    search: Búsqueda
+    tables: Tablas
     title_project: Congreso abierto
     welcome: Bienvenido(a)
-    bills: Proyectos de ley
   main:
     search_placeholder: Ingresa un proyecto de ley o congresista
     username: Nombre de usuario
@@ -45,8 +45,10 @@ es:
     view_more_questions: Ver más preguntas
     session: Sesión
     legislature: Legislatura
-    view_previous_agendas: Ver tablas anteriores
+    view_the_agenda: Ver agenda parlamentaria
     hot_projects: Proyectos urgentes
+  glossaries:
+    title: Glosarios
   search:
     search_title: Búsqueda
     search_for: 'Buscar por:'
@@ -56,7 +58,7 @@ es:
     persons: Autores
     current_priority: Urgencia actual
     bill_type: 'Tipo de proyecto'
-    download_as_excel: Descargar como Excel
+    download_as_excel: Descargar esta búsqueda como hoja de cálculo
     all_the_types: Todos los tipos
     all_the_stages: Todas las etapas
     all_the_chambers: Todas las cámaras
@@ -82,6 +84,7 @@ es:
     all_results: Ver todos los resultados
     search_results: Resultados de búsqueda
   agendas:
+    title: Agenda parlamentaria
     chamber: Cámara
     date: Fecha
     bills: Proyectos de ley
@@ -134,6 +137,7 @@ es:
     tw_text: Revisa el boletín %s en congresoabierto.cl
     breadcrumb_bill: Proyectos de ley
     download_project: Descargar proyecto
+    title: Proyectos de ley
   paperwork:
     chamber: 'Cámara:'
     created_at: 'Fecha de creación:'
@@ -225,6 +229,7 @@ es:
     send: Enviar
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
+    confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
   congressmen:
     home: Portada
     breadcrumb: Congresistas
@@ -260,17 +265,24 @@ es:
     last_interventions: Últimas intervenciones
     birth_date: 'Fecha nacimiento: '
     years: '%s (%s años)'
+  email:
+    subject: 'Congreso abierto, confirmación de suscripción'
+    body_header: 'Bienvenido a Congreso abierto, %s'
+    body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
+    body_footer: 'Atte el equipo de Congreso abierto'
   routes:
+    agendas: agendas
     bills: proyectos
     bills_search: busquedas_de_proyectos
     communications: comunicaciones
-    disclosures: declaraciones
     congressmen: congresistas
-    tables: tablas
-    users: usuarios
+    disclosures: declaraciones
     glossaries: glosarios
     searches: busquedas
     sessions: sesiones
+    users: usuarios
+    per_person: por_persona
+    per_message: por_mensaje
     new: nuevo
     edit: editar
     user_subscriptions: suscripcion
@@ -336,10 +348,3 @@ es:
       month: Mes
       second: Segundos
       year: Año
-  email:
-    subject: 'Congreso abierto, confirmación de suscripción'
-    body_header: 'Bienvenido a Congreso abierto, %s'
-    body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
-    body_footer: 'Atte el equipo de Congreso abierto'
-  communications:
-    confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'

@@ -49,6 +49,9 @@ group :development do
   gem 'binding_of_caller'
 end
 
+# Adam Shaw's fullcalendar jquery plugin
+gem 'fullcalendar-rails'
+
 # Support to XLS export
 gem 'ekuseru'
 
@@ -60,7 +63,7 @@ gem 'route_translator'
 gem 'roar', '0.11.19'
 gem 'roar-rails', '0.1.0'
 gem 'faraday', '0.8.1'
-gem 'billit_representers', '0.8.10'
+gem 'billit_representers', '0.9.0'
 gem 'popit_representers', '0.0.15'
 gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
 
@@ -83,3 +86,7 @@ group :production do
   gem 'mysql'
   gem 'newrelic_rpm'
 end
+
+#cache
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
