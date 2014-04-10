@@ -33,6 +33,15 @@ describe BillsController do
   def valid_session
     {}
   end
+  before(:all) do
+    response = '[{
+      "uid":"5330377bd0c05d8b737b6de0",
+      "name":"Roberto Poblete Zapata"}]'
+      stub_request(:get, /.*morph.io*/)
+        .to_return(:body => response)
+    mock_bill
+  end
+
 
   describe "GET index" do
     it "#index redirects to search" do
@@ -81,11 +90,9 @@ describe BillsController do
 
   describe "GET show" do
     before :each do
-      response = '[{
-      "uid":"5330377bd0c05d8b737b6de0",
-      "name":"Roberto Poblete Zapata"}]'
-      stub_request(:get, /.*morph.io*/)
-        .to_return(:body => response)
+      
+
+
     end
     it "assigns the requested bill as @bill" do
       bill = Billit::Bill.get(ENV['billit_url'] + "6967-06.json", 'application/json')
@@ -115,7 +122,6 @@ describe BillsController do
     end
 
     it "assigns @date_freq values according to defined time intervals" do
-      mock_bill
 
       #bill = Billit::Bill.get(ENV['billit_url'] + "6967-06", 'application/json')
       Date.stub(:today) {Date.new(2013, 4)}
