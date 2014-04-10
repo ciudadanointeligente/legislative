@@ -43,15 +43,15 @@ class BillsController < ApplicationController
     # end
     # END OF NOT TESTED CODE
 
-    # @authors = Hash.new
-    # i = 0
+    @authors = Hash.new
+    i = 0
 
-    # if !@bill.authors.blank?
-    #   @bill.authors.each do |author|
-    #     @authors[i] = get_author_related_info author
-    #     i = i + 1
-    #   end
-    # end
+    if !@bill.authors.blank?
+      @bill.authors.each do |author|
+        @authors[i] = get_author_related_info author
+        i = i + 1
+      end
+    end
 
     #setup the title page
     @title = @bill.title + ' - '
