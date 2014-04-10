@@ -25,22 +25,21 @@ class BillsController < ApplicationController
     # @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
 
     # # paperworks
-    # @date_freq = Array.new
-    # bill_range_dates = @bill.paperworks.map {|paperwork| Date.strptime(paperwork.date, "%Y-%m-%d")}
+    @date_freq = Array.new
+    bill_range_dates = @bill.paperworks.map {|paperwork| Date.strptime(paperwork.date, "%Y-%m-%d")}
 
-    # top_date = Date.today
-    # bottom_date = top_date - ENV['bill_graph_day_interval'].to_i.days
-    # data_length = 0
-    
-    # while data_length < ENV['bill_graph_data_length'].to_i do
-    #   #comparación y agregar a @date_freq
-    #   dates_in_range = bill_range_dates.select {|date| date <= top_date && date > bottom_date} 
-    #   #array inverse
-    #   @date_freq.unshift dates_in_range.length
-    #   top_date = bottom_date
-    #   bottom_date = top_date - ENV['bill_graph_day_interval'].to_i.days
-    #   data_length += 1
-    # end
+    top_date = Date.today
+    bottom_date = top_date - ENV['bill_graph_day_interval'].to_i.days
+    data_length = 0
+    while data_length < ENV['bill_graph_data_length'].to_i do
+      #comparación y agregar a @date_freq
+      dates_in_range = bill_range_dates.select {|date| date <= top_date && date > bottom_date} 
+      #array inverse
+      @date_freq.unshift dates_in_range.length
+      top_date = bottom_date
+      bottom_date = top_date - ENV['bill_graph_day_interval'].to_i.days
+      data_length += 1
+    end
     # END OF NOT TESTED CODE
 
     @authors = Hash.new
