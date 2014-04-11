@@ -123,10 +123,19 @@ def mock_bill()
               "remarks": [ ],
               "revisions": [ ],
               "_links": {
-              "self": {
-              "href": "http://127.0.0.1.xip.io:3003/bills/6967-06"
-              }
-              }
+                "self": {
+                  "href": "http://billit.ciudadanointeligente.org/bills/6967-06"
+                  },
+                  "law_xml": {
+                  "href": "http://www.leychile.cl/Consulta/obtxml?opt=7&idLey=20663"
+                  },
+                  "law_web": {
+                  "href": "http://www.leychile.cl/Navegar?idLey=20663"
+                  },
+                  "bill_draft": {
+                  "href": "http://www.senado.cl/appsenado/index.php?mo=tramitacion&ac=getDocto&iddocto=7370&tipodoc=mensaje_mocion"
+                  }
+                }
               }'
   stub_request(:get, ENV['billit_url'] + "6967-06.json")
     .to_return(:body => response)

@@ -37,10 +37,10 @@
       %tr
         %th= t 'bill.resulting_document'
         %td= @bill.resulting_document
-    - if !@bill.law_link.blank?
+    - if !@bill.law_web_link.blank?
       %tr
         %th= t 'bill.law_link'
-        %td= link_to @bill.law_link, @bill.law_link
+        %td= link_to @bill.law_web_link, @bill.law_web_link
     - if @bill.merged_bills != '[]'
       %tr
         %th= t 'bill.merged_bills'
