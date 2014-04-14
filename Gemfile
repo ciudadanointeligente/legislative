@@ -77,6 +77,9 @@ group :development, :test do
   gem 'webmock'
 end
 
+# Clean ruby syntax for writing and deploying cron jobs
+gem 'whenever', :require => false
+
 gem 'httparty'
 gem 'json'
 gem 'protected_attributes'
