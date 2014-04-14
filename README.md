@@ -9,6 +9,8 @@ Legislative is a channel of participation and seeks to bring information to the 
 
 ## Quick start
 
+Make sure you're using ruby 2.0 or above (we highly recommend using [RVM](http://rvm.io/)), and that [bundler](http://bundler.io/) is installed.
+
 Clone the git repo - `git clone https://github.com/ciudadanointeligente/legislative.git` - or [download it](https://github.com/ciudadanointeligente/legislative/zipball/master)
 
 Go to your legislative folder and run install
@@ -61,7 +63,7 @@ gem uninstall rmagick
 gem install rmagick
 </pre>
 
-The following system requirements are also needed, for database
+The following system requirements may be needed, in casee you chose to use MariaDB in development or production
 
 Red Hat / Fedora / CentOS
 <pre>
