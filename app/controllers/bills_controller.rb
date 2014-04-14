@@ -79,33 +79,16 @@ class BillsController < ApplicationController
     end
   end
 
-  # GET /bills/new
-  # GET /bills/new.json
-  def new
-  end
-
-  # GET /bills/1/edit
-  def edit
-  end
-
-  # POST /bills
-  # POST /bills.json
-  def create
-  end
-
   # PUT /bills/1
   # PUT /bills/1.json
   def update
-    @bill = Billit::BillBasic.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
+    @bill = Billit::BillBasic.get(ENV['billit_url'] + "#{params[:id]}.json", 'application/json')
 
     !params[:tags].nil? ? @bill.tags = params[:tags] : @bill.tags = []
+    puts ENV['billit_url'] + "#{params[:id]}"
     @bill.put(ENV['billit_url'] + "#{params[:id]}", 'application/json')
+    
     render text: params.to_s, status: 201
-  end
-
-  # DELETE /bills/1
-  # DELETE /bills/1.json
-  def destroy
   end
 
   def searches
