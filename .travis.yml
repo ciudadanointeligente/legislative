@@ -17,6 +17,7 @@ before_script:
   #- start_local_writeit.bash
   # updating bundle environment
   - bundle install --without production
+  - cp config/database.yml.example config/database.yml
   # creating database
   - rake db:create
   - rake db:migrate
