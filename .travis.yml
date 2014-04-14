@@ -7,6 +7,7 @@ env:
 gemfile:
   - Gemfile
 before_script:
+  - sudo apt-get install virtualenv
   - bash start_local_writeit.bash
   - start_local_popit_api.bash
   #- start_local_writeit.bash
