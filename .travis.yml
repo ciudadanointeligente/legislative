@@ -2,20 +2,22 @@ language:
   - ruby
 rvm:
   - 2.0.0
+services:
+  - elasticsearch
+  - rabbitmq
+  - mongodb
 env:
   - RAILS_VERSION=4.0.0
 gemfile:
   - Gemfile
 before_script:
-  - rvm gemdir
-  - rvm gemset name
-  - rvm gemset list
-  - bash start_local_billit.bash
+  - sudo apt-get install python-virtualenv
   - bash start_local_writeit.bash
-  - start_local_popit_api.bash
+  - bash start_local_popit_api.bash
   #- start_local_writeit.bash
   # updating bundle environment
   - bundle install --without production
+  - cp config/database.yml.example config/database.yml
   # creating database
   - rake db:create
   - rake db:migrate

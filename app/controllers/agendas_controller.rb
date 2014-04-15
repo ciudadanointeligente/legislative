@@ -7,7 +7,7 @@ class AgendasController < ApplicationController
   # GET /agendas
   def index
     @title = t('agendas.title') + ' - '
-    @events = (get_agendas + get_district_weeks).to_json
+    @events = (agendas_table + district_weeks).to_json
   end
 
   # GET /agendas/1
@@ -50,14 +50,14 @@ class AgendasController < ApplicationController
   end
 
   # GET agendas event
-  def get_agendas
+  def agendas_table
     query = 'select * from data limit 200'
     query = URI::escape(query)
     response = RestClient.get(ENV['agendas_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
-    @agendas = JSON.parse(response)
+    @raw_agendas = JSON.parse(response)
 
     event_agendas = Array.new
-    @agendas.each_with_index do |table, index|
+    @raw_agendas.each_with_index do |table, index|
       event_agendas[index] = Hash.new
       event_agendas[index]['title'] = 'Tabla de sesión, legislatura ' + table['legislature'] + ' sesión nro. ' + table['session'] + ' (' + table['chamber'] + ')'
       event_agendas[index]['start'] = table['date']
@@ -68,7 +68,7 @@ class AgendasController < ApplicationController
   end
 
   # GET district weeks event
-  def get_district_weeks
+  def district_weeks
     query = 'select * from data limit 200'
     query = URI::escape(query)
     response = RestClient.get(ENV['district_weeks_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])

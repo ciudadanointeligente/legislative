@@ -9,7 +9,6 @@ gem 'rails', '4.0.0'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :ref => '49aebde'
 
 # Database
-#gem 'pg', :group => :production
 gem 'sqlite3'
 
 # Template Engine
@@ -37,18 +36,6 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 # An interface to the ImageMagick and GraphicsMagick image processing libraries
 gem 'rmagick'
 
-group :development do
-  # Using thin for development server
-  gem 'thin'
-
-  # Replaces default rails error page with a much better and more useful error page
-  gem 'better_errors'
-
-  # Turns off the rails asset pipeline log
-  gem 'quiet_assets'
-  gem 'binding_of_caller'
-end
-
 # Adam Shaw's fullcalendar jquery plugin
 gem 'fullcalendar-rails'
 
@@ -59,6 +46,38 @@ gem 'ekuseru'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'route_translator'
 
+# Caching
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
+
+# Clean ruby syntax for writing and deploying cron jobs
+gem 'whenever', :require => false
+
+group :production do
+  gem 'mysql'
+  gem 'newrelic_rpm'
+end
+
+group :development do
+  gem 'thin'
+  gem 'better_errors'
+  gem 'quiet_assets'
+  gem 'binding_of_caller'
+end
+
+group :development, :test do
+  gem 'coveralls', require: false
+  gem 'guard-bundler'
+  gem 'guard-rails'
+  gem 'guard-rspec'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'webmock'
+end
+
 # POPLUS integration
 gem 'roar', '0.11.19'
 gem 'roar-rails', '0.1.0'
@@ -67,28 +86,7 @@ gem 'billit_representers', '0.9.0'
 gem 'popit_representers', '0.0.15'
 gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
 
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'coveralls', require: false
-  gem 'guard-bundler'
-  gem 'guard-rails'
-  gem 'guard-rspec'
-end
-
-# Clean ruby syntax for writing and deploying cron jobs
-gem 'whenever', :require => false
-
 gem 'httparty'
 gem 'json'
 gem 'protected_attributes'
 gem 'rake', '10.1.1'
-
-group :production do
-  gem 'mysql'
-  gem 'newrelic_rpm'
-end
-
-#cache
-gem 'actionpack-page_caching'
-gem 'actionpack-action_caching'
