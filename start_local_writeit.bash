@@ -37,7 +37,7 @@ if [ ! -e done.txt ]; then
   pip install -r requirements_testing.txt
   python manage.py syncdb --noinput
   python manage.py migrate --noinput
-  python manage.py loaddata ../writeit_for_testing/writeit_example_data.yaml
+  python manage.py loaddata ../writeit_for_testing/example_with_2_messages.yaml
 
   touch done.txt;
 else

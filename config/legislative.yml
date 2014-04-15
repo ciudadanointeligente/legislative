@@ -82,13 +82,15 @@ test:
   high_chamber_name: 'Senado'
   low_chamber_name:  'C.Diputados'
   twitter_tags: CongresoAbierto
+  congressmen_helper_url: https://api.morph.io/owner/congressmen_helper/data.json?query= # example: 'https://api.morph.io/owner/congressmen_helper/data.json?query='
   keywords: ~
   agendas_url:      ~
+  district_weeks_url: ~
   morph_io_api_key: ~
   bill_graph_data_length:   '12'
   bill_graph_day_interval:  '7'
   parliaments_initial_date: '1990-03-01'
-  billit_url: 'http://127.0.0.1.xip.io:3003/bills/'
+  billit_url: 'http://localhost:3003/bills/'
   paperworks_url: 'http://billit.ciudadanointeligente.org/paperworks/'
   popit_url:  'localhost:3002'
   popit_persons:  'http://localhost:3002/api/persons/'
