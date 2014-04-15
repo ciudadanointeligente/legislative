@@ -283,3 +283,39 @@ def mock_put()
   stub_request(:put, ENV['billit_url'] + "6967-06")
     .to_return(:body => response)
 end
+
+def mock_morph_agendas_table()
+  response = '[
+          {
+            "uid":"S361-91",
+            "date":"2014-03-04",
+            "chamber":"Senado",
+            "legislature":"361",
+            "session":"91",
+            "bill_list":"[\"6967-06\"]",
+            "date_scraped":"2014-02-28"
+          }
+        ]'
+  query = 'select * from data limit 200'
+  query = URI::escape(query)
+  stub_request(:get, ENV['agendas_url'] + query)
+    .to_return(:body => response)
+end
+
+def mock_morph_district_weeks()
+  response = '[
+          {
+            "id":"C001",
+            "title":"Semana distrital",
+            "start":"2014-03-24",
+            "end":"2014-03-28",
+            "chamber":"C.Diputados",
+            "url":"http://www.camara.cl/camara/distritos.aspx",
+            "date_scraped":"2014-03-21"
+          }
+        ]'
+  query = 'select * from data limit 200'
+  query = URI::escape(query)
+  stub_request(:get, ENV['district_weeks_url'] + query)
+    .to_return(:body => response)
+end
