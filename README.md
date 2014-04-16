@@ -56,7 +56,7 @@ This section will not be relevant to most people. It will however be relevant if
 
 #### Production environment
 
-Create the optionals config files
+Create the follow config files.
 
     cp config/newrelic.yml.example config/newrelic.yml
     cp config/schedule.rb.example config/schedule.rb
@@ -72,7 +72,21 @@ We recommend the follow commands in the job for automatic deploy and the use of 
     rake assets:clean
     rake assets:precompile
 
+#### Tasks using cron
+
+To run tasks like send notifications emails of changes in bills the project use [whenever](https://github.com/javan/whenever), this tool generate cron jobs from the `config/schedule.rb` file.
+
+Add the jobs to crontab:
+
+    bundle exec whenever --update-crontab legislative
+
+Clear the jobs associated with a app name:
+
+    bundle exec whenever --clear-crontab legislative
+
 #### MariaDB
+
+For improve the performance in production is a good idea change the db engine from sqlite3 to mariaDB or postgreSQL. To use mariaDB you need edit `config/database.yml` config file.
 
 Red Hat / Fedora / CentOS
 
