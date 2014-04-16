@@ -5,21 +5,24 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml { render :xml => @users }
-      format.json{ render :json => @users }
-    end
+    #@users = User.all
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.xml { render :xml => @users }
+    #  format.json{ render :json => @users }
+    #end
+    redirect_to root_url
   end
 
   def show
-    @user = User.find_by_id(params[:id])
+    email = Base64.decode64(params[:id])
+    @user = User.find_by_email(email)
 
     # If user not found
     if @user.nil?
       redirect_to users_path , :notice => t('users.user_not_found')
     else
+      @bills_subscriptions = UserSubscription.where('user = ' + @user.id.to_s) 
       respond_to do |format|
         format.html
         format.xml { render :xml  => @user }

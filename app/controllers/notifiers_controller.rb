@@ -9,7 +9,7 @@ class NotifiersController < ApplicationController
 
   def run_tasks
     # It runs all the tasks according to notify users with updates on bills
-    last_notification = params[:date]
+    if params[:date]!=nil then last_notification = params[:date] elsif last_notification = Date.today.to_s end
     @bills = bills_updated(last_notification)
     @bills.each do |bill|
       @user_id_subscriptions = get_user_id_subscriptions(bill)
