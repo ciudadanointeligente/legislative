@@ -7,16 +7,21 @@ class NotifiersController < ApplicationController
     render json: Notifier.all
   end
 
-  def run_tasks
-    # It runs all the tasks according to notify users with updates on bills
-    if params[:date]!=nil then last_notification = params[:date] elsif last_notification = Date.today.to_s end
-    @bills = bills_updated(last_notification)
-    @bills.each do |bill|
-      @user_id_subscriptions = get_user_id_subscriptions(bill)
-      build(bill, @user_id_subscriptions)
-    end
-    send_notifies
-  end
+  # def run_tasks
+  #   # It runs all the tasks according to notify users with updates on bills
+  #   if params[:date].blank?
+  #     last_notification = params[:date]
+  #   else
+  #     last_notification = Date.today.to_s
+  #   end
+
+  #   @bills = bills_updated(last_notification)
+  #   @bills.each do |bill|
+  #     @user_id_subscriptions = get_user_id_subscriptions(bill)
+  #     build(bill, @user_id_subscriptions)
+  #   end
+  #   send_notifies
+  # end
 
   private
 
