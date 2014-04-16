@@ -30,12 +30,42 @@ describe AgendasController do
   # TablesController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
+  before :each do
+    mock_morph_agendas_table
+    mock_morph_district_weeks
+  end
+
   describe "GET index" do
-    it "assigns all tables as @agendas" do
+    xit "assigns all tables as @agendas" do
       get :index, locale: 'es'
       assigns(:agendas).should be_an_instance_of(TableCollection)
       assigns(:agendas).tables.length.should equal(2)
       assigns(:agendas).tables[0].initial_chamber.should eq('Senadores') # FIX we need to discuss about how to test the values in the response
+    end
+  end
+
+  describe "GET agendas_table" do
+    xit "obtains the agendas table" do
+      controller = AgendasController.new
+      agendas = controller.instance_eval{ agendas_table }
+      agendas.first["title"].should eq 'Tabla de sesión, legislatura 361 sesión nro. 91 (Senado)'
+      agendas.first["start"].should eq '2014-03-04'
+      agendas.first["backgroundColor"].should eq '#a6a691'
+      agendas.first["borderColor"].should eq '#b3b3a4'
+    end
+  end
+
+  describe "GET district_weeks" do
+    it "obtains the district weeks" do
+      controller = AgendasController.new
+      district_weeks = controller.instance_eval{ district_weeks }
+      district_weeks.first["id"].should eq 'C001'
+      district_weeks.first["title"].should eq 'Semana distrital'
+      district_weeks.first["start"].should eq '2014-03-24'
+      district_weeks.first["end"].should eq '2014-03-28'
+      district_weeks.first["chamber"].should eq 'C.Diputados'
+      district_weeks.first["url"].should eq 'http://www.camara.cl/camara/distritos.aspx'
+      district_weeks.first["date_scraped"].should eq '2014-03-22'
     end
   end
 
