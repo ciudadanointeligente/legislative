@@ -50,8 +50,9 @@ gem 'route_translator'
 gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'
 
-# Clean ruby syntax for writing and deploying cron jobs
-gem 'whenever', :require => false
+# Clean ruby syntax for writing and deploying cron jobs (for rvm)
+gem 'whenever', :git => 'https://github.com/Insomniware/whenever.git', :require => false
+#gem 'whenever', :require => false #for non rvm
 
 group :production do
   gem 'mysql'
