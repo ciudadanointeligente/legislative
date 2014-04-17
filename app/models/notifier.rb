@@ -10,7 +10,7 @@ class Notifier < ActiveRecord::Base
     @bills = notifications.bills_updated(Date.today.to_s)
     @bills.each do |bill|
       @user_id_subscriptions = notifications.get_user_id_subscriptions(bill)
-      build(bill, @user_id_subscriptions)
+      notifications.build(bill, @user_id_subscriptions)
     end
     notifications.send_notifies
 
