@@ -4,18 +4,15 @@ class Notifier < ActiveRecord::Base
 
   validates_uniqueness_of :user_id
 
-  def send_notifies
-    @notifies = Notifier.all
-    @time_now = Time.now()
-    @notifies.each do |notify|
-      NotifierMailer.notification_email(notify).deliver
-
-      @user = User.find_by_id(notify.user_id)
-      @user.last_notification = @time_now
-      @user.save
-
-      Notifier.delete_all(["user_id = ?", notify.user_id])
+  def task_send_notifies
+    # It runs all the tasks according to notify users with updates on bills
+    notifications = NotifiersController.new
+    @bills = notifications.bills_updated(Date.today.to_s)
+    @bills.each do |bill|
+      @user_id_subscriptions = notifications.get_user_id_subscriptions(bill)
+      notifications.build(bill, @user_id_subscriptions)
     end
+    notifications.send_notifies
 
     Rails.logger.debug "Task - Notifications sent!"
   end
