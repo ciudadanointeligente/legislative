@@ -4,7 +4,7 @@ class Notifier < ActiveRecord::Base
 
   validates_uniqueness_of :user_id
 
-  def task_send_notifies
+  def self.task_send_notifies
     # It runs all the tasks according to notify users with updates on bills
     notifications = NotifiersController.new
     @bills = notifications.bills_updated(Date.today.to_s)
