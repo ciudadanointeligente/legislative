@@ -56,8 +56,5 @@ class NotifiersController < ApplicationController
       # Remove notify from database
       Notifier.delete_all(["user_id = ?", notify.user_id])
     end
-
-    flash[:notice] = 'Notificaciones Enviadas!'
-    redirect_to ""
   end
 end
