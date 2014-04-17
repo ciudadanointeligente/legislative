@@ -7,24 +7,6 @@ class NotifiersController < ApplicationController
     render json: Notifier.all
   end
 
-  # def run_tasks
-  #   # It runs all the tasks according to notify users with updates on bills
-  #   if params[:date].blank?
-  #     last_notification = params[:date]
-  #   else
-  #     last_notification = Date.today.to_s
-  #   end
-
-  #   @bills = bills_updated(last_notification)
-  #   @bills.each do |bill|
-  #     @user_id_subscriptions = get_user_id_subscriptions(bill)
-  #     build(bill, @user_id_subscriptions)
-  #   end
-  #   send_notifies
-  # end
-
-  private
-
   def bills_updated(last_notification)
     # Returns a list of bills updated since last_notification
     @paperworks_updated_collection = Billit::PaperworkCollection.get(ENV['paperworks_url'] + 'search.json?date_min=' + last_notification, 'application/json')
@@ -34,7 +16,6 @@ class NotifiersController < ApplicationController
     @bills_updated
   end
 
-
   def get_user_id_subscriptions(bill)
     # Given a bill, returns all the user_id_subscriptions subscribed to that bill that have confirmed.
     @bill = bill
@@ -42,7 +23,6 @@ class NotifiersController < ApplicationController
     @users_id_subscribed = @users_subscribed.find_all { |user| user.confirmed }.map { |user| user.user }
     @users_id_subscribed
   end
-
 
   def build(bill, users_id_subscribed)
     # It creates or updates notifiers
@@ -80,5 +60,4 @@ class NotifiersController < ApplicationController
     flash[:notice] = 'Notificaciones Enviadas!'
     redirect_to ""
   end
-
 end
