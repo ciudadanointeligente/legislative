@@ -6,12 +6,13 @@ class Notifier < ActiveRecord::Base
 
   def task_send_notifies
     # It runs all the tasks according to notify users with updates on bills
-    @bills = NotifiersController.bills_updated(Date.today.to_s)
+    notifications = NotifiersController.new
+    @bills = notifications.bills_updated(Date.today.to_s)
     @bills.each do |bill|
-      @user_id_subscriptions = NotifiersController.get_user_id_subscriptions(bill)
+      @user_id_subscriptions = notifications.get_user_id_subscriptions(bill)
       build(bill, @user_id_subscriptions)
     end
-    NotifiersController.send_notifies
+    notifications.send_notifies
 
     Rails.logger.debug "Task - Notifications sent!"
   end

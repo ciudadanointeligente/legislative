@@ -9,10 +9,6 @@ Legislative::Application.routes.draw do
   get "confirmed" => "user_subscriptions#confirmed"
   get "sitemap.:format" => "mains#sitemap"
 
-  # resources :notifiers do
-  #   get 'run_tasks', on: :collection
-  # end
-
   localized do
     resources :bills do
       get 'searches', on: :collection
