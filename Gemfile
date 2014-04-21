@@ -50,8 +50,9 @@ gem 'route_translator'
 gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'
 
-# Clean ruby syntax for writing and deploying cron jobs
-gem 'whenever', :require => false
+# Clean ruby syntax for writing and deploying cron jobs (for rvm)
+gem 'whenever', :git => 'https://github.com/Insomniware/whenever.git', :require => false
+#gem 'whenever', :require => false #for non rvm
 
 group :production do
   gem 'mysql'
@@ -82,7 +83,7 @@ end
 gem 'roar', '0.11.19'
 gem 'roar-rails', '0.1.0'
 gem 'faraday', '0.8.1'
-gem 'billit_representers', '0.9.0'
+gem 'billit_representers', '0.9.3'
 gem 'popit_representers', '0.0.15'
 gem 'writeit-rails', :git => 'git://github.com/ciudadanointeligente/writeit-rails.git'
 

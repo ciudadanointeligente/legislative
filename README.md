@@ -1,4 +1,4 @@
-# Legislative
+# Legislative: A Monitoring Platform
 [![Build Status](https://travis-ci.org/ciudadanointeligente/legislative.png?branch=master)](https://travis-ci.org/ciudadanointeligente/legislative)
 [![Coverage Status](https://coveralls.io/repos/ciudadanointeligente/legislative/badge.png)](https://coveralls.io/r/ciudadanointeligente/legislative)
 [![Code Climate](https://codeclimate.com/github/ciudadanointeligente/legislative.png)](https://codeclimate.com/github/ciudadanointeligente/legislative)
@@ -7,73 +7,98 @@
 
 Legislative is a channel of participation and seeks to bring information to the public what is happening to our Congress. Built using POPLUS environment.
 
-## Quick start
+## Dependencies
 
-Clone the git repo - `git clone https://github.com/ciudadanointeligente/legislative.git` - or [download it](https://github.com/ciudadanointeligente/legislative/zipball/master)
-
-Go to your legislative folder and run install
-<pre>
-sh setup.sh
-</pre>
-
-Then run your server
-<pre>
-rails s
-</pre>
-
-Check at [http://localhost:3000](http://localhost:3000)
-
-You can try loggin in with `admin@ciudadanointeligente.org / benito`
+Make sure you're using ruby 2.0 or above (we highly recommend using [rvm](http://rvm.io/)), and that [bundler](http://bundler.io/) is installed.
 
 ## System requirements
 
 The following system requirements are also needed, for image manipulation:
 
-Red Hat / Fedora
-<pre>
-yum install ImageMagick-devel
-</pre>
+Red Hat / Fedora / CentOS
 
-Debian / Ubuntu
-<pre>
-apt-get install imagemagick
-</pre>
+    yum install ImageMagick-devel
 
-for Ubuntu 13.04 also install
-<pre>
-apt-get install libmagickwand-dev
-</pre>
+Debian / Ubuntu (for 13.04 also install `libmagickwand-dev`)
 
-for OSX
-<pre>
-brew update
-</pre>
-<pre>
-brew uninstall ImageMagick
-</pre>
-<pre>
-brew install ImageMagick
-</pre>
-<pre>
-gem uninstall rmagick
-</pre>
-<pre>
-gem install rmagick
-</pre>
+    apt-get install imagemagick
 
-The following system requirements are also needed, for database
+OS X
+
+    brew update
+    brew install ImageMagick
+    gem install rmagick
+
+## Quick start
+
+Clone the git repo - `git clone https://github.com/ciudadanointeligente/legislative.git` - or [download it](https://github.com/ciudadanointeligente/legislative/zipball/master)
+
+Go to your legislative folder and run install
+
+    sh setup.sh
+
+Create the config files
+
+    cp config/database.yml.example config/database.yml
+
+Then run your server
+
+    rails s
+
+Check at [http://localhost:3000](http://localhost:3000)
+
+You can try loggin in with `admin@ciudadanointeligente.org / benito`
+
+
+### Deploying to production
+
+This section will not be relevant to most people. It will however be relevant if you're deploying to a production server.
+
+#### Production environment
+
+Create the follow config files.
+
+    cp config/newrelic.yml.example config/newrelic.yml
+    cp config/schedule.rb.example config/schedule.rb
+    cp config/private_legislative.yml.example config/private_legislative.yml
+
+#### Deploy
+
+We recommend the follow commands in the job for automatic deploy and the use of [phusion passenger](https://www.phusionpassenger.com/) as web server and application server with apache or nginx in production.
+
+    bundle install
+    rake db:migrate
+    rake tmp:cache:clear
+    rake assets:clean
+    rake assets:precompile
+
+#### Tasks using cron
+
+To run tasks like send notifications emails of changes in bills the project use [whenever](https://github.com/javan/whenever), this tool generate cron jobs from the `config/schedule.rb` file.
+
+Add the jobs to crontab:
+
+    bundle exec whenever --update-crontab legislative
+
+Clear the jobs associated with a app name:
+
+    bundle exec whenever --clear-crontab legislative
+
+#### MariaDB
+
+For improve the performance in production is a good idea change the db engine from sqlite3 to mariaDB or postgreSQL. To use mariaDB you need edit `config/database.yml` config file.
 
 Red Hat / Fedora / CentOS
-<pre>
-  sudo yum install mariadb-server mariadb-devel
-</pre>
 
-Debian / Ubuntu / Mint
-<pre>
-  sudo apt-get install mariadb-server libmariadbd-dev
-</pre>
+    yum install mariadb-server mariadb-devel
 
-and then, you need config your config/database.yml file
+Debian / Ubuntu
+
+    apt-get install mariadb-server libmariadbd-dev
+
+OS X
+
+    brew install mariadb
 
 ## Features
 

@@ -1,3 +1,47 @@
-%h2= t('users.user')
-%hr
-  Email: #{@user.email}
+%div.container
+  %h2= t('users.user')
+  %div
+    %table.table.table-striped
+      %tr
+        %th
+          = t('users.bill')
+        %th
+          = t('users.actions')
+      - @bills_subscriptions.each do |bs|
+        %tr
+          %td
+            = link_to bs.bill, bill_path(bs.bill), {:target => '_blank'}
+          %td
+            - if bs.confirmed
+              = link_to'Cancelar subscripción', {controller: 'user_subscriptions', action: 'destroy', id: bs.id, ajax: true, host: ENV['root_url']}, :class => 'cancel-subscription'
+            - else
+              = link_to'Confirmar subscripción', {controller: 'user_subscriptions', action: 'confirmed', email_token: bs.email_token, ajax: true, host: ENV['root_url']}, :class => 'confirm-subscription'
+              | 
+              = link_to'Cancelar subscripción', {controller: 'user_subscriptions', action: 'destroy', id: bs.id, ajax: true, host: ENV['root_url']}, :class => 'cancel-subscription'
+
+:javascript
+  $(document).ready(function(){
+
+    $('.confirm-subscription').on('click', function(e){
+      e.preventDefault();
+      the_url = $(this).attr('href');
+      $.ajax({
+        url: the_url,
+        type: "GET"
+      }).done(function(){
+        location.reload();
+      });
+    });
+
+    $('.cancel-subscription').on('click', function(e){
+      e.preventDefault();
+      the_url = $(this).attr('href');
+      $.ajax({
+        url: the_url,
+        type: "DELETE"
+      }).done(function(){
+        location.reload();
+      });
+    });
+
+  })

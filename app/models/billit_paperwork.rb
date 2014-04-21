@@ -1,4 +1,4 @@
-class Billit::Paperwork 
+class BillitPaperwork 
   def icon_event
     case self.timeline_status
     when "Ingreso"
