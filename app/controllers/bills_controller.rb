@@ -3,7 +3,7 @@ require 'billit_representers/models/bill_page'
 require 'billit_representers/models/bill_basic'
 require './app/models/bill'
 require './app/models/bill_basic'
-require './app/models/paperwork'
+require './app/models/billit_paperwork'
 
 class BillsController < ApplicationController
   include Roar::Rails::ControllerAdditions
