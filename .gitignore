@@ -12,15 +12,15 @@
 # Ignore bundler config
 /.bundle
 
-# Ignore the default SQLite database.
+# Ignore the default SQLite database
 /db/*.sqlite3
 
 # Ignore for local testing
-billit_local_for_testing
-popit_local_for_testing
-writeit_local_for_testing
+/billit_local_for_testing
+/popit_local_for_testing
+/writeit_local_for_testing
 
-# Ignore all logfiles and tempfiles.
+# Ignore all logfiles and tempfiles
 /log/*.log
 /tmp
 /vendor/gems
