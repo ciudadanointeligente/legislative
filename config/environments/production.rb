@@ -7,7 +7,9 @@ Legislative::Application.configure do
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-  config.cache_store = :file_store, 'public/cache/', {expires_in: 12.hours}
+
+  config.action_controller.page_cache_directory = '#{Rails.root}/public/cache'
+  config.cache_store = :file_store, '#{Rails.root}/public/cache', {expires_in: 8.hours}
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = false
