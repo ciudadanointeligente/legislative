@@ -58,20 +58,16 @@
     = label_tag :creation_date_min, t('search.creation_date_min')
     - if params[:creation_date_min] == nil
       - params[:creation_date_min] = ENV['parliaments_initial_date']
-    %div.input-group
+    %div
       %input{"type" => "date", "value" => params[:creation_date_min], "min" => params[:creation_date_min], "name" => "creation_date_min", "class" => "form-control", "onfocus" => "ga('send','bills_filters','focus_min_date')"}
-      %span.input-group-addon
-        %i.fa.fa-calendar
 
   %div.form-group
     = label_tag :creation_date_max, t('search.creation_date_max')
     - if params[:creation_date_max] == nil
       - params[:creation_date_max] = Date.today.to_s
-    %div.input-group
+    %div
       %input{"type" => "date", "value" => params[:creation_date_max], "min" => ENV['parliaments_initial_date'], "name" => "creation_date_max", "class" => "form-control", "onfocus" => "ga('send','bills_filters','focus_max_date')"}
-      %span.input-group-addon
-        %i.fa.fa-calendar
-
+    
   %input{"type" => "hidden", "name" => "bills", "value" => "1"}
 
   %button.btn.btn-primary.pull-right.btn-lg
