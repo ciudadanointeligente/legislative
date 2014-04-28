@@ -20,4 +20,8 @@ class Billit::BillBasic
     end
     return 'paperwork.png'
   end
+
+  def web_url
+    ENV['root_url'] + '/proyectos/' + self.uid
+  end
 end
