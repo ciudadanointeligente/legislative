@@ -19,7 +19,7 @@ Red Hat / Fedora / CentOS
 
     yum install ImageMagick-devel
 
-Debian / Ubuntu (for 13.04 also install `libmagickwand-dev`)
+Debian / Ubuntu (for 13.04 and Wheezy also install `libmagickwand-dev`)
 
     apt-get install imagemagick
 
