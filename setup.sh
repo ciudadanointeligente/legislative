@@ -1,5 +1,5 @@
 #!/bin/bash
-echo 'Legislative install script'
+echo 'Legislative install script '
 echo
 echo
 
