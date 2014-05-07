@@ -11,6 +11,8 @@ Legislative is a channel of participation and seeks to bring information to the 
 
 Make sure you're using ruby 2.0 or above (we highly recommend using [rvm](http://rvm.io/)), and that [bundler](http://bundler.io/) is installed.
 
+Legislative uses the following Poplus components: [Pop-it](http://popit.poplus.org/), [Write-it](http://writeit.poplus.org/) and [Bill-it](github.com/ciudadanointeligente/bill-it). You should create an instance of the services, or have your own installation in order for all features to be available.
+
 ## System requirements
 
 The following system requirements are also needed, for image manipulation:
