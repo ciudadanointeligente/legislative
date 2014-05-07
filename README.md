@@ -56,7 +56,7 @@ This section will not be relevant to most people. It will however be relevant if
 
 #### Production environment
 
-Create the follow config files.
+Create the follow config files, and edit them with your project's specific values.
 
     cp config/newrelic.yml.example config/newrelic.yml
     cp config/schedule.rb.example config/schedule.rb
