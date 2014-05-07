@@ -39,6 +39,10 @@ Go to your legislative folder and run install
 
     sh setup.sh
 
+Install the required ruby gems
+
+    bundle install
+
 Create the config files
 
     cp config/database.yml.example config/database.yml
