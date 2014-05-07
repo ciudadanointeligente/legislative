@@ -64,6 +64,8 @@ Create the follow config files, and edit them with your project's specific value
     cp config/schedule.rb.example config/schedule.rb
     cp config/private_legislative.yml.example config/private_legislative.yml
 
+The private_legislative.yml is the file that holds all your private config values. While legislative.yml gets synced to your github repo, private_legislativeyml does not.
+
 #### Deploy
 
 We recommend the follow commands in the job for automatic deploy and the use of [phusion passenger](https://www.phusionpassenger.com/) as web server and application server with apache or nginx in production.
