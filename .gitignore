@@ -27,6 +27,9 @@
 /vendor/bundle
 .DS_Store
 
+# Ignore all generated images
+/app/assets/images/*.jpg
+
 /log/*
 /tmp/*
 /config/newrelic.yml

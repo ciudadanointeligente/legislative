@@ -11,6 +11,8 @@ Legislative is a channel of participation and seeks to bring information to the 
 
 Make sure you're using ruby 2.0 or above (we highly recommend using [rvm](http://rvm.io/)), and that [bundler](http://bundler.io/) is installed.
 
+Legislative uses the following Poplus components: [Pop-it](http://popit.poplus.org/), [Write-it](http://writeit.poplus.org/) and [Bill-it](github.com/ciudadanointeligente/bill-it). You should create an instance of the services, or have your own installation in order for all features to be available.
+
 ## System requirements
 
 The following system requirements are also needed, for image manipulation:
@@ -19,7 +21,7 @@ Red Hat / Fedora / CentOS
 
     yum install ImageMagick-devel
 
-Debian / Ubuntu (for 13.04 also install `libmagickwand-dev`)
+Debian / Ubuntu (for 13.04 and Wheezy also install `libmagickwand-dev`)
 
     apt-get install imagemagick
 
@@ -36,6 +38,10 @@ Clone the git repo - `git clone https://github.com/ciudadanointeligente/legislat
 Go to your legislative folder and run install
 
     sh setup.sh
+
+Install the required ruby gems
+
+    bundle install
 
 Create the config files
 
@@ -56,11 +62,13 @@ This section will not be relevant to most people. It will however be relevant if
 
 #### Production environment
 
-Create the follow config files.
+Create the follow config files, and edit them with your project's specific values.
 
     cp config/newrelic.yml.example config/newrelic.yml
     cp config/schedule.rb.example config/schedule.rb
     cp config/private_legislative.yml.example config/private_legislative.yml
+
+The private_legislative.yml is the file that holds all your private config values. While legislative.yml gets synced to your github repo, private_legislativeyml does not.
 
 #### Deploy
 
