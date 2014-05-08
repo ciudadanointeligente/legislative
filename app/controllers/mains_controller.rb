@@ -7,20 +7,24 @@ class MainsController < ApplicationController
   def index
     @low_chamber_agenda = Array.new
     @high_chamber_agenda = Array.new
+  
+    if (ENV['agendas_enabled'] == true)
+	    @low_chamber_agenda[0] = get_current_chamber_agenda ENV['low_chamber_name']
+	    @low_chamber_agenda[1] = get_bills_per_agenda JSON.parse(@low_chamber_agenda[0]['bill_list']).uniq
 
-    @low_chamber_agenda[0] = get_current_chamber_agenda ENV['low_chamber_name']
-    @low_chamber_agenda[1] = get_bills_per_agenda JSON.parse(@low_chamber_agenda[0]['bill_list']).uniq
-
-    @high_chamber_agenda[0] = get_current_chamber_agenda ENV['high_chamber_name']
-    @high_chamber_agenda[1] = get_bills_per_agenda JSON.parse(@high_chamber_agenda[0]['bill_list']).uniq
+	    @high_chamber_agenda[0] = get_current_chamber_agenda ENV['high_chamber_name']
+	    @high_chamber_agenda[1] = get_bills_per_agenda JSON.parse(@high_chamber_agenda[0]['bill_list']).uniq
+    end
 
     @hot_bills = Billit::BillPage.get(ENV['billit_url'] + URI::escape("search?current_priority=Discusión%20inmediata|Suma|Simple&per_page=8"), 'application/json').bills
 
-    @answers = LegislativeAnswerCollection.get()
-    if @answers.objects.length > 2
-      @answers.objects = @answers.objects[0..1]
-    end
+    if (!ENV['writeit_url_base'].blank?)
+	    @answers = LegislativeAnswerCollection.get()
 
+	    if @answers.objects.length > 2
+	      @answers.objects = @answers.objects[0..1]
+	    end
+    end
   end
 
   # GET last chamber agenda

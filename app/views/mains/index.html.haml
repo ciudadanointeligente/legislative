@@ -17,7 +17,9 @@
     %p.text-center
       = link_to t('main.view_the_agenda'), agendas_path
     %div.row
-      = render :partial => "latest_agendas"
+      - if ENV['agendas_enabled'] == true
+        = render :partial => "latest_agendas"
 
-  %section#last-responses.hidden-xs
-    = render :partial => "latest_messages"
+  - if ENV['writeit_enabled'] == true
+    %section#last-responses.hidden-xs
+      = render :partial => "latest_messages"
