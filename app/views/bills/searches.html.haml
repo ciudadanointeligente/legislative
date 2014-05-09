@@ -28,7 +28,14 @@
       = render :partial => "filter_search_form"
     %div.col-md-9.whitewithaside
       %div
-        - if ! @bills_query.bills.blank?
+        - if !@bills_query.bills.blank? && !@keywords.empty?
+          %p
+            - if @bills_query.current_page == 1
+              - info_about_results = sprintf(t('search.found_results'),@bills_query.total_entries.to_s)
+            - else
+              - info_about_results = sprintf(t('search.pages_with_found_results'),@bills_query.current_page.to_s, @bills_query.total_entries.to_s)
+            = info_about_results
+
           = link_to t('search.download_as_excel'), params.merge(:format => :xls)
       - @bills = @bills_query.bills
       = render :partial => "box_bills_result"
