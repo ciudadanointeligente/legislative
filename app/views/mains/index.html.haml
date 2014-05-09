@@ -1,6 +1,7 @@
 = render :partial => "search"
 = render :partial => "social_network_box"
-= render :partial => "hot"
+- if ENV['hot_bills']
+  = render :partial => "hot"
 
 %div.container
   %div.row
