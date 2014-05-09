@@ -38,6 +38,7 @@ production:
   writeit_messages_per_page: '20'
   google_site_verification: ''
   pronto_preguntales: ~ #Disables the display of the form for sending messages
+  hot_bills: ~
 
 development:
   root_url:   ~           # example: 'http://www.congresoabierto.cl'
@@ -74,6 +75,7 @@ development:
   writeit_messages_per_page: '5'
   pronto_preguntales: ~ #Disables the display of the form for sending messages
   google_site_verification: ''
+  hot_bills: ~
 
 test:
   root_url:  ~
@@ -109,3 +111,4 @@ test:
   writeit_api_key:  'a'
   writeit_messages_per_page: '5'
   pronto_preguntales: ~ #Disables the display of the form for sending messages
+  hot_bills: ~
