@@ -186,10 +186,6 @@ en:
     step: 'Step:'
     updated_at: 'Updated at:'
   pagination:
-    page: 'Page '
-    of: ' of '
-    with: ' with '
-    results: ' results'
     previous: Previous
     next: Next
   export:

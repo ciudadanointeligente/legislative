@@ -186,10 +186,6 @@ es:
     step: 'Trámite:'
     updated_at: 'Última actualización:'
   pagination:
-    page: 'Página '
-    of: ' de '
-    with: ' con '
-    results: ' resultados'
     previous: Anterior
     next: Siguiente
   export:
