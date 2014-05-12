@@ -26,6 +26,7 @@ production:
   paperworks_url: 'http://billit.ciudadanointeligente.org/paperworks/'
   popit_url:  ~
   twitter_tags: CongresoAbierto
+  twitter_account:  'ciudadanoi'
   popit_persons:  ~
   popit_search:   ~
   popit_organizations: ~
@@ -51,8 +52,9 @@ development:
   high_chamber_name: 'Senado' # for consume the high chamber agendas in morph.io
   low_chamber_name:  'C.Diputados' # for consume the low chamber agendas in morph.io
   twitter_tags: CongresoAbierto
+  twitter_account:  'ciudadanoi'     # account of twitter
   keywords: ~ 
-  agendas_enabled: ~
+  agendas_enabled:  ~
   agendas_url:      ~ # example: 'https://api.morph.io/owner/agenda_repo/data.json?query='
   district_weeks_url: ~ # example: 'https://api.morph.io/owner/district_weeks_repo/data.json?query='
   congressmen_helper_url: ~ # example: 'https://api.morph.io/owner/congressmen_helper/data.json?query='
