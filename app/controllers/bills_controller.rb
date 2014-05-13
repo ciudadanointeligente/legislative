@@ -62,7 +62,9 @@ class BillsController < ApplicationController
   # GET authors related data
   def get_author_related_info author
     a = author.split(',')
-    author = a[1].strip + ' ' + a[0].strip
+    if !a[1].blank?
+      author = a[1].strip + ' ' + a[0].strip
+    end
 
     query = sprintf('select * from data where name = "%s" limit 1', I18n.transliterate(author))
     query = URI::escape(query)
