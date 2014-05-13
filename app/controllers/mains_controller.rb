@@ -8,7 +8,7 @@ class MainsController < ApplicationController
     @low_chamber_agenda = Array.new
     @high_chamber_agenda = Array.new
   
-    if (ENV['agendas_enabled'] == true)
+    if ENV['component_legislative_agendas']
 	    @low_chamber_agenda[0] = get_current_chamber_agenda ENV['low_chamber_name']
 	    @low_chamber_agenda[1] = get_bills_per_agenda JSON.parse(@low_chamber_agenda[0]['bill_list']).uniq
 

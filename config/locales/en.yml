@@ -83,6 +83,9 @@ en:
     represent: 'Represent:'
     all_results: View all results
     search_results: Search results
+    found_results: Found %s results
+    pages_with_found_results: Page %s of %s found results
+    number_of_pages: Page %s of %s
   agendas:
     title: Parliamentarian agenda
     chamber: Chamber
@@ -183,10 +186,6 @@ en:
     step: 'Step:'
     updated_at: 'Updated at:'
   pagination:
-    page: 'Page '
-    of: ' of '
-    with: ' with '
-    results: ' results'
     previous: Previous
     next: Next
   export:

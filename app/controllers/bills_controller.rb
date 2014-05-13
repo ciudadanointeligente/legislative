@@ -94,8 +94,8 @@ class BillsController < ApplicationController
   def searches
     @title = t('bill.title') + ' - '
 
+    @keywords = String.new
     if !params.nil? && params.length > 3
-      @keywords = String.new
       params.each do |key, value|
         if key != 'utf8' && key != 'locale' && !(value.is_a? Array) && !value.blank?
           @keywords << key + '=' + value + '&'

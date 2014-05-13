@@ -14,7 +14,6 @@ production:
   high_chamber_name: 'Senado'
   low_chamber_name:  'C.Diputados'
   keywords: ~
-  agendas_enabled: y
   agendas_url:      ~
   district_weeks_url: ~
   congressmen_helper_url: ~
@@ -25,19 +24,21 @@ production:
   billit_url: ~
   paperworks_url: 'http://billit.ciudadanointeligente.org/paperworks/'
   popit_url:  ~
-  twitter_tags: CongresoAbierto
+  twitter_tags: 'CongresoAbierto'
+  twitter_account:  'ciudadanoi'
   popit_persons:  ~
   popit_search:   ~
   popit_organizations: ~
   popit_organizations_search: ~
-  writeit_enabled: y
   writeit_base_url: ~
   writeit_url:      ~
   writeit_username: ~
   writeit_api_key:  ~
   writeit_messages_per_page: '20'
   google_site_verification: ''
-  pronto_preguntales: y #Disables the display of the form for sending messages
+  component_legislative_agendas:   ~
+  component_legislative_hot_bills: ~
+  component_writeit: ~
 
 development:
   root_url:   ~           # example: 'http://www.congresoabierto.cl'
@@ -49,31 +50,32 @@ development:
   disqus_developer: '1'   # use '1' for local testing, otherwise use '0'
   high_chamber_name: 'Senado' # for consume the high chamber agendas in morph.io
   low_chamber_name:  'C.Diputados' # for consume the low chamber agendas in morph.io
-  twitter_tags: CongresoAbierto
+  twitter_tags: 'CongresoAbierto'  # twitter tags
+  twitter_account:  'ciudadanoi'   # twitter account
   keywords: ~ 
-  agendas_enabled: y
-  agendas_url:      ~ # example: 'https://api.morph.io/owner/agenda_repo/data.json?query='
+  agendas_url:      ~   # example: 'https://api.morph.io/owner/agenda_repo/data.json?query='
   district_weeks_url: ~ # example: 'https://api.morph.io/owner/district_weeks_repo/data.json?query='
   congressmen_helper_url: ~ # example: 'https://api.morph.io/owner/congressmen_helper/data.json?query='
-  morph_io_api_key: ~ # for use morph.io API 
-  bill_graph_data_length:   '12'  # amount of points in the graph
+  morph_io_api_key: ~       # for use morph.io API
+  bill_graph_data_length:   '12'   # amount of points in the graph
   bill_graph_day_interval:  '28'   # amount of days per point in graph
   parliaments_initial_date: '1990-03-01' # the initial date for bill search purposes
-  billit_url: 'http://billit.ciudadanointeligente.org/bills/'       # example: 'http://billit-instance.org/bills/'; for more info about this POPLUS component check https://github.com/ciudadanointeligente/bill-it
+  billit_url: 'http://billit.ciudadanointeligente.org/bills/'  # example: 'http://billit-instance.org/bills/'; for more info about this POPLUS component check https://github.com/ciudadanointeligente/bill-it
   paperworks_url: 'http://billit.ciudadanointeligente.org/paperworks/'
-  popit_url:  'localhost:3002/api'       # example: 'legislative-instance.popit.mysociety.org'; you will need create a instance, please contact with mysociety's popit team in popit@mysociety.org. http://popit.mysociety.org/instances/new
-  popit_persons:  'http://localhost:3002/api/persons/'   # example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/persons/'; the same instance used above but with http and person path
+  popit_url:  'localhost:3002/api'  # example: 'legislative-instance.popit.mysociety.org'; you will need create a instance, please contact with mysociety's popit team in popit@mysociety.org. http://popit.mysociety.org/instances/new
+  popit_persons:  'http://localhost:3002/api/persons/'  # example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/persons/'; the same instance used above but with http and person path
   popit_search:   ~   # example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/search/persons?'; used for person search
   popit_organizations: 'http://localhost:3002/api/organizations/'  #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/organizations/' 
   popit_organizations_search: ~ #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/search/organizations?' 
-  writeit_enabled: y
   writeit_base_url: 'http://localhost:3001' # example: 'http://localhost:3001'; you will need create a instance, please contact with ciudadanointeligente's lab team in lab@ciudadanointeligente.org. http://writeit.ciudadanointeligente.org/
-  writeit_url:      '/api/v1/instance/2/' # example: '/api/v1/instance/2/'; writeit instance path
+  writeit_url:      '/api/v1/instance/2/'   # example: '/api/v1/instance/2/'; writeit instance path
   writeit_username: 'admin' # example: 'admin'; writeit username
-  writeit_api_key:  'a' # example: 'a'; writeit apikey
+  writeit_api_key:  'a'     # example: 'a'; writeit apikey
   writeit_messages_per_page: '5'
-  pronto_preguntales: y #Disables the display of the form for sending messages
   google_site_verification: ''
+  component_legislative_agendas:   ~ # to enable this component set a not null value, example: 'true' or '1'
+  component_legislative_hot_bills: ~ # to enable this component set a not null value, example: 'true' or '1'
+  component_writeit: ~ # to enable this component set a not null value, example: 'true' or '1'
 
 test:
   root_url:  ~
@@ -85,10 +87,9 @@ test:
   disqus_developer: '0'
   high_chamber_name: 'Senado'
   low_chamber_name:  'C.Diputados'
-  twitter_tags: CongresoAbierto
+  twitter_tags: 'CongresoAbierto'
   congressmen_helper_url: https://api.morph.io/owner/congressmen_helper/data.json?query= # example: 'https://api.morph.io/owner/congressmen_helper/data.json?query='
   keywords: ~
-  agendas_enabled: y
   agendas_url:      ~
   district_weeks_url: ~
   morph_io_api_key: ~
@@ -102,10 +103,11 @@ test:
   popit_search:   'http://localhost:3002/api/search/persons?'
   popit_organizations: 'http://localhost:3002/api/organizations/'
   popit_organizations_search: ~
-  writeit_enabled: y
   writeit_base_url: 'http://localhost:3001'
   writeit_url:      '/api/v1/instance/1/'
   writeit_username: 'admin'
   writeit_api_key:  'a'
   writeit_messages_per_page: '5'
-  pronto_preguntales: y #Disables the display of the form for sending messages
+  component_legislative_agendas:   ~
+  component_legislative_hot_bills: ~
+  component_writeit: ~

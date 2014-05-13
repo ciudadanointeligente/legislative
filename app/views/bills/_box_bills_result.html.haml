@@ -1,6 +1,6 @@
 = render partial: "bill", collection: @bills
 %div.row
-  %div.col-md-6.text-center
+  %div.col-md-4.text-center
     - if ! @bills_query.previous.blank?
       - if ! params[:page].blank?
         - @keywords = @keywords.gsub(/page=\d/, 'page='+(params[:page].to_i-1).to_s)
@@ -8,8 +8,12 @@
       = link_to searches_bills_path + '?'+@keywords.to_s, :class => 'btn btn-default', :rel => 'prev' do
         %i.fa.fa-long-arrow-left
         = t('pagination.previous')
+  %div.col-md-4.text-center
+    - if ! @bills_query.next.blank?
+      - number_of_pages = sprintf(t('search.number_of_pages'),@bills_query.current_page.to_s, @bills_query.total_pages.to_s)
+      = number_of_pages
 
-  %div.col-md-6.text-center
+  %div.col-md-4.text-center
     - if ! @bills_query.next.blank?
       / we need change this shit
       - if ! params[:page].blank?
