@@ -35,7 +35,7 @@
 
   %div.row
     %div.col-md-3.aside.aside-congressman
-      - if ! @congressman.images.blank?
+      - if !@congressman.images.blank? and !@congressman.images[0].url.blank?
         - begin
           - timeout(2) do
             - url_image = open(@congressman.images[0].url)

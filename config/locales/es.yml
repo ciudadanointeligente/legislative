@@ -8,7 +8,7 @@ es:
     communication: Pregúntales
     congressmen: Congresistas
     disclosure: Declaraciones
-    from: de Ciudadano Inteligente
+    from: 'de Acción Ciudadana'
     glossary: Glosario
     home: Portada
     menu: Menú
@@ -137,7 +137,7 @@ es:
     subscribe: Suscríbete a este proyecto
     fb_share: Comparte
     tw_share: Twittea
-    tw_text: Revisa el boletín %s en congresoabierto.cl
+    tw_text: Revisa el boletín %s en congresoabierto.gt
     breadcrumb_bill: Proyectos de ley
     download_project: Descargar proyecto de ley
     title: Proyectos de ley

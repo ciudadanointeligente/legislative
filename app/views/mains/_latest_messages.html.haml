@@ -1,4 +1,4 @@
-- if ! @answers.objects.blank?
+- if @answers and !@answers.objects.blank?
   %h3.text-center.title-last-responses
     = t('main.last_questions')
     %div.row
