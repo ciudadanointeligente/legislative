@@ -83,6 +83,9 @@ es:
     represent: 'Lugar que representa:'
     all_results: Ver todos los resultados
     search_results: Resultados de búsqueda
+    found_results: Se encontraron %s resultados
+    pages_with_found_results: Página %s de %s resultados encontrados
+    number_of_pages: Página %s de %s
   agendas:
     title: Agenda parlamentaria
     chamber: Cámara
@@ -183,10 +186,6 @@ es:
     step: 'Trámite:'
     updated_at: 'Última actualización:'
   pagination:
-    page: 'Página '
-    of: ' de '
-    with: ' con '
-    results: ' resultados'
     previous: Anterior
     next: Siguiente
   export:

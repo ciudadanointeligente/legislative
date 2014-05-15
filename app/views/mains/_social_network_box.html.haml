@@ -1,7 +1,7 @@
 %div.socialnetwork-home
   %ul.social-network.list-inline
     %li
-      - url = 'https://twitter.com/share?url='+request.original_url+'&via=ciudadanoi&hashtags='+ENV['twitter_tags']+'&text=Bienvenido a tu congreso online, entra sin pedir permiso'
+      - url = 'https://twitter.com/share?url='+request.original_url+'&via='+ENV['twitter_account']+'&hashtags='+ENV['twitter_tags']+'&text=Bienvenido a tu congreso online, entra sin pedir permiso'
       %a{'href' => '#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
         %span.fa-stack.fa-lg
           %i.fa.fa-circle.fa-stack-2x

@@ -1,6 +1,6 @@
 = render :partial => "search"
 = render :partial => "social_network_box"
-- if ENV['hot_bills']
+- if ENV['component_legislative_hot_bills']
   = render :partial => "hot"
 
 %div.container
@@ -13,7 +13,7 @@
           = content_tag :div, msg, :id => "flash_#{name}"
 
   %section#board
-    - if ENV['agendas_enabled']
+    - if ENV['component_legislative_agendas']
       %h3.text-center.txt-board 
         = t('main.discussion_agendas')
       %p.text-center
@@ -21,6 +21,6 @@
       %div.row
         = render :partial => "latest_agendas"
 
-  - if ENV['writeit_enabled'] == true
+  - if ENV['component_writeit']
     %section#last-responses.hidden-xs
       = render :partial => "latest_messages"
