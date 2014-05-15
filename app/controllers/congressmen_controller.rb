@@ -1,6 +1,7 @@
 require 'popit_representers/models/organization_collection'
 require 'billit_representers/models/bill_page'
 require './app/models/bill'
+require './app/models/bill_basic'
 require 'RMagick'
 require 'open-uri'
 
