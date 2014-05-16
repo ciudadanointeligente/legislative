@@ -13,7 +13,7 @@
   %section#communication
     %div.panel.panel-default
       %div.form-comunication.panel-body
-      - if ENV['component_writeit']
+      - if !ENV['component_writeit']
         = image_tag('pronto-preguntales.png')
 
       - else
