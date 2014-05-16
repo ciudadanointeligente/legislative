@@ -29,6 +29,7 @@
 
 # Ignore all generated images
 /app/assets/images/*.jpg
+/app/assets/images/congressman/*.jpg
 
 /log/*
 /tmp/*
