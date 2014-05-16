@@ -20,7 +20,7 @@ module CongressmenHelper
         url_image = open('app/assets/images/default-profile.png')
       end
       image.from_blob(url_image.read)
-      crop = image.crop(15,15,160,150)
+      crop = image.crop(ENV['congressman_pic_x'].to_i,ENV['congressman_pic_y'].to_i,ENV['congressman_pic_w'].to_i,ENV['congressman_pic_h'].to_i)
       crop.write('app/assets/images/'+fantasy_name+'.jpg')
     end
     return fantasy_name
