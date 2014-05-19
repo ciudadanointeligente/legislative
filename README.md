@@ -55,6 +55,18 @@ Check at [http://localhost:3000](http://localhost:3000)
 
 You can try loggin in with `admin@ciudadanointeligente.org / benito`
 
+### Picture profile of a congressman
+
+if you need adjust the crop size of the thumbnails, only need setup a few values on private_legislative.yml
+adding the following values
+
+    congressman_pic_x: '15'
+    congressman_pic_y: '15'
+    congressman_pic_w: '160'
+    congressman_pic_h: '150'
+
+for default the values are: 15,15,160,150 wich represents x, y, width and heigth
+
 
 ### Deploying to production
 
