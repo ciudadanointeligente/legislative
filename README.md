@@ -55,6 +55,20 @@ Check at [http://localhost:3000](http://localhost:3000)
 
 You can try loggin in with `admin@ciudadanointeligente.org / benito`
 
+### Enable / Disable Display Agenda
+
+in Chile, an Agenda is the roadmap of a congressman when works out of the congress, 
+then, the agenda is a recopilation of what are they doing in is own District that represent.
+for default the config of display this section is disabled and if you wanna enable this one, only need add the following 
+line on your private_legislative.yml with the url pointing to an API, like [Morph.io](http://morph.io/), to consume this information
+if you dont use Morph.io just forget the line 'morph_io_api_key'
+
+    morph_io_api_key: ~
+    agendas_url: ~
+    agendas_enabled: ~
+
+the API response need an Array of bills, [here is an example](https://api.morph.io/ciudadanointeligente/pmocl-agendas/data.json?key=YOUR_API_KEY&query=select%20*%20from%20%27data%27)
+
 ### Picture profile of a congressman
 
 if you need adjust the crop size of the thumbnails, only need setup a few values on private_legislative.yml
