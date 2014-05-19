@@ -55,6 +55,14 @@ Check at [http://localhost:3000](http://localhost:3000)
 
 You can try loggin in with `admin@ciudadanointeligente.org / benito`
 
+### Bill-it
+
+Legislative need you have an instances of Bill-it for store all yours bills, for more information visits [Github Bill-it page](https://github.com/ciudadanointeligente/bill-it/)
+
+### Pop-it
+
+Legislative need you have an instance of Popit for store your congressmen personal data, for more information please visits [Github Project Page](https://github.com/mysociety/popit/) or [Popit website](http://popit.poplus.org/)
+
 ### Enable / Disable Display Agenda
 
 in Chile, an Agenda is the roadmap of a congressman when works out of the congress, 
