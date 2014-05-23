@@ -11,6 +11,13 @@
       = t('layout.communication')
 
   %section#communication
+    %div
+    - flash.each do |name, msg|
+      %div.alert.alert-info
+        %button.close{:'aria-hidden' => 'true', :'data-dismiss' => 'alert'}
+          &times;
+        = content_tag :div, msg, :id => "flash_#{name}"
+
     %div.panel.panel-default
       %div.form-comunication.panel-body
       - if !ENV['component_writeit']

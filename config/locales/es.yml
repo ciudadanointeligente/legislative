@@ -229,6 +229,7 @@ es:
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
     confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
+    confirmation_mail_sent_fail: 'Tenemos problemas enviando tu email, el correo %s parece no ser válido o no haz seleccionado un destinatario'
   congressmen:
     home: Portada
     breadcrumb: Congresistas

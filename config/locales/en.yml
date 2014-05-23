@@ -229,6 +229,7 @@ en:
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
     confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
+    confirmation_mail_sent_fail: We have problems delivering your email
   congressmen:
     home: Home
     breadcrumb: Congresistas
