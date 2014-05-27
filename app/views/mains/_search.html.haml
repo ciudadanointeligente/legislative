@@ -12,11 +12,14 @@
           %button{:type => "submit", :class => "btn btn-primary btn-lg"}
             =t("search.search")
 
-      %div.checkbox
-        %label
-          %input{:type => 'checkbox', :name => 'bills', :value => '1', :checked=>true}
-          = t('main.filter_bills')
-      %div.checkbox
-        %label
-          %input{:type => 'checkbox', :name => 'congressmen', :value => '2', :checked=>true}
-          = t('main.filter_congressmen')
+      - if !ENV['billit_url'].blank?
+        %div.checkbox
+          %label
+            %input{:type => 'checkbox', :name => 'bills', :value => '1', :checked=>true}
+            = t('main.filter_bills')
+
+      - if !ENV['popit_url'].blank? and !ENV['popit_persons'].blank? and !ENV['popit_search'].blank? and !ENV['popit_organizations'].blank? and !ENV['popit_organizations_search'].blank?
+        %div.checkbox
+          %label
+            %input{:type => 'checkbox', :name => 'congressmen', :value => '2', :checked=>true}
+            = t('main.filter_congressmen')

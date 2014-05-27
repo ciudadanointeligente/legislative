@@ -8,7 +8,7 @@ class MainsController < ApplicationController
     @low_chamber_agenda = Array.new
     @high_chamber_agenda = Array.new
   
-    if !ENV['component_legislative_agendas'].blank? and !ENV['agendas_url'].blank?
+    if !ENV['component_legislative_agendas'].blank? and !ENV['agendas_url'].blank? and !ENV['billit_url'].blank?
 	    @low_chamber_agenda[0] = get_current_chamber_agenda ENV['low_chamber_name']
 	    @low_chamber_agenda[1] = get_bills_per_agenda JSON.parse(@low_chamber_agenda[0]['bill_list']).uniq
 

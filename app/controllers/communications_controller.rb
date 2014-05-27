@@ -4,19 +4,25 @@ class CommunicationsController < ApplicationController
   caches_page :index
 
   def index
+    @messages = Hash.new
+
     @congressmen = PopitPersonCollection.new
     @congressmen.get ENV['popit_persons'] + '?per_page=200', 'application/json'
     @congressmen.persons.sort! { |x,y| x.name <=> y.name }
-    @messages = LegislativeMessageCollection.new
-    page = 1
-    if !params[:page].nil?
-      page = params[:page]
+
+    if !ENV['writeit_base_url'].blank? and !ENV['writeit_url'].blank? and !ENV["writeit_username"].blank? and !ENV["writeit_api_key"].blank? and !ENV["writeit_messages_per_page"].blank?
+      @messages = LegislativeMessageCollection.new
+      page = 1
+      if !params[:page].nil?
+        page = params[:page]
+      end
+      @messages.get page: page
+      
+      set_pagination @messages.meta
     end
-    @messages.get page: page
 
     @title = t('layout.communication') + ' - '
 
-    set_pagination @messages.meta
   end
 
   def create

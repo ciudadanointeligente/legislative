@@ -25,12 +25,13 @@
             %a.btn.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
               %i.fa.fa-facebook 
               = t('bill.fb_share')
-          %li
-            - txt_twitter = sprintf(t('bill.tw_text'),@bill.uid)
-            - url = 'https://twitter.com/share?url='+request.original_url+'&via='+ENV['twitter_account']+'&hashtags='+ENV['twitter_tags']+'&text='+txt_twitter
-            %a.btn-warning.btn.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
-              %i.fa.fa-twitter 
-              = t('bill.tw_share')
+          - if !ENV['twitter_account'].blank? and !ENV['twitter_tags'].blank?
+            %li
+              - txt_twitter = sprintf(t('bill.tw_text'),@bill.uid)
+              - url = 'https://twitter.com/share?url='+request.original_url+'&via='+ENV['twitter_account']+'&hashtags='+ENV['twitter_tags']+'&text='+txt_twitter
+              %a.btn-warning.btn.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+                %i.fa.fa-twitter 
+                = t('bill.tw_share')
     
     %div.row
       %div.col-md-1.side

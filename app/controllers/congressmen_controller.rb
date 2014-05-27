@@ -15,39 +15,57 @@ class CongressmenController < ApplicationController
     
     @title = t('congressmen.title') + ' - '
 
-    @congressmen = PopitPersonCollection.new
-    @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
-    @congressmen.persons.sort! { |x,y| x.name <=> y.name }
+    @congressmen =  Hash.new
+    @organizations = Hash.new
 
-    organizations = Popit::OrganizationCollection.new
-    organizations.get ENV['popit_organizations'], 'application/json'
-    @organizations = organizations.result
+    if !ENV['popit_url'].blank? and !ENV['popit_persons'].blank? and !ENV['popit_search'].blank? and !ENV['popit_organizations'].blank? and !ENV['popit_organizations_search'].blank?
+      @congressmen = PopitPersonCollection.new
+      @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
+      @congressmen.persons.sort! { |x,y| x.name <=> y.name }
+
+      organizations = Popit::OrganizationCollection.new
+      organizations.get ENV['popit_organizations'], 'application/json'
+      @organizations = organizations.result
+    end
   end
 
   # GET /congressmen/1
   def show
-    @congressman = PopitPerson.new
-    @congressman.get ENV['popit_persons']+params[:id]+'?include_root=false', 'application/json'
+    @congressmen =  Hash.new
+    @organizations = Hash.new
+    @message = Hash.new
 
-    @bills = (Billit::BillPage.get ENV['billit_url']+'search.json?authors='+URI::escape(@congressman.name)+ '&per_page=3', 'application/json').bills
+    if !ENV['billit_url'].blank? and !ENV['popit_url'].blank? and !ENV['popit_persons'].blank? and !ENV['popit_search'].blank? and !ENV['popit_organizations'].blank? and !ENV['popit_organizations_search'].blank?
+      @congressman = PopitPerson.new
+      @congressman.get ENV['popit_persons']+params[:id]+'?include_root=false', 'application/json'
 
-    @organizations = Popit::OrganizationCollection.new
-    @organizations.get ENV['popit_organizations'], 'application/json'
+      if !@congressman.name.blank?
+        @bills = (Billit::BillPage.get ENV['billit_url']+'search.json?authors='+URI::escape(@congressman.name)+ '&per_page=3', 'application/json').bills
 
-    #setup the title page
-    @title = @congressman.name + " - "
+        @organizations = Popit::OrganizationCollection.new
+        @organizations.get ENV['popit_organizations'], 'application/json'
 
-    @el_twitter = ''
-    @congressman.enlaces.each do | link |
-      case link.note.downcase
-      when 'twitter'
-        @el_twitter = URI(link.url).path.sub! '/', '@'
+        #setup the title page
+        @title = @congressman.name + " - "
+
+        @el_twitter = ''
+        @congressman.enlaces.each do | link |
+          case link.note.downcase
+          when 'twitter'
+            @el_twitter = URI(link.url).path.sub! '/', '@'
+          end
+        end
+        
+        if !ENV['writeit_base_url'].blank? and !ENV['writeit_url'].blank? and !ENV["writeit_username"].blank? and !ENV["writeit_api_key"].blank? and !ENV["writeit_messages_per_page"].blank?
+          messages = LegislativeMessageCollection.new
+          messages.get(person: @congressman)
+          @message = messages.objects[0]
+        end
+      else
+        flash[:notice] = t('bill.bill_dont_exist')
+        redirect_to url_for :controller => 'congressmen', :action => 'searches'
       end
     end
-    
-    messages = LegislativeMessageCollection.new
-    messages.get(person: @congressman)
-    @message = messages.objects[0]
   end
 
   # GET /congressmen/new
@@ -71,30 +89,24 @@ class CongressmenController < ApplicationController
   end
 
   def searches
-    # @congressmen = PopitPersonCollection.new
-    # if !params.nil? && params.length > 3
-    #   param_q = URI::escape(params[:q])
-    #   @congressmen.get ENV['popit_search']+"q="+param_q, 'application/json'
-    # else
-    #   @congressmen.get ENV['popit_search'], 'application/json'
-    # end
+    if !ENV['popit_organizations'].blank?
+      organizations = Popit::OrganizationCollection.new
+      organizations.get ENV['popit_organizations'], 'application/json'
+      @organizations = organizations.result
 
-    organizations = Popit::OrganizationCollection.new
-    organizations.get ENV['popit_organizations'], 'application/json'
-    @organizations = organizations.result
+      @title = t('congressmen.title_search') + ' - '
 
-    @title = t('congressmen.title_search') + ' - '
-
-    if !params.nil? && params.length > 3
-      keywords = Hash.new
-      params.each do |key, value|
-        if key != 'utf8' && key != 'congressmen' && key != 'locale' && key != 'format' && key != 'controller' && key != 'action'
-          keywords.merge!(key => value)
+      if !params.nil? && params.length > 3
+        keywords = Hash.new
+        params.each do |key, value|
+          if key != 'utf8' && key != 'congressmen' && key != 'locale' && key != 'format' && key != 'controller' && key != 'action'
+            keywords.merge!(key => value)
+          end
         end
+      else
       end
-    else
+      get_author_results keywords
     end
-    get_author_results keywords
   end
 
   # GET authors from congressmen helper in morph.io
@@ -115,27 +127,30 @@ class CongressmenController < ApplicationController
       query_keywords = ""
     end
 
-    query = sprintf("select * from data %s limit 200", I18n.transliterate(query_keywords))
-    query = URI::escape(query)
-    response = RestClient.get(ENV['congressmen_helper_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
-    response = JSON.parse(response)
-    @congressmen = PopitPersonCollection.new
-    @congressmen.result = Array.new
-    if !response.blank?
-      response.each do |congressman|
-        record = PopitPerson.new
-        record.id = congressman["uid"]
-        record.name = congressman["name"]
-        record.title = congressman["chamber"]
-        record.images = Array.new
-        record.images[0] = Popit::Personimage.new
-        record.images[0].url = congressman["profile_image"]
-        record.represent = Array.new
-        record.represent[0] = Popit::Personrepresent.new
-        record.represent[0].region = congressman["region"]
+    if !ENV['congressmen_helper_url'].blank? and !ENV['morph_io_api_key'].blank?
+      query = sprintf("select * from data %s limit 200", I18n.transliterate(query_keywords))
+      query = URI::escape(query)
+      response = RestClient.get(ENV['congressmen_helper_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
+      response = JSON.parse(response)
+      @congressmen = PopitPersonCollection.new
+      @congressmen.result = Array.new
+      if !response.blank?
+        response.each do |congressman|
+          record = PopitPerson.new
+          record.id = congressman["uid"]
+          record.name = congressman["name"]
+          record.title = congressman["chamber"]
+          record.images = Array.new
+          record.images[0] = Popit::Personimage.new
+          record.images[0].url = congressman["profile_image"]
+          record.represent = Array.new
+          record.represent[0] = Popit::Personrepresent.new
+          record.represent[0].region = congressman["region"]
 
-        @congressmen.persons.push record
+          @congressmen.persons.push record
+        end
       end
     end
+
   end
 end

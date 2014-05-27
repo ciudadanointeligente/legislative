@@ -6,158 +6,163 @@
           = link_to t('congressmen.home'), root_url
         %li
           = link_to t('congressmen.breadcrumb'), congressmen_path
-        %li.active
-          = @congressman.name
+        - if !@congressman.blank?
+          %li.active
+            = @congressman.name
     %div.col-md-4
       %ul.list-inline.pull-right
-        %li
-          = link_to url_for(controller: "communications", action: "index", id: @congressman.id), class: "btn btn-warning btn-xs" do
-            %i.fa.fa-envelope-o
-            = t('congressmen.askthem')
+        - if !@congressman.blank?
+          %li
+            = link_to url_for(controller: "communications", action: "index", id: @congressman.id), class: "btn btn-warning btn-xs" do
+              %i.fa.fa-envelope-o
+              = t('congressmen.askthem')
         %li
           - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
           %a.btn.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
             %i.fa.fa-facebook 
             = t("congressmen.fb_share")
-        %li
-          - url = 'https://twitter.com/share?url='+request.original_url+'&via='+ENV['twitter_account']+'&hashtags='+ENV['twitter_tags']+'&text=Revisa el perfil de '+@el_twitter+' en '
-          %a.btn.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
-            %i.fa.fa-twitter 
-            = t("congressmen.tw_share")
+        - if !ENV['twitter_tags'].blank?
+          %li
+            - url = 'https://twitter.com/share?url='+request.original_url+'&via='+ENV['twitter_account']+'&hashtags='+ENV['twitter_tags']+'&text=Revisa el perfil de '+@el_twitter+' en '
+            %a.btn.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+              %i.fa.fa-twitter 
+              = t("congressmen.tw_share")
 
-
-  %div
-    %h2
-      = @congressman.name
-    %h4
-      = @congressman.title
-
-
-  %div.row
-    %div.col-md-3.aside.aside-congressman
-      - if !@congressman.images.blank? and !@congressman.images[0].url.blank?
-        - begin
-          - timeout(2) do
-            - url_image = open(@congressman.images[0].url)
-            %img.img-responsive{:src=>@congressman.images[0].url}
-        - rescue Timeout::Error
-          = image_tag('default-profile.png', class: "img-responsive")
-      - else
-        = image_tag('default-profile.png', class: "img-responsive")
-      
-      - if ! @congressman.birth_date.blank?
-        %p
-          %span.light
-            = t('congressmen.birth_date')
-          - date_birth = localize @congressman.birth_date.to_date
-          = sprintf( t('congressmen.years'), date_birth, age(@congressman.birth_date.to_date))
-
-      - if ! @congressman.parliamentarian_period.blank?
-        %p
-          %span.light
-            = t('congressmen.period')
-          = @congressman.parliamentarian_period.map {|p| p.date}.join(', ')
-
-      - if ! @congressman.represent.blank?
-        %p
-          %span.light
-            = t('congressmen.represent')
-          - @congressman.represent.each do | r |
-            - if ! r.district.blank?
-              = r.district
-            - if ! r.region.blank?
-              %p
-                %span.light 
-                  = t('congressmen.region')
-                = r.region
-            - if ! r.comunas.blank?
-              %p
-                %span.light 
-                  = t('congressmen.comuna') 
-                = r.comunas
-
-          
-      - if ! @congressman.memberships.blank?
-        %p
-          %span.light
-            = t('congressmen.party')
-          - @organizations.result.each do | o |
-            /- url = '#';
-            /-if ! o.links[1].blank?
-            /  - url = @congressman.memberships[0].organization_id == o.id ? o.links[1].url : '#'
-            
-            /  %a{ 'href' => url, 'target' => '_blank' }
-            = o.name if @congressman.memberships[0].organization_id == o.id
-            /%i.fa.fa-external-link
-      
-      - if ! @congressman.commissions.blank?
-        %p
-          - @congressman.commissions.each do | c |
-            - if ! c.permanent.blank?
-              %p
-                %span.light
-                  = t('congressmen.permanent') 
-                = c.permanent  
-            
-            - if ! c.special.blank?
-              %p
-                %span.light 
-                  = t('congressmen.special') 
-                = c.special 
-            
-            - if ! c.researcher.blank?
-              %p 
-                %span.light 
-                  = t('congressmen.research')
-                = c.researcher 
-      
-      - if ! @congressman.enlaces.blank?
-        %div
-          %p
-            - @congressman.enlaces.each do | link |
-              - icon = 'fa-globe'
-              - case link.note.downcase
-              - when 'twitter'
-                - icon = 'fa-twitter'
-              - when 'facebook'
-                - icon = 'fa-facebook'
-              %a{ 'href' => link.url, 'target' => '_blank' }
-                %i{:class=>'fa '+icon}
-                = link.note.capitalize
-                %br/
-
-
-    %div.col-md-9.whitewithaside
+  - if !ENV['billit_url'].blank? and !ENV['popit_url'].blank? and !ENV['popit_persons'].blank? and !ENV['popit_search'].blank? and !ENV['popit_organizations'].blank? and !ENV['popit_organizations_search'].blank?
+    %div
+      %h2
+        = @congressman.name
       %h4
-        = t('congressmen.last_initiatives')
-      - if !@bills.blank?
-        = render partial: "bills/bill", collection: @bills
-        = link_to_if @bills, t("search.bills_advanced_search"), {controller: :bills, action: :searches, authors: @congressman.name}
-        %i.fa.fa-long-arrow-right
-      - else
-        %div.alert.alert-warning
-          = sprintf('%s aún no tiene iniciativas', @congressman.name)
+        = @congressman.title
 
-      - if ! @message.nil?
-        %div.special-box
-          = t('Última pregunta')
+    %div.row
+      %div.col-md-3.aside.aside-congressman
+        - if !@congressman.images.blank? and !@congressman.images[0].url.blank?
+          - begin
+            - timeout(2) do
+              - url_image = open(@congressman.images[0].url)
+              %img.img-responsive{:src=>@congressman.images[0].url}
+          - rescue Timeout::Error
+            = image_tag('default-profile.png', class: "img-responsive")
+        - else
+          = image_tag('default-profile.png', class: "img-responsive")
+        
+        - if ! @congressman.birth_date.blank?
+          %p
+            %span.light
+              = t('congressmen.birth_date')
+            - date_birth = localize @congressman.birth_date.to_date
+            = sprintf( t('congressmen.years'), date_birth, age(@congressman.birth_date.to_date))
+
+        - if ! @congressman.parliamentarian_period.blank?
+          %p
+            %span.light
+              = t('congressmen.period')
+            = @congressman.parliamentarian_period.map {|p| p.date}.join(', ')
+
+        - if ! @congressman.represent.blank?
+          %p
+            %span.light
+              = t('congressmen.represent')
+            - @congressman.represent.each do | r |
+              - if ! r.district.blank?
+                = r.district
+              - if ! r.region.blank?
+                %p
+                  %span.light 
+                    = t('congressmen.region')
+                  = r.region
+              - if ! r.comunas.blank?
+                %p
+                  %span.light 
+                    = t('congressmen.comuna') 
+                  = r.comunas
+
+            
+        - if ! @congressman.memberships.blank?
+          %p
+            %span.light
+              = t('congressmen.party')
+            - @organizations.result.each do | o |
+              /- url = '#';
+              /-if ! o.links[1].blank?
+              /  - url = @congressman.memberships[0].organization_id == o.id ? o.links[1].url : '#'
+              
+              /  %a{ 'href' => url, 'target' => '_blank' }
+              = o.name if @congressman.memberships[0].organization_id == o.id
+              /%i.fa.fa-external-link
+        
+        - if ! @congressman.commissions.blank?
+          %p
+            - @congressman.commissions.each do | c |
+              - if ! c.permanent.blank?
+                %p
+                  %span.light
+                    = t('congressmen.permanent') 
+                  = c.permanent  
+              
+              - if ! c.special.blank?
+                %p
+                  %span.light 
+                    = t('congressmen.special') 
+                  = c.special 
+              
+              - if ! c.researcher.blank?
+                %p 
+                  %span.light 
+                    = t('congressmen.research')
+                  = c.researcher 
+        
+        - if ! @congressman.enlaces.blank?
           %div
-            %p.question.subject
-            = @message.subject
-            %p.question.subject
-            = @message.content
-            %p.total-answers.text-right
-            = sprintf( t('congressmen.askthem_responses'), @congressman.name  )
+            %p
+              - @congressman.enlaces.each do | link |
+                - icon = 'fa-globe'
+                - case link.note.downcase
+                - when 'twitter'
+                  - icon = 'fa-twitter'
+                - when 'facebook'
+                  - icon = 'fa-facebook'
+                %a{ 'href' => link.url, 'target' => '_blank' }
+                  %i{:class=>'fa '+icon}
+                  = link.note.capitalize
+                  %br/
 
 
-      %div.votes
+      %div.col-md-9.whitewithaside
         %h4
-          = t('congressmen.votes')
-        %div.alert.alert-info
-          = sprintf('Próximamente aquí se mostrará la postura de %s en las diferentes votaciones.', @congressman.name)
+          = t('congressmen.last_initiatives')
+        - if !@bills.blank?
+          = render partial: "bills/bill", collection: @bills
+          = link_to_if @bills, t("search.bills_advanced_search"), {controller: :bills, action: :searches, authors: @congressman.name}
+          %i.fa.fa-long-arrow-right
+        - else
+          %div.alert.alert-warning
+            = sprintf('%s aún no tiene iniciativas', @congressman.name)
 
-      %div.intervencions
-        %h4
-          = t('congressmen.last_interventions')
-        %div.alert.alert-info
-          = sprintf('Próximamente aquí se mostraran las intervenciones de %s en las diferentes sesiones.', @congressman.name)
+        - if ! @message.blank?
+          %div.special-box
+            = t('Última pregunta')
+            %div
+              %p.question.subject
+              = @message.subject
+              %p.question.subject
+              = @message.content
+              %p.total-answers.text-right
+              = sprintf( t('congressmen.askthem_responses'), @congressman.name  )
+
+
+        %div.votes
+          %h4
+            = t('congressmen.votes')
+          %div.alert.alert-info
+            = sprintf('Próximamente aquí se mostrará la postura de %s en las diferentes votaciones.', @congressman.name)
+
+        %div.intervencions
+          %h4
+            = t('congressmen.last_interventions')
+          %div.alert.alert-info
+            = sprintf('Próximamente aquí se mostraran las intervenciones de %s en las diferentes sesiones.', @congressman.name)
+  - else
+    %p.alert.alert-danger
+      = t('config.popit_url').html_safe
