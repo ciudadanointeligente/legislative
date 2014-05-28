@@ -30,7 +30,7 @@
                 = link_to (new_user_subscription_path(:bill => bill.uid)) do
                   %i.fa.fa-star-o{title: t('bill.subscribe')}
 
-- if !@high_chamber_bills.blank?
+- if !@high_chamber_agenda.blank?
   %div.col-md-6
     %table.table.table-striped.tablas
       %thead
