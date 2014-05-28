@@ -39,6 +39,11 @@ production:
   component_legislative_agendas:   ~
   component_legislative_hot_bills: ~
   component_writeit: ~
+  default_locale: 'es'
+  congressman_pic_x: '15' # add the x crop image
+  congressman_pic_y: '15' # add the y crop image
+  congressman_pic_w: '160' # add the with of crop image
+  congressman_pic_h: '150' # add the heigth of crop image
 
 development:
   root_url:   ~           # example: 'http://www.congresoabierto.cl'
@@ -76,6 +81,11 @@ development:
   component_legislative_agendas:   ~ # to enable this component set a not null value, example: 'true' or '1'
   component_legislative_hot_bills: ~ # to enable this component set a not null value, example: 'true' or '1'
   component_writeit: ~ # to enable this component set a not null value, example: 'true' or '1'
+  default_locale: 'es'
+  congressman_pic_x: '15' # add the x crop image
+  congressman_pic_y: '15' # add the y crop image
+  congressman_pic_w: '160' # add the with of crop image
+  congressman_pic_h: '150' # add the heigth of crop image
 
 test:
   root_url:  ~
@@ -111,3 +121,4 @@ test:
   component_legislative_agendas:   ~
   component_legislative_hot_bills: ~
   component_writeit: ~
+  default_locale: 'es'

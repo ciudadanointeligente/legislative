@@ -141,6 +141,7 @@ en:
     breadcrumb_bill: Bills
     download_project: Download bill project
     title: Bills
+    bill_dont_exist: "The bill doesn't exist"
   paperworks:
     chamber: 'Chamber:'
     created_at: 'Created at:'
@@ -229,6 +230,7 @@ en:
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
     confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
+    confirmation_mail_sent_fail: We have problems delivering your email
   congressmen:
     home: Home
     breadcrumb: Congresistas
@@ -347,3 +349,7 @@ en:
       month: Month
       second: Seconds
       year: Year
+  config:
+    bills_url: 'Hemos detectado que tu archivo de configuración no cuenta con una URL válida para <strong>billit_url</strong> para el consumo de Proyectos de Ley'
+    popit_url: 'Hemos detectado que tu archivo de configuración no cuenta con una URL válida para <strong>billit_url</strong>, <strong>popit_url</strong>, <strong>popit_persons</strong>, <strong>popit_search</strong>, <strong>popit_organizations</strong> y/o <strong>popit_organizations_search</strong> para el consumo de Congresistas'
+    search: 'Hemos detectado que tu archivo de configuración no cuenta con una URL válida para <strong>popit_persons</strong>, <strong>popit_organizations</strong>, <strong>billit_url</strong> y/o <strong>popit_search</strong> para poder realizar búsquedas correctamente'

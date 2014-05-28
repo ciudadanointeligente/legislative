@@ -1,14 +1,14 @@
 # Localization file for Spanish. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-es:
+es-GT:
   layout:
     about_us: Acerca de nosotros
     bills: Proyectos de ley
     communication: Pregúntales
     congressmen: Congresistas
     disclosure: Declaraciones
-    from: 'de Ciudadano Inteligente'
+    from: 'de Acción Ciudadana'
     glossary: Glosario
     home: Portada
     menu: Menú
@@ -230,7 +230,6 @@ es:
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
     confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
-    confirmation_mail_sent_fail: 'Tenemos problemas enviando tu email, el correo %s parece no ser válido o no haz seleccionado un destinatario'
   congressmen:
     home: Portada
     breadcrumb: Congresistas

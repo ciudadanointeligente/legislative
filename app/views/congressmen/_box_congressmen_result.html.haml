@@ -1,45 +1,46 @@
-- @congressmen.persons.each do |congressman|
-  %div.row.result
-    %div.col-md-1
-      - if !congressman.images.blank? and !congressman.images[0].url.blank?
-        - fantasy_name = congressmen_pic(congressman.name.gsub(",",""), congressman.images[0].url)
-        = image_tag(fantasy_name+'.jpg', class: "img-circle img-responsive hidden-xs")
-        = image_tag(fantasy_name+'.jpg', class: "img-thumbnail img-responsive visible-xs")
-      - else
-        = image_tag('default-profile.png', class: "img-circle img-responsive hidden-xs")
-        = image_tag('default-profile.png', class: "img-thumbnail img-responsive visible-xs")
-    %div.col-md-11
-      %div.row
-        %div.col-md-11
-          %h5
-            = link_to congressman.name, congressman_path(congressman.id)
-          - if ! congressman.title.blank?
-            = congressman.title
-          %p
-          - begin
-            - if ! congressman.represent[0].region.blank?
-              %span.light
-                = t('congressmen.represent')
-              = congressman.represent[0].region
-          - rescue
-            - #doing nothing just because
-        %div.col-md-1
-          = link_to url_for(controller: "communications", action: "index", id: congressman.id) do
-            %span.visible-xs
-              = t('congressmen.askthem')
-            %i.fa.fa-envelope-o.hidden-xs{title: t('congressmen.askthem')}
-%div.pull-left
-  - if ! @congressmen.prev_url.blank?
-    = link_to congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default' do
-      %i.fa.fa-long-arrow-left
-      = t('pagination.previous')
-%div.pull-right
-  - if ! @congressmen.next_url.blank?
-    - if @congressmen.has_more
-      = link_to congressmen_path + '/?page=' + (@congressmen.page + 1).to_s, :class => 'btn btn-default' do
-        = t('pagination.next')
-        %i.fa.fa-long-arrow-right
+- if !@congressmen.blank? and !@congressmen.persons.blank?
+  - @congressmen.persons.each do |congressman|
+    %div.row.result
+      %div.col-md-1
+        - if !congressman.images.blank? and !congressman.images[0].url.blank?
+          - fantasy_name = congressmen_pic(congressman.name.gsub(",",""), congressman.images[0].url)
+          = image_tag('congressman/'+fantasy_name+'.jpg', class: "img-circle img-responsive hidden-xs")
+          = image_tag('congressman/'+fantasy_name+'.jpg', class: "img-thumbnail img-responsive visible-xs")
+        - else
+          = image_tag('default-profile.png', class: "img-circle img-responsive hidden-xs")
+          = image_tag('default-profile.png', class: "img-thumbnail img-responsive visible-xs")
+      %div.col-md-11
+        %div.row
+          %div.col-md-11
+            %h5
+              = link_to congressman.name, congressman_path(congressman.id)
+            - if ! congressman.title.blank?
+              = congressman.title
+            %p
+            - begin
+              - if ! congressman.represent[0].region.blank?
+                %span.light
+                  = t('congressmen.represent')
+                = congressman.represent[0].region
+            - rescue
+              - #doing nothing just because
+          %div.col-md-1
+            = link_to url_for(controller: "communications", action: "index", id: congressman.id) do
+              %span.visible-xs
+                = t('congressmen.askthem')
+              %i.fa.fa-envelope-o.hidden-xs{title: t('congressmen.askthem')}
+  %div.pull-left
+    - if ! @congressmen.prev_url.blank?
+      = link_to congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default' do
+        %i.fa.fa-long-arrow-left
+        = t('pagination.previous')
+  %div.pull-right
+    - if ! @congressmen.next_url.blank?
+      - if @congressmen.has_more
+        = link_to congressmen_path + '/?page=' + (@congressmen.page + 1).to_s, :class => 'btn btn-default' do
+          = t('pagination.next')
+          %i.fa.fa-long-arrow-right
 
-- if @congressmen.persons.count == 0
-  %p.text-center
-    = t('search.there_are_no_results')
+  - if @congressmen.persons.count == 0
+    %p.text-center
+      = t('search.there_are_no_results')
