@@ -45,6 +45,8 @@ class CongressmenController < ApplicationController
 
         @organizations = Popit::OrganizationCollection.new
         @organizations.get ENV['popit_organizations'], 'application/json'
+        @organizations = organizations.result.sort! { |x,y| x.name <=> y.name }
+        @organizations.uniq!(&:name)
 
         #setup the title page
         @title = @congressman.name + " - "
@@ -93,7 +95,8 @@ class CongressmenController < ApplicationController
     if !ENV['popit_organizations'].blank?
       organizations = Popit::OrganizationCollection.new
       organizations.get ENV['popit_organizations'], 'application/json'
-      @organizations = organizations.result
+      @organizations = organizations.result.sort! { |x,y| x.name <=> y.name }
+      @organizations.uniq!(&:name)
 
       @title = t('congressmen.title_search') + ' - '
 
@@ -104,6 +107,7 @@ class CongressmenController < ApplicationController
             keywords.merge!(key => value)
           end
         end
+        keywords.delete_if { |k, v| v.empty? }
       else
       end
       get_author_results keywords
