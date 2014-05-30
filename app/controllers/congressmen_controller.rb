@@ -25,7 +25,8 @@ class CongressmenController < ApplicationController
 
       organizations = Popit::OrganizationCollection.new
       organizations.get ENV['popit_organizations'], 'application/json'
-      @organizations = organizations.result
+      @organizations = organizations.result.sort! { |x,y| x.name <=> y.name }
+      @organizations.uniq!(&:name)
     end
   end
 
@@ -148,6 +149,7 @@ class CongressmenController < ApplicationController
           record.represent[0].region = congressman["region"]
 
           @congressmen.persons.push record
+          @congressmen.persons.sort! { |x,y| x.name <=> y.name }
         end
       end
     end
