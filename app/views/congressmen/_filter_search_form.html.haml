@@ -2,7 +2,7 @@
   - if !@congressmen.blank? and !@congressmen.persons.blank?
     %div.form-group
       = label_tag :name, t('congressmen.form_name')
-      = select_tag "congressmen", options_from_collection_for_select(@congressmen.persons, "name", "name", params[:congressmen]), prompt: t('congressmen.placeholder_name'), class: 'form-control chosen'
+      = select_tag "name", options_from_collection_for_select(@congressmen.persons, "name", "name", params[:name]), prompt: t('congressmen.placeholder_name'), class: 'form-control chosen'
 
   %div.form-group
     = label_tag :zone, t('congressmen.form_zone')
