@@ -83,7 +83,7 @@
           %p
             %span.light
               = t('congressmen.party')
-            - @organizations.result.each do | o |
+            - @organizations.each do | o |
               /- url = '#';
               /-if ! o.links[1].blank?
               /  - url = @congressman.memberships[0].organization_id == o.id ? o.links[1].url : '#'

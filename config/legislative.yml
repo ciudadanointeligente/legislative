@@ -44,6 +44,9 @@ production:
   congressman_pic_y: '15' # add the y crop image
   congressman_pic_w: '160' # add the with of crop image
   congressman_pic_h: '150' # add the heigth of crop image
+  email_suscription: 'Congreso abierto <legislative@congresoabierto.cl>'
+  subject_suscription: 'Congreso abierto, Confirmación de suscripción'
+  url_suscription: 'http://congresoabierto.cl'
 
 development:
   root_url:   ~           # example: 'http://www.congresoabierto.cl'
@@ -86,6 +89,9 @@ development:
   congressman_pic_y: '15' # add the y crop image
   congressman_pic_w: '160' # add the with of crop image
   congressman_pic_h: '150' # add the heigth of crop image
+  email_suscription: 'Congreso abierto <legislative@congresoabierto.cl>'
+  subject_suscription: 'Congreso abierto, Confirmación de suscripción'
+  url_suscription: 'http://congresoabierto.cl'
 
 test:
   root_url:  ~
