@@ -7,7 +7,7 @@
     <h1><%= sprintf( t('email.body_header'), @user.username ) %></h1>
     <p>
       <%= sprintf( t('email.body_content'), @bill) %>
-      <%= link_to('acá!', controller: 'user_subscriptions', action: 'confirmed', email_token: @user_subscription.email_token, host: ENV['root_url']) %>
+      <%= link_to('acá!', controller: 'user_subscriptions', action: 'confirmed', ajax: 'false', email_token: @user_subscription.email_token, host: ENV['root_url']) %>
     </p>
     <p>
       Para acceder a todos los Proyectos de ley a los que te encuentras suscrito, visita 
