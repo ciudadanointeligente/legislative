@@ -220,6 +220,7 @@ en:
     subscribe: Subscribe
     email: Email
   communication:
+    intro: 'A través de esta sección podrás tener línea directa con los congresistas, recuerda ser respetuoso.'
     name: Name
     email: E-mail
     choose_congressmen: Seleccione un senador o diputado
