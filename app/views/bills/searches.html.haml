@@ -1,5 +1,5 @@
 %div.container
-  - if !@bills_query.blank? and !@bills_query.bills.blank?
+  - if !@bills_query.blank? or !@bills_query.bills.blank?
     %div.row
       %div.col-md-9
         %ol.breadcrumb
@@ -36,7 +36,7 @@
                 &times;
               = content_tag :div, msg, :id => "flash_#{name}"
         %div
-          - if !@bills_query.blank? and !@bills_query.bills.blank? and !@keywords.empty?
+          - if !@bills_query.blank? or !@bills_query.bills.blank? and !@keywords.empty?
             %p
               - if @bills_query.current_page == 1
                 - info_about_results = sprintf(t('search.found_results'),@bills_query.total_entries.to_s)
@@ -46,7 +46,7 @@
 
             = link_to t('search.download_as_excel'), params.merge(:format => :xls)
         
-        - if !@bills_query.blank? and !@bills_query.bills.blank?
+        - if !@bills_query.blank? or !@bills_query.bills.blank?
           - @bills = @bills_query.bills
           = render :partial => "box_bills_result"
   - else
