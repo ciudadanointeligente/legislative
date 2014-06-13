@@ -1,4 +1,4 @@
-- if !@low_chamber_agenda.blank?
+- if !@low_chamber_agenda.blank? and !@low_chamber_agenda[0]['date'].blank?
   %div.col-md-6
     %table.table.table-striped.tablas
       %thead
@@ -30,7 +30,7 @@
                 = link_to (new_user_subscription_path(:bill => bill.uid)) do
                   %i.fa.fa-star-o{title: t('bill.subscribe')}
 
-- if !@high_chamber_agenda.blank?
+- if !@high_chamber_agenda.blank? and !@high_chamber_agenda[0]['date'].blank?
   %div.col-md-6
     %table.table.table-striped.tablas
       %thead
