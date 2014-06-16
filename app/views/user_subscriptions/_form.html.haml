@@ -7,7 +7,7 @@
           %li= msg
   %div.form-group
     = f.label t('user_subscriptions.email')
-    = f.email_field :user, placeholder: "Ingrese su Email", class: 'form-control'
+    = f.email_field :user, placeholder: "Ingrese su Email", class: 'form-control subscription'
   %div.form-group
     = f.label t('search.bill')
     = f.text_field :bill, readonly: true, value: params[:bill], class: 'form-control'
