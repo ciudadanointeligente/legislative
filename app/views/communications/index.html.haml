@@ -18,6 +18,9 @@
           &times;
         = content_tag :div, msg, :id => "flash_#{name}"
 
+    %div
+      %p
+        = t('communication.intro')
     %div.panel.panel-default
       %div.form-comunication.panel-body
       - if !ENV['component_writeit']

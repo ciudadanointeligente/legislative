@@ -86,6 +86,7 @@ es-GT:
     found_results: Se encontraron %s resultados
     pages_with_found_results: Página %s de %s resultados encontrados
     number_of_pages: Página %s de %s
+    predefined_queries: Consultas predefinidas
   agendas:
     title: Agenda parlamentaria
     chamber: Cámara

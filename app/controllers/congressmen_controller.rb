@@ -23,9 +23,7 @@ class CongressmenController < ApplicationController
       @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
       @congressmen.persons.sort! { |x,y| x.name <=> y.name }
 
-      organizations = Popit::OrganizationCollection.new
-      organizations.get ENV['popit_organizations'], 'application/json'
-      @organizations = organizations.result
+      @organizations = get_organizations
     end
   end
 
@@ -42,8 +40,7 @@ class CongressmenController < ApplicationController
       if !@congressman.name.blank?
         @bills = (Billit::BillPage.get ENV['billit_url']+'search.json?authors='+URI::escape(@congressman.name)+ '&per_page=3', 'application/json').bills
 
-        @organizations = Popit::OrganizationCollection.new
-        @organizations.get ENV['popit_organizations'], 'application/json'
+        @organizations = get_organizations
 
         #setup the title page
         @title = @congressman.name + " - "
@@ -90,9 +87,7 @@ class CongressmenController < ApplicationController
 
   def searches
     if !ENV['popit_organizations'].blank?
-      organizations = Popit::OrganizationCollection.new
-      organizations.get ENV['popit_organizations'], 'application/json'
-      @organizations = organizations.result
+      @organizations = get_organizations
 
       @title = t('congressmen.title_search') + ' - '
 
@@ -103,10 +98,19 @@ class CongressmenController < ApplicationController
             keywords.merge!(key => value)
           end
         end
+        keywords.delete_if { |k, v| v.empty? }
       else
       end
       get_author_results keywords
     end
+  end
+
+  # GET organizations from Popit
+  def get_organizations
+    organizations = Popit::OrganizationCollection.new
+    organizations.get ENV['popit_organizations'], 'application/json'
+    organizations = organizations.result.sort! { |x,y| x.name <=> y.name }
+    return organizations.uniq!(&:name)
   end
 
   # GET authors from congressmen helper in morph.io
@@ -148,6 +152,7 @@ class CongressmenController < ApplicationController
           record.represent[0].region = congressman["region"]
 
           @congressmen.persons.push record
+          @congressmen.persons.sort! { |x,y| x.name <=> y.name }
         end
       end
     end

@@ -8,7 +8,7 @@ es:
     communication: Pregúntales
     congressmen: Congresistas
     disclosure: Declaraciones
-    from: 'de Ciudadano Inteligente'
+    from: de Ciudadano Inteligente
     glossary: Glosario
     home: Portada
     menu: Menú
@@ -66,7 +66,7 @@ es:
     placeholder_search_for: Ingresa una palabra clave
     bulletin: 'Boletín'
     placeholder_bulletin: Ingresa nro de boletín
-    stage: 'Etapa'
+    stage: Etapa
     creation_date: 'Fecha de ingreso: '
     initiative: 'Iniciativa: '
     creation_date_min: 'Fecha de ingreso (min)'
@@ -86,6 +86,7 @@ es:
     found_results: Se encontraron %s resultados
     pages_with_found_results: Página %s de %s resultados encontrados
     number_of_pages: Página %s de %s
+    predefined_queries: Consultas predefinidas
   agendas:
     title: Agenda parlamentaria
     chamber: Cámara
@@ -137,7 +138,7 @@ es:
     subscribe: Suscríbete a este proyecto
     fb_share: Comparte
     tw_share: Twittea
-    tw_text: Revisa el boletín %s en congresoabierto.gt
+    tw_text: Revisa el boletín %s en congresoabierto.cl
     breadcrumb_bill: Proyectos de ley
     download_project: Descargar proyecto de ley
     title: Proyectos de ley
@@ -214,12 +215,13 @@ es:
     user: Usuario
     users: Usuarios
   user_subscriptions:
-    confirmation_mail_sent: Se ha enviado un correo electrónico a la casilla registrada
+    confirmation_mail_sent: Se ha enviado un correo electrónico de confirmación a la casilla registrada
     already_subscribe: Ya existe una suscripción a este bill con ese correo electrónico
     verified_mail: El correo electrónico fue exitosamente verificado
     subscribe: Suscríbete
     email: Correo Electrónico
   communication:
+    intro: 'A través de esta sección podrás tener línea directa con los congresistas, recuerda ser respetuoso.'
     name: Nombre
     email: E-mail
     choose_congressmen: Seleccione un senador o diputado
