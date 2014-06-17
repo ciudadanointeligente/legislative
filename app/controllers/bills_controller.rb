@@ -26,7 +26,14 @@ class BillsController < ApplicationController
 
         # # paperworks
         @date_freq = Array.new
-        bill_range_dates = @bill.paperworks.map {|paperwork| Date.strptime(paperwork.date, "%Y-%m-%d")}
+        #bill_range_dates = @bill.paperworks.map {|paperwork| Date.strptime(paperwork.date, "%Y-%m-%d")}
+        bill_range_dates = @bill.paperworks.map do |paperwork| 
+          if( !paperwork.date.blank? )
+            Date.strptime(paperwork.date, "%Y-%m-%d")
+          else
+            Date.strptime(Date.today.to_time.to_s, "%Y-%m-%d")
+          end
+        end
 
         top_date = Date.today
         bottom_date = top_date - ENV['bill_graph_day_interval'].to_i.days
