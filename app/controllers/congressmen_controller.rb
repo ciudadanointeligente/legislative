@@ -27,7 +27,7 @@ class CongressmenController < ApplicationController
 
         @organizations = get_organizations
       rescue => e
-        e.response
+        @message = e.response
       end
       
     end
