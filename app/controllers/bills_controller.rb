@@ -98,12 +98,8 @@ class BillsController < ApplicationController
   # PUT /bills/1
   # PUT /bills/1.json
   def update
-    @bill = Billit::BillBasic.get(ENV['billit_url'] + "#{params[:id]}.json", 'application/json')
-
-    !params[:tags].nil? ? @bill.tags = params[:tags] : @bill.tags = []
-    puts ENV['billit_url'] + "#{params[:id]}"
-    @bill.put(ENV['billit_url'] + "#{params[:id]}", 'application/json')
-    
+    #Currently only updates tags
+    HTTParty.put("http://localhost:3001/bills/"+params[:id], body: {tags: params[:tags]})
     render text: params.to_s, status: 201
   end
 
