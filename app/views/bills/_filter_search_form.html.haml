@@ -55,7 +55,20 @@
             %option{:value => priority}= priority
 
   %div.form-group
+    = label_tag :initial_chamber, t('search.predefined_queries')
+    %select{:name => "predefined_queries", :class => "form-control", :onfocus => "ga('send','bills_filters','focus_predefined_queries')"}
+      %option{:value => "", selected: params[:predefined_queries] == ""}= t 'search.predefined_queries'
+      - presets = preset_queries
+      - if presets != nil
+        - presets.each do |key, value|
+          %option{:value => value, selected: params[:predefined_queries] == value}= key
+
+  %div.form-group
     = label_tag :creation_date_min, t('search.creation_date_min')
+    - if !params[:predefined_queries].nil?
+      - params[:predefined_queries].split('&').each do |param|
+        - if param.include? 'creation_date_min'
+          - params[:creation_date_min] = param.split('=')[1]
     - if params[:creation_date_min] == nil
       - params[:creation_date_min] = ENV['parliaments_initial_date']
     %div
@@ -63,11 +76,15 @@
 
   %div.form-group
     = label_tag :creation_date_max, t('search.creation_date_max')
+    - if !params[:predefined_queries].nil?
+      - params[:predefined_queries].split('&').each do |param|
+        - if param.include? 'creation_date_max'
+          - params[:creation_date_max] = param.split('=')[1]
     - if params[:creation_date_max] == nil
       - params[:creation_date_max] = Date.today.to_s
     %div
       %input{"type" => "date", "value" => params[:creation_date_max], "min" => ENV['parliaments_initial_date'], "name" => "creation_date_max", "class" => "form-control", "onfocus" => "ga('send','bills_filters','focus_max_date')"}
-    
+
   %input{"type" => "hidden", "name" => "bills", "value" => "1"}
 
   %button.btn.btn-primary.pull-right.btn-lg

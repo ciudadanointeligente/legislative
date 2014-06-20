@@ -19,11 +19,15 @@ The following system requirements are also needed, for image manipulation:
 
 Red Hat / Fedora / CentOS
 
-    yum install ImageMagick-devel
+    sudo yum install ImageMagick-devel
 
 Debian / Ubuntu (for 13.04 and Wheezy also install `libmagickwand-dev`)
 
-    apt-get install imagemagick
+    sudo apt-get install imagemagick libmagickwand-dev
+
+Ubuntu (14.04) need install sqlite3 and sqlite3-dev
+
+    sudo apt-get install sqlite3 sqlite3-dev
 
 OS X
 
@@ -54,6 +58,40 @@ Then run your server
 Check at [http://localhost:3000](http://localhost:3000)
 
 You can try loggin in with `admin@ciudadanointeligente.org / benito`
+
+### Bill-it
+
+Legislative need you have an instances of Bill-it for store all yours bills, for more information visits [Github Bill-it page](https://github.com/ciudadanointeligente/bill-it/)
+
+### Pop-it
+
+Legislative need you have an instance of Popit for store your congressmen personal data, for more information please visits [Github Project Page](https://github.com/mysociety/popit/) or [Popit website](http://popit.poplus.org/)
+
+### Enable / Disable Display Agenda
+
+in Chile, an Agenda is the roadmap of a congressman when works out of the congress, 
+then, the agenda is a recopilation of what are they doing in is own District that represent.
+for default the config of display this section is disabled and if you wanna enable this one, only need add the following 
+line on your private_legislative.yml with the url pointing to an API, like [Morph.io](http://morph.io/), to consume this information
+if you dont use Morph.io just forget the line 'morph_io_api_key'
+
+    morph_io_api_key: ~
+    agendas_url: ~
+    agendas_enabled: ~
+
+the API response need an Array of bills, [here is an example](https://api.morph.io/ciudadanointeligente/pmocl-agendas/data.json?key=YOUR_API_KEY&query=select%20*%20from%20%27data%27)
+
+### Picture profile of a congressman
+
+if you need adjust the crop size of the thumbnails, only need setup a few values on private_legislative.yml
+adding the following values
+
+    congressman_pic_x: '15'
+    congressman_pic_y: '15'
+    congressman_pic_w: '160'
+    congressman_pic_h: '150'
+
+for default the values are: 15,15,160,150 wich represents x, y, width and heigth
 
 
 ### Deploying to production

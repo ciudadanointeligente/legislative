@@ -1,7 +1,8 @@
 = form_tag(t('routes.searches'), :method => 'get') do
-  %div.form-group
-    = label_tag :name, t('congressmen.form_name')
-    = select_tag "congressmen", options_from_collection_for_select(@congressmen.persons, "name", "name", params[:congressmen]), prompt: t('congressmen.placeholder_name'), class: 'form-control chosen'
+  - if !@congressmen.blank? and !@congressmen.persons.blank?
+    %div.form-group
+      = label_tag :name, t('congressmen.form_name')
+      = select_tag "name", options_from_collection_for_select(@congressmen.persons, "name", "name", params[:name]), prompt: t('congressmen.placeholder_name'), class: 'form-control chosen'
 
   %div.form-group
     = label_tag :zone, t('congressmen.form_zone')
@@ -11,8 +12,8 @@
     = label_tag :chamber, t('congressmen.form_chamber')
     %select{:name => "chamber", :class => "form-control", :onfocus => "ga('send','congressmen_filters','focus_chamber')"}
       %option{:value => "", selected: params[:chamber] == ""}= 'Todas las cámaras'
-      %option{:value => "Diputado", selected: params[:chamber] == "C.Diputados"}= 'Cámara de diputados'
-      %option{:value => "Senador", selected: params[:chamber] == "Senado"}= 'Senado'
+      %option{:value => "Diputado", selected: params[:chamber] == "Diputado"}= 'Cámara de diputados'
+      %option{:value => "Senador", selected: params[:chamber] == "Senador"}= 'Senado'
 
   %div.form-group
     = label_tag :organizations, t('congressmen.form_party')

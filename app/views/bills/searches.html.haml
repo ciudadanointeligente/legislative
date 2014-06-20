@@ -1,41 +1,55 @@
 %div.container
-  %div.row
-    %div.col-md-9
-      %ol.breadcrumb
-        %li
-          = link_to t('layout.home'), root_path
-        %li.current
-          = t('search.search_results')
-    %div.col-md-3
-      %ul.list-inline.pull-right
-        %li
-          - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
-          %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
-            %i.fa.fa-facebook 
-            = t('bill.fb_share')
-        %li
-          - url = 'https://twitter.com/share?url='+request.original_url+'&hashtags='+ENV['twitter_tags']
-          %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
-            %i.fa.fa-twitter 
-            = t('bill.tw_share')
+  - if !@bills_query.blank? or !@bills_query.bills.blank?
+    %div.row
+      %div.col-md-9
+        %ol.breadcrumb
+          %li
+            = link_to t('layout.home'), root_path
+          %li.current
+            = t('search.search_results')
+      %div.col-md-3
+        %ul.list-inline.pull-right
+          %li
+            - url = '//www.facebook.com/sharer/sharer.php?u='+request.original_url
+            %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
+              %i.fa.fa-facebook 
+              = t('bill.fb_share')
+          - if !ENV['twitter_tags'].blank?
+            %li
+              - url = '//twitter.com/share?url='+request.original_url+'&hashtags='+ENV['twitter_tags']
+              %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+                %i.fa.fa-twitter 
+                = t('bill.tw_share')
 
-  %div.row
-    %h2
-      = t('bill.title')
+    %div.row
+      %h2
+        = t('bill.title')
 
-  %div.row
-    %div.col-md-3.aside
-      = render :partial => "filter_search_form"
-    %div.col-md-9.whitewithaside
-      %div
-        - if !@bills_query.bills.blank? && !@keywords.empty?
-          %p
-            - if @bills_query.current_page == 1
-              - info_about_results = sprintf(t('search.found_results'),@bills_query.total_entries.to_s)
-            - else
-              - info_about_results = sprintf(t('search.pages_with_found_results'),@bills_query.current_page.to_s, @bills_query.total_entries.to_s)
-            = info_about_results
+    %div.row
+      %div.col-md-3.aside
+        = render :partial => "filter_search_form"
+      %div.col-md-9.whitewithaside
+        %div
+          - flash.each do |name, msg|
+            %div.alert.alert-info
+              %button.close{:'aria-hidden' => 'true', :'data-dismiss' => 'alert'}
+                &times;
+              = content_tag :div, msg, :id => "flash_#{name}"
+        %div
+          - if !@bills_query.blank? or !@bills_query.bills.blank? and !@keywords.empty?
+            %p
+              - if @bills_query.current_page == 1
+                - info_about_results = sprintf(t('search.found_results'),@bills_query.total_entries.to_s)
+              - else
+                - info_about_results = sprintf(t('search.pages_with_found_results'),@bills_query.current_page.to_s, @bills_query.total_entries.to_s)
+              = info_about_results
 
-          = link_to t('search.download_as_excel'), params.merge(:format => :xls)
-      - @bills = @bills_query.bills
-      = render :partial => "box_bills_result"
+            - icon = '<i class="fa fa-download"></i> '.html_safe
+            = link_to icon+t('search.download_as_excel'), params.merge(:format => :xls)
+
+        - if !@bills_query.blank? or !@bills_query.bills.blank?
+          - @bills = @bills_query.bills
+          = render :partial => "box_bills_result"
+  - else
+    %p.alert.alert-danger
+      = t('config.bills_url').html_safe

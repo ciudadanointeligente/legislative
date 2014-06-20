@@ -4,7 +4,7 @@
 en:
   layout:
     about_us: About us
-    bills: Proyectos de ley
+    bills: Bills
     communication: Communication
     congressmen: Congressmen
     disclosure: Disclosure
@@ -14,7 +14,7 @@ en:
     menu: Menu
     search: Search
     tables: Tables
-    title_project: Congreso Abierto
+    title_project: Legislative
     welcome: Welcome
   main:
     search_placeholder: Search
@@ -24,8 +24,8 @@ en:
     login: Login
     registry: Create an account
     forgot: Forgot password?
-    latest_tables: Latest Tables
-    latest_bills: Latest Bills
+    latest_tables: Latest tables
+    latest_bills: Latest bills
     view_more: View more
     senator_highlights: Senator highlights
     option_votes: Options
@@ -33,8 +33,8 @@ en:
     yes: Yes
     no: No
     abstentions: Abstentions
-    title_slogan: Bienvenido a tu congreso online
-    title_subslogan: Entra sin pedir permiso
+    title_slogan: Welcome to your online congress
+    title_subslogan: Enters without ask permission
     filter_bills: Bills
     filter_congressmen: Congressmen
     discussion_agendas: Discussion agendas
@@ -66,7 +66,7 @@ en:
     placeholder_search_for: Input a keyword
     bulletin: 'Bulletin'
     placeholder_bulletin: Input a bulletin number
-    stage: 'Stage'
+    stage: Stage
     creation_date: 'Creation date: '
     initiative: 'Initiative: '
     creation_date_min: 'Creation date (min)'
@@ -86,6 +86,7 @@ en:
     found_results: Found %s results
     pages_with_found_results: Page %s of %s found results
     number_of_pages: Page %s of %s
+    predefined_queries: Predefined queries
   agendas:
     title: Parliamentarian agenda
     chamber: Chamber
@@ -126,21 +127,22 @@ en:
     less_recents: Older
     sort_time: Reverse order
     session: Session
-    modal_bulletin_number: Bulletin Documents
+    modal_bulletin_number: Bulletin documents
     modal_reports: Reports
     modal_table_date: Date
     modal_table_paperwork: Paperwork
     modal_documents: Documents
     modal_directives: Directives
     modal_revision: Revisions
-    bill_subscribe: Suscríbete
-    subscribe: Suscríbete a este proyecto
+    bill_subscribe: Subscribe
+    subscribe: Subscribe to this project
     fb_share: Share
     tw_share: Twitt
     tw_text: Check the bulletin %s in congresoabierto.cl
     breadcrumb_bill: Bills
     download_project: Download bill project
     title: Bills
+    bill_dont_exist: "The bill doesn't exist"
   paperworks:
     chamber: 'Chamber:'
     created_at: 'Created at:'
@@ -219,6 +221,7 @@ en:
     subscribe: Subscribe
     email: Email
   communication:
+    intro: 'A través de esta sección podrás tener línea directa con los congresistas, recuerda ser respetuoso.'
     name: Name
     email: E-mail
     choose_congressmen: Seleccione un senador o diputado
@@ -229,6 +232,7 @@ en:
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
     confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
+    confirmation_mail_sent_fail: We have problems delivering your email
   congressmen:
     home: Home
     breadcrumb: Congresistas
@@ -347,3 +351,7 @@ en:
       month: Month
       second: Seconds
       year: Year
+  config:
+    bills_url: 'Hemos detectado que tu archivo de configuración no cuenta con una URL válida para <strong>billit_url</strong> para el consumo de Proyectos de Ley'
+    popit_url: 'Hemos detectado que tu archivo de configuración no cuenta con una URL válida para <strong>billit_url</strong>, <strong>popit_url</strong>, <strong>popit_persons</strong>, <strong>popit_search</strong>, <strong>popit_organizations</strong> y/o <strong>popit_organizations_search</strong> para el consumo de Congresistas'
+    search: 'Hemos detectado que tu archivo de configuración no cuenta con una URL válida para <strong>popit_persons</strong>, <strong>popit_organizations</strong>, <strong>billit_url</strong> y/o <strong>popit_search</strong> para poder realizar búsquedas correctamente'

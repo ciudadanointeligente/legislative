@@ -11,9 +11,19 @@
       = t('layout.communication')
 
   %section#communication
+    %div
+    - flash.each do |name, msg|
+      %div.alert.alert-info
+        %button.close{:'aria-hidden' => 'true', :'data-dismiss' => 'alert'}
+          &times;
+        = content_tag :div, msg, :id => "flash_#{name}"
+
+    %div
+      %p
+        = t('communication.intro')
     %div.panel.panel-default
       %div.form-comunication.panel-body
-      - if ENV['component_writeit']
+      - if !ENV['component_writeit']
         = image_tag('pronto-preguntales.png')
 
       - else
@@ -25,12 +35,12 @@
                   %h5
                     de:
                   %div.input-group
-                    = text_field_tag :author_name, nil ,:class => "form-control", :placeholder=>t('communication.name')
+                    = text_field_tag :author_name, nil ,:class => "form-control", :placeholder=>t('communication.name'), :required => 'required'
                     %span.input-group-addon
                       %i.fa.fa-user
                 %div.form-group
                   %div.input-group
-                    = text_field_tag :author_email, nil ,:class => "form-control",:placeholder=>t('communication.email')
+                    = email_field_tag :author_email, nil ,:class => "form-control",:placeholder=>t('communication.email'), :required => 'required'
                     %span.input-group-addon
                       %i.fa.fa-envelope-o
 
@@ -63,7 +73,7 @@
   %section#responses
     %div.row.page-header
       
-    - if !@messages.objects.blank?
+    - if !@messages.blank? and !@messages.objects.blank?
       %h3
         = t('communication.list_messages')
       - @messages.objects.each do |message|

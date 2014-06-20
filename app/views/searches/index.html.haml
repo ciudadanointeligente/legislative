@@ -14,58 +14,62 @@
       = render :partial => "simple_search_form"
       
     %div.col-md-9.whitewithaside
-      /loop for bills
-      - if params[:bills] == '1' && @bills_query.bills.count > 0
-        - link_search_bills = searches_bills_path + '/?q='+params[:q]+'&bills='+params[:bills]
-        %div
-          %div.row
-            %div.col-md-10
-              %h4 
-                = t('search.bills')
-                %span.nostyle
-                  = link_to link_search_bills, class: '' do
-                    =t('search.bills_advanced_search')
-                    %i.fa.fa-long-arrow-right
+      - if !@bills_query.blank? and !@bills_query.bills.blank? and @bills_query.bills.count > 0
+        /loop for bills
+        - if params[:bills] == '1' && @bills_query.bills.count > 0
+          - link_search_bills = searches_bills_path + '/?q='+params[:q]+'&bills='+params[:bills]
+          %div
+            %div.row
+              %div.col-md-10
+                %h4 
+                  = t('search.bills')
+                  %span.nostyle
+                    = link_to link_search_bills, class: '' do
+                      =t('search.bills_advanced_search')
+                      %i.fa.fa-long-arrow-right
 
-          - @bills = @bills_query.bills
-          = render :partial => "box_bills_result" 
-        
-        %div
-          = link_to link_search_bills, class: 'btn btn-default btn-xs pull-right' do
-            =t('search.bills_advanced_search')
-            %i.fa.fa-long-arrow-right
+            - @bills = @bills_query.bills
+            = render :partial => "box_bills_result" 
+          
+          %div
+            = link_to link_search_bills, class: 'btn btn-default btn-xs pull-right' do
+              =t('search.bills_advanced_search')
+              %i.fa.fa-long-arrow-right
+        - else
+          %div
+            %h4 
+              = t('search.bills')
+            %p
+              = t('search.there_are_no_results')
+
+        /end of loop
+
+        /loop for congressmen
+        - if params[:congressmen] == '2' && @congressmen.persons.count > 0
+          - link_search_congressmen = searches_congressmen_path + '/?q='+params[:q]+'&congressmen='+params[:congressmen]
+          %div
+            %div.row.header-congressmen
+              %div.col-md-10
+                %h4 
+                  = t('search.congressmen')
+                  %span.nostyle
+                    = link_to link_search_congressmen, class: '' do
+                      =t('search.congressmen_advanced_search')
+                      %i.fa.fa-long-arrow-right
+
+            = render :partial => "box_congressmen_result"
+
+          %div
+            = link_to link_search_congressmen, class: 'btn btn-default btn-xs pull-right' do
+              =t('search.congressmen_advanced_search')
+              %i.fa.fa-long-arrow-right
+        - else
+          %div
+            %h4 
+              = t('search.congressmen')
+            %p
+              = t('search.there_are_no_results')
+        /end of loop
       - else
-        %div
-          %h4 
-            = t('search.bills')
-          %p
-            = t('search.there_are_no_results')
-
-      /end of loop
-
-      /loop for congressmen
-      - if params[:congressmen] == '2' && @congressmen.persons.count > 0
-        - link_search_congressmen = searches_congressmen_path + '/?q='+params[:q]+'&congressmen='+params[:congressmen]
-        %div
-          %div.row.header-congressmen
-            %div.col-md-10
-              %h4 
-                = t('search.congressmen')
-                %span.nostyle
-                  = link_to link_search_congressmen, class: '' do
-                    =t('search.congressmen_advanced_search')
-                    %i.fa.fa-long-arrow-right
-
-          = render :partial => "box_congressmen_result"
-
-        %div
-          = link_to link_search_congressmen, class: 'btn btn-default btn-xs pull-right' do
-            =t('search.congressmen_advanced_search')
-            %i.fa.fa-long-arrow-right
-      - else
-        %div
-          %h4 
-            = t('search.congressmen')
-          %p
-            = t('search.there_are_no_results')
-      /end of loop
+        %p.alert.alert-danger
+          = t('config.search').html_safe

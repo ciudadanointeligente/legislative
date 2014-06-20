@@ -1,61 +1,63 @@
-%div.col-md-6
-  %table.table.table-striped.tablas
-    %thead
-      %tr
-        %th{:colspan=>"3"}
-          %h4.table-title
-            = t('main.low_chamber') + ' - ' |
-            = localize @low_chamber_agenda[0]['date'].to_date, :format => :day_and_month
-    %tbody
-      - @low_chamber_bills = @low_chamber_agenda[1]
-      - @low_chamber_bills.bills.each do |bill|
+- if !@low_chamber_agenda.blank? and !@low_chamber_agenda[0]['date'].blank?
+  %div.col-md-6
+    %table.table.table-striped.tablas
+      %thead
         %tr
-          %td.hidden-xs
-            %h5.light
-              = bill.uid
-          %td
-            %h5.light.visible-xs
-              = bill.uid
-            %h5
-              = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
-            %p
-              = bill.stage
-            - if !bill.tags.blank?
-              %ul.list-inline
-                - bill.tags.each do |tag|
-                  %li.label-default
-                    = tag
+          %th{:colspan=>"3"}
+            %h4.table-title
+              = t('main.low_chamber') + ' - ' |
+              = localize @low_chamber_agenda[0]['date'].to_date, :format => :day_and_month
+      %tbody
+        - @low_chamber_bills = @low_chamber_agenda[1]
+        - @low_chamber_bills.bills.each do |bill|
+          %tr
             %td.hidden-xs
-              = link_to (new_user_subscription_path(:bill => bill.uid)) do
-                %i.fa.fa-star-o{title: t('bill.subscribe')}
+              %h5.light
+                = bill.uid
+            %td
+              %h5.light.visible-xs
+                = bill.uid
+              %h5
+                = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
+              %p
+                = bill.stage
+              - if !bill.tags.blank?
+                %ul.list-inline
+                  - bill.tags.each do |tag|
+                    %li.label-default
+                      = tag
+              %td.hidden-xs
+                = link_to (new_user_subscription_path(:bill => bill.uid)) do
+                  %i.fa.fa-star-o{title: t('bill.subscribe')}
 
-%div.col-md-6
-  %table.table.table-striped.tablas
-    %thead
-      %tr
-        %th{:colspan=>"3"}
-          %h4.table-title
-            = t('main.high_chamber') + ' - ' |
-            = localize @high_chamber_agenda[0]['date'].to_date, :format => :day_and_month
-    %tbody
-      - @high_chamber_bills = @high_chamber_agenda[1]
-      - @high_chamber_bills.bills.each do |bill|
+- if !@high_chamber_agenda.blank? and !@high_chamber_agenda[0]['date'].blank?
+  %div.col-md-6
+    %table.table.table-striped.tablas
+      %thead
         %tr
-          %td.hidden-xs
-            %h5.light
-              = bill.uid
-          %td
-            %h5.light.visible-xs
-              = bill.uid
-            %h5
-              = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
-            %p
-              = bill.stage
-            - if !bill.tags.blank?
-              %ul.list-inline
-                - bill.tags.each do |tag|
-                  %li.label-default
-                    = tag
+          %th{:colspan=>"3"}
+            %h4.table-title
+              = t('main.high_chamber') + ' - ' |
+              = localize @high_chamber_agenda[0]['date'].to_date, :format => :day_and_month
+      %tbody
+        - @high_chamber_bills = @high_chamber_agenda[1]
+        - @high_chamber_bills.bills.each do |bill|
+          %tr
             %td.hidden-xs
-              = link_to (new_user_subscription_path(:bill => bill.uid)) do
-                %i.fa.fa-star-o{title: t('bill.subscribe')}
+              %h5.light
+                = bill.uid
+            %td
+              %h5.light.visible-xs
+                = bill.uid
+              %h5
+                = link_to truncate(bill.title, :length => 160), t('routes.bills') + '/' + bill.uid
+              %p
+                = bill.stage
+              - if !bill.tags.blank?
+                %ul.list-inline
+                  - bill.tags.each do |tag|
+                    %li.label-default
+                      = tag
+              %td.hidden-xs
+                = link_to (new_user_subscription_path(:bill => bill.uid)) do
+                  %i.fa.fa-star-o{title: t('bill.subscribe')}

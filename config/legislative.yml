@@ -39,6 +39,15 @@ production:
   component_legislative_agendas:   ~
   component_legislative_hot_bills: ~
   component_writeit: ~
+  default_locale: 'es'
+  congressman_pic_x: '15' # add the x crop image
+  congressman_pic_y: '15' # add the y crop image
+  congressman_pic_w: '160' # add the with of crop image
+  congressman_pic_h: '150' # add the heigth of crop image
+  email_suscription: 'Congreso abierto <legislative@congresoabierto.cl>'
+  subject_suscription: 'Congreso abierto, Confirmación de suscripción'
+  url_suscription: 'http://congresoabierto.cl'
+  preset1: ~    # custom search filters example, up to 9: '["2000-2006 Ricardo Lagos Escobar", "creation_date_min=2000-03-11&creation_date_max=2006-03-10"]'
 
 development:
   root_url:   ~           # example: 'http://www.congresoabierto.cl'
@@ -52,7 +61,7 @@ development:
   low_chamber_name:  'C.Diputados' # for consume the low chamber agendas in morph.io
   twitter_tags: 'CongresoAbierto'  # twitter tags
   twitter_account:  'ciudadanoi'   # twitter account
-  keywords: ~ 
+  keywords: ~
   agendas_url:      ~   # example: 'https://api.morph.io/owner/agenda_repo/data.json?query='
   district_weeks_url: ~ # example: 'https://api.morph.io/owner/district_weeks_repo/data.json?query='
   congressmen_helper_url: ~ # example: 'https://api.morph.io/owner/congressmen_helper/data.json?query='
@@ -65,8 +74,8 @@ development:
   popit_url:  'localhost:3002/api'  # example: 'legislative-instance.popit.mysociety.org'; you will need create a instance, please contact with mysociety's popit team in popit@mysociety.org. http://popit.mysociety.org/instances/new
   popit_persons:  'http://localhost:3002/api/persons/'  # example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/persons/'; the same instance used above but with http and person path
   popit_search:   ~   # example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/search/persons?'; used for person search
-  popit_organizations: 'http://localhost:3002/api/organizations/'  #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/organizations/' 
-  popit_organizations_search: ~ #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/search/organizations?' 
+  popit_organizations: 'http://localhost:3002/api/organizations/'  #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/organizations/'
+  popit_organizations_search: ~ #example: 'http://legislative-instance.popit.mysociety.org/api/v0.1/search/organizations?'
   writeit_base_url: 'http://localhost:3001' # example: 'http://localhost:3001'; you will need create a instance, please contact with ciudadanointeligente's lab team in lab@ciudadanointeligente.org. http://writeit.ciudadanointeligente.org/
   writeit_url:      '/api/v1/instance/2/'   # example: '/api/v1/instance/2/'; writeit instance path
   writeit_username: 'admin' # example: 'admin'; writeit username
@@ -76,6 +85,15 @@ development:
   component_legislative_agendas:   ~ # to enable this component set a not null value, example: 'true' or '1'
   component_legislative_hot_bills: ~ # to enable this component set a not null value, example: 'true' or '1'
   component_writeit: ~ # to enable this component set a not null value, example: 'true' or '1'
+  default_locale: 'es'
+  congressman_pic_x: '15' # add the x crop image
+  congressman_pic_y: '15' # add the y crop image
+  congressman_pic_w: '160' # add the with of crop image
+  congressman_pic_h: '150' # add the heigth of crop image
+  email_suscription: 'Congreso abierto <legislative@congresoabierto.cl>'
+  subject_suscription: 'Congreso abierto, Confirmación de suscripción'
+  url_suscription: 'http://congresoabierto.cl'
+  preset1: ~    # custom search filters example, up to 9: '["2000-2006 Ricardo Lagos Escobar", "creation_date_min=2000-03-11&creation_date_max=2006-03-10"]'
 
 test:
   root_url:  ~
@@ -111,3 +129,4 @@ test:
   component_legislative_agendas:   ~
   component_legislative_hot_bills: ~
   component_writeit: ~
+  default_locale: 'es'

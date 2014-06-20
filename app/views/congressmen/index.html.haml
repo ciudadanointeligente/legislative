@@ -9,22 +9,26 @@
     %div.col-md-6
       %ul.list-inline.pull-right
         %li
-          - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
+          - url = '//www.facebook.com/sharer/sharer.php?u='+request.original_url
           %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
             %i.fa.fa-facebook 
             = t("congressmen.fb_share")
-
-        %li
-          - url = 'https://twitter.com/share?url='+request.original_url+'&via='+ENV['twitter_account']+'&hashtags='+ENV['twitter_tags']
-          %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
-            %i.fa.fa-twitter 
-            = t("congressmen.tw_share")
+        - if !ENV['twitter_tags'].blank?
+          %li
+            - url = '//twitter.com/share?url='+request.original_url+'&via='+ENV['twitter_account']+'&hashtags='+ENV['twitter_tags']
+            %a.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
+              %i.fa.fa-twitter 
+              = t("congressmen.tw_share")
 
   %div.row
-    %h2
-      = t('congressmen.title')
-    %div.col-md-3.aside
-      %div
-        = render :partial => "filter_search_form"
-    %div.col-md-9.whitewithaside
-      = render :partial => "box_congressmen_result"
+    - if !ENV['popit_url'].blank? and !ENV['popit_persons'].blank? and !ENV['popit_search'].blank? and !ENV['popit_organizations'].blank? and !ENV['popit_organizations_search'].blank?
+      %h2
+        = t('congressmen.title')
+      %div.col-md-3.aside
+        %div
+          = render :partial => "filter_search_form"
+      %div.col-md-9.whitewithaside
+        = render :partial => "box_congressmen_result"
+    - else
+      %p.alert.alert-danger
+        = t('config.popit_url').html_safe
