@@ -20,10 +20,16 @@ class CongressmenController < ApplicationController
 
     if !ENV['popit_url'].blank? and !ENV['popit_persons'].blank? and !ENV['popit_search'].blank? and !ENV['popit_organizations'].blank? and !ENV['popit_organizations_search'].blank?
       @congressmen = PopitPersonCollection.new
-      @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
-      @congressmen.persons.sort! { |x,y| x.name <=> y.name }
+      begin
+        RestClient.get ENV['popit_persons']
+        @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
+        @congressmen.persons.sort! { |x,y| x.name <=> y.name }
 
-      @organizations = get_organizations
+        @organizations = get_organizations
+      rescue => e
+        @message = e.response
+      end
+      
     end
   end
 

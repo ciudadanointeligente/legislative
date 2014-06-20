@@ -14,7 +14,7 @@
       = render :partial => "simple_search_form"
       
     %div.col-md-9.whitewithaside
-      - if !@bills_query.bills.blank? and @bills_query.bills.count > 0
+      - if !@bills_query.blank? and !@bills_query.bills.blank? and @bills_query.bills.count > 0
         /loop for bills
         - if params[:bills] == '1' && @bills_query.bills.count > 0
           - link_search_bills = searches_bills_path + '/?q='+params[:q]+'&bills='+params[:bills]

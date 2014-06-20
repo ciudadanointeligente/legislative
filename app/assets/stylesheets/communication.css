@@ -120,6 +120,10 @@
   color: #67675a;
 }
 
+.form-control.subscription {
+  background-color: rgba(255, 255, 255, 1);
+}
+
 .form-control::-webkit-input-placeholder {
     font-family: 'Lato', sans-serif;
     color: #A6A691;

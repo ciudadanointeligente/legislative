@@ -2,13 +2,13 @@
   %ul.social-network.list-inline
     - if !ENV['twitter_account'].blank? and !ENV['twitter_tags'].blank?
       %li
-        - url = 'https://twitter.com/share?url='+request.original_url+'&via='+ENV['twitter_account']+'&hashtags='+ENV['twitter_tags']+'&text=Bienvenido a tu congreso online, entra sin pedir permiso'
+        - url = '//twitter.com/share?url='+request.original_url+'&via='+ENV['twitter_account']+'&hashtags='+ENV['twitter_tags']+'&text=Bienvenido a tu congreso online, entra sin pedir permiso'
         %a{'href' => '#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
           %span.fa-stack.fa-lg
             %i.fa.fa-circle.fa-stack-2x
             %i.fa.fa-twitter.fa-stack-1x.fa-inverse
     %li
-      - url = 'https://www.facebook.com/sharer/sharer.php?u='+request.original_url
+      - url = '//www.facebook.com/sharer/sharer.php?u='+request.original_url
       %a{'href'=> '#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
         %span.fa-stack.fa-lg
           %i.fa.fa-circle.fa-stack-2x

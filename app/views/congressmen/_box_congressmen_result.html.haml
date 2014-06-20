@@ -44,3 +44,7 @@
   - if @congressmen.persons.count == 0
     %p.text-center
       = t('search.there_are_no_results')
+- else
+  %div.alert.alert-warning
+    %p
+      Woops! Tenemos problemas comunicandonos con el servicio que entrega la información de los congresistas.
