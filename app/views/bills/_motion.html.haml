@@ -1,0 +1,37 @@
+%div{ 'data-sort' => motion.date.to_time.to_i }
+  %div.timeline-container.col-md-1
+    = image_tag("statusicon/vote.png" , class:"hidden-xs", title:'Votación')
+  %div.bill_header.col-md-11
+    %h5
+      Votación
+    %p.light
+      = localize motion.date.to_date, :format => :long
+    %p
+      = motion.text
+    %p
+      %b
+        Quorum:
+      = motion.requirement
+
+    - total = 0
+    - motion.vote_events.each do | votes |
+      - votes.counts.each do | vote |
+        - total = vote.value + total
+
+    %div.progress
+      - motion.vote_events.each do | votes |
+        - votes.counts.each do | vote |
+          - porcent = (vote.value*100/total.to_f).round.to_s
+
+          - if vote.option == 'yes'
+            - bar_class = ' progress-bar-success'
+          - if vote.option == 'no'
+            - bar_class = ' progress-bar-danger'
+          - if vote.option == 'abstain'
+            - bar_class = ' progress-bar-warning'
+          - if vote.option == 'paired'
+            - bar_class = ' progress-bar-info'
+
+          %div{:class => "progress-bar #{bar_class}", :style => "width: #{porcent}%"}
+            %span
+              = (vote.value*100/total.to_f).round.to_s + '%'
