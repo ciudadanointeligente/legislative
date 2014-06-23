@@ -7,38 +7,6 @@
         = paperwork.description
       %p.light
         = localize paperwork.date.to_date, :format => :long
-
-      %div.progress
-        %div.progress-bar.progress-bar-success{'style'=>'width: 35%'}
-          %span.sr-only
-            35% a favor
-        %div.progress-bar.progress-bar-warning{'style'=>'width: 35%'}
-          %span.sr-only
-            35% Abstención
-        %div.progress-bar.progress-bar-danger{'style'=>'width: 25%'}
-          %span.sr-only
-            25% en contra
-        %div.progress-bar.progress-bar-dispensed{'style'=>'width: 5%'}
-          %span.sr-only
-            5% dispensados
-
-      %ul.list-inline
-        %li
-          %span
-            %b
-              Tipo de votación:
-          Particular
-        %li
-          %span
-            %b
-              Quorum:
-          Quorum Simple
-        %li
-          %span
-            %b
-              Resultado:
-          Rechazado
-
       %p
         = paperwork.stage
       
