@@ -143,6 +143,10 @@ es:
     download_project: Descargar proyecto de ley
     title: Proyectos de ley
     bill_dont_exist: El proyecto de ley al que intentas acceder no existe
+    yet: Si
+    not: 'No'
+    abstain: Abstención
+    paired: Pareo
   paperwork:
     chamber: 'Cámara:'
     created_at: 'Fecha de creación:'
