@@ -37,4 +37,45 @@
           %div{:class => "progress-bar #{bar_class}", :style => "width: #{porcent}%"}
             %span
               = (vote.value*100/total.to_f).round.to_s + '% ' 
+    %div
+      %a{'href' => '#', 'data-toggle' => 'modal', 'data-target' => '#myModal'+motion.date.to_time.to_i.to_s}
+        Ver detalle de la votación
+      
+      %ul.list-inline
+        - motion.vote_events.each do | votes |
+          - votes.counts.each do | vote |
+            %li
               = t('bill.'+vote.option)
+              = vote.value
+
+    %div
+      %div.modal.fade{'id' => 'myModal'+motion.date.to_time.to_i.to_s, 'tabindex'=>'-1', 'role'=>'dialog', 'aria-labelledby'=>'myModalLabel', 'aria-hidden'=>'true'}
+        %div.modal-dialog
+          %div.modal-content
+            %div.modal-header
+              %button{'type'=>'button', 'class'=>'close', 'data-dismiss'=>'modal', 'aria-hidden'=>'true'}
+                &times;
+              %h4.modal-title#myModalLabel
+                Votaciones
+            %div.modal-body
+              %table.table.table-stripped
+                %thead
+                  %tr
+                    %th
+                      a favor
+                    %th
+                      en contra
+                    %th
+                      abstención
+                    %th
+                      pareo
+                %tbody
+                  %tr
+                    %td
+                      1
+                    %td
+                      1
+                    %td
+                      1
+                    %td
+                      1
