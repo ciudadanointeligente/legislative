@@ -18,6 +18,10 @@
       - votes.counts.each do | vote |
         - total = vote.value + total
 
+    %div
+      %a{'href' => '#', 'data-toggle' => 'modal', 'data-target' => '#myModal'+motion.date.to_time.to_i.to_s}
+        Ver detalle de la votación
+      
     %div.progress
       - motion.vote_events.each do | votes |
         - votes.counts.each do | vote |
@@ -38,9 +42,6 @@
             %span
               = (vote.value*100/total.to_f).round.to_s + '% ' 
     %div
-      %a{'href' => '#', 'data-toggle' => 'modal', 'data-target' => '#myModal'+motion.date.to_time.to_i.to_s}
-        Ver detalle de la votación
-      
       %ul.list-inline
         - motion.vote_events.each do | votes |
           - votes.counts.each do | vote |
@@ -62,12 +63,16 @@
                 %thead
                   %tr
                     %th
+                      %i.fa.fa-check
                       a favor
                     %th
+                      %i.fa.fa-times
                       en contra
                     %th
+                      %i.fa.fa-minus
                       abstención
                     %th
+                      %i.fa.fa-minus
                       pareo
                 %tbody
                   %tr
