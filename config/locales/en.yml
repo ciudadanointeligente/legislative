@@ -224,6 +224,7 @@ en:
     verified_mail: Your email was successfully verified
     subscribe: Subscribe
     email: Email
+    description: ''
   communication:
     intro: 'A través de esta sección podrás tener línea directa con los congresistas, recuerda ser respetuoso.'
     name: Name

@@ -54,14 +54,15 @@
           - else
             %option{:value => priority}= priority
 
-  %div.form-group
-    = label_tag :initial_chamber, t('search.predefined_queries')
-    %select{:name => "predefined_queries", :class => "form-control", :onfocus => "ga('send','bills_filters','focus_predefined_queries')"}
-      %option{:value => "", selected: params[:predefined_queries] == ""}= t 'search.predefined_queries'
-      - presets = preset_queries
-      - if presets != nil
-        - presets.each do |key, value|
-          %option{:value => value, selected: params[:predefined_queries] == value}= key
+  - presets = preset_queries
+  - if presets != nil
+    %div.form-group
+      = label_tag :initial_chamber, t('search.predefined_queries')
+      %select{:name => "predefined_queries", :class => "form-control", :onfocus => "ga('send','bills_filters','focus_predefined_queries')"}
+        %option{:value => "", selected: params[:predefined_queries] == ""}= t 'search.predefined_queries'
+        - if presets != nil
+          - presets.each do |key, value|
+            %option{:value => value, selected: params[:predefined_queries] == value}= key
 
   %div.form-group
     = label_tag :creation_date_min, t('search.creation_date_min')
@@ -93,6 +94,19 @@
 :javascript
   $(document).ready(function(){
     $(".chosen").chosen();
+
+    $('select[name=predefined_queries]').on('change', function(){
+      if( $(this).val() != '' )
+      {
+        $('input[name=creation_date_min]').attr('disabled',true);
+        $('input[name=creation_date_max]').attr('disabled',true);
+      }
+      else
+      {
+        $('input[name=creation_date_min]').removeAttr('disabled');
+        $('input[name=creation_date_max]').removeAttr('disabled');
+      }
+    })
 
     if (!Modernizr.inputtypes.date) {
       $('input[type=date]').datepicker({dateFormat:'yy-mm-dd'});

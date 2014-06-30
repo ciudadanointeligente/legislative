@@ -224,6 +224,7 @@ es:
     verified_mail: El correo electrónico fue exitosamente verificado
     subscribe: Suscríbete
     email: Correo Electrónico
+    description: 'Te estás suscribiendo al Proyecto de ley nro %s.<br> La suscripción te permitirá estar actualizado respecto a los avances en la tramitación de este Proyecto de ley.'
   communication:
     intro: 'A través de esta sección podrás tener línea directa con los congresistas, recuerda ser respetuoso.'
     name: Nombre
