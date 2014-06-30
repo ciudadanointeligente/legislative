@@ -87,6 +87,7 @@ es:
     pages_with_found_results: Página %s de %s resultados encontrados
     number_of_pages: Página %s de %s
     predefined_queries: Consultas predefinidas
+    askthem: 'Comunícate con %s'
   agendas:
     title: Agenda parlamentaria
     chamber: Cámara
@@ -273,6 +274,7 @@ es:
     last_interventions: Últimas intervenciones
     birth_date: 'Fecha nacimiento: '
     years: '%s (%s años)'
+    askto: 'Pregúntale a %s'
   email:
     subject: 'Congreso abierto, confirmación de suscripción'
     body_header: 'Bienvenido a Congreso abierto, %s'
