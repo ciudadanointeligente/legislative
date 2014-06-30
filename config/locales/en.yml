@@ -143,6 +143,10 @@ en:
     download_project: Download bill project
     title: Bills
     bill_dont_exist: "The bill doesn't exist"
+    yet: 'Yes'
+    not: 'No'
+    abstain: Abstain
+    paired: Paired
   paperworks:
     chamber: 'Chamber:'
     created_at: 'Created at:'

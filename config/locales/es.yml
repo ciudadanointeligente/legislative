@@ -143,6 +143,10 @@ es:
     download_project: Descargar proyecto de ley
     title: Proyectos de ley
     bill_dont_exist: El proyecto de ley al que intentas acceder no existe
+    yet: Si
+    not: 'No'
+    abstain: Abstención
+    paired: Pareo
   paperwork:
     chamber: 'Cámara:'
     created_at: 'Fecha de creación:'
@@ -216,7 +220,7 @@ es:
     users: Usuarios
   user_subscriptions:
     confirmation_mail_sent: Se ha enviado un correo electrónico de confirmación a la casilla registrada
-    already_subscribe: Ya existe una suscripción a este bill con ese correo electrónico
+    already_subscribe: Ya existe una suscripción a este Proyecto de ley con ese correo electrónico
     verified_mail: El correo electrónico fue exitosamente verificado
     subscribe: Suscríbete
     email: Correo Electrónico

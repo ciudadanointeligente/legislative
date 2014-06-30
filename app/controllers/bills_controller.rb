@@ -99,7 +99,7 @@ class BillsController < ApplicationController
   # PUT /bills/1.json
   def update
     #Currently only updates tags
-    HTTParty.put("http://localhost:3001/bills/"+params[:id], body: {tags: params[:tags]})
+    HTTParty.put(ENV['billit_url']+params[:id]+'.json', body: {tags: params[:tags]})
     render text: params.to_s, status: 201
   end
 
