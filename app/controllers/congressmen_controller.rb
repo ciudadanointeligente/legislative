@@ -126,6 +126,8 @@ class CongressmenController < ApplicationController
       keywords.each_with_index do |param, index|
         if param[0] == 'zone'
           query_keywords << "region LIKE '%" + param[1] + "%' OR commune LIKE '%" + param[1] + "%'"
+        elsif param[0] == 'q'
+          query_keywords << "name LIKE '%" + param[1] + "%'"
         else
           query_keywords << param[0] + " LIKE '%" + param[1] + "%'"
         end
