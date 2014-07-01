@@ -116,7 +116,7 @@ class CongressmenController < ApplicationController
     organizations = Popit::OrganizationCollection.new
     organizations.get ENV['popit_organizations'], 'application/json'
     organizations = organizations.result.sort! { |x,y| x.name <=> y.name }
-    return organizations.uniq!(&:name)
+    return organizations
   end
 
   # GET authors from congressmen helper in morph.io
@@ -128,6 +128,8 @@ class CongressmenController < ApplicationController
           query_keywords << "region LIKE '%" + param[1] + "%' OR commune LIKE '%" + param[1] + "%'"
         elsif param[0] == 'q'
           query_keywords << "name LIKE '%" + param[1] + "%'"
+        elsif param[0] == 'organizations'
+          query_keywords << "organization_id LIKE '%" + param[1] + "%'"
         else
           query_keywords << param[0] + " LIKE '%" + param[1] + "%'"
         end
