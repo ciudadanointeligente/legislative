@@ -59,7 +59,7 @@
               %h4.modal-title#myModalLabel
                 Votaciones
             %div.modal-body
-              %table.table.table-stripped
+              %table.table.table-bordered
                 %thead
                   %tr
                     %th
@@ -75,12 +75,18 @@
                       %i.fa.fa-minus
                       pareo
                 %tbody
-                  %tr
-                    %td
-                      1
-                    %td
-                      1
-                    %td
-                      1
-                    %td
-                      1
+                  - motion.vote_events.each do | v |
+                    - v.votes.each do | vote |
+                      %tr
+                        %td
+                          - if vote.option.downcase == 'si'
+                            = vote.voter_id
+                        %td
+                          - if vote.option.downcase == 'no'
+                            = vote.voter_id
+                        %td
+                          - if vote.option.downcase == 'abstencion'
+                            = vote.voter_id
+                        %td
+                          - if vote.option.downcase == 'pareo'
+                            = vote.voter_id
