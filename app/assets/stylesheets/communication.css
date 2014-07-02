@@ -112,9 +112,9 @@
 }
 
 .form-control {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #f9f9eb;
   background-image: none;
-  border: 2px solid #f9f9eb;
+  border: 1px solid #DADABF;
   border-radius: 0px;
   box-shadow: none;
   color: #67675a;
@@ -204,9 +204,12 @@
 
 
 /* Chosen */
+
 .chosen-container-multi .chosen-choices {
-  background-image: none;
-  background-color: #FFF !important;
+  background-color: #f9f9eb!important;
+  background-image: none!important;
+  border: 1px solid #DADABF!important;
+  padding: 2px 0px 8px!important;
 }
 
 .search-field input.default{
@@ -228,6 +231,7 @@
   font-family: 'lato', sans-serif !important;
   color: #E0DFC4;
   background-color: #3E1F3E;
+  box-shadow: none!important;
 }
 
 .chosen-container .chosen-results li.no-results {
