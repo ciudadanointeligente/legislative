@@ -54,7 +54,7 @@
     <%= javascript_include_tag '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js' %>
     <%= javascript_include_tag 'application.js' %>
     <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js' %>
-    <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js' %>
+    <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js'%>
     <%= javascript_include_tag '//cdn.jsdelivr.net/tag-it/2.0/js/tag-it.min.js' %>
     <!-- end scripts -->
 
@@ -142,10 +142,22 @@
   </div>
   <!-- End footer -->
 
-  <!-- User feedback by freshdesk -->
-  <script type="text/javascript" src="//assets.freshdesk.com/widget/freshwidget.js"></script>
-  <script type="text/javascript">
-    FreshWidget.init("", {"queryString": "&widgetType=popup&formTitle=Dudas%2C+problemas+y+sugerencias&submitThanks=Gracias.+Con+tu+ayuda+mejoraremos+pronto.", "widgetType": "popup", "buttonType": "text", "buttonText": "¿Comentarios?", "buttonColor": "#E6E6C9", "buttonBg": "#A6A691", "alignment": "2", "offset": "235px", "submitThanks": "Gracias. Con tu ayuda mejoraremos pronto.", "formHeight": "500px", "url": "//ciudadanoi.freshdesk.com"} );
+  <!-- UserVoice JavaScript SDK (only needed once on a page) -->
+  <script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/C0TRuLiFSZpjoucl2e8Fg.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>
+
+  <!-- A tab to launch the Classic Widget -->
+  <script>
+  UserVoice = window.UserVoice || [];
+  UserVoice.push(['showTab', 'classic_widget', {
+    mode: 'feedback',
+    primary_color: '#cc6d00',
+    link_color: '#007dbf',
+    forum_id: 152599,
+    tab_label: 'Comentarios y soporte',
+    tab_color: '#cc6d00',
+    tab_position: 'middle-right',
+    tab_inverted: false
+  }]);
   </script>
   <!-- End user feedback by freshdesk -->
 

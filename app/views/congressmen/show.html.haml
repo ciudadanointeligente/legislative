@@ -84,14 +84,8 @@
             %span.light
               = t('congressmen.party')
             - @organizations.each do | o |
-              /- url = '#';
-              /-if ! o.links[1].blank?
-              /  - url = @congressman.memberships[0].organization_id == o.id ? o.links[1].url : '#'
+              = link_to o.name, {:controller => 'congressmen', :action => 'searches', :organizations => o.id} if @congressman.memberships[0].organization_id == o.id
               
-              /  %a{ 'href' => url, 'target' => '_blank' }
-              = o.name if @congressman.memberships[0].organization_id == o.id
-              /%i.fa.fa-external-link
-        
         - if ! @congressman.commissions.blank?
           %p
             - @congressman.commissions.each do | c |
