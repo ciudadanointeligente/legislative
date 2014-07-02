@@ -3,19 +3,19 @@
 
 es:
   layout:
-    home: Portada
-    search: Búsqueda
-    glossary: Glosario
-    communication: Pregúntales
-    disclosure: Declaraciones
-    congressmen: Congresistas
-    tables: Tablas
     about_us: Acerca de nosotros
-    menu: Menú
+    bills: Proyectos de ley
+    communication: Pregúntales
+    congressmen: Congresistas
+    disclosure: Declaraciones
     from: de Ciudadano Inteligente
+    glossary: Glosario
+    home: Portada
+    menu: Menú
+    search: Búsqueda
+    tables: Tablas
     title_project: Congreso abierto
     welcome: Bienvenido(a)
-    bills: Proyectos de ley
   main:
     search_placeholder: Ingresa un proyecto de ley o congresista
     username: Nombre de usuario
@@ -45,8 +45,10 @@ es:
     view_more_questions: Ver más preguntas
     session: Sesión
     legislature: Legislatura
-    view_previous_agendas: Ver tablas anteriores
+    view_the_agenda: Ver agenda parlamentaria
     hot_projects: Proyectos urgentes
+  glossaries:
+    title: Glosarios
   search:
     search_title: Búsqueda
     search_for: 'Buscar por:'
@@ -56,7 +58,7 @@ es:
     persons: Autores
     current_priority: Urgencia actual
     bill_type: 'Tipo de proyecto'
-    download_as_excel: Descargar como Excel
+    download_as_excel: Descargar esta búsqueda como hoja de cálculo
     all_the_types: Todos los tipos
     all_the_stages: Todas las etapas
     all_the_chambers: Todas las cámaras
@@ -64,7 +66,7 @@ es:
     placeholder_search_for: Ingresa una palabra clave
     bulletin: 'Boletín'
     placeholder_bulletin: Ingresa nro de boletín
-    stage: 'Etapa'
+    stage: Etapa
     creation_date: 'Fecha de ingreso: '
     initiative: 'Iniciativa: '
     creation_date_min: 'Fecha de ingreso (min)'
@@ -81,7 +83,13 @@ es:
     represent: 'Lugar que representa:'
     all_results: Ver todos los resultados
     search_results: Resultados de búsqueda
+    found_results: Se encontraron %s resultados
+    pages_with_found_results: Página %s de %s resultados encontrados
+    number_of_pages: Página %s de %s
+    predefined_queries: Consultas predefinidas
+    askthem: 'Comunícate con %s'
   agendas:
+    title: Agenda parlamentaria
     chamber: Cámara
     date: Fecha
     bills: Proyectos de ley
@@ -133,7 +141,13 @@ es:
     tw_share: Twittea
     tw_text: Revisa el boletín %s en congresoabierto.cl
     breadcrumb_bill: Proyectos de ley
-    download_project: Descargar proyecto
+    download_project: Descargar proyecto de ley
+    title: Proyectos de ley
+    bill_dont_exist: El proyecto de ley al que intentas acceder no existe
+    yet: Si
+    not: 'No'
+    abstain: Abstención
+    paired: Pareo
   paperwork:
     chamber: 'Cámara:'
     created_at: 'Fecha de creación:'
@@ -179,10 +193,6 @@ es:
     step: 'Trámite:'
     updated_at: 'Última actualización:'
   pagination:
-    page: 'Página '
-    of: ' de '
-    with: ' con '
-    results: ' resultados'
     previous: Anterior
     next: Siguiente
   export:
@@ -210,12 +220,14 @@ es:
     user: Usuario
     users: Usuarios
   user_subscriptions:
-    confirmation_mail_sent: Se ha enviado un correo electrónico a la casilla registrada
-    already_subscribe: Ya existe una suscripción a este bill con ese correo electrónico
+    confirmation_mail_sent: Se ha enviado un correo electrónico de confirmación a la casilla registrada
+    already_subscribe: Ya existe una suscripción a este Proyecto de ley con ese correo electrónico
     verified_mail: El correo electrónico fue exitosamente verificado
     subscribe: Suscríbete
     email: Correo Electrónico
+    description: 'Te estás suscribiendo al Proyecto de ley nro %s.<br> La suscripción te permitirá estar actualizado respecto a los avances en la tramitación de este Proyecto de ley.'
   communication:
+    intro: 'A través de esta sección podrás tener línea directa con los congresistas, recuerda ser respetuoso.'
     name: Nombre
     email: E-mail
     choose_congressmen: Seleccione un senador o diputado
@@ -225,6 +237,8 @@ es:
     send: Enviar
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
+    confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
+    confirmation_mail_sent_fail: 'Tenemos problemas enviando tu email, el correo %s parece no ser válido o no haz seleccionado un destinatario'
   congressmen:
     home: Portada
     breadcrumb: Congresistas
@@ -260,17 +274,25 @@ es:
     last_interventions: Últimas intervenciones
     birth_date: 'Fecha nacimiento: '
     years: '%s (%s años)'
+    askto: 'Pregúntale a %s'
+  email:
+    subject: 'Congreso abierto, confirmación de suscripción'
+    body_header: 'Bienvenido a Congreso abierto, %s'
+    body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
+    body_footer: 'Atte el equipo de Congreso abierto'
   routes:
+    agendas: agendas
     bills: proyectos
     bills_search: busquedas_de_proyectos
     communications: comunicaciones
-    disclosures: declaraciones
     congressmen: congresistas
-    tables: tablas
-    users: usuarios
+    disclosures: declaraciones
     glossaries: glosarios
     searches: busquedas
     sessions: sesiones
+    users: usuarios
+    per_person: por_persona
+    per_message: por_mensaje
     new: nuevo
     edit: editar
     user_subscriptions: suscripcion
@@ -336,10 +358,7 @@ es:
       month: Mes
       second: Segundos
       year: Año
-  email:
-    subject: 'Congreso abierto, confirmación de suscripción'
-    body_header: 'Bienvenido a Congreso abierto, %s'
-    body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
-    body_footer: 'Atte el equipo de Congreso abierto'
-  communications:
-    confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
+  config:
+    bills_url: 'Hemos detectado que tu archivo de configuración no cuenta con una URL válida para <strong>billit_url</strong> para el consumo de Proyectos de Ley'
+    popit_url: 'Hemos detectado que tu archivo de configuración no cuenta con una URL válida para <strong>billit_url</strong>, <strong>popit_url</strong>, <strong>popit_persons</strong>, <strong>popit_search</strong>, <strong>popit_organizations</strong> y/o <strong>popit_organizations_search</strong> para el consumo de Congresistas'
+    search: 'Hemos detectado que tu archivo de configuración no cuenta con una URL válida para <strong>popit_persons</strong>, <strong>popit_organizations</strong>, <strong>billit_url</strong> y/o <strong>popit_search</strong> para poder realizar búsquedas correctamente'

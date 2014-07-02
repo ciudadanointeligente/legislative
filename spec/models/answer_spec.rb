@@ -3,12 +3,13 @@ require 'spec_helper'
 
 describe LegislativeAnswerRepresenter do
 	it "creates an answer out of a json" do
-		json = '{"content": "This is the content","created": "2014-03-17","id": 1,"resource_uri": ""}'
+		json = '{"content": "This is the content","created": "2014-03-17","id": 1,"resource_uri": "", "message_id": 1}'
 		answer = LegislativeAnswerRepresenter.new
 		answer.from_json json
 
 		answer.content.should eql "This is the content"
-		answer.created.should eql DateTime.new(2014,3,17)
+        answer.created.should eql DateTime.new(2014,3,17)
+        answer.message_id.should eql 1
 		answer.id.should eql 1
 	end
     it "loads the person who wrote the answer" do
@@ -32,6 +33,7 @@ describe LegislativeAnswerRepresenter do
         answer.content.should eql "Hello I am an answer"
         answer.person.should be_an_instance_of PopitPerson
         answer.person.name.should eql "Gonzalo Arenas Hodar"
+        answer.person.id.should eql "5008048c7a317e126400046d"
     end
 end
 

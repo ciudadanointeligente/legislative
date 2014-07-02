@@ -46,4 +46,19 @@ describe PopitPerson do
     arenas.id.should eq "5008048c7a317e126400046d"
     arenas.name.should eq "Gonzalo Arenas Hodar"
   end
+  it "loads a person from writeit as well" do
+    json_with_result = '{
+              "id": 15556,
+              "image": "",
+              "name": "Daniel NÃºÃ±ez Arancibia",
+              "popit_id": "53189f1f6669ce99248f1a44",
+              "popit_url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53189f1f6669ce99248f1a44",
+              "resource_uri": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53189f1f6669ce99248f1a44",
+              "summary": ""
+              }'
+    person = PopitPerson.new
+    person.from_json json_with_result
+    person.id.should eq "53189f1f6669ce99248f1a44"
+    person.name.should eq "Daniel NÃºÃ±ez Arancibia"
+  end
 end

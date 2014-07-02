@@ -11,7 +11,7 @@
           <% @bills.each do | bill | %>
           <li>
           <% @bill_title = Billit::Bill.get(ENV['billit_url'] + bill, 'application/json').title %>
-          <%= link_to(bill + ": " + @bill_title, 'http://www.congresoabierto.cl' + bill_path(bill)) %>
+          <%= link_to(bill + ": " + @bill_title, ENV['root_url'] + bill_path(bill)) %>
           <%- end %>
         </ul>
       <br/>

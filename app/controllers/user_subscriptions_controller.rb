@@ -80,8 +80,12 @@ class UserSubscriptionsController < ApplicationController
     @user_subscription = UserSubscription.find_by_email_token(params[:email_token])
     @user_subscription.confirmed = true
     @user_subscription.save
-    flash[:notice] = t('user_subscriptions.verified_mail')
-    redirect_to bill_path(@user_subscription.bill)
+    if params[:ajax] == 'false'
+      flash[:notice] = t('user_subscriptions.verified_mail')
+      redirect_to bill_path(@user_subscription.bill)
+    else
+      render :nothing => true, :status => 200, :content_type => 'text/html'
+    end
   end
 
   # PATCH/PUT /user_subscriptions/1
@@ -94,10 +98,14 @@ class UserSubscriptionsController < ApplicationController
   end
 
   # DELETE /user_subscriptions/1
-  # def destroy
-  #   @user_subscription.destroy
-  #   redirect_to user_subscriptions_url, notice: 'User subscription was successfully destroyed.'
-  # end
+  def destroy
+    @user_subscription.destroy
+    if params[:ajax] == 'false'
+      redirect_to user_subscriptions_url, notice: 'User subscription was successfully destroyed.'
+    else
+      render :nothing => true, :status => 200, :content_type => 'text/html'
+    end
+  end
 
   # # DELETE /user_subscription?user_id=1
   # def unsubscribe_all

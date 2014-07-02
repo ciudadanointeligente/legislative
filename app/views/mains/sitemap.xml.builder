@@ -12,13 +12,6 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
     xml.priority 1.0
   end
 
-  @hot_bills.each do |hot_bill|
-    xml.url do
-      xml.loc ENV['root_url'] + bill_path(hot_bill.uid)
-      xml.priority 0.8
-    end
-  end
-
   xml.url do
     xml.loc ENV['root_url'] + congressmen_path()
     xml.priority 0.5
@@ -32,7 +25,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
   end
 
   xml.url do
-    xml.loc ENV['root_url'] + tables_path()
+    xml.loc ENV['root_url'] + agendas_path()
     xml.changefreq("daily")
     xml.priority 1.0
   end

@@ -1,39 +1,26 @@
-%section#board
-  %h3.text-center.txt-board 
-    = t('main.discussion_agendas')
-  %p.text-center
-    = link_to t('main.view_previous_agendas'), tables_path
+= render :partial => "search"
+= render :partial => "social_network_box"
+- if ENV['component_legislative_hot_bills']
+  = render :partial => "hot"
+
+%div.container
   %div.row
-    = render :partial => "latest_agendas"
+    %div
+      - flash.each do |name, msg|
+        %div.alert.alert-info
+          %button.close{:'aria-hidden' => 'true', :'data-dismiss' => 'alert'}
+            &times;
+          = content_tag :div, msg, :id => "flash_#{name}"
 
-%section#last-responses.hidden-xs
-  %h3.title-last-responses 
-    = t('main.last_questions')
-  %div.row
-    - if ! @messages.objects.blank?
-      - @messages.objects.each do |message|
-        %div.col-md-6.home-answers-wraper
-          %div.home-answers
-            %div.col-md-2  
-              = image_tag('default-profile.png', class: "img-circle img-responsive")
-            %div.col-md-10
-              %p.light
-                = message.subject
-              %p
-                = message.content
-            %p.text-right
-              = message.author_name
-              %a{href: "/"} 
-                = t('main.view_more_questions')
-              - if !message.answers.blank?
-                %p.light
-                  Respuestas
-                  - message.answers[0..1].each do |answer|
-                    %div
-                      %span
-                        =answer.content
-                      %span
-                        =answer.person.name
+  %section#board
+    - if ENV['component_legislative_agendas'] and !ENV['agendas_url'].blank? and !ENV['billit_url'].blank? and !@low_chamber_agenda[1].blank? or !@high_chamber_agenda[1].blank?
+      %h3.text-center.txt-board 
+        = t('main.discussion_agendas')
+      %p.text-center
+        = link_to t('main.view_the_agenda'), agendas_path
+      %div.row
+        = render :partial => "latest_agendas"
 
-
-          %i.fa.fa-quote-right.fa-2x
+  - if ENV['component_writeit']
+    %section#last-responses.hidden-xs
+      = render :partial => "latest_messages"

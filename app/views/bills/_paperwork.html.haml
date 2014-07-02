@@ -1,0 +1,19 @@
+- if !paperwork.date.blank?
+  %div{ 'data-sort' => paperwork.date.to_time.to_i }
+    %div.timeline-container.col-md-1
+      = image_tag("statusicon/" + paperwork.icon_event, class:"hidden-xs", title:paperwork.timeline_status.strip)
+    %div.bill_header.col-md-11
+      %h5
+        = paperwork.description
+      %p.light
+        = localize paperwork.date.to_date, :format => :long
+      %p
+        = paperwork.stage
+      
+        - if paperwork.chamber.length > 1
+          = '•' + t('bill.chamber') + ':'
+          = paperwork.chamber
+
+        - if paperwork.session.length > 1
+          = '•' + t('bill.session') + ':'
+          = paperwork.session
