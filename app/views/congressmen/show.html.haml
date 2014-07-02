@@ -107,20 +107,24 @@
                     = t('congressmen.research')
                   = c.researcher 
         
-        - if ! @congressman.enlaces.blank?
+        - if ! @congressman.links.blank?
           %div
-            %p
-              - @congressman.enlaces.each do | link |
+            %p 
+              %span.light
+                = t('congressmen.socialnet')
+            %ul.list-inline
+              - @congressman.links.each do | link |
                 - icon = 'fa-globe'
                 - case link.note.downcase
                 - when 'twitter'
                   - icon = 'fa-twitter'
                 - when 'facebook'
                   - icon = 'fa-facebook'
-                %a{ 'href' => link.url, 'target' => '_blank' }
-                  %i{:class=>'fa '+icon}
-                  = link.note.capitalize
-                  %br/
+                %li  
+                  %a{ 'href' => link.url, 'target' => '_blank' }
+                    %i{:class=>'fa '+icon}
+                    = link.note.capitalize
+                  / %br/
 
 
       %div.col-md-9.whitewithaside

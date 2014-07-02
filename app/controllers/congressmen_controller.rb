@@ -52,7 +52,7 @@ class CongressmenController < ApplicationController
         @title = @congressman.name + " - "
 
         @el_twitter = ''
-        @congressman.enlaces.each do | link |
+        @congressman.links.each do | link |
           case link.note.downcase
           when 'twitter'
             @el_twitter = URI(link.url).path.sub! '/', '@'
