@@ -275,6 +275,7 @@ es:
     birth_date: 'Fecha nacimiento: '
     years: '%s (%s años)'
     askto: 'Pregúntale a %s'
+    socialnet: 'Redes sociales:'
   email:
     subject: 'Congreso abierto, confirmación de suscripción'
     body_header: 'Bienvenido a Congreso abierto, %s'
