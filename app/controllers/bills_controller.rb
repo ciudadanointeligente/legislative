@@ -7,6 +7,7 @@ require './app/models/billit_paperwork'
 
 class BillsController < ApplicationController
   include Roar::Rails::ControllerAdditions
+  caches_page :show
   respond_to :html, :xls
 
   # GET /bills
