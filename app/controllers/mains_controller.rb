@@ -23,7 +23,7 @@ class MainsController < ApplicationController
     @hot_bills = {};
 
     if !ENV['billit_url'].blank?
-      @hot_bills = Billit::BillPage.get(ENV['billit_url'] + URI::escape("search?current_priority=Discusión%20inmediata|Suma|Simple&per_page=8"), 'application/json').bills
+      @hot_bills = prioritize Billit::BillPage.get(ENV['billit_url'] + URI::escape("search?current_priority=Discusión inmediata|Suma|Simple&per_page=100"), 'application/json').bills
     end
 
     if (!ENV['writeit_url_base'].blank?)
@@ -70,5 +70,11 @@ class MainsController < ApplicationController
     @congressmen = PopitPersonCollection.new
     @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
     @congressmen.persons.sort! { |x,y| x.name <=> y.name }
+  end
+
+  def prioritize bills
+    priorities = {"Discusión inmediata" => 1, "Suma" => 2, "Simple" => 3}
+    prioritized_bills = bills.sort {|x,y| priorities[x.current_priority] <=> priorities[y.current_priority]}
+    prioritized_bills[0..7]
   end
 end
