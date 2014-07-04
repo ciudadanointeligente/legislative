@@ -537,6 +537,15 @@ label {
   -webkit-animation: urgency 2s infinite; /* Safari and Chrome */
 }
 
+.hot-subtitle {
+  margin-bottom: 30px;
+}
+
+.hot-subtitle a {
+  color: #E6E6C9;
+  text-decoration: underline;
+}
+
 @keyframes urgency {
   0%   {color: #EA6A56;}
   50%  {color: #E6E6C9;}
@@ -563,6 +572,10 @@ label {
   border-bottom: 9px solid #67675a;
   height: 350px;
   background: #f5f5dd;
+}
+
+.table-subtitle a {
+  text-decoration: underline;
 }
 
 .tituloTablaResumen{
