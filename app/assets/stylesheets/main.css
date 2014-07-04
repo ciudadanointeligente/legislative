@@ -550,6 +550,10 @@ label {
   text-decoration: underline;
 }
 
+ul.list-inline.tags {
+  padding: 0 0 0 10px;
+}
+
 @keyframes urgency {
   0%   {color: #EA6A56;}
   50%  {color: #E6E6C9;}
@@ -611,6 +615,9 @@ label {
   margin-left: 2px;
 }
 
+.list-inline.tags>li {
+  padding-left: 5px;
+}
 
 /* Answers */
 
