@@ -16,7 +16,7 @@
     - if ENV['component_legislative_agendas'] and !ENV['agendas_url'].blank? and !ENV['billit_url'].blank? and !@low_chamber_agenda[1].blank? or !@high_chamber_agenda[1].blank?
       %h3.text-center.txt-board 
         = t('main.discussion_agendas')
-      %p.text-center
+      %p.text-center.table-subtitle
         = link_to t('main.view_the_agenda'), agendas_path
       %div.row
         = render :partial => "latest_agendas"

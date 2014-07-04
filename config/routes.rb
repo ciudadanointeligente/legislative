@@ -1,6 +1,5 @@
 Legislative::Application.routes.draw do
 
-  root :to => "mains#index"
 
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#login", :as => "log_in"
@@ -33,5 +32,6 @@ Legislative::Application.routes.draw do
     resources :user_subscriptions # do
       # delete 'unsubscribe_all', on: :collection
     # end  
+    root :to => "mains#index"
   end
 end
