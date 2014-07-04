@@ -46,12 +46,42 @@
   background-color: #593551;
 }
 
+#communication .chosen-container .chosen-results {
+  background: #593551;
+  color: #E6E6C9;
+  border-top: 1px solid #3E1F3E;
+}
+
+#communication .chosen-container .chosen-results li.highlighted {
+  background: #2f9b7c;
+}
+
+#communication .chosen-container-multi .chosen-choices li.search-choice {
+  color: #6F6F5A;
+  font-family: Raleway,Helvetica,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  /*font-size: 11px;*/
+  background: #E6E6C9;
+  border-radius: 2px;
+  border: none;
+  padding: 3px 17px 2px 5px;
+}
+
+#communication .chosen-container .chosen-drop {
+  border: none;
+}
+
 #communication h5 {
   color: #E6E6C9;
 }
 
 #communication .search-field input.default {
   color: #998598;
+}
+
+#communication .chosen-container-active .chosen-choices li.search-field input[type=text] {
+  color: #E6E6C9!important;
 }
 
 .form-comunication .chosen-container-multi .chosen-choices {
