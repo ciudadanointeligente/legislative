@@ -56,6 +56,10 @@ a.btn:visited {
   color: #a6a691;
 }
 
+h5.light {
+  font-size: 12px;
+}
+
 strong {
   font-weight: 700;
 }

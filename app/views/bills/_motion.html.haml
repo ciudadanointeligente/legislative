@@ -8,10 +8,11 @@
       = localize motion.date.to_date, :format => :long
     %p
       = motion.text
-    %p
-      %b
-        Quorum:
-      = motion.requirement
+    - if ! motion.requirement.blank?
+      %p
+        %b
+          Quorum:
+        = motion.requirement
 
     - total = 0
     - motion.vote_events.each do | votes |
@@ -38,9 +39,9 @@
             - bar_class = ' progress-bar-info'
 
           %div{:class => "progress-bar #{bar_class}", :style => "width: #{porcent}%"}
-            %span
+            %h5
               = (vote.value*100/total.to_f).round.to_s + '% ' 
-    %h5
+    %h5.light
       %ul.list-inline
         - motion.vote_events.each do | votes |
           - votes.counts.each do | vote |
