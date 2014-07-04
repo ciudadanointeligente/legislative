@@ -7,7 +7,7 @@
 
 body {
   background-color: #f9f9eb;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   color: #67675a;
   margin-bottom: 70px;
@@ -27,7 +27,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', Helvetica, sans-serif;
+  font-family: "Raleway", Helvetica, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -81,7 +81,7 @@ strong {
 }
 
 input {
-  font-family: 'lato', sans-serif;
+  font-family: "lato", sans-serif;
 }
 
 .center {
@@ -97,7 +97,7 @@ input {
 .btn {
   text-transform: uppercase;
   font-weight: 700;
-  font-family: 'Raleway', Helvetica, sans-serif;
+  font-family: "Raleway", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -112,7 +112,7 @@ a.btn:visited {
   font-size: 12px;
   text-transform: none;
   font-weight: 400;
-  font-family: 'Lato', Helvetica, sans-serif;
+  font-family: "Lato", Helvetica, sans-serif;
 }
 
 
@@ -122,7 +122,7 @@ a.btn:visited {
 
 .btn-lg {
   text-transform: uppercase;
-  font-family: 'Raleway', Helvetica, sans-serif;
+  font-family: "Raleway", Helvetica, sans-serif;
   font-weight: 700;
   font-size: 14px;
   padding: 7px 10px;
@@ -265,7 +265,7 @@ label {
   position: relative;
   border-radius: 0px 2px 2px 0px;
   color: #575741;
-  font-family: 'Raleway', Helvetica, sans-serif;
+  font-family: "Raleway", Helvetica, sans-serif;
   text-transform: uppercase;
   padding: .4em .7em .3em;
   font-size: 10px;
@@ -391,7 +391,7 @@ label {
   font-weight: 400;
   font-size: 14px;
   text-transform: initial;
-  font-family: 'Lato';
+  font-family: "Lato";
 }
 
 
@@ -400,28 +400,28 @@ label {
 /* Form aside */
 
 .aside .form-control::-webkit-input-placeholder { /* WebKit browsers */
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #A6A691;
   -webkit-font-smoothing: antialiased;
 }
 .aside .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #A6A691;
   -webkit-font-smoothing: antialiased;
 }
 .aside .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #A6A691;
   -webkit-font-smoothing: antialiased;
 }
 
 .aside .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #A6A691;
   -webkit-font-smoothing: antialiased;
 }
 .aside .form-control {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #67675A;
   -webkit-font-smoothing: antialiased;
 }
@@ -550,6 +550,10 @@ label {
   text-decoration: underline;
 }
 
+ul.list-inline.tags {
+  padding: 0 0 0 10px;
+}
+
 @keyframes urgency {
   0%   {color: #EA6A56;}
   50%  {color: #E6E6C9;}
@@ -611,6 +615,9 @@ label {
   margin-left: 2px;
 }
 
+.list-inline.tags÷>li {
+  padding-left: 5px;
+}
 
 /* Answers */
 
@@ -789,7 +796,7 @@ span.paring {
 
 h4 span.nostyle {
   font-size: 14px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   text-transform: none;
 }

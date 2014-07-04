@@ -22,7 +22,7 @@
               %p
                 = bill.stage
               - if !bill.tags.blank?
-                %ul.list-inline
+                %ul.list-inline.tags
                   - bill.tags.each do |tag|
                     %li.label-default
                       = tag
@@ -54,7 +54,7 @@
               %p
                 = bill.stage
               - if !bill.tags.blank?
-                %ul.list-inline
+                %ul.list-inline.tags
                   - bill.tags.each do |tag|
                     %li.label-default
                       = tag
