@@ -40,7 +40,7 @@
           %div{:class => "progress-bar #{bar_class}", :style => "width: #{porcent}%"}
             %span
               = (vote.value*100/total.to_f).round.to_s + '% ' 
-    %div
+    %h5
       %ul.list-inline
         - motion.vote_events.each do | votes |
           - votes.counts.each do | vote |
