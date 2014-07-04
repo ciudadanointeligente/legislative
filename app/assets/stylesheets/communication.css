@@ -27,10 +27,31 @@
     color: #A6A691;
     -webkit-font-smoothing: antialiased;
 }
-.form-comunication .form-control {
+
+#communication .form-control {
   font-family: 'Lato', sans-serif;
-    color: #A6A691;
-    -webkit-font-smoothing: antialiased;
+  color: #A6A691;
+  -webkit-font-smoothing: antialiased;
+  background-color: #593551;
+  border: none;
+}
+
+#communication .input-group-addon {
+  border: none;
+  background-color: #593551;
+}
+
+#communication .chosen-container-multi .chosen-choices {
+  border: none;
+  background-color: #593551;
+}
+
+#communication h5 {
+  color: #E6E6C9;
+}
+
+#communication .search-field input.default {
+  color: #998598;
 }
 
 .form-comunication .chosen-container-multi .chosen-choices {
@@ -204,9 +225,9 @@
 /* Chosen */
 
 .chosen-container-multi .chosen-choices {
-  background-color: #f9f9eb!important;
+  background-color: #f9f9eb;
   background-image: none!important;
-  border: 1px solid #DADABF!important;
+  border: 1px solid #DADABF;
   padding: 2px 0px 8px!important;
 }
 
