@@ -17,7 +17,7 @@
 
   %div.form-group
     = label_tag :organizations, t('congressmen.form_party')
-    = select_tag "organizations", options_from_collection_for_select(@organizations, "name", "name", params[:organizations]), prompt: t('congressmen.placeholder_party'), class: 'form-control'
+    = select_tag "organizations", options_from_collection_for_select(@organizations, "id", "name", params[:organizations]), prompt: t('congressmen.placeholder_party'), class: 'form-control'
 
   %input{"type" => "hidden", "name" => "congressmen", "value" => 2}
 

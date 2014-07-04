@@ -19,7 +19,7 @@ The following system requirements are also needed, for image manipulation:
 
 Red Hat / Fedora / CentOS
 
-    sudo yum install ImageMagick-devel
+    sudo dnf install sqlite-devel ImageMagick-devel
 
 Debian / Ubuntu (for 13.04 and Wheezy also install `libmagickwand-dev`)
 

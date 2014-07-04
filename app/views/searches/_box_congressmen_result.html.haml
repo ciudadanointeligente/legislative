@@ -3,8 +3,8 @@
     %div.col-md-1
       - if ! congressman.images.blank?
         - fantasy_name = congressmen_pic(congressman.name, congressman.images[0].url)
-        = image_tag(fantasy_name+'.jpg', class: "img-circle img-responsive hidden-xs")
-        = image_tag(fantasy_name+'.jpg', class: "img-thumbnail img-responsive visible-xs")
+        = image_tag('congressman/'+fantasy_name+'.jpg', class: "img-circle img-responsive hidden-xs")
+        = image_tag('congressman/'+fantasy_name+'.jpg', class: "img-thumbnail img-responsive visible-xs")
       - else
         = image_tag('default-profile.png', class: "img-circle img-responsive hidden-xs")
         = image_tag('default-profile.png', class: "img-thumbnail img-responsive visible-xs")
@@ -18,7 +18,8 @@
           %span.light
             = t('search.represent')
           = congressman.represent[0].region
-    %div.col-md-1
-      = link_to url_for(controller: "communications", action: "index", id: congressman.id) do
-        %i.fa.fa-envelope-o
+      %p
+        = link_to url_for(controller: "communications", action: "index", id: congressman.id) do
+          %i.fa.fa-envelope-o
+          = sprintf( t('search.askthem'), congressman.name)
   

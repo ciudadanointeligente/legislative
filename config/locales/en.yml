@@ -87,6 +87,7 @@ en:
     pages_with_found_results: Page %s of %s found results
     number_of_pages: Page %s of %s
     predefined_queries: Predefined queries
+    askthem: 'Get in touch with %s'
   agendas:
     title: Parliamentarian agenda
     chamber: Chamber
@@ -143,6 +144,10 @@ en:
     download_project: Download bill project
     title: Bills
     bill_dont_exist: "The bill doesn't exist"
+    yet: 'Yes'
+    not: 'No'
+    abstain: Abstain
+    paired: Paired
   paperworks:
     chamber: 'Chamber:'
     created_at: 'Created at:'
@@ -220,6 +225,7 @@ en:
     verified_mail: Your email was successfully verified
     subscribe: Subscribe
     email: Email
+    description: ''
   communication:
     intro: 'A través de esta sección podrás tener línea directa con los congresistas, recuerda ser respetuoso.'
     name: Name
@@ -268,6 +274,8 @@ en:
     last_interventions: Last interventions
     birth_date: 'Birth date: '
     years: '%s (%s years)'
+    askto: 'Get in touch with %s'
+    socialnet: 'Social networks:'
   email:
     subject: 'Congreso abierto, confirmación de suscripción'
     body_header: 'Bienvenido a Congreso abierto, %s'

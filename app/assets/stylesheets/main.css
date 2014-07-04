@@ -257,10 +257,10 @@ label {
 }
 
 .label-default {
-  background-color: #e6e6c9;
+  background-color: #CACAA6;
   position: relative;
   border-radius: 0px 2px 2px 0px;
-  color: #a6a691;
+  color: #575741;
   font-family: 'Raleway', Helvetica, sans-serif;
   text-transform: uppercase;
   padding: .4em .7em .3em;
@@ -278,23 +278,23 @@ label {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-right-color: #e6e6c9;
-  border-width: 9px;
-  margin-top: -9px;
+  border-right-color: #CACAA6;
+  border-width: 11px;
+  margin-top: -11px;
 }
 
 .label-default:after{
-  content:"";
-  position:absolute;
-  top: 7px;
-  left:-1px;
-  float:left;
-  width:4px;
-  height:4px;
-  -moz-border-radius:2px;
-  -webkit-border-radius:2px;
-  border-radius:2px;
-  background:#f9f9eb;
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -3px;
+  float: left;
+  width: 4px;
+  height: 4px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background: #EEEECA;
 }
 
 .hero-space-bill .label-default:after {
@@ -806,6 +806,18 @@ h4 span.nostyle {
   list-style: none;
 }
 
+/* Agendas in home */
+
+.table th {
+  background: #67675a;
+  color: #e6e6c9;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: #e6e6c9;
+  color: #67675a;
+}
+
 
 /* Screen */
 
@@ -879,14 +891,3 @@ h4 span.nostyle {
   }
 }
 
-/* Agendas in home */
-
-.table th {
-  background: #67675a;
-  color: #e6e6c9;
-}
-
-.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
-  background-color: #e6e6c9;
-  color: #67675a;
-}

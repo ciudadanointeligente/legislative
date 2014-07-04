@@ -54,11 +54,27 @@
             - date_birth = localize @congressman.birth_date.to_date
             = sprintf( t('congressmen.years'), date_birth, age(@congressman.birth_date.to_date))
 
+        - if ! @congressman.personal_info.blank?
+          %p
+            %span.light
+              Profesión:
+            = @congressman.personal_info[0].profession
+
+        - if ! @congressman.professional_info.blank?
+          %p
+            %span.light
+              \% Votos:
+            = @congressman.professional_info[0].percentage_votes + ' (' + @congressman.professional_info[0].place + ')'
+
         - if ! @congressman.parliamentarian_period.blank?
           %p
             %span.light
               = t('congressmen.period')
-            = @congressman.parliamentarian_period.map {|p| p.date}.join(', ')
+            / = @congressman.parliamentarian_period.map {|p| p.date}.join(', ')
+            %ul
+              - @congressman.parliamentarian_period.each do |period|
+                %li
+                  = period.date
 
         - if ! @congressman.represent.blank?
           %p
@@ -84,14 +100,8 @@
             %span.light
               = t('congressmen.party')
             - @organizations.each do | o |
-              /- url = '#';
-              /-if ! o.links[1].blank?
-              /  - url = @congressman.memberships[0].organization_id == o.id ? o.links[1].url : '#'
+              = link_to o.name, {:controller => 'congressmen', :action => 'searches', :organizations => o.id} if @congressman.memberships[0].organization_id == o.id
               
-              /  %a{ 'href' => url, 'target' => '_blank' }
-              = o.name if @congressman.memberships[0].organization_id == o.id
-              /%i.fa.fa-external-link
-        
         - if ! @congressman.commissions.blank?
           %p
             - @congressman.commissions.each do | c |
@@ -113,20 +123,24 @@
                     = t('congressmen.research')
                   = c.researcher 
         
-        - if ! @congressman.enlaces.blank?
+        - if ! @congressman.links.blank?
           %div
-            %p
-              - @congressman.enlaces.each do | link |
+            %p 
+              %span.light
+                = t('congressmen.socialnet')
+            %ul.list-inline
+              - @congressman.links.each do | link |
                 - icon = 'fa-globe'
                 - case link.note.downcase
                 - when 'twitter'
                   - icon = 'fa-twitter'
                 - when 'facebook'
                   - icon = 'fa-facebook'
-                %a{ 'href' => link.url, 'target' => '_blank' }
-                  %i{:class=>'fa '+icon}
-                  = link.note.capitalize
-                  %br/
+                %li  
+                  %a{ 'href' => link.url, 'target' => '_blank' }
+                    %i{:class=>'fa '+icon}
+                    = link.note.capitalize
+                  / %br/
 
 
       %div.col-md-9.whitewithaside

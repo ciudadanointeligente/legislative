@@ -87,6 +87,7 @@ es:
     pages_with_found_results: Página %s de %s resultados encontrados
     number_of_pages: Página %s de %s
     predefined_queries: Consultas predefinidas
+    askthem: 'Comunícate con %s'
   agendas:
     title: Agenda parlamentaria
     chamber: Cámara
@@ -143,6 +144,10 @@ es:
     download_project: Descargar proyecto de ley
     title: Proyectos de ley
     bill_dont_exist: El proyecto de ley al que intentas acceder no existe
+    yet: Si
+    not: 'No'
+    abstain: Abstención
+    paired: Pareo
   paperwork:
     chamber: 'Cámara:'
     created_at: 'Fecha de creación:'
@@ -216,10 +221,11 @@ es:
     users: Usuarios
   user_subscriptions:
     confirmation_mail_sent: Se ha enviado un correo electrónico de confirmación a la casilla registrada
-    already_subscribe: Ya existe una suscripción a este bill con ese correo electrónico
+    already_subscribe: Ya existe una suscripción a este Proyecto de ley con ese correo electrónico
     verified_mail: El correo electrónico fue exitosamente verificado
     subscribe: Suscríbete
     email: Correo Electrónico
+    description: 'Te estás suscribiendo al Proyecto de ley nro %s.<br> La suscripción te permitirá estar actualizado respecto a los avances en la tramitación de este Proyecto de ley.'
   communication:
     intro: 'A través de esta sección podrás tener línea directa con los congresistas, recuerda ser respetuoso.'
     name: Nombre
@@ -268,6 +274,8 @@ es:
     last_interventions: Últimas intervenciones
     birth_date: 'Fecha nacimiento: '
     years: '%s (%s años)'
+    askto: 'Pregúntale a %s'
+    socialnet: 'Redes sociales:'
   email:
     subject: 'Congreso abierto, confirmación de suscripción'
     body_header: 'Bienvenido a Congreso abierto, %s'
