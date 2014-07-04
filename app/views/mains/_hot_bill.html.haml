@@ -7,13 +7,13 @@
         %i.fa.fa-star-o{title: t('bill.subscribe')}
     %h5.bill-title
       = link_to truncate(hot_bill.title, :length => 160), t('routes.bills') + '/' + hot_bill.uid
-    %p.bill-stage
-      = hot_bill.stage
     -if !hot_bill.current_priority.blank?
       %p.label.label-danger
         = hot_bill.current_priority
+    %p.bill-stage
+      = hot_bill.stage
     - if !hot_bill.tags.blank?
-      %ul.list-inline
+      %ul.list-inline.tags
         - hot_bill.tags.each do |tag|
           %li.label-default
             = tag
