@@ -3,5 +3,7 @@
     %h3.text-center.hot-title
       = t('main.hot_projects')
       %i.fa.fa-bell-o
+    %p.text-center.hot-subtitle
+      = link_to t("main.view_hot_projects"), url_for(controller: :bills, action: :searches, current_priority: ["Suma", "Simple", "Discusión inmediata"])
     %div.row
       = render :partial => "hot_bill", collection: @hot_bills
