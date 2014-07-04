@@ -19,7 +19,7 @@
   Twitter: @falvarez
   From: Valdivia, Chile
 
-  Juan Pablo Pérez
+  Juan Pablo Perez
   Contact: jpperez [at] ciudadanointeligente.org
   Twitter: @rezzo
   From: Arica, Chile
@@ -29,16 +29,27 @@
   Twitter: @pdaire
   From: Santiago, Chile
 
-  José Damián Garrido
+  Marcel Augsburger
+  Contact: maugsburger [at] ciudadanointeligente.org
+  Twitter: @maugsburger
+  From: Pto Montt, Chile
+
+  Jose Damian Garrido
   Contact: dgarrido [at] ciudadanointeligente.org
   Twitter: @jgarrido
   From: Con-Con, Chile
 
+  Martin Szyszlican
+  Contact: martinsz [at] gmail.com
+  Twitter: @martinszy
+  From: Buenos Aires, Argentina
+
 /* THANKS */
-  MySociety team
+  MySociety
   Practitioners (Cindy, Mario, César)
-  Greenpeace, Matías Asun
-  Libertad y Desarrollo, Constanza Hube
-  NGO Ciudadano Inteligente, Manuel Aris
+  Greenpeace
+  Libertad y Desarrollo
+  Fundacion Ciudadano Inteligente
   Revista Que Pasa, Sebastián Rivas
-  Marcelo Pérez, Information Architect
+  Marcelo Perez Antivilo, Information Architect
+  Congreso Interactivo
