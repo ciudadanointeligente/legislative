@@ -8,6 +8,10 @@
     %h5
       = link_to bill.title, bill_path(bill.uid), :onclick => "ga('send','paperwork','bill', '"+bill.uid+"')"
     %p
+      = link_to (new_user_subscription_path(:bill => bill.uid)) do
+        %i.fa.fa-star-o{title: t('bill.subscribe')}
+        = t('bill.subscribe')
+    %p
       - if ! bill.stage.blank?
         %span.light
           = t('search.stage')
@@ -22,10 +26,6 @@
         %span.light
           = t('search.initiative')
         = bill.source
-    %p
-      = link_to (new_user_subscription_path(:bill => bill.uid)) do
-        %i.fa.fa-star-o{title: t('bill.subscribe')}
-        = t('bill.subscribe')
 
 
   /

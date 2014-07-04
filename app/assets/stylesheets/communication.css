@@ -90,25 +90,23 @@
 }
 
 .hero-space .form-control {
-  border: 2px solid #664165;
+  background: #5E2B55;
+  color: #e6e6c9;
+  border: none;
 }
 
 .hero-space .form-control::-webkit-input-placeholder { /* WebKit browsers */
-    color: #774F76;
+    color: #83517A;
 }
 .hero-space .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: #774F76;
+    color: #83517A;
 }
 .hero-space .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: #774F76;
+    color: #83517A;
 }
 
 .hero-space .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color: #774F76;
-}
-
-.hero-space .form-control {
-  color: #e6e6c9;
+    color: #83517A;
 }
 
 .form-control {
