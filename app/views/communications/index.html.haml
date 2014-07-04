@@ -126,7 +126,10 @@
   /%script{src: "http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.jquery.min.js"}
   :javascript
     $(document).ready(function(){
-      $(".chosen").chosen();
+      $(".chosen").chosen({
+        no_results_text: "Oops, no encontramos nada!"
+      });
+      
       $('.per_person').popover({
         'trigger':'hover',
         'html':true,
