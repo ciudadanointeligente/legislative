@@ -46,6 +46,7 @@ production:
   congressman_pic_h: '150' # add the heigth of crop image
   email_suscription: 'Congreso abierto <legislative@congresoabierto.cl>'
   subject_suscription: 'Congreso abierto, Confirmación de suscripción'
+  subject_update: 'Congreso abierto, Actualización de proyectos de ley'
   url_suscription: 'http://congresoabierto.cl'
   preset1: ~    # custom search filters example, up to 9: '["2000-2006 Ricardo Lagos Escobar", "creation_date_min=2000-03-11&creation_date_max=2006-03-10"]'
 
@@ -92,6 +93,7 @@ development:
   congressman_pic_h: '150' # add the heigth of crop image
   email_suscription: 'Congreso abierto <legislative@congresoabierto.cl>'
   subject_suscription: 'Congreso abierto, Confirmación de suscripción'
+  subject_update: 'Congreso abierto, Actualización de proyectos de ley'
   url_suscription: 'http://congresoabierto.cl'
   preset1: ~    # custom search filters example, up to 9: '["2000-2006 Ricardo Lagos Escobar", "creation_date_min=2000-03-11&creation_date_max=2006-03-10"]'
 

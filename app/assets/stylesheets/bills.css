@@ -107,6 +107,14 @@
   box-shadow: none;
 }
 
+.bill_header .list-inline {
+  margin-left: 0px;
+}
+
+.bill_header .list-inline>li {
+  padding-right: 25px;
+}
+
 /*a favor*/
 .progress-bar-success {
   background-color: #3db091;
@@ -119,12 +127,12 @@
 
 /*se abstienen*/
 .progress-bar-warning {
-  background-color: #e6e6c9;
+  background-color: #cdcdb3;
 }
 
 /*ausentes*/
 .progress-bar-info {
-  background-color: #cdcdb3;
+  background-color: #A6A691;
 }
 
 /*pareos*/

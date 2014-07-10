@@ -8,30 +8,86 @@
       = localize motion.date.to_date, :format => :long
     %p
       = motion.text
-    %p
-      %b
-        Quorum:
-      = motion.requirement
+    - if ! motion.requirement.blank?
+      %p
+        %b
+          Quorum:
+        = motion.requirement
 
     - total = 0
     - motion.vote_events.each do | votes |
       - votes.counts.each do | vote |
         - total = vote.value + total
 
+    /
+      %div
+        %a{'href' => '#', 'data-toggle' => 'modal', 'data-target' => '#myModal'+motion.date.to_time.to_i.to_s}
+          Ver detalle de la votación
+      
     %div.progress
       - motion.vote_events.each do | votes |
         - votes.counts.each do | vote |
           - porcent = (vote.value*100/total.to_f).round.to_s
 
-          - if vote.option == 'yes'
+          - if vote.option.downcase == 'si'
             - bar_class = ' progress-bar-success'
-          - if vote.option == 'no'
+          - if vote.option.downcase == 'no'
             - bar_class = ' progress-bar-danger'
-          - if vote.option == 'abstain'
+          - if vote.option.downcase == 'abstencion'
             - bar_class = ' progress-bar-warning'
-          - if vote.option == 'paired'
+          - if vote.option.downcase == 'pareo'
             - bar_class = ' progress-bar-info'
 
           %div{:class => "progress-bar #{bar_class}", :style => "width: #{porcent}%"}
-            %span
-              = (vote.value*100/total.to_f).round.to_s + '%'
+            %h5
+              = (vote.value*100/total.to_f).round.to_s + '% ' 
+    %h5.light
+      %ul.list-inline
+        - motion.vote_events.each do | votes |
+          - votes.counts.each do | vote |
+            %li
+              = vote.option
+              = vote.value
+
+    /
+      %div
+        %div.modal.fade{'id' => 'myModal'+motion.date.to_time.to_i.to_s, 'tabindex'=>'-1', 'role'=>'dialog', 'aria-labelledby'=>'myModalLabel', 'aria-hidden'=>'true'}
+          %div.modal-dialog.modal-lg
+            %div.modal-content
+              %div.modal-header
+                %button{'type'=>'button', 'class'=>'close', 'data-dismiss'=>'modal', 'aria-hidden'=>'true'}
+                  &times;
+                %h4.modal-title#myModalLabel
+                  Votaciones
+              %div.modal-body
+                %table.table.table-bordered
+                  %thead
+                    %tr
+                      %th
+                        %i.fa.fa-check
+                        a favor
+                      %th
+                        %i.fa.fa-times
+                        en contra
+                      %th
+                        %i.fa.fa-minus
+                        abstención
+                      %th
+                        %i.fa.fa-minus
+                        pareo
+                  %tbody
+                    - motion.vote_events.each do | v |
+                      - v.votes.each do | vote |
+                        %tr
+                          %td
+                            - if vote.option.downcase == 'si'
+                              = vote.voter_id
+                          %td
+                            - if vote.option.downcase == 'no'
+                              = vote.voter_id
+                          %td
+                            - if vote.option.downcase == 'abstencion'
+                              = vote.voter_id
+                          %td
+                            - if vote.option.downcase == 'pareo'
+                              = vote.voter_id

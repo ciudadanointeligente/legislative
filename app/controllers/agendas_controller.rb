@@ -3,6 +3,7 @@ require 'rest_client'
 
 class AgendasController < ApplicationController
   before_action :set_table, only: [:show, :edit, :update, :destroy]
+  caches_page :index
   
   # GET /agendas
   def index

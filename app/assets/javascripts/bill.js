@@ -30,6 +30,30 @@ $(document).ready(function() {
   }
   if($("#myTags").length)
     $("#myTags").tagit(config);
+
+  if( $(".chosen").length )
+    $(".chosen").chosen();
+
+  if( $('select[name=predefined_queries]').length )
+  {
+    $('select[name=predefined_queries]').on('change', function(){
+      if( $(this).val() != '' )
+      {
+        $('input[name=creation_date_min]').attr('disabled',true);
+        $('input[name=creation_date_max]').attr('disabled',true);
+      }
+      else
+      {
+        $('input[name=creation_date_min]').removeAttr('disabled');
+        $('input[name=creation_date_max]').removeAttr('disabled');
+      }
+    });
+  }
+
+  if (!Modernizr.inputtypes.date) {
+    $('input[type=date]').datepicker({dateFormat:'yy-mm-dd'});
+  }
+
 });
 
 /* Modernizr 2.7.1 (Custom Build) | MIT & BSD
