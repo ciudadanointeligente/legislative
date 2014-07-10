@@ -54,6 +54,9 @@ gem 'actionpack-action_caching', '~> 1.1.1'
 gem 'whenever', :git => 'https://github.com/Insomniware/whenever.git', :require => false
 #gem 'whenever', :require => false #for non rvm
 
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'therubyracer', platforms: :ruby
+
 group :production do
   gem 'mysql'
   gem 'newrelic_rpm'
