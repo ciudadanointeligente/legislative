@@ -37,6 +37,7 @@
 /coverage/
 /db/schema.rb
 /public/assets
+/public/cache
 .coveralls.yml
 .ruby-version
 .watsonrc
