@@ -1,0 +1,12 @@
+Existen actualizaciones a los proyectos de ley que estás suscrito.
+
+Los proyectos de ley con actualizaciones son:
+
+<% @bills.each do | bill | %>
+  <% @bill_title = Billit::Bill.get(ENV['billit_url'] + bill, 'application/json').title %>
+  * <%= link_to(bill + ": " + @bill_title, ENV['root_url'] + bill_path(bill)) %>
+<%- end %>
+
+Visítanos en <%= @url %>
+
+Gracias por suscribirte!

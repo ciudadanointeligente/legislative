@@ -1,0 +1,10 @@
+<%= sprintf( t('email.body_header'), @user.username ) %>
+
+<%= sprintf( t('email.body_content'), @bill) %>
+<%= link_to('acá!', controller: 'user_subscriptions', action: 'confirmed', ajax: 'false', email_token: @user_subscription.email_token, host: ENV['root_url']) %>
+
+Para acceder a todos los Proyectos de ley a los que te encuentras suscrito, visita <%= link_to 'este enlace', ENV['root_url'] + user_path(Base64.encode64(@user.email)) %>
+
+Visítanos en <%= @url %>
+
+<%= t('email.body_footer') %>
