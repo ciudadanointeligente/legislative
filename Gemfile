@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.1.4'
 
 # Use Devise for user authentication
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :ref => '49aebde'
@@ -12,11 +12,11 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :ref => '49ae
 gem 'sqlite3'
 
 # Template Engine
-gem 'haml'
-gem 'haml-rails', :group => :development
+gem 'haml', '~> 4.0.5'
+gem 'haml-rails', '~> 0.5.3', :group => :development
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.3'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -25,13 +25,13 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 3.1.1'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'turbolinks', '~> 2.2.2'
 
-# bcrypt-ruby is a Ruby binding for the OpenBSD bcrypt() password hashing algorithm
-gem 'bcrypt-ruby', :require => 'bcrypt'
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
 
 # An interface to the ImageMagick and GraphicsMagick image processing libraries
 gem 'rmagick'
@@ -43,16 +43,19 @@ gem 'fullcalendar-rails'
 gem 'ekuseru'
 
 # Support for localization
-gem 'rails-i18n', '~> 4.0.0'
-gem 'route_translator'
+gem 'rails-i18n', '~> 4.0.2'
+gem 'route_translator', '~> 3.2.4'
 
 # Caching
-gem 'actionpack-page_caching'
-gem 'actionpack-action_caching'
+gem 'actionpack-page_caching', '~> 1.0.2'
+gem 'actionpack-action_caching', '~> 1.1.1'
 
 # Clean ruby syntax for writing and deploying cron jobs (for rvm)
 gem 'whenever', :git => 'https://github.com/Insomniware/whenever.git', :require => false
 #gem 'whenever', :require => false #for non rvm
+
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'therubyracer', platforms: :ruby
 
 group :production do
   gem 'mysql'

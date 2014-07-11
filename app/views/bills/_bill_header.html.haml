@@ -23,16 +23,16 @@
           %li
             - url = '//www.facebook.com/sharer/sharer.php?u='+request.original_url
             %a.btn.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
-              %i.fa.fa-facebook 
+              %i.fa.fa-facebook
               = t('bill.fb_share')
           - if !ENV['twitter_account'].blank? and !ENV['twitter_tags'].blank?
             %li
               - txt_twitter = sprintf(t('bill.tw_text'),@bill.uid)
               - url = '//twitter.com/share?url='+request.original_url+'&via='+ENV['twitter_account']+'&hashtags='+ENV['twitter_tags']+'&text='+txt_twitter
               %a.btn-warning.btn.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
-                %i.fa.fa-twitter 
+                %i.fa.fa-twitter
                 = t('bill.tw_share')
-    
+
     %div.row
       %div.col-md-1.side
         %h5.light
@@ -106,11 +106,11 @@
               $('#tooltip-tag').tooltip();
             })
         %ul.list-inline.hidden-xs#myTags
-          - if @bill.tags != nil
+          - if @bill.tags != nil && (@bill.tags.is_a? Array)
             - @bill.tags.each do |tag|
               %li#preexisting
                 = tag
-            
+
         %p
           -if ! @bill.bill_draft_link.blank?
             %a{'href'=> @bill.bill_draft_link}
