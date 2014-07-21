@@ -15,7 +15,7 @@ set -e
 
 # just checkout the master branch
 # http://stackoverflow.com/a/7349740/5349
-export DIR=writeit_local_for_testing
+export DIR=poplus_components/writeit_local_for_testing
 export BRANCH=master
 export REMOTE_REPO=https://github.com/ciudadanointeligente/write-it.git
 export PORT=3001
@@ -37,7 +37,7 @@ if [ ! -e done.txt ]; then
   pip install -r requirements_testing.txt
   python manage.py syncdb --noinput
   python manage.py migrate --noinput
-  python manage.py loaddata ../writeit_for_testing/example_with_2_messages.yaml
+  python manage.py loaddata ../mocks_for_writeit/example_with_2_messages.yaml
 
   touch done.txt;
 else
