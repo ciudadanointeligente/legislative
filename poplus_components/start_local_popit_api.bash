@@ -32,8 +32,8 @@ if [ ! -e done.txt ]; then
   npm install mongodb-fixtures --quiet
   npm install --quiet
 
-  cp ../popit_for_testing/popit_api_initial_load.js .
-  cp -R ../popit_for_testing/fixtures .
+  cp ../mocks_for_popit/popit_api_initial_load.js .
+  cp -R ../mocks_for_popit/fixtures .
   node popit_api_initial_load.js # initial data for popit
 
   touch done.txt;
