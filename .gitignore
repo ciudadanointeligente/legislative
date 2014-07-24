@@ -16,9 +16,9 @@
 /db/*.sqlite3
 
 # Ignore for local testing
-/billit_local_for_testing
-/popit_local_for_testing
-/writeit_local_for_testing
+/poplus_components/billit_local_for_testing
+/poplus_components/popit_local_for_testing
+/poplus_components/writeit_local_for_testing
 
 # Ignore all logfiles and tempfiles
 /log/*.log
@@ -39,5 +39,4 @@
 /public/assets
 /public/cache
 .coveralls.yml
-.ruby-version
 .watsonrc
