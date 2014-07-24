@@ -136,6 +136,14 @@ en:
     modal_documents: Documents
     modal_directives: Directives
     modal_revision: Revisions
+    vote: Vote
+    vote_option_in_favor: in favor
+    vote_option_against: against
+    vote_option_abstain: abstain
+    vote_option_paired: paired
+    quorum: 'Quorum:'
+    votings: Votings
+    view_detail_of_the_vote: View detail of the vote
     bill_subscribe: Subscribe
     subscribe: Subscribe to this project
     fb_share: Share
