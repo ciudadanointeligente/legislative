@@ -54,7 +54,7 @@ es:
     search_title: Búsqueda
     search_for: 'Buscar por:'
     search: Buscar
-    bill: Proyecto de ley 
+    bill: Proyecto de ley
     bills: Proyectos de ley
     persons: Autores
     current_priority: Urgencia actual
@@ -123,7 +123,7 @@ es:
     comments: Comentarios
     timeline: Historial del proyecto
     download_history: Descargar historial
-    view_law: Ver ley 
+    view_law: Ver ley
     view_documents: Ver documentos
     more_recents: Más recientes
     less_recents: Menos reciente
@@ -136,6 +136,14 @@ es:
     modal_documents: Oficios
     modal_directives: Indicaciones
     modal_revision: Comparados
+    vote: Votación
+    vote_option_in_favor: a favor
+    vote_option_against: en contra
+    vote_option_abstain: abstención
+    vote_option_paired: pareo
+    quorum: 'Quórum:'
+    votings: Votaciones
+    view_detail_of_the_vote: Ver detalle de la votación
     bill_subscribe: Suscríbete
     subscribe: Suscríbete a este proyecto
     fb_share: Comparte

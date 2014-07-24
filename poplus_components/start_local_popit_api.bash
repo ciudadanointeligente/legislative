@@ -15,7 +15,7 @@ set -e
 
 # just checkout the mysociety-deploy branch
 # http://stackoverflow.com/a/7349740/5349
-export DIR=popit_local_for_testing
+export DIR=poplus_components/popit_local_for_testing
 export BRANCH=master
 export REMOTE_REPO=https://github.com/lfalvarez/testing_popit_api.git
 export PORT=3002
@@ -32,8 +32,8 @@ if [ ! -e done.txt ]; then
   npm install mongodb-fixtures --quiet
   npm install --quiet
 
-  cp ../popit_for_testing/popit_api_initial_load.js .
-  cp -R ../popit_for_testing/fixtures .
+  cp ../mocks_for_popit/popit_api_initial_load.js .
+  cp -R ../mocks_for_popit/fixtures .
   node popit_api_initial_load.js # initial data for popit
 
   touch done.txt;

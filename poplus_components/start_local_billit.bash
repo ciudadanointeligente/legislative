@@ -16,7 +16,7 @@ export RAILS_VERSION=3.2.0
 
 # just checkout the production branch
 # http://stackoverflow.com/a/7349740/5349
-export DIR=billit_local_for_testing
+export DIR=poplus_components/billit_local_for_testing
 export BRANCH=production
 export REMOTE_REPO=https://github.com/ciudadanointeligente/bill-it.git
 export PORT=3003
@@ -32,7 +32,7 @@ if [ ! -e done.txt ]; then
 
   # set up the environment
   mkdir vendor/gems
-  
+
   # rvm gemdir
   # rvm gemset name
   # rvm gemset list
@@ -61,12 +61,12 @@ bundle exec rails s -p $PORT > billit_access.log &
 
 if [ ! -e done_post.txt ]; then
   sleep 5
-  curl -H "Content-Type: application/json" --data @../billit_for_testing/2282-03.json http://127.0.0.1.xip.io:3003/bills
-  curl -H "Content-Type: application/json" --data @../billit_for_testing/6967-06.json http://127.0.0.1.xip.io:3003/bills
-  curl -H "Content-Type: application/json" --data @../billit_for_testing/7000-24.json http://127.0.0.1.xip.io:3003/bills
-  curl -H "Content-Type: application/json" --data @../billit_for_testing/8438-07.json http://127.0.0.1.xip.io:3003/bills
-  curl -H "Content-Type: application/json" --data @../billit_for_testing/8578-24.json http://127.0.0.1.xip.io:3003/bills
-  curl -H "Content-Type: application/json" --data @../billit_for_testing/9007-03.json http://127.0.0.1.xip.io:3003/bills
+  curl -H "Content-Type: application/json" --data @../mocks_for_billit/2282-03.json http://127.0.0.1.xip.io:3003/bills
+  curl -H "Content-Type: application/json" --data @../mocks_for_billit/6967-06.json http://127.0.0.1.xip.io:3003/bills
+  curl -H "Content-Type: application/json" --data @../mocks_for_billit/7000-24.json http://127.0.0.1.xip.io:3003/bills
+  curl -H "Content-Type: application/json" --data @../mocks_for_billit/8438-07.json http://127.0.0.1.xip.io:3003/bills
+  curl -H "Content-Type: application/json" --data @../mocks_for_billit/8578-24.json http://127.0.0.1.xip.io:3003/bills
+  curl -H "Content-Type: application/json" --data @../mocks_for_billit/9007-03.json http://127.0.0.1.xip.io:3003/bills
 
   touch done_post.txt;
 fi
