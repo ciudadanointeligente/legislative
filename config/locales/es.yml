@@ -241,7 +241,7 @@ es:
     email: E-mail
     choose_congressmen: Seleccione un senador o diputado
     writte_message: Redacta tu mensaje
-    subject: Título del mensaje
+    subject: Asunto del mensaje (mínimo tres palabras)
     message: Contenido del mensaje
     send: Enviar
     list_messages: Mensajes enviados
