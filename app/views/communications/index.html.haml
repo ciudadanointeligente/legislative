@@ -33,7 +33,7 @@
               %div.col-md-3.message-box-left
                 %div.form-group
                   %h5
-                    de:
+                    = t('communication.from')
                   %div.input-group
                     = text_field_tag :author_name, nil ,:class => "form-control", :placeholder=>t('communication.name'), :required => 'required'
                     %span.input-group-addon
@@ -46,17 +46,17 @@
 
                 %div.form-group.tab-content
                   %h5
-                    para:
+                    = t('communication.to')
                   %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => t('communication.choose_congressmen')}
                     - @congressmen.persons.each do |congressmen|
                       - url = URI.parse(congressmen.popit_api_uri)
                       - compare_path = url.path.split('/')
                       - if compare_path.last == params[:id]
                         %option{:value => congressmen.popit_api_uri, :selected => 'selected'}
-                          =congressmen.name
+                          = congressmen.name
                       - else
                         %option{:value => congressmen.popit_api_uri}
-                          =congressmen.name
+                          = congressmen.name
 
               %div.col-md-9.message-box-right.tituloFormulario
                 %h5
@@ -96,10 +96,17 @@
                 %li
                   = person.name
         %div
-          - message.answers[0..1].each do |answer|
+          - message.answers.each do |answer|
             %div.row.response-separation.answers
               %div.col-md-1
-                = image_tag('default-profile.png', class: "img-circle img-responsive")
+                - congressman = congressmen_profile(answer.person.name)
+                - if !congressman['image'].blank?
+                  - fantasy_name = congressmen_pic(answer.person.name, congressman['image'])
+                  = image_tag(fantasy_name+'.jpg', class: "img-circle img-responsive hidden-xs")
+                  = image_tag(fantasy_name+'.jpg', class: "img-thumbnail img-responsive visible-xs")
+                - else
+                  = image_tag('default-profile.png', class: "img-circle img-responsive hidden-xs")
+                  = image_tag('default-profile.png', class: "img-thumbnail img-responsive visible-xs")
               %div.col-md-11
                 %p
                   %i.fa.fa-quote-left.light

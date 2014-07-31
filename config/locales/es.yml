@@ -251,6 +251,8 @@ es:
     untitled: Sin asunto
     asked: ' preguntó:'
     question_asked_to: 'Pregunta realizada a:'
+    from: 'de:'
+    to: 'para:'
   congressmen:
     home: Portada
     breadcrumb: Congresistas

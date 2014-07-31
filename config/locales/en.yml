@@ -251,6 +251,8 @@ en:
     untitled: Untitled
     asked: ' asked:'
     question_asked_to: 'Question asked to:'
+    from: 'from:'
+    to: 'to:'
   congressmen:
     home: Home
     breadcrumb: Congresistas
