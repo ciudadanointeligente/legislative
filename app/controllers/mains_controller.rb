@@ -7,7 +7,7 @@ class MainsController < ApplicationController
   def index
     @low_chamber_agenda = Array.new
     @high_chamber_agenda = Array.new
-  
+
     if !ENV['component_legislative_agendas'].blank? and !ENV['agendas_url'].blank? and !ENV['billit_url'].blank?
 	    @low_chamber_agenda[0] = get_current_chamber_agenda ENV['low_chamber_name']
       if ! @low_chamber_agenda[0]['bill_list'].blank?
@@ -26,7 +26,7 @@ class MainsController < ApplicationController
       @hot_bills = prioritize Billit::BillPage.get(ENV['billit_url'] + URI::escape("search?current_priority=Discusión inmediata|Suma|Simple&per_page=100"), 'application/json').bills
     end
 
-    if (!ENV['writeit_url_base'].blank?)
+    if (!ENV['writeit_base_url'].blank?)
 	    @answers = LegislativeAnswerCollection.get()
 
 	    if @answers.objects.length > 2
@@ -41,7 +41,7 @@ class MainsController < ApplicationController
     query = URI::escape(query)
     #response = RestClient.get(ENV['agendas_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
     #response = JSON.parse(response).first
-    
+
     begin
       response = RestClient.get(ENV['agendas_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
       response = JSON.parse(response).first
