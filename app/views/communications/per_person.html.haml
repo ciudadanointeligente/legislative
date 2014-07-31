@@ -2,7 +2,7 @@
   %div
     %ol.breadcrumb
       %li
-        = link_to 'Portada', root_path
+        = link_to t('layout.home'), root_path
       %li.active
         = t('layout.communication')
 
@@ -13,17 +13,19 @@
     %h2
       = @person.name
 
-
   %section#responses
     %div.page-header
       %h3
-        Mensajes enviados
+        = t('communication.list_messages')
     %div.panel.panel-default
 
       - @messages.objects.each do |message|
         %div.panel-heading
           %h4
-            = message.subject
+            - if message.subject.length > 8
+              = message.subject
+            - else
+              = t('communication.untitled')
         %div.panel-body
           %p
             = message.content

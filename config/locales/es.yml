@@ -241,13 +241,18 @@ es:
     email: E-mail
     choose_congressmen: Seleccione un senador o diputado
     writte_message: Redacta tu mensaje
-    subject: Título del mensaje
+    subject: Asunto del mensaje (mínimo tres palabras)
     message: Contenido del mensaje
     send: Enviar
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
     confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
     confirmation_mail_sent_fail: 'Tenemos problemas enviando tu email, el correo %s parece no ser válido o no haz seleccionado un destinatario'
+    untitled: Sin asunto
+    asked: ' preguntó:'
+    question_asked_to: 'Pregunta realizada a:'
+    from: 'de:'
+    to: 'para:'
   congressmen:
     home: Portada
     breadcrumb: Congresistas
