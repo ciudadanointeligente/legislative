@@ -44,15 +44,19 @@
     = label_tag :current_priority, t('search.current_priority')
     %select{:name => "current_priority[]", :class => "form-control chosen", :multiple => "multiple", :'data-placeholder' => t('search.placeholder_priority'), :onfocus => "ga('send','bills_filters','focus_priority')"}
       %option{:value => "", selected: params[:current_priority] == ""}
-      - @priorities = Billit::Bill.class_variable_get(:@@current_priority_valid_values)
-      - if @priorities != nil
-        - @priorities.each do |priority|
+      - @selectable_priorities = Billit::Bill.class_variable_get(:@@current_priority_valid_values)
+      - if @selectable_priorities != nil
+        - @selectable_priorities.each do |priority|
           - if !params[:current_priority].blank?
             - params[:current_priority].each do |priority_in_param|
               - if priority_in_param == priority
                 %option{:value => priority, selected: "selected"}= priority
-          - else
-            %option{:value => priority}= priority
+        - unselected_priorities = Array.new
+        - unselected_priorities = @selectable_priorities - params[:current_priority]
+        - unselected_priorities.each do |unselected_priority|
+          %option{:value => unselected_priority}= unselected_priority
+      - else
+        %option{:value => priority}= priority
 
   - presets = preset_queries
   - if presets != nil
