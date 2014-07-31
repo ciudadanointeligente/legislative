@@ -2,7 +2,7 @@
   %div
     %ol.breadcrumb
       %li
-        = link_to 'Portada', root_path
+        = link_to t('layout.home'), root_path
       %li.active
         = t('layout.communication')
 
@@ -86,12 +86,12 @@
                 = t('communication.untitled')
             %p
               %span.light
-                = message.author_name.titleize + " preguntó:"
+                = message.author_name.titleize + t('communication.asked')
               = message.content
             %ul.list-inline
               %li
                 %span.light
-                  Pregunta hecha a:
+                  = t('communication.question_asked_to')
               - message.people.each do |person|
                 %li
                   = person.name

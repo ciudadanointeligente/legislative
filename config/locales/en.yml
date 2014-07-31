@@ -249,6 +249,8 @@ en:
     confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
     confirmation_mail_sent_fail: We have problems delivering your email
     untitled: Untitled
+    asked: ' asked:'
+    question_asked_to: 'Question asked to:'
   congressmen:
     home: Home
     breadcrumb: Congresistas
