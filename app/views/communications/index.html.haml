@@ -53,15 +53,15 @@
                       - compare_path = url.path.split('/')
                       - if compare_path.last == params[:id]
                         %option{:value => congressmen.popit_api_uri, :selected => 'selected'}
-                          =congressmen.name 
+                          =congressmen.name
                       - else
                         %option{:value => congressmen.popit_api_uri}
-                          =congressmen.name 
+                          =congressmen.name
 
               %div.col-md-9.message-box-right.tituloFormulario
                 %h5
                   = t('communication.writte_message')
-                
+
                 %div.form-group
                   = text_field_tag :subject, nil ,:class => "form-control", :placeholder=>t('communication.subject')
                 %div.form-group
@@ -72,7 +72,7 @@
 
   %section#responses
     %div.row.page-header
-      
+
     - if !@messages.blank? and !@messages.objects.blank?
       %h3
         = t('communication.list_messages')
@@ -80,10 +80,13 @@
         %div.row.questions
           %div.col-md-12
             %h5
-              = message.subject
-            %p 
+              - if message.subject.length > 8
+                = message.subject
+              - else
+                = t('communication.untitled')
+            %p
               %span.light
-                = message.author_name + " preguntó:"
+                = message.author_name.titleize + " preguntó:"
               = message.content
             %ul.list-inline
               %li
@@ -95,8 +98,8 @@
         %div
           - message.answers[0..1].each do |answer|
             %div.row.response-separation.answers
-              %div.col-md-1  
-                = image_tag('default-profile.png', class: "img-circle img-responsive") 
+              %div.col-md-1
+                = image_tag('default-profile.png', class: "img-circle img-responsive")
               %div.col-md-11
                 %p
                   %i.fa.fa-quote-left.light
@@ -128,7 +131,7 @@
       $(".chosen").chosen({
         no_results_text: "Oops, no encontramos nada!"
       });
-      
+
       $('.per_person').popover({
         'trigger':'hover',
         'html':true,
@@ -136,4 +139,3 @@
         'delay': { show: 0, hide: 1000 }
       })
     })
-    
