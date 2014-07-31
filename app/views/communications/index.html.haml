@@ -114,7 +114,8 @@
                   %i.fa.fa-quote-right.light
                 %p.text-right
                   %a
-                    = answer.person.name
+                    = link_to communications_path + '/' + congressman['id'].to_s do
+                      = answer.person.name
 
       -if @pagination['total_pages'] > 1
         %div.text-center
