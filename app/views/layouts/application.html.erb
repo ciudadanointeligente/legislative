@@ -12,7 +12,7 @@
     <title><%= @title %><%= Legislative::Application.config.application_name %></title>
     <meta name="description" content="<%= ENV['description'] %>">
     <meta name="keywords" content="<%= ENV['keywords'] %>">
-    
+
     <meta name="og:image" content="<%= asset_path('assets/congreso-abierto-og-fb-404.png') %>">
     <meta name="og:title" content="<%= @title %><%= Legislative::Application.config.application_name %>">
     <meta name="og:description" content="<%= ENV['og_description'] %>">
@@ -51,6 +51,7 @@
     <!-- scripts concatenated and minified via build script -->
     <!-- Latest compiled and minified JavaScript -->
     <%= javascript_include_tag '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js' %>
+    <%= javascript_include_tag 'jquery.expander.js' %>
     <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js' %>
     <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js'%>
     <%= javascript_include_tag '//cdn.jsdelivr.net/tag-it/2.0/js/tag-it.min.js' %>
@@ -105,7 +106,7 @@
       </div><!--/.nav-collapse -->
     </div>
   </div>
-  
+
   <!-- Content -->
   <%= yield %>
   <!-- End content -->

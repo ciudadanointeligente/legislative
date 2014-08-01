@@ -90,7 +90,7 @@
               = simple_format(message.content)
               %div
                 = localize message.created.to_date, :format => :long
-            %ul.list-inline
+            %ul.list-inline.expandable
               %li
                 %span.light
                   = t('communication.question_asked_to')
@@ -151,4 +151,8 @@
         'placement':'top',
         'delay': { show: 0, hide: 1000 }
       })
+      $('ul.expandable').expander();
     })
+
+
+
