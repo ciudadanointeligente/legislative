@@ -253,6 +253,9 @@ es:
     question_asked_to: 'Pregunta realizada a:'
     from: 'de:'
     to: 'para:'
+    read_more: mostrar todos
+    read_less: ocultar
+    no_results: 'Oops, ¡no encontramos nada!'
   congressmen:
     home: Portada
     breadcrumb: Congresistas
