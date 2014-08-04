@@ -223,12 +223,12 @@
 
 .message-box-right .form-control::-webkit-input-placeholder {
   color: #E6E6C9;
-  font-family: 'Lato', sans-serif; 
+  font-family: 'Lato', sans-serif;
 }
 
 .message-box-right .form-control:-moz-placeholder {
   color: #E6E6C9;
-  font-family: 'Lato', sans-serif; 
+  font-family: 'Lato', sans-serif;
 }
 
 .questions {
@@ -273,7 +273,7 @@
 
 .form-control::-moz-placeholder {
   color: #A6A691!important;
-  font-family: 'Lato', sans-serif; 
+  font-family: 'Lato', sans-serif;
 }
 
 .chosen-container-multi .chosen-choices li.search-field input[type="text"] {
@@ -320,7 +320,7 @@ ts {
 }
 
 .default{
-  background-color: #3E1F3E !important; 
+  background-color: #3E1F3E !important;
   color: #E6E6C9!important;
   border: 1px solid #6B506A;
 }
@@ -378,4 +378,8 @@ ts {
 .form-control#subject {
   color: #F9F9EB!important;
 }
-/*End Comunicacion*/
+
+.expander-after {
+  display: inline-block;
+}
+/*End communication*/
