@@ -95,7 +95,7 @@
                 %span.light
                   = t('communication.question_asked_to')
               - message.people.each do |person|
-                %li
+                %li.expander-after
                   = person.name
         %div
           - message.answers.each do |answer|
@@ -142,7 +142,7 @@
   :javascript
     $(document).ready(function(){
       $(".chosen").chosen({
-        no_results_text: "Oops, no encontramos nada!"
+        no_results_text: '#{t('communication.no_results')}'
       });
 
       $('.per_person').popover({
@@ -151,8 +151,10 @@
         'placement':'top',
         'delay': { show: 0, hide: 1000 }
       })
-      $('ul.expandable').expander();
+      $('ul.expandable').expander({
+        expandEffect: 'fadeIn',
+        slicePoint: 160,
+        expandText: '#{t('communication.read_more')}',
+        userCollapseText: '#{t('communication.read_less')}'
+      });
     })
-
-
-

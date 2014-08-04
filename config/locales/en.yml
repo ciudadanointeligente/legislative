@@ -253,6 +253,9 @@ en:
     question_asked_to: 'Question asked to:'
     from: 'from:'
     to: 'to:'
+    read_more: show all
+    read_less: hide
+    no_results: 'Oops, could not find anything!'
   congressmen:
     home: Home
     breadcrumb: Congresistas
