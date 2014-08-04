@@ -19,13 +19,13 @@
         %li
           - url = '//www.facebook.com/sharer/sharer.php?u='+request.original_url
           %a.btn.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","facebook","width=450, height=250")'}
-            %i.fa.fa-facebook 
+            %i.fa.fa-facebook
             = t("congressmen.fb_share")
         - if !ENV['twitter_tags'].blank?
           %li
             - url = '//twitter.com/share?url='+request.original_url+'&via='+ENV['twitter_account']+'&hashtags='+ENV['twitter_tags']+'&text=Revisa el perfil de '+@el_twitter+' en '
             %a.btn.btn-warning.btn-xs{'href'=>'#', 'onclick'=>'window.open("'+url+'","twitter","width=450, height=250")'}
-              %i.fa.fa-twitter 
+              %i.fa.fa-twitter
               = t("congressmen.tw_share")
 
   - if !ENV['billit_url'].blank? and !ENV['popit_url'].blank? and !ENV['popit_persons'].blank? and !ENV['popit_search'].blank? and !ENV['popit_organizations'].blank? and !ENV['popit_organizations_search'].blank?
@@ -46,7 +46,7 @@
             = image_tag('default-profile.png', class: "img-responsive")
         - else
           = image_tag('default-profile.png', class: "img-responsive")
-        
+
         - if ! @congressman.birth_date.blank?
           %p
             %span.light
@@ -85,47 +85,46 @@
                 = r.district
               - if ! r.region.blank?
                 %p
-                  %span.light 
+                  %span.light
                     = t('congressmen.region')
                   = r.region
               - if ! r.comunas.blank?
                 %p
-                  %span.light 
-                    = t('congressmen.comuna') 
+                  %span.light
+                    = t('congressmen.comuna')
                   = r.comunas
 
-            
         - if ! @congressman.memberships.blank?
           %p
             %span.light
               = t('congressmen.party')
             - @organizations.each do | o |
               = link_to o.name, {:controller => 'congressmen', :action => 'searches', :organizations => o.id} if @congressman.memberships[0].organization_id == o.id
-              
+
         - if ! @congressman.commissions.blank?
           %p
             - @congressman.commissions.each do | c |
               - if ! c.permanent.blank?
                 %p
                   %span.light
-                    = t('congressmen.permanent') 
-                  = c.permanent  
-              
+                    = t('congressmen.permanent')
+                  = c.permanent
+
               - if ! c.special.blank?
                 %p
-                  %span.light 
-                    = t('congressmen.special') 
-                  = c.special 
-              
+                  %span.light
+                    = t('congressmen.special')
+                  = c.special
+
               - if ! c.researcher.blank?
-                %p 
-                  %span.light 
+                %p
+                  %span.light
                     = t('congressmen.research')
-                  = c.researcher 
-        
+                  = c.researcher
+
         - if ! @congressman.links.blank?
           %div
-            %p 
+            %p
               %span.light
                 = t('congressmen.socialnet')
             %ul.list-inline
@@ -136,12 +135,10 @@
                   - icon = 'fa-twitter'
                 - when 'facebook'
                   - icon = 'fa-facebook'
-                %li  
+                %li
                   %a{ 'href' => link.url, 'target' => '_blank' }
                     %i{:class=>'fa '+icon}
                     = link.note.capitalize
-                  / %br/
-
 
       %div.col-md-9.whitewithaside
         %h4
@@ -154,17 +151,7 @@
           %div.alert.alert-warning
             = sprintf('%s aún no tiene iniciativas', @congressman.name)
 
-        - if ! @message.blank?
-          %div.special-box
-            = t('Última pregunta')
-            %div
-              %p.question.subject
-              = @message.subject
-              %p.question.subject
-              = @message.content
-              %p.total-answers.text-right
-              = sprintf( t('congressmen.askthem_responses'), @congressman.name  )
-
+        = render :partial => "latest_messages"
 
         %div.votes
           %h4
