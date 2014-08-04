@@ -87,8 +87,10 @@
             %p
               %span.light
                 = message.author_name.titleize + t('communication.asked')
-              = message.content
-            %ul.list-inline
+              = simple_format(message.content)
+              %div
+                = localize message.created.to_date, :format => :long
+            %ul.list-inline.expandable
               %li
                 %span.light
                   = t('communication.question_asked_to')
@@ -110,8 +112,11 @@
               %div.col-md-11
                 %p
                   %i.fa.fa-quote-left.light
-                  = answer.content
+                  = simple_format(answer.content)
                   %i.fa.fa-quote-right.light
+                  %div
+                    = localize answer.created.to_date, :format => :long
+
                 %p.text-right
                   %a
                     = link_to congressmen_path + '/' + congressman['id'].to_s do
@@ -146,4 +151,8 @@
         'placement':'top',
         'delay': { show: 0, hide: 1000 }
       })
+      $('ul.expandable').expander();
     })
+
+
+
