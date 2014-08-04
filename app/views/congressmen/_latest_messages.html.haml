@@ -1,0 +1,10 @@
+- if !@message.blank?
+	%div.special-box
+	  = t('Última pregunta')
+	  %div
+	    %p.question.subject
+	    = @message.subject
+	    %p.question.subject
+	    = @message.content
+	    %p.total-answers.text-right
+	    = sprintf( t('congressmen.askthem_responses'), @congressman.name  )

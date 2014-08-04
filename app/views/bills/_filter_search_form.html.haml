@@ -51,10 +51,11 @@
             - params[:current_priority].each do |priority_in_param|
               - if priority_in_param == priority
                 %option{:value => priority, selected: "selected"}= priority
-        - unselected_priorities = Array.new
-        - unselected_priorities = @selectable_priorities - params[:current_priority]
-        - unselected_priorities.each do |unselected_priority|
-          %option{:value => unselected_priority}= unselected_priority
+        - if !params[:current_priority].blank?
+          - unselected_priorities = Array.new
+          - unselected_priorities = @selectable_priorities - params[:current_priority]
+          - unselected_priorities.each do |unselected_priority|
+            %option{:value => unselected_priority}= unselected_priority
       - else
         %option{:value => priority}= priority
 
