@@ -293,6 +293,7 @@ en:
     years: '%s (%s years)'
     askto: 'Get in touch with %s'
     socialnet: 'Social networks:'
+    last_question: Last question
   email:
     subject: 'Congreso abierto, confirmación de suscripción'
     body_header: 'Bienvenido a Congreso abierto, %s'
