@@ -52,7 +52,7 @@ class AgendasController < ApplicationController
 
   # GET agendas event
   def agendas_table
-    query = 'select * from data limit 200'
+    query = 'select * from data order by date_scraped DESC limit 200'
     query = URI::escape(query)
     response = RestClient.get(ENV['agendas_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
     @raw_agendas = JSON.parse(response)
@@ -70,7 +70,7 @@ class AgendasController < ApplicationController
 
   # GET district weeks event
   def district_weeks
-    query = 'select * from data limit 200'
+    query = 'select * from data order by date_scraped DESC limit 200'
     query = URI::escape(query)
     response = RestClient.get(ENV['district_weeks_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
     event_district_weeks = JSON.parse(response)
