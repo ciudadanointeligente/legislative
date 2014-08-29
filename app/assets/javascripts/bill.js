@@ -22,7 +22,7 @@ $(document).ready(function() {
   // Options
   // for more customization check: https://github.com/aehlke/tag-it
   var config = {
-    availableTags: ["deporte", "desarrollo", "educación", "pobreza", "salud", "seguridad"],
+    availableTags: ["deporte", "desarrollo", "educación", "pobreza", "salud", "seguridad", "recursos naturales", "medio ambiente", "educación, deportes y recreación", "nacional"],
     autocomplete: {delay: 0, minLength: 2},
     allowSpaces: true,
     afterTagAdded: tagsUpdate,

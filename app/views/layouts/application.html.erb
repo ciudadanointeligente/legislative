@@ -36,7 +36,22 @@
     <meta name="mobile-web-app-capable" content="yes">
     <!-- end meta for fullscreen -->
 
-    <%= stylesheet_link_tag "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" %>
+    <!-- bing -->
+    <meta name="msvalidate.01" content="<%= ENV['bing_search'] %>">
+    <!-- eof bing -->
+
+    <!-- twitter card summary -->
+    <meta name="twitter:card" content="<%= ENV['twitter_card'] %>">
+    <meta name="twitter:site" content="<%= ENV['twitter_site'] %>">
+    <meta name="twitter:title" content="<%= ENV['twitter_title'] %>">
+    <meta name="twitter:description" content="<%= ENV['twitter_description'] %>">
+    <meta name="twitter:creator" content="<%= ENV['twitter_creator'] %>">
+    <meta name="twitter:image" content="<%= ENV['twitter_image'] %>">
+    <meta name="twitter:domain" content="<%= ENV['twitter_domain'] %>">
+    <!-- eo twitter card -->
+
+    <!-- <%= stylesheet_link_tag "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" %> -->
+    <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" %>
     <%= stylesheet_link_tag "//cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.min.css" %>
     <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Raleway:400,700' %>
     <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Lato:400,700' %>
