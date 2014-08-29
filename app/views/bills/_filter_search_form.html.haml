@@ -48,12 +48,12 @@
       - if @selectable_priorities != nil
         - @selectable_priorities.each do |priority|
           - if !params[:current_priority].blank?
-            - params[:current_priority].each do |priority_in_param|
+            - params[:current_priority].split("|").each do |priority_in_param|
               - if priority_in_param == priority
                 %option{:value => priority, selected: "selected"}= priority
         - unselected_priorities = Array.new
         - if params[:current_priority] != nil
-          - unselected_priorities = @selectable_priorities - params[:current_priority]
+          - unselected_priorities = @selectable_priorities - params[:current_priority].split("|")
         - else
           - unselected_priorities = @selectable_priorities
         - unselected_priorities.each do |unselected_priority|
@@ -62,7 +62,7 @@
         %option{:value => priority}= priority
 
   - presets = preset_queries
-  - if presets != nil
+  - if !presets.empty?
     %div.form-group
       = label_tag :initial_chamber, t('search.predefined_queries')
       %select{:name => "predefined_queries", :class => "form-control", :onfocus => "ga('send','bills_filters','focus_predefined_queries')"}
