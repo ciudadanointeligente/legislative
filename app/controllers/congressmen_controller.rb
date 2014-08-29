@@ -10,11 +10,6 @@ class CongressmenController < ApplicationController
 
   # GET /congressmen
   def index
-    # @congressmen = PopitPersonCollection.new
-    # @congressmen.get ENV['popit_persons']+'?page='+"#{params[:page]}", 'application/json'
-    
-    @title = t('congressmen.title') + ' - '
-
     @congressmen =  Hash.new
     @organizations = Hash.new
 
@@ -31,6 +26,7 @@ class CongressmenController < ApplicationController
       end
       
     end
+    @title = t('congressmen.title') + ' - '
   end
 
   # GET /congressmen/1

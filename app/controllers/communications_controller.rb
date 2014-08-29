@@ -5,7 +5,6 @@ class CommunicationsController < ApplicationController
 
   def index
     @messages = Hash.new
-
     @congressmen = PopitPersonCollection.new
     @congressmen.get ENV['popit_persons'] + '?per_page=200', 'application/json'
     @congressmen.persons.sort! { |x,y| x.name <=> y.name }
@@ -17,12 +16,11 @@ class CommunicationsController < ApplicationController
         page = params[:page]
       end
       @messages.get page: page
-      
+
       set_pagination @messages.meta
     end
 
     @title = t('layout.communication') + ' - '
-
   end
 
   def create
@@ -80,7 +78,6 @@ class CommunicationsController < ApplicationController
     @pagination = Hash.new
     @pagination['current_page'] = (meta['offset']/meta['limit']) + 1
     @pagination['total_pages'] = (meta['total_count']/meta['limit']) + 1
-
   end
 
   def valid_email email
@@ -89,5 +86,4 @@ class CommunicationsController < ApplicationController
     end
     return false
   end
-
 end

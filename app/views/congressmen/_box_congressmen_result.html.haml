@@ -25,10 +25,8 @@
         %p
           = link_to url_for(controller: "communications", action: "index", id: congressman.id) do
             %i.fa.fa-envelope-o{title: t('congressmen.askthem')}
-            / = sprintf(t('congressmen.askto'),congressman.name)
-            = t('congressmen.askthem')
-        
-            
+            = t('congressmen.askthem')        
+
   %div.pull-left
     - if ! @congressmen.prev_url.blank?
       = link_to congressmen_path + '/?page=' + (@congressmen.page - 1).to_s, :class => 'btn btn-default' do

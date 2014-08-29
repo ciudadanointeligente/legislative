@@ -14,7 +14,6 @@ class LegislativeMessageCollection
 	end
 
 	collection :objects, :class => LegislativeMessageRepresenter
-
 	property :meta
 
 	def get(page: 1, person: nil, **options)

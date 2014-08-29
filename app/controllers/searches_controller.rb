@@ -1,12 +1,10 @@
 require 'net/http'
 require 'httparty'
-
 require 'popit_representers/models/organization_collection'
 require 'billit_representers/models/bill_page'
 require 'billit_representers/models/bill_basic'
 require './app/models/bill'
 require './app/models/bill_basic'
-
 
 class SearchesController < ApplicationController
   def index
@@ -30,8 +28,7 @@ class SearchesController < ApplicationController
 
       if !params.nil? && params.length > 3 # default have 3 keys {'action'=>'index', 'controller'=>'searchs', "locale"=>"xx"}
         
-        if ! ( params[:bills] == '1' && params[:congressmen] == '2' )
-          # make a redirect in case of someone pick just one filter in main page
+        if ! ( params[:bills] == '1' && params[:congressmen] == '2' ) # make a redirect in case of someone pick just one filter in main page
           # redirect to bills advanced search
           if params[:bills] == '1' || params[:congressmen] == ''
             redirect_to searches_bills_path(params)
