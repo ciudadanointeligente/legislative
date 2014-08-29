@@ -49,6 +49,14 @@ production:
   subject_update: 'Congreso abierto, Actualización de proyectos de ley'
   url_suscription: 'http://congresoabierto.cl'
   preset1: ~    # custom search filters example, up to 9: '["2000-2006 Ricardo Lagos Escobar", "creation_date_min=2000-03-11&creation_date_max=2006-03-10"]'
+  bing_search: ~ # bing webmaster validation
+  twitter_card: ~ #twitter:card
+  twitter_site: ~ #twitter:site
+  twitter_title: ~ #twitter:title
+  twitter_description: ~ #twitter:description
+  twitter_creator: ~ #twitter:creator
+  twitter_image: ~ #twitter:image
+  twitter_domain: ~ #twitter:domain
 
 development:
   root_url:   ~           # example: 'http://www.congresoabierto.cl'
@@ -96,6 +104,14 @@ development:
   subject_update: 'Congreso abierto, Actualización de proyectos de ley'
   url_suscription: 'http://congresoabierto.cl'
   preset1: ~    # custom search filters example, up to 9: '["2000-2006 Ricardo Lagos Escobar", "creation_date_min=2000-03-11&creation_date_max=2006-03-10"]'
+  bing_search: ~ # bing webmaster validation
+  twitter_card: ~ #twitter:card
+  twitter_site: ~ #twitter:site
+  twitter_title: ~ #twitter:title
+  twitter_description: ~ #twitter:description
+  twitter_creator: ~ #twitter:creator
+  twitter_image: ~ #twitter:image
+  twitter_domain: ~ #twitter:domain
 
 test:
   root_url:  ~
