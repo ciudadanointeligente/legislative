@@ -47,7 +47,7 @@
                 %div.form-group.tab-content
                   %h5
                     = t('communication.to')
-                  %select.form-control.chosen{:multiple => "multiple", :name => "recipients[]", :'data-placeholder' => t('communication.choose_congressmen')}
+                  %select{:name => "recipients[]", :class => "form-control chosen", :multiple => "multiple", :'data-placeholder' => t('communication.choose_congressmen')}
                     - @congressmen.persons.each do |congressmen|
                       - url = URI.parse(congressmen.popit_api_uri)
                       - compare_path = url.path.split('/')
