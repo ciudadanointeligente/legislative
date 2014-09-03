@@ -43,9 +43,17 @@
     <!-- twitter card summary -->
     <meta name="twitter:card" content="<%= ENV['twitter_card'] %>">
     <meta name="twitter:site" content="<%= ENV['twitter_site'] %>">
-    <meta name="twitter:title" content="<%= ENV['twitter_title'] %>">
-    <meta name="twitter:description" content="<%= ENV['twitter_description'] %>">
+    <% if !@el_twitter.blank? %>
+      <meta name="twitter:title" content="<%= @congressman.name %>">
+      <meta name="twitter:description" content="Representa a <%= @district %> - <%= @region %>">
+    <% else %>
+      <meta name="twitter:title" content="<%= ENV['twitter_title'] %>">
+      <meta name="twitter:description" content="<%= ENV['twitter_description'] %>">
+    <% end %>
     <meta name="twitter:creator" content="<%= ENV['twitter_creator'] %>">
+    <% if !@el_twitter.blank? and !@congressman.images.blank? and !@congressman.images[0].url.blank? %>
+      <meta name="twitter:image" content="<%= @congressman.images[0].url %>">
+    <% end %>
     <meta name="twitter:image" content="<%= ENV['twitter_image'] %>">
     <meta name="twitter:domain" content="<%= ENV['twitter_domain'] %>">
     <!-- eo twitter card -->
