@@ -1,3 +1,4 @@
+require 'htmlentities'
 require 'billit_representers/models/bill'
 require 'billit_representers/models/bill_page'
 require 'billit_representers/models/bill_basic'
@@ -103,6 +104,7 @@ class BillsController < ApplicationController
 
     @keywords = String.new
     @bills_query = Hash.new
+    coder = HTMLEntities.new
 
     if !ENV['billit_url'].blank?
       if !params.nil? && params.length > 3
@@ -111,7 +113,7 @@ class BillsController < ApplicationController
           @keywords = params['predefined_queries'] + '&'
           params.each do |key, value|
             if key != 'utf8' && key != 'locale' && key != 'action' && key != 'controller' && !(value.is_a? Array) && !value.blank? && key != 'predefined_queries' && key != 'creation_date_min' && key != 'creation_date_max'
-              @keywords << key + '=' + value + '&'
+              @keywords << key + '=' + coder.encode(value) + '&'
             elsif (value.is_a? Array)
               @keywords << key + '='
               array_keyword = String.new
@@ -128,7 +130,7 @@ class BillsController < ApplicationController
           #case of normal filters
           params.each do |key, value|
             if key != 'utf8' && key != 'locale' && key != 'action' && key != 'controller' && !(value.is_a? Array) && !value.blank?
-              @keywords << key + '=' + value + '&'
+              @keywords << key + '=' + coder.encode(value) + '&'
             elsif (value.is_a? Array)
               @keywords << key + '='
               array_keyword = String.new
