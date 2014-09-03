@@ -42,7 +42,7 @@ class SearchesController < ApplicationController
         @keywords = String.new
         params.each do |key, value|
           if key != 'utf8' && key != 'commit' && key != 'format' && key != 'locale' && key != 'action' && key != 'controller'
-           @keywords << key + '=' + value + '&'
+            @keywords << key + '="' + value + '"&'
           end
         end
         if params['authors'] != nil
