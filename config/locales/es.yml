@@ -231,6 +231,8 @@ es:
     delete: Eliminar
     user: Usuario
     users: Usuarios
+    bill: Proyecto de ley
+    actions: Acciones
   user_subscriptions:
     confirmation_mail_sent: Se ha enviado un correo electrónico de confirmación a la casilla registrada
     already_subscribe: Ya existe una suscripción a este Proyecto de ley con ese correo electrónico
