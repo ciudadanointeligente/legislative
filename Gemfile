@@ -46,6 +46,9 @@ gem 'ekuseru'
 gem 'rails-i18n', '~> 4.0.2'
 gem 'route_translator', '~> 3.2.4'
 
+# Library to facilitate encoding and decoding of named entities in HTML and XHTML documents
+gem 'htmlentities'
+
 # Caching
 gem 'actionpack-page_caching', '~> 1.0.2'
 gem 'actionpack-action_caching', '~> 1.1.1'
