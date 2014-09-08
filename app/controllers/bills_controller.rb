@@ -1,3 +1,4 @@
+require 'htmlentities'
 require 'billit_representers/models/bill'
 require 'billit_representers/models/bill_page'
 require 'billit_representers/models/bill_basic'
@@ -11,25 +12,21 @@ class BillsController < ApplicationController
   respond_to :html, :xls
 
   # GET /bills
-  # GET /bills.json
   def index
     redirect_to url_for :controller => 'bills', :action => 'searches'
   end
 
   # GET /bills/1
-  # GET /bills/1.json
   def show
     if !ENV['billit_url'].blank?
       @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}.json", 'application/json')
       if !@bill.blank? and !@bill.title.blank?
         # THE FOLLOWING HAS NOT BEEN TESTED SO IT WILL BE COMMENTED
-        # @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}", 'application/json')
 
-        # # paperworks
+        # paperworks
         @date_freq = Array.new
-        #bill_range_dates = @bill.paperworks.map {|paperwork| Date.strptime(paperwork.date, "%Y-%m-%d")}
         bill_range_dates = @bill.paperworks.map do |paperwork|
-          if( !paperwork.date.blank? )
+          if (!paperwork.date.blank?) #workaround for paperworks without date
             Date.strptime(paperwork.date, "%Y-%m-%d")
           else
             Date.strptime(Date.today.to_time.to_s, "%Y-%m-%d")
@@ -60,7 +57,6 @@ class BillsController < ApplicationController
           end
         end
 
-        #setup the title page
         @title = @bill.title + ' - '
 
         @paperworks = @bill.paperworks
@@ -97,9 +93,8 @@ class BillsController < ApplicationController
   end
 
   # PUT /bills/1
-  # PUT /bills/1.json
   def update
-    #Currently only updates tags
+    #currently only for tags
     HTTParty.put(ENV['billit_url']+params[:id]+'.json', body: {tags: params[:tags]})
     render text: params.to_s, status: 201
   end
@@ -109,15 +104,16 @@ class BillsController < ApplicationController
 
     @keywords = String.new
     @bills_query = Hash.new
+    coder = HTMLEntities.new
 
     if !ENV['billit_url'].blank?
       if !params.nil? && params.length > 3
-        # Case with predefined queries selected
+        #case with predefined queries selected
         if params['predefined_queries'] != nil
           @keywords = params['predefined_queries'] + '&'
           params.each do |key, value|
             if key != 'utf8' && key != 'locale' && key != 'action' && key != 'controller' && !(value.is_a? Array) && !value.blank? && key != 'predefined_queries' && key != 'creation_date_min' && key != 'creation_date_max'
-              @keywords << key + '=' + value + '&'
+              @keywords << key + '=' + coder.encode(value) + '&'
             elsif (value.is_a? Array)
               @keywords << key + '='
               array_keyword = String.new
@@ -131,10 +127,10 @@ class BillsController < ApplicationController
             end
           end
         else
-          # Case of normal filters
+          #case of normal filters
           params.each do |key, value|
             if key != 'utf8' && key != 'locale' && key != 'action' && key != 'controller' && !(value.is_a? Array) && !value.blank?
-              @keywords << key + '=' + value + '&'
+              @keywords << key + '=' + coder.encode(value) + '&'
             elsif (value.is_a? Array)
               @keywords << key + '='
               array_keyword = String.new

@@ -41,7 +41,6 @@
               = t('search.bills')
             %p
               = t('search.there_are_no_results')
-
         /end of loop
 
         /loop for congressmen
@@ -71,5 +70,10 @@
               = t('search.there_are_no_results')
         /end of loop
       - else
+        %div
+          %p
+            = t('search.there_are_no_results')
+    - if ENV['popit_persons'].blank? and ENV['popit_organizations'].blank? and ENV['billit_url'].blank? and ENV['popit_search'].blank?
+      %div
         %p.alert.alert-danger
           = t('config.search').html_safe

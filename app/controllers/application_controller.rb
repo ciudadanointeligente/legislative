@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
 	before_filter :require_login
 
 	private
-
 	def current_user
 		@current_user ||= User.find(session[:user_id]) if session[:user_id]
 	end
@@ -16,7 +15,6 @@ class ApplicationController < ActionController::Base
 	# 	end
 	 end
 
-
 	# The logged_in? method simply returns true if the user is logged
 	# in and false otherwise. It does this by "booleanizing" the
 	# current_user method we created previously using a double ! operator.
@@ -25,5 +23,4 @@ class ApplicationController < ActionController::Base
 	def logged_in?
 		!!current_user
 	end
-
 end

@@ -23,14 +23,6 @@
         - @stages.each do |stage|
           %option{:value => stage, selected: params[:stage] == stage}= stage
 
-  /
-    %div.form-group
-      = label_tag :bill_type, t('search.bill_type')
-      %select{:name => "status", :class => "form-control", :onfocus => "ga('send','bills_filters','focus_type')"}
-        %option{:value => "", selected: params[:initial_chamber] == ""}= t 'search.all_the_types'
-        %option{:value => "Publicado", selected: params[:initial_chamber] == "Publicado"}= 'Ley'
-        %option{:value => "En tramitación", selected: params[:initial_chamber] == "En tramitación"}= 'Proyecto de ley'
-
   %div.form-group
     = label_tag :initial_chamber, t('search.initial_chamber')
     %select{:name => "initial_chamber", :class => "form-control", :onfocus => "ga('send','bills_filters','focus_chamber')"}

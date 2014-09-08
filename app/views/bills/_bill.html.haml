@@ -26,13 +26,3 @@
         %span.light
           = t('search.initiative')
         = bill.source
-
-
-  /
-    %div.col-md-2
-      %p
-        = link_to (new_user_subscription_path(:bill => bill.uid)) do
-          %i.fa.fa-star-o{title: t('bill.subscribe')}
-          = t('bill.subscribe')
-          %span.visible-xs 
-            = t('bill.subscribe')

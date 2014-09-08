@@ -70,7 +70,6 @@
           %p
             %span.light
               = t('congressmen.period')
-            / = @congressman.parliamentarian_period.map {|p| p.date}.join(', ')
             %ul
               - @congressman.parliamentarian_period.each do |period|
                 %li

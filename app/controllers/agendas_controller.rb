@@ -17,7 +17,6 @@ class AgendasController < ApplicationController
 
   # GET /agendas/new
   def new
-    # @agenda = Agenda.new
   end
 
   # GET /agendas/1/edit
@@ -26,27 +25,14 @@ class AgendasController < ApplicationController
 
   # POST /agendas
   def create
-    # @agenda = Agenda.new(table_params)
-
-    # if @agenda.save
-    #   redirect_to @agenda, notice: 'Table was successfully created.'
-    # else
-    #   render action: 'new'
-    # end
   end
 
   # PATCH/PUT /agendas/1
   def update
-    # if @agenda.update(table_params)
-    #   redirect_to @agenda, notice: 'Table was successfully updated.'
-    # else
-    #   render action: 'edit'
-    # end
   end
 
   # DELETE /agendas/1
   def destroy
-    # @agenda.destroy
     redirect_to tables_url, notice: 'Table was successfully destroyed.'
   end
 

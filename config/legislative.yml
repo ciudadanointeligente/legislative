@@ -5,6 +5,7 @@
 
 production:
   root_url:   ~
+  domain: ~
   analytics:  ~
   description: ~
   og_description: ~
@@ -60,6 +61,7 @@ production:
 
 development:
   root_url:   ~           # example: 'http://www.congresoabierto.cl'
+  domain: ~               # example: 'congresoabierto.cl'; used by the new Google Analytics tracking code
   analytics:  ~           # example: 'UA-XXXXX-X'; Google Analytics code
   description: ~
   og_description: ~
