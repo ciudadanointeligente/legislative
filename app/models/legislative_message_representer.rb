@@ -26,12 +26,10 @@ class LegislativeMessageRepresenter
 
 	property :subject
 	property :content
-	# property :recipients
 	property :id
 	property :author_name
 	property :author_email
 	property :created
 	collection :people, :class => PopitPerson, :extend => Popit::PersonRepresenter
 	collection :answers, :class => LegislativeAnswerRepresenter
-
 end

@@ -1,16 +1,16 @@
 require 'net/http'
+require 'htmlentities'
 require 'httparty'
-
-require 'popit_representers/models/organization_collection'
-require 'billit_representers/models/bill_page'
 require 'billit_representers/models/bill_basic'
+require 'billit_representers/models/bill_page'
+require 'popit_representers/models/organization_collection'
 require './app/models/bill'
 require './app/models/bill_basic'
-
 
 class SearchesController < ApplicationController
   def index
     @bills_query = Hash.new
+    coder = HTMLEntities.new
     
     if !ENV['popit_persons'].blank? and !ENV['popit_organizations'].blank? and !ENV['billit_url'].blank? and !ENV['popit_search'].blank?
       response = HTTParty.get(ENV['popit_persons'])
@@ -30,8 +30,7 @@ class SearchesController < ApplicationController
 
       if !params.nil? && params.length > 3 # default have 3 keys {'action'=>'index', 'controller'=>'searchs', "locale"=>"xx"}
         
-        if ! ( params[:bills] == '1' && params[:congressmen] == '2' )
-          # make a redirect in case of someone pick just one filter in main page
+        if ! ( params[:bills] == '1' && params[:congressmen] == '2' ) # make a redirect in case of someone pick just one filter in main page
           # redirect to bills advanced search
           if params[:bills] == '1' || params[:congressmen] == ''
             redirect_to searches_bills_path(params)
@@ -45,7 +44,7 @@ class SearchesController < ApplicationController
         @keywords = String.new
         params.each do |key, value|
           if key != 'utf8' && key != 'commit' && key != 'format' && key != 'locale' && key != 'action' && key != 'controller'
-           @keywords << key + '=' + value + '&'
+            @keywords << key + '="' + coder.encode(value) + '"&'
           end
         end
         if params['authors'] != nil

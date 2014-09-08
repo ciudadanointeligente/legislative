@@ -38,14 +38,15 @@
         %div
           - if !@bills_query.blank? or !@bills_query.bills.blank? and !@keywords.empty?
             %p
-              - if @bills_query.current_page == 1
-                - info_about_results = sprintf(t('search.found_results'),@bills_query.total_entries.to_s)
-              - else
-                - info_about_results = sprintf(t('search.pages_with_found_results'),@bills_query.current_page.to_s, @bills_query.total_entries.to_s)
-              = info_about_results
+              - if !@bills_query.bills.empty?
+                - if @bills_query.current_page == 1
+                  - info_about_results = sprintf(t('search.found_results'),@bills_query.total_entries.to_s)
+                - else
+                  - info_about_results = sprintf(t('search.pages_with_found_results'),@bills_query.current_page.to_s, @bills_query.total_entries.to_s)
+                = info_about_results
 
-            - icon = '<i class="fa fa-download"></i> '.html_safe
-            = link_to icon+t('search.download_as_excel'), params.merge(:format => :xls)
+                - icon = '</br><i class="fa fa-download"></i> '.html_safe
+                = link_to icon+t('search.download_as_excel'), params.merge(:format => :xls)
 
         - if !@bills_query.blank? or !@bills_query.bills.blank?
           - @bills = @bills_query.bills

@@ -10,11 +10,6 @@ class CongressmenController < ApplicationController
 
   # GET /congressmen
   def index
-    # @congressmen = PopitPersonCollection.new
-    # @congressmen.get ENV['popit_persons']+'?page='+"#{params[:page]}", 'application/json'
-    
-    @title = t('congressmen.title') + ' - '
-
     @congressmen =  Hash.new
     @organizations = Hash.new
 
@@ -31,6 +26,7 @@ class CongressmenController < ApplicationController
       end
       
     end
+    @title = t('congressmen.title') + ' - '
   end
 
   # GET /congressmen/1
@@ -125,13 +121,13 @@ class CongressmenController < ApplicationController
       query_keywords = "WHERE "
       keywords.each_with_index do |param, index|
         if param[0] == 'zone'
-          query_keywords << "region LIKE '%" + param[1] + "%' OR commune LIKE '%" + param[1] + "%'"
+          query_keywords << 'region LIKE "%' + param[1] + '%" OR commune LIKE "%' + param[1] + '%"'
         elsif param[0] == 'q'
-          query_keywords << "name LIKE '%" + param[1] + "%'"
+          query_keywords << 'name LIKE "%' + param[1] + '%"'
         elsif param[0] == 'organizations'
           query_keywords << "organization_id LIKE '%" + param[1] + "%'"
         else
-          query_keywords << param[0] + " LIKE '%" + param[1] + "%'"
+          query_keywords << param[0] + ' LIKE "%' + param[1] + '%"'
         end
         if index < keywords.size - 1
           query_keywords << ' AND '

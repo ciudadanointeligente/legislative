@@ -39,8 +39,6 @@ class MainsController < ApplicationController
   def get_current_chamber_agenda chamber
     query = sprintf("select * from data where chamber = '%s' order by date DESC limit 1", chamber)
     query = URI::escape(query)
-    #response = RestClient.get(ENV['agendas_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
-    #response = JSON.parse(response).first
 
     begin
       response = RestClient.get(ENV['agendas_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
@@ -57,7 +55,6 @@ class MainsController < ApplicationController
       @keywords << bill_id + '|'
     end
     @keywords = URI::escape(@keywords)
-    #bills = Billit::BillPage.get(ENV['billit_url'] + "search/?uid=#{@keywords}", 'application/json')
 
     begin
       bills = Billit::BillPage.get(ENV['billit_url'] + "search/?uid=#{@keywords}", 'application/json')

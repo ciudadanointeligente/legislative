@@ -28,7 +28,6 @@ class UserSubscriptionsController < ApplicationController
     subscription_user = User.find_by_email(subscription_email)
 
     if subscription_user.nil?
-    
       @user = User.new
       @user.username = subscription_email #TODO: change username (not use the email?)
       @user.email = subscription_email
@@ -44,9 +43,8 @@ class UserSubscriptionsController < ApplicationController
       @user_subscription.save
       UserSubscriptionMailer.confirmation_email(@user_subscription).deliver
       flash[:notice] = t('user_subscriptions.confirmation_mail_sent')
-      
-    else
 
+    else
       subscription_id = subscription_user.id
       already_subscribe = already_subscribe(subscription_id, subscription_bill)
 
@@ -69,9 +67,8 @@ class UserSubscriptionsController < ApplicationController
         UserSubscriptionMailer.confirmation_email(@user_subscription).deliver
         flash[:notice] = t('user_subscriptions.confirmation_mail_sent')
       end
-
     end
-  
+
     redirect_to bill_path(@user_subscription.bill)
   end
 
@@ -107,15 +104,6 @@ class UserSubscriptionsController < ApplicationController
     end
   end
 
-  # # DELETE /user_subscription?user_id=1
-  # def unsubscribe_all
-  #   @user_id = params[:user_id]
-  #   @subscriptions = UserSubscription.where(user: @user_id)
-  #   @subscriptions.each do |subscription|
-  #     subscription.destroy
-  #   end
-  # end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user_subscription
@@ -135,5 +123,4 @@ class UserSubscriptionsController < ApplicationController
         [UserSubscription.where(:user => user, :bill => bill).first, true]
       end
     end
-
 end

@@ -1,6 +1,4 @@
 Legislative::Application.routes.draw do
-
-
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#login", :as => "log_in"
   post "auth" => "sessions#login"

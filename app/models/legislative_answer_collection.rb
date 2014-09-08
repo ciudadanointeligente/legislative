@@ -13,7 +13,6 @@ class LegislativeAnswerCollection
 		super
 	end
 	collection :objects, :class => LegislativeAnswerRepresenter
-
 	property :meta
 
 	def get(page: 1, person: nil, **options)
