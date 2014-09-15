@@ -23,6 +23,8 @@ class BillsController < ApplicationController
       if !@bill.blank? and !@bill.title.blank?
         # THE FOLLOWING HAS NOT BEEN TESTED SO IT WILL BE COMMENTED
 
+        @tags = Monologue::Tag.where("lower(name) = ?", @bill.uid.mb_chars.to_s.downcase).first
+
         # paperworks
         @date_freq = Array.new
         bill_range_dates = @bill.paperworks.map do |paperwork|

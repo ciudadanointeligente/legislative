@@ -6,6 +6,8 @@ Legislative::Application.routes.draw do
   get "confirmed" => "user_subscriptions#confirmed"
   get "sitemap.:format" => "mains#sitemap"
 
+  mount Monologue::Engine, at: '/leblog'
+
   localized do
     resources :bills do
       get 'searches', on: :collection

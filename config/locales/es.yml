@@ -157,6 +157,9 @@ es:
     not: 'No'
     abstain: Abstención
     paired: Pareo
+    citizen_article_related_a: Revisa los
+    citizen_article_related_b: artículos ciudadanos
+    citizen_article_related_c: que tratan sobre este proyecto de ley
   paperwork:
     chamber: 'Cámara:'
     created_at: 'Fecha de creación:'

@@ -1,6 +1,16 @@
 = render :partial => "bill_header"
 
 %div.container
+  - if !@tags.blank?
+    %div.alert.alert-warning{'style' => 'margin-top: 10px; padding: 8px 5px;'}
+      %p
+        %i.fa.fa-comment.fa-2x 
+        = t('bill.citizen_article_related_a')
+        %a{'href' => ENV['blog_tags_url'] + @bill.uid, 'target' => '_blank', 'style' => 'text-decoration: underline;' } 
+          = t('bill.citizen_article_related_b')
+        = t('bill.citizen_article_related_c')
+        
+
   %div
     - flash.each do |name, msg|
       %div.alert.alert-info

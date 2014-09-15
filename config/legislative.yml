@@ -57,6 +57,8 @@ production:
   twitter_creator: ~ #twitter:creator
   twitter_image: ~ #twitter:image
   twitter_domain: ~ #twitter:domain
+  blog_url: ~
+  blog_tags_url: ~
 
 development:
   root_url:   ~           # example: 'http://www.congresoabierto.cl'
@@ -112,6 +114,8 @@ development:
   twitter_creator: ~ #twitter:creator
   twitter_image: ~ #twitter:image
   twitter_domain: ~ #twitter:domain
+  blog_url: ~
+  blog_tags_url: ~
 
 test:
   root_url:  ~

@@ -157,6 +157,9 @@ en:
     not: 'No'
     abstain: Abstain
     paired: Paired
+    citizen_article_related_a: Review the
+    citizen_article_related_b: citizen articles 
+    citizen_article_related_c: about this bill
   paperworks:
     chamber: 'Chamber:'
     created_at: 'Created at:'

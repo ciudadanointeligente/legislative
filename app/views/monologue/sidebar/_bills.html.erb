@@ -1,0 +1,7 @@
+<%= sidebar_section_for(t(".bills")) do %>
+  <ul id="bills-related" class="list-unstyled">
+    <% @tags.each do |tag| %>
+      <li id="<%= tag.name %>" data-id="<%= tag.name %>"></li>
+    <% end %>
+  </ul>
+<% end %>
