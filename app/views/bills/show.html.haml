@@ -155,21 +155,34 @@
       $("div#timeline>div").tsort({order:'asc', data:'sort'});
     })
 
-    var haystackText = "";
-    function findNames(needle, replacement) {
-        haystackText = document.getElementById("timeline");
-        var childs = haystackText.children;
-        for (var i = 0; i < childs.length; i++) {
-          //childs.removeChild(childs.firstChild);
-          console.log( childs[i].removeChild( childs[i].firstChild ) );
-        }
+    var principal = '';
+    function findNames(term, replacement) {
+      principal = document.getElementById('timeline');
+      var match = new RegExp(term, "ig");
 
-        var match = new RegExp(needle, "ig");
-        var replaced = "";
-        if (replacement.length > 0) {
-            replaced = haystackText.replace(match, replacement);
-        }
-        document.getElementById("timeline").innerHTML = replaced;
+      for ( x = 0; x < principal.childNodes.length; x++ ) 
+      { 
+        if( principal.childNodes[x].hasChildNodes() ) 
+        { 
+          var replaced = "";
+          if (replacement.length > 0) {
+            for ( x = 0; x < principal.childNodes.length; x++ ) 
+            { 
+              if( principal.childNodes[x].hasChildNodes() ) 
+              {
+                principal.childNodes[x].children[1].innerHTML;
+                var match = new RegExp(term, "ig");
+                var replaced = "";
+                if (replacement.length > 0) 
+                {
+                  var nvo_value = principal.childNodes[x].children[1].innerHTML.replace(match, replacement);
+                  principal.childNodes[x].children[1].innerHTML = nvo_value;
+                }
+              }
+            }
+          }
+        } 
+      }
     }
 
     document.addEventListener("DOMContentLoaded", function(event) {
