@@ -18,6 +18,16 @@ class BillsController < ApplicationController
 
   # GET /bills/1
   def show
+    @dictionary = Array.new
+    glossaries = Glossary.order("term").all
+    glossaries.each do |word|
+      new_word = Hash.new
+      new_word['term'] = word.term
+      new_word['definition'] = word.definition
+      @dictionary << new_word
+    end
+    @dictionary = @dictionary.to_json
+
     if !ENV['billit_url'].blank?
       @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}.json", 'application/json')
       if !@bill.blank? and !@bill.title.blank?
