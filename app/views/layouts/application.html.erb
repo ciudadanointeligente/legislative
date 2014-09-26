@@ -112,6 +112,9 @@
           <li><%= link_to t('layout.bills'), searches_bills_path %><li/>
           <li><%= link_to t('layout.congressmen'), congressmen_path %><li/>
           <li><%= link_to t('layout.communication'), communications_path %><li/>
+          <% if ENV['component_studies_showcase'] %>
+            <li><%= link_to t('layout.study'), monologue_path %><li/>
+          <% end %>
           <li><%= link_to t('layout.glossary'), glossaries_path %><li/>
         </ul>
         <% if current_user %>

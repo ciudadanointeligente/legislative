@@ -6,7 +6,7 @@ Legislative::Application.routes.draw do
   get "confirmed" => "user_subscriptions#confirmed"
   get "sitemap.:format" => "mains#sitemap"
 
-  mount Monologue::Engine, at: '/leblog'
+  mount Monologue::Engine, at: 'estudios'
 
   localized do
     resources :bills do
@@ -31,7 +31,7 @@ Legislative::Application.routes.draw do
     resources :users
     resources :user_subscriptions # do
       # delete 'unsubscribe_all', on: :collection
-    # end  
+    # end
     root :to => "mains#index"
   end
 end
