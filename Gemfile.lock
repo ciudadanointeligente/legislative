@@ -6,6 +6,20 @@ GIT
       rest-client (= 1.6.7)
 
 GIT
+  remote: git://github.com/jipiboily/monologue.git
+  revision: a9f7c2636d66e261c5f5d2cf2ed6d154f57c2cdd
+  specs:
+    monologue (0.4.1)
+      bcrypt (~> 3.1.7)
+      ckeditor (~> 4.0.11)
+      coffee-rails (~> 4.0.0)
+      jquery-rails
+      rails (>= 4.0.4)
+      sass-rails (~> 4.0.0)
+      select2-rails (~> 3.2)
+      truncate_html
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: 49aebde435cf556a9a897f83babfc1f4e7f4a4cc
   ref: 49aebde
@@ -75,6 +89,9 @@ GEM
     celluloid (0.15.2)
       timers (~> 1.1.0)
     chronic (0.10.2)
+    ckeditor (4.0.11)
+      mime-types
+      orm_adapter (~> 0.5.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -247,6 +264,8 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
+    select2-rails (3.5.9.1)
+      thor (~> 0.14)
     simplecov (0.8.2)
       docile (~> 1.1.0)
       multi_json
@@ -284,6 +303,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    truncate_html (0.9.2)
     turbolinks (2.2.2)
       coffee-rails
     tzinfo (1.2.1)
@@ -324,6 +344,7 @@ DEPENDENCIES
   httparty
   jquery-rails (~> 3.1.1)
   json
+  monologue!
   mysql
   newrelic_rpm
   popit_representers (= 0.0.17)

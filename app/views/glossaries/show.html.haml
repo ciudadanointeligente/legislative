@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Term:
+  = @glossary.term
+%p
+  %b Definition:
+  = @glossary.definition
+
+= link_to 'Edit', edit_glossary_path(@glossary)
+\|
+= link_to 'Back', glossaries_path

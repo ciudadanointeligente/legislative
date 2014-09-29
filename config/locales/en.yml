@@ -10,6 +10,7 @@ en:
     disclosure: Disclosure
     from: from Ciudadano Inteligente
     glossary: Glossary
+    study: Study
     home: Home
     menu: Menu
     search: Search
@@ -157,6 +158,9 @@ en:
     not: 'No'
     abstain: Abstain
     paired: Paired
+    citizen_article_related_a: Review the
+    citizen_article_related_b: citizen articles
+    citizen_article_related_c: about this bill
   paperworks:
     chamber: 'Chamber:'
     created_at: 'Created at:'
@@ -228,6 +232,11 @@ en:
     delete: Delete
     user: User
     users: Users
+    item: Item
+    bill: Bill
+    actions: Actions
+    select_all: Select all
+    submit: Submit
   user_subscriptions:
     confirmation_mail_sent: An email was sent to you. Check your inbox
     already_subscribe: There's already a suscription of that email with this bill
@@ -309,6 +318,7 @@ en:
     glossaries: glossaries
     searches: searches
     sessions: sessions
+    study: estudios
     users: users
     per_person: per_person
     per_message: per_message

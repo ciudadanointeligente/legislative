@@ -40,6 +40,7 @@ production:
   component_legislative_agendas:   ~
   component_legislative_hot_bills: ~
   component_writeit: ~
+  component_studies_showcase: ~
   default_locale: 'es'
   congressman_pic_x: '15' # add the x crop image
   congressman_pic_y: '15' # add the y crop image
@@ -96,6 +97,7 @@ development:
   component_legislative_agendas:   ~ # to enable this component set a not null value, example: 'true' or '1'
   component_legislative_hot_bills: ~ # to enable this component set a not null value, example: 'true' or '1'
   component_writeit: ~ # to enable this component set a not null value, example: 'true' or '1'
+  component_studies_showcase: ~ # to enable this component set a not null value, example: 'true' or '1'
   default_locale: 'es'
   congressman_pic_x: '15' # add the x crop image
   congressman_pic_y: '15' # add the y crop image

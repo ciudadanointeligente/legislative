@@ -54,6 +54,17 @@ class CongressmenController < ApplicationController
             @el_twitter = URI(link.url).path.sub! '/', '@'
           end
         end
+
+        @district = ''
+        @region = ''
+        @congressman.represent.each do | r |
+          if ! r.district.blank?
+            @district = r.district
+          end
+          if ! r.region.blank?
+            @region = r.region
+          end
+        end
         
         if !ENV['writeit_base_url'].blank? and !ENV['writeit_url'].blank? and !ENV["writeit_username"].blank? and !ENV["writeit_api_key"].blank? and !ENV["writeit_messages_per_page"].blank?
           messages = LegislativeMessageCollection.new
