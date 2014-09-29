@@ -1,0 +1,28 @@
+<% content_for :title do %>
+  <%= @post.title %>
+<% end %>
+
+<% content_for :meta_description do %>
+  <%= truncate(strip_tags(@post.content), length: 155) %>
+<% end %>
+
+<article>
+  <%= render partial: 'monologue/posts/post_header', locals: {post: @post }%>
+  <div class="content" data-monologue="content">
+    <%= raw @post.content %>
+  </div>
+
+	<div class="tags alert alert-info" data-monologue="tags" role="alert">
+    <span>Revisa los Proyectos de ley relacionados a este artículo en Congreso Abierto</span>
+    <ul id="bills-related" class="list-unstyled">
+      <%= render @post.tags %>
+    </ul>
+  </div>
+
+  <%= render "monologue/posts/social_sharing" %>
+
+  <div id="disqus_thread"></div>
+  <%= render 'layouts/monologue/application/disqus_embed' %>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
+</article>
+

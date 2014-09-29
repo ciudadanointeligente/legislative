@@ -10,6 +10,7 @@ es:
     disclosure: Declaraciones
     from: de Ciudadano Inteligente
     glossary: Glosario
+    study: Estudios
     home: Portada
     menu: Menú
     search: Búsqueda
@@ -157,6 +158,9 @@ es:
     not: 'No'
     abstain: Abstención
     paired: Pareo
+    citizen_article_related_a: Revisa los
+    citizen_article_related_b: artículos ciudadanos
+    citizen_article_related_c: que tratan sobre este proyecto de ley
   paperwork:
     chamber: 'Cámara:'
     created_at: 'Fecha de creación:'
@@ -228,6 +232,11 @@ es:
     delete: Eliminar
     user: Usuario
     users: Usuarios
+    item: Ítem
+    bill: Proyecto de ley
+    actions: Acciones
+    select_all: Seleccionar todos
+    submit: Enviar
   user_subscriptions:
     confirmation_mail_sent: Se ha enviado un correo electrónico de confirmación a la casilla registrada
     already_subscribe: Ya existe una suscripción a este Proyecto de ley con ese correo electrónico
@@ -309,6 +318,7 @@ es:
     glossaries: glosarios
     searches: busquedas
     sessions: sesiones
+    study: estudios
     users: usuarios
     per_person: por_persona
     per_message: por_mensaje

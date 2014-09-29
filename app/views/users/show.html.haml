@@ -4,20 +4,31 @@
     %table.table.table-striped
       %tr
         %th
+          = t('users.item')
+        %th
           = t('users.bill')
         %th
           = t('users.actions')
       - @bills_subscriptions.each do |bs|
         %tr
           %td
+            = check_box_tag bs.bill, bs.bill, false, {'data-href' => '/' + t('routes.user_subscriptions') + '/' + bs.id.to_s}
+          %td
             = link_to bs.bill, bill_path(bs.bill), {:target => '_blank'}
           %td
             - if bs.confirmed
-              = link_to'Cancelar subscripción', {controller: 'user_subscriptions', action: 'destroy', id: bs.id, ajax: true, host: ENV['root_url']}, :class => 'cancel-subscription'
+              = link_to'Cancelar subscripción', {controller: 'user_subscriptions', action: 'destroy', type: 'checkbox', id: bs.id, ajax: true, host: ENV['root_url']}, :class => 'cancel-subscription'
             - else
-              = link_to'Confirmar subscripción', {controller: 'user_subscriptions', action: 'confirmed', email_token: bs.email_token, ajax: true, host: ENV['root_url']}, :class => 'confirm-subscription'
-              | 
-              = link_to'Cancelar subscripción', {controller: 'user_subscriptions', action: 'destroy', id: bs.id, ajax: true, host: ENV['root_url']}, :class => 'cancel-subscription'
+              = link_to'Confirmar subscripción', {controller: 'user_subscriptions', action: 'confirmed', type: 'checkbox', email_token: bs.email_token, ajax: true, host: ENV['root_url']}, :class => 'confirm-subscription'
+              |
+              = link_to'Cancelar subscripción', {controller: 'user_subscriptions', action: 'destroy', type: 'checkbox', id: bs.id, ajax: true, host: ENV['root_url']}, :class => 'cancel-subscription'
+
+    %p
+      %input#select-all{:name => "select-all", :type => "checkbox"}/
+      = t('users.select_all')
+
+    %p
+      %input#sendit{:name => "sendit", :type => "submit", :value => t('users.submit')}
 
 :javascript
   $(document).ready(function(){
@@ -41,6 +52,34 @@
         type: "DELETE"
       }).done(function(){
         location.reload();
+      });
+    });
+
+    $('#select-all').click(function(event) {
+      if(this.checked) {
+        $(':checkbox').each(function() {
+          this.checked = true;
+        });
+      }
+      else if(!this.checked) {
+        $(':checkbox').each(function() {
+          this.checked = false;
+        });
+      }
+    });
+
+    $('#sendit').click(function(event) {
+      event.preventDefault();
+      $(':checkbox').each(function() {
+        if(this.checked) {
+          the_url = $(this).data('href');
+          $.ajax({
+            url: the_url,
+            type: "DELETE"
+          }).done(function(){
+            location.reload();
+          });
+        }
       });
     });
 
