@@ -86,7 +86,7 @@
             %p
               %span.light
                 = message.author_name.titleize + t('communication.asked')
-              = simple_format(message.content)
+              = simple_format(message.content.downcase)
               %div
                 = localize message.created.to_date, :format => :long
             %ul.list-inline.expandable
