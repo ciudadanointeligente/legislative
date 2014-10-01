@@ -177,7 +177,7 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (1.2.0)
-    mysql (2.9.1)
+    mysql2 (0.3.16)
     newrelic_rpm (3.9.0.229)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
@@ -345,7 +345,7 @@ DEPENDENCIES
   jquery-rails (~> 3.1.1)
   json
   monologue!
-  mysql
+  mysql2
   newrelic_rpm
   popit_representers (= 0.0.17)
   protected_attributes
