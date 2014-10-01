@@ -175,8 +175,12 @@
                 var replaced = "";
                 if (replacement.length > 0)
                 {
-                  var nvo_value = principal.childNodes[x].children[1].innerHTML.replace(match, replacement);
-                  principal.childNodes[x].children[1].innerHTML = nvo_value;
+                  //console.log(principal.childNodes[x].children[1].children[0].innerHTML);
+                  var nvo_value_0 = principal.childNodes[x].children[1].children[0].innerHTML.replace(match, replacement);
+                  principal.childNodes[x].children[1].children[0].innerHTML = nvo_value_0;
+
+                  var nvo_value_2 = principal.childNodes[x].children[1].children[2].innerHTML.replace(match, replacement);
+                  principal.childNodes[x].children[1].children[2].innerHTML = nvo_value_2;
                 }
               }
             }
@@ -195,6 +199,7 @@
             var c_term = glossaries[x].term;
             var c_definition = glossaries[x].definition;
 
-            findNames(c_term, '<a href="#" data-toggle="tooltip" title="'+c_definition+'">'+c_term+'</a>');
+            findNames(c_term, '<a href="#" data-toggle="tooltip" data-placement="top" title="'+c_definition+'">'+c_term+'</a>');
         }
+        $('[data-toggle="tooltip"]').tooltip();
     });
