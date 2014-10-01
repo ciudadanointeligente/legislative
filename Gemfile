@@ -60,8 +60,13 @@ gem 'whenever', :git => 'https://github.com/Insomniware/whenever.git', :require 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 
+# Monologue is a basic blogging engine
+gem 'monologue', github: 'jipiboily/monologue'
+
+# Mysql library for Ruby, binding to libmysql. It also forces the use of UTF-8 for the connection
+gem 'mysql2'
+
 group :production do
-  gem 'mysql'
   gem 'newrelic_rpm'
 end
 
@@ -97,5 +102,3 @@ gem 'httparty'
 gem 'json'
 gem 'protected_attributes'
 gem 'rake', '10.1.1'
-
-gem 'monologue', github: 'jipiboily/monologue'
