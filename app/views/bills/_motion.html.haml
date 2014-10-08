@@ -17,7 +17,8 @@
     - total = 0
     - motion.vote_events.each do |votes|
       - votes.counts.each do |vote|
-        - total = vote.value + total
+        - if !vote.value.blank?
+          - total = vote.value + total
 
       %div
         %a{'href' => '#', 'data-toggle' => 'modal', 'data-target' => '#myModal'+motion.date.to_time.to_i.to_s}
@@ -26,7 +27,8 @@
     %div.progress
       - motion.vote_events.each do |votes|
         - votes.counts.each do |vote|
-          - porcent = (vote.value*100/total.to_f).round.to_s
+          - if !vote.value.blank?
+            - porcent = (vote.value*100/total.to_f).round.to_s
 
           - if vote.option.downcase == 'si'
             - bar_class = ' progress-bar-success'
@@ -39,14 +41,16 @@
 
           %div{:class => "progress-bar #{bar_class}", :style => "width: #{porcent}%"}
             %h5
-              = (vote.value*100/total.to_f).round.to_s + '% '
+              - if !vote.value.blank?
+                = (vote.value*100/total.to_f).round.to_s + '% '
     %h5.light
       %ul.list-inline
         - motion.vote_events.each do |votes|
           - votes.counts.each do |vote|
-            %li
-              = vote.option
-              = vote.value
+            - if !vote.value.blank?
+              %li
+                = vote.option
+                = vote.value
 
       %div
         %div.modal.fade{'id' => 'myModal'+motion.date.to_time.to_i.to_s, 'tabindex'=>'-1', 'role'=>'dialog', 'aria-labelledby'=>'myModalLabel', 'aria-hidden'=>'true'}

@@ -160,23 +160,30 @@
       principal = document.getElementById('timeline');
       var match = new RegExp(term, "ig");
 
-      for ( x = 0; x < principal.childNodes.length; x++ ) 
+      for ( x = 0; x < principal.children.length; x++ ) 
       { 
-        if( principal.childNodes[x].hasChildNodes() ) 
+        if( principal.children[x].hasChildNodes() ) 
         { 
           var replaced = "";
           if (replacement.length > 0) {
-            for ( x = 0; x < principal.childNodes.length; x++ ) 
+            for ( x = 0; x < principal.children.length; x++ ) 
             { 
-              if( principal.childNodes[x].hasChildNodes() ) 
+              if( principal.children[x].hasChildNodes() ) 
               {
-                principal.childNodes[x].children[1].innerHTML;
+                principal.children[x].children[1].innerHTML;
                 var match = new RegExp(term, "ig");
                 var replaced = "";
                 if (replacement.length > 0) 
-                {
-                  var nvo_value = principal.childNodes[x].children[1].innerHTML.replace(match, replacement);
-                  principal.childNodes[x].children[1].innerHTML = nvo_value;
+                { 
+                  
+                  var children_title = principal.children[x].children[1].children[0];
+                  var children_content = principal.children[x].children[1].children[2];
+                  //console.log(children_title.childNodes.length);
+                  //console.log(children_content);
+
+                  var nvo_value = principal.children[x].children[1].children[0].textContent.replace(match, replacement);
+                  console.log(nvo_value);
+                  principal.children[x].children[1].children[0].innerHTML = nvo_value;
                 }
               }
             }
