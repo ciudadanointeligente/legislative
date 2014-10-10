@@ -5,6 +5,7 @@
 
 production:
   root_url:   ~
+  domain: ~
   analytics:  ~
   description: ~
   og_description: ~
@@ -39,6 +40,7 @@ production:
   component_legislative_agendas:   ~
   component_legislative_hot_bills: ~
   component_writeit: ~
+  component_studies_showcase: ~
   default_locale: 'es'
   congressman_pic_x: '15' # add the x crop image
   congressman_pic_y: '15' # add the y crop image
@@ -57,11 +59,10 @@ production:
   twitter_creator: ~ #twitter:creator
   twitter_image: ~ #twitter:image
   twitter_domain: ~ #twitter:domain
-  blog_url: ~
-  blog_tags_url: ~
 
 development:
   root_url:   ~           # example: 'http://www.congresoabierto.cl'
+  domain: ~               # example: 'congresoabierto.cl'; used by the new Google Analytics tracking code
   analytics:  ~           # example: 'UA-XXXXX-X'; Google Analytics code
   description: ~
   og_description: ~
@@ -96,6 +97,7 @@ development:
   component_legislative_agendas:   ~ # to enable this component set a not null value, example: 'true' or '1'
   component_legislative_hot_bills: ~ # to enable this component set a not null value, example: 'true' or '1'
   component_writeit: ~ # to enable this component set a not null value, example: 'true' or '1'
+  component_studies_showcase: ~ # to enable this component set a not null value, example: 'true' or '1'
   default_locale: 'es'
   congressman_pic_x: '15' # add the x crop image
   congressman_pic_y: '15' # add the y crop image
@@ -114,8 +116,6 @@ development:
   twitter_creator: ~ #twitter:creator
   twitter_image: ~ #twitter:image
   twitter_domain: ~ #twitter:domain
-  blog_url: ~
-  blog_tags_url: ~
 
 test:
   root_url:  ~

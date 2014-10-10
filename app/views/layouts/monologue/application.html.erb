@@ -99,7 +99,13 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="#">#</a><li/>
+          <li><%= link_to t('layout.bills'), t('routes.bills') + '/' + t('routes.searches') %><li/>
+          <li><%= link_to t('layout.congressmen'), t('routes.congressmen') %><li/>
+          <li><%= link_to t('layout.communication'), t('routes.communications') %><li/>
+          <% if ENV['component_studies_showcase'] %>
+            <li><%= link_to t('layout.study'), t('routes.study') %><li/>
+          <% end %>
+          <li><%= link_to t('layout.glossary'), t('routes.glossaries') %><li/>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

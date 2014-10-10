@@ -6,7 +6,7 @@
       %p
         %i.fa.fa-comment.fa-2x
         = t('bill.citizen_article_related_a')
-        %a{'href' => ENV['blog_tags_url'] + @bill.uid, 'target' => '_blank', 'style' => 'text-decoration: underline;' }
+        %a{'href' => monologue_path + '/tags/' + @bill.uid, 'target' => '_blank', 'style' => 'text-decoration: underline;' }
           = t('bill.citizen_article_related_b')
         = t('bill.citizen_article_related_c')
 
@@ -165,30 +165,32 @@
         if( principal.children[x].hasChildNodes() ) 
         { 
           var replaced = "";
-          if (replacement.length > 0) {
-            for ( x = 0; x < principal.children.length; x++ ) 
-            { 
-              if( principal.children[x].hasChildNodes() ) 
-              {
-                principal.children[x].children[1].innerHTML;
-                var match = new RegExp(term, "ig");
-                var replaced = "";
-                if (replacement.length > 0) 
-                { 
-                  
-                  var children_title = principal.children[x].children[1].children[0];
-                  var children_content = principal.children[x].children[1].children[2];
-                  //console.log(children_title.childNodes.length);
-                  //console.log(children_content);
+          
+          for ( x = 0; x < principal.children.length; x++ ) 
+          { 
+            if( principal.children[x].hasChildNodes() ) 
+            {
+              var match = new RegExp(term, "ig");
 
-                  var nvo_value = principal.children[x].children[1].children[0].textContent.replace(match, replacement);
-                  console.log(nvo_value);
-                  principal.children[x].children[1].children[0].innerHTML = nvo_value;
-                }
+              var children_title = principal.children[x].children[1].children[0];
+              var children_content = principal.children[x].children[1].children[2];
+              
+              if( children_title.children.length == 0 )
+              {              
+                var nvo_value = children_title.textContent.replace(match, replacement);
+                children_title.innerHTML = nvo_value;
               }
+
+              if( children_content.children.length == 0 )
+              {              
+                var nvo_value = children_content.textContent.replace(match, replacement);
+                children_content.innerHTML = nvo_value;
+              }
+              
             }
           }
-        } 
+          
+        }
       }
     }
 
@@ -198,10 +200,10 @@
         var elementos = Object.keys(glossaries).length;
         for(var x=0; x<elementos; x++)
         {
-            //console.log(glossaries[x].term);
-            var c_term = glossaries[x].term;
-            var c_definition = glossaries[x].definition;
+          var c_term = glossaries[x].term;
+          var c_definition = glossaries[x].definition;
 
-            findNames(c_term, '<a href="#" data-toggle="tooltip" title="'+c_definition+'">'+c_term+'</a>');
+          findNames(c_term, '<a href="#" data-toggle="tooltip" data-placement="top" title="'+c_definition+'">'+c_term+'</a>');
         }
+        $('[data-toggle="tooltip"]').tooltip();
     });
