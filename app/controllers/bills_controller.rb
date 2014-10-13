@@ -19,7 +19,7 @@ class BillsController < ApplicationController
   # GET /bills/1
   def show
     @dictionary = Array.new
-    glossaries = Glossary.order("term").all
+    glossaries = Glossary.order("term").where(searchable: true)
     glossaries.each do |word|
       new_word = Hash.new
       new_word['term'] = word.term
