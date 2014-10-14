@@ -121,7 +121,7 @@ class BillsController < ApplicationController
     if !ENV['billit_url'].blank?
       if !params.nil? && params.length > 3
         #case with predefined queries selected
-        if !params['predefined_queries'].empty?
+        if !params['predefined_queries'].blank?
           @keywords = params['predefined_queries'] + '&'
           params.each do |key, value|
             if key != 'utf8' && key != 'locale' && key != 'action' && key != 'controller' && !(value.is_a? Array) && !value.blank? && key != 'predefined_queries' && key != 'creation_date_min' && key != 'creation_date_max'
