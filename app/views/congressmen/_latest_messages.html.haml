@@ -1,10 +1,12 @@
 - if !@message.blank?
-  %div.special-box
-    = t('congressmen.last_question')
-    %div
-      %p.question.subject
-      = @message.subject
-      %p.question.subject
-      = @message.content
-      %p.total-answers.text-right
-      = sprintf( t('congressmen.askthem_responses'), @congressman.name  )
+  %div.votes
+    %h4
+      = t('congressmen.last_question')
+    %div.panel.panel-default
+      %div.panel-heading
+        = @message.subject
+      %div.panel-body{style: 'background-color: #FFF'}
+        = @message.content
+
+    /%p.total-answers.text-right
+    /  = sprintf( t('congressmen.askthem_responses'), @congressman.name  )
