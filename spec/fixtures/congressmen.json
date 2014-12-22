@@ -1,0 +1,2751 @@
+{
+  "total": 158,
+  "page": 1,
+  "per_page": 30,
+  "has_more": true,
+  "next_url": "http://pmocl.popit.mysociety.org/api/v0.1/persons?page=2",
+  "result": [
+    {
+      "id": "53303694d0c05d8b737b6c59",
+      "birth_date": "1986-02-11",
+      "commissions": [
+        {
+          "permanent": "Zonas Extremas; Trabajo y Seguridad Social; Derechos Humanos y Pueblos Originarios; Pesca, Acuicultura e Intereses Marítimos"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53317e48b062cdf804df8b0b",
+          "url": "http://www.camara.cl/img.aspx?prmid=g972",
+          "created": "2014-03-25T13:02:00.612Z"
+        }
+      ],
+      "name": "Gabriel Boric Font",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°60 2014-2018"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Egresado de Derecho",
+          "marital_status": "Soltero"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "26.18%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 60",
+          "comunas": "Antártica, Cabo de Hornos, Laguna Blanca, Natales, Porvenir, Primavera, Punta Arenas, Río Verde, San Gregorio, Timaukel, Torres del Payne",
+          "region": "XII Región de Magallanes y la Antártica Chilena"
+        }
+      ],
+      "slug": "gabriel-boric-font",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53317f08186e14f8041250df",
+          "person_id": "53303694d0c05d8b737b6c59",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6c2a67a027d001ba3c0e",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53317f08186e14f8041250df",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53317f08186e14f8041250df"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303694d0c05d8b737b6c5c",
+          "note": "Twitter",
+          "url": "https://twitter.com/gabrielboric"
+        },
+        {
+          "id": "53303694d0c05d8b737b6c5b",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/gabriel.b.font?fref=ts"
+        },
+        {
+          "id": "53303694d0c05d8b737b6c5a",
+          "note": "Website",
+          "url": "http://www.gabrielboric.cl/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303694d0c05d8b737b6c5d",
+          "label": "email",
+          "type": "email",
+          "value": "gabriel.boric@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303694d0c05d8b737b6c59",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303694d0c05d8b737b6c59",
+      "image": "http://www.camara.cl/img.aspx?prmid=g972"
+    },
+    {
+      "id": "5330369ed0c05d8b737b6c86",
+      "birth_date": "1972-08-02",
+      "commissions": [
+        {
+          "permanent": "Obras Públicas, Transporte y Telecomunicaciones; Defensa Nacional"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53318b9db062cdf804df8b76",
+          "url": "http://www.camara.cl/img.aspx?prmid=g939",
+          "created": "2014-03-25T13:58:53.513Z"
+        }
+      ],
+      "name": "Gustavo Hasbún Selume",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°26 2014-2018"
+        },
+        {
+          "date": "Dip. D°26 2010-2014"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Periodista, Bombero",
+          "marital_status": "Casado, dos hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "24.09%",
+          "place": "Segunda mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 26",
+          "comunas": "La Florida",
+          "region": "Región Metropolitana"
+        }
+      ],
+      "slug": "gustavo-hasbún-selume",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53318bb1186e14f804125142",
+          "person_id": "5330369ed0c05d8b737b6c86",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cdb67a027d001ba3c17",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53318bb1186e14f804125142",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53318bb1186e14f804125142"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330369ed0c05d8b737b6c89",
+          "note": "Twitter",
+          "url": "https://twitter.com/gustavohasbun"
+        },
+        {
+          "id": "5330369ed0c05d8b737b6c88",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/diputadohasbun?ref=ts&fref=ts"
+        },
+        {
+          "id": "5330369ed0c05d8b737b6c87",
+          "note": "Website",
+          "url": "http://www.gustavohasbun.cl/web/sitio/inicio"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330369ed0c05d8b737b6c8a",
+          "label": "email",
+          "type": "email",
+          "value": "ghasbun@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330369ed0c05d8b737b6c86",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330369ed0c05d8b737b6c86",
+      "image": "http://www.camara.cl/img.aspx?prmid=g939"
+    },
+    {
+      "id": "5330372fd0c05d8b737b6cb6",
+      "birth_date": "1980-11-29",
+      "commissions": [
+        {
+          "permanent": "Derechos Humanos y Pueblos Originarios; Economía; Educación"
+        }
+      ],
+      "images": [
+        {
+          "_id": "5331911ab062cdf804df8b8b",
+          "url": "http://www.camara.cl/img.aspx?prmid=g970",
+          "created": "2014-03-25T14:22:18.497Z"
+        }
+      ],
+      "name": "Jaime Bellolio Avaria",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°30 2014-2018"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Ingeniero Comercial",
+          "marital_status": "Casado, dos hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "22.06%",
+          "place": "Tercera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 30",
+          "comunas": "Buin, Calera de Tango, Paine, San Bernardo",
+          "region": "Región Metropolitana"
+        }
+      ],
+      "slug": "jaime-bellolio-avaria",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "5331912e186e14f80412515a",
+          "person_id": "5330372fd0c05d8b737b6cb6",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cdb67a027d001ba3c17",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/5331912e186e14f80412515a",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/5331912e186e14f80412515a"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330372fd0c05d8b737b6cb9",
+          "note": "Twitter",
+          "url": "https://twitter.com/jbellolio"
+        },
+        {
+          "id": "5330372fd0c05d8b737b6cb8",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/JaimeBellolio?fref=ts"
+        },
+        {
+          "id": "5330372fd0c05d8b737b6cb7",
+          "note": "Website",
+          "url": "http://www.jaimebellolio.cl/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330372fd0c05d8b737b6cba",
+          "label": "email",
+          "type": "email",
+          "value": "jaime.bellolio@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330372fd0c05d8b737b6cb6",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330372fd0c05d8b737b6cb6",
+      "image": "http://www.camara.cl/img.aspx?prmid=g970"
+    },
+    {
+      "id": "53303739d0c05d8b737b6ce6",
+      "birth_date": "1952-04-21",
+      "commissions": [
+        {
+          "permanent": "Regimen Interior (Presidente); Transporte y Telecomunicaciones"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53319576b062cdf804df8b9f",
+          "url": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=163&tipo=1",
+          "created": "2014-03-25T14:40:54.217Z"
+        }
+      ],
+      "name": "Jorge Pizarro Soto",
+      "parliamentarian_period": [
+        {
+          "date": "Sen.C°4 2014-2022"
+        },
+        {
+          "date": "Sen.C°4 2006-2014"
+        },
+        {
+          "date": "Sen.C°4 1998-2006"
+        },
+        {
+          "date": "Dip. D°8 1994-1998"
+        },
+        {
+          "date": "Dip. D°8 1990-1994"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Estudios en Escuela de Gobierno y de Gestión Pública de la Universidad de Chile",
+          "marital_status": "Casado, cinco hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "32.75%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "4ª Circunscripción de Coquimbo",
+          "comunas": "Andacollo, Canela, Combarbalá, Coquimbo, Illapel, La Higuera, La Serena, Los Vilos, Monte Patria, Ovalle, Paihuano, Punitaqui, Río Hurtado, Salamanca, Vicuña",
+          "region": "IV Región de Coquimbo"
+        }
+      ],
+      "slug": "jorge-pizarro-soto",
+      "title": "Senador",
+      "memberships": [],
+      "links": [
+        {
+          "id": "53303739d0c05d8b737b6ce8",
+          "note": "Twitter",
+          "url": "https://twitter.com/pizarrosenador"
+        },
+        {
+          "id": "53303739d0c05d8b737b6ce7",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/pizarrosenador"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303739d0c05d8b737b6ce9",
+          "label": "email",
+          "type": "email",
+          "value": "jpizarro@senado.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [{
+          "id": "5489c1315286ac290e6024ec",
+          "name": "Pizarro S., Jorge",
+          "note": "For voting"
+
+      }],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303739d0c05d8b737b6ce6",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303739d0c05d8b737b6ce6",
+      "image": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=163&tipo=1"
+    },
+    {
+      "id": "5330374bd0c05d8b737b6d10",
+      "birth_date": "1956-07-15",
+      "commissions": [
+        {
+          "permanent": "Agricultura; Defensa Nacional (Presidente)"
+        }
+      ],
+      "images": [
+        {
+          "_id": "5331987db062cdf804df8ba9",
+          "url": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=687&tipo=1",
+          "created": "2014-03-25T14:53:49.023Z"
+        }
+      ],
+      "name": "Juan Antonio Coloma Correa",
+      "parliamentarian_period": [
+        {
+          "date": "Sen. C°10 2010-2018"
+        },
+        {
+          "date": "Sen. C°10 2002-2010"
+        },
+        {
+          "date": "Dip. D°31 1998-2002"
+        },
+        {
+          "date": "Dip. D°31 1994-1998"
+        },
+        {
+          "date": "Dip. D°31 1990-1994"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Abogado",
+          "marital_status": "Casado, ocho hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "35.22%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "10ª Circunscripción Maule Norte",
+          "comunas": "Constitución, Curepto, Curicó, Empedrado, Hualañé, Licantén, Maule, Molina, Pelarco, Pencahue, Rauco, Río Claro, Romeral, Sagrada Familia, San Clemente, San Rafael, Talca, Teno, Vichuquén",
+          "region": "VII Región del Maule"
+        }
+      ],
+      "slug": "juan-antonio-coloma-correa",
+      "title": "Senador",
+      "memberships": [
+        {
+          "id": "53319810186e14f8041254bd",
+          "person_id": "5330374bd0c05d8b737b6d10",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cdb67a027d001ba3c17",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53319810186e14f8041254bd",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53319810186e14f8041254bd"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330374bd0c05d8b737b6d12",
+          "note": "Twitter",
+          "url": "https://twitter.com/acoloma"
+        },
+        {
+          "id": "5330374bd0c05d8b737b6d11",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/juanantonio.colomacorrea?"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330374bd0c05d8b737b6d13",
+          "label": "email",
+          "type": "email",
+          "value": "jcoloma@senado.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330374bd0c05d8b737b6d10",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330374bd0c05d8b737b6d10",
+      "image": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=687&tipo=1"
+    },
+    {
+      "id": "5330375ad0c05d8b737b6d48",
+      "birth_date": "1962-08-24",
+      "images": [
+        {
+          "_id": "53318055b062cdf804df8b15",
+          "url": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=1120&tipo=1",
+          "created": "2014-03-25T13:10:45.055Z"
+        }
+      ],
+      "name": "Manuel José Ossandón Irarrázabal",
+      "parliamentarian_period": [
+        {
+          "date": "Sen. C°8 2014-2022"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Técnico agrícola",
+          "marital_status": "Casado, ocho hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "24.46%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "8ª Circunscripción Santiago Oriente",
+          "comunas": "El Bosque, La Cisterna, La Florida, La Granja, La Pintana, La Reina, Las Condes, Lo Barnechea, Lo Espejo, Macul, Ñuñoa, Pedro Aguirre Cerda, Peñalolén, Pirque, Providencia, Puente Alto, San Joaquín, San José de Maipo, San Miguel, San Ramón, Vitacura",
+          "region": "Región Metropolitana"
+        }
+      ],
+      "slug": "manuel-josé-ossandón-irarrázabal",
+      "title": "Senador",
+      "memberships": [
+        {
+          "id": "53318067186e14f8041250e7",
+          "person_id": "5330375ad0c05d8b737b6d48",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cc567a027d001ba3c16",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53318067186e14f8041250e7",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53318067186e14f8041250e7"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330375ad0c05d8b737b6d4b",
+          "note": "Twitter",
+          "url": "https://twitter.com/mjossandon"
+        },
+        {
+          "id": "5330375ad0c05d8b737b6d4a",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/OssandonSenador"
+        },
+        {
+          "id": "5330375ad0c05d8b737b6d49",
+          "note": "Website",
+          "url": "http://www.ossandonsenador.cl/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330375ad0c05d8b737b6d4c",
+          "label": "email",
+          "type": "email",
+          "value": "mjossandon@senado.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330375ad0c05d8b737b6d48",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330375ad0c05d8b737b6d48",
+      "image": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=1120&tipo=1"
+    },
+    {
+      "id": "5330375dd0c05d8b737b6d59",
+      "birth_date": "1975-02-19",
+      "commissions": [
+        {
+          "permanent": "Gobierno Interior y Regionalización"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53318137b062cdf804df8b20",
+          "url": "http://www.camara.cl/img.aspx?prmid=g977",
+          "created": "2014-03-25T13:14:31.963Z"
+        }
+      ],
+      "name": "Marcelo Chávez Velásquez",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°45 2014-2018"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Egresado de Derecho"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "16.7%",
+          "place": "Tercera mayoría (doblaje)"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 45",
+          "comunas": "Coronel, Florida, Hualqui, Penco, Santa Juana, Tomé",
+          "region": "VIII Región del Bío-Bío"
+        }
+      ],
+      "slug": "marcelo-chávez-velásquez",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "5331818c186e14f8041250f1",
+          "person_id": "5330375dd0c05d8b737b6d59",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6c4c67a027d001ba3c11",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/5331818c186e14f8041250f1",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/5331818c186e14f8041250f1"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330375dd0c05d8b737b6d5a",
+          "note": "Twitter",
+          "url": "https://twitter.com/marcelochavezv"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330375dd0c05d8b737b6d5b",
+          "label": "email",
+          "type": "email",
+          "value": "marcelo.chavez@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330375dd0c05d8b737b6d59",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330375dd0c05d8b737b6d59",
+      "image": "http://www.camara.cl/img.aspx?prmid=g977"
+    },
+    {
+      "id": "53303767d0c05d8b737b6d87",
+      "birth_date": "1953-06-02",
+      "commissions": [
+        {
+          "permanent": "Trabajo y Seguridad Social; Constitución, Legislación y Justicia"
+        }
+      ],
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303767d0c05d8b737b6d87",
+      "images": [
+        {
+          "_id": "53318379b062cdf804df8b33",
+          "url": "http://www.camara.cl/img.aspx?prmid=g924",
+          "created": "2014-03-25T13:24:09.886Z"
+        }
+      ],
+      "name": "Osvaldo Andrade Lara",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°29 2014-2018"
+        },
+        {
+          "date": "Dip. D°29 2010-2014"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Abogado",
+          "marital_status": "cuatro hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "31.05%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 29",
+          "comunas": "La Pintana, Pirque, Puente Alto, San José de Maipo",
+          "region": "Región Metropolitana"
+        }
+      ],
+      "slug": "osvaldo-andrade-lara",
+      "title": "Diputado",
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303767d0c05d8b737b6d87",
+      "memberships": [
+        {
+          "id": "53318385186e14f804125103",
+          "person_id": "53303767d0c05d8b737b6d87",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cb967a027d001ba3c15",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53318385186e14f804125103",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53318385186e14f804125103"
+        }
+      ],
+      "links": [
+        {
+          "id": "53304ff6d0c05d8b737b7455",
+          "note": "Website",
+          "url": "http://diputadoandrade.cl/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53304ff6d0c05d8b737b7454",
+          "label": "email",
+          "type": "email",
+          "value": "oandrade@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "image": "http://www.camara.cl/img.aspx?prmid=g924"
+    },
+    {
+      "id": "5330375bd0c05d8b737b6d4d",
+      "birth_date": "1965-07-09",
+      "commissions": [
+        {
+          "permanent": "Salud; Hacienda"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53318089b062cdf804df8b18",
+          "url": "http://www.camara.cl/img.aspx?prmid=g869",
+          "created": "2014-03-25T13:11:37.126Z"
+        }
+      ],
+      "name": "Manuel Monsalve Benavides",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°46 2014-2018"
+        },
+        {
+          "date": "Dip. D°46 2010-2014"
+        },
+        {
+          "date": "Dip. D°46 2006-2010"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Médico Cirujano",
+          "marital_status": "Casado, dos hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "38.24%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 46",
+          "comunas": "Arauco, Cañete, Contulmo, Curanilahue, Lebu, Los Alamos, Lota, Tirúa",
+          "region": "VIII Región del Bío-Bío"
+        }
+      ],
+      "slug": "manuel-monsalve-benavides",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53318094186e14f8041250ea",
+          "person_id": "5330375bd0c05d8b737b6d4d",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cb967a027d001ba3c15",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53318094186e14f8041250ea",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53318094186e14f8041250ea"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330375bd0c05d8b737b6d4e",
+          "note": "Twitter",
+          "url": "https://twitter.com/diputadomonsalv"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330375bd0c05d8b737b6d4f",
+          "label": "email",
+          "type": "email",
+          "value": "mmonsalve@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330375bd0c05d8b737b6d4d",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330375bd0c05d8b737b6d4d",
+      "image": "http://www.camara.cl/img.aspx?prmid=g869"
+    },
+    {
+      "id": "53a99d1d9240c027106412db",
+      "birth_date": "1946-11-10",
+      "death_date": null,
+      "images": [
+        {
+          "_id": "53a99d909240c027106412dd",
+          "url": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=156&tipo=1",
+          "created": "2014-06-24T15:47:28.163Z"
+        }
+      ],
+      "name": "Manuel Antonio Matta Aragay",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°40 1990-1994"
+        },
+        {
+          "date": "Sen. C°11 1994-2002"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Abogado"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "47,9%",
+          "place": "Reemplazo Ximena Rincón"
+        }
+      ],
+      "represent": [
+        {
+          "district": "11ª Circunscripción Maule Sur",
+          "comunas": "Cauquenes, Chanco, Colbún, Linares, Longaví, Parral, Pelluhue, Retiro, San Javier, Villa Alegre, Yerbas Buenas",
+          "region": "VII Región del Maule"
+        }
+      ],
+      "title": "Senador",
+      "memberships": [
+        {
+          "id": "5320854c494b81480cdabfe6",
+          "area_id": null,
+          "area_name": null,
+          "end_date": null,
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/5320854c494b81480cdabfe6",
+          "label": null,
+          "organization_id": "52fa6c4c67a027d001ba3c11",
+          "person_id": "53a99d1d9240c027106412db",
+          "post_id": null,
+          "role": null,
+          "start_date": null,
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/5320854c494b81480cdabfe6",
+          "links": [],
+          "contact_details": []
+        }
+      ],
+      "links": [
+        {
+          "id": "53b4419e1fa1acd34505d9a3",
+          "note": "Twitter",
+          "url": "https://twitter.com/mattamaulesur"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53b4419e1fa1acd34505d9a2",
+          "label": "email",
+          "type": "email",
+          "value": "mmatta@senado.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53a99d1d9240c027106412db",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53a99d1d9240c027106412db",
+      "image": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=156&tipo=1"
+    },
+    {
+      "id": "5330368ed0c05d8b737b6c3f",
+      "birth_date": "1972-09-14",
+      "commissions": [
+        {
+          "permanent": "Minería y Energía; Deportes y Recreación"
+        }
+      ],
+      "images": [
+        {
+          "_id": "5331862ab062cdf804df8b4b",
+          "url": "http://www.camara.cl/img.aspx?prmid=g919",
+          "created": "2014-03-25T13:35:38.206Z"
+        }
+      ],
+      "name": "Felipe Ward Edwards",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°3 2014-2018"
+        },
+        {
+          "date": "Dip. D°3 2010-2014"
+        },
+        {
+          "date": "Dip. D°3 2006-2010"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Abogado",
+          "marital_status": "Casado, tres hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "24.06%",
+          "place": "Segunda mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 3",
+          "comunas": "Calama, María Elena, Ollagüe, San Pedro de Atacama, Tocopilla",
+          "region": "II Región de Antofagasta"
+        }
+      ],
+      "slug": "felipe-ward-edwards",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53318658186e14f80412511b",
+          "person_id": "5330368ed0c05d8b737b6c3f",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cdb67a027d001ba3c17",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53318658186e14f80412511b",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53318658186e14f80412511b"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330368ed0c05d8b737b6c41",
+          "note": "Twitter",
+          "url": "https://twitter.com/felipeward"
+        },
+        {
+          "id": "5330368ed0c05d8b737b6c40",
+          "note": "Facebook",
+          "url": "http://www.facebook.com/pages/Felipe-Ward/280456525379753?fref=ts"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330368ed0c05d8b737b6c42",
+          "label": "email",
+          "type": "email",
+          "value": "fw120@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330368ed0c05d8b737b6c3f",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330368ed0c05d8b737b6c3f",
+      "image": "http://www.camara.cl/img.aspx?prmid=g919"
+    },
+    {
+      "id": "53303693d0c05d8b737b6c55",
+      "birth_date": "1970-09-30",
+      "commissions": [
+        {
+          "permanent": "Gobierno, Descentralización y Regionalización; Salud; Desafios del Futuro; Regimen Interior; Intereses Maritimos, Pesca y Acuicultura"
+        }
+      ],
+      "images": [
+        {
+          "_id": "5331932fb062cdf804df8b94",
+          "url": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=1010&tipo=1",
+          "created": "2014-03-25T14:31:11.016Z"
+        }
+      ],
+      "name": "Fulvio Rossi Ciocca",
+      "parliamentarian_period": [
+        {
+          "date": "Sen. C°1 2010-2018"
+        },
+        {
+          "date": "Dip.D°2 2006-2010"
+        },
+        {
+          "date": "Dip.D°2 2002-2006"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Médico"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "27.1%",
+          "place": "Segunda mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "1ª Circunscripción de Tarapacá",
+          "comunas": "Alto Hospicio, Arica, Camarones, Camiña, Colchane, General Lagos, Huara, Iquique, Pica, Pozo Almonte, Putre",
+          "region": "I de de Tarapacá"
+        }
+      ],
+      "slug": "fulvio-rossi-ciocca",
+      "title": "Senador",
+      "memberships": [
+        {
+          "id": "5331933c186e14f804125163",
+          "person_id": "53303693d0c05d8b737b6c55",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cb967a027d001ba3c15",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/5331933c186e14f804125163",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/5331933c186e14f804125163"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303693d0c05d8b737b6c57",
+          "note": "Twitter",
+          "url": "https://twitter.com/FulvioRossiC"
+        },
+        {
+          "id": "53303693d0c05d8b737b6c56",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/fulvio.rossi.ciocca"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303693d0c05d8b737b6c58",
+          "label": "email",
+          "type": "email",
+          "value": "frossi@senado.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303693d0c05d8b737b6c55",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303693d0c05d8b737b6c55",
+      "image": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=1010&tipo=1"
+    },
+    {
+      "id": "5330365fd0c05d8b737b6b74",
+      "birth_date": "1948-09-25",
+      "images": [
+        {
+          "_id": "53317ba4b062cdf804df8b0a",
+          "url": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=1118&tipo=1",
+          "created": "2014-03-25T12:50:44.890Z"
+        }
+      ],
+      "name": "Adriana Muñoz D'Albora",
+      "parliamentarian_period": [
+        {
+          "date": "Sen. C°4 2014-2022"
+        },
+        {
+          "date": "Dip. D°9 2010-2014"
+        },
+        {
+          "date": "Dip. D°9 2006-2010"
+        },
+        {
+          "date": "Dip. D°9 2002-2006"
+        },
+        {
+          "date": "Dip. D°16 1998-2002"
+        },
+        {
+          "date": "Dip. D°16 1990-1994"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Socióloga y Cientista Político"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "30.62%",
+          "place": "Segunda mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "4ª Circunscripción de Coquimbo",
+          "comunas": "Andacollo, Canela, Combarbalá, Coquimbo, Illapel, La Higuera, La Serena, Los Vilos, Monte Patria, Ovalle, Paihuano, Punitaqui, Río Hurtado, Salamanca, Vicuña",
+          "region": "IV Región de Coquimbo"
+        }
+      ],
+      "slug": "adriana-muñoz-d'albora",
+      "title": "Senador",
+      "memberships": [
+        {
+          "id": "53317bc6186e14f8041250dc",
+          "person_id": "5330365fd0c05d8b737b6b74",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6c8067a027d001ba3c13",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53317bc6186e14f8041250dc",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53317bc6186e14f8041250dc"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330365fd0c05d8b737b6b76",
+          "note": "Twitter",
+          "url": "https://twitter.com/_adrianamunoz"
+        },
+        {
+          "id": "5330365fd0c05d8b737b6b75",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/diputadaadriana.munoz"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330365fd0c05d8b737b6b77",
+          "label": "email",
+          "type": "email",
+          "value": "amunoz@senado.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330365fd0c05d8b737b6b74",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330365fd0c05d8b737b6b74",
+      "image": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=1118&tipo=1"
+    },
+    {
+      "id": "53303755d0c05d8b737b6d32",
+      "birth_date": "1957-03-28",
+      "commissions": [
+        {
+          "permanent": "Medio Ambiente y Recursos Naturales; Salud; Obras Públicas, Transportes y Telecomunicaciones; Familia y Adulto Mayor"
+        }
+      ],
+      "images": [
+        {
+          "_id": "538613b056c0619d561e71db",
+          "url": "http://www.camara.cl/img.aspx?prmid=g946",
+          "created": "2014-05-28T16:49:52.434Z"
+        }
+      ],
+      "name": "Leopoldo Pérez Lahsen",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°29 2014-2018"
+        },
+        {
+          "date": "Dip. D°29 2010-2014"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Administrador Público",
+          "marital_status": "Casado, dos hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "23.49%",
+          "place": "Segunda mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 29",
+          "comunas": "La Pintana, Pirque, Puente Alto, San José de Maipo",
+          "region": "Región Metropolitana"
+        }
+      ],
+      "slug": "leopoldo-pérez-lahsen",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53317eb1186e14f8041250dd",
+          "person_id": "53303755d0c05d8b737b6d32",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cc567a027d001ba3c16",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53317eb1186e14f8041250dd",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53317eb1186e14f8041250dd"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303755d0c05d8b737b6d34",
+          "note": "Twitter",
+          "url": "https://twitter.com/perezlahsen"
+        },
+        {
+          "id": "53303755d0c05d8b737b6d33",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/diputado.leopoldoperez?fref=ts"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303755d0c05d8b737b6d35",
+          "label": "email",
+          "type": "email",
+          "value": "lperezl@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303755d0c05d8b737b6d32",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303755d0c05d8b737b6d32",
+      "image": "http://www.camara.cl/img.aspx?prmid=g946"
+    },
+    {
+      "id": "53303756d0c05d8b737b6d36",
+      "birth_date": "1963-05-10",
+      "commissions": [
+        {
+          "permanent": "Vivienda y Urbanismo (Presidenta); Derechos Humanos, Nacionalidad y Ciudadania",
+          "special": "Bicameral encargada del Cumplimiento del Artículo Sexto del Convenio N° 69 de la OIT"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53317ee1b062cdf804df8b0d",
+          "url": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=1007&tipo=1",
+          "created": "2014-03-25T13:04:33.885Z"
+        }
+      ],
+      "name": "Lily Pérez San Martín",
+      "parliamentarian_period": [
+        {
+          "date": "Sen. C°5 2010-2018"
+        },
+        {
+          "date": "Sen. C°5 2008-2010 (reemplazo)"
+        },
+        {
+          "date": "Dip. D°26  2002-2006"
+        },
+        {
+          "date": "Dip. D°26 1998-2002"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Publicista",
+          "marital_status": "Casada, dos hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "23.03%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "5ª Circunscripción Quinta Cordillera",
+          "comunas": "Cabildo, Calle Larga, Catemu, Hijuelas, La Calera, La Cruz, La Ligua, Limache, Llay-Llay, Los Andes, Nogales, Olmué, Panquehue, Papudo, Petorca, Puchuncaví, Putaendo, Quillota, Quilpué, Quintero, Rinconada, San Esteban, San Felipe, Santa María, Villa Alemana, Zapallar",
+          "region": "V Región de Valparaíso"
+        }
+      ],
+      "slug": "lily-pérez-san-martín",
+      "title": "Senador",
+      "memberships": [
+        {
+          "id": "53317f00186e14f8041250de",
+          "person_id": "53303756d0c05d8b737b6d36",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6c2a67a027d001ba3c0e",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53317f00186e14f8041250de",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53317f00186e14f8041250de"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303756d0c05d8b737b6d39",
+          "note": "Twitter",
+          "url": "https://twitter.com/lilyperez"
+        },
+        {
+          "id": "53303756d0c05d8b737b6d38",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/lilyperez"
+        },
+        {
+          "id": "53303756d0c05d8b737b6d37",
+          "note": "Website",
+          "url": "http://www.lilyperez.cl/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303756d0c05d8b737b6d3a",
+          "label": "email",
+          "type": "email",
+          "value": "lperez@senado.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303756d0c05d8b737b6d36",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303756d0c05d8b737b6d36",
+      "image": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=1007&tipo=1"
+    },
+    {
+      "id": "53303757d0c05d8b737b6d3b",
+      "birth_date": "1973-05-18",
+      "commissions": [
+        {
+          "permanent": "Seguridad Ciudanana; Obras Públicas, Transportes y Telecomunicaciones; Vivienda y Desarrollo Urbano; Agricultura, Silvicultura y Desarrollo Rural"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53317f23b062cdf804df8b0e",
+          "url": "http://www.camara.cl/img.aspx?prmid=g974",
+          "created": "2014-03-25T13:05:39.814Z"
+        }
+      ],
+      "name": "Loreto Carvajal Ambiado",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°42 2014-2018"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Abogado",
+          "marital_status": "Casada, un hijo"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "19.1%",
+          "place": "Tercera mayoría (doblaje)"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 42",
+          "comunas": "Bulnes, Cabrero, Cobquecura, Coelemu, Ninhue, Ñiquén, Portezuelo, Quillón, Quirihue, Ránquil, San Carlos, San Fabián, San Nicolás, Trehuaco, Yumbel",
+          "region": "VIII Región del Bío-Bío"
+        }
+      ],
+      "slug": "loreto-carvajal-ambiado",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53317f31186e14f8041250e0",
+          "person_id": "53303757d0c05d8b737b6d3b",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6c8067a027d001ba3c13",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53317f31186e14f8041250e0",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53317f31186e14f8041250e0"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303757d0c05d8b737b6d3c",
+          "note": "Twitter",
+          "url": "https://twitter.com/loretodiputada"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303757d0c05d8b737b6d3d",
+          "label": "email",
+          "type": "email",
+          "value": "loreto.carvajal@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303757d0c05d8b737b6d3b",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303757d0c05d8b737b6d3b",
+      "image": "http://www.camara.cl/img.aspx?prmid=g974"
+    },
+    {
+      "id": "53303695d0c05d8b737b6c5e",
+      "birth_date": "1976-09-15",
+      "commissions": [
+        {
+          "permanent": "Salud; Zonas Extremas; Seguridad Ciudadana; Deportes y Recreación"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53317f44b062cdf804df8b0f",
+          "url": "http://www.camara.cl/img.aspx?prmid=g898",
+          "created": "2014-03-25T13:06:12.600Z"
+        }
+      ],
+      "name": "Gabriel Silber Romo",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°16 2014-2018"
+        },
+        {
+          "date": "Dip. D°16 2010-2014"
+        },
+        {
+          "date": "Dip. D°16 2006-2010"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Abogado",
+          "marital_status": "Soltero"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "38.65%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 16",
+          "comunas": "Colina, Lampa, Pudahuel, Quilicura, Tiltil",
+          "region": "Región Metropolitana"
+        }
+      ],
+      "slug": "gabriel-silber-romo",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53317fc7186e14f8041250e2",
+          "person_id": "53303695d0c05d8b737b6c5e",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6c4c67a027d001ba3c11",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53317fc7186e14f8041250e2",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53317fc7186e14f8041250e2"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303695d0c05d8b737b6c61",
+          "note": "Twitter",
+          "url": "https://twitter.com/gabrielsilber"
+        },
+        {
+          "id": "53303695d0c05d8b737b6c60",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/gabrielsilber.diputado"
+        },
+        {
+          "id": "53303695d0c05d8b737b6c5f",
+          "note": "Website",
+          "url": "http://www.gabrielsilber.cl/web/sitio/noticias"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303695d0c05d8b737b6c62",
+          "label": "email",
+          "type": "email",
+          "value": "gsilber@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303695d0c05d8b737b6c5e",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303695d0c05d8b737b6c5e",
+      "image": "http://www.camara.cl/img.aspx?prmid=g898"
+    },
+    {
+      "id": "53303758d0c05d8b737b6d3e",
+      "birth_date": "1961-12-23",
+      "commissions": [
+        {
+          "permanent": "Minería y Energía; Recursos Hídricos  y Desertificación"
+        }
+      ],
+      "images": [
+        {
+          "_id": "538613f256c0619d561e71dc",
+          "url": "http://www.camara.cl/img.aspx?prmid=g941",
+          "created": "2014-05-28T16:50:58.196Z"
+        }
+      ],
+      "name": "Luis Lemus Aracena",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°9 2014-2018"
+        },
+        {
+          "date": "Dip. D°9 2010-2014"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Licenciado en Matemáticas y Profesor de Estado de la Universidad de La Serena"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "43.78%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 9",
+          "comunas": "Canela, Combarbalá, Illapel, Los Vilos, Monte Patria, Punitaqui, Salamanca",
+          "region": "IV Región de Coquimbo"
+        }
+      ],
+      "slug": "luis-lemus-aracena",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53317f83186e14f8041250e1",
+          "person_id": "53303758d0c05d8b737b6d3e",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cb967a027d001ba3c15",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53317f83186e14f8041250e1",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53317f83186e14f8041250e1"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303758d0c05d8b737b6d41",
+          "note": "Twitter",
+          "url": "https://twitter.com/lemusdiputado"
+        },
+        {
+          "id": "53303758d0c05d8b737b6d40",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/pages/Luis-Lemus/"
+        },
+        {
+          "id": "53303758d0c05d8b737b6d3f",
+          "note": "Website",
+          "url": "http://luislemusaracena.blogspot.com/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303758d0c05d8b737b6d42",
+          "label": "email",
+          "type": "email",
+          "value": "llemus@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303758d0c05d8b737b6d3e",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303758d0c05d8b737b6d3e",
+      "image": "http://www.camara.cl/img.aspx?prmid=g941"
+    },
+    {
+      "id": "53303660d0c05d8b737b6b78",
+      "birth_date": "1956-11-04",
+      "commissions": [
+        {
+          "permanent": "Economía"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53317f5eb062cdf804df8b11",
+          "url": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=688&tipo=1",
+          "created": "2014-03-25T13:06:38.498Z"
+        }
+      ],
+      "name": "Alberto Espina Otero",
+      "parliamentarian_period": [
+        {
+          "date": "Sen. C°14 2010-2018"
+        },
+        {
+          "date": "Sen. C°14 2002-2010"
+        },
+        {
+          "date": "Dip. D°21 1998-2002"
+        },
+        {
+          "date": "Dip. D°21 1994-1998"
+        },
+        {
+          "date": "Dip. D°21 1990-1994"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Abogado",
+          "marital_status": "Casado, tres hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "38.51%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "14ª Circunscripción Araucanía Norte",
+          "comunas": "Angol, Collipulli, Curacautín, Ercilla, Galvarino, Lautaro, Lonquimay, Los Sauces, Lumaco, Melipeuco, Perquenco, Purén, Renaico, Traiguén, Victoria, Vilcún",
+          "region": "IX Región de la Araucanía"
+        }
+      ],
+      "slug": "alberto-espina-otero",
+      "title": "Senador",
+      "memberships": [
+        {
+          "id": "53317fdd186e14f8041250e3",
+          "person_id": "53303660d0c05d8b737b6b78",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cc567a027d001ba3c16",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53317fdd186e14f8041250e3",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53317fdd186e14f8041250e3"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303660d0c05d8b737b6b7b",
+          "note": "Twitter",
+          "url": "https://twitter.com/albertoespina"
+        },
+        {
+          "id": "53303660d0c05d8b737b6b7a",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/senador.espina"
+        },
+        {
+          "id": "53303660d0c05d8b737b6b79",
+          "note": "Website",
+          "url": "http://www.albertoespina.cl/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303660d0c05d8b737b6b7c",
+          "label": "email",
+          "type": "email",
+          "value": "aespina@senado.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303660d0c05d8b737b6b78",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303660d0c05d8b737b6b78",
+      "image": "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=688&tipo=1"
+    },
+    {
+      "id": "53303696d0c05d8b737b6c63",
+      "birth_date": "1978-05-17",
+      "commissions": [
+        {
+          "permanent": "Minería y Energía; Cultura y de las Artes; Recursos Hídricos y Desertificación"
+        }
+      ],
+      "death_date": null,
+      "images": [
+        {
+          "created": "2014-03-25T13:09:20.277Z",
+          "url": "http://www.camara.cl/img.aspx?prmid=g948",
+          "_id": "53318000b062cdf804df8b12"
+        }
+      ],
+      "name": "Gaspar Rivas Sánchez",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°11 2014-2018"
+        },
+        {
+          "date": "Dip. D°11 2010-2014"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Abogado"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "24.18%",
+          "place": "Segunda mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 11",
+          "comunas": "Calle Larga, Catemu, Llay-Llay, Los Andes, Panquehue, Putaendo, Rinconada, San Esteban, San Felipe, Santa María",
+          "region": "V Región de Valparaíso"
+        }
+      ],
+      "slug": "gaspar-rivas-sánchez",
+      "summary": "",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "5331800f186e14f8041250e4",
+          "person_id": "53303696d0c05d8b737b6c63",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cc567a027d001ba3c16",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/5331800f186e14f8041250e4",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/5331800f186e14f8041250e4"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303696d0c05d8b737b6c66",
+          "note": "Twitter",
+          "url": "https://twitter.com/GasparRivas"
+        },
+        {
+          "id": "53303696d0c05d8b737b6c65",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/diputadogaspar.rivas"
+        },
+        {
+          "id": "53303696d0c05d8b737b6c64",
+          "note": "Website",
+          "url": "http://www.gasparrivas.cl/2013/?page_id=2"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303696d0c05d8b737b6c67",
+          "label": "email",
+          "type": "email",
+          "value": "grivas@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303696d0c05d8b737b6c63",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303696d0c05d8b737b6c63",
+      "image": "http://www.camara.cl/img.aspx?prmid=g948"
+    },
+    {
+      "id": "53303759d0c05d8b737b6d43",
+      "birth_date": "1958-09-17",
+      "commissions": [
+        {
+          "permanent": "Zonas Extremas; Relaciones Exteriores"
+        }
+      ],
+      "images": [
+        {
+          "_id": "5331800eb062cdf804df8b13",
+          "url": "http://www.camara.cl/img.aspx?prmid=g1000",
+          "created": "2014-03-25T13:09:34.762Z"
+        }
+      ],
+      "name": "Luis Rocafull López",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°1 2014-2018"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Ingeniero de Ejecución en Administración, con mención en Finanzas",
+          "marital_status": "Seprado, cinco hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "22.4%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 1",
+          "comunas": "Arica, Camarones, General Lagos, Putre",
+          "region": "XV Región de Arica y Parinacota"
+        }
+      ],
+      "slug": "luis-rocafull-lópez",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53318027186e14f8041250e5",
+          "person_id": "53303759d0c05d8b737b6d43",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cb967a027d001ba3c15",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53318027186e14f8041250e5",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53318027186e14f8041250e5"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303759d0c05d8b737b6d46",
+          "note": "Twitter",
+          "url": "https://twitter.com/rocafuldiputado"
+        },
+        {
+          "id": "53303759d0c05d8b737b6d45",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/rocafull.diputado"
+        },
+        {
+          "id": "53303759d0c05d8b737b6d44",
+          "note": "Website",
+          "url": "http://www.luisrocafull.cl/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303759d0c05d8b737b6d47",
+          "label": "email",
+          "type": "email",
+          "value": "luis.rocafull@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303759d0c05d8b737b6d43",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303759d0c05d8b737b6d43",
+      "image": "http://www.camara.cl/img.aspx?prmid=g1000"
+    },
+    {
+      "id": "5330367dd0c05d8b737b6bf5",
+      "birth_date": "1962-01-09",
+      "commissions": [
+        {
+          "permanent": "Educación; Salud; Recursos Hídricos y Desertificación"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53860bb656c0619d561e71cc",
+          "url": "http://www.camara.cl/img.aspx?prmid=g936",
+          "created": "2014-05-28T16:15:50.726Z"
+        }
+      ],
+      "name": "Cristina Girardi Lavín",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°18 2014-2018"
+        },
+        {
+          "date": "Dip. D°18 2010-2014"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Antropóloga",
+          "marital_status": "Casada, tres hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "45.51%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 18",
+          "comunas": "Cerro Navia, Lo Prado, Quinta Normal",
+          "region": "Región Metropolitana"
+        }
+      ],
+      "slug": "cristina-girardi-lavín",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53318051186e14f8041250e6",
+          "person_id": "5330367dd0c05d8b737b6bf5",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6c8067a027d001ba3c13",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53318051186e14f8041250e6",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53318051186e14f8041250e6"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330367dd0c05d8b737b6bf7",
+          "note": "Twitter",
+          "url": "https://twitter.com/Girardi_Cris"
+        },
+        {
+          "id": "5330367dd0c05d8b737b6bf6",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/cristina.girardidiputada?fref=ts"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330367dd0c05d8b737b6bf8",
+          "label": "email",
+          "type": "email",
+          "value": "cgirardi@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330367dd0c05d8b737b6bf5",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330367dd0c05d8b737b6bf5",
+      "image": "http://www.camara.cl/img.aspx?prmid=g936"
+    },
+    {
+      "id": "53303662d0c05d8b737b6b7d",
+      "birth_date": "1956-10-04",
+      "commissions": [
+        {
+          "permanent": "Deporte y Recreación; Ciencias y Tecnología; Educación"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53b5bfad2a4de0a03cf3228b",
+          "url": "http://www.camara.cl/img.aspx?prmid=g888",
+          "created": "2014-07-03T20:40:13.445Z"
+        }
+      ],
+      "name": "Alberto Robles Pantoja",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°6 2014-2018"
+        },
+        {
+          "date": "Dip. D°6 2010-2014"
+        },
+        {
+          "date": "Dip. D°6 2006-2010"
+        },
+        {
+          "date": "Dip. D°6 2002-2006"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Médico",
+          "marital_status": "Soltero"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "13.29%",
+          "place": "Tercera mayoría (doblaje)"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 6",
+          "comunas": "Alto del Carmen, Caldera, Freirina, Huasco, Tierra Amarilla, Vallenar",
+          "region": "II Región de Atacama"
+        }
+      ],
+      "slug": "alberto-robles-pantoja",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "5331808d186e14f8041250e9",
+          "area": {
+            "name": ""
+          },
+          "area_id": null,
+          "area_name": null,
+          "end_date": "",
+          "label": null,
+          "organization_id": "52fa6cae67a027d001ba3c14",
+          "person_id": "53303662d0c05d8b737b6b7d",
+          "post_id": null,
+          "role": "",
+          "start_date": "",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/5331808d186e14f8041250e9",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/5331808d186e14f8041250e9"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303662d0c05d8b737b6b80",
+          "note": "Twitter",
+          "url": "https://twitter.com/diputadorobles"
+        },
+        {
+          "id": "53303662d0c05d8b737b6b7f",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/diputadorobles"
+        },
+        {
+          "id": "53303662d0c05d8b737b6b7e",
+          "note": "Website",
+          "url": "http://www.diputadorobles.cl/index/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303662d0c05d8b737b6b81",
+          "label": "email",
+          "type": "email",
+          "value": "arobles@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303662d0c05d8b737b6b7d",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303662d0c05d8b737b6b7d",
+      "image": "http://www.camara.cl/img.aspx?prmid=g888"
+    },
+    {
+      "id": "5330367bd0c05d8b737b6bec",
+      "birth_date": "1972-11-18",
+      "commissions": [
+        {
+          "permanent": "Pesca, Acuicultura e Intereses Marítimos;Trabajo y Seguridad Social; Relaciones Exteriores"
+        }
+      ],
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330367bd0c05d8b737b6bec",
+      "images": [
+        {
+          "_id": "53860c2e56c0619d561e71cd",
+          "url": "http://www.camara.cl/img.aspx?prmid=g929",
+          "created": "2014-05-28T16:17:50.359Z"
+        }
+      ],
+      "name": "Cristián Campos Jara",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°43 2014-2018"
+        },
+        {
+          "date": "Dip. D°43 2010-2014"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Periodista, Ingeniero Comercial ",
+          "marital_status": "Casado, dos hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "30.92%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 43",
+          "comunas": "Hualpén, Talcahuano",
+          "region": "VIII Región del Bío-Bío"
+        }
+      ],
+      "slug": "cristián-campos-jara",
+      "title": "Diputado",
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330367bd0c05d8b737b6bec",
+      "memberships": [
+        {
+          "id": "5331807e186e14f8041250e8",
+          "person_id": "5330367bd0c05d8b737b6bec",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6c8067a027d001ba3c13",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/5331807e186e14f8041250e8",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/5331807e186e14f8041250e8"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303fa7d0c05d8b737b6e25",
+          "note": "Twitter",
+          "url": "https://twitter.com/DiputadoCampos"
+        },
+        {
+          "id": "53303fa7d0c05d8b737b6e24",
+          "note": "Website",
+          "url": "http://cristiancamposdiputado.blogspot.com/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303fa7d0c05d8b737b6e23",
+          "label": "email",
+          "type": "email",
+          "value": "ccampos@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "image": "http://www.camara.cl/img.aspx?prmid=g929"
+    },
+    {
+      "id": "5330367cd0c05d8b737b6bf0",
+      "birth_date": "1968-05-12",
+      "commissions": [
+        {
+          "permanent": "Constitución, Legislación y Justicia; Seguridad Ciudadana"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53860c7a56c0619d561e71ce",
+          "url": "http://www.camara.cl/img.aspx?prmid=g867",
+          "created": "2014-05-28T16:19:06.913Z"
+        }
+      ],
+      "name": "Cristián Monckeberg Bruner",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°23 2014-2018"
+        },
+        {
+          "date": "Dip. D°23 2010-2014"
+        },
+        {
+          "date": "Dip. D°23 2006-2010"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Abogado",
+          "marital_status": "Casado, tres hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "34.59%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 23",
+          "comunas": "Las Condes, Lo Barnechea, Vitacura",
+          "region": "Región Metropolitana"
+        }
+      ],
+      "slug": "cristián-monckeberg-bruner",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "533180ae186e14f8041250eb",
+          "person_id": "5330367cd0c05d8b737b6bf0",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cc567a027d001ba3c16",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/533180ae186e14f8041250eb",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/533180ae186e14f8041250eb"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330367cd0c05d8b737b6bf3",
+          "note": "Twitter",
+          "url": "https://twitter.com/cmonckeberg"
+        },
+        {
+          "id": "5330367cd0c05d8b737b6bf2",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/cmonckeberg?fref=ts"
+        },
+        {
+          "id": "5330367cd0c05d8b737b6bf1",
+          "note": "Website",
+          "url": "http://www.cristianmonckeberg.cl/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330367cd0c05d8b737b6bf4",
+          "label": "email",
+          "type": "email",
+          "value": "cmonckeberg@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330367cd0c05d8b737b6bf0",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330367cd0c05d8b737b6bf0",
+      "image": "http://www.camara.cl/img.aspx?prmid=g867"
+    },
+    {
+      "id": "5330375cd0c05d8b737b6d50",
+      "birth_date": "1960-02-12",
+      "commissions": [
+        {
+          "permanent": "Superación de la Pobreza, Planificación y Desarrollo Social; Salud"
+        }
+      ],
+      "images": [
+        {
+          "_id": "533180bdb062cdf804df8b1a",
+          "url": "http://www.camara.cl/img.aspx?prmid=g986",
+          "created": "2014-03-25T13:12:29.415Z"
+        }
+      ],
+      "name": "Marcela Hernando Pérez",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°4 2014-2018"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Médico",
+          "marital_status": "Casada, tres hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "25.99%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 4",
+          "comunas": "Antofagasta, Mejillones, Sierra Gorda, Taltal",
+          "region": "II Región de Antofagasta"
+        }
+      ],
+      "slug": "marcela-hernando-pérez",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "533180c9186e14f8041250ec",
+          "area": {
+            "name": ""
+          },
+          "area_id": null,
+          "area_name": null,
+          "end_date": "",
+          "label": null,
+          "organization_id": "52fa6cae67a027d001ba3c14",
+          "person_id": "5330375cd0c05d8b737b6d50",
+          "post_id": null,
+          "role": "",
+          "start_date": "",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/533180c9186e14f8041250ec",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/533180c9186e14f8041250ec"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330375cd0c05d8b737b6d52",
+          "note": "Twitter",
+          "url": "https://twitter.com/MarcelaHernando"
+        },
+        {
+          "id": "5330375cd0c05d8b737b6d51",
+          "note": "Facebook",
+          "url": "https://es-es.facebook.com/pages/Marcela-Hernando-Diputada/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330375cd0c05d8b737b6d53",
+          "label": "email",
+          "type": "email",
+          "value": "marcela.hernando@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330375cd0c05d8b737b6d50",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330375cd0c05d8b737b6d50",
+      "image": "http://www.camara.cl/img.aspx?prmid=g986"
+    },
+    {
+      "id": "5330367ed0c05d8b737b6bf9",
+      "birth_date": "1963-11-02",
+      "commissions": [
+        {
+          "permanent": "Zonas Extremas; Economía; Vivienda y Desarrollo Urbano"
+        }
+      ],
+      "images": [
+        {
+          "_id": "533180dcb062cdf804df8b1b",
+          "url": "http://www.camara.cl/img.aspx?prmid=g980",
+          "created": "2014-03-25T13:13:00.811Z"
+        }
+      ],
+      "name": "Daniel Farcas Guendelman",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°17 2014-2018"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Administrador público y Licenciado en Ciencias Políticas.",
+          "marital_status": "Separado, dos hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "25.12%",
+          "place": "Segunda mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 17",
+          "comunas": "Conchalí, Huechuraba, Renca",
+          "region": "Región Metropolitana"
+        }
+      ],
+      "slug": "daniel-farcas-guendelman",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "533180ee186e14f8041250ed",
+          "person_id": "5330367ed0c05d8b737b6bf9",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6c8067a027d001ba3c13",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/533180ee186e14f8041250ed",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/533180ee186e14f8041250ed"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330367ed0c05d8b737b6bfb",
+          "note": "Twitter",
+          "url": "https://twitter.com/dfarcas"
+        },
+        {
+          "id": "5330367ed0c05d8b737b6bfa",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/daniel.farcas.g?fref=ts"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330367ed0c05d8b737b6bfc",
+          "label": "email",
+          "type": "email",
+          "value": "daniel.farcas@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330367ed0c05d8b737b6bf9",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330367ed0c05d8b737b6bf9",
+      "image": "http://www.camara.cl/img.aspx?prmid=g980"
+    },
+    {
+      "id": "53303663d0c05d8b737b6b82",
+      "birth_date": "1955-04-19",
+      "commissions": [
+        {
+          "permanent": "Ciencias y Tecnología "
+        }
+      ],
+      "images": [
+        {
+          "_id": "533180e7b062cdf804df8b1c",
+          "url": "http://www.camara.cl/img.aspx?prmid=g933",
+          "created": "2014-03-25T13:13:11.280Z"
+        }
+      ],
+      "name": "Aldo Cornejo González",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°13 2014-2018"
+        },
+        {
+          "date": "Dip. D°13 2010-2014"
+        },
+        {
+          "date": "Dip. D°13 1998-2002"
+        },
+        {
+          "date": "Dip. D°13 1994-1998"
+        },
+        {
+          "date": "Dip. D°13 1990-1994"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Abogado",
+          "marital_status": "Separado, tres hijos"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "29.71%",
+          "place": "Primera mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 13",
+          "comunas": "Isla de Pascua, Juan Fernández, Valparaíso",
+          "region": "V Región de Valparaíso"
+        }
+      ],
+      "slug": "aldo-cornejo-gonzález",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53318117186e14f8041250ef",
+          "person_id": "53303663d0c05d8b737b6b82",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6c4c67a027d001ba3c11",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53318117186e14f8041250ef",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53318117186e14f8041250ef"
+        }
+      ],
+      "links": [
+        {
+          "id": "53303663d0c05d8b737b6b85",
+          "note": "Twitter",
+          "url": "https://twitter.com/DiputadoCornejo"
+        },
+        {
+          "id": "53303663d0c05d8b737b6b84",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/aldo.cornejo.gonzalez"
+        },
+        {
+          "id": "53303663d0c05d8b737b6b83",
+          "note": "Website",
+          "url": "http://aldocornejo.cl/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "53303663d0c05d8b737b6b86",
+          "label": "email",
+          "type": "email",
+          "value": "acornejo@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/53303663d0c05d8b737b6b82",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/53303663d0c05d8b737b6b82",
+      "image": "http://www.camara.cl/img.aspx?prmid=g933"
+    },
+    {
+      "id": "5330375dd0c05d8b737b6d54",
+      "birth_date": "1981-04-04",
+      "commissions": [
+        {
+          "permanent": "Seguridad Ciudadana; Familia y Adulto Mayor; Relaciones Exteriores; Cultura y de las Artes"
+        }
+      ],
+      "images": [
+        {
+          "_id": "533180fcb062cdf804df8b1e",
+          "url": "http://www.camara.cl/img.aspx?prmid=g949",
+          "created": "2014-03-25T13:13:32.324Z"
+        }
+      ],
+      "name": "Marcela Sabat Fernández",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°21 2014-2018"
+        },
+        {
+          "date": "Dip. D°21 2010-2014"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Licencida en Ciencias Jurídicas y Sociales"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "28.58%",
+          "place": "Segunda mayoría"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 21",
+          "comunas": "Ñuñoa, Providencia",
+          "region": "Región Metropolitana"
+        }
+      ],
+      "slug": "marcela-sabat-fernández",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53318116186e14f8041250ee",
+          "person_id": "5330375dd0c05d8b737b6d54",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cc567a027d001ba3c16",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53318116186e14f8041250ee",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53318116186e14f8041250ee"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330375dd0c05d8b737b6d57",
+          "note": "Twitter",
+          "url": "https://twitter.com/marcesabat"
+        },
+        {
+          "id": "5330375dd0c05d8b737b6d56",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/marcela.sabat?ref=ts&fref=ts"
+        },
+        {
+          "id": "5330375dd0c05d8b737b6d55",
+          "note": "Website",
+          "url": "http://www.marcelasabat.cl/marcelasabat/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330375dd0c05d8b737b6d58",
+          "label": "email",
+          "type": "email",
+          "value": "msabat@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330375dd0c05d8b737b6d54",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330375dd0c05d8b737b6d54",
+      "image": "http://www.camara.cl/img.aspx?prmid=g949"
+    },
+    {
+      "id": "5330367fd0c05d8b737b6bfd",
+      "birth_date": "1979-02-18",
+      "commissions": [
+        {
+          "permanent": "Medio Ambiente y Recursos Naturales; Superación de la Pobreza; Planificación y Desarrollo Social"
+        }
+      ],
+      "images": [
+        {
+          "_id": "53318117b062cdf804df8b1f",
+          "url": "http://www.camara.cl/img.aspx?prmid=g990",
+          "created": "2014-03-25T13:13:59.511Z"
+        }
+      ],
+      "name": "Daniel Melo Contreras",
+      "parliamentarian_period": [
+        {
+          "date": "Dip. D°27 2014-2018"
+        }
+      ],
+      "personal_info": [
+        {
+          "profession": "Sociólogo"
+        }
+      ],
+      "professional_info": [
+        {
+          "percentage_votes": "25.18%",
+          "place": "Segunda mayoría (doblaje)"
+        }
+      ],
+      "represent": [
+        {
+          "district": "Distrito 27",
+          "comunas": "El Bosque, La Cisterna, San Ramón",
+          "region": "Región Metropolitana"
+        }
+      ],
+      "slug": "daniel-melo-contreras",
+      "title": "Diputado",
+      "memberships": [
+        {
+          "id": "53318125186e14f8041250f0",
+          "person_id": "5330367fd0c05d8b737b6bfd",
+          "role": null,
+          "post_id": null,
+          "label": null,
+          "start_date": null,
+          "end_date": null,
+          "area_id": null,
+          "area_name": null,
+          "organization_id": "52fa6cb967a027d001ba3c15",
+          "links": [],
+          "contact_details": [],
+          "url": "http://pmocl.popit.mysociety.org/api/v0.1/memberships/53318125186e14f8041250f0",
+          "html_url": "http://pmocl.popit.mysociety.org/memberships/53318125186e14f8041250f0"
+        }
+      ],
+      "links": [
+        {
+          "id": "5330367fd0c05d8b737b6c00",
+          "note": "Twitter",
+          "url": "https://twitter.com/Danielmelochile"
+        },
+        {
+          "id": "5330367fd0c05d8b737b6bff",
+          "note": "Facebook",
+          "url": "https://www.facebook.com/daniel.a.contreras.7334504/about"
+        },
+        {
+          "id": "5330367fd0c05d8b737b6bfe",
+          "note": "Website",
+          "url": "http://www.danielmelo.cl/"
+        }
+      ],
+      "contact_details": [
+        {
+          "id": "5330367fd0c05d8b737b6c01",
+          "label": "email",
+          "type": "email",
+          "value": "daniel.melo@congreso.cl"
+        }
+      ],
+      "identifiers": [],
+      "other_names": [],
+      "url": "http://pmocl.popit.mysociety.org/api/v0.1/persons/5330367fd0c05d8b737b6bfd",
+      "html_url": "http://pmocl.popit.mysociety.org/persons/5330367fd0c05d8b737b6bfd",
+      "image": "http://www.camara.cl/img.aspx?prmid=g990"
+    }
+  ]
+}
