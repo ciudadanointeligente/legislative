@@ -31,6 +31,8 @@ describe PersonScraper , "The person Scrapper" do
       stub_request(:any, "http://pmocl.popit.mysociety.org/api/v0.1/persons").to_return(:body => $file)
       stub_request(:any, "http://pmocl.popit.mysociety.org/api/v0.1/persons?page=2").to_return(:body => $file2)
       Popolo::Person.all().delete()
+      Popolo::Organization.all().delete()
+      Popolo::Membership.all().delete()
     end
     after :each do
       connection.raw_connection[:people].drop
@@ -83,6 +85,17 @@ describe PersonScraper , "The person Scrapper" do
         expect(p2.count).to eq(1)
         persona = p2.first
         expect(persona.name).to eq('Gabriel Boric Font')
+
+      end
+      it "contains all the extra attributes" do
+        p = Popolo::Person.where(:_id => '5330369ed0c05d8b737b6c86').first
+        expect(p.name).to eq('Gustavo Hasbún Selume') 
+        expect(p.birth_date).to eq(Date.strptime('1972-08-02'))
+        # expect(p.slug).to eq("gustavo-hasbún-selume")
+        expect(p.honorific_prefix).to eq("Diputado")
+        expect(p.image).to eq("http://www.camara.cl/img.aspx?prmid=g939")
+        expect(p.memberships.count).to eq(1)
+        m = p.memberships.first
 
       end
       it "doesn't scrape a person twice" do
