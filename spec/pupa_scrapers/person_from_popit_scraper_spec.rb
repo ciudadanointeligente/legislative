@@ -34,6 +34,7 @@ describe PersonScraper , "The person Scrapper" do
       Popolo::Organization.all().delete()
       Popolo::Membership.all().delete()
       Popolo::OtherName.all().delete()
+      Popolo::Membership.all().delete()
     end
     after :each do
       connection.raw_connection[:people].drop
@@ -92,7 +93,6 @@ describe PersonScraper , "The person Scrapper" do
         p = Popolo::Person.where(:_id => '5330369ed0c05d8b737b6c86').first
         expect(p.name).to eq('Gustavo Hasbún Selume') 
         expect(p.birth_date).to eq(Date.strptime('1972-08-02'))
-        # expect(p.slug).to eq("gustavo-hasbún-selume")
         expect(p.honorific_prefix).to eq("Diputado")
         expect(p.image).to eq("http://www.camara.cl/img.aspx?prmid=g939")
         expect(p.memberships.count).to eq(1)
@@ -100,7 +100,17 @@ describe PersonScraper , "The person Scrapper" do
 
         expect(p.other_names.count).to eq(1)
         other_name = p.other_names.first
-        expect(other_name.name, 'Hasbún S., Gustavo')
+        expect(other_name.name).to eq('Hasbún S., Gustavo')
+
+      end
+      it "parses other names" do
+        p = Popolo::Person.where(:_id => '5330374bd0c05d8b737b6d10').first
+        expect(p.name).to eq('Juan Antonio Coloma Correa')
+        expect(p.memberships.count).to eq(1)
+        m = p.memberships.first
+        expect(p.other_names.count).to eq(1)
+        other_name = p.other_names.first
+        expect(other_name.name).to eq('Coloma C., Juan Antonio')
 
       end
       it "doesn't scrape a person twice" do
