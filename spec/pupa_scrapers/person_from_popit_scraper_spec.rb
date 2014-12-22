@@ -26,7 +26,6 @@ describe PersonScraper , "The person Scrapper" do
       $file2 = File.read('./spec/fixtures/congressmen2.json')
   		$persons_json = JSON.parse($file)
   		$scrapper = PersonScraper.new "results"
-      PersonScraper.add_scraping_task(:people)
     end
     before :each do
       stub_request(:any, "http://pmocl.popit.mysociety.org/api/v0.1/persons").to_return(:body => $file)
@@ -64,13 +63,33 @@ describe PersonScraper , "The person Scrapper" do
       expect(query.count).to eq(60)
       
     end
+    context "using Popolo Engine" do
+      before :each do
+      	@runner = Pupa::Runner.new(PersonScraper)
+        @runner.run([])
+      end
+      it "saves at least one person" do
 
-    it "uses popolo engine" do
-    	runner = Pupa::Runner.new(PersonScraper)
-      runner.run([])
+      	p = Popolo::Person.where(:name => "Gabriel Boric Font")
+        expect(p.count).to eq(1)
+      end
+      it "searching using popit id" do
+        p = Popolo::Person.where(:_id => '53303694d0c05d8b737b6c59')
+        expect(p.count).to eq(1)
+        persona = p.first
+        expect(persona.name).to eq('Gabriel Boric Font')
 
-    	p = Popolo::Person.where(:name => "Gabriel Boric Font")
-      expect(p.count).to eq(1)
+        p2 = Popolo::Person.where(:id => '53303694d0c05d8b737b6c59')
+        expect(p2.count).to eq(1)
+        persona = p2.first
+        expect(persona.name).to eq('Gabriel Boric Font')
+
+      end
+      it "doesn't scrape a person twice" do
+        @runner.run([])
+        p = Popolo::Person.where(:name => "Gabriel Boric Font")
+        expect(p.count).to eq(1)
+      end
     end
   end
 end

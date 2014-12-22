@@ -20,7 +20,7 @@ class PersonScraper < Pupa::Processor
 			json_response = JSON.parse(doc)
 			json_response['result'].each do |person_h|
 				person = Pupa::Person.new
-				person_popolo = Popolo::Person.new name:person_h['name']
+				person_popolo = Popolo::Person.new name:person_h['name'], id:person_h['id']
 				person_popolo.save
 				person.name = person_h['name']
 				person.add_identifier(person_h['id'])
@@ -34,3 +34,11 @@ class PersonScraper < Pupa::Processor
 
 	end
 end
+
+PersonScraper.add_scraping_task(:people)
+
+## Esta wea funciona de esta manera
+## require './lib/scrapers/person_scraper'
+## 
+## runner = Pupa::Runner.new(PersonScraper)
+## runner.run([])
