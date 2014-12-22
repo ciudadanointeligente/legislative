@@ -33,6 +33,7 @@ describe PersonScraper , "The person Scrapper" do
       Popolo::Person.all().delete()
       Popolo::Organization.all().delete()
       Popolo::Membership.all().delete()
+      Popolo::OtherName.all().delete()
     end
     after :each do
       connection.raw_connection[:people].drop
@@ -96,6 +97,10 @@ describe PersonScraper , "The person Scrapper" do
         expect(p.image).to eq("http://www.camara.cl/img.aspx?prmid=g939")
         expect(p.memberships.count).to eq(1)
         m = p.memberships.first
+
+        expect(p.other_names.count).to eq(1)
+        other_name = p.other_names.first
+        expect(other_name.name, 'Hasbún S., Gustavo')
 
       end
       it "doesn't scrape a person twice" do

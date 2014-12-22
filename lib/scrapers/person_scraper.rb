@@ -20,7 +20,7 @@ class PersonScraper < Pupa::Processor
 			json_response = JSON.parse(doc)
 			json_response['result'].each do |person_h|
 				person = Pupa::Person.new
-				person_popolo = Popolo::Person.new name:person_h['name'], id:person_h['id']
+				person_popolo = Popolo::Person.find_or_create_by id:person_h['id']
 				person_popolo.name = person_h['name']
 				person_popolo.birth_date = Date.strptime person_h['birth_date']
 				person_popolo.honorific_prefix = person_h['title']
@@ -33,7 +33,15 @@ class PersonScraper < Pupa::Processor
 					membership.organization = organization
 					membership.person = person_popolo
 					membership.save()
-
+				end
+				if person_popolo.other_names.count == 0
+					names = person_popolo.name.split(' ')
+					if names.length == 3
+						other_n = names[1]+ ' ' + names[2][0] + '., ' + names[0]
+						other_name = Popolo::OtherName.new name: other_n
+						person_popolo.other_names.push other_name
+					end
+					# 
 				end
 				person_popolo.save
 				person.name = person_h['name']
