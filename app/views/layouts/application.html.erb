@@ -73,6 +73,7 @@
 
     <!-- scripts concatenated and minified via build script -->
     <!-- Latest compiled and minified JavaScript -->
+    <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js' %>
     <%= javascript_include_tag '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js' %>
     <%= javascript_include_tag 'jquery.expander.js' %>
     <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js' %>
@@ -173,19 +174,28 @@
 
   <!-- A tab to launch the Classic Widget -->
   <script>
-  UserVoice = window.UserVoice || [];
-  UserVoice.push(['showTab', 'classic_widget', {
-    mode: 'feedback',
-    primary_color: '#cc6d00',
-    link_color: '#007dbf',
-    forum_id: 152599,
-    tab_label: 'Comentarios y soporte',
-    tab_color: '#cc6d00',
-    tab_position: 'middle-right',
-    tab_inverted: false
-  }]);
+    UserVoice = window.UserVoice || [];
+    UserVoice.push(['showTab', 'classic_widget', {
+      mode: 'feedback',
+      primary_color: '#cc6d00',
+      link_color: '#007dbf',
+      forum_id: 152599,
+      tab_label: 'Comentarios y soporte',
+      tab_color: '#cc6d00',
+      tab_position: 'middle-right',
+      tab_inverted: false
+    }]);
   </script>
-  <!-- End user feedback by freshdesk -->
+  <!-- End user feedback by UserVoice -->
+
+  <!-- Cookie used to display notices -->
+  <script>
+    if ($.cookie('congresoabierto.cl') != 'notice') {
+      console.log('fierita');
+      $.cookie('congresoabierto.cl', 'notice', { expires: 60 });
+    }
+  </script>
+  <!-- End Cookie -->
 
   <!-- Google Analytics -->
   <script>
