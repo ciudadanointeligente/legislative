@@ -43,24 +43,36 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 	end
 	context "there are two existing record" do
 		before :each do
-			
 		end
 		before :all do
-			
-
-
 		end
 		it "creates motions" do
 			runner = Pupa::Runner.new(CongresoAbiertoScrapers::MotionScraper)
 			runner.run([])
 			motions = Popolo::Motion.where(
-				date:Date.strptime('2006-08-17'))
+				text:"Votación enmienda al inc. final del art 27 contenido en la letra c) del número 8 -que pasa a ser 10- del artículo 1º propuesto en el 2º informe del proyecto de ley, en segundo trámite constitucional, que autoriza el levantamiento de secreto bancario en investigaciones de lavado de activos, con segundo y nuevo segundo informe de la Comisión de Constitución, Legislación, Justicia y Reglamento. (discusión en particular). (Boletín N° 4.426-07)."
+				)
 			expect(motions.count).to  be > 0
 			motion = motions.first
-			expect(motion.text).to eq('Autoriza levantamiento de secreto bancario en investigaciones de lavado de activos.')
+			expect(motion.date).to eq(Date.strptime('2014-04-02'))
 
 			
 		end
 	end
+	# context "scraping vote events" do
+	# 	it "scrapes vote events" do
+	# 		runner = Pupa::Runner.new(CongresoAbiertoScrapers::MotionScraper)
+	# 		runner.run([])
+	# 		motion = Popolo::Motion.where(
+	# 			text:'Autoriza levantamiento de secreto bancario en investigaciones de lavado de activos.').first
+
+	# 		expect(motion.vote_events.count).to eq(6)
+	# 		vote_event = motion.vote_events.where(
+
+
+	# 			)
+
+	# 	end
+	# end
 
 end
