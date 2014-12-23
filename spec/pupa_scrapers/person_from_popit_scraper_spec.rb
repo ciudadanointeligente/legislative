@@ -9,13 +9,13 @@ require './lib/scrapers/person_scraper'
 
 WebMock.disable_net_connect!(:allow => /popoloproject.com/)
 
-describe PersonScraper , "The person Scrapper" do
+describe CongresoAbiertoScrapers::PersonScraper , "The person Scrapper" do
   def connection
     Pupa::Processor::Connection::MongoDBAdapter.new('mongodb://localhost:27017/pupa')
   end
   context "initialization" do
     it "is a kind of Pupa::Processor" do
-      scrapper = PersonScraper.new './results'
+      scrapper = CongresoAbiertoScrapers::PersonScraper.new './results'
       expect(scrapper).to be_a Pupa::Processor
     end
   end
@@ -25,7 +25,7 @@ describe PersonScraper , "The person Scrapper" do
   		$file = File.read('./spec/fixtures/congressmen.json')
       $file2 = File.read('./spec/fixtures/congressmen2.json')
   		$persons_json = JSON.parse($file)
-  		$scrapper = PersonScraper.new "results"
+  		$scrapper = CongresoAbiertoScrapers::PersonScraper.new "results"
     end
     before :each do
       stub_request(:any, "http://pmocl.popit.mysociety.org/api/v0.1/persons").to_return(:body => $file)
@@ -44,7 +44,7 @@ describe PersonScraper , "The person Scrapper" do
       # allow(OpenURI).to receive(:open).and_return("Whatever for now")
       # read.stub(:read).and_return('log-level set to 1')
       # allow($scrapper).to receive(:open).and_return($file)
-      runner = Pupa::Runner.new(PersonScraper)
+      runner = Pupa::Runner.new(CongresoAbiertoScrapers::PersonScraper)
       runner.run([])
       result = connection.find(_type: 'pupa/person', name: 'Jorge Pizarro Soto')
       result.should be_a(Hash)
@@ -56,7 +56,7 @@ describe PersonScraper , "The person Scrapper" do
     it "scrapes paginated" do
       
 
-      runner = Pupa::Runner.new(PersonScraper)
+      runner = Pupa::Runner.new(CongresoAbiertoScrapers::PersonScraper)
       runner.run([])
 
       raw_connection = connection.raw_connection
@@ -69,7 +69,7 @@ describe PersonScraper , "The person Scrapper" do
     end
     context "using Popolo Engine" do
       before :each do
-      	@runner = Pupa::Runner.new(PersonScraper)
+      	@runner = Pupa::Runner.new(CongresoAbiertoScrapers::PersonScraper)
         @runner.run([])
       end
       it "saves at least one person" do
