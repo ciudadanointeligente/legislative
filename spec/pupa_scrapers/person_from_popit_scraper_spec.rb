@@ -30,11 +30,6 @@ describe CongresoAbiertoScrapers::PersonScraper , "The person Scrapper" do
     before :each do
       stub_request(:any, "http://pmocl.popit.mysociety.org/api/v0.1/persons").to_return(:body => $file)
       stub_request(:any, "http://pmocl.popit.mysociety.org/api/v0.1/persons?page=2").to_return(:body => $file2)
-      Popolo::Person.all().delete()
-      Popolo::Organization.all().delete()
-      Popolo::Membership.all().delete()
-      Popolo::OtherName.all().delete()
-      Popolo::Membership.all().delete()
     end
     after :each do
       connection.raw_connection[:people].drop

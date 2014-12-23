@@ -48,7 +48,6 @@ module CongresoAbiertoScrapers
 							other_names_array << names[2]+ ' ' + names[3][0] + '., ' + names[0]+ ' ' + names[1]
 							other_names_array << names[2]+ ' ' + names[3] + ', ' + names[0]+ ' ' + names[1]
 						end
-						puts other_names_array
 						other_names_array.each do |other_n|
 							person_popolo.other_names.push Popolo::OtherName.new name: other_n
 						end
