@@ -98,19 +98,20 @@ describe PersonScraper , "The person Scrapper" do
         expect(p.memberships.count).to eq(1)
         m = p.memberships.first
 
-        expect(p.other_names.count).to eq(1)
+        expect(p.other_names.count).to eq(2)
         other_name = p.other_names.first
         expect(other_name.name).to eq('Hasbún S., Gustavo')
-
+        other_name = p.other_names.second
+        expect(other_name.name).to eq('Hasbún Selume, Gustavo')
       end
       it "parses other names" do
         p = Popolo::Person.where(:_id => '5330374bd0c05d8b737b6d10').first
-        expect(p.name).to eq('Juan Antonio Coloma Correa')
-        expect(p.memberships.count).to eq(1)
-        m = p.memberships.first
-        expect(p.other_names.count).to eq(1)
+        expect(p.other_names.count).to eq(2)
         other_name = p.other_names.first
         expect(other_name.name).to eq('Coloma C., Juan Antonio')
+        other_name = p.other_names.second
+        expect(other_name.name).to eq('Coloma Correa, Juan Antonio')
+
 
       end
       it "doesn't scrape a person twice" do

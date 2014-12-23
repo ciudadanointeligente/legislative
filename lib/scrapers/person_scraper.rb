@@ -34,21 +34,23 @@ class PersonScraper < Pupa::Processor
 					membership.person = person_popolo
 					membership.save()
 				end
+				other_names_array = []
 				if person_popolo.other_names.count == 0
 					names = person_popolo.name.split(' ')
 					other_name = nil
 					if names.length == 3
 						other_n = names[1]+ ' ' + names[2][0] + '., ' + names[0]
+						other_names_array << other_n
+						other_names_array << names[1]+ ' ' + names[2] + ', ' + names[0]
 					end
 					if names.length == 4
-						other_n = names[2]+ ' ' + names[3][0] + '., ' + names[0]+ ' ' + names[1]
+						other_names_array << names[2]+ ' ' + names[3][0] + '., ' + names[0]+ ' ' + names[1]
+						other_names_array << names[2]+ ' ' + names[3] + ', ' + names[0]+ ' ' + names[1]
 					end
-					if not other_name
-						other_name = Popolo::OtherName.new name: other_n
-						person_popolo.other_names.push other_name
-
+					puts other_names_array
+					other_names_array.each do |other_n|
+						person_popolo.other_names.push Popolo::OtherName.new name: other_n
 					end
-					# 
 				end
 				person_popolo.save
 				person.name = person_h['name']
