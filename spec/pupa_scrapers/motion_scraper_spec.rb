@@ -68,7 +68,10 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 
 			expect(motion.vote_events.count).to eq(1)
 			vote_event = motion.vote_events.first
-			
+			expect(vote_event.votes.count).to  be > 0
+			first_vote = vote_event.votes.first
+			expect(first_vote.voter).to be_a_kind_of(Popolo::Person)
+
 
 		end
 	end

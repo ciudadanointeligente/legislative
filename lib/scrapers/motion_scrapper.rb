@@ -29,6 +29,9 @@ module CongresoAbiertoScrapers
 						votacion.css('VOTO').each do |voto|
 							parlamentario_name = voto.css('PARLAMENTARIO').first.content 
 							parlamentario_seleccion = voto.css('SELECCION').first.content
+							voto = Popolo::Vote.new
+							voto.vote_event = vote_event
+							voto.save()
 						end
 					end
 				end
