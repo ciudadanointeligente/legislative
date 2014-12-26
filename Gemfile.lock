@@ -21,9 +21,9 @@ GIT
 
 GIT
   remote: git://github.com/opennorth/popolo-engine.git
-  revision: d2831b3ed4ad93baa2e9e8703f79147fa071baff
+  revision: 3c4173893a78b741fecf788ef849fded2effd693
   specs:
-    popolo (0.0.3)
+    popolo (0.1.0)
       inherited_resources (~> 1.5.1)
       mongoid (~> 4.0.0)
       mongoid-tree (~> 2.0.0)
@@ -198,7 +198,7 @@ GEM
     httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    i18n (0.6.11)
+    i18n (0.7.0)
     inherited_resources (1.5.1)
       actionpack (>= 3.2, < 4.2)
       has_scope (~> 0.6.0.rc)
