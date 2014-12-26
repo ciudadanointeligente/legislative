@@ -66,10 +66,9 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 			motion = Popolo::Motion.where(
 				text:'Votación enmienda al inc. final del art 27 contenido en la letra c) del número 8 -que pasa a ser 10- del artículo 1º propuesto en el 2º informe del proyecto de ley, en segundo trámite constitucional, que autoriza el levantamiento de secreto bancario en investigaciones de lavado de activos, con segundo y nuevo segundo informe de la Comisión de Constitución, Legislación, Justicia y Reglamento. (discusión en particular). (Boletín N° 4.426-07).').first
 
-			expect(motion.vote_events.count).to eq(6)
-			vote_event = motion.vote_events.where(
-				
-				)
+			expect(motion.vote_events.count).to eq(1)
+			vote_event = motion.vote_events.first
+			
 
 		end
 	end
