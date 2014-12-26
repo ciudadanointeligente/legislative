@@ -46,10 +46,13 @@ production:
   congressman_pic_y: '15' # add the y crop image
   congressman_pic_w: '160' # add the with of crop image
   congressman_pic_h: '150' # add the heigth of crop image
-  email_suscription: 'Congreso abierto <legislative@congresoabierto.cl>'
-  subject_suscription: 'Congreso abierto, Confirmación de suscripción'
-  subject_update: 'Congreso abierto, Actualización de proyectos de ley'
+  email_suscription: 'Congreso abierto <info@congresoabierto.cl>'
+  subject_suscription: 'Congreso abierto, confirmación de suscripción'
+  subject_update: 'Congreso abierto, actualización de proyectos de ley'
   url_suscription: 'http://congresoabierto.cl'
+  smtp_setting_address: ~ #cuttlefish.oaf.org.au
+  smtp_setting_username: ~ #user name
+  smtp_setting_password: ~ #password
   preset1: ~    # custom search filters example, up to 9: '["2000-2006 Ricardo Lagos Escobar", "creation_date_min=2000-03-11&creation_date_max=2006-03-10"]'
   bing_search: ~ # bing webmaster validation
   twitter_card: ~ #twitter:card
@@ -103,10 +106,13 @@ development:
   congressman_pic_y: '15' # add the y crop image
   congressman_pic_w: '160' # add the with of crop image
   congressman_pic_h: '150' # add the heigth of crop image
-  email_suscription: 'Congreso abierto <legislative@congresoabierto.cl>'
-  subject_suscription: 'Congreso abierto, Confirmación de suscripción'
-  subject_update: 'Congreso abierto, Actualización de proyectos de ley'
+  email_suscription: 'Congreso abierto <info@congresoabierto.cl>'
+  subject_suscription: 'Congreso abierto, confirmación de suscripción'
+  subject_update: 'Congreso abierto, actualización de proyectos de ley'
   url_suscription: 'http://congresoabierto.cl'
+  smtp_setting_address: ~ #cuttlefish.oaf.org.au
+  smtp_setting_username: ~ #user name
+  smtp_setting_password: ~ #password
   preset1: ~    # custom search filters example, up to 9: '["2000-2006 Ricardo Lagos Escobar", "creation_date_min=2000-03-11&creation_date_max=2006-03-10"]'
   bing_search: ~ # bing webmaster validation
   twitter_card: ~ #twitter:card
