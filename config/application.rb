@@ -78,5 +78,7 @@ module Legislative
         :request_specs => true
       g.fixture_replacement :factory_girl, :dir => "spec/factories"
     end
+
+    config.action_mailer.default_url_options = { host: ENV['root_url'] }
   end
 end
