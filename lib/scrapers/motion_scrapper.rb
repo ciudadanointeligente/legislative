@@ -30,9 +30,6 @@ module CongresoAbiertoScrapers
 					end
 				end
 			end
-			# xml_doc.xpath('//proyectos/proyecto').each do |proyecto|
-			# 	puts proyecto.xpath['boletin/text()']
-			# end
 
 		end
 	end
