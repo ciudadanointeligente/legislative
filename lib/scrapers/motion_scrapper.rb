@@ -1,6 +1,8 @@
 require 'popolo'
 require 'nokogiri'
 require 'htmlentities'
+require 'open-uri'
+
 
 module CongresoAbiertoScrapers
 	class MotionScrapingRunRecord
@@ -9,10 +11,21 @@ module CongresoAbiertoScrapers
 	end
 
 	class MotionScraper < Pupa::Processor
+		def dater
+			if @options.include? :dater
+				return @options[:dater]
+			end
+			return Date
+		end
+
 		def scrape_motion
-			record = MotionScrapingRunRecord.new date:Date.today
+			previous_record = MotionScrapingRunRecord.order_by(
+				date: 'asc'
+				).last
+			date_encoded = previous_record.date.strftime('%d/%m/%Y')
+			record = MotionScrapingRunRecord.new date:self.dater.today
 			record.save()
-			url = 'http://www.senado.cl/wspublico/tramitacion.php?fecha=12%2F12%2F2014'
+			url = 'http://www.senado.cl/wspublico/tramitacion.php?fecha='+URI::encode(date_encoded)
 			doc = open(url).read
 			xml_doc  = Nokogiri::XML doc
 			xml_doc.css('proyecto').each do |proyecto_|
@@ -20,7 +33,7 @@ module CongresoAbiertoScrapers
 				proyecto_.css('votaciones').each do |votaciones|
 					votaciones.css('votacion').each do |votacion|
 						motion = Popolo::Motion.new
-						motion.date = Date.strptime votacion.css('FECHA').first.content, '%d/%m/%Y'
+						motion.date = self.dater.strptime votacion.css('FECHA').first.content, '%d/%m/%Y'
 						motion.text = votacion.css('TEMA').first.content.strip
 						motion.save()
 						vote_event = Popolo::VoteEvent.new

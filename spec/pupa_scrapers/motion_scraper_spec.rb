@@ -11,20 +11,34 @@ WebMock.disable_net_connect!(:allow => /popoloproject.com/)
 describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 	before :each do
 		$file = File.read('./spec/fixtures/ultimas_tramitaciones.xml')
-		stub_request(:get, "http://www.senado.cl/wspublico/tramitacion.php?fecha=12/12/2014").to_return(:body => $file)
+		
 	end
-	before :all do
-		#Add previous records of scraping
-		CongresoAbiertoScrapers::MotionScrapingRunRecord.new date:Date.strptime('2014-11-12')
-		CongresoAbiertoScrapers::MotionScrapingRunRecord.new date:Date.strptime('2014-12-12')
-	end
+	
 	context "it self" do
+		before :each do
+			CongresoAbiertoScrapers::MotionScrapingRunRecord.create date:Date.strptime('2014-11-12')
+			CongresoAbiertoScrapers::MotionScrapingRunRecord.create date:Date.strptime('2014-12-12')
+			stub_request(:get, "http://www.senado.cl/wspublico/tramitacion.php?fecha=12/12/2014").to_return(:body => $file)
+		end
+		before :all do
+			#Add previous records of scraping
+			
+		end
 		it "initializes" do
 			scrapper = CongresoAbiertoScrapers::MotionScraper.new './results'
 			expect(scrapper).to be_a Pupa::Processor
 		end
 	end
 	context "recording every run" do
+		before :each do
+			CongresoAbiertoScrapers::MotionScrapingRunRecord.create date:Date.strptime('2014-11-12')
+			stub_request(:get, "http://www.senado.cl/wspublico/tramitacion.php?fecha=12/11/2014").to_return(:body => $file)
+		end
+		before :all do
+			#Add previous records of scraping
+			
+			
+		end
 		let!(:today) { Date.strptime('2014-12-12') }
 		before do
 		  
@@ -34,35 +48,61 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 
 			Date.stub(:today).and_return(today)
 			runner = Pupa::Runner.new(CongresoAbiertoScrapers::MotionScraper)
-			runner.run([])
+			runner.run([:level => "ERROR"])
 			records = CongresoAbiertoScrapers::MotionScrapingRunRecord.all()
-			expect(records.count).to eq(1)
-			record = records.first
+			expect(records.count).to eq(2)
+			record = records.order_by(:date=>'asc').last
 			expect(record.date).to eq(today)
 
 
 		end
+	end
+	context "scraping dayly" do
+		before :each do
+			CongresoAbiertoScrapers::MotionScrapingRunRecord.create date:Date.strptime('2014-11-12')
+			CongresoAbiertoScrapers::MotionScrapingRunRecord.create date:Date.strptime('2014-12-12')
+		end
+		before :all do
+			#Add previous records of scraping
+		end
 		it "records according to a day" do
 			today__ = Date.strptime('2014-12-20')
-			Date.stub(:today).and_return(today__)
-			stub_request(:get, "http://www.senado.cl/wspublico/tramitacion.php?fecha=20/12/2014").to_return(:body => "")
+			date_spy = class_spy("Date")
+			allow(date_spy).to receive(:today) { today__ }
 
-			runner = Pupa::Runner.new(CongresoAbiertoScrapers::MotionScraper)
-			runner.run([])
-			records = CongresoAbiertoScrapers::MotionScrapingRunRecord.all()
+
+
+			stub__ = stub_request(:get, "http://www.senado.cl/wspublico/tramitacion.php?fecha=12/12/2014").to_return(:body => "")
+
+			scraper_class = CongresoAbiertoScrapers::MotionScraper
+
+			runner = Pupa::Runner.new(scraper_class)
+			runner.run([
+				:dater => date_spy,
+				:level => "ERROR"
+				])
+			records = CongresoAbiertoScrapers::MotionScrapingRunRecord.where(
+				:date => today__
+				)
 			expect(records.count).to eq(1)
 			record = records.first
 			expect(record.date).to eq(today__)
+
 		end
 	end
 	context "there are two existing record" do
 		before :each do
+			CongresoAbiertoScrapers::MotionScrapingRunRecord.create date:Date.strptime('2014-11-12')
+			CongresoAbiertoScrapers::MotionScrapingRunRecord.create date:Date.strptime('2014-12-12')
+			stub_request(:get, "http://www.senado.cl/wspublico/tramitacion.php?fecha=12/12/2014").to_return(:body => $file)
 		end
 		before :all do
+			#Add previous records of scraping
+			
 		end
 		it "creates motions" do
 			runner = Pupa::Runner.new(CongresoAbiertoScrapers::MotionScraper)
-			runner.run([])
+			runner.run([:level => "ERROR"])
 			motions = Popolo::Motion.where(
 				text:"Votación enmienda al inc. final del art 27 contenido en la letra c) del número 8 -que pasa a ser 10- del artículo 1º propuesto en el 2º informe del proyecto de ley, en segundo trámite constitucional, que autoriza el levantamiento de secreto bancario en investigaciones de lavado de activos, con segundo y nuevo segundo informe de la Comisión de Constitución, Legislación, Justicia y Reglamento. (discusión en particular). (Boletín N° 4.426-07)."
 				)
@@ -74,6 +114,14 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 		end
 	end
 	context "scraping vote events" do
+		before :each do
+			CongresoAbiertoScrapers::MotionScrapingRunRecord.create date:Date.strptime('2014-12-12')
+			CongresoAbiertoScrapers::MotionScrapingRunRecord.create date:Date.strptime('2014-11-12')
+			stub_request(:get, "http://www.senado.cl/wspublico/tramitacion.php?fecha=12/12/2014").to_return(:body => $file)
+		end
+		before :all do
+			#Add previous records of scraping
+		end
 		it "scrapes vote events" do
 			# {
 			# 	"_id" : ObjectId("53303746d0c05d8b737b6cff"),
@@ -95,7 +143,7 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 			person.save
 
 			runner = Pupa::Runner.new(CongresoAbiertoScrapers::MotionScraper)
-			runner.run([])
+			runner.run([:level => "ERROR"])
 			motion = Popolo::Motion.where(
 				text:'Votación enmienda al inc. final del art 27 contenido en la letra c) del número 8 -que pasa a ser 10- del artículo 1º propuesto en el 2º informe del proyecto de ley, en segundo trámite constitucional, que autoriza el levantamiento de secreto bancario en investigaciones de lavado de activos, con segundo y nuevo segundo informe de la Comisión de Constitución, Legislación, Justicia y Reglamento. (discusión en particular). (Boletín N° 4.426-07).').first
 
