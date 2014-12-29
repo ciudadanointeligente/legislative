@@ -10,8 +10,8 @@ module CongresoAbiertoScrapers
 			keep_fetching = true
 			url = 'http://pmocl.popit.mysociety.org/api/v0.1/persons'
 			while keep_fetching do
-
 				doc = open(url).read
+
 				json_response = JSON.parse(doc)
 				keep_fetching = json_response['has_more']
 				if keep_fetching then

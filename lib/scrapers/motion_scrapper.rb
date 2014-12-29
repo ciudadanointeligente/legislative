@@ -19,10 +19,15 @@ module CongresoAbiertoScrapers
 		end
 
 		def scrape_motion
-			previous_record = MotionScrapingRunRecord.order_by(
+			previous_records = MotionScrapingRunRecord.order_by(
 				date: 'asc'
-				).last
-			date_encoded = previous_record.date.strftime('%d/%m/%Y')
+				)
+			if previous_records.count > 0
+				date_encoded = previous_records.last.date.strftime('%d/%m/%Y')
+			else
+				date_encoded = (self.dater.today.months_ago(1)).strftime('%d/%m/%Y')
+			end
+			
 			record = MotionScrapingRunRecord.new date:self.dater.today
 			record.save()
 			url = 'http://www.senado.cl/wspublico/tramitacion.php?fecha='+URI::encode(date_encoded)

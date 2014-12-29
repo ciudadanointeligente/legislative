@@ -58,14 +58,9 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 		end
 	end
 	context "scraping dayly" do
-		before :each do
+		it "records according to a day" do
 			CongresoAbiertoScrapers::MotionScrapingRunRecord.create date:Date.strptime('2014-11-12')
 			CongresoAbiertoScrapers::MotionScrapingRunRecord.create date:Date.strptime('2014-12-12')
-		end
-		before :all do
-			#Add previous records of scraping
-		end
-		it "records according to a day" do
 			today__ = Date.strptime('2014-12-20')
 			date_spy = class_spy("Date")
 			allow(date_spy).to receive(:today) { today__ }
@@ -88,6 +83,29 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 			record = records.first
 			expect(record.date).to eq(today__)
 
+		end
+		it "scrapes when there are no records" do
+			today__ = Date.strptime('2014-12-20')
+			date_spy = class_spy("Date")
+			allow(date_spy).to receive(:today) { today__ }
+
+
+
+			stub__ = stub_request(:get, "http://www.senado.cl/wspublico/tramitacion.php?fecha=20/11/2014").to_return(:body => "")
+
+			scraper_class = CongresoAbiertoScrapers::MotionScraper
+
+			runner = Pupa::Runner.new(scraper_class)
+			runner.run([
+				:dater => date_spy,
+				:level => "ERROR"
+				])
+			records = CongresoAbiertoScrapers::MotionScrapingRunRecord.where(
+				:date => today__
+				)
+			expect(records.count).to eq(1)
+			record = records.first
+			expect(record.date).to eq(today__)			
 		end
 	end
 	context "there are two existing record" do
