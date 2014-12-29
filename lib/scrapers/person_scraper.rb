@@ -71,5 +71,5 @@ CongresoAbiertoScrapers::PersonScraper.add_scraping_task(:people)
 
 ## Esta wea funciona de esta manera
 ## require './lib/scrapers/person_scraper'
-## runner = Pupa::Runner.new(PersonScraper)
+## runner = Pupa::Runner.new(CongresoAbiertoScrapers::PersonScraper)
 ## runner.run([])

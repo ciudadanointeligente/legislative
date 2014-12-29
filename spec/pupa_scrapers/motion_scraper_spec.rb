@@ -61,6 +61,25 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 	end
 	context "scraping vote events" do
 		it "scrapes vote events" do
+			# {
+			# 	"_id" : ObjectId("53303746d0c05d8b737b6cff"),
+			# 	"birth_date" : "1955-05-22",
+			# 	"created_at" : ISODate("2014-12-22T15:41:06.497Z"),
+			# 	"honorific_prefix" : "Senador",
+			# 	"image" : "http://www.senado.cl/appsenado/index.php?mo=senadores&ac=getFoto&id=690&tipo=1",
+			# 	"name" : "José García Ruminot",
+			# 	"other_names" : [
+			# 		{
+			# 			"_id" : ObjectId("54988cf37061722527820000"),
+			# 			"name" : "García R., José"
+			# 		}
+			# 	],
+			# 	"updated_at" : ISODate("2014-12-22T20:36:00.859Z")
+			# }
+			person = Popolo::Person.create name:"José García Ruminot", id:"53303746d0c05d8b737b6cff"
+			person.other_names.push Popolo::OtherName.new name: "García R., José"
+			person.save
+
 			runner = Pupa::Runner.new(CongresoAbiertoScrapers::MotionScraper)
 			runner.run([])
 			motion = Popolo::Motion.where(
@@ -68,9 +87,13 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 
 			expect(motion.vote_events.count).to eq(1)
 			vote_event = motion.vote_events.first
-			expect(vote_event.votes.count).to  be > 0
-			first_vote = vote_event.votes.first
-			expect(first_vote.voter).to be_a_kind_of(Popolo::Person)
+			votos = vote_event.votes.all()
+			voto = votos.first
+
+			expect(voto).to_not be_nil
+			expect(voto.voter._id).to eq(person.id)
+			expect(voto.voter.id).to eq(person.id)
+
 
 
 		end

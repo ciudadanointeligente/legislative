@@ -28,10 +28,21 @@ module CongresoAbiertoScrapers
 						vote_event.save()
 						votacion.css('VOTO').each do |voto|
 							parlamentario_name = voto.css('PARLAMENTARIO').first.content 
+							persons = Popolo::Person.where(
+								"other_names.name"=>parlamentario_name
+								)
 							parlamentario_seleccion = voto.css('SELECCION').first.content
-							voto = Popolo::Vote.new
-							voto.vote_event = vote_event
-							voto.save()
+							
+							if persons.count > 0
+								voto = Popolo::Vote.new
+								voto.vote_event = vote_event
+								voto.option = parlamentario_seleccion
+								
+								person = persons.first
+								person.votes.push voto
+								voto.save()
+								person.save()
+							end
 						end
 					end
 				end
