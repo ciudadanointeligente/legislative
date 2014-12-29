@@ -73,7 +73,10 @@ Legislative::Application.configure do
   # Send mails to Cuttlefish (see http://cuttlefish.io)
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => "localhost",
+    :address => ENV['smtp_setting_address'],
     :port => 2525,
-  }
+    :user_name => ENV['smtp_setting_username'],
+    :password => ENV['smtp_setting_password'],
+    :authentication => :plain
+   }
 end

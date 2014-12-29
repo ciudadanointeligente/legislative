@@ -209,8 +209,8 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     json-schema (2.1.9)
-    libv8 (3.16.14.7)
     listen (2.8.3)
+    libv8 (3.16.14.7)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -415,6 +415,7 @@ DEPENDENCIES
   httparty
   jquery-rails (~> 3.1.1)
   json
+  libv8 (~> 3.16.14.7)
   monologue!
   mysql2
   newrelic_rpm
