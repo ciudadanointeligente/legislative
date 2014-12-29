@@ -16,7 +16,7 @@ export RAILS_VERSION=3.2.0
 
 # just checkout the production branch
 # http://stackoverflow.com/a/7349740/5349
-export DIR=poplus_components/billit_local_for_testing
+export DIR=billit_local_for_testing
 export BRANCH=production
 export REMOTE_REPO=https://github.com/ciudadanointeligente/bill-it.git
 export PORT=3003

@@ -15,7 +15,7 @@ set -e
 
 # just checkout the mysociety-deploy branch
 # http://stackoverflow.com/a/7349740/5349
-export DIR=poplus_components/popit_local_for_testing
+export DIR=popit_local_for_testing
 export BRANCH=master
 export REMOTE_REPO=https://github.com/lfalvarez/testing_popit_api.git
 export PORT=3002

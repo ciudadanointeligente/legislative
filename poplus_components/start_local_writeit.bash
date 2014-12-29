@@ -15,7 +15,7 @@ set -e
 
 # just checkout the master branch
 # http://stackoverflow.com/a/7349740/5349
-export DIR=poplus_components/writeit_local_for_testing
+export DIR=writeit_local_for_testing
 export BRANCH=master
 export REMOTE_REPO=https://github.com/ciudadanointeligente/write-it.git
 export PORT=3001

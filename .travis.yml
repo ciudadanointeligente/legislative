@@ -23,3 +23,6 @@ before_script:
   - rake db:migrate
   # creating default admin user
   - rake db:seed
+
+notifications:
+  slack: ciudadanoi:GjbzR4EjJZEiDQCKpvrKHW8E

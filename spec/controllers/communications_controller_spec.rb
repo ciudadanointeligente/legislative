@@ -5,6 +5,7 @@ describe CommunicationsController do
   describe "GET 'index'" do
     it "returns http success" do
       get 'index', locale: 'es'
+      puts response
       response.should be_success
     end
     

@@ -27,10 +27,12 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 	context "recording every run" do
 		let!(:today) { Date.strptime('2014-12-12') }
 		before do
-		  Date.stub(:today).and_return(today)
+		  
 		end
 
 		it "records every run" do
+
+			Date.stub(:today).and_return(today)
 			runner = Pupa::Runner.new(CongresoAbiertoScrapers::MotionScraper)
 			runner.run([])
 			records = CongresoAbiertoScrapers::MotionScrapingRunRecord.all()
@@ -39,6 +41,18 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 			expect(record.date).to eq(today)
 
 
+		end
+		it "records according to a day" do
+			today__ = Date.strptime('2014-12-20')
+			Date.stub(:today).and_return(today__)
+			stub_request(:get, "http://www.senado.cl/wspublico/tramitacion.php?fecha=20/12/2014").to_return(:body => "")
+
+			runner = Pupa::Runner.new(CongresoAbiertoScrapers::MotionScraper)
+			runner.run([])
+			records = CongresoAbiertoScrapers::MotionScrapingRunRecord.all()
+			expect(records.count).to eq(1)
+			record = records.first
+			expect(record.date).to eq(today__)
 		end
 	end
 	context "there are two existing record" do
