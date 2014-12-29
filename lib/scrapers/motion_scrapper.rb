@@ -33,6 +33,7 @@ module CongresoAbiertoScrapers
 			url = 'http://www.senado.cl/wspublico/tramitacion.php?fecha='+URI::encode(date_encoded)
 			doc = open(url).read
 			xml_doc  = Nokogiri::XML doc
+			persons_without_votes = []
 			xml_doc.css('proyecto').each do |proyecto_|
 
 				proyecto_.css('votaciones').each do |votaciones|
@@ -45,7 +46,7 @@ module CongresoAbiertoScrapers
 						vote_event.motion = motion
 						vote_event.save()
 						votacion.css('VOTO').each do |voto|
-							parlamentario_name = voto.css('PARLAMENTARIO').first.content 
+							parlamentario_name = voto.css('PARLAMENTARIO').first.content.strip
 							persons = Popolo::Person.where(
 								"other_names.name"=>parlamentario_name
 								)
@@ -60,13 +61,29 @@ module CongresoAbiertoScrapers
 								person.votes.push voto
 								voto.save()
 								person.save()
+							else
+								if persons_without_votes.include? parlamentario_name
+									persons_without_votes.push(parlamentario_name)
+								end
+								
 							end
 						end
 					end
 				end
 			end
+			puts "People that we could not find"
+			persons_without_votes.each do |parlamentario_name|
+				puts parlamentario_name
+			end
+
 
 		end
 	end
 end
 CongresoAbiertoScrapers::MotionScraper.add_scraping_task(:motion)
+
+
+## Esta wea funciona de esta manera
+## require './lib/scrapers/motion_scrapper'
+## runner = Pupa::Runner.new(CongresoAbiertoScrapers::MotionScraper)
+## runner.run([])
