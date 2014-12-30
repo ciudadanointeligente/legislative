@@ -173,9 +173,6 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 			expect(voto).to_not be_nil
 			expect(voto.voter._id).to eq(person.id)
 			expect(voto.voter.id).to eq(person.id)
-
-
-
 		end
 	end
 
