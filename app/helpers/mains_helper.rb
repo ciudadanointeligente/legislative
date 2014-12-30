@@ -24,7 +24,12 @@ module MainsHelper
       rescue Timeout::Error
         url_image = open('app/assets/images/default-profile.png')
       end
-      image.from_blob(url_image.read)
+      begin
+        image.from_blob(url_image.read)
+      rescue
+        url_image = open('app/assets/images/default-profile.png')
+        image.from_blob(url_image.read)
+      end
       crop = image.crop(ENV['congressman_pic_x'].to_i,ENV['congressman_pic_y'].to_i,ENV['congressman_pic_w'].to_i,ENV['congressman_pic_h'].to_i)
       crop.write('app/assets/images/congressman/'+fantasy_name+'.jpg')
     end
