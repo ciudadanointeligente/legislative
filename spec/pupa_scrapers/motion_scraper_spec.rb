@@ -127,6 +127,7 @@ describe CongresoAbiertoScrapers::MotionScraper , "The Motion Scrapper" do
 			expect(motions.count).to  be > 0
 			motion = motions.first
 			expect(motion.date).to eq(Date.strptime('2014-04-02'))
+			expect(motion.identifier).to eq('4426-07')
 
 			
 		end

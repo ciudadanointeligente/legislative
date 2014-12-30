@@ -35,11 +35,12 @@ module CongresoAbiertoScrapers
 			xml_doc  = Nokogiri::XML doc
 			persons_without_votes = []
 			xml_doc.css('proyecto').each do |proyecto_|
-
+				boletin = proyecto_.css('descripcion/boletin').first.content.strip
 				proyecto_.css('votaciones').each do |votaciones|
 					votaciones.css('votacion').each do |votacion|
 						motion = Popolo::Motion.new
 						motion.date = self.dater.strptime votacion.css('FECHA').first.content, '%d/%m/%Y'
+						motion.identifier = boletin
 						motion.text = votacion.css('TEMA').first.content.strip
 						motion.save()
 						vote_event = Popolo::VoteEvent.new
