@@ -1,0 +1,14 @@
+%div
+    %h1
+        = @popolo_person.name
+    %table
+        - @popolo_person.votes.order_by('vote_event.motion.date'=>'desc').each do |vote|
+            %tr
+                %td
+                    = vote.vote_event.motion.identifier
+                %td
+                    = vote.option
+                %td
+                    = vote.vote_event.motion.date
+                %td
+                    = vote.vote_event.motion.text
