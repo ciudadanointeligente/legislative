@@ -33,6 +33,13 @@ class CongressmenController < ApplicationController
 
   # GET /congressmen/votes/1
   def votes 
+    #this gets a person from popolo
+    possible_persons = Popolo::Person.where(:id =>params[:id] )
+    if possible_persons.length > 0
+      @popolo_person = possible_persons.first
+    end
+
+    #this gets a person from popolo
   end
 
   # GET /congressmen/1
