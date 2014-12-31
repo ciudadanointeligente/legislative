@@ -18,7 +18,7 @@ describe CongressmenController, :type => :controller  do
     describe "GET 'votes'" do
       it 'routes to the thing' do
         person = Popolo::Person.create id:"12345fieraFeroz", name:"Fierita"
-        get :show, :id => person.id, locale: 'es'
+        get :votes, :id => person.id, locale: 'es'
         response.should be_success
       end
       xit "gets votes per person" do

@@ -20,7 +20,7 @@ Legislative::Application.routes.draw do
 
     resources :congressmen do
       get 'searches', on: :collection
-      get 'votes', :to => "congressmen#votes"
+      get 'votes', on: :collection
     end
 
     resources :agendas
