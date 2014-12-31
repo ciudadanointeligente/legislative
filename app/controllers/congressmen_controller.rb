@@ -4,6 +4,7 @@ require './app/models/bill'
 require './app/models/bill_basic'
 require 'RMagick'
 require 'open-uri'
+require 'popolo'
 
 class CongressmenController < ApplicationController
   caches_page :index, :show
@@ -29,11 +30,25 @@ class CongressmenController < ApplicationController
     @title = t('congressmen.title') + ' - '
   end
 
+
+  # GET /congressmen/votes/1
+  def votes 
+  end
+
   # GET /congressmen/1
   def show
     @congressmen =  Hash.new
     @organizations = Hash.new
     @message = Hash.new
+
+    #this gets a person from popolo
+    possible_persons = Popolo::Person.where(:id =>params[:id] )
+    if possible_persons.length > 0
+      @popolo_person = possible_persons.first
+    end
+
+    #this gets a person from popolo
+
 
     if !ENV['billit_url'].blank? and !ENV['popit_url'].blank? and !ENV['popit_persons'].blank? and !ENV['popit_search'].blank? and !ENV['popit_organizations'].blank? and !ENV['popit_organizations_search'].blank?
       @congressman = PopitPerson.new

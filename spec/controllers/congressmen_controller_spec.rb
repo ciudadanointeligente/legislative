@@ -1,33 +1,35 @@
 require 'spec_helper'
+require 'popolo'
 
-describe CongressmenController do
+describe CongressmenController, :type => :controller  do
   describe "GET 'index'" do
     it "returns http success" do
       get 'index', locale: 'es'
       response.should be_success
     end
-    it "obtains list of congressmen" do
-      get 'index', locale: 'es'
-      assigns(:congressmen).should_not be_nil
-      assigns(:congressmen).should be_an_instance_of PopitPersonCollection
-      assigns(:congressmen).persons.should_not be_nil
-      assigns(:congressmen).persons[0].should be_an_instance_of PopitPerson
-
+    it "returns one person" do
+      person = Popolo::Person.create id:"12345fieraFeroz", name:"Fierita"
+      get :show, :id => person.id, locale: 'es'
+      response.should be_success
+      assigns(:popolo_person).should_not be_nil
+      assigns(:popolo_person).should be_a_kind_of Popolo::Person
+      assigns(:popolo_person).id.should eq(person.id)
     end
-
+    describe "GET 'votes'" do
+      it 'routes to the thing' do
+        person = Popolo::Person.create id:"12345fieraFeroz", name:"Fierita"
+        get :show, :id => person.id, locale: 'es'
+        response.should be_success
+      end
+      xit "gets votes per person" do
+        person = Popolo::Person.create id:"12345fieraFeroz", name:"Fierita"
+        get :show, :id => person.id, locale: 'es'
+        response.should be_success
+        assigns(:popolo_person).should_not be_nil
+        assigns(:popolo_person).should be_a_kind_of Popolo::Person
+        assigns(:popolo_person).id.should eq(person.id)
+      end
+    end
+    
   end
-  it "shows only one congressman" do
-    get :show, :id => "5008048c7a317e126400046d", locale: 'es'
-    assigns(:congressman).id.should eql "5008048c7a317e126400046d"
-    assigns(:congressman).should be_a_kind_of PopitPerson
-  end
-
-  it "brings the last message for that person" do
-    value = %x( ./writeit_for_testing/writeit_install_yaml.bash example_with_2_messages.yaml )
-    get :show, :id => "5008048c7a317e126400046d", locale: 'es'
-    assigns(:message).should_not be_nil
-    assigns(:message).should be_a_kind_of LegislativeMessageRepresenter
-    assigns(:message).author_name.should eql "autor 1"
-  end
-
 end
