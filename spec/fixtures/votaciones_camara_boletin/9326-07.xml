@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>19756</ID>
+    <Fecha>2014-08-13T22:12:49</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>literal a) del numeral 1) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>115</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19788</ID>
+    <Fecha>2014-08-13T22:41:59</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 3) del artículo 3°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>89</TotalAfirmativos>
+    <TotalNegativos>26</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19790</ID>
+    <Fecha>2014-08-13T22:43:08</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>literal b) del numeral 4) del artículo 3°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>85</TotalAfirmativos>
+    <TotalNegativos>29</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19785</ID>
+    <Fecha>2014-08-13T22:40:03</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>literal a) del numeral 1) del artículo 3°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>75</TotalAfirmativos>
+    <TotalNegativos>40</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19784</ID>
+    <Fecha>2014-08-13T22:38:58</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>Indicación renovada de los diputados señores Jackson y Mirosevic,  para sustituir el artículo 24 de la ley N°19.884
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>32</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19772</ID>
+    <Fecha>2014-08-13T22:26:10</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 11) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>74</TotalAfirmativos>
+    <TotalNegativos>40</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19758</ID>
+    <Fecha>2014-08-13T22:14:54</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>inciso segundo del literal b) del numeral 1) del artículo 1°
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>12</TotalAfirmativos>
+    <TotalNegativos>74</TotalNegativos>
+    <TotalAbstenciones>31</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19757</ID>
+    <Fecha>2014-08-13T22:13:32</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>inciso primero del literal b) del numeral 1) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>88</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>28</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19778</ID>
+    <Fecha>2014-08-13T22:31:34</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 16) del artículo 1° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>113</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19765</ID>
+    <Fecha>2014-08-13T22:20:19</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>literal b) del numeral 6) del artículo 1°
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>117</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19764</ID>
+    <Fecha>2014-08-13T22:19:33</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>literal a) del numeral 6) del artículo 1°
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>90</TotalAfirmativos>
+    <TotalNegativos>27</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19763</ID>
+    <Fecha>2014-08-13T22:18:49</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 5) del artículo 1°
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>115</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19769</ID>
+    <Fecha>2014-08-13T22:23:06</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 9) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>74</TotalAfirmativos>
+    <TotalNegativos>42</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19767</ID>
+    <Fecha>2014-08-13T22:22:03</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 7) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>73</TotalAfirmativos>
+    <TotalNegativos>41</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19761</ID>
+    <Fecha>2014-08-13T22:17:34</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 2) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>90</TotalAfirmativos>
+    <TotalNegativos>26</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19397</ID>
+    <Fecha>2014-05-06T11:27:53</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3070</ID>
+      <Numero>20</Numero>
+      <Fecha>2014-05-06T11:13:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>Que pase a la Comisión de Gobierno Interior
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>37</TotalAfirmativos>
+    <TotalNegativos>37</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>1</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19768</ID>
+    <Fecha>2014-08-13T22:22:35</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 8) del artículo 1°
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>72</TotalAfirmativos>
+    <TotalNegativos>42</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19791</ID>
+    <Fecha>2014-08-13T22:43:46</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>artículo 4°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>75</TotalAfirmativos>
+    <TotalNegativos>39</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19771</ID>
+    <Fecha>2014-08-13T22:25:33</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>indicación renovada de la UDI que sustituye el artículo 178 de la ley N° 18.700, del numeral 11) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>31</TotalAfirmativos>
+    <TotalNegativos>81</TotalNegativos>
+    <TotalAbstenciones>4</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19787</ID>
+    <Fecha>2014-08-13T22:41:31</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 2) del artículo 3°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>76</TotalAfirmativos>
+    <TotalNegativos>40</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19773</ID>
+    <Fecha>2014-08-13T22:27:34</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>indicación renovada de la UDI que sustituye el artículo 179 de la ley N° 18.700, del numeral 12) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>27</TotalAfirmativos>
+    <TotalNegativos>86</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19762</ID>
+    <Fecha>2014-08-13T22:18:15</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 4) del artículo 1°
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>116</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19759</ID>
+    <Fecha>2014-08-13T22:16:11</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>literal c) del numeral 1) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>116</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19777</ID>
+    <Fecha>2014-08-13T22:31:06</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 14) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>73</TotalAfirmativos>
+    <TotalNegativos>41</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19754</ID>
+    <Fecha>2014-08-13T22:10:58</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>artículo 1° del proyecto, numerales 1) literal a), c) y d), 2), 3), 4), 10), 11), 12), 13), 14), 15), 17) y 18) 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>88</TotalAfirmativos>
+    <TotalNegativos>27</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19775</ID>
+    <Fecha>2014-08-13T22:29:19</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 13) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>72</TotalAfirmativos>
+    <TotalNegativos>41</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19782</ID>
+    <Fecha>2014-08-13T22:37:04</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <TotalAfirmativos>72</TotalAfirmativos>
+    <TotalNegativos>38</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19781</ID>
+    <Fecha>2014-08-13T22:35:17</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>Indicación renovada de los diputados señores Jackson y Mirosevic,  para sustituir el artículo 16 de la ley N°19.884
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>73</TotalAfirmativos>
+    <TotalNegativos>33</TotalNegativos>
+    <TotalAbstenciones>4</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19770</ID>
+    <Fecha>2014-08-13T22:23:53</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 10) del artículo 1°
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>115</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19766</ID>
+    <Fecha>2014-08-13T22:21:20</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>Indicación renovada de los diputados señores Jackson y Mirosevic,  para intercalar en el artículo 1° un numeral 7) nuevo
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>74</TotalAfirmativos>
+    <TotalNegativos>39</TotalNegativos>
+    <TotalAbstenciones>4</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19753</ID>
+    <Fecha>2014-08-13T22:09:27</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>literal b) del numeral 1) y los numerales 5), 6), 7), 8), 9) y 16) del artículo 1° y los artículos 2°, 3°, 4°.
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>86</TotalAfirmativos>
+    <TotalNegativos>28</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19786</ID>
+    <Fecha>2014-08-13T22:40:58</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>literal b) del numeral 1) del artículo 3°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>87</TotalAfirmativos>
+    <TotalNegativos>26</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19783</ID>
+    <Fecha>2014-08-13T22:37:32</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>Indicación renovada de los diputados señores Jackson y Mirosevic,  para sustituir el artículo 17 de la ley N°19.884
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>72</TotalAfirmativos>
+    <TotalNegativos>35</TotalNegativos>
+    <TotalAbstenciones>4</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19779</ID>
+    <Fecha>2014-08-13T22:32:08</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>artículo 2° del proyecto
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>72</TotalAfirmativos>
+    <TotalNegativos>40</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19776</ID>
+    <Fecha>2014-08-13T22:30:27</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>indicación renovada de la UDI que sustituye el artículo 180 de la ley N° 18.700, del numeral 14) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>26</TotalAfirmativos>
+    <TotalNegativos>88</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19780</ID>
+    <Fecha>2014-08-13T22:34:35</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <TotalAfirmativos>72</TotalAfirmativos>
+    <TotalNegativos>39</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19760</ID>
+    <Fecha>2014-08-13T22:16:52</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>literal d) del numeral 1) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>114</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19755</ID>
+    <Fecha>2014-08-13T22:12:00</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numerales 3), 15), 17), 18) del artículo 1° 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>100</TotalAfirmativos>
+    <TotalNegativos>13</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19789</ID>
+    <Fecha>2014-08-13T22:42:31</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>literal a) del numeral 4) del artículo 3°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>86</TotalAfirmativos>
+    <TotalNegativos>29</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19774</ID>
+    <Fecha>2014-08-13T22:28:10</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="7">3/5 Se requiere la aprobación de los tres quintos de los señores Diputados en ejercicio</Quorum>
+    <Sesion>
+      <ID>3115</ID>
+      <Numero>56</Numero>
+      <Fecha>2014-08-13T18:34:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="61">Especial</Tipo>
+    </Sesion>
+    <Boletin>9326-07</Boletin>
+    <Articulo>numeral 12) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>73</TotalAfirmativos>
+    <TotalNegativos>41</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

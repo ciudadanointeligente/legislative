@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>20429</ID>
+    <Fecha>2014-12-10T12:54:39</Fecha>
+    <Tipo Codigo="3">General y particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3163</ID>
+      <Numero>104</Numero>
+      <Fecha>2014-12-10T10:40:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9407-14</Boletin>
+    <Articulo>votación general del literal ii) de la letra c) del número 2), de la letra c) del número 4) y de la letra b) del número 7), todos del artículo 2°, por tratar materias propias de ley orgánica constitucional y votación particular del proyecto
+
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>87</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20428</ID>
+    <Fecha>2014-12-10T12:53:50</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3163</ID>
+      <Numero>104</Numero>
+      <Fecha>2014-12-10T10:40:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9407-14</Boletin>
+    <Articulo>con la salvedad del literal ii) de la letra c) del número 2), de la letra c) del número 4) y de la letra b) del número 7), todos del artículo 2°, por tratar materias propias de ley orgánica constitucional.
+
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>87</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>20410</ID>
+    <Fecha>2014-11-27T12:41:33</Fecha>
+    <Tipo Codigo="3">General y particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3161</ID>
+      <Numero>102</Numero>
+      <Fecha>2014-11-27T10:44:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9624-08</Boletin>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>85</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

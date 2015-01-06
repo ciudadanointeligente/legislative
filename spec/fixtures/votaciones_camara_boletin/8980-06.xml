@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>20395</ID>
+    <Fecha>2014-11-26T13:32:03</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3159</ID>
+      <Numero>100</Numero>
+      <Fecha>2014-11-26T10:44:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8980-06</Boletin>
+    <Articulo>resto del artículo 1°, propuesto por la Comisión de Gobierno Interior en su segundo informe
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>106</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20393</ID>
+    <Fecha>2014-11-26T13:30:34</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3159</ID>
+      <Numero>100</Numero>
+      <Fecha>2014-11-26T10:44:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8980-06</Boletin>
+    <Articulo>numeral 1) del artículo 1°, propuesto por la Comisión de Gobierno Interior en su segundo informe, cuya votación separada ha sido solicitada.
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>11</TotalAfirmativos>
+    <TotalNegativos>77</TotalNegativos>
+    <TotalAbstenciones>19</TotalAbstenciones>
+    <TotalDispensados>1</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20394</ID>
+    <Fecha>2014-11-26T13:31:22</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3159</ID>
+      <Numero>100</Numero>
+      <Fecha>2014-11-26T10:44:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8980-06</Boletin>
+    <Articulo>numeral 1) del artículo 1° propuesto por la Comisión de Gobierno Interior en su primer informe
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>107</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20234</ID>
+    <Fecha>2014-11-12T12:49:56</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3149</ID>
+      <Numero>90</Numero>
+      <Fecha>2014-11-12T10:36:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8980-06</Boletin>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>80</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20396</ID>
+    <Fecha>2014-11-26T13:32:39</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3159</ID>
+      <Numero>100</Numero>
+      <Fecha>2014-11-26T10:44:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8980-06</Boletin>
+    <Articulo>artículo 2°, propuesto por la Comisión de Gobierno Interior en su segundo informe
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>107</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

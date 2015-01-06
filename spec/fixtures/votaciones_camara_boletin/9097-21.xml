@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>19560</ID>
+    <Fecha>2014-06-17T13:23:51</Fecha>
+    <Tipo Codigo="3">General y particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3086</ID>
+      <Numero>35</Numero>
+      <Fecha>2014-06-17T11:11:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9097-21</Boletin>
+    <Articulo>Salvo numerales 5) respecto del artículo 55i, y 10) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>89</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19561</ID>
+    <Fecha>2014-06-17T13:24:25</Fecha>
+    <Tipo Codigo="3">General y particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="1">Quorum Calificado</Quorum>
+    <Sesion>
+      <ID>3086</ID>
+      <Numero>35</Numero>
+      <Fecha>2014-06-17T11:11:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9097-21</Boletin>
+    <Articulo>numerales 5) en lo que dice relación con el artículo 55i, y 10) del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>91</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

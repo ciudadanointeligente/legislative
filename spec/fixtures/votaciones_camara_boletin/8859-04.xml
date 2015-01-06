@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>17519</ID>
+    <Fecha>2013-07-18T12:22:36</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2972</ID>
+      <Numero>49</Numero>
+      <Fecha>2013-07-18T10:13:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8859-04</Boletin>
+    <Articulo>Artículo Noveno transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>52</TotalAfirmativos>
+    <TotalNegativos>12</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>17517</ID>
+    <Fecha>2013-07-18T12:21:34</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2972</ID>
+      <Numero>49</Numero>
+      <Fecha>2013-07-18T10:13:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8859-04</Boletin>
+    <Articulo>Artículo 4° transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>55</TotalAfirmativos>
+    <TotalNegativos>4</TotalNegativos>
+    <TotalAbstenciones>12</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>17518</ID>
+    <Fecha>2013-07-18T12:22:04</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2972</ID>
+      <Numero>49</Numero>
+      <Fecha>2013-07-18T10:13:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8859-04</Boletin>
+    <Articulo>Artículo Quinto Transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>48</TotalAfirmativos>
+    <TotalNegativos>6</TotalNegativos>
+    <TotalAbstenciones>15</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>17516</ID>
+    <Fecha>2013-07-18T12:21:04</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2972</ID>
+      <Numero>49</Numero>
+      <Fecha>2013-07-18T10:13:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8859-04</Boletin>
+    <Articulo>Artículo 1° transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>55</TotalAfirmativos>
+    <TotalNegativos>4</TotalNegativos>
+    <TotalAbstenciones>11</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>17513</ID>
+    <Fecha>2013-07-18T12:19:02</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2972</ID>
+      <Numero>49</Numero>
+      <Fecha>2013-07-18T10:13:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8859-04</Boletin>
+    <Articulo>Artículos 1° a 13 permanentes
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>67</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>17515</ID>
+    <Fecha>2013-07-18T12:20:29</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2972</ID>
+      <Numero>49</Numero>
+      <Fecha>2013-07-18T10:13:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8859-04</Boletin>
+    <Articulo>Artículos Segundo, Tercero, Sexto, Séptimo y Octavo Transitorios
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>68</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>17512</ID>
+    <Fecha>2013-07-18T12:18:24</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2972</ID>
+      <Numero>49</Numero>
+      <Fecha>2013-07-18T10:13:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8859-04</Boletin>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>68</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>17514</ID>
+    <Fecha>2013-07-18T12:19:36</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2972</ID>
+      <Numero>49</Numero>
+      <Fecha>2013-07-18T10:13:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8859-04</Boletin>
+    <Articulo>Artículo 14 con modificación de la Comisión de Hacienda
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>59</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

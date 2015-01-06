@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>17191</ID>
+    <Fecha>2013-06-05T13:25:23</Fecha>
+    <Tipo Codigo="3">General y particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2944</ID>
+      <Numero>34</Numero>
+      <Fecha>2013-06-05T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8784-04</Boletin>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>92</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>1</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20466</ID>
+    <Fecha>2014-12-18T13:10:18</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3168</ID>
+      <Numero>109</Numero>
+      <Fecha>2014-12-18T10:40:24</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>8784-04</Boletin>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>88</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

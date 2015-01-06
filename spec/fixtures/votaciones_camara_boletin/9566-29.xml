@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>20426</ID>
+    <Fecha>2014-12-10T12:52:10</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3163</ID>
+      <Numero>104</Numero>
+      <Fecha>2014-12-10T10:40:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9566-29</Boletin>
+    <Articulo>Numerales 2), 8), 9) y 11) del artículo 1°, cuya votación separada ha sido solicitada
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>83</TotalAfirmativos>
+    <TotalNegativos>2</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20425</ID>
+    <Fecha>2014-12-10T12:51:01</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3163</ID>
+      <Numero>104</Numero>
+      <Fecha>2014-12-10T10:40:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9566-29</Boletin>
+    <Articulo>votación general de los nuevos artículos 26 y 27 de la ley N°19.327, incorporados por el numeral 20 del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>85</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20424</ID>
+    <Fecha>2014-12-10T12:50:08</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3163</ID>
+      <Numero>104</Numero>
+      <Fecha>2014-12-10T10:40:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9566-29</Boletin>
+    <Articulo>con la salvedad de los nuevos artículos 26 y 27 de la ley N°19.327, incorporados por el numeral 20 del artículo 1°, por tratar materias propias de ley orgánica constitucional
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>81</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20427</ID>
+    <Fecha>2014-12-10T12:52:47</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3163</ID>
+      <Numero>104</Numero>
+      <Fecha>2014-12-10T10:40:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9566-29</Boletin>
+    <Articulo>votación particular de los nuevos artículos 26 y 27 de la ley N°19.327, incorporados por el numeral 20 del artículo 1°, por tratar materias propias de ley orgánica constitucional
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>83</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

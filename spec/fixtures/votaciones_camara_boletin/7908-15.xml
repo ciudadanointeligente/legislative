@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>20415</ID>
+    <Fecha>2014-12-09T13:19:55</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3162</ID>
+      <Numero>103</Numero>
+      <Fecha>2014-12-09T11:15:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7908-15</Boletin>
+    <Articulo>votación general de los incisos cuarto y quinto del artículo 192 bis de la Ley de Tránsito introducido por el artículo único del proyecto
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="5">Primer Informe Complementario</Informe>
+    <TotalAfirmativos>90</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20414</ID>
+    <Fecha>2014-12-09T13:19:17</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3162</ID>
+      <Numero>103</Numero>
+      <Fecha>2014-12-09T11:15:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7908-15</Boletin>
+    <Articulo>con la salvedad de los incisos cuarto y quinto del artículo 192 bis de la Ley de Tránsito introducido por el artículo único del proyecto, por tratar materias propias de ley orgánica constitucional.
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="5">Primer Informe Complementario</Informe>
+    <TotalAfirmativos>87</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

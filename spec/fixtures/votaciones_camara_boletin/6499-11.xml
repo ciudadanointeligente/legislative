@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>19662</ID>
+    <Fecha>2014-07-22T13:14:46</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3099</ID>
+      <Numero>48</Numero>
+      <Fecha>2014-07-22T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6499-11</Boletin>
+    <Articulo>Artículo 25 del proyecto propuesto por la Comisión de Salud en su primer informe
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>51</TotalAfirmativos>
+    <TotalNegativos>34</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19667</ID>
+    <Fecha>2014-07-22T13:17:50</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3099</ID>
+      <Numero>48</Numero>
+      <Fecha>2014-07-22T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6499-11</Boletin>
+    <Articulo>Artículos 4° inciso tercero, 29 inciso segundo y 32
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>87</TotalAfirmativos>
+    <TotalNegativos>4</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19663</ID>
+    <Fecha>2014-07-22T13:15:13</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3099</ID>
+      <Numero>48</Numero>
+      <Fecha>2014-07-22T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6499-11</Boletin>
+    <Articulo>Artículo 26 del proyecto propuesto por la Comisión de Salud en su primer informe
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>51</TotalAfirmativos>
+    <TotalNegativos>36</TotalNegativos>
+    <TotalAbstenciones>4</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19661</ID>
+    <Fecha>2014-07-22T13:14:17</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3099</ID>
+      <Numero>48</Numero>
+      <Fecha>2014-07-22T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6499-11</Boletin>
+    <Articulo>artículo 6° del proyecto propuesto por el Senado, con las modificaciones introducidas por la Comisión de Salud en su segundo informe
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>82</TotalAfirmativos>
+    <TotalNegativos>3</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19666</ID>
+    <Fecha>2014-07-22T13:17:14</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3099</ID>
+      <Numero>48</Numero>
+      <Fecha>2014-07-22T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6499-11</Boletin>
+    <Articulo>Artículo 28 del proyecto propuesto por la Comisión de Salud en su primer informe
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>65</TotalAfirmativos>
+    <TotalNegativos>21</TotalNegativos>
+    <TotalAbstenciones>11</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19659</ID>
+    <Fecha>2014-07-22T13:13:02</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3099</ID>
+      <Numero>48</Numero>
+      <Fecha>2014-07-22T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6499-11</Boletin>
+    <Articulo>Modificaciones introducidas al articulado del proyecto, con la salvedad de los artículos 5°, 6°, 25, 26, 27, y 28 cuya votación separada ha sido solicitada, y de los artículos 4°, inciso tercero, 29 inciso segundo, y 32 por tratar materias propias de ley orgánica constitucional.
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>86</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>18988</ID>
+    <Fecha>2014-03-04T12:36:29</Fecha>
+    <Tipo Codigo="3">General y particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3045</ID>
+      <Numero>121</Numero>
+      <Fecha>2014-03-04T11:08:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6499-11</Boletin>
+    <Articulo>Con la salvedad de los artículos 4°, inciso tercero, 29, inciso segundo y 32
+
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>91</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19664</ID>
+    <Fecha>2014-07-22T13:15:44</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3099</ID>
+      <Numero>48</Numero>
+      <Fecha>2014-07-22T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6499-11</Boletin>
+    <Articulo>El artículo 27 del proyecto propuesto por la Comisión de Salud en su segundo informe
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>28</TotalAfirmativos>
+    <TotalNegativos>62</TotalNegativos>
+    <TotalAbstenciones>5</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19665</ID>
+    <Fecha>2014-07-22T13:16:33</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3099</ID>
+      <Numero>48</Numero>
+      <Fecha>2014-07-22T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6499-11</Boletin>
+    <Articulo>El artículo 27 del proyecto propuesto por la Comisión de Salud en su primer informe
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>26</TotalAfirmativos>
+    <TotalNegativos>62</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19660</ID>
+    <Fecha>2014-07-22T13:13:43</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3099</ID>
+      <Numero>48</Numero>
+      <Fecha>2014-07-22T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6499-11</Boletin>
+    <Articulo>Artículo 5° del proyecto, propuesto por la Comisión de Salud en su segundo informe
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>75</TotalAfirmativos>
+    <TotalNegativos>4</TotalNegativos>
+    <TotalAbstenciones>13</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>18989</ID>
+    <Fecha>2014-03-04T12:37:44</Fecha>
+    <Tipo Codigo="3">General y particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3045</ID>
+      <Numero>121</Numero>
+      <Fecha>2014-03-04T11:08:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6499-11</Boletin>
+    <Articulo>Artículos 4°, inciso tercero; 29, inciso segundo, y 32
+</Articulo>
+    <Tramite Codigo="2">Segundo Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>87</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

@@ -1,0 +1,2263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>20154</ID>
+    <Fecha>2014-10-21T16:42:10</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 13) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>60</TotalAfirmativos>
+    <TotalNegativos>42</TotalNegativos>
+    <TotalAbstenciones>11</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20149</ID>
+    <Fecha>2014-10-21T16:40:15</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 10) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>97</TotalAfirmativos>
+    <TotalNegativos>8</TotalNegativos>
+    <TotalAbstenciones>7</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20144</ID>
+    <Fecha>2014-10-21T16:37:53</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 5) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>99</TotalAfirmativos>
+    <TotalNegativos>7</TotalNegativos>
+    <TotalAbstenciones>7</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20143</ID>
+    <Fecha>2014-10-21T16:37:22</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 4) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>98</TotalAfirmativos>
+    <TotalNegativos>10</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20140</ID>
+    <Fecha>2014-10-21T16:35:59</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 1) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>95</TotalAfirmativos>
+    <TotalNegativos>14</TotalNegativos>
+    <TotalAbstenciones>5</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20155</ID>
+    <Fecha>2014-10-21T16:42:54</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo 5° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>115</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20137</ID>
+    <Fecha>2014-10-21T16:33:55</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 3) del artículo 3° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>115</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20117</ID>
+    <Fecha>2014-10-21T16:22:44</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>letra f) del numeral 5) del artículo 2°, en los términos propuestos por la Comisión de Educación
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>69</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20124</ID>
+    <Fecha>2014-10-21T16:26:58</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 9) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>42</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20141</ID>
+    <Fecha>2014-10-21T16:36:28</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 2) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>96</TotalAfirmativos>
+    <TotalNegativos>15</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20184</ID>
+    <Fecha>2014-10-21T16:20:06</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>letra a) del numeral 5) del artículo 2°, en los términos propuestos por la Comisión de Educación
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>69</TotalAfirmativos>
+    <TotalNegativos>45</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20100</ID>
+    <Fecha>2014-10-21T16:01:20</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>literal d) del numeral 5) del artículo 1° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20093</ID>
+    <Fecha>2014-10-21T15:54:54</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>literal c) del numeral 4) del artículo 1°, en los términos propuestos por la Comisión de Educación
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>115</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20151</ID>
+    <Fecha>2014-10-21T16:41:07</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 12) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>101</TotalAfirmativos>
+    <TotalNegativos>6</TotalNegativos>
+    <TotalAbstenciones>7</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20150</ID>
+    <Fecha>2014-10-21T16:40:43</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 11) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>100</TotalAfirmativos>
+    <TotalNegativos>5</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20142</ID>
+    <Fecha>2014-10-21T16:36:53</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 3) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>97</TotalAfirmativos>
+    <TotalNegativos>12</TotalNegativos>
+    <TotalAbstenciones>4</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20139</ID>
+    <Fecha>2014-10-21T16:35:28</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 5) del artículo 3° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>72</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>42</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20122</ID>
+    <Fecha>2014-10-21T16:25:45</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 7) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>67</TotalAfirmativos>
+    <TotalNegativos>47</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20121</ID>
+    <Fecha>2014-10-21T16:25:18</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 6) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>43</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20107</ID>
+    <Fecha>2014-10-21T16:05:43</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 8) del artículo 1° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20106</ID>
+    <Fecha>2014-10-21T16:04:46</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 7) del artículo 1° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>73</TotalAfirmativos>
+    <TotalNegativos>43</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20105</ID>
+    <Fecha>2014-10-21T16:03:56</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 6) del artículo 1°, en los términos propuestos por la Comisión de Educación
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>68</TotalAfirmativos>
+    <TotalNegativos>42</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20179</ID>
+    <Fecha>2014-10-21T16:54:37</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo vigésimocuarto transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>67</TotalAfirmativos>
+    <TotalNegativos>42</TotalNegativos>
+    <TotalAbstenciones>4</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20097</ID>
+    <Fecha>2014-10-21T15:59:38</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>literal a) del numeral 5) del artículo 1° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>114</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20091</ID>
+    <Fecha>2014-10-21T15:51:24</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 3) del artículo 1° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>69</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20084</ID>
+    <Fecha>2014-10-21T15:41:50</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>votación general, con la salvedad delos numerales 1), 2), 3), 4), 6), 7), 8) y 9) del artículo 1°; numerales 5), letras a) y f) y 6) del artículo 2°; numeral 4) del artículo 3° y el artículo segundo transitorio, por tratar materias propias de ley orgánica constitucional.
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20183</ID>
+    <Fecha>2014-10-21T16:19:06</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>letra a) del numeral 5) del artículo 2° del proyecto, con la siguiente indicación renovada:
+Para sustituir en el numeral 5), letra a) el punto aparte por una coma y para agregar a continuación lo siguiente: “o como personas jurídicas con fines de lucro siempre que cuenten con una calificación de desempeño alto o medio por la Agencia de la Calidad de la Educación, conforme a lo previsto en el artículo 17 de la ley N° 20.529.”
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>44</TotalAfirmativos>
+    <TotalNegativos>66</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20171</ID>
+    <Fecha>2014-10-21T16:51:04</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo decimosexto transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>38</TotalNegativos>
+    <TotalAbstenciones>4</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20136</ID>
+    <Fecha>2014-10-21T16:33:27</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 2) del artículo 3° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>65</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20130</ID>
+    <Fecha>2014-10-21T16:30:18</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 15) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>112</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20110</ID>
+    <Fecha>2014-10-21T16:08:31</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 1) del artículo 2°, en los términos propuestos por la Comisión de Educación
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>45</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20098</ID>
+    <Fecha>2014-10-21T16:00:09</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>literal b) del numeral 5) del artículo 1° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>69</TotalAfirmativos>
+    <TotalNegativos>45</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20182</ID>
+    <Fecha>2014-10-21T16:14:01</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo 3° ter incorporado por el numeral 3) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>56</TotalAfirmativos>
+    <TotalNegativos>51</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20089</ID>
+    <Fecha>2014-10-21T15:49:44</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 2) del artículo 1° del proyecto, con la siguiente indicación renovada: para eliminar en el numeral 2), letra c) la expresión: “habilidades”.
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>45</TotalAfirmativos>
+    <TotalNegativos>69</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20176</ID>
+    <Fecha>2014-10-21T16:53:12</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo vigésimoprimero transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>100</TotalAfirmativos>
+    <TotalNegativos>9</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20174</ID>
+    <Fecha>2014-10-21T16:52:25</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo decimonoveno transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>112</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20133</ID>
+    <Fecha>2014-10-21T16:31:58</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 17) del artículo 2°, en los términos propuestos por la Comisión de Educación
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20134</ID>
+    <Fecha>2014-10-21T16:32:29</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 18) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20128</ID>
+    <Fecha>2014-10-21T16:29:22</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 13) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20096</ID>
+    <Fecha>2014-10-21T15:58:47</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>resto del numeral 4) del artículo 1° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20108</ID>
+    <Fecha>2014-10-21T16:07:20</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 9) del artículo 1° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20114</ID>
+    <Fecha>2014-10-21T16:20:50</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>literal b) del numeral 5) del artículo 2° del proyecto, con la siguiente indicación renovada:
+En la letra b) del numeral 5) para reemplazar el punto final de la letra a) bis, nueva, por una coma y agregar a continuación la frase: “salvo aquellos establecimientos calificados con desempeño alto o medio por la Agencia de la Calidad de la Educación, conforme a lo previsto en el artículo 17 de la ley Nº 20.529.”
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>45</TotalAfirmativos>
+    <TotalNegativos>70</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20109</ID>
+    <Fecha>2014-10-21T16:07:54</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 1) del artículo 2° del proyecto, con las siguientes indicaciones renovadas:
+1.	Para reemplazar en la letra a) del numeral 1), la frase “y sin fines de lucro” por “y de calidad”.
+2.	Para agregar en la letra b) del numeral 1), a continuación de la palabra “personas” la frase “en especial a los más vulnerables”.
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>44</TotalAfirmativos>
+    <TotalNegativos>71</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20173</ID>
+    <Fecha>2014-10-21T16:52:01</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo decimoctavo transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>68</TotalAfirmativos>
+    <TotalNegativos>45</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20170</ID>
+    <Fecha>2014-10-21T16:50:37</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo decimoquinto transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>96</TotalAfirmativos>
+    <TotalNegativos>8</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20168</ID>
+    <Fecha>2014-10-21T16:49:37</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo decimotercero transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>74</TotalAfirmativos>
+    <TotalNegativos>38</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20161</ID>
+    <Fecha>2014-10-21T16:46:13</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo sexto transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>45</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20135</ID>
+    <Fecha>2014-10-21T16:32:58</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 1) del artículo 3° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>114</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20115</ID>
+    <Fecha>2014-10-21T16:21:30</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>letra b) del numeral 5) del artículo 2°, en los términos propuestos por la Comisión de Educación
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>68</TotalAfirmativos>
+    <TotalNegativos>45</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20123</ID>
+    <Fecha>2014-10-21T16:26:32</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 8) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20158</ID>
+    <Fecha>2014-10-21T16:44:18</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo tercero transitorio 
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20119</ID>
+    <Fecha>2014-10-21T16:23:42</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>letra j) del numeral 5) del artículo 2°, en los términos propuestos por la Comisión de Educación
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>69</TotalAfirmativos>
+    <TotalNegativos>45</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20113</ID>
+    <Fecha>2014-10-21T16:10:57</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>resto del artículo 3° incorporado por el numeral 3) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>69</TotalAfirmativos>
+    <TotalNegativos>45</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20172</ID>
+    <Fecha>2014-10-21T16:51:29</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo decimoséptimo transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>69</TotalAfirmativos>
+    <TotalNegativos>43</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20164</ID>
+    <Fecha>2014-10-21T16:47:33</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo noveno transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20118</ID>
+    <Fecha>2014-10-21T16:23:12</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>literal j) del numeral 5) del artículo 2° del proyecto, con la siguiente indicación renovada:
+En la letra j) del numeral 5), para sustituir el párrafo séptimo nuevo por el siguiente:
+“Con todo, previo a aplicar la medida de expulsión, el sostenedor deberá haber implementado medidas de apoyo pedagógico o psicosocial que se encuentren disponibles en el Ministerio de Educación.”.
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>44</TotalAfirmativos>
+    <TotalNegativos>70</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20116</ID>
+    <Fecha>2014-10-21T16:22:07</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>letra f) del numeral 5) del artículo 2° del proyecto, con la siguiente indicación renovada:
+En la letra f) del numeral 5) para agregar un literal a) quinquies nuevo, del siguiente tenor:
+a)	quinquies: Que el proyecto educativo informe oportunamente sus procesos de admisión, correspondiéndoles a las familias el derecho de optar por los proyectos educativos de su preferencia, para lo cual el estado deberá procurar y promover la existencia de proyectos educativos diversos al estatal".
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>44</TotalAfirmativos>
+    <TotalNegativos>70</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20132</ID>
+    <Fecha>2014-10-21T16:31:21</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 17) del artículo 2° del proyecto, con la siguiente indicación renovada:
+Para eliminar en el numeral 17), sus letras d) y e)
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>0</TotalAfirmativos>
+    <TotalNegativos>114</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20101</ID>
+    <Fecha>2014-10-21T16:02:51</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 6) del artículo 1° del proyecto, con las siguientes indicaciones renovadas:
+1.	Para agregar el siguiente inciso primero nuevo al artículo 12, pasando el actual primero a ser segundo y así sucesivamente:
+“Los establecimientos educacionales reconocidos por el Estado, siempre podrán establecer procesos de admisión, que tengan como objetivo fundamental informar a los padres convenientemente acerca de las características del proyecto educativo según el cual van a ser educados su hijos, y al que ellos, en caso de compartirlo, no solo deben adherir sino comprometerse activamente en su realización.”.
+2.	Para incorporar en el numeral 6), en el inciso primero del artículo 12 que se sustituye, a continuación del término “admisión”, la frase: “hasta el sexto año de educación básica inclusive”.
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>45</TotalAfirmativos>
+    <TotalNegativos>69</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20087</ID>
+    <Fecha>2014-10-21T15:45:54</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 1) del artículo 1° del proyecto, con las siguientes indicaciones renovadas:
+1.	Para intercalar en la letra d), del artículo 3°, después de la palabra “establecimientos” la frase “y proyectos” y reemplazar la frase después del punto seguido por la siguiente: “esta autonomía incluye la definición, desarrollo y preservación de sus proyectos educativos, con sujeción a la ley y libre de cualquier injerencia política”.
+2.	En la letra f) del numeral 1) para intercalar en el párrafo primero de la letra j) que ha pasado a ser k) la palabra “arbitraria” luego de la frase “formas de discriminación” y “barreras que impiden el aprendizaje”.
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>44</TotalAfirmativos>
+    <TotalNegativos>72</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20177</ID>
+    <Fecha>2014-10-21T16:53:35</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo vigésimosegundo transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>43</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20175</ID>
+    <Fecha>2014-10-21T16:52:48</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo vigésimo transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>114</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20165</ID>
+    <Fecha>2014-10-21T16:48:19</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo décimo transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20160</ID>
+    <Fecha>2014-10-21T16:45:40</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo quinto transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>63</TotalAfirmativos>
+    <TotalNegativos>45</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20157</ID>
+    <Fecha>2014-10-21T16:43:51</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo segundo transitorio 
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20138</ID>
+    <Fecha>2014-10-21T16:34:30</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 4) del artículo 3° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20120</ID>
+    <Fecha>2014-10-21T16:24:12</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>resto del numeral 5) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>69</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20181</ID>
+    <Fecha>2014-10-21T16:12:48</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo 3° bis incorporado por el numeral 3) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20126</ID>
+    <Fecha>2014-10-21T16:28:28</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 11) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20112</ID>
+    <Fecha>2014-10-21T16:09:49</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>literal vi) del artículo 3° incorporado por el numeral 3) del artículo 2° del proyecto, con la modificación propuesta por la Comisión de Hacienda
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>62</TotalAfirmativos>
+    <TotalNegativos>52</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20111</ID>
+    <Fecha>2014-10-21T16:09:11</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 2) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>113</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20159</ID>
+    <Fecha>2014-10-21T16:45:05</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo cuarto transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>57</TotalAfirmativos>
+    <TotalNegativos>50</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20083</ID>
+    <Fecha>2014-10-21T15:39:09</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <TotalAfirmativos>60</TotalAfirmativos>
+    <TotalNegativos>53</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20178</ID>
+    <Fecha>2014-10-21T16:54:03</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo vigésimotercero transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>69</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20167</ID>
+    <Fecha>2014-10-21T16:49:12</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo duodécimo transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>74</TotalAfirmativos>
+    <TotalNegativos>39</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20166</ID>
+    <Fecha>2014-10-21T16:48:48</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo undécimo transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>44</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20162</ID>
+    <Fecha>2014-10-21T16:46:40</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo séptimo transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>45</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20146</ID>
+    <Fecha>2014-10-21T16:38:51</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 7) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>98</TotalAfirmativos>
+    <TotalNegativos>9</TotalNegativos>
+    <TotalAbstenciones>5</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20131</ID>
+    <Fecha>2014-10-21T16:30:49</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 16) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>93</TotalAfirmativos>
+    <TotalNegativos>15</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20129</ID>
+    <Fecha>2014-10-21T16:29:48</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 14) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>69</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20092</ID>
+    <Fecha>2014-10-21T15:53:43</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>literal c) del numeral 4) del artículo 1° del proyecto, con la siguiente indicación renovada:
+Para reemplazar la letra c), del artículo 10, por la siguiente:
+	“c) Los profesionales de la educación tienen derecho a trabajar en un ambiente tolerante y de respeto mutuo; del mismo modo, es deber del estado y del sistema educacional, garantizar el derecho a que se respete su integridad física, psicológica y moral, no pudiendo ser objeto de tratos vejatorios, degradantes o maltratos psicológicos por parte de los demás integrantes de la comunidad educativa, entendiendo por tales a alumnos, padres y apoderados, docentes, paradocentes, administrativos, auxiliares, directores y sostenedores, entre otros. Cualquier transgresión a este artículo será siempre considerado como una afectación grave a la convivencia escolar.”
+
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>42</TotalAfirmativos>
+    <TotalNegativos>69</TotalNegativos>
+    <TotalAbstenciones>4</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20169</ID>
+    <Fecha>2014-10-21T16:50:10</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo decimocuarto transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>72</TotalAfirmativos>
+    <TotalNegativos>41</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20163</ID>
+    <Fecha>2014-10-21T16:47:08</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo octavo transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20156</ID>
+    <Fecha>2014-10-21T16:43:19</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>artículo primero transitorio 
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>70</TotalAfirmativos>
+    <TotalNegativos>43</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20147</ID>
+    <Fecha>2014-10-21T16:39:21</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 8) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>97</TotalAfirmativos>
+    <TotalNegativos>10</TotalNegativos>
+    <TotalAbstenciones>5</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20145</ID>
+    <Fecha>2014-10-21T16:38:24</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 6) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>98</TotalAfirmativos>
+    <TotalNegativos>8</TotalNegativos>
+    <TotalAbstenciones>5</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20191</ID>
+    <Fecha>2014-10-21T15:45:33</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20125</ID>
+    <Fecha>2014-10-21T16:27:42</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 10) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>69</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20148</ID>
+    <Fecha>2014-10-21T16:39:47</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 9) del artículo 4° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>99</TotalAfirmativos>
+    <TotalNegativos>7</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20127</ID>
+    <Fecha>2014-10-21T16:28:52</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 12) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>69</TotalAfirmativos>
+    <TotalNegativos>43</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20185</ID>
+    <Fecha>2014-10-21T16:16:41</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 4) del artículo 2° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>66</TotalAfirmativos>
+    <TotalNegativos>43</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20099</ID>
+    <Fecha>2014-10-21T16:00:42</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>literal c) del numeral 5) del artículo 1° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>72</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20094</ID>
+    <Fecha>2014-10-21T15:56:35</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>literal e) del numeral 4) del artículo 1° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>68</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20088</ID>
+    <Fecha>2014-10-21T15:48:01</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 1) del artículo 1°, en los términos propuestos por la Comisión de Educación
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20090</ID>
+    <Fecha>2014-10-21T15:50:44</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>numeral 2) del artículo 1°, en los términos propuestos por la Comisión de Educación
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>72</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20085</ID>
+    <Fecha>2014-10-21T15:42:52</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>votación general de los numerales 1), 2), 3), 4), 6), 7), 8) y 9) del artículo 1°; numerales 5), letras a) y f) y 6) del artículo 2°; numeral 4) del artículo 3° y el artículo segundo transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20095</ID>
+    <Fecha>2014-10-21T15:58:11</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9366-04</Boletin>
+    <Articulo>literal b) del numeral 4) del artículo 1° del proyecto
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>95</TotalAfirmativos>
+    <TotalNegativos>2</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>11971</ID>
+    <Fecha>2010-08-31T14:02:39</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2411</ID>
+      <Numero>67</Numero>
+      <Fecha>2010-08-31T11:05:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>5491-24</Boletin>
+    <Articulo>Texto del proyecto en los términos propuestos por la Comisión de la Cultura y de las Artes en la página 6 de su segundo informe.
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>55</TotalAfirmativos>
+    <TotalNegativos>27</TotalNegativos>
+    <TotalAbstenciones>21</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>11969</ID>
+    <Fecha>2010-08-31T14:00:36</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2411</ID>
+      <Numero>67</Numero>
+      <Fecha>2010-08-31T11:05:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>5491-24</Boletin>
+    <Articulo>Indicación renovada para agregar el siguiente artículo 2°, pasando el actual artículo único a ser 1°:
+"Artículo 2°.- Agrégase el siguiente artículo 15 bis a la ley N°19.928, sobre Fomento de la Música Nacional:
+"Artículo 15 bis.- La radioemisora que faltare a las normas sobre porcentajes mínimos de emisión de música nacional, estatuidas en el artículo anterior, será sancionada con multa de cinco a cincuenta unidades tributarias mensuales, la que se duplicará en caso de reincidencia.
+El juicio a que se procediere en aplicación del inciso precedente se tramitará según las reglas del Título XI del Libro III del Código de Procedimiento Civil.".
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>51</TotalAfirmativos>
+    <TotalNegativos>28</TotalNegativos>
+    <TotalAbstenciones>20</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>11970</ID>
+    <Fecha>2010-08-31T14:01:45</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2411</ID>
+      <Numero>67</Numero>
+      <Fecha>2010-08-31T11:05:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>5491-24</Boletin>
+    <Articulo>Indicación renovada (2) que propone agregar, en el inciso primero del artículo 15 bis propuesto en la indicación precedente (1), el siguiente párrafo:
+"A la emisora que faltare a las normas sobre porcentajes mínimos de emisión de música nacional por tres veces en un año calendario, se le caducará la concesión."
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>24</TotalAfirmativos>
+    <TotalNegativos>62</TotalNegativos>
+    <TotalAbstenciones>17</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>10149</ID>
+    <Fecha>2009-06-18T12:39:51</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2224</ID>
+      <Numero>44</Numero>
+      <Fecha>2009-06-18T10:40:22</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>5491-24</Boletin>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>64</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

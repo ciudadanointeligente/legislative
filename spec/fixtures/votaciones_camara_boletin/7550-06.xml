@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>16511</ID>
+    <Fecha>2013-01-08T13:31:24</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2894</ID>
+      <Numero>121</Numero>
+      <Fecha>2013-01-08T11:14:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-05</Boletin>
+    <Articulo>Con la salvedad de los artículos 13; 50, incisos segundo y tercero, y 55, por tratarse normas orgánicas constitucionales.
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>103</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16710</ID>
+    <Fecha>2013-03-13T13:49:48</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 57
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>78</TotalAfirmativos>
+    <TotalNegativos>21</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16689</ID>
+    <Fecha>2013-03-13T13:13:16</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 19
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>63</TotalAfirmativos>
+    <TotalNegativos>7</TotalNegativos>
+    <TotalAbstenciones>12</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16686</ID>
+    <Fecha>2013-03-13T13:11:38</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 14
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>62</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>43</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16695</ID>
+    <Fecha>2013-03-13T13:15:28</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 27
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>54</TotalAfirmativos>
+    <TotalNegativos>54</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16706</ID>
+    <Fecha>2013-03-13T13:22:08</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Agrega en el Párrafo 5 del Título VII antes de la expresión "emergencia" la locución "situación de".
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>94</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>10</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16716</ID>
+    <Fecha>2013-03-13T13:52:40</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Séptimo Transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>77</TotalAfirmativos>
+    <TotalNegativos>4</TotalNegativos>
+    <TotalAbstenciones>20</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16715</ID>
+    <Fecha>2013-03-13T13:52:16</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Cuarto y Quinto Transitorios
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>82</TotalAfirmativos>
+    <TotalNegativos>5</TotalNegativos>
+    <TotalAbstenciones>16</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16713</ID>
+    <Fecha>2013-03-13T13:51:18</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 62
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>53</TotalAfirmativos>
+    <TotalNegativos>52</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16704</ID>
+    <Fecha>2013-03-13T13:21:13</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 43
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>65</TotalAfirmativos>
+    <TotalNegativos>12</TotalNegativos>
+    <TotalAbstenciones>28</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16697</ID>
+    <Fecha>2013-03-13T13:16:59</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 30
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>54</TotalAfirmativos>
+    <TotalNegativos>52</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16685</ID>
+    <Fecha>2013-03-13T13:11:17</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 13
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>65</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>33</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16682</ID>
+    <Fecha>2013-03-13T13:10:02</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 10
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>86</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>15</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16679</ID>
+    <Fecha>2013-03-13T13:08:41</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 6°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>91</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>10</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16675</ID>
+    <Fecha>2013-03-13T13:06:50</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 2°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>62</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16709</ID>
+    <Fecha>2013-03-13T13:23:54</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 53
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>57</TotalAfirmativos>
+    <TotalNegativos>50</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16512</ID>
+    <Fecha>2013-01-08T13:31:57</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>2894</ID>
+      <Numero>121</Numero>
+      <Fecha>2013-01-08T11:14:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-05</Boletin>
+    <Articulo>artículos 13; 50, incisos segundo y tercero, y 55, por tratarse normas orgánicas constitucionales.
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>103</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16696</ID>
+    <Fecha>2013-03-13T13:16:04</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 29
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>97</TotalAfirmativos>
+    <TotalNegativos>5</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16684</ID>
+    <Fecha>2013-03-13T13:10:57</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 12
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>66</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>32</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16683</ID>
+    <Fecha>2013-03-13T13:10:38</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 11
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>80</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>25</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16677</ID>
+    <Fecha>2013-03-13T13:07:56</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 4°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>93</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16708</ID>
+    <Fecha>2013-03-13T13:22:51</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 52
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>57</TotalAfirmativos>
+    <TotalNegativos>50</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16711</ID>
+    <Fecha>2013-03-13T13:50:27</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 58
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>71</TotalAfirmativos>
+    <TotalNegativos>19</TotalNegativos>
+    <TotalAbstenciones>14</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16694</ID>
+    <Fecha>2013-03-13T13:15:07</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 26
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>55</TotalAfirmativos>
+    <TotalNegativos>51</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16692</ID>
+    <Fecha>2013-03-13T13:14:18</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 23
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>53</TotalAfirmativos>
+    <TotalNegativos>51</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16691</ID>
+    <Fecha>2013-03-13T13:13:56</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 22
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>55</TotalAfirmativos>
+    <TotalNegativos>50</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16693</ID>
+    <Fecha>2013-03-13T13:14:39</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 24
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>54</TotalAfirmativos>
+    <TotalNegativos>52</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16712</ID>
+    <Fecha>2013-03-13T13:50:49</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 60
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>66</TotalAfirmativos>
+    <TotalNegativos>5</TotalNegativos>
+    <TotalAbstenciones>25</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16707</ID>
+    <Fecha>2013-03-13T13:22:30</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 51
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>67</TotalAfirmativos>
+    <TotalNegativos>2</TotalNegativos>
+    <TotalAbstenciones>21</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16705</ID>
+    <Fecha>2013-03-13T13:21:37</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 49
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>64</TotalAfirmativos>
+    <TotalNegativos>4</TotalNegativos>
+    <TotalAbstenciones>35</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16699</ID>
+    <Fecha>2013-03-13T13:18:08</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Título VI nuevo
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>95</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>10</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16676</ID>
+    <Fecha>2013-03-13T13:07:08</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 3°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>87</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>10</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16703</ID>
+    <Fecha>2013-03-13T13:20:45</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 39
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>56</TotalAfirmativos>
+    <TotalNegativos>49</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16698</ID>
+    <Fecha>2013-03-13T13:17:31</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 31
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>94</TotalAfirmativos>
+    <TotalNegativos>2</TotalNegativos>
+    <TotalAbstenciones>9</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16674</ID>
+    <Fecha>2013-03-13T13:06:29</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>100</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>7</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16714</ID>
+    <Fecha>2013-03-13T13:51:50</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Primero Transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>73</TotalAfirmativos>
+    <TotalNegativos>7</TotalNegativos>
+    <TotalAbstenciones>21</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16701</ID>
+    <Fecha>2013-03-13T13:19:02</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 35
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>57</TotalAfirmativos>
+    <TotalNegativos>48</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16700</ID>
+    <Fecha>2013-03-13T13:18:33</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Epígrafe del Título VII
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>91</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>9</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16690</ID>
+    <Fecha>2013-03-13T13:13:36</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 20
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>59</TotalAfirmativos>
+    <TotalNegativos>43</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16681</ID>
+    <Fecha>2013-03-13T13:09:42</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Epígrafe del Título III
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>56</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16680</ID>
+    <Fecha>2013-03-13T13:09:16</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 9°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>60</TotalAfirmativos>
+    <TotalNegativos>45</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16678</ID>
+    <Fecha>2013-03-13T13:08:18</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 5°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>95</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16688</ID>
+    <Fecha>2013-03-13T13:12:58</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 16
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>59</TotalAfirmativos>
+    <TotalNegativos>44</TotalNegativos>
+    <TotalAbstenciones>5</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>16702</ID>
+    <Fecha>2013-03-13T13:19:37</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2911</ID>
+      <Numero>2</Numero>
+      <Fecha>2013-03-13T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>7550-06</Boletin>
+    <Articulo>Artículo 36
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>50</TotalAfirmativos>
+    <TotalNegativos>51</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

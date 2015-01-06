@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>13927</ID>
+    <Fecha>2011-08-17T12:58:06</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="1">Quorum Calificado</Quorum>
+    <Sesion>
+      <ID>2691</ID>
+      <Numero>72</Numero>
+      <Fecha>2011-08-17T10:43:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Articulo>Artículo 1° numerales 2 y 4
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>88</TotalAfirmativos>
+    <TotalNegativos>4</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>13653</ID>
+    <Fecha>2011-07-05T18:28:48</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="1">Quorum Calificado</Quorum>
+    <Sesion>
+      <ID>2611</ID>
+      <Numero>50</Numero>
+      <Fecha>2011-07-05T16:11:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Articulo>numeral 2 del artículo 1°.
+
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>82</TotalAfirmativos>
+    <TotalNegativos>3</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20456</ID>
+    <Fecha>2014-12-17T13:08:19</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3167</ID>
+      <Numero>108</Numero>
+      <Fecha>2014-12-17T10:40:18</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Articulo>votación del nuevo artículo 4° introducido por el Senado, cuya votación separada ha sido solicitada
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>79</TotalAfirmativos>
+    <TotalNegativos>16</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20455</ID>
+    <Fecha>2014-12-17T13:07:43</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3167</ID>
+      <Numero>108</Numero>
+      <Fecha>2014-12-17T10:40:18</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Articulo>votación del artículo 2° en lo que respecta al artículo 237 del Código Procesal Penal, cuya votación separada ha sido solicitada
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>73</TotalAfirmativos>
+    <TotalNegativos>19</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20467</ID>
+    <Fecha>2014-12-18T13:11:35</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3168</ID>
+      <Numero>109</Numero>
+      <Fecha>2014-12-18T10:40:24</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Tramite Codigo="4">Comisión Mixta</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>79</TotalAfirmativos>
+    <TotalNegativos>2</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20459</ID>
+    <Fecha>2014-12-17T13:10:03</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3167</ID>
+      <Numero>108</Numero>
+      <Fecha>2014-12-17T10:40:18</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Articulo>votación del nuevo numeral 22) del artículo 1° introducido por el Senado
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>101</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20451</ID>
+    <Fecha>2014-12-17T13:03:53</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3167</ID>
+      <Numero>108</Numero>
+      <Fecha>2014-12-17T10:40:18</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado, con la salvedad de los numerales 2), 3), 4), 5), 6), 7), 8), y 9) del artículo 1° y del artículo transitorio del proyecto despachado por el Senado, por tratarse de normas de quorum calificado; del nuevo numeral 22) del artículo 1°, por tratarse de una norma propia de ley orgánica constitucional y de los modificaciones introducidas al numeral 4) del artículo 1° que ha pasado a ser 12), en lo que respecta al nuevo artículo 10 A, el nuevo numeral  19) del artículo 1°, el nuevo numeral  21 ) del artículo 1° , el artículo 2° en lo que respecta al artículo 237 del Código Procesal Penal, el nuevo artículo 4° y el nuevo artículo 5°, cuyas votaciones separadas han sido solicitadas
+
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>99</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20453</ID>
+    <Fecha>2014-12-17T13:06:08</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3167</ID>
+      <Numero>108</Numero>
+      <Fecha>2014-12-17T10:40:18</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Articulo>votación del nuevo numeral 19) del artículo 1° introducido por el Senado, cuya votación separada ha sido solicitada
+
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>60</TotalAfirmativos>
+    <TotalNegativos>37</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20452</ID>
+    <Fecha>2014-12-17T13:05:23</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3167</ID>
+      <Numero>108</Numero>
+      <Fecha>2014-12-17T10:40:18</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado al numeral 4) del artículo 1° que ha pasado a ser 12), en lo que respecta al nuevo artículo 10 A, cuya votación separada ha sido solicitada
+
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>49</TotalAfirmativos>
+    <TotalNegativos>46</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20454</ID>
+    <Fecha>2014-12-17T13:06:56</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3167</ID>
+      <Numero>108</Numero>
+      <Fecha>2014-12-17T10:40:18</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Articulo>votación del nuevo numeral 21) del artículo 1° introducido por el Senado, cuya votación separada ha sido solicitada
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>72</TotalAfirmativos>
+    <TotalNegativos>15</TotalNegativos>
+    <TotalAbstenciones>11</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>13652</ID>
+    <Fecha>2011-07-05T18:28:10</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2611</ID>
+      <Numero>50</Numero>
+      <Fecha>2011-07-05T16:11:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>92</TotalAfirmativos>
+    <TotalNegativos>3</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20458</ID>
+    <Fecha>2014-12-17T13:09:30</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="1">Quorum Calificado</Quorum>
+    <Sesion>
+      <ID>3167</ID>
+      <Numero>108</Numero>
+      <Fecha>2014-12-17T10:40:18</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado a los numerales 2), 3), 4), 5), 6), 7), 8), y 9) del artículo 1° y del artículo transitorio del proyecto despachado por el Senado
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>100</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20457</ID>
+    <Fecha>2014-12-17T13:08:46</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3167</ID>
+      <Numero>108</Numero>
+      <Fecha>2014-12-17T10:40:18</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>6201-02</Boletin>
+    <Articulo>votación del nuevo artículo 5° introducido por el Senado, cuya votación separada ha sido solicitada
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>82</TotalAfirmativos>
+    <TotalNegativos>13</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>

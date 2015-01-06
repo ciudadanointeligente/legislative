@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>20068</ID>
+    <Fecha>2014-10-14T13:32:15</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de la supresión propuesta por el Senado del artículo 24
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>64</TotalAfirmativos>
+    <TotalNegativos>34</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19513</ID>
+    <Fecha>2014-06-04T13:32:43</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>Segundo transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>91</TotalAfirmativos>
+    <TotalNegativos>12</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19496</ID>
+    <Fecha>2014-06-04T13:19:15</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>artículo 3°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>68</TotalAfirmativos>
+    <TotalNegativos>36</TotalNegativos>
+    <TotalAbstenciones>5</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20057</ID>
+    <Fecha>2014-10-14T13:25:29</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación del nuevo inciso final introducido por el Senado al artículo 6°, que ha pasado a ser 7°
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>95</TotalAfirmativos>
+    <TotalNegativos>3</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20061</ID>
+    <Fecha>2014-10-14T13:28:05</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado al inciso primero del artículo 10, que ha pasado a ser 12
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>93</TotalAfirmativos>
+    <TotalNegativos>5</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20060</ID>
+    <Fecha>2014-10-14T13:27:25</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación del nuevo artículo 11 introducido por el Senado
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>65</TotalAfirmativos>
+    <TotalNegativos>34</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20052</ID>
+    <Fecha>2014-10-14T13:21:41</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>Votación de las modificaciones introducidas por el Senado, con la salvedad del artículo 8° que ha pasado a ser 9° y del artículo 19 que ha pasado a ser 20, por tratarse de normas de ley orgánica constitucional y del inciso segundo del artículo 3°, artículo 4°, inciso tercero del nuevo artículo 5°, artículo 5° que ha pasado a ser 6°, nuevo inciso final del artículo 6° que ha pasado a ser 7°, artículo 9° que ha pasado  a ser 10, nuevo artículo 11, inciso primero del artículo 10 que ha pasado a ser 12, artículo 11 que ha pasado a ser 13, artículo 12, artículo 16 que ha pasado a ser 17, artículo 18 que ha pasado a ser 19, artículo 23 que ha pasado a ser 24, artículo 24 y el artículo 29, cuyas votaciones separadas han sido solicitadas
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>87</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19505</ID>
+    <Fecha>2014-06-04T13:28:19</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>20  y 21
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>102</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>7</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19504</ID>
+    <Fecha>2014-06-04T13:27:37</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>artículo 19
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>88</TotalAfirmativos>
+    <TotalNegativos>15</TotalNegativos>
+    <TotalAbstenciones>6</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19503</ID>
+    <Fecha>2014-06-04T13:26:45</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>artículo 14
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>67</TotalAfirmativos>
+    <TotalNegativos>39</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20065</ID>
+    <Fecha>2014-10-14T13:30:15</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado al artículo 18, que ha pasado a ser 19
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>65</TotalAfirmativos>
+    <TotalNegativos>23</TotalNegativos>
+    <TotalAbstenciones>13</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20064</ID>
+    <Fecha>2014-10-14T13:29:35</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado al artículo 16, que ha pasado a ser 17
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>67</TotalAfirmativos>
+    <TotalNegativos>33</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20062</ID>
+    <Fecha>2014-10-14T13:28:33</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado al artículo 11, que ha pasado a ser 13
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>66</TotalAfirmativos>
+    <TotalNegativos>32</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20054</ID>
+    <Fecha>2014-10-14T13:23:26</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de las enmiendas introducidas por el Senado al artículo 4°
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>63</TotalAfirmativos>
+    <TotalNegativos>32</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20053</ID>
+    <Fecha>2014-10-14T13:22:21</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado al inciso segundo del artículo 3°
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>59</TotalAfirmativos>
+    <TotalNegativos>30</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20058</ID>
+    <Fecha>2014-10-14T13:26:21</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado al artículo 8° que ha pasado a ser 9° 
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>64</TotalAfirmativos>
+    <TotalNegativos>27</TotalNegativos>
+    <TotalAbstenciones>9</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19512</ID>
+    <Fecha>2014-06-04T13:32:10</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>Primero Transitorio
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>99</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19502</ID>
+    <Fecha>2014-06-04T13:26:07</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>artículo 11
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>66</TotalAfirmativos>
+    <TotalNegativos>28</TotalNegativos>
+    <TotalAbstenciones>15</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19501</ID>
+    <Fecha>2014-06-04T13:22:17</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>inciso primero del artículo 10
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>102</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19500</ID>
+    <Fecha>2014-06-04T13:21:43</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>artículo 9°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>100</TotalAfirmativos>
+    <TotalNegativos>2</TotalNegativos>
+    <TotalAbstenciones>7</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20066</ID>
+    <Fecha>2014-10-14T13:31:04</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado al artículo 19 que ha pasado a ser 20
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>66</TotalAfirmativos>
+    <TotalNegativos>32</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19509</ID>
+    <Fecha>2014-06-04T13:30:25</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>artículo 26
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>100</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19494</ID>
+    <Fecha>2014-06-04T13:17:22</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>normas orgánicas constitucionales
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>81</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>27</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19493</ID>
+    <Fecha>2014-06-04T13:16:46</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>normas de quórum simple
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>84</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>24</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19499</ID>
+    <Fecha>2014-06-04T13:21:08</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>literal a del artículo 8°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>66</TotalAfirmativos>
+    <TotalNegativos>41</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19495</ID>
+    <Fecha>2014-06-04T13:18:40</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>Articulado con la salvedad de las votaciones separadas y normas orgánicas constitucionales
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>107</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19510</ID>
+    <Fecha>2014-06-04T13:31:00</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-01</Boletin>
+    <Articulo>numeral 1 artículo 29
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>66</TotalAfirmativos>
+    <TotalNegativos>40</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20059</ID>
+    <Fecha>2014-10-14T13:26:57</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación las modificaciones introducidos por el Senado al artículo 9°, que ha pasado a ser 10
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>97</TotalAfirmativos>
+    <TotalNegativos>2</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19511</ID>
+    <Fecha>2014-06-04T13:31:42</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>resto del artículo 29
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>65</TotalAfirmativos>
+    <TotalNegativos>38</TotalNegativos>
+    <TotalAbstenciones>4</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19497</ID>
+    <Fecha>2014-06-04T13:19:49</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>artículo 4°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>106</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20067</ID>
+    <Fecha>2014-10-14T13:31:42</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado al artículo 23, que ha pasado a ser 24
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>65</TotalAfirmativos>
+    <TotalNegativos>33</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20069</ID>
+    <Fecha>2014-10-14T13:32:54</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado al artículo 29
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>67</TotalAfirmativos>
+    <TotalNegativos>34</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20055</ID>
+    <Fecha>2014-10-14T13:24:13</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación del inciso tercero del nuevo artículo 5° introducido por el Senado
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>65</TotalAfirmativos>
+    <TotalNegativos>32</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19508</ID>
+    <Fecha>2014-06-04T13:29:53</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>artículo 24
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>65</TotalAfirmativos>
+    <TotalNegativos>41</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20180</ID>
+    <Fecha>2014-10-21T15:07:05</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3142</ID>
+      <Numero>83</Numero>
+      <Fecha>2014-10-21T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Tramite Codigo="4">Comisión Mixta</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>107</TotalAfirmativos>
+    <TotalNegativos>1</TotalNegativos>
+    <TotalAbstenciones>5</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20063</ID>
+    <Fecha>2014-10-14T13:29:07</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de la supresión propuesta por el Senado del artículo 12
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>99</TotalAfirmativos>
+    <TotalNegativos>2</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19507</ID>
+    <Fecha>2014-06-04T13:29:23</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>artículo 23
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>97</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>8</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19506</ID>
+    <Fecha>2014-06-04T13:28:52</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>artículo 22
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>105</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>4</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20056</ID>
+    <Fecha>2014-10-14T13:24:52</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3139</ID>
+      <Numero>80</Numero>
+      <Fecha>2014-10-14T11:09:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado al artículo 5° que ha pasado a ser 6°
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>65</TotalAfirmativos>
+    <TotalNegativos>32</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19498</ID>
+    <Fecha>2014-06-04T13:20:23</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3079</ID>
+      <Numero>29</Numero>
+      <Fecha>2014-06-04T10:35:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>9333-04</Boletin>
+    <Articulo>artículo 5°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>104</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>5</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>
