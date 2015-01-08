@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Votaciones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Votacion>
+    <ID>19841</ID>
+    <Fecha>2014-09-02T13:00:32</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3122</ID>
+      <Numero>63</Numero>
+      <Fecha>2014-09-02T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>4426-07</Boletin>
+    <Articulo>votación de  las modificaciones introducidas por el Senado al literal a) del numeral 8) que ha pasado a ser 10) del artículo 1°, cuya votación separada ha sido solicitada
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>31</TotalAfirmativos>
+    <TotalNegativos>58</TotalNegativos>
+    <TotalAbstenciones>2</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>20381</ID>
+    <Fecha>2014-11-25T13:29:06</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3157</ID>
+      <Numero>98</Numero>
+      <Fecha>2014-11-25T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>4426-07</Boletin>
+    <Tramite Codigo="4">Comisión Mixta</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>104</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>10270</ID>
+    <Fecha>2009-07-29T12:39:39</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>2237</ID>
+      <Numero>56</Numero>
+      <Fecha>2009-07-29T10:40:09</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>4426-07</Boletin>
+    <Articulo>Letra c) del N° 2 del artículo 1°.</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>49</TotalAfirmativos>
+    <TotalNegativos>47</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>10269</ID>
+    <Fecha>2009-07-29T12:39:13</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>2237</ID>
+      <Numero>56</Numero>
+      <Fecha>2009-07-29T10:40:09</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>4426-07</Boletin>
+    <Articulo>letra b) del N°  2 del artículo 1°
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>95</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19842</ID>
+    <Fecha>2014-09-02T13:01:29</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>3122</ID>
+      <Numero>63</Numero>
+      <Fecha>2014-09-02T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>4426-07</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado al ordinal 2) de la letra a) del número 2) y los incisos tercero y noveno del artículo 38, contenido en el número 11), que pasó a ser número 13), ambos numerales del artículo 1°; el artículo 2° y el número 2) del artículo 3°
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <TotalAfirmativos>95</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>10173</ID>
+    <Fecha>2009-06-30T14:11:27</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>2226</ID>
+      <Numero>45</Numero>
+      <Fecha>2009-06-30T11:11:24</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>4426-07</Boletin>
+    <Articulo>Artículo 39 que contiene el número 13 del artículo 1°, y los artículos 2° y 3°.</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>102</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>3</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>10268</ID>
+    <Fecha>2009-07-29T12:38:33</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>2237</ID>
+      <Numero>56</Numero>
+      <Fecha>2009-07-29T10:40:09</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>4426-07</Boletin>
+    <Articulo>Letras a1) y a)2 del N° 2 del artículo 1°.
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>48</TotalAfirmativos>
+    <TotalNegativos>47</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>10172</ID>
+    <Fecha>2009-06-30T14:10:52</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="0">Rechazado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>2226</ID>
+      <Numero>45</Numero>
+      <Fecha>2009-06-30T11:11:24</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>4426-07</Boletin>
+    <Articulo>Artículo 38
+</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>60</TotalAfirmativos>
+    <TotalNegativos>22</TotalNegativos>
+    <TotalAbstenciones>19</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>19840</ID>
+    <Fecha>2014-09-02T12:59:56</Fecha>
+    <Tipo Codigo="4">Única</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>3122</ID>
+      <Numero>63</Numero>
+      <Fecha>2014-09-02T11:10:00</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>4426-07</Boletin>
+    <Articulo>votación de las modificaciones introducidas por el Senado, con la salvedad del ordinal 2) de la letra a) del número 2) y los incisos tercero y noveno del artículo 38, contenido en el número 11), que pasó a ser número 13), ambos numerales del artículo 1°; el artículo 2° y  el número 2) del artículo 3°, por tratarse de normas de ley orgánica constitucional y del literal a) del numeral 8) que ha pasado a ser 10) del artículo 1° del proyecto, cuya votación separada ha sido solicitada.
+</Articulo>
+    <Tramite Codigo="3">Tercer Trámite Constitucional</Tramite>
+    <Informe Codigo="8">Informe enmiendas del Senado</Informe>
+    <TotalAfirmativos>90</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>10271</ID>
+    <Fecha>2009-07-29T12:40:07</Fecha>
+    <Tipo Codigo="2">Particular</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="5">Ley Orgánica Constitucional</Quorum>
+    <Sesion>
+      <ID>2237</ID>
+      <Numero>56</Numero>
+      <Fecha>2009-07-29T10:40:09</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>4426-07</Boletin>
+    <Articulo>Letra d) del N° 2 del artículo 1°.</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="2">Segundo Informe</Informe>
+    <TotalAfirmativos>92</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>0</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+  <Votacion>
+    <ID>10171</ID>
+    <Fecha>2009-06-30T14:08:13</Fecha>
+    <Tipo Codigo="1">General</Tipo>
+    <Resultado Codigo="1">Aprobado</Resultado>
+    <Quorum Codigo="2">Quorum Simple</Quorum>
+    <Sesion>
+      <ID>2226</ID>
+      <Numero>45</Numero>
+      <Fecha>2009-06-30T11:11:24</Fecha>
+      <FechaTermino>0001-01-01T00:00:00</FechaTermino>
+      <Tipo Codigo="60">Ordinaria</Tipo>
+    </Sesion>
+    <Boletin>4426-07</Boletin>
+    <Articulo>En general, con excepción de los artículos 38 y 39 que contiene el número 13 del artículo 1°, y los artículos 2° y 3°, que contienen normas de ley orgánica constitucional.</Articulo>
+    <Tramite Codigo="1">Primer Trámite Constitucional</Tramite>
+    <Informe Codigo="1">Primer Informe</Informe>
+    <TotalAfirmativos>101</TotalAfirmativos>
+    <TotalNegativos>0</TotalNegativos>
+    <TotalAbstenciones>1</TotalAbstenciones>
+    <TotalDispensados>0</TotalDispensados>
+  </Votacion>
+</Votaciones>
