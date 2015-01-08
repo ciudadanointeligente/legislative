@@ -1,14 +1,15 @@
-%div
-    %h1
-        = @popolo_person.name
-    %table
-        - @popolo_person.votes.order_by('vote_event.motion.date'=>'desc').each do |vote|
-            %tr
-                %td
-                    = vote.vote_event.motion.identifier
-                %td
-                    = vote.option
-                %td
-                    = vote.vote_event.motion.date
-                %td
-                    = vote.vote_event.motion.text
+%div{:class=>'container'}
+    %div{:class=>'col-md-9,whitewithaside'}
+        %div
+            %h1
+                = @popolo_person.name
+            %div{:class=>'row,result'}
+                - @popolo_person.votes.order_by('vote_event.motion.date'=>'desc').each do |vote|
+                    %div
+                        = vote.vote_event.motion.identifier
+                    %div
+                        = vote.option
+                    %div
+                        = vote.vote_event.motion.date
+                    %div
+                        = vote.vote_event.motion.text
