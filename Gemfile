@@ -58,6 +58,7 @@ gem 'whenever', :git => 'https://github.com/Insomniware/whenever.git', :require 
 #gem 'whenever', :require => false #for non rvm
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'libv8', '~> 3.16.14.7'
 gem 'therubyracer', platforms: :ruby
 
 # Monologue is a basic blogging engine
