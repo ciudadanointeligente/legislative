@@ -7,11 +7,11 @@ echo '... Updating your bundle in development environment ...'
 bundle install --without production
 
 echo '... Creating your database ...'
-rake db:create
-rake db:migrate
+bundle exec rake db:create
+bundle exec rake db:migrate
 
 echo '... Creating default admin user ... '
-rake db:seed
+bundle exec rake db:seed
 
 echo '... Database created... '
 echo
