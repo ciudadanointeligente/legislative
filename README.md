@@ -19,7 +19,7 @@ The following system requirements are also needed, for image manipulation:
 
 Red Hat / Fedora / CentOS
 
-    sudo dnf install sqlite-devel ImageMagick-devel
+    sudo yum install sqlite-devel community-mysql-devel ImageMagick-devel
 
 Debian / Ubuntu (for 13.04 and Wheezy also install `libmagickwand-dev`)
 
@@ -205,7 +205,7 @@ rspec
 
 Yes.
 
-[![Benito](http://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-ash3/1098148_10151780926822943_1641758220_n.jpg "Legislative's mascot: Benito")](https://www.google.com/search?site=&tbm=isch&source=hp&biw=1263&bih=630&q=perros+adorables+de+chile)
+[![Benito](http://i.imgur.com/KBviZJ5.jpg "Legislative's mascot: Benito")](https://www.google.com/search?site=&tbm=isch&source=hp&biw=1263&bih=630&q=perros+adorables+de+chile)
 
 
 ## Thanks you!
