@@ -1,3 +1,9 @@
+#IMPORTANT!
+# THIS SOFTWARE IS DEPRECATED, USE UNDER YOUR OWN RESPONSABILITY!!
+
+#IMPORTANTE!
+# ESTE SOFTWARE SE ENCUENTRA DESACTUALIZADO, USELO BAJO SU PROPIA RESPONSABILIDAD!!
+
 # Legislative: A Monitoring Platform
 [![Build Status](https://travis-ci.org/ciudadanointeligente/legislative.png?branch=master)](https://travis-ci.org/ciudadanointeligente/legislative)
 [![Coverage Status](https://coveralls.io/repos/ciudadanointeligente/legislative/badge.png)](https://coveralls.io/r/ciudadanointeligente/legislative)
